@@ -1,0 +1,35 @@
+<config>
+	<jars basedir="..">
+        <jar in="build/libs/gameclient.jar" out="build/libs/gameclient-obf.jar"/>
+    </jars>
+
+    <!-- String encryption -->
+    <property name="string-encryption" value="disable"/>
+	<property name="string-encryption-type" value="fast"/> <!-- Anything else lags client when typing/autochat -->
+    <property name="string-encryption-version" value="v4"/>
+
+    <!-- Control flow obfuscation -->
+    <property name="control-flow-obfuscation" value="disable"/> <!-- Breaks client -->
+    <property name="extensive-flow-obfuscation" value="disable"/>
+
+    <!-- Renaming -->
+    <property name="default-package" value="client"/>
+    <property name="force-default-package" value="enable"/>
+
+    <property name="line-numbers" value="keep"/>
+	
+	<property name="classes-naming" value="unique"/>
+	<property name="methods-naming" value="unique"/>
+	<property name="fields-naming" value="real"/>
+	<property name="local-variables-naming" value="remove"/>
+
+    <property name="update-resource-names" value="disable"/>
+    <property name="update-resource-contents" value="disable"/>
+
+    <property name="generics" value="keep"/>
+    <property name="inner-classes" value="keep"/>
+    <property name="member-reorder" value="disable"/>
+    <property name="finalize" value="disable"/>
+    <property name="synthetize-methods" value="disable"/>
+    <property name="synthetize-fields" value="disable"/>
+</config>
