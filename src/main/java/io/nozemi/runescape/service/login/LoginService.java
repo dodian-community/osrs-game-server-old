@@ -2,11 +2,9 @@ package io.nozemi.runescape.service.login;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.nozemi.runescape.io.RSBuffer;
-import io.nozemi.runescape.model.AttributeKey;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.model.instance.InstancedMap;
 import io.nozemi.runescape.model.uid.UIDProvider;
-import io.nozemi.runescape.model.uid.providers.SimpleUIDProvider;
 import io.nozemi.runescape.net.ServerHandler;
 import io.nozemi.runescape.net.message.LoginRequestMessage;
 import io.nozemi.runescape.net.message.game.Action;
@@ -107,7 +105,7 @@ public class LoginService implements Service, BeanFactoryAware {
 
             @Override
             public void process(Player player) {
-                player.interfaces().setupGamepane(true);
+                player.interfaces().setupGamePane(false);
                 player.initiate();
             }
         });

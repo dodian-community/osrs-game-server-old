@@ -1,15 +1,19 @@
 package io.nozemi.runescape.model.entity;
 
 import io.netty.channel.Channel;
+import io.nozemi.runescape.content.mechanics.VarbitAttributes;
 import io.nozemi.runescape.crypto.IsaacRand;
 import io.nozemi.runescape.model.*;
 import io.nozemi.runescape.model.entity.player.*;
 import io.nozemi.runescape.model.instance.InstancedMap;
 import io.nozemi.runescape.model.instance.InstancedMapIdentifier;
+import io.nozemi.runescape.model.item.Item;
 import io.nozemi.runescape.model.item.ItemContainer;
 import io.nozemi.runescape.net.future.ClosingChannelFuture;
 import io.nozemi.runescape.net.message.game.Action;
 import io.nozemi.runescape.net.message.game.command.*;
+import io.nozemi.runescape.script.Timer;
+import io.nozemi.runescape.script.TimerKey;
 import io.nozemi.runescape.util.Tuple;
 import io.nozemi.runescape.util.Varbit;
 import io.nozemi.runescape.util.Varp;
@@ -22,10 +26,12 @@ import org.springframework.stereotype.Component;
 
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.TimeUnit;
 
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
@@ -43,6 +49,7 @@ public class Player extends Entity {
     private String ip;
     private boolean logged; // Log packet history for this player?
     private long lastPing = System.currentTimeMillis();
+    private int gametime;
 
     /**
      * Character Information
@@ -51,6 +58,8 @@ public class Player extends Entity {
     private Privilege privilege = Privilege.PLAYER;
     private Looks looks;
     private IronMode ironMode = IronMode.NONE;
+
+    private Skills skills;
 
     private ItemContainer equipment;
 
@@ -93,31 +102,27 @@ public class Player extends Entity {
      * Sends everything required to make the user see the game.
      */
     public void initiate() {
-        //skills.update();
-        looks().update();
+        skills = new Skills(this);
+        skills.update();
 
-        // Send simple player options
         write(new SetPlayerOption(3, false, "Follow"));
         write(new SetPlayerOption(4, false, "Trade with"));
-        /*if (equipment.get(3) != null && equipment.get(3).id() == 10501) // Snowball
-            write(new SetPlayerOption(5, true, "Pelt"));*/
 
         int worldFlag = 1;
-
         write(new UpdateStateCustom(worldFlag));
 
-        // Trigger a scripting event
-        // TODO: Look into this
-        //world.server().scriptRepository().triggerLogin(this);
-        varps.varp(313, 16777215);
-        varps.varbit(Varbit.UNLOCK_GOBLIN_BOW_AND_SALUTE_EMOTE, 7);
-        varps.varbit(Varbit.UNLOCK_FLAP_EMOTE, 1);
-        varps.varbit(Varbit.UNLOCK_SLAP_HEAD_EMOTE, 1);
-        varps.varbit(Varbit.UNLOCK_IDEA_EMOTE, 1);
-        varps.varbit(Varbit.UNLOCK_STAMP_EMOTE, 1);
+        // Trigger scripts here(?)
+        //message("Welcome to OS-Scape. On here, you die.");
 
         invokeScript(1350);
-        write(new InvokeScript(389, 50));
+        write(new InvokeScript(389, skills.combatLevel()));
+
+        pathQueue.setDefaultLastStep();
+
+        boolean off = VarbitAttributes.varbiton(this, Varbit.KS_SKULLS_HIDDEN);
+        write(UpdateStateCustom.skullToggle(!off));
+
+        write(UpdateStateCustom.setErrorReportState(true));
 
         looks.update();
 
@@ -127,29 +132,21 @@ public class Player extends Entity {
         varps.sync(Varp.CLIENT_SETTINGS);
 
         // Piety chivy plzzz
-        varps.varbit(3909, 8);
+        //varps.varbit(3909, 8);
 
         // Since recent revisions, synching the varbit for attack options is required.
         // Since the varps are by default 0, and 0 does not get synched, attack options are missing.
         varps.sync(Varp.NPC_ATTACK_PRIORITY);
         varps.sync(Varp.PLAYER_ATTACK_PRIORITY);
 
-        /*world.server().service(PmService.class, true).ifPresent(pmService -> {
-            pmService.onUserOnline(this);
-        });*/
+        write(new UpdateSocialStatus(VarbitAttributes.varbit(this, VarbitAttributes.VarbitInfo.PUBLIC_CHAT_STATUS.getVarbitid()),
+                VarbitAttributes.varbit(this, VarbitAttributes.VarbitInfo.TRADE_STATUS.getVarbitid())));
+        write(new UpdateFriendsStatus(VarbitAttributes.varbit(this, VarbitAttributes.VarbitInfo.PM_STATUS.getVarbitid())));
 
-        // Please gib donations :(
-        //world.server().service(BMTPostback.class, true).ifPresent(bmt -> bmt.acquire((Integer) id()));
-
-        // Load our presets
-        //presetRepository.load();
-
-        // Set the correct varbit for the Iron Man mode.
         if (ironMode != IronMode.NONE) {
             varps.varbit(Varbit.IRON_MODE, ironMode.ordinal());
         }
 
-        // Sets display name status to 'configured'. -1 means no name.
         invokeScript(1105, 1);
     }
 
@@ -477,5 +474,150 @@ public class Player extends Entity {
         world.unregisterPlayer(this);
         //savePlayer(true);
         //saveHighscores();
+    }
+
+    public void updateWeaponInterface() {
+        Item wep = equipment.get(EquipSlot.WEAPON);
+        write(new InterfaceText(593, 1, wep == null ? "Unarmed" : wep.definition(world).name));
+        write(new InterfaceText(593, 2, "Combat Lvl: " + (skills == null ? 3 : skills.combatLevel())));
+
+        // Set the varp that holds our weapon interface panel type
+        int panel = wep == null ? 0 : world.equipmentInfo().weaponType(wep.id());
+        varps.varp(843, panel);
+    }
+
+    public boolean fire_logout() {
+        boolean active = channel == null || channel.isActive();
+        // Are we requested to be logged out?
+        if ((Boolean) attribOr(AttributeKey.LOGOUT, false) || !active) {
+
+            //Is the player in fight caves and hasn't already attempted to logout?
+            int currentWave = this.attribOr(AttributeKey.TZHAAR_FIGHT_CAVES_WAVE, 0);
+            boolean logoutWarningActivated = this.attribOr(AttributeKey.TZHAAR_LOGOUT_WARNING, false);
+
+            //Inferno checks
+            int infernoWave = this.attribOr(AttributeKey.INFERNO_SAVED_WAVE, 0);
+
+            if (!timers.has(TimerKey.COMBAT_LOGOUT) && !timers.has(TimerKey.BLOODCHEST_HUNTED) && !dead() && ((boolean) attribOr(AttributeKey.NO_GPI, false) || !locked())) {
+                logout();
+                return true;
+            } else {
+                if (timers.has(TimerKey.COMBAT_LOGOUT)) {
+                    message("You can't log out until 10 seconds after the end of combat.");
+                } else if (timers.has(TimerKey.BLOODCHEST_HUNTED)) {
+                    message("You're Hunted! You need to wait 60 seconds after picking up a key before logging out.");
+                }
+            }
+
+            putattrib(AttributeKey.LOGOUT, false);
+            clearattrib(AttributeKey.WORLDHOP_LOGOUTMSG);
+        }
+        return false;
+    }
+
+    private long nextSave = System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(10);
+
+    @Override
+    public void cycle() {
+
+        gametime++; // Increment ticks we've played for
+
+        if (fire_logout()) {
+            // logout complete, no need to process other stuff
+            return;
+        }
+
+        // First in p process, cycle the damaged queued on us.
+        // This means we can die before any Script actions (such as combat) can execute.
+        super.cycle_hits(true);
+
+		/*if (isPlayer())
+		    debug(String.format("%s: pcycle (first) ->  [e-pid:%s][pk-pid:%s]: %s %s", world.cycleCount(), index, pvpPid,
+					timers.has(TimerKey.COMBAT_ATTACK) ? timers().left(TimerKey.COMBAT_ATTACK) : "-", dead()));*/
+
+        // Now scripts after we're sure we haven't died from incoming damage this cycle.
+        //world.server().scriptExecutor().cycle(Conditions.context(this));
+
+        cycle_hits(false);
+
+        // Decrease timers
+        super.cycle();
+
+        // Fire timers
+        fire_timers();
+
+        // Region enter and leave triggers
+        int lastregion = attribOr(AttributeKey.LAST_REGION, -1);
+
+        if (lastregion != tile.region()) {
+            //world.server().scriptRepository().triggerRegionExit(this, lastregion);
+            //world.server().scriptRepository().triggerRegionEnter(this, tile.region());
+        }
+
+        // Chunk enter and leave triggers (stop molesting my pretty code)
+        int lastChunk = attribOr(AttributeKey.LAST_CHUNK, -1);
+        if (lastChunk != tile.chunk()) {
+            //world.server().scriptRepository().triggerChunkExit(this, lastChunk);
+            //world.server().scriptRepository().triggerChunkEnter(this, tile.chunk());
+        }
+
+        if (attribOr(AttributeKey.WORLD_MAP, false)) {
+            invokeScript(1749, tile().hash30());
+        }
+
+        // check if our last tile stepped on is the current.
+//		if (pathQueue().lastStep() != null && !pathQueue.lastStep().equals(tile.x, tile.z)) {
+//			world.server().scriptRepository().triggerWalkDestination(this);
+//		}
+
+        // Update last region and chunk ids
+        putattrib(AttributeKey.LAST_REGION, tile.region());
+        putattrib(AttributeKey.LAST_CHUNK, tile.chunk());
+
+
+        if (System.currentTimeMillis() > nextSave) {
+            //savePlayer(false);
+            nextSave = System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(10 + world.random(5));
+        }
+    }
+
+    private void fire_timers() {
+        try {
+            timerloop:
+            for (Iterator<Timer> it = timers.timers().iterator(); it.hasNext(); ) {
+                Timer entry = it.next();
+                if (entry != null && entry.ticks() < 1) {
+                    TimerKey key = entry.key();
+                    int oldTicks, attemptsLeft = 50; // We cap attempts to 50 to avoid bugs.
+
+                    while ((oldTicks = entry.ticks()) <= 0 && attemptsLeft-- >= 0) {
+                        // This one is hardcoded: (disabled until more testing can be done)
+                        if (key == TimerKey.CONNECTION_FORCE_LOGOUT && hp() > 0 && !dead() && !locked()) { // After 60s of no connection we are force logged.
+                            logout();
+                            return;
+                        }
+
+                        // Did it not get re-fired, or was the timer removed?
+                        boolean cont = false;
+                        if (entry == null || entry.ticks() == oldTicks || !timers.has(key)) {
+                            timers.cancel(key);
+                            cont = true;
+                        }
+
+                        //world.server().scriptRepository().triggerTimer(this, key); // Fire event
+
+                        if (cont) {
+                            continue timerloop; // Stop firing more events.
+                        }
+                    }
+
+                    if (attemptsLeft < 0) {
+                        timers.cancel(key);
+                    }
+                }
+            }
+        } catch (Exception e) {
+            logger.error("Error processing timers for {}.", this, e);
+        }
     }
 }

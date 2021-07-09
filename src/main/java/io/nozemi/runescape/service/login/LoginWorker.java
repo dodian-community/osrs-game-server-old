@@ -118,12 +118,12 @@ public class LoginWorker implements Runnable, BeanFactoryAware {
             World world = GameInitializer.world();
 
             GameInitializer.serverProcessor().submitLogic(() -> {
-                /*if(world.playerByName(player.username()).isPresent()) {
+                if(world.playerByName(player.username()).isPresent()) {
                     ByteBuf resp = message.channel().alloc().buffer(1).writeByte(PlayerLoadResult.ALREADY_ONLINE.code());
                     message.channel().writeAndFlush(resp).addListener(new ClosingChannelFuture());
                     logger.error("Critical post-login online state! Name {} on IP {}.", player.username(), player.ip());
                     return;
-                }*/
+                }
 
                 // See if we may be registered (world full??)
                 if (!world.registerPlayer(player) || (player.privilege() != Privilege.ADMIN && world.players().size() > World.plimit)) {

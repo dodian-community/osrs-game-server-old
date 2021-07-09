@@ -3,6 +3,7 @@ package io.nozemi.runescape.net;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import io.netty.handler.timeout.ReadTimeoutException;
 import io.netty.util.AttributeKey;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.script.TimerKey;
@@ -42,5 +43,28 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
                 logger.error("Desynchronized player not in world! {} from {}.", bound.username(), bound.ip());
             }
         }
+    }
+
+    @Override
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        super.channelRead(ctx, msg);
+    }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        try {
+            if (cause.getStackTrace().length > 0 && cause.getStackTrace()[0].getMethodName().equals("read0")) return;
+
+            if (cause instanceof ReadTimeoutException) {
+                logger.info("Channel disconnected due to read timeout (30s): {}.", ctx.channel());
+                ctx.channel().close();
+            } else {
+                logger.error("An exception has been caused in the pipeline: ", cause);
+            }
+        } catch (Throwable e) {
+            logger.error("Uncaught server exception!", e);
+        }
+
+        super.exceptionCaught(ctx, cause);
     }
 }

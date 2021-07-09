@@ -14,6 +14,11 @@ public class NetworkFlushTask implements Task {
 	
 	@Override
 	public void execute(World world) {
+		world.players().forEach(p -> {
+			if (!p.bot()) {
+				p.channel().flush();
+			}
+		});
 	}
 	
 	@Override

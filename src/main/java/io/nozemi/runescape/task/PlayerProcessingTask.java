@@ -42,7 +42,9 @@ public class PlayerProcessingTask implements Task {
 				}
 
 				// Flush network channel
-				player.channel().flush();
+				if (!player.bot()) {
+					player.channel().flush();
+				}
 				
 				long taken = System.currentTimeMillis() - start;
 				ServerProcessor.computeTimes.compute(player.username(), (String s, Long integer) -> {

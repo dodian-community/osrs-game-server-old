@@ -1,0 +1,1465 @@
+1~Man
+"sounds": {
+  "attack": [511],
+  "block": [513],
+  "death": [512]
+}
+
+4~Woman
+"sounds": {
+  "attack": [511],
+  "block": [506],
+  "death": [505]
+}
+
+9~Guard
+"sounds": {
+  "attack": [511],
+  "block": [513],
+  "death": [512]
+}
+
+13~Wizard
+"sounds": {
+  "attack": [511],
+  "block": [513],
+  "death": [512]
+}
+
+14~Druid
+"sounds": {
+  "attack": [511],
+  "block": [513],
+  "death": [512]
+}
+
+19~White Knight
+"sounds": {
+  "attack": [511],
+  "block": [513],
+  "death": [512]
+}
+
+20~Paladin
+"sounds": {
+  "attack": [511],
+  "block": [513],
+  "death": [512]
+}
+
+23~Knight of Ardougne
+"sounds": {
+  "attack": [511],
+  "block": [513],
+  "death": [512]
+}
+
+35~Soldier
+"sounds": {
+  "attack": [511],
+  "block": [513],
+  "death": [512]
+}
+
+41~Chicken
+"sounds": {
+  "attack": [355],
+  "block": [357],
+  "death": [356]
+}
+
+47~Rat
+"sounds": {
+  "attack": [3102],
+  "block": [3104],
+  "death": [3103]
+}
+
+49~Hellhound
+"sounds": {
+  "attack": [3717],
+  "block": [3719],
+  "death": [3718]
+}
+
+50~King Black Dragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+51~Baby dragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+52~Baby blue dragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+53~Red dragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+54~Black dragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+55~Blue dragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+58~Shadow spider
+"sounds": {
+  "attack": [537],
+  "block": [539],
+  "death": [538]
+}
+
+59~Giant spider
+"sounds": {
+  "attack": [537],
+  "block": [539],
+  "death": [538]
+}
+
+62~Jungle spider
+"sounds": {
+  "attack": [537],
+  "block": [539],
+  "death": [538]
+}
+
+63~Deadly red spider
+"sounds": {
+  "attack": [537],
+  "block": [539],
+  "death": [538]
+}
+
+64~Ice spider
+"sounds": {
+  "attack": [537],
+  "block": [539],
+  "death": [538]
+}
+
+73~Zombie
+"sounds": {
+  "attack": [931],
+  "block": [923],
+  "death": [922]
+}
+
+81~Cow
+"sounds": {
+  "attack": [369],
+  "block": [371],
+  "death": [370]
+}
+
+82~Lesser demon
+"sounds": {
+  "attack": [400],
+  "block": [404],
+  "death": [403]
+}
+
+83~Greater demon
+"sounds": {
+  "attack": [400],
+  "block": [404],
+  "death": [403]
+}
+
+84~Black demon
+"sounds": {
+  "attack": [400],
+  "block": [404],
+  "death": [403]
+}
+
+86~Giant rat
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+88~Dungeon rat
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+89~Unicorn
+"sounds": {
+  "attack": [496],
+  "block": [498],
+  "death": [497]
+}
+
+90~Skeleton
+"sounds": {
+  "attack": [774],
+  "block": [775],
+  "death": [777]
+}
+
+94~Skeleton Mage
+"sounds": {
+  "attack": [774],
+  "block": [775],
+  "death": [777]
+}
+
+95~Wolf
+"sounds": {
+  "attack": [481],
+  "block": [491],
+  "death": [490]
+}
+
+100~Goblin
+"sounds": {
+  "attack": [469],
+  "block": [472],
+  "death": [471]
+}
+
+103~Ghost
+"sounds": {
+  "attack": [436],
+  "block": [439],
+  "death": [438]
+}
+
+105~Grizzly bear
+"sounds": {
+  "attack": [498],
+  "block": [500],
+  "death": [499]
+}
+
+106~Black bear
+"sounds": {
+  "attack": [498],
+  "block": [500],
+  "death": [499]
+}
+
+107~Scorpion
+"sounds": {
+  "attack": [3611],
+  "block": [3612],
+  "death": [3610]
+}
+
+108~Poison Scorpion
+"sounds": {
+  "attack": [3611],
+  "block": [3612],
+  "death": [3610]
+}
+
+109~Pit Scorpion
+"sounds": {
+  "attack": [3611],
+  "block": [3612],
+  "death": [3610]
+}
+
+110~Fire giant
+"sounds": {
+  "attack": [449],
+  "block": [451],
+  "death": [450]
+}
+
+111~Ice giant
+"sounds": {
+  "attack": [449],
+  "block": [451],
+  "death": [450]
+}
+
+112~Moss giant
+"sounds": {
+  "attack": [449],
+  "block": [451],
+  "death": [450]
+}
+
+122~Hobgoblin
+"sounds": {
+  "attack": [469],
+  "block": [472],
+  "death": [471]
+}
+
+128~Snake
+"sounds": {
+  "attack": [3609],
+  "block": [3608],
+  "death": [3610]
+}
+
+132~Monkey
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+133~Black unicorn
+"sounds": {
+  "attack": [496],
+  "block": [498],
+  "death": [497]
+}
+
+134~Poison spider
+"sounds": {
+  "attack": [537],
+  "block": [539],
+  "death": [538]
+}
+
+144~King Scorpion
+"sounds": {
+  "attack": [3611],
+  "block": [3612],
+  "death": [3610]
+}
+
+172~Dark wizard
+"sounds": {
+  "attack": [511],
+  "block": [513],
+  "death": [512]
+}
+
+180~Highwayman
+"sounds": {
+  "attack": [511],
+  "block": [513],
+  "death": [512]
+}
+
+182~Pirate
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+222~Monk
+"sounds": {
+  "attack": [511],
+  "block": [513],
+  "death": [512]
+}
+
+271~Khazard Scorpion
+"sounds": {
+  "attack": [3611],
+  "block": [3612],
+  "death": [3610]
+}
+
+375~Redbeard Frank
+"sounds": {
+  "attack": [498],
+  "block": [500],
+  "death": [499]
+}
+
+385~Kharid Scorpion
+"sounds": {
+  "attack": [3611],
+  "block": [3612],
+  "death": [3610]
+}
+
+437~Cap'n Izzy No-Beard
+"sounds": {
+  "attack": [498],
+  "block": [500],
+  "death": [499]
+}
+
+447~Jail guard
+"sounds": {
+  "attack": [511],
+  "block": [513],
+  "death": [512]
+}
+
+457~Restless ghost
+"sounds": {
+  "attack": [436],
+  "block": [439],
+  "death": [438]
+}
+
+489~Goblin guard
+"sounds": {
+  "attack": [469],
+  "block": [472],
+  "death": [471]
+}
+
+493~Grave scorpion
+"sounds": {
+  "attack": [3611],
+  "block": [3612],
+  "death": [3610]
+}
+
+645~Jonny the beard
+"sounds": {
+  "attack": [498],
+  "block": [500],
+  "death": [499]
+}
+
+646~Curator Haig Halen
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+660~Knight
+"sounds": {
+  "attack": [511],
+  "block": [513],
+  "death": [512]
+}
+
+708~Imp
+"sounds": {
+  "attack": [534],
+  "block": [536],
+  "death": [535]
+}
+
+767~Crate
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+799~Pirate Guard
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+941~Green dragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+977~Blessed spider
+"sounds": {
+  "attack": [537],
+  "block": [539],
+  "death": [538]
+}
+
+978~Blessed giant rat
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+1055~Pirate Jackie the Fruit
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+1196~Grizzly bear cub
+"sounds": {
+  "attack": [498],
+  "block": [500],
+  "death": [499]
+}
+
+1326~Bear Cub
+"sounds": {
+  "attack": [498],
+  "block": [500],
+  "death": [499]
+}
+
+1328~Unicorn Foal
+"sounds": {
+  "attack": [496],
+  "block": [498],
+  "death": [497]
+}
+
+1329~Black unicorn Foal
+"sounds": {
+  "attack": [496],
+  "block": [498],
+  "death": [497]
+}
+
+1451~Sleeping Monkey
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+1452~Monkey Child
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+1453~The Monkey's Uncle
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+1454~The Monkey's Aunt
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+1455~Monkey Guard
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+1456~Monkey Archer
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+1465~Monkey Zombie
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+1469~Monkey minder
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+1472~Jungle demon
+"sounds": {
+  "attack": [400],
+  "block": [404],
+  "death": [403]
+}
+
+1480~Small ninja monkey
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+1481~Medium ninja monkey
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+1483~Bearded gorilla
+"sounds": {
+  "attack": [498],
+  "block": [500],
+  "death": [499]
+}
+
+1484~Ancient monkey
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+1485~Small zombie monkey
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+1486~Large zombie monkey
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+1551~Mischievous ghost
+"sounds": {
+  "attack": [436],
+  "block": [439],
+  "death": [438]
+}
+
+1553~Ug
+"sounds": {
+  "attack": [511],
+  "block": [513],
+  "death": [512]
+}
+
+1575~Skeleton Hellhound
+"sounds": {
+  "attack": [774],
+  "block": [775],
+  "death": [777]
+}
+
+1589~Baby red dragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+1590~Bronze dragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+1591~Iron dragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+1592~Steel dragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+1605~Aberrant spectre
+"sounds": {
+  "attack": [0],
+  "block": [0],
+  "death": [0]
+}
+
+1619~Bloodveld
+"sounds": {
+  "attack": [0],
+  "block": [0],
+  "death": [0]
+}
+
+1675~Gardener Ghost
+"sounds": {
+  "attack": [436],
+  "block": [439],
+  "death": [438]
+}
+
+1686~Ghost disciple
+"sounds": {
+  "attack": [436],
+  "block": [439],
+  "death": [438]
+}
+
+1692~Undead chicken
+"sounds": {
+  "attack": [355],
+  "block": [357],
+  "death": [356]
+}
+
+1697~Ghost villager
+"sounds": {
+  "attack": [436],
+  "block": [439],
+  "death": [438]
+}
+
+1699~Ghost shopkeeper
+"sounds": {
+  "attack": [436],
+  "block": [439],
+  "death": [438]
+}
+
+1700~Ghost innkeeper
+"sounds": {
+  "attack": [436],
+  "block": [439],
+  "death": [438]
+}
+
+1701~Ghost farmer
+"sounds": {
+  "attack": [436],
+  "block": [439],
+  "death": [438]
+}
+
+1702~Ghost banker
+"sounds": {
+  "attack": [436],
+  "block": [439],
+  "death": [438]
+}
+
+1703~Ghost sailor
+"sounds": {
+  "attack": [436],
+  "block": [439],
+  "death": [438]
+}
+
+1704~Ghost captain
+"sounds": {
+  "attack": [436],
+  "block": [439],
+  "death": [438]
+}
+
+1706~Ghost guard
+"sounds": {
+  "attack": [436],
+  "block": [439],
+  "death": [438]
+}
+
+1707~Ghost (?)
+"sounds": {
+  "attack": [436],
+  "block": [439],
+  "death": [438]
+}
+
+1766~Cow calf
+"sounds": {
+  "attack": [366],
+  "block": [368],
+  "death": [367]
+}
+
+1794~Hammerspike Stoutbeard
+"sounds": {
+  "attack": [498],
+  "block": [500],
+  "death": [499]
+}
+
+1822~Cave goblin
+"sounds": {
+  "attack": [469],
+  "block": [472],
+  "death": [471]
+}
+
+1872~Ali the Snake Charmer
+"sounds": {
+  "attack": [3609],
+  "block": [3608],
+  "death": [3610]
+}
+
+1874~Desert snake
+"sounds": {
+  "attack": [3609],
+  "block": [3608],
+  "death": [3610]
+}
+
+1902~Ali the Operator
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+2032~Crypt rat
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+2033~Giant crypt rat
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+2034~Crypt spider
+"sounds": {
+  "attack": [537],
+  "block": [539],
+  "death": [538]
+}
+
+2035~Giant crypt spider
+"sounds": {
+  "attack": [537],
+  "block": [539],
+  "death": [538]
+}
+
+2058~Hole in the wall
+"sounds": {
+  "attack": [931],
+  "block": [923],
+  "death": [922]
+}
+
+2069~Cave goblin miner
+"sounds": {
+  "attack": [469],
+  "block": [472],
+  "death": [471]
+}
+
+2073~Cave goblin guard
+"sounds": {
+  "attack": [469],
+  "block": [472],
+  "death": [471]
+}
+
+2309~
+"sounds": {
+  "attack": [511],
+  "block": [513],
+  "death": [512]
+}
+
+2397~Mysterious ghost
+"sounds": {
+  "attack": [436],
+  "block": [439],
+  "death": [438]
+}
+
+2463~Evil Chicken
+"sounds": {
+  "attack": [355],
+  "block": [357],
+  "death": [356]
+}
+
+2489~Bush snake
+"sounds": {
+  "attack": [3609],
+  "block": [3608],
+  "death": [3610]
+}
+
+2641~Dragonkin
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+2717~Skeleton mage
+"sounds": {
+  "attack": [774],
+  "block": [775],
+  "death": [777]
+}
+
+2825~Pirate Pete
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+2837~Zombie pirate
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+2850~Fever spider
+"sounds": {
+  "attack": [537],
+  "block": [539],
+  "death": [538]
+}
+
+2980~Rat
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+2982~King rat
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+3044~Shiratti the Custodian
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+3060~Goblin Champion
+"sounds": {
+  "attack": [469],
+  "block": [472],
+  "death": [471]
+}
+
+3061~Hobgoblin Champion
+"sounds": {
+  "attack": [469],
+  "block": [472],
+  "death": [471]
+}
+
+3064~Lesser Demon Champion
+"sounds": {
+  "attack": [400],
+  "block": [404],
+  "death": [403]
+}
+
+3065~Skeleton Champion
+"sounds": {
+  "attack": [774],
+  "block": [775],
+  "death": [777]
+}
+
+3068~Skeletal Wyvern
+"sounds": {
+  "attack": [0],
+  "block": [0],
+  "death": [0]
+}
+
+3135~Furnace grate
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+3267~Goblin
+"sounds": {
+  "attack": [470],
+  "block": [472],
+  "death": [471]
+}
+
+3376~Baby black dragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+3382~Hell-Rat
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+3413~Goblin Cook
+"sounds": {
+  "attack": [469],
+  "block": [472],
+  "death": [471]
+}
+
+3484~Big Snake
+"sounds": {
+  "attack": [3609],
+  "block": [3608],
+  "death": [3610]
+}
+
+3585~Huge spider
+"sounds": {
+  "attack": [537],
+  "block": [539],
+  "death": [538]
+}
+
+3593~Demon
+"sounds": {
+  "attack": [400],
+  "block": [404],
+  "death": [403]
+}
+
+3599~Swamp snake
+"sounds": {
+  "attack": [3609],
+  "block": [3608],
+  "death": [3610]
+}
+
+3603~Dead swamp snake
+"sounds": {
+  "attack": [3609],
+  "block": [3608],
+  "death": [3610]
+}
+
+3645~Angry bear
+"sounds": {
+  "attack": [498],
+  "block": [500],
+  "death": [499]
+}
+
+3646~Angry unicorn
+"sounds": {
+  "attack": [496],
+  "block": [498],
+  "death": [497]
+}
+
+3647~Angry giant rat
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+3648~Angry goblin
+"sounds": {
+  "attack": [469],
+  "block": [472],
+  "death": [471]
+}
+
+3697~Skeleton fremennik
+"sounds": {
+  "attack": [774],
+  "block": [775],
+  "death": [777]
+}
+
+3707~Brine rat
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+3939~Sea Snake Young
+"sounds": {
+  "attack": [3609],
+  "block": [3608],
+  "death": [3610]
+}
+
+3940~Sea Snake Hatchling
+"sounds": {
+  "attack": [3609],
+  "block": [3608],
+  "death": [3610]
+}
+
+3943~Giant Sea Snake
+"sounds": {
+  "attack": [3609],
+  "block": [3608],
+  "death": [3610]
+}
+
+4243~Demon butler
+"sounds": {
+  "attack": [400],
+  "block": [404],
+  "death": [403]
+}
+
+4250~Sawmill operator
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+4371~Blue Monkey
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+4372~Red Monkey
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+4503~Ethereal Numerator
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+5362~Brutal green dragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+5363~Mithril dragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+5480~Thorkel Silkbeard
+"sounds": {
+  "attack": [498],
+  "block": [500],
+  "death": [499]
+}
+
+5784~Crate goblin
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+5786~Goblin scribe
+"sounds": {
+  "attack": [469],
+  "block": [472],
+  "death": [471]
+}
+
+5807~Cave goblin child
+"sounds": {
+  "attack": [469],
+  "block": [472],
+  "death": [471]
+}
+
+5823~Spit goblin
+"sounds": {
+  "attack": [469],
+  "block": [472],
+  "death": [471]
+}
+
+5824~Goblin fish
+"sounds": {
+  "attack": [469],
+  "block": [472],
+  "death": [471]
+}
+
+5833~Rat Burgiss
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+5879~Ticket goblin
+"sounds": {
+  "attack": [469],
+  "block": [472],
+  "death": [471]
+}
+
+5974~Monkey display
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+5979~Dragon display
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+5990~Rupert the Beard
+"sounds": {
+  "attack": [498],
+  "block": [500],
+  "death": [499]
+}
+
+6054~Dragon impling
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+6088~Zombie rat
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+6103~Skeleton hero
+"sounds": {
+  "attack": [774],
+  "block": [775],
+  "death": [777]
+}
+
+6104~Skeleton brute
+"sounds": {
+  "attack": [774],
+  "block": [775],
+  "death": [777]
+}
+
+6105~Skeleton warlord
+"sounds": {
+  "attack": [774],
+  "block": [775],
+  "death": [777]
+}
+
+6106~Skeleton heavy
+"sounds": {
+  "attack": [774],
+  "block": [775],
+  "death": [777]
+}
+
+6107~Skeleton thug
+"sounds": {
+  "attack": [774],
+  "block": [775],
+  "death": [777]
+}
+
+6604~Revenant imp
+"sounds": {
+  "attack": [0],
+  "block": [0],
+  "death": [0]
+}
+
+6605~Revenant goblin
+"sounds": {
+  "attack": [469],
+  "block": [472],
+  "death": [471]
+}
+
+6608~Revenant hobgoblin
+"sounds": {
+  "attack": [469],
+  "block": [472],
+  "death": [471]
+}
+
+6610~Revenant ork
+"sounds": {
+  "attack": [0],
+  "block": [0],
+  "death": [0]
+}
+
+6614~Revenant werewolf
+"sounds": {
+  "attack": [0],
+  "block": [0],
+  "death": [0]
+}
+
+6646~Revenant hellhound
+"sounds": {
+  "attack": [3717],
+  "block": [3719],
+  "death": [3718]
+}
+
+6647~Revenant demon
+"sounds": {
+  "attack": [400],
+  "block": [404],
+  "death": [403]
+}
+
+6743~Dragon snowman
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+6745~Pirate snowman
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+6822~Unicorn stallion
+"sounds": {
+  "attack": [496],
+  "block": [498],
+  "death": [497]
+}
+
+6837~Spirit scorpion
+"sounds": {
+  "attack": [3611],
+  "block": [3612],
+  "death": [3610]
+}
+
+6839~Arctic bear
+"sounds": {
+  "attack": [498],
+  "block": [500],
+  "death": [499]
+}
+
+6841~Spirit spider
+"sounds": {
+  "attack": [537],
+  "block": [539],
+  "death": [538]
+}
+
+6847~Albino rat
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+6879~Spirit saratrice
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+6900~Hatchling dragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+6942~Baby monkey
+"sounds": {
+  "attack": [629],
+  "block": [631],
+  "death": [630]
+}
+
+6998~Revenant dragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+7376~Iron titan
+"sounds": {
+  "attack": [0],
+  "block": [0],
+  "death": [0]
+}
+
+7580~Poledragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+7740~Jiggling crate
+"sounds": {
+  "attack": [703],
+  "block": [705],
+  "death": [704]
+}
+
+8149~Armoured zombie
+"sounds": {
+  "attack": [931],
+  "block": [923],
+  "death": [922]
+}
+
+8629~Lava dragon
+"sounds": {
+  "attack": [408],
+  "block": [410],
+  "death": [409]
+}
+
+
+Process finished with exit code 0

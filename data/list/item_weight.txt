@@ -1,0 +1,6064 @@
+1:0.0:Toolkit
+2:0.0:Cannonball
+3:0.0:Nulodion's notes
+4:4.0:Ammo mould
+5:0.0:Instruction manual
+6:10.0:Cannon base
+8:0.9:Cannon stand
+10:15.0:Cannon barrels
+12:5.0:Cannon furnace
+14:1.0:Railing
+15:0.0:Holy table napkin
+16:0.2:Magic whistle
+17:0.0:Grail bell
+18:0.0:Magic gold feather
+19:4.0:Holy grail
+20:0.0:White cog
+21:0.0:Black cog
+22:0.0:Blue cog
+23:0.0:Red cog
+24:0.1:Rat poison
+25:0.0:Red vine worm
+26:0.0:Fishing trophy
+27:0.0:Fishing pass
+28:0.0:Insect repellent
+30:2.5:Bucket of wax
+32:0.0:Lit black candle
+35:2.2:Excalibur
+36:0.0:Candle
+38:0.0:Black candle
+39:0.0:Bronze arrowtips
+40:0.0:Iron arrowtips
+41:0.0:Steel arrowtips
+42:0.0:Mithril arrowtips
+43:0.0:Adamant arrowtips
+44:0.0:Rune arrowtips
+45:0.0:Opal bolt tips
+46:0.0:Pearl bolt tips
+47:0.0:Barb bolttips
+48:0.0:Longbow (u)
+50:1.0:Shortbow (u)
+52:0.0:Arrow shaft
+53:0.0:Headless arrow
+54:0.0:Oak shortbow (u)
+56:0.0:Oak longbow (u)
+58:0.0:Willow longbow (u)
+60:0.0:Willow shortbow (u)
+62:0.0:Maple longbow (u)
+64:0.0:Maple shortbow (u)
+66:1.32:Yew longbow (u)
+68:1.32:Yew shortbow (u)
+70:1.32:Magic longbow (u)
+72:0.9:Magic shortbow (u)
+74:2.0:Khazard helmet
+75:0.5:Khazard armour
+76:0.0:Khazard cell keys
+77:0.0:Khali brew
+78:0.0:Ice arrows
+84:5.0:Staff of armadyl
+85:0.0:Shiny key
+86:0.0:Pendant of lucien
+87:0.0:Armadyl pendant
+88:0.0:Boots of lightness
+89:0.0:Boots of lightness
+90:0.9:Child's blanket
+91:0.03:Guam potion (unf)
+93:0.03:Marrentill potion (unf)
+95:0.0:Tarromin potion (unf)
+97:0.03:Harralander potion (unf)
+99:0.0:Ranarr potion (unf)
+101:0.03:Irit potion (unf)
+103:0.03:Avantoe potion (unf)
+105:0.03:Kwuarm potion (unf)
+107:0.0:Cadantine potion (unf)
+109:0.03:Dwarf weed potion (unf)
+111:0.0:Torstol potion (unf)
+121:0.0:Attack potion(3)
+143:0.0:Prayer potion(1)
+145:0.0:Super attack(3)
+157:0.0:Super strength(3)
+161:0.0:Super strength(1)
+163:0.0:Super defence(3)
+165:0.0:Super defence(2)
+169:0.0:Ranging potion(3)
+175:0.0:Antipoison(3)
+183:0.0:Superantipoison(2)
+187:0.0:Weapon poison
+189:0.5:Zamorak brew(3)
+195:0.0:Potion
+197:0.0:Poison chalice
+199:0.0:Grimy guam leaf
+201:0.0:Grimy marrentill
+203:0.0:Grimy tarromin
+205:0.0:Grimy harralander
+207:0.0:Grimy ranarr weed
+209:0.0:Grimy irit leaf
+211:0.0:Grimy avantoe
+213:0.0:Grimy kwuarm
+215:0.0:Grimy cadantine
+217:0.0:Grimy dwarf weed
+219:0.0:Grimy torstol
+221:0.0:Eye of newt
+223:0.0:Red spiders' eggs
+225:0.0:Limpwurt root
+227:0.0:Vial of water
+229:0.0:Vial
+231:0.0:Snape grass
+233:0.05:Pestle and mortar
+235:0.0:Unicorn horn dust
+237:1.0:Unicorn horn
+239:0.0:White berries
+241:0.0:Dragon scale dust
+243:0.01:Blue dragon scale
+245:1.0:Wine of zamorak
+247:0.0:Jangerberries
+249:0.0:Guam leaf
+251:0.0:Marrentill
+253:0.0:Tarromin
+255:0.0:Harralander
+257:0.0:Ranarr weed
+259:0.0:Irit leaf
+261:0.0:Avantoe
+263:0.0:Kwuarm
+265:0.0:Cadantine
+267:0.0:Dwarf weed
+269:0.0:Torstol
+271:0.0:Pressure gauge
+272:0.0:Fish food
+274:0.0:Poisoned fish food
+276:0.0:Rubber tube
+277:0.0:Oil can
+278:0.4:Cattleprod
+279:2.2:Sheep feed
+284:2.2:Plague jacket
+285:2.2:Plague trousers
+286:3.0:Orange goblin mail
+287:3.0:Blue goblin mail
+288:3.6:Goblin mail
+290:1.0:Research package
+292:0.0:Book on baxtorian
+294:0.0:Glarial's pebble
+295:0.0:Glarial's amulet
+296:0.0:Glarial's urn
+297:0.0:Glarial's urn
+299:0.0:Mithril seeds
+300:0.0:Rat's tail
+301:0.2:Lobster pot
+303:4.0:Small fishing net
+305:8.1:Big fishing net
+307:1.3:Fishing rod
+309:1.3:Fly fishing rod
+311:1.3:Harpoon
+313:0.0:Fishing bait
+314:0.0:Feather
+315:0.5:Shrimps
+317:0.5:Raw shrimps
+319:0.1:Anchovies
+321:0.1:Raw anchovies
+325:0.12:Sardine
+327:0.12:Raw sardine
+329:0.5:Salmon
+331:0.5:Raw salmon
+333:0.4:Trout
+335:0.4:Raw trout
+337:0.0:Giant carp
+338:0.0:Raw giant carp
+339:0.33:Cod
+341:0.33:Raw cod
+345:0.5:Raw herring
+347:0.5:Herring
+349:0.5:Raw pike
+351:0.5:Pike
+353:0.3:Raw mackerel
+355:0.3:Mackerel
+359:0.4:Raw tuna
+361:0.4:Tuna
+363:0.0:Raw bass
+365:0.3:Bass
+371:0.5:Raw swordfish
+373:0.4:Swordfish
+377:0.4:Raw lobster
+379:0.33:Lobster
+383:0.7:Raw shark
+385:0.6:Shark
+389:0.0:Raw manta ray
+391:0.4:Manta ray
+395:0.4:Raw sea turtle
+397:0.35:Sea turtle
+401:0.0:Seaweed
+403:0.2:Edible seaweed
+405:5.0:Casket
+407:0.1:Oyster
+409:0.0:Empty oyster
+411:0.0:Oyster pearl
+413:0.0:Oyster pearls
+415:0.0:Ethenea
+416:0.0:Liquid honey
+417:1.0:Sulphuric broline
+418:0.0:Plague sample
+419:0.0:Touch paper
+420:0.0:Distillator
+422:0.1:Bird feed
+424:0.0:Pigeon cage
+425:0.0:Pigeon cage
+430:1.0:Doctors' gown
+431:0.0:Karamjan rum
+433:1.0:Pirate message
+434:1.0:Clay
+436:2.0:Copper ore
+438:2.25:Tin ore
+440:2.0:Iron ore
+442:2.0:Silver ore
+444:2.2:Gold ore
+446:0.0:'perfect' gold ore
+447:1.75:Mithril ore
+449:2.721:Adamantite ore
+451:2.267:Runite ore
+453:2.0:Coal
+455:0.0:Barcrawl card
+456:0.0:Scorpion cage
+457:0.0:Scorpion cage
+458:0.0:Scorpion cage
+459:0.0:Scorpion cage
+460:0.0:Scorpion cage
+461:0.0:Scorpion cage
+462:0.0:Scorpion cage
+463:0.0:Scorpion cage
+464:1.0:Strange fruit
+466:0.0:Pickaxe handle
+494:2.5:Broken axe
+496:2.5:Broken axe
+498:2.5:Broken axe
+500:2.5:Broken axe
+502:2.5:Broken axe
+504:2.5:Broken axe
+506:2.5:Broken axe
+522:0.0:Enchanted beef
+525:1.0:Enchanted chicken
+526:0.0:Bones
+528:0.2:Burnt bones
+530:0.3:Bat bones
+532:0.8:Big bones
+534:0.0:Babydragon bones
+536:1.5:Dragon bones
+538:0.0:Druid's robe
+540:0.9:Druid's robe top
+546:0.9:Shade robe top
+548:1.0:Shade robe
+550:0.5:Newcomer map
+552:0.0:Ghostspeak amulet
+554:0.0:Fire rune
+555:0.0:Water rune
+556:0.0:Air rune
+557:0.0:Earth rune
+558:0.0:Mind rune
+559:0.0:Body rune
+560:0.0:Death rune
+561:0.0:Nature rune
+562:0.0:Chaos rune
+563:0.0:Law rune
+564:0.0:Cosmic rune
+565:0.0:Blood rune
+566:0.0:Soul rune
+567:0.4:Unpowered orb
+569:0.4:Fire orb
+571:0.4:Water orb
+573:0.4:Air orb
+575:0.4:Earth orb
+577:1.0:Blue wizard robe
+579:0.4:Blue wizard hat
+583:1.0:Bailing bucket
+585:1.0:Bailing bucket
+587:0.0:Orb of protection
+588:2.0:Orbs of protection
+589:0.0:Gnome amulet
+590:0.0:Tinderbox
+592:0.0:Ashes
+594:0.5:Lit torch
+595:0.5:Torch
+596:0.5:Unlit torch
+598:0.0:Bronze fire arrows
+600:0.0:Astronomy book
+601:0.0:Goblin kitchen key
+602:0.0:Lens mould
+603:0.0:Observatory lens
+604:0.0:Bone shard
+606:0.0:Stone-plaque
+607:0.0:Tattered scroll
+608:0.0:Crumpled scroll
+609:0.0:Rashiliyia corpse
+610:1.0:Zadimus corpse
+611:0.9:Locating crystal
+612:0.9:Locating crystal
+613:0.9:Locating crystal
+614:0.9:Locating crystal
+615:0.9:Locating crystal
+616:0.0:Beads of the dead
+618:0.0:Bone beads
+619:0.0:Paramaya ticket
+620:0.0:Paramaya ticket
+621:0.0:Ship ticket
+623:0.0:Sword pommel
+624:0.0:Bervirius notes
+625:0.0:Wampum belt
+626:0.3:Pink boots
+628:0.3:Green boots
+630:0.3:Blue boots
+632:0.3:Cream boots
+634:0.3:Turquoise boots
+636:1.0:Pink robe top
+638:1.0:Green robe top
+640:1.0:Blue robe top
+642:1.0:Cream robe top
+644:1.0:Turquoise robe top
+646:0.9:Pink robe bottoms
+648:0.9:Green robe bottoms
+650:0.9:Blue robe bottoms
+652:0.9:Cream robe bottoms
+654:0.9:Turquoise robe bottoms
+656:0.4:Pink hat
+658:0.4:Green hat
+660:0.4:Blue hat
+662:0.4:Cream hat
+664:0.4:Turquoise hat
+666:1.3:Portrait
+667:1.0:Blurite sword
+668:2.2:Blurite ore
+669:0.0:Specimen jar
+670:0.0:Specimen brush
+671:0.0:Animal skull
+672:0.0:Special cup
+673:0.0:Teddy
+674:1.0:Cracked sample
+675:0.0:Rock pick
+676:0.0:Trowel
+677:0.0:Panning tray
+678:0.0:Panning tray
+679:0.0:Panning tray
+680:0.0:Nuggets
+681:0.2:Ancient talisman
+682:1.0:Unstamped letter
+683:0.0:Sealed letter
+684:1.0:Belt buckle
+685:0.0:Old boot
+686:2.0:Rusty sword
+687:0.0:Broken arrow
+688:0.0:Buttons
+689:1.8:Broken staff
+690:0.0:Broken glass
+691:0.0:Level 1 certificate
+692:0.0:Level 2 certificate
+693:0.0:Level 3 certificate
+694:0.0:Ceramic remains
+695:0.0:Old tooth
+696:0.0:Invitation letter
+697:7.75:Damaged armour
+698:8.0:Broken armour
+699:0.8:Stone tablet
+700:0.0:Chemical powder
+701:0.0:Ammonium nitrate
+702:1.0:Unidentified liquid
+703:1.0:Nitroglycerin
+704:0.0:Ground charcoal
+705:0.0:Mixed chemicals
+706:0.0:Mixed chemicals
+707:2.0:Chemical compound
+708:0.0:Arcenia root
+710:0.0:Vase
+711:0.5:Book on chemicals
+712:0.1:Cup of tea
+714:0.0:Radimus notes
+715:0.0:Radimus notes
+716:0.0:Bull roarer
+717:0.0:Scrawled note
+718:0.0:A scribbled note
+719:0.0:Scrumpled note
+720:0.0:Sketch
+721:0.0:Gold bowl
+722:0.8:Blessed gold bowl
+723:1.0:Golden bowl
+724:1.0:Golden bowl
+725:1.0:Golden bowl
+726:1.0:Golden bowl
+729:0.51:Shamans tome
+730:0.5:Binding book
+731:0.0:Enchanted vial
+732:0.0:Holy water
+735:0.0:Yommi tree seeds
+736:0.0:Yommi tree seeds
+737:0.0:Snakeweed mixture
+738:0.0:Ardrigal mixture
+739:0.0:Bravery potion
+740:0.4:Blue hat
+741:0.0:Chunk of crystal
+742:0.0:Hunk of crystal
+743:0.0:Lump of crystal
+744:0.0:Heart crystal
+745:0.0:Heart crystal
+746:0.0:Dark dagger
+747:0.0:Glowing dagger
+748:0.0:Holy force
+749:3.0:Yommi totem
+750:3.0:Gilded totem
+751:0.0:Gnomeball
+753:0.0:Cadava berries
+756:0.0:Cadava potion
+759:0.0:Weapon store key
+763:2.7:Broken shield
+764:10.0:Coal bag
+765:2.7:Broken shield
+766:0.0:Gem bag
+767:3.6:Phoenix crossbow
+769:0.0:Certificate
+771:2.2:Dramen branch
+772:1.8:Dramen staff
+773:0.0:'perfect' ring
+774:0.0:'perfect' necklace
+775:0.2:Cooking gauntlets
+776:0.0:Goldsmith gauntlet
+777:0.0:Chaos gauntlets
+778:0.0:Steel gauntlets
+779:0.0:Crest part
+780:0.0:Crest part
+781:0.0:Crest part
+783:0.0:Bark sample
+784:0.0:Translation book
+785:0.0:Glough's journal
+786:0.0:Hazelmere's scroll
+787:0.0:Lumber order
+788:0.0:Glough's key
+789:0.0:Twigs
+790:0.0:Twigs
+791:0.0:Twigs
+792:0.0:Twigs
+793:3.0:Daconia rock
+794:0.0:Invasion plans
+795:0.0:War ship
+800:0.0:Bronze thrownaxe
+801:0.0:Iron thrownaxe
+802:0.0:Steel thrownaxe
+803:0.0:Mithril thrownaxe
+804:0.0:Adamant thrownaxe
+805:0.0:Rune thrownaxe
+806:0.0:Bronze dart
+807:0.0:Iron dart
+808:0.0:Steel dart
+809:0.0:Mithril dart
+810:0.0:Adamant dart
+811:0.0:Rune dart
+816:0.0:Adamant dart(p)
+817:0.0:Rune dart(p)
+819:0.0:Bronze dart tip
+820:0.0:Iron dart tip
+821:0.0:Steel dart tip
+822:0.0:Mithril dart tip
+823:0.0:Adamant dart tip
+824:0.0:Rune dart tip
+825:0.0:Bronze javelin
+826:0.0:Iron javelin
+827:0.0:Steel javelin
+828:0.0:Mithril javelin
+829:0.0:Adamant javelin
+830:0.0:Rune javelin
+837:8.0:Crossbow
+839:1.0:Longbow
+841:1.33:Shortbow
+843:1.8:Oak shortbow
+845:2.0:Oak longbow
+847:1.8:Willow longbow
+849:1.0:Willow shortbow
+851:1.8:Maple longbow
+853:1.0:Maple shortbow
+855:1.8:Yew longbow
+857:1.0:Yew shortbow
+859:1.0:Magic longbow
+861:1.0:Magic shortbow
+863:0.0:Iron knife
+864:0.0:Bronze knife
+865:0.0:Steel knife
+866:0.0:Mithril knife
+867:0.0:Adamant knife
+868:0.0:Rune knife
+869:0.0:Black knife
+877:0.0:Bronze bolts
+879:0.0:Opal bolts
+880:0.0:Pearl bolts
+881:0.0:Barbed bolts
+882:0.0:Bronze arrow
+884:0.0:Iron arrow
+886:0.0:Steel arrow
+888:0.0:Mithril arrow
+890:0.0:Adamant arrow
+892:0.0:Rune arrow
+942:0.0:Bronze fire arrows
+946:0.0:Knife
+948:3.0:Bear fur
+950:1.0:Silk
+952:1.8:Spade
+954:1.3:Rope
+956:0.0:Flier
+958:3.0:Grey wolf fur
+960:0.8:Plank
+962:0.0:Christmas cracker
+966:0.6:Tile
+970:0.0:Papyrus
+972:0.0:Papyrus
+973:0.0:Charcoal
+975:1.3:Machete
+981:2.0:Disk of returning
+983:0.0:Brass key
+985:0.0:Tooth half of key
+987:0.0:Loop half of key
+989:0.0:Crystal key
+991:0.0:Muddy key
+993:0.0:Sinister key
+1005:0.0:White apron
+1007:0.0:Red cape
+1009:0.0:Brass necklace
+1011:0.9:Blue skirt
+1013:0.0:Pink skirt
+1015:0.9:Black skirt
+1019:0.0:Black cape
+1021:0.0:Blue cape
+1023:0.0:Yellow cape
+1025:0.1:Eye patch
+1027:0.0:Green cape
+1029:0.0:Purple cape
+1031:0.0:Orange cape
+1037:0.0:Bunny ears
+1038:0.0:Red partyhat
+1040:0.0:Yellow partyhat
+1042:0.0:Blue partyhat
+1044:0.0:Green partyhat
+1046:0.0:Purple partyhat
+1048:0.0:White partyhat
+1050:0.1:Santa hat
+1052:1.8:Cape of legends
+1053:0.0:Green halloween mask
+1055:0.0:Blue halloween mask
+1057:0.0:Red halloween mask
+1059:0.2:Leather gloves
+1061:0.3:Leather boots
+1063:0.2:Leather vambraces
+1065:0.25:Green d'hide vamb
+1067:9.0:Iron platelegs
+1069:9.0:Steel platelegs
+1071:7.7:Mithril platelegs
+1073:10.0:Adamant platelegs
+1075:9.0:Bronze platelegs
+1077:9.0:Black platelegs
+1079:9.0:Rune platelegs
+1081:8.0:Iron plateskirt
+1083:8.1:Steel plateskirt
+1085:7.0:Mithril plateskirt
+1087:8.1:Bronze plateskirt
+1089:8.0:Black plateskirt
+1091:9.0:Adamant plateskirt
+1093:8.0:Rune plateskirt
+1095:3.0:Leather chaps
+1097:4.0:Studded chaps
+1099:5.4:Green d'hide chaps
+1101:6.8:Iron chainbody
+1103:6.8:Bronze chainbody
+1105:6.0:Steel chainbody
+1107:6.8:Black chainbody
+1109:5.0:Mithril chainbody
+1111:7.7:Adamant chainbody
+1113:6.8:Rune chainbody
+1115:9.0:Iron platebody
+1117:9.5:Bronze platebody
+1119:9.9:Steel platebody
+1121:8.0:Mithril platebody
+1123:11.0:Adamant platebody
+1125:9.9:Black platebody
+1127:9.9:Rune platebody
+1129:2.0:Leather body
+1131:3.0:Hardleather body
+1133:5.0:Studded body
+1135:6.0:Green d'hide body
+1137:1.8:Iron med helm
+1139:1.8:Bronze med helm
+1141:1.8:Steel med helm
+1143:1.3:Mithril med helm
+1145:2.0:Adamant med helm
+1147:2.0:Rune med helm
+1149:1.0:Dragon med helm
+1151:1.0:Black med helm
+1153:2.0:Iron full helm
+1155:2.7:Bronze full helm
+1157:2.7:Steel full helm
+1159:2.2:Mithril full helm
+1161:3.0:Adamant full helm
+1163:2.0:Rune full helm
+1165:2.0:Black full helm
+1167:1.0:Leather cowl
+1169:1.0:Coif
+1171:2.0:Wooden shield
+1173:3.0:Bronze sq shield
+1175:3.6:Iron sq shield
+1177:3.0:Steel sq shield
+1179:4.0:Black sq shield
+1181:3.1:Mithril sq shield
+1183:3.0:Adamant sq shield
+1185:3.64:Rune sq shield
+1187:3.0:Dragon sq shield
+1189:5.0:Bronze kiteshield
+1191:5.0:Iron kiteshield
+1193:5.0:Steel kiteshield
+1195:5.4:Black kiteshield
+1197:4.0:Mithril kiteshield
+1199:5.0:Adamant kiteshield
+1201:5.0:Rune kiteshield
+1203:0.4:Iron dagger
+1205:0.4:Bronze dagger
+1207:0.4:Steel dagger
+1209:0.3:Mithril dagger
+1211:0.5:Adamant dagger
+1213:1.0:Rune dagger
+1215:1.0:Dragon dagger
+1217:0.4:Black dagger
+1233:0.4:Black dagger(p)
+1237:2.2:Bronze spear
+1239:2.2:Iron spear
+1241:2.2:Steel spear
+1243:1.8:Mithril spear
+1245:2.7:Adamant spear
+1247:2.2:Rune spear
+1249:2.0:Dragon spear
+1265:2.25:Bronze pickaxe
+1267:2.25:Iron pickaxe
+1269:2.25:Steel pickaxe
+1271:2.0:Adamant pickaxe
+1275:2.2:Rune pickaxe
+1277:1.8:Bronze sword
+1279:1.8:Iron sword
+1281:1.0:Steel sword
+1283:1.0:Black sword
+1285:1.0:Mithril sword
+1287:2.0:Adamant sword
+1289:2.0:Rune sword
+1291:1.8:Bronze longsword
+1293:2.0:Iron longsword
+1295:2.0:Steel longsword
+1297:1.8:Black longsword
+1299:1.5:Mithril longsword
+1301:2.0:Adamant longsword
+1303:1.8:Rune longsword
+1305:1.8:Dragon longsword
+1307:3.6:Bronze 2h sword
+1309:3.6:Iron 2h sword
+1311:3.0:Steel 2h sword
+1313:3.6:Black 2h sword
+1315:3.0:Mithril 2h sword
+1317:4.0:Adamant 2h sword
+1319:3.0:Rune 2h sword
+1321:1.0:Bronze scimitar
+1323:0.0:Iron scimitar
+1325:1.8:Steel scimitar
+1327:1.8:Black scimitar
+1329:1.5:Mithril scimitar
+1331:2.0:Adamant scimitar
+1333:1.8:Rune scimitar
+1335:0.0:Iron warhammer
+1337:1.0:Bronze warhammer
+1339:1.0:Steel warhammer
+1341:0.0:Black warhammer
+1343:1.5:Mithril warhammer
+1345:2.0:Adamant warhammer
+1347:1.8:Rune warhammer
+1349:1.0:Iron axe
+1351:1.0:Bronze axe
+1353:1.3:Steel axe
+1355:1.1:Mithril axe
+1357:2.0:Adamant axe
+1359:1.0:Rune axe
+1361:2.0:Black axe
+1363:2.7:Iron battleaxe
+1365:2.7:Steel battleaxe
+1367:2.7:Black battleaxe
+1369:2.0:Mithril battleaxe
+1371:3.0:Adamant battleaxe
+1373:2.0:Rune battleaxe
+1375:2.7:Bronze battleaxe
+1377:2.7:Dragon battleaxe
+1379:1.0:Staff
+1381:2.0:Staff of air
+1383:2.2:Staff of water
+1385:2.2:Staff of earth
+1387:2.2:Staff of fire
+1389:1.0:Magic staff
+1391:2.0:Battlestaff
+1393:2.25:Fire battlestaff
+1395:0.0:Water battlestaff
+1397:2.0:Air battlestaff
+1399:2.0:Earth battlestaff
+1401:2.0:Mystic fire staff
+1403:0.0:Mystic water staff
+1405:2.2:Mystic air staff
+1407:0.0:Mystic earth staff
+1409:2.2:Iban's staff
+1410:2.2:Iban's staff
+1419:3.0:Scythe
+1420:1.8:Iron mace
+1422:1.79:Bronze mace
+1424:1.79:Steel mace
+1426:1.8:Black mace
+1428:1.5:Mithril mace
+1430:2.0:Adamant mace
+1432:2.0:Rune mace
+1434:1.8:Dragon mace
+1436:0.0:Rune essence
+1438:1.0:Air talisman
+1440:0.0:Earth talisman
+1442:0.0:Fire talisman
+1444:0.0:Water talisman
+1446:0.0:Body talisman
+1448:0.0:Mind talisman
+1452:0.0:Chaos talisman
+1454:0.0:Cosmic talisman
+1456:0.0:Death talisman
+1458:0.0:Law talisman
+1462:0.0:Nature talisman
+1465:0.0:Weapon poison
+1467:0.0:Damp sticks
+1468:0.0:Dry sticks
+1469:0.0:Broken glass
+1470:0.0:Red bead
+1472:0.0:Yellow bead
+1474:0.0:Black bead
+1476:0.0:White bead
+1478:0.0:Amulet of accuracy
+1481:5.0:Orb of light
+1482:5.0:Orb of light
+1483:5.0:Orb of light
+1484:5.0:Orb of light
+1485:0.0:Damp cloth
+1486:2.0:Piece of railing
+1487:1.0:Unicorn horn
+1488:0.0:Paladin's badge
+1489:0.0:Paladin's badge
+1490:0.0:Paladin's badge
+1491:1.2:Witch's cat
+1492:1.0:Doll of iban
+1493:0.0:Old journal
+1494:0.2:History of iban
+1495:0.2:Klank's gauntlets
+1496:0.0:Iban's dove
+1497:0.0:Amulet of othanian
+1498:0.0:Amulet of doomion
+1499:0.0:Amulet of holthion
+1500:0.0:Iban's shadow
+1501:0.0:Dwarf brew
+1502:0.0:Iban's ashes
+1503:0.0:Warrant
+1504:2.0:Hangover cure
+1505:0.0:A magic scroll
+1506:0.25:Gas mask
+1507:0.0:A small key
+1508:0.0:A scruffy note
+1510:0.4:Picture
+1511:2.0:Logs
+1513:2.0:Magic logs
+1515:2.0:Yew logs
+1517:2.0:Maple logs
+1519:2.0:Willow logs
+1521:2.0:Oak logs
+1523:0.0:Lockpick
+1525:0.0:Grimy snake weed
+1526:0.0:Snake weed
+1527:0.2:Grimy ardrigal
+1528:0.0:Ardrigal
+1529:0.0:Grimy sito foil
+1530:0.0:Sito foil
+1531:0.0:Grimy volencia moss
+1532:0.0:Volencia moss
+1533:0.0:Grimy rogue's purse
+1534:0.0:Rogue's purse
+1538:0.0:Crandor map
+1540:5.4:Anti-dragon shield
+1542:0.0:Maze key
+1549:0.0:Stake
+1550:0.0:Garlic
+1552:0.0:Seasoned sardine
+1573:0.0:Doogle leaves
+1577:0.0:Pete's candlestick
+1579:0.0:Thieves' armband
+1580:0.2:Ice gloves
+1581:0.0:Blamish snail slime
+1582:0.0:Blamish oil
+1583:0.0:Fire feather
+1584:0.0:Id papers
+1585:1.0:Oily fishing rod
+1586:0.01:Miscellaneous key
+1588:0.0:Grip's keyring
+1590:0.0:Dusty key
+1591:0.0:Jail key
+1592:0.0:Ring mould
+1594:0.0:Unholy mould
+1595:0.4:Amulet mould
+1597:0.0:Necklace mould
+1599:0.0:Holy mould
+1601:0.0:Diamond
+1603:0.0:Ruby
+1605:0.0:Emerald
+1607:0.0:Sapphire
+1609:0.0:Opal
+1613:0.2:Red topaz
+1615:0.3:Dragonstone
+1617:0.0:Uncut diamond
+1619:0.0:Uncut ruby
+1621:0.0:Uncut emerald
+1623:0.0:Uncut sapphire
+1625:0.0:Uncut opal
+1627:0.0:Uncut jade
+1629:0.2:Uncut red topaz
+1631:0.3:Uncut dragonstone
+1633:0.0:Crushed gem
+1635:0.0:Gold ring
+1637:0.0:Sapphire ring
+1639:0.0:Emerald ring
+1641:0.0:Ruby ring
+1643:0.0:Diamond ring
+1645:0.0:Dragonstone ring
+1649:0.0:Sapphire ring
+1650:0.0:Emerald ring
+1651:0.0:Ruby ring
+1652:0.0:Diamond ring
+1653:0.0:Dragonstone ring
+1654:0.0:Gold necklace
+1656:0.0:Sapphire necklace
+1658:0.0:Emerald necklace
+1660:0.0:Ruby necklace
+1662:0.0:Diamond necklace
+1664:0.0:Dragon necklace
+1668:0.0:Sapphire necklace
+1669:0.0:Emerald necklace
+1670:0.0:Ruby necklace
+1671:0.0:Diamond necklace
+1672:0.0:Dragon necklace
+1673:0.0:Gold amulet (u)
+1675:0.0:Sapphire amulet (u)
+1677:0.0:Emerald amulet (u)
+1679:0.0:Ruby amulet (u)
+1681:0.0:Diamond amulet (u)
+1683:0.0:Dragonstone amulet (u)
+1687:0.0:Sapphire amulet
+1688:0.0:Emerald amulet
+1689:0.0:Ruby amulet
+1690:0.0:Diamond amulet
+1691:0.0:Dragonstone ammy
+1692:0.0:Gold amulet
+1694:0.0:Sapphire amulet
+1696:0.0:Emerald amulet
+1698:0.0:Ruby amulet
+1700:0.0:Diamond amulet
+1702:0.0:Dragonstone amulet
+1704:0.3:Amulet of glory
+1706:0.3:Amulet of glory(1)
+1708:0.3:Amulet of glory(2)
+1710:0.3:Amulet of glory(3)
+1712:0.3:Amulet of glory(4)
+1714:0.0:Unstrung symbol
+1716:0.0:Unblessed symbol
+1718:0.0:Holy symbol
+1720:0.0:Unstrung emblem
+1722:0.0:Unpowered symbol
+1724:0.0:Unholy symbol
+1725:0.0:Amulet of strength
+1727:0.0:Amulet of magic
+1729:0.0:Amulet of defence
+1731:0.0:Amulet of power
+1733:0.0:Needle
+1734:0.0:Thread
+1735:0.0:Shears
+1737:0.0:Wool
+1739:2.0:Cowhide
+1741:2.0:Leather
+1745:3.1:Green dragon leather
+1747:3.1:Black dragonhide
+1749:3.1:Red dragonhide
+1751:3.1:Blue dragonhide
+1753:3.1:Green dragonhide
+1755:0.0:Chisel
+1757:0.45:Brown apron
+1759:0.0:Ball of wool
+1761:0.9:Soft clay
+1763:0.0:Red dye
+1765:0.0:Yellow dye
+1767:1.0:Blue dye
+1769:0.5:Orange dye
+1771:0.0:Green dye
+1773:0.0:Purple dye
+1775:0.9:Molten glass
+1777:0.0:Bow string
+1779:0.0:Flax
+1781:0.0:Soda ash
+1783:2.0:Bucket of sand
+1785:0.05:Glassblowing pipe
+1793:0.0:Woad leaf
+1794:0.0:Bronze wire
+1796:0.0:Silver necklace
+1797:0.0:Silver necklace
+1798:0.0:Silver cup
+1799:0.0:Silver cup
+1800:0.0:Silver bottle
+1801:0.0:Silver bottle
+1802:0.0:Silver book
+1803:0.0:Silver book
+1804:0.0:Silver needle
+1805:0.0:Silver needle
+1806:0.0:Silver pot
+1807:0.0:Silver pot
+1808:0.0:Criminal's thread
+1809:0.0:Criminal's thread
+1810:0.0:Criminal's thread
+1811:0.0:Flypaper
+1812:0.0:Pungent pot
+1813:0.0:Criminal's dagger
+1814:0.0:Criminal's dagger
+1815:0.0:Killer's print
+1822:0.0:Unknown print
+1833:0.9:Desert shirt
+1835:0.9:Desert robe
+1837:0.2:Desert boots
+1839:0.0:Metal key
+1840:0.0:Cell door key
+1841:10.0:Barrel
+1842:32.0:Ana in a barrel
+1843:0.0:Wrought iron key
+1844:0.9:Slave shirt
+1845:0.9:Slave robe
+1846:0.6:Slave boots
+1847:0.0:Scrumpled paper
+1849:0.0:Prototype dart
+1850:0.0:Technical plans
+1851:1.0:Tenti pineapple
+1852:0.0:Bedabin key
+1853:0.0:Prototype dart tip
+1854:0.0:Shantay pass
+1856:7.2:Guide book
+1857:3.0:Totem
+1858:0.0:Address label
+1861:0.75:Ugthanki meat
+1863:0.14:Pitta dough
+1865:0.0:Pitta bread
+1869:0.2:Chopped tomato
+1871:0.5:Chopped onion
+1875:0.0:Onion & tomato
+1881:0.0:Kebab mix
+1883:0.5:Ugthanki kebab
+1885:0.5:Ugthanki kebab
+1887:0.1:Cake tin
+1891:0.3:Cake
+1895:0.2:Slice of cake
+1897:0.3:Chocolate cake
+1901:0.3:Chocolate slice
+1905:0.0:Asgarnian ale
+1907:0.0:Wizard's mind bomb
+1909:0.0:Greenman's ale
+1911:1.0:Dragon bitter
+1913:0.0:Dwarven stout
+1915:2.0:Grog
+1917:1.0:Beer
+1919:0.05:Beer glass
+1921:0.0:Bowl of water
+1923:0.4:Bowl
+1925:1.0:Bucket
+1927:2.2:Bucket of milk
+1929:3.0:Bucket of water
+1931:0.45:Pot
+1933:1.0:Pot of flour
+1935:0.4:Jug
+1937:1.0:Jug of water
+1939:0.0:Swamp tar
+1940:0.0:Raw swamp paste
+1941:0.0:Swamp paste
+1942:0.5:Potato
+1944:0.0:Egg
+1946:1.0:Flour
+1947:0.6:Grain
+1949:0.9:Chef's hat
+1951:1.0:Redberries
+1953:0.16:Pastry dough
+1955:0.0:Cooking apple
+1957:0.1:Onion
+1959:0.5:Pumpkin
+1961:0.0:Easter egg
+1963:0.0:Banana
+1965:0.4:Cabbage
+1967:0.4:Cabbage
+1969:0.1:Spinach roll
+1971:0.0:Kebab
+1973:0.0:Chocolate bar
+1975:0.0:Chocolate dust
+1977:2.0:Chocolatey milk
+1978:0.1:Cup of tea
+1980:0.0:Empty cup
+1982:0.0:Tomato
+1984:0.0:Rotten apple
+1985:0.2:Cheese
+1987:0.3:Grapes
+1989:0.0:Half full wine jug
+1991:1.0:Jug of bad wine
+1992:1.0:Jug of bad wine
+1993:1.5:Jug of wine
+1995:1.0:Unfermented wine
+1996:1.0:Unfermented wine
+1997:1.0:Incomplete stew
+1999:1.0:Incomplete stew
+2001:1.0:Uncooked stew
+2003:1.5:Stew
+2007:0.2:Spice
+2009:1.5:Uncooked curry
+2011:1.5:Curry
+2015:0.0:Vodka
+2017:1.0:Whisky
+2019:1.0:Gin
+2021:0.0:Brandy
+2023:0.5:Cocktail guide
+2025:0.1:Cocktail shaker
+2026:0.0:Cocktail glass
+2028:0.0:Premade blurb' sp.
+2030:0.4:Premade choc s'dy
+2032:0.0:Premade dr' dragon
+2034:0.0:Premade fr' blast
+2036:0.0:Premade p' punch
+2038:0.0:Premade sgg
+2040:0.0:Premade wiz blz'd
+2048:0.0:Pineapple punch
+2054:1.0:Wizard blizzard
+2064:0.0:Blurberry special
+2074:0.1:Choc saturday
+2080:0.0:Short green guy
+2084:0.0:Fruit blast
+2092:0.0:Drunk dragon
+2102:0.1:Lemon
+2104:0.0:Lemon chunks
+2106:0.08:Lemon slices
+2108:0.1:Orange
+2110:0.0:Orange chunks
+2112:0.0:Orange slices
+2114:0.0:Pineapple
+2116:0.0:Pineapple chunks
+2118:0.0:Pineapple ring
+2120:0.0:Lime
+2122:0.0:Lime chunks
+2124:0.0:Lime slices
+2126:0.0:Dwellberries
+2128:0.0:Equa leaves
+2130:0.2:Pot of cream
+2132:0.3:Raw beef
+2134:1.0:Raw rat meat
+2136:1.0:Raw bear meat
+2138:0.15:Raw chicken
+2140:0.1:Cooked chicken
+2142:0.25:Cooked meat
+2148:0.2:Raw lava eel
+2149:0.15:Lava eel
+2150:0.5:Swamp toad
+2152:0.1:Toad's legs
+2162:0.1:King worm
+2164:0.1:Batta tin
+2165:0.1:Crunchy tray
+2166:0.1:Gnomebowl mould
+2167:0.5:Gianne's cook book
+2169:0.14:Gnome spice
+2171:0.5:Gianne dough
+2177:0.2:Half baked bowl
+2178:0.0:Raw gnomebowl
+2179:0.0:Unfinished bowl
+2181:0.0:Unfinished bowl
+2183:0.0:Unfinished bowl
+2185:0.3:Chocolate bomb
+2189:0.0:Unfinished bowl
+2191:0.0:Worm hole
+2193:0.0:Unfinished bowl
+2195:0.0:Veg ball
+2201:0.0:Half baked crunchy
+2202:0.0:Raw crunchies
+2203:0.0:Rock-climbing boots
+2205:0.0:Worm crunchies
+2207:0.0:Unfinished crunchy
+2209:0.2:Chocchip crunchies
+2211:0.0:Unfinished crunchy
+2213:0.0:Spicy crunchies
+2215:0.0:Unfinished crunchy
+2217:0.0:Toad crunchies
+2219:0.0:Premade w'm batta
+2221:0.0:Premade t'd batta
+2223:0.0:Premade c+t batta
+2225:0.0:Premade fr't batta
+2227:0.0:Premade veg batta
+2229:0.2:Premade choc bomb
+2231:0.2:Premade ttl
+2233:0.2:Premade worm hole
+2235:0.2:Premade veg ball
+2237:0.0:Premade w'm crun'
+2239:0.0:Premade ch' crunch
+2241:0.0:Premade s'y crunch
+2243:0.0:Premade t'd crunch
+2249:0.2:Half baked batta
+2250:0.0:Raw batta
+2251:0.25:Unfinished batta
+2253:0.0:Worm batta
+2255:0.0:Toad batta
+2257:0.25:Unfinished batta
+2259:0.2:Cheese+tom batta
+2261:0.25:Unfinished batta
+2263:0.25:Unfinished batta
+2265:0.25:Unfinished batta
+2267:0.25:Unfinished batta
+2269:0.25:Unfinished batta
+2271:0.25:Unfinished batta
+2273:0.25:Unfinished batta
+2275:0.25:Unfinished batta
+2277:0.0:Fruit batta
+2279:0.25:Unfinished batta
+2281:0.2:Vegetable batta
+2283:0.1:Pizza base
+2285:0.0:Incomplete pizza
+2287:0.0:Uncooked pizza
+2289:0.0:Plain pizza
+2293:0.0:Meat pizza
+2297:0.9:Anchovy pizza
+2301:0.0:Pineapple pizza
+2307:0.0:Bread dough
+2309:0.5:Bread
+2313:0.1:Pie dish
+2315:0.0:Pie shell
+2317:0.5:Uncooked apple pie
+2319:0.5:Uncooked meat pie
+2321:0.5:Uncooked berry pie
+2323:0.0:Apple pie
+2325:0.4:Redberry pie
+2327:0.0:Meat pie
+2331:0.0:Half a meat pie
+2333:0.4:Half a redberry pie
+2335:0.0:Half an apple pie
+2337:0.2:Raw oomlie
+2339:0.1:Palm leaf
+2340:0.1:Palm leaf
+2341:0.25:Wrapped oomlie
+2343:0.25:Cooked oomlie wrap
+2347:1.0:Hammer
+2349:1.0:Bronze bar
+2351:2.0:Iron bar
+2353:1.8:Steel bar
+2355:1.8:Silver bar
+2357:1.8:Gold bar
+2359:1.6:Mithril bar
+2361:2.0:Adamantite bar
+2363:2.0:Runite bar
+2365:2.0:'perfect' gold bar
+2366:2.0:Shield left half
+2368:2.0:Shield right half
+2370:0.0:Steel studs
+2372:3.0:Ogre relic
+2373:0.0:Relic part 1
+2374:0.0:Relic part 2
+2375:0.0:Relic part 3
+2376:0.0:Skavid map
+2377:0.0:Ogre tooth
+2378:0.0:Toban's key
+2379:0.0:Rock cake
+2384:0.0:Fingernails
+2385:1.8:Old robe
+2386:4.0:Unusual armour
+2387:0.0:Damaged dagger
+2388:0.0:Tattered eye patch
+2389:0.0:Vial
+2390:0.0:Vial
+2391:0.1:Ground bat bones
+2393:1.0:Toban's gold
+2394:0.0:Potion
+2395:0.0:Magic ogre potion
+2396:0.0:Spell scroll
+2397:2.0:Shaman robe
+2398:0.0:Cave nightshade
+2402:1.0:Silverlight
+2403:0.0:Hazeel scroll
+2405:9.0:Carnillean armour
+2406:0.0:Hazeel's mark
+2407:0.0:Ball
+2410:0.0:Magnet
+2412:0.4:Saradomin cape
+2413:0.4:Guthix cape
+2414:0.4:Zamorak cape
+2415:2.0:Saradomin staff
+2416:2.0:Guthix staff
+2417:2.0:Zamorak staff
+2419:0.0:Wig
+2421:0.0:Wig
+2422:0.0:Blue partyhat
+2423:0.0:Key print
+2424:0.0:Paste
+2434:0.0:Prayer potion(4)
+2442:0.0:Super defence(4)
+2460:0.0:Assorted flowers
+2462:0.0:Red flowers
+2464:0.0:Blue flowers
+2466:0.0:Yellow flowers
+2468:0.0:Purple flowers
+2470:0.0:Orange flowers
+2472:0.0:Mixed flowers
+2474:0.0:White flowers
+2476:0.0:Black flowers
+2481:0.0:Lantadyme
+2483:0.03:Lantadyme potion (unf)
+2485:0.0:Grimy lantadyme
+2487:0.0:Blue d'hide vamb
+2489:0.0:Red d'hide vamb
+2491:0.25:Black d'hide vamb
+2493:5.0:Blue d'hide chaps
+2495:5.0:Red d'hide chaps
+2497:5.0:Black d'hide chaps
+2499:7.0:Blue d'hide body
+2501:7.0:Red d'hide body
+2503:6.8:Black d'hide body
+2505:3.1:Blue dragon leather
+2507:3.1:Red dragon leather
+2509:3.1:Black dragon leather
+2511:2.0:Logs
+2513:6.0:Dragon chainbody
+2514:0.5:Raw shrimps
+2516:1.0:Pot of flour
+2518:0.0:Rotten tomato
+2528:0.0:Lamp
+2529:5.0:Orb of light
+2530:0.0:Bones
+2532:0.0:Iron fire arrows
+2533:0.0:Iron fire arrows
+2534:0.0:Steel fire arrows
+2535:0.0:Steel fire arrows
+2536:0.0:Mithril fire arrows
+2537:0.0:Mithril fire arrows
+2538:0.0:Adamant fire arrows
+2539:0.0:Adamant fire arrows
+2540:0.0:Rune fire arrows
+2541:0.0:Rune fire arrows
+2550:0.0:Ring of recoil
+2552:0.0:Ring of dueling(8)
+2554:0.0:Ring of dueling(7)
+2556:0.0:Ring of dueling(6)
+2558:0.0:Ring of dueling(5)
+2560:0.0:Ring of dueling(4)
+2562:0.0:Ring of dueling(3)
+2564:0.0:Ring of dueling(2)
+2566:0.0:Ring of dueling(1)
+2568:0.0:Ring of forging
+2570:0.0:Ring of life
+2572:0.0:Ring of wealth
+2574:0.2:Sextant
+2575:0.1:Watch
+2576:0.0:Chart
+2577:0.2:Ranger boots
+2579:1.0:Wizard boots
+2581:0.2:Robin hood hat
+2583:9.0:Black platebody (t)
+2585:9.0:Black platelegs (t)
+2587:2.0:Black full helm (t)
+2589:5.0:Black kiteshield (t)
+2591:9.07:Black platebody (g)
+2593:9.0:Black platelegs (g)
+2595:2.7:Black full helm (g)
+2597:5.0:Black kiteshield (g)
+2599:9.07:Adamant platebody (t)
+2601:10.0:Adamant platelegs (t)
+2603:5.8:Adamant kiteshield (t)
+2605:2.7:Adamant full helm (t)
+2607:9.07:Adamant platebody (g)
+2609:10.0:Adamant platelegs (g)
+2611:6.0:Adamant kiteshield (g)
+2613:2.7:Adamant full helm (g)
+2615:9.0:Rune platebody (g)
+2617:9.0:Rune platelegs (g)
+2619:2.0:Rune full helm (g)
+2621:5.0:Rune kiteshield (g)
+2623:9.07:Rune platebody (t)
+2625:9.0:Rune platelegs (t)
+2627:2.7:Rune full helm (t)
+2629:5.0:Rune kiteshield (t)
+2631:0.0:Highwayman mask
+2633:0.0:Blue beret
+2635:0.0:Black beret
+2637:0.0:White beret
+2639:0.0:Tan cavalier
+2641:0.0:Dark cavalier
+2643:0.0:Black cavalier
+2645:0.0:Red headband
+2647:0.0:Black headband
+2649:0.0:Brown headband
+2651:0.0:Pirate's hat
+2653:9.9:Zamorak platebody
+2655:9.0:Zamorak platelegs
+2657:2.0:Zamorak full helm
+2659:5.0:Zamorak kiteshield
+2661:9.9:Saradomin platebody
+2663:9.0:Saradomin platelegs
+2665:2.0:Saradomin full helm
+2667:5.4:Saradomin kiteshield
+2669:9.0:Guthix platebody
+2671:9.0:Guthix platelegs
+2673:2.0:Guthix full helm
+2675:5.0:Guthix kiteshield
+2677:0.0:Clue scroll (easy)
+2678:0.0:Clue scroll (easy)
+2679:0.0:Clue scroll (easy)
+2680:0.0:Clue scroll (easy)
+2681:0.0:Clue scroll (easy)
+2682:0.0:Clue scroll (easy)
+2683:0.0:Clue scroll (easy)
+2684:0.0:Clue scroll (easy)
+2685:0.0:Clue scroll (easy)
+2686:0.0:Clue scroll (easy)
+2687:0.0:Clue scroll (easy)
+2688:0.0:Clue scroll (easy)
+2689:0.0:Clue scroll (easy)
+2690:0.0:Clue scroll (easy)
+2691:0.0:Clue scroll (easy)
+2692:0.0:Clue scroll (easy)
+2693:0.0:Clue scroll (easy)
+2694:0.0:Clue scroll (easy)
+2695:0.0:Clue scroll (easy)
+2696:0.0:Clue scroll (easy)
+2697:0.0:Clue scroll (easy)
+2698:0.0:Clue scroll (easy)
+2699:0.0:Clue scroll (easy)
+2700:0.0:Clue scroll (easy)
+2701:0.0:Clue scroll (easy)
+2702:0.0:Clue scroll (easy)
+2703:0.0:Clue scroll (easy)
+2704:0.0:Clue scroll (easy)
+2705:0.0:Clue scroll (easy)
+2706:0.0:Clue scroll (easy)
+2707:0.0:Clue scroll (easy)
+2708:0.0:Clue scroll (easy)
+2709:0.0:Clue scroll (easy)
+2710:0.0:Clue scroll (easy)
+2711:0.0:Clue scroll (easy)
+2712:0.0:Clue scroll (easy)
+2713:0.0:Clue scroll (easy)
+2714:5.0:Casket (easy)
+2715:5.0:Casket (easy)
+2716:0.0:Clue scroll (easy)
+2717:5.0:Casket (easy)
+2718:5.0:Casket (easy)
+2719:0.0:Clue scroll (easy)
+2720:5.0:Casket (easy)
+2721:5.0:Casket (easy)
+2722:0.0:Clue scroll (hard)
+2723:0.0:Clue scroll (hard)
+2724:5.0:Casket (hard)
+2725:0.0:Clue scroll (hard)
+2726:5.0:Casket (hard)
+2727:0.0:Clue scroll (hard)
+2728:5.0:Casket (hard)
+2729:0.0:Clue scroll (hard)
+2730:5.0:Casket (hard)
+2731:0.0:Clue scroll (hard)
+2732:5.0:Casket (hard)
+2733:0.0:Clue scroll (hard)
+2734:5.0:Casket (hard)
+2735:0.0:Clue scroll (hard)
+2736:5.0:Casket (hard)
+2737:0.0:Clue scroll (hard)
+2738:5.0:Casket (hard)
+2739:0.0:Clue scroll (hard)
+2740:5.0:Casket (hard)
+2741:0.0:Clue scroll (hard)
+2742:5.0:Casket (hard)
+2743:0.0:Clue scroll (hard)
+2744:5.0:Casket (hard)
+2745:0.0:Clue scroll (hard)
+2746:5.0:Casket (hard)
+2747:0.0:Clue scroll (hard)
+2748:5.0:Casket (hard)
+2773:0.0:Clue scroll (hard)
+2774:0.0:Clue scroll (hard)
+2775:5.0:Casket (hard)
+2776:0.0:Clue scroll (hard)
+2777:5.0:Casket (hard)
+2778:0.0:Clue scroll (hard)
+2779:5.0:Casket (hard)
+2780:0.0:Clue scroll (hard)
+2781:5.0:Casket (hard)
+2782:0.0:Clue scroll (hard)
+2783:0.0:Clue scroll (hard)
+2784:5.0:Casket (hard)
+2785:0.0:Clue scroll (hard)
+2786:0.0:Clue scroll (hard)
+2787:5.0:Casket (hard)
+2788:0.0:Clue scroll (hard)
+2789:5.0:Casket (hard)
+2790:0.0:Clue scroll (hard)
+2791:5.0:Casket (hard)
+2792:0.0:Clue scroll (hard)
+2793:0.0:Clue scroll (hard)
+2794:0.0:Clue scroll (hard)
+2795:0.0:Puzzle box (hard)
+2796:0.0:Clue scroll (hard)
+2797:0.0:Clue scroll (hard)
+2798:0.0:Puzzle box (hard)
+2799:0.0:Clue scroll (hard)
+2800:0.0:Puzzle box (hard)
+2801:0.0:Clue scroll (medium)
+2802:5.0:Casket (medium)
+2803:0.0:Clue scroll (medium)
+2804:5.0:Casket (medium)
+2805:0.0:Clue scroll (medium)
+2806:5.0:Casket (medium)
+2807:0.0:Clue scroll (medium)
+2808:5.0:Casket (medium)
+2809:0.0:Clue scroll (medium)
+2810:5.0:Casket (medium)
+2811:0.0:Clue scroll (medium)
+2812:5.0:Casket (medium)
+2813:0.0:Clue scroll (medium)
+2814:5.0:Casket (medium)
+2815:0.0:Clue scroll (medium)
+2816:5.0:Casket (medium)
+2817:0.0:Clue scroll (medium)
+2818:5.0:Casket (medium)
+2819:0.0:Clue scroll (medium)
+2820:5.0:Casket (medium)
+2821:0.0:Clue scroll (medium)
+2822:5.0:Casket (medium)
+2823:0.0:Clue scroll (medium)
+2824:5.0:Casket (medium)
+2825:0.0:Clue scroll (medium)
+2826:5.0:Casket (medium)
+2827:0.0:Clue scroll (medium)
+2828:5.0:Casket (medium)
+2829:0.0:Clue scroll (medium)
+2830:5.0:Casket (medium)
+2831:0.0:Clue scroll (medium)
+2833:0.0:Clue scroll (medium)
+2835:0.0:Clue scroll (medium)
+2837:0.0:Clue scroll (medium)
+2839:0.0:Clue scroll (medium)
+2841:0.0:Clue scroll (medium)
+2842:0.0:Challenge scroll (medium)
+2843:0.0:Clue scroll (medium)
+2844:0.0:Challenge scroll (medium)
+2845:0.0:Clue scroll (medium)
+2846:0.0:Challenge scroll (medium)
+2847:0.0:Clue scroll (medium)
+2848:0.0:Clue scroll (medium)
+2849:0.0:Clue scroll (medium)
+2850:0.0:Challenge scroll (medium)
+2851:0.0:Clue scroll (medium)
+2852:0.0:Challenge scroll (medium)
+2853:0.0:Clue scroll (medium)
+2854:0.0:Challenge scroll (medium)
+2855:0.0:Clue scroll (medium)
+2856:0.0:Clue scroll (medium)
+2857:0.0:Clue scroll (medium)
+2858:0.0:Clue scroll (medium)
+2859:0.5:Wolf bones
+2861:0.0:Wolfbone arrowtips
+2862:1.0:Achey tree logs
+2864:0.0:Ogre arrow shaft
+2866:0.0:Ogre arrow
+2871:0.0:Ogre bellows
+2875:0.7:Bloated toad
+2876:10.0:Raw chompy
+2878:10.0:Cooked chompy
+2880:0.0:Ruined chompy
+2882:10.0:Seasoned chompy
+2883:1.0:Ogre bow
+2886:0.0:Battered book
+2887:0.0:Battered key
+2888:0.0:A stone bowl
+2889:0.0:A stone bowl
+2890:0.2:Elemental shield
+2892:2.2:Elemental ore
+2894:1.0:Grey boots
+2896:1.0:Grey robe top
+2898:1.0:Grey robe bottoms
+2900:0.0:Grey hat
+2902:0.0:Grey gloves
+2904:1.0:Red boots
+2906:1.0:Red robe top
+2908:1.0:Red robe bottoms
+2910:0.0:Red hat
+2912:0.0:Red gloves
+2914:1.0:Yellow boots
+2916:1.0:Yellow robe top
+2918:1.0:Yellow robe bottoms
+2920:0.0:Yellow hat
+2922:0.0:Yellow gloves
+2924:1.0:Teal boots
+2926:1.0:Teal robe top
+2928:1.0:Teal robe bottoms
+2930:0.0:Teal hat
+2932:0.0:Teal gloves
+2934:1.0:Purple boots
+2936:1.0:Purple robe top
+2938:1.0:Purple robe bottoms
+2940:0.0:Purple hat
+2942:0.0:Purple gloves
+2944:0.0:Golden key
+2945:0.0:Iron key
+2947:0.0:Golden candle
+2952:0.4:Wolfbane
+2955:0.0:Moonlight mead
+2957:0.0:Druid pouch
+2958:0.0:Druid pouch
+2959:1.0:Rotten food
+2961:1.6:Silver sickle
+2963:0.0:Silver sickle(b)
+2964:0.4:Washing bowl
+2966:0.2:Mirror
+2968:0.0:Druidic spell
+2969:0.0:A used spell
+2970:0.0:Mort myre fungus
+2972:0.0:Mort myre stem
+2974:0.1:Mort myre pear
+2976:0.4:Sickle mould
+2996:0.0:Agility arena ticket
+2997:0.3:Pirate's hook
+2998:0.0:Toadflax
+3000:0.0:Snapdragon
+3002:0.03:Toadflax potion (unf)
+3004:0.03:Snapdragon potion (unf)
+3024:0.0:Super restore(4)
+3026:0.0:Super restore(3)
+3042:0.0:Magic potion(3)
+3049:0.0:Grimy toadflax
+3051:0.0:Grimy snapdragon
+3053:2.0:Lava battlestaff
+3054:0.0:Mystic lava staff
+3057:0.0:Mime mask
+3058:0.0:Mime top
+3059:0.0:Mime legs
+3060:0.0:Mime gloves
+3061:0.0:Mime boots
+3062:1.0:Strange box
+3093:0.0:Black dart
+3095:0.9:Bronze claws
+3096:0.9:Iron claws
+3097:0.9:Steel claws
+3098:0.9:Black claws
+3099:0.9:Mithril claws
+3100:0.0:Adamant claws
+3101:0.0:Rune claws
+3102:0.0:Combination
+3104:0.0:Secret way map
+3105:0.3:Climbing boots
+3107:0.3:Spiked boots
+3109:0.0:Stone ball
+3110:0.0:Stone ball
+3111:0.0:Stone ball
+3112:0.0:Stone ball
+3113:0.0:Stone ball
+3114:0.0:Certificate
+3122:6.0:Granite shield
+3123:1.5:Shaikahan bones
+3125:0.8:Jogre bones
+3127:0.8:Burnt jogre bones
+3128:1.0:Pasty jogre bones
+3129:1.0:Pasty jogre bones
+3130:1.0:Marinated j' bones
+3131:1.0:Pasty jogre bones
+3132:1.0:Pasty jogre bones
+3133:1.0:Marinated j' bones
+3136:0.0:Cell key 1
+3137:0.0:Cell key 2
+3138:0.0:Potato cactus
+3140:6.0:Dragon chainbody
+3142:0.5:Raw karambwan
+3144:0.5:Cooked karambwan
+3146:0.5:Poison karambwan
+3147:0.5:Cooked karambwan
+3150:0.1:Raw karambwanji
+3151:0.1:Karambwanji
+3152:0.0:Karambwan paste
+3153:0.0:Karambwan paste
+3154:0.0:Karambwan paste
+3155:0.0:Karambwanji paste
+3156:0.0:Karambwanji paste
+3157:3.0:Karambwan vessel
+3159:3.0:Karambwan vessel
+3161:0.0:Crafting manual
+3162:0.0:Sliced banana
+3164:0.0:Karamjan rum
+3165:0.0:Karamjan rum
+3166:1.0:Monkey corpse
+3167:0.0:Monkey skin
+3168:0.0:Seaweed sandwich
+3169:1.0:Stuffed monkey
+3170:2.2:Bronze spear(kp)
+3171:2.2:Iron spear(kp)
+3172:2.2:Steel spear(kp)
+3173:1.8:Mithril spear(kp)
+3174:2.7:Adamant spear(kp)
+3175:2.2:Rune spear(kp)
+3179:0.5:Monkey bones
+3180:0.5:Monkey bones
+3181:0.5:Monkey bones
+3182:0.5:Monkey bones
+3183:0.5:Monkey bones
+3185:0.5:Monkey bones
+3186:0.5:Monkey bones
+3187:0.0:Bones
+3188:1.0:Cleaning cloth
+3190:3.0:Bronze halberd
+3192:3.0:Iron halberd
+3194:3.0:Steel halberd
+3196:3.0:Black halberd
+3198:2.7:Mithril halberd
+3200:3.6:Adamant halberd
+3202:3.0:Rune halberd
+3204:3.1:Dragon halberd
+3206:0.0:King's message
+3207:0.0:Iorwerths message
+3208:0.0:Crystal pendant
+3209:1.0:Sulphur
+3211:2.2:Limestone
+3213:2.0:Quicklime
+3214:0.0:Pot of quicklime
+3215:0.0:Ground sulphur
+3216:10.0:Barrel
+3218:32.0:Barrel bomb
+3219:32.0:Barrel bomb
+3220:32.0:Barrel of coal-tar
+3221:32.0:Barrel of naphtha
+3222:32.0:Naphtha mix
+3223:32.0:Naphtha mix
+3224:0.0:Strip of cloth
+3226:0.1:Raw rabbit
+3228:0.0:Cooked rabbit
+3230:0.0:Big book of bangs
+3239:1.0:Bark
+3261:0.0:Goutweed
+3262:0.0:Troll thistle
+3263:0.0:Dried thistle
+3264:0.0:Ground thistle
+3265:0.0:Troll potion
+3266:0.0:Drunk parrot
+3267:0.0:Dirty robe
+3268:0.0:Fake man
+3269:0.0:Storeroom key
+3270:0.0:Alco-chunks
+3325:0.0:Vampire dust
+3327:2.0:Myre snelm
+3329:2.0:Blood'n'tar snelm
+3331:2.0:Ochre snelm
+3333:1.9:Bruise blue snelm
+3335:2.0:Broken bark snelm
+3337:2.0:Myre snelm
+3339:2.0:Blood'n'tar snelm
+3341:2.0:Ochre snelm
+3343:1.9:Bruise blue snelm
+3345:10.0:Blamish myre shell
+3347:10.0:Blamish red shell
+3349:10.0:Blamish ochre shell
+3351:10.0:Blamish blue shell
+3353:10.0:Blamish bark shell
+3355:10.0:Blamish myre shell
+3357:10.0:Blamish red shell
+3359:10.0:Blamish ochre shell
+3361:10.0:Blamish blue shell
+3363:2.0:Thin snail
+3365:2.0:Lean snail
+3367:0.0:Fat snail
+3369:3.0:Thin snail meat
+3371:0.0:Lean snail meat
+3373:4.5:Fat snail meat
+3377:0.0:Sample bottle
+3379:2.0:Raw slimy eel
+3381:2.0:Cooked slimy eel
+3385:0.9:Splitbark helm
+3387:4.5:Splitbark body
+3389:3.6:Splitbark legs
+3391:0.9:Splitbark gauntlets
+3393:1.0:Splitbark boots
+3396:1.35:Loar remains
+3398:0.0:Phrin remains
+3400:1.3:Riyl remains
+3402:1.3:Asyn remains
+3404:0.0:Fiyr remains
+3420:1.0:Limestone brick
+3438:0.0:Pyre logs
+3440:1.8:Oak pyre logs
+3442:1.3:Willow pyre logs
+3444:1.3:Maple pyre logs
+3446:1.0:Yew pyre logs
+3448:1.3:Magic pyre logs
+3450:0.0:Bronze key red
+3451:0.0:Bronze key brown
+3452:0.0:Bronze key crimson
+3453:0.0:Bronze key black
+3454:0.0:Bronze key purple
+3455:0.0:Steel key red
+3456:0.0:Steel key brown
+3457:0.0:Steel key crimson
+3458:0.0:Steel key black
+3459:0.0:Steel key purple
+3460:0.0:Black key red
+3461:0.0:Black key brown
+3462:0.0:Black key crimson
+3463:0.0:Black key black
+3464:0.0:Black key purple
+3465:0.0:Silver key red
+3466:0.0:Silver key brown
+3467:0.0:Silver key crimson
+3468:0.0:Silver key black
+3469:0.0:Silver key purple
+3470:1.0:Fine cloth
+3472:8.0:Black plateskirt (t)
+3473:8.0:Black plateskirt (g)
+3474:9.0:Adamant plateskirt (t)
+3475:9.0:Adamant plateskirt (g)
+3476:9.0:Rune plateskirt (g)
+3477:8.0:Rune plateskirt (t)
+3478:9.0:Zamorak plateskirt
+3479:9.0:Saradomin plateskirt
+3480:9.0:Guthix plateskirt
+3481:10.0:Gilded platebody
+3483:9.0:Gilded platelegs
+3485:9.0:Gilded plateskirt
+3486:2.0:Gilded full helm
+3488:5.0:Gilded kiteshield
+3490:0.0:Clue scroll (easy)
+3491:0.0:Clue scroll (easy)
+3492:0.0:Clue scroll (easy)
+3493:0.0:Clue scroll (easy)
+3494:0.0:Clue scroll (easy)
+3495:0.0:Clue scroll (easy)
+3496:0.0:Clue scroll (easy)
+3497:0.0:Clue scroll (easy)
+3498:0.0:Clue scroll (easy)
+3499:0.0:Clue scroll (easy)
+3500:0.0:Clue scroll (easy)
+3501:0.0:Clue scroll (easy)
+3502:0.0:Clue scroll (easy)
+3503:0.0:Clue scroll (easy)
+3504:0.0:Clue scroll (easy)
+3505:0.0:Clue scroll (easy)
+3506:0.0:Clue scroll (easy)
+3507:0.0:Clue scroll (easy)
+3508:0.0:Clue scroll (easy)
+3509:0.0:Clue scroll (easy)
+3510:0.0:Clue scroll (easy)
+3511:5.0:Casket (easy)
+3512:0.0:Clue scroll (easy)
+3513:0.0:Clue scroll (easy)
+3514:0.0:Clue scroll (easy)
+3515:0.0:Clue scroll (easy)
+3516:0.0:Clue scroll (easy)
+3517:5.0:Casket (easy)
+3518:0.0:Clue scroll (easy)
+3519:5.0:Casket (easy)
+3520:0.0:Clue scroll (hard)
+3521:5.0:Casket (hard)
+3522:0.0:Clue scroll (hard)
+3523:5.0:Casket (hard)
+3524:0.0:Clue scroll (hard)
+3525:0.0:Clue scroll (hard)
+3526:0.0:Clue scroll (hard)
+3527:5.0:Casket (hard)
+3528:0.0:Clue scroll (hard)
+3529:5.0:Casket (hard)
+3530:0.0:Clue scroll (hard)
+3531:5.0:Casket (hard)
+3532:0.0:Clue scroll (hard)
+3533:5.0:Casket (hard)
+3534:0.0:Clue scroll (hard)
+3535:5.0:Casket (hard)
+3536:0.0:Clue scroll (hard)
+3537:5.0:Casket (hard)
+3538:0.0:Clue scroll (hard)
+3539:5.0:Casket (hard)
+3540:0.0:Clue scroll (hard)
+3541:5.0:Casket (hard)
+3542:0.0:Clue scroll (hard)
+3543:5.0:Casket (hard)
+3544:0.0:Clue scroll (hard)
+3545:5.0:Casket (hard)
+3546:0.0:Clue scroll (hard)
+3547:5.0:Casket (hard)
+3548:0.0:Clue scroll (hard)
+3549:5.0:Casket (hard)
+3550:0.0:Clue scroll (hard)
+3551:5.0:Casket (hard)
+3552:0.0:Clue scroll (hard)
+3553:5.0:Casket (hard)
+3554:0.0:Clue scroll (hard)
+3555:5.0:Casket (hard)
+3556:0.0:Clue scroll (hard)
+3557:5.0:Casket (hard)
+3558:0.0:Clue scroll (hard)
+3559:5.0:Casket (hard)
+3560:0.0:Clue scroll (hard)
+3561:5.0:Casket (hard)
+3562:0.0:Clue scroll (hard)
+3563:5.0:Casket (hard)
+3564:0.0:Clue scroll (hard)
+3565:0.0:Puzzle box (hard)
+3566:0.0:Clue scroll (hard)
+3567:0.0:Puzzle box (hard)
+3568:0.0:Clue scroll (hard)
+3569:0.0:Puzzle box (hard)
+3570:0.0:Clue scroll (hard)
+3571:0.0:Puzzle box (hard)
+3572:0.0:Clue scroll (hard)
+3573:0.0:Clue scroll (hard)
+3574:0.0:Clue scroll (hard)
+3575:0.0:Clue scroll (hard)
+3576:0.0:Puzzle box (hard)
+3577:0.0:Clue scroll (hard)
+3578:0.0:Puzzle box (hard)
+3579:0.0:Clue scroll (hard)
+3580:0.0:Clue scroll (hard)
+3581:5.0:Casket (hard)
+3582:0.0:Clue scroll (medium)
+3583:5.0:Casket (medium)
+3584:0.0:Clue scroll (medium)
+3585:5.0:Casket (medium)
+3586:0.0:Clue scroll (medium)
+3587:5.0:Casket (medium)
+3588:0.0:Clue scroll (medium)
+3589:5.0:Casket (medium)
+3590:0.0:Clue scroll (medium)
+3591:5.0:Casket (medium)
+3592:0.0:Clue scroll (medium)
+3593:5.0:Casket (medium)
+3594:0.0:Clue scroll (medium)
+3595:5.0:Casket (medium)
+3596:0.0:Clue scroll (medium)
+3597:5.0:Casket (medium)
+3598:0.0:Clue scroll (medium)
+3599:0.0:Clue scroll (medium)
+3600:5.0:Casket (medium)
+3601:0.0:Clue scroll (medium)
+3602:0.0:Clue scroll (medium)
+3603:5.0:Casket (medium)
+3604:0.0:Clue scroll (medium)
+3605:0.0:Clue scroll (medium)
+3607:0.0:Clue scroll (medium)
+3609:0.0:Clue scroll (medium)
+3610:0.0:Clue scroll (medium)
+3611:0.0:Clue scroll (medium)
+3612:0.0:Clue scroll (medium)
+3613:0.0:Clue scroll (medium)
+3614:0.0:Clue scroll (medium)
+3615:0.0:Clue scroll (medium)
+3616:0.0:Clue scroll (medium)
+3617:0.0:Clue scroll (medium)
+3618:0.0:Clue scroll (medium)
+3678:1.3:Flamtaer hammer
+3688:1.0:Unstrung lyre
+3690:1.8:Enchanted lyre
+3692:1.0:Branch
+3693:0.0:Golden fleece
+3694:1.0:Golden wool
+3695:1.0:Pet rock
+3696:0.0:Hunters' talisman
+3697:0.0:Hunters' talisman
+3698:0.0:Exotic flower
+3699:0.0:Fremennik ballad
+3700:0.0:Sturdy boots
+3701:0.0:Tracking map
+3703:0.0:Unusual fish
+3704:0.0:Sea fishing map
+3705:0.0:Weather forecast
+3706:0.0:Champions token
+3707:0.0:Legendary cocktail
+3708:0.0:Fiscal statement
+3710:0.0:Warriors' contract
+3711:20.0:Keg of beer
+3712:20.0:Low alcohol keg
+3713:0.0:Strange object
+3714:0.0:Lit strange object
+3715:0.0:Red disk
+3716:0.0:Red disk
+3718:0.0:Magnet
+3719:0.0:Blue thread
+3720:0.0:Small pick
+3721:0.0:Toy ship
+3722:3.0:Full bucket
+3723:0.0:4/5ths full bucket
+3724:0.0:3/5ths full bucket
+3725:0.0:2/5ths full bucket
+3726:0.0:1/5ths full bucket
+3727:0.0:Empty bucket
+3728:0.0:Frozen bucket
+3729:0.0:Full jug
+3730:0.0:2/3rds full jug
+3731:0.0:1/3rds full jug
+3732:0.0:Empty jug
+3734:0.0:Vase
+3735:0.0:Vase of water
+3737:0.0:Vase lid
+3738:0.0:Sealed vase
+3739:0.0:Sealed vase
+3740:0.0:Sealed vase
+3741:0.0:Frozen key
+3742:0.0:Red herring
+3743:0.0:Red disk
+3744:0.0:Wooden disk
+3745:0.0:Seer's key
+3746:0.0:Sticky red goop
+3748:2.7:Fremennik helm
+3749:2.0:Archer helm
+3751:2.7:Berserker helm
+3753:2.7:Warrior helm
+3755:2.0:Farseer helm
+3757:1.8:Fremennik blade
+3758:2.2:Fremennik shield
+3759:0.0:Fremennik cyan cloak
+3761:0.0:Fremennik brown cloak
+3763:0.0:Fremennik blue cloak
+3765:0.0:Fremennik green cloak
+3767:0.0:Fremennik brown shirt
+3769:0.0:Fremennik grey shirt
+3771:0.0:Fremennik beige shirt
+3773:0.0:Fremennik red shirt
+3775:0.0:Fremennik blue shirt
+3777:0.0:Fremennik red cloak
+3779:0.0:Fremennik grey cloak
+3781:0.0:Fremennik yellow cloak
+3783:0.0:Fremennik teal cloak
+3785:0.0:Fremennik purple cloak
+3787:0.0:Fremennik pink cloak
+3789:0.0:Fremennik black cloak
+3791:0.5:Fremennik boots
+3793:0.9:Fremennik robe
+3795:0.9:Fremennik skirt
+3797:0.0:Fremennik hat
+3799:0.0:Fremennik gloves
+3801:20.0:Keg of beer
+3803:0.0:Beer tankard
+3805:0.0:Tankard
+3827:0.0:Saradomin page 1
+3828:0.0:Saradomin page 2
+3829:0.0:Saradomin page 3
+3830:0.0:Saradomin page 4
+3831:0.0:Zamorak page 1
+3832:0.0:Zamorak page 2
+3833:0.0:Zamorak page 3
+3834:0.0:Zamorak page 4
+3835:0.0:Guthix page 1
+3836:0.0:Guthix page 2
+3837:0.0:Guthix page 3
+3838:0.0:Guthix page 4
+3840:1.0:Holy book
+3842:1.0:Unholy book
+3844:1.0:Book of balance
+3847:0.5:Manual
+3848:0.0:Lighthouse key
+3849:5.0:Rusty casket
+3853:0.0:Games necklace(8)
+3855:0.0:Games necklace(7)
+3857:0.0:Games necklace(6)
+3859:0.0:Games necklace(5)
+3861:0.0:Games necklace(4)
+3863:0.0:Games necklace(3)
+3865:0.0:Games necklace(2)
+3867:0.0:Games necklace(1)
+3894:0.0:Awful anthem
+3895:0.0:Good anthem
+3896:0.0:Treaty
+3897:0.0:Giant nib
+3898:0.0:Giant pen
+3899:1.6:Iron sickle
+3901:1.0:Ghrim's book
+4002:0.2:Spare controls
+4004:0.0:Gnome royal seal
+4005:0.0:Narnode's orders
+4006:0.2:Monkey dentures
+4007:2.0:Enchanted bar
+4008:1.0:Eye of gnome
+4009:1.0:Eye of gnome
+4012:0.0:Monkey nuts
+4014:0.1:Monkey bar
+4016:0.0:Banana stew
+4020:1.0:M'amulet mould
+4021:1.0:M'speak amulet
+4022:1.0:M'speak amulet
+4023:1.25:Monkey talisman
+4024:0.0:Monkey greegree
+4025:0.0:Monkey greegree
+4026:0.0:Monkey greegree
+4027:0.0:Monkey greegree
+4028:0.0:Monkey greegree
+4029:0.0:Monkey greegree
+4030:0.0:Monkey greegree
+4031:0.0:Monkey greegree
+4034:0.0:Monkey skull
+4035:0.0:10th squad sigil
+4037:0.0:Saradomin banner
+4039:0.0:Zamorak banner
+4041:1.0:Hooded cloak
+4042:1.0:Hooded cloak
+4045:0.035:Explosive potion
+4047:1.36:Climbing rope
+4049:0.0:Bandages
+4051:0.0:Toolkit
+4053:5.0:Barricade
+4055:0.0:Castlewars manual
+4067:0.0:Castle wars ticket
+4073:0.0:Damp tinderbox
+4075:0.0:Glowing fungus
+4077:0.0:Crystal-mine key
+4078:0.0:Zealot's key
+4079:0.0:Yo-yo
+4081:0.6:Salve amulet
+4082:0.0:Salve shard
+4083:0.0:Sled
+4084:0.0:Sled
+4085:0.0:Wax
+4086:0.0:Trollweiss
+4087:9.0:Dragon platelegs
+4089:0.4:Mystic hat
+4091:2.7:Mystic robe top
+4093:1.8:Mystic robe bottom
+4095:0.4:Mystic gloves
+4097:0.4:Mystic boots
+4099:0.4:Mystic hat (dark)
+4101:2.7:Mystic robe top (dark)
+4103:1.8:Mystic robe bottom (dark)
+4105:0.4:Mystic gloves (dark)
+4107:0.4:Mystic boots (dark)
+4109:0.4:Mystic hat (light)
+4111:2.7:Mystic robe top (light)
+4113:1.8:Mystic robe bottom (light)
+4115:0.4:Mystic gloves (light)
+4117:0.4:Mystic boots (light)
+4119:1.3:Bronze boots
+4121:1.3:Iron boots
+4123:1.0:Steel boots
+4125:1.0:Black boots
+4127:1.0:Mithril boots
+4131:1.3:Rune boots
+4150:0.0:Broad arrows
+4151:0.45:Abyssal whip
+4153:4.5:Granite maul
+4155:0.2:Enchanted gem
+4156:2.2:Mirror shield
+4158:2.0:Leaf-bladed spear
+4159:2.0:Leaf-bladed spear
+4160:0.0:Broad arrows
+4161:0.0:Bag of salt
+4162:2.2:Rock hammer
+4164:0.1:Facemask
+4166:0.0:Earmuffs
+4168:8.0:Nose peg
+4170:1.0:Slayer's staff
+4178:0.45:Abyssal whip
+4180:9.0:Dragon platelegs
+4182:0.0:Goutweed
+4183:0.0:Star amulet
+4184:0.0:Cavern key
+4185:0.0:Tower key
+4186:0.0:Shed key
+4187:0.0:Marble amulet
+4188:0.0:Obsidian amulet
+4189:0.0:Garden cane
+4190:1.0:Garden brush
+4194:19.0:Torso
+4195:2.0:Arms
+4196:0.0:Legs
+4197:3.0:Decapitated head
+4198:3.0:Decapitated head
+4199:0.0:Pickled brain
+4200:0.0:Conductor mould
+4201:4.0:Conductor
+4202:0.0:Ring of charos
+4205:0.0:Consecration seed
+4206:0.0:Consecration seed
+4207:0.0:Crystal seed
+4209:0.51:Cadarn lineage
+4211:0.0:Elf crystal
+4236:2.0:Signed oak bow
+4237:1.0:Nettle-water
+4239:0.9:Nettle tea
+4240:0.9:Nettle tea
+4241:0.0:Nettles
+4242:0.1:Cup of tea
+4243:0.1:Cup of tea
+4244:0.0:Porcelain cup
+4245:0.1:Cup of tea
+4246:0.1:Cup of tea
+4247:2.3:Mystical robes
+4248:2.0:Book of haricanto
+4249:1.0:Translation manual
+4250:0.0:Ghostspeak amulet
+4251:0.0:Ectophial
+4252:0.0:Ectophial
+4253:0.0:Model ship
+4254:0.0:Model ship
+4255:1.0:Bonemeal
+4256:1.0:Bonemeal
+4257:1.0:Bonemeal
+4258:1.0:Bonemeal
+4259:1.0:Bonemeal
+4260:1.0:Bonemeal
+4261:1.0:Bonemeal
+4262:1.0:Bonemeal
+4263:1.0:Bonemeal
+4264:1.0:Bonemeal
+4265:1.0:Bonemeal
+4266:1.0:Bonemeal
+4267:1.0:Bonemeal
+4268:1.0:Bonemeal
+4269:1.0:Bonemeal
+4270:1.0:Bonemeal
+4271:1.0:Bonemeal
+4274:0.0:Map scrap
+4275:0.0:Map scrap
+4276:0.0:Map scrap
+4277:0.0:Treasure map
+4278:0.0:Ecto-token
+4283:0.0:Petition form
+4284:1.0:Bedsheet
+4285:1.0:Bedsheet
+4286:3.0:Bucket of slime
+4287:0.3:Raw beef
+4289:0.15:Raw chicken
+4291:0.1:Cooked chicken
+4293:0.25:Cooked meat
+4298:0.0:Ham shirt
+4300:0.0:Ham robe
+4302:0.0:Ham hood
+4304:0.0:Ham cloak
+4306:0.0:Ham logo
+4308:0.4:Ham gloves
+4310:0.0:Ham boots
+4313:0.0:Crystal of seren
+4315:0.4:Team-1 cape
+4325:0.4:Team-6 cape
+4333:0.4:Team-10 cape
+4335:0.4:Team-11 cape
+4345:0.4:Team-16 cape
+4353:0.4:Team-20 cape
+4355:0.4:Team-21 cape
+4365:0.4:Team-26 cape
+4373:0.4:Team-30 cape
+4375:0.4:Team-31 cape
+4385:0.4:Team-36 cape
+4393:0.4:Team-40 cape
+4395:0.4:Team-41 cape
+4405:0.4:Team-46 cape
+4413:0.4:Team-50 cape
+4415:1.3:Blunt axe
+4416:0.1:Herbal tincture
+4425:10.0:Stodgy mattress
+4426:15.0:Comfy mattress
+4427:1.0:Iron oxide
+4428:0.0:Animate rock scroll
+4429:0.0:Broken vane part
+4430:0.0:Directionals
+4431:0.0:Broken vane part
+4432:0.0:Ornament
+4433:0.0:Broken vane part
+4434:0.0:Weathervane pillar
+4435:0.0:Weather report
+4436:0.5:Airtight pot
+4440:0.0:Pot lid
+4442:0.0:Breathing salts
+4443:1.0:Chicken cage
+4444:1.3:Sharpened axe
+4445:1.3:Red mahogany log
+4446:0.0:Steel key ring
+4447:0.0:Antique lamp
+4456:0.0:Bowl of hot water
+4460:0.0:Cup of hot water
+4462:0.0:Ruined herb tea
+4464:0.0:Herb tea mix
+4466:0.0:Herb tea mix
+4468:0.0:Herb tea mix
+4470:0.0:Herb tea mix
+4472:0.0:Herb tea mix
+4474:0.0:Herb tea mix
+4476:0.0:Herb tea mix
+4478:0.0:Herb tea mix
+4480:0.0:Herb tea mix
+4482:0.0:Herb tea mix
+4484:0.0:Safety guarantee
+4485:0.0:White pearl
+4486:0.0:White pearl seed
+4487:1.0:Half a rock
+4488:1.0:Corpse of woman
+4489:0.0:Asleif's necklace
+4490:0.0:Mud
+4492:1.0:Muddy rock
+4494:0.0:Pole
+4496:0.0:Broken pole
+4498:1.3:Rope
+4500:0.0:Pole
+4502:0.0:Bearhead
+4517:0.4:Giant frog legs
+4522:0.4:Oil lamp
+4524:0.4:Oil lamp
+4529:1.0:Candle lantern
+4531:1.0:Candle lantern
+4532:1.0:Candle lantern
+4534:1.0:Candle lantern
+4537:0.9:Oil lantern
+4539:0.9:Oil lantern
+4540:0.0:Oil lantern frame
+4542:0.02:Lantern lens
+4546:1.0:Bullseye lantern (empty)
+4548:1.0:Bullseye lantern
+4550:1.0:Bullseye lantern
+4551:2.2:Spiny helmet
+4561:0.0:Purple sweets
+4565:0.0:Easter basket
+4566:0.0:Rubber chicken
+4567:31.0:Gold helmet
+4568:0.0:Dwarven lore
+4569:0.0:Book page 1
+4570:0.0:Book page 2
+4571:0.0:Book page 3
+4572:0.0:Pages
+4573:0.0:Pages
+4574:0.0:Base schematics
+4579:0.0:Cannon ball
+4580:2.2:Black spear
+4585:9.0:Dragon plateskirt
+4587:1.8:Dragon scimitar
+4589:0.0:Keys
+4590:0.01:Jewels
+4591:0.0:Kharidian headpiece
+4593:1.0:Fake beard
+4595:0.0:Karidian disguise
+4597:0.0:Note
+4598:0.0:Note
+4599:1.0:Oak blackjack
+4600:1.0:Willow blackjack
+4601:0.4:Ugthanki dung
+4602:0.4:Ugthanki dung
+4603:0.0:Receipt
+4604:0.2:Hag's poison
+4605:0.0:Snake charm
+4606:0.5:Snake basket
+4607:1.0:Snake basket full
+4608:0.2:Super kebab
+4610:0.1:Red hot sauce
+4611:0.0:Desert disguise
+4613:0.0:Spinning plate
+4616:1.0:Varmen's notes
+4617:0.01:Display cabinet key
+4619:0.0:Strange implement
+4620:0.0:Black mushroom
+4621:0.0:Phoenix feather
+4622:0.0:Black mushroom ink
+4623:0.0:Phoenix quill pen
+4624:0.0:Golem program
+4627:0.0:Bandit's brew
+4654:0.0:Etchings
+4655:1.0:Translation
+4656:0.0:Warm key
+4657:0.0:Ring of visibility
+4658:0.0:Silver pot
+4659:2.0:Blessed pot
+4660:0.0:Silver pot
+4661:2.0:Blessed pot
+4662:0.0:Silver pot
+4663:2.0:Blessed pot
+4664:0.0:Silver pot
+4665:2.0:Blessed pot
+4666:0.0:Silver pot
+4667:2.0:Blessed pot
+4670:0.0:Blood diamond
+4671:0.0:Ice diamond
+4672:1.0:Smoke diamond
+4673:1.0:Shadow diamond
+4674:0.0:Gilded cross
+4675:2.2:Ancient staff
+4677:1.3:Catspeak amulet
+4678:4.0:Canopic jar
+4679:4.0:Canopic jar
+4680:4.0:Canopic jar
+4681:4.0:Canopic jar
+4682:0.0:Holy symbol
+4683:0.0:Unholy symbol
+4684:0.9:Linen
+4686:0.51:Embalming manual
+4687:2.0:Bucket of sap
+4689:0.5:Pile of salt
+4691:0.0:Sphinx's token
+4692:1.0:Gold leaf
+4693:3.0:Full bucket
+4694:0.0:Steam rune
+4695:0.0:Mist rune
+4696:0.0:Dust rune
+4697:0.0:Smoke rune
+4698:0.0:Mud rune
+4699:0.0:Lava rune
+4700:1.3:Sapphire lantern
+4701:1.3:Sapphire lantern
+4702:1.3:Sapphire lantern
+4703:1.0:Magic stone
+4704:2.0:Stone bowl
+4707:0.0:Crumbling tome
+4708:0.0:Ahrim's hood
+4710:2.0:Ahrim's staff
+4712:5.0:Ahrim's robetop
+4714:11.0:Ahrim's robeskirt
+4716:1.0:Dharok's helm
+4718:13.0:Dharok's greataxe
+4720:9.0:Dharok's platebody
+4722:10.0:Dharok's platelegs
+4724:2.0:Guthan's helm
+4726:2.2:Guthan's warspear
+4728:9.0:Guthan's platebody
+4730:8.0:Guthan's chainskirt
+4732:1.0:Karil's coif
+4734:4.0:Karil's crossbow
+4736:6.8:Karil's leathertop
+4738:4.0:Karil's leatherskirt
+4740:0.0:Bolt rack
+4745:1.0:Torag's helm
+4747:4.0:Torag's hammers
+4749:9.0:Torag's platebody
+4751:9.0:Torag's platelegs
+4753:1.0:Verac's helm
+4755:2.0:Verac's flail
+4757:5.0:Verac's brassard
+4759:4.5:Verac's plateskirt
+4773:0.0:Bronze brutal
+4778:0.0:Iron brutal
+4783:0.0:Steel brutal
+4788:0.0:Black brutal
+4793:0.0:Mithril brutal
+4798:0.0:Adamant brutal
+4803:0.0:Rune brutal
+4808:0.0:Black prism
+4809:0.0:Torn page
+4810:0.0:Ruined backpack
+4811:0.0:Dragon inn tankard
+4812:0.8:Zogre bones
+4814:0.0:Sithik portrait
+4815:0.0:Sithik portrait
+4816:0.0:Signed portrait
+4817:1.0:Book of portraiture
+4818:0.0:Ogre artefact
+4819:0.0:Bronze nails
+4820:0.0:Iron nails
+4821:0.0:Black nails
+4822:0.0:Mithril nails
+4823:0.0:Adamantite nails
+4824:0.0:Rune nails
+4827:1.8:Comp ogre bow
+4829:0.0:Book of 'h.a.m'
+4830:0.8:Fayrg bones
+4832:0.8:Raurg bones
+4834:0.8:Ourg bones
+4836:0.0:Strange potion
+4837:0.0:Necromancy book
+4838:0.1:Cup of tea
+4839:0.0:Ogre gate key
+4850:0.0:Ogre coffin key
+4852:1.0:Bonemeal
+4853:1.0:Bonemeal
+4854:1.0:Bonemeal
+4855:1.0:Bonemeal
+4938:4.0:Karil's crossbow 0
+5001:0.5:Raw cave eel
+5003:0.5:Cave eel
+5004:0.0:Frog spawn
+5009:1.0:Goblin symbol book
+5011:0.0:Silverware
+5012:0.0:Peace treaty
+5013:1.0:Mining helmet
+5014:1.0:Mining helmet
+5016:1.0:Bone spear
+5018:0.9:Bone club
+5020:0.1:Minecart ticket
+5021:0.1:Minecart ticket
+5022:0.1:Minecart ticket
+5023:0.1:Minecart ticket
+5024:0.0:Woven top
+5026:0.0:Woven top
+5028:0.0:Woven top
+5056:2.0:Dwarven battleaxe
+5057:2.0:Dwarven battleaxe
+5058:2.0:Dwarven battleaxe
+5059:2.0:Dwarven battleaxe
+5060:2.0:Dwarven battleaxe
+5061:2.0:Dwarven battleaxe
+5062:0.5:Left boot
+5063:0.5:Right boot
+5064:1.0:Exquisite boots
+5065:0.0:Book on costumes
+5066:0.0:Meeting notes
+5067:0.0:Exquisite clothes
+5070:0.0:Bird nest
+5071:0.0:Bird nest
+5072:0.0:Bird nest
+5073:0.0:Bird nest
+5074:0.0:Bird nest
+5075:0.0:Bird nest
+5076:0.0:Bird's egg
+5077:0.0:Bird's egg
+5078:0.0:Bird's egg
+5321:0.0:Watermelon seed
+5325:0.0:Gardening trowel
+5327:0.0:Spade handle
+5328:1.0:Spade head
+5329:0.0:Secateurs
+5331:0.0:Watering can
+5341:1.3:Rake
+5343:0.0:Seed dibber
+5345:0.0:Gardening boots
+5347:0.0:Rake handle
+5348:1.0:Rake head
+5350:0.9:Empty plant pot
+5352:0.9:Unfired plant pot
+5356:0.9:Plant pot
+5358:0.9:Oak seedling
+5370:0.9:Oak sapling
+5371:0.9:Willow sapling
+5372:0.9:Maple sapling
+5373:0.9:Yew sapling
+5374:0.9:Magic sapling
+5375:0.9:Spirit sapling
+5376:0.0:Basket
+5406:0.25:Strawberries(5)
+5418:0.4:Empty sack
+5480:0.9:Apple seedling
+5482:0.0:Orange seedling
+5484:0.9:Pineapple seedling
+5485:0.9:Papaya seedling
+5486:0.66:Palm seedling
+5496:0.9:Apple sapling
+5497:0.9:Banana sapling
+5498:0.9:Orange sapling
+5499:0.9:Curry sapling
+5500:0.9:Pineapple sapling
+5501:0.9:Papaya sapling
+5502:0.9:Palm sapling
+5503:0.9:Calquat sapling
+5504:0.0:Strawberry
+5508:0.0:Book of folklore
+5509:1.0:Small pouch
+5510:1.0:Medium pouch
+5511:1.0:Medium pouch
+5512:1.0:Large pouch
+5513:1.0:Large pouch
+5514:1.0:Giant pouch
+5515:1.0:Giant pouch
+5516:0.0:Elemental talisman
+5518:1.0:Scrying orb
+5519:1.0:Scrying orb
+5520:0.0:Abyssal book
+5521:0.0:Binding necklace
+5523:1.0:Tiara mould
+5525:1.0:Tiara
+5527:1.0:Air tiara
+5529:1.0:Mind tiara
+5531:1.0:Water tiara
+5533:1.0:Body tiara
+5535:1.0:Earth tiara
+5537:1.0:Fire tiara
+5539:1.0:Cosmic tiara
+5541:1.0:Nature tiara
+5543:1.0:Chaos tiara
+5545:1.0:Law tiara
+5547:1.0:Death tiara
+5553:0.0:Rogue top
+5554:0.0:Rogue mask
+5555:0.0:Rogue trousers
+5556:0.0:Rogue gloves
+5557:0.0:Rogue boots
+5558:0.0:Rogue kit
+5560:0.0:Stethoscope
+5561:0.0:Mystic jewel
+5568:0.6:Tile
+5574:2.0:Initiate sallet
+5575:8.0:Initiate hauberk
+5576:7.0:Initiate cuisse
+5577:0.1:Cupric sulfate
+5579:0.1:Gypsum
+5582:0.0:Vial of liquid
+5583:0.1:Tin ore powder
+5584:0.1:Cupric ore powder
+5588:0.0:Alchemical notes
+5592:2.25:Tin
+5593:2.25:Tin
+5594:2.25:Tin
+5595:2.25:Tin
+5596:2.25:Tin
+5597:2.25:Tin
+5598:2.25:Tin
+5599:2.25:Tin
+5600:2.25:Tin
+5601:0.0:Chisel
+5602:0.0:Bronze wire
+5603:0.0:Shears
+5604:0.0:Magnet
+5605:0.0:Knife
+5606:0.005:Makeover voucher
+5607:0.6:Grain
+5615:1.0:Bonemeal
+5667:0.0:Rune knife(p++)
+5680:1.0:Dragon dagger(p+)
+5698:1.0:Dragon dagger(p++)
+5722:2.2:Steel spear(p++)
+5733:0.0:Rotten potato
+5738:0.0:Woad leaf
+5741:0.0:Mature wmb
+5747:0.0:Dwarven stout(m)
+5751:0.0:Axeman's folly
+5753:0.0:Axeman's folly(m)
+5755:0.0:Chef's delight
+5757:0.0:Chef's delight(m)
+5759:0.0:Slayer's respite
+5761:0.0:Slayer's respite(m)
+5763:1.0:Cider
+5765:0.0:Mature cider
+5767:2.0:Ale yeast
+5769:0.0:Calquat keg
+5931:0.0:Jute fibre
+5933:0.0:Willow branch
+5935:0.0:Coconut milk
+5936:0.0:Weapon poison+ (unf)
+5939:0.0:Weapon poison++ (unf)
+5940:0.1:Weapon poison(++)
+5942:0.0:Antidote+ (unf)
+5951:0.0:Antidote++ (unf)
+5952:0.0:Antidote++(4)
+5970:0.0:Curry leaf
+5972:0.0:Papaya fruit
+5974:0.0:Coconut
+5976:0.0:Half coconut
+5978:0.0:Coconut shell
+5980:0.0:Calquat fruit
+5982:0.1:Watermelon
+5984:0.0:Watermelon slice
+5986:0.0:Sweetcorn
+5988:0.0:Cooked sweetcorn
+5992:0.0:Apple mush
+5994:0.0:Hammerstone hops
+5996:1.0:Asgarnian hops
+5998:0.0:Yanillian hops
+6000:0.0:Krandorian hops
+6004:0.0:Mushroom
+6006:0.0:Barley
+6008:0.0:Barley malt
+6010:0.0:Marigolds
+6012:0.0:Nasturtiums
+6014:0.0:Rosemary
+6016:0.0:Cactus spine
+6018:0.0:Poison ivy berries
+6020:0.0:Leaves
+6022:0.0:Leaves
+6024:0.0:Leaves
+6026:0.0:Leaves
+6028:0.0:Leaves
+6030:0.0:Leaves
+6032:3.0:Compost
+6034:3.0:Supercompost
+6036:0.0:Plant cure
+6038:0.0:Magic string
+6040:0.0:Amulet of nature
+6041:0.0:Pre-nature amulet
+6043:0.0:Oak roots
+6045:0.0:Willow roots
+6047:0.0:Maple roots
+6049:0.0:Yew roots
+6051:0.0:Magic roots
+6055:0.0:Weeds
+6057:0.0:Hay sack
+6058:0.0:Hay sack
+6059:0.0:Scarecrow
+6064:2.0:Bloody mourner top
+6065:2.0:Mourner top
+6066:2.0:Mourner trousers
+6067:2.0:Mourner trousers
+6068:2.0:Mourner gloves
+6069:1.0:Mourner boots
+6070:2.0:Mourner cloak
+6071:0.0:Mourner letter
+6072:0.0:Tegid's soap
+6073:0.5:Prifddinas' history
+6075:0.51:Eastern discovery
+6077:0.51:Eastern settlement
+6079:0.5:The great divide
+6081:0.0:Broken device
+6082:4.0:Fixed device
+6083:0.0:Tarnished key
+6085:0.0:Red dye bellows
+6086:0.0:Blue dye bellows
+6087:0.0:Yellow dye bellows
+6088:0.0:Green dye bellows
+6089:1.0:Blue toad
+6090:0.0:Red toad
+6091:0.0:Yellow toad
+6092:1.0:Green toad
+6093:17.0:Rotten apples
+6094:0.0:Apple barrel
+6095:0.0:Naphtha apple mix
+6096:32.0:Toxic naphtha
+6097:0.0:Sieve
+6098:0.0:Toxic powder
+6102:0.0:Teleport crystal (1)
+6103:0.0:Tiny elf crystal
+6104:0.0:New key
+6106:0.0:Ghostly boots
+6109:0.0:Ghostly hood
+6110:0.0:Ghostly gloves
+6111:0.0:Ghostly cloak
+6112:0.0:Kelda seed
+6113:0.0:Kelda hops
+6118:0.0:Kelda stout
+6119:1.0:Square stone
+6120:1.0:Square stone
+6123:0.05:Beer glass
+6128:2.0:Rock-shell helm
+6129:9.0:Rock-shell plate
+6130:9.0:Rock-shell legs
+6131:1.0:Spined helm
+6133:6.0:Spined body
+6135:5.0:Spined chaps
+6137:1.0:Skeletal helm
+6139:4.0:Skeletal top
+6141:4.0:Skeletal bottoms
+6143:3.0:Spined boots
+6145:3.0:Rock-shell boots
+6147:3.0:Skeletal boots
+6151:2.0:Rock-shell gloves
+6153:3.0:Skeletal gloves
+6155:3.0:Dagannoth hide
+6157:3.0:Rock-shell chunk
+6159:0.0:Rock-shell shard
+6161:3.0:Rock-shell splinter
+6163:3.0:Skull piece
+6165:3.0:Ribcage piece
+6167:3.0:Fibula piece
+6169:3.0:Circular hide
+6171:3.0:Flattened hide
+6173:3.0:Stretched hide
+6178:10.0:Raw pheasant
+6179:10.0:Raw pheasant
+6180:2.0:Lederhosen top
+6181:2.0:Lederhosen shorts
+6182:2.0:Lederhosen hat
+6183:0.0:Frog token
+6184:2.7:Prince tunic
+6185:2.0:Prince leggings
+6186:2.0:Princess blouse
+6187:2.0:Princess skirt
+6188:0.0:Frog mask
+6199:1.0:Mystery box
+6200:0.7:Raw fishlike thing
+6202:0.7:Fishlike thing
+6204:0.7:Raw fishlike thing
+6206:0.7:Fishlike thing
+6209:4.0:Small fishing net
+6211:1.0:Teak pyre logs
+6235:5.4:Broodoo shield
+6257:5.4:Broodoo shield
+6279:5.4:Broodoo shield
+6281:0.1:Thatch spar light
+6283:0.1:Thatch spar med
+6285:0.1:Thatch spar dense
+6287:0.5:Snake hide
+6289:0.5:Snakeskin
+6291:0.8:Spider carcass
+6293:0.0:Spider on stick
+6295:1.0:Spider on shaft
+6297:0.0:Spider on stick
+6299:1.0:Spider on shaft
+6303:1.0:Spider on shaft
+6305:0.0:Skewer stick
+6306:0.0:Trading sticks
+6313:1.35:Opal machete
+6315:0.0:Jade machete
+6317:1.3:Red topaz machete
+6319:0.0:Proboscis
+6322:10.0:Snakeskin body
+6324:3.0:Snakeskin chaps
+6326:0.0:Snakeskin bandana
+6328:0.0:Snakeskin boots
+6330:1.0:Snakeskin vambraces
+6332:1.0:Mahogany logs
+6333:1.35:Teak logs
+6335:2.0:Tribal mask
+6337:2.0:Tribal mask
+6339:2.0:Tribal mask
+6341:1.0:Tribal top
+6343:2.0:Villager robe
+6345:1.0:Villager hat
+6347:0.5:Villager armband
+6349:0.6:Villager sandals
+6351:1.0:Tribal top
+6353:2.0:Villager robe
+6355:1.0:Villager hat
+6357:0.6:Villager sandals
+6359:0.5:Villager armband
+6361:1.0:Tribal top
+6363:2.0:Villager robe
+6365:1.0:Villager hat
+6367:0.6:Villager sandals
+6369:0.5:Villager armband
+6371:1.0:Tribal top
+6373:2.0:Villager robe
+6375:1.0:Villager hat
+6377:0.6:Villager sandals
+6379:0.5:Villager armband
+6382:0.0:Fez
+6384:0.0:Desert top
+6386:0.0:Desert robes
+6388:0.0:Desert top
+6390:0.0:Desert legs
+6392:0.0:Menaphite purple hat
+6394:0.0:Menaphite purple top
+6396:0.0:Menaphite purple robe
+6398:0.0:Menaphite purple kilt
+6400:0.0:Menaphite red hat
+6402:0.0:Menaphite red top
+6404:0.0:Menaphite red robe
+6406:0.0:Menaphite red kilt
+6416:1.8:Maple blackjack
+6422:0.0:Air rune
+6424:0.0:Water rune
+6426:0.0:Earth rune
+6428:0.0:Fire rune
+6430:0.0:Chaos rune
+6432:0.0:Death rune
+6434:0.0:Law rune
+6436:0.0:Mind rune
+6438:0.0:Body rune
+6448:2.0:Spadeful of coke
+6453:0.0:White rose seed
+6454:0.0:Red rose seed
+6455:0.0:Pink rose seed
+6456:0.0:Vine seed
+6457:0.0:Delphinium seed
+6460:0.0:Snowdrop seed
+6461:0.0:White tree shoot
+6462:0.0:White tree shoot
+6464:0.0:White tree sapling
+6466:0.0:Rune shards
+6467:0.0:Rune dust
+6468:0.0:Plant cure
+6469:0.0:White tree fruit
+6478:2.0:Trolley
+6479:0.0:List
+6522:0.0:Toktz-xil-ul
+6523:1.8:Toktz-xil-ak
+6524:3.4:Toktz-ket-xil
+6525:0.4:Toktz-xil-ek
+6526:1.0:Toktz-mej-tal
+6527:1.0:Tzhaar-ket-em
+6528:3.0:Tzhaar-ket-om
+6529:0.0:Tokkul
+6541:0.1:Mouse toy
+6542:0.0:Present
+6543:0.0:Antique lamp
+6545:0.0:Chores
+6546:0.0:Recipe
+6547:0.0:Doctors hat
+6548:0.0:Nurse hat
+6562:3.0:Mud battlestaff
+6563:2.0:Mystic mud staff
+6564:0.0:Onyx ring
+6565:0.0:Onyx necklace
+6566:0.0:Onyx amulet
+6568:1.8:Obsidian cape
+6570:1.8:Fire cape
+6571:0.0:Uncut onyx
+6573:0.0:Onyx
+6575:0.0:Onyx ring
+6577:0.0:Onyx necklace
+6579:0.0:Onyx amulet (u)
+6581:0.0:Onyx amulet
+6583:0.0:Ring of stone
+6585:0.0:Amulet of fury
+6587:0.0:White claws
+6589:2.7:White battleaxe
+6591:0.4:White dagger
+6599:0.0:White halberd
+6601:1.8:White mace
+6603:2.2:White magic staff
+6605:1.8:White sword
+6607:1.8:White longsword
+6609:3.6:White 2h sword
+6611:1.0:White scimitar
+6613:1.0:White warhammer
+6615:6.8:White chainbody
+6617:9.9:White platebody
+6619:1.3:White boots
+6621:1.9:White med helm
+6623:2.7:White full helm
+6625:9.0:White platelegs
+6627:8.1:White plateskirt
+6629:0.2:White gloves
+6631:3.6:White sq shield
+6633:5.4:White kiteshield
+6635:0.0:Commorb
+6638:0.0:Colour wheel
+6639:0.0:Hand mirror
+6641:0.0:Yellow crystal
+6643:0.0:Cyan crystal
+6644:0.0:Blue crystal
+6646:0.0:Fractured crystal
+6647:0.0:Fractured crystal
+6648:0.0:Item list
+6649:0.0:Edern's journal
+6650:0.0:Blackened crystal
+6651:0.0:Newly made crystal
+6652:0.0:Newly made crystal
+6653:0.0:Crystal trinket
+6654:2.7:Camo top
+6655:2.2:Camo bottoms
+6656:2.2:Camo helmet
+6657:2.7:Camo top
+6658:2.2:Camo bottoms
+6659:2.2:Camo helmet
+6660:0.0:Fishing explosive
+6662:0.0:Broken fishing rod
+6663:0.0:Forlorn boot
+6664:0.0:Fishing explosive
+6665:1.0:Mudskipper hat
+6666:2.0:Flippers
+6668:1.3:Fishbowl
+6669:1.3:Fishbowl
+6670:1.3:Fishbowl
+6671:1.3:Fishbowl
+6672:1.3:Fishbowl
+6673:2.0:Fishbowl and net
+6674:1.0:Tiny net
+6675:0.0:An empty box
+6681:0.0:Ground guam
+6683:0.0:Ground seaweed
+6685:0.0:Saradomin brew(4)
+6687:0.0:Saradomin brew(3)
+6693:0.0:Crushed nest
+6696:0.0:Ice cooler
+6697:0.2:Pat of butter
+6701:0.5:Baked potato
+6703:0.5:Potato with butter
+6705:0.5:Potato with cheese
+6707:0.0:Camulet
+6708:0.0:Slayer gloves
+6711:0.0:Blindweed
+6712:3.0:Bucket of water
+6713:0.0:Wrench
+6714:0.0:Holy wrench
+6715:0.0:Sluglings
+6716:0.0:Karamthulhu
+6717:0.0:Karamthulhu
+6718:0.0:Fever spider body
+6719:0.0:Unsanitary swill
+6720:0.0:Slayer gloves
+6721:2.0:Rusty scimitar
+6722:0.0:Zombie head
+6724:1.0:Seercull
+6728:1.0:Bonemeal
+6729:1.5:Dagannoth bones
+6731:0.0:Seers ring
+6733:0.0:Archers ring
+6735:0.0:Warrior ring
+6737:0.0:Berserker ring
+6739:1.3:Dragon axe
+6741:2.5:Broken axe
+6745:1.0:Silverlight
+6746:1.0:Darklight
+6747:0.0:Demonic sigil mould
+6748:1.8:Demonic sigil
+6749:0.4:Demonic tome
+6750:0.9:Black desert shirt
+6752:0.9:Black desert robe
+6754:0.0:Enchanted key
+6760:2.0:Guthix mjolnir
+6762:2.0:Saradomin mjolnir
+6764:2.0:Zamorak mjolnir
+6766:0.0:Cat antipoison
+6768:0.2:Poisoned cheese
+6771:1.0:Pot of weeds
+6772:0.0:Smouldering pot
+6773:2.2:Rat pole
+6774:2.2:Rat pole
+6775:2.2:Rat pole
+6776:2.2:Rat pole
+6777:2.2:Rat pole
+6778:2.2:Rat pole
+6779:2.2:Rat pole
+6786:0.0:Robe of elidinis
+6787:0.0:Robe of elidinis
+6791:1.0:Sole
+6792:0.0:Ancestral key
+6793:0.0:Ballad
+6794:0.0:Choc-ice
+6796:0.0:Lamp
+6797:0.0:Watering can
+6809:15.0:Granite legs
+6810:1.0:Bonemeal
+6812:1.0:Wyvern bones
+6814:0.4:Fur
+6817:3.0:Slender blade
+6818:3.0:Bow-sword
+6819:1.0:Large pouch
+6820:0.0:Relic
+6822:0.0:Star bauble
+6823:0.0:Star bauble
+6824:0.0:Star bauble
+6825:0.0:Star bauble
+6826:0.0:Star bauble
+6827:0.0:Star bauble
+6828:0.0:Box bauble
+6829:0.0:Box bauble
+6830:0.0:Box bauble
+6831:0.0:Box bauble
+6832:0.0:Box bauble
+6833:0.0:Box bauble
+6834:0.0:Diamond bauble
+6835:0.0:Diamond bauble
+6836:0.0:Diamond bauble
+6837:0.0:Diamond bauble
+6838:0.0:Diamond bauble
+6839:0.0:Diamond bauble
+6840:0.0:Tree bauble
+6841:0.0:Tree bauble
+6842:0.0:Tree bauble
+6843:0.0:Tree bauble
+6844:0.0:Tree bauble
+6845:0.0:Tree bauble
+6846:0.0:Bell bauble
+6847:0.0:Bell bauble
+6848:0.0:Bell bauble
+6849:0.0:Bell bauble
+6850:0.0:Bell bauble
+6851:0.0:Bell bauble
+6852:6.0:Puppet box
+6853:0.0:Bauble box
+6854:6.0:Puppet box
+6855:0.0:Bauble box
+6856:0.0:Bobble hat
+6857:0.0:Bobble scarf
+6858:0.0:Jester hat
+6859:0.0:Jester scarf
+6860:0.0:Tri-jester hat
+6861:0.0:Tri-jester scarf
+6862:0.0:Woolly hat
+6863:0.0:Woolly scarf
+6865:0.0:Blue marionette
+6866:0.0:Green marionette
+6867:0.0:Red marionette
+6868:0.0:Blue marionette
+6869:0.0:Green marionette
+6870:0.0:Red marionette
+6871:0.0:Red marionette
+6872:0.0:Red marionette
+6873:0.0:Red marionette
+6874:0.0:Red marionette
+6875:0.0:Blue marionette
+6876:0.0:Blue marionette
+6877:0.0:Blue marionette
+6878:0.0:Blue marionette
+6879:0.0:Green marionette
+6880:0.0:Green marionette
+6881:0.0:Green marionette
+6882:0.0:Green marionette
+6883:0.0:Peach
+6885:0.0:Progress hat
+6886:0.0:Progress hat
+6887:0.0:Progress hat
+6889:1.0:Mage's book
+6891:1.0:Arena book
+6893:0.3:Leather boots
+6894:5.0:Adamant kiteshield
+6895:2.0:Adamant med helm
+6896:0.0:Emerald
+6897:1.8:Rune longsword
+6903:0.3:Dragonstone
+6908:0.2:Beginner wand
+6910:0.0:Apprentice wand
+6912:0.0:Teacher wand
+6914:0.0:Master wand
+6916:2.0:Infinity top
+6918:0.0:Infinity hat
+6920:0.4:Infinity boots
+6922:0.0:Infinity gloves
+6924:1.0:Infinity bottoms
+6926:0.0:Bones to peaches
+6945:0.0:Sandy hand
+6946:0.0:Beer soaked hand
+6947:0.0:Bert's rota
+6948:0.0:Sandy's rota
+6949:0.0:A magic scroll
+6950:0.0:Magical orb
+6952:0.0:Truth serum
+6953:0.0:Bottled water
+6954:0.0:Redberry juice
+6955:0.0:Pink dye
+6956:0.0:Rose tinted lens
+6957:3.0:Wizard's head
+6958:0.0:Sand
+6959:0.0:Pink cape
+6961:0.0:Baguette
+6962:0.0:Triangle sandwich
+6963:0.5:Roll
+6965:0.0:Square sandwich
+6967:1.0:Dragon med helm
+6969:0.6:Shark
+6970:11.0:Pyramid top
+6985:20.0:Sandstone (20kg)
+6986:32.0:Sandstone (32kg)
+6987:0.0:Sandstone body
+6988:32.0:Sandstone base
+6989:1.0:Stone head
+6990:1.0:Stone head
+6991:1.0:Stone head
+6992:1.0:Stone head
+6993:0.0:Z sigil
+6994:0.0:M sigil
+6995:0.0:R sigil
+6996:0.0:K sigil
+6997:9.0:Stone left arm
+6998:9.0:Stone right arm
+6999:9.0:Stone left leg
+7001:0.5:Camel mould (p)
+7002:1.0:Stone head
+7003:0.5:Camel mask
+7051:2.0:Unlit bug lantern
+7053:2.0:Lit bug lantern
+7054:0.5:Chilli potato
+7056:0.5:Egg potato
+7058:0.5:Mushroom potato
+7060:0.5:Tuna potato
+7062:0.5:Chilli con carne
+7064:0.5:Egg and tomato
+7066:0.5:Mushroom & onion
+7068:0.5:Tuna and corn
+7072:0.5:Spicy sauce
+7074:0.0:Chopped garlic
+7076:0.5:Uncooked egg
+7078:0.5:Scrambled egg
+7080:0.5:Sliced mushrooms
+7082:0.5:Fried mushrooms
+7084:0.5:Fried onions
+7086:0.5:Chopped tuna
+7088:0.0:Sweetcorn
+7108:0.0:Gunpowder
+7109:0.0:Fuse
+7110:1.0:Stripy pirate shirt
+7112:0.1:Pirate bandana
+7114:4.0:Pirate boots
+7116:1.0:Pirate leggings
+7118:0.0:Canister
+7119:0.0:Cannon ball
+7120:2.0:Ramrod
+7121:0.0:Repair plank
+7122:1.0:Stripy pirate shirt
+7124:0.1:Pirate bandana
+7126:1.0:Pirate leggings
+7128:1.0:Stripy pirate shirt
+7130:0.1:Pirate bandana
+7132:1.0:Pirate leggings
+7134:1.0:Stripy pirate shirt
+7136:0.1:Pirate bandana
+7138:1.0:Pirate leggings
+7140:1.8:Lucky cutlass
+7141:1.0:Harry's cutlass
+7142:1.0:Rapier
+7143:0.0:Plunder
+7144:0.0:Book o' piracy
+7145:32.0:Cannon barrel
+7146:32.0:Broken cannon
+7147:0.0:Cannon balls
+7148:0.0:Repair plank
+7149:0.0:Canister
+7150:0.0:Tacks
+7155:1.3:Rope
+7156:0.0:Tinderbox
+7157:0.0:Braindeath 'rum'
+7158:3.0:Dragon 2h sword
+7159:1.3:Insulated boots
+7162:0.0:Pie recipe book
+7168:0.0:Raw mud pie
+7170:0.0:Mud pie
+7176:0.5:Raw garden pie
+7178:0.0:Garden pie
+7186:0.5:Raw fish pie
+7188:0.0:Fish pie
+7196:0.5:Raw admiral pie
+7198:0.0:Admiral pie
+7200:0.0:Half an admiral pie
+7206:0.0:Raw wild pie
+7208:0.0:Wild pie
+7216:0.5:Raw summer pie
+7218:0.0:Summer pie
+7223:0.0:Roast rabbit
+7224:0.0:Skewered rabbit
+7225:1.5:Iron spit
+7228:10.0:Cooked chompy
+7230:2.5:Skewered chompy
+7236:0.0:Clue scroll (easy)
+7237:5.0:Casket (easy)
+7238:0.0:Clue scroll (easy)
+7239:0.0:Clue scroll (hard)
+7240:5.0:Casket (hard)
+7241:0.0:Clue scroll (hard)
+7242:5.0:Casket (hard)
+7243:0.0:Clue scroll (hard)
+7244:5.0:Casket (hard)
+7245:0.0:Clue scroll (hard)
+7246:5.0:Casket (hard)
+7247:0.0:Clue scroll (hard)
+7248:0.0:Clue scroll (hard)
+7249:0.0:Clue scroll (hard)
+7250:0.0:Clue scroll (hard)
+7251:0.0:Clue scroll (hard)
+7252:0.0:Clue scroll (hard)
+7253:0.0:Clue scroll (hard)
+7254:0.0:Clue scroll (hard)
+7255:0.0:Clue scroll (hard)
+7256:0.0:Clue scroll (hard)
+7257:5.0:Casket (hard)
+7258:0.0:Clue scroll (hard)
+7259:5.0:Casket (hard)
+7260:0.0:Clue scroll (hard)
+7261:5.0:Casket (hard)
+7262:0.0:Clue scroll (hard)
+7263:5.0:Casket (hard)
+7264:0.0:Clue scroll (hard)
+7265:5.0:Casket (hard)
+7266:0.0:Clue scroll (hard)
+7267:5.0:Casket (hard)
+7268:0.0:Clue scroll (hard)
+7269:0.0:Challenge scroll (hard)
+7270:0.0:Clue scroll (hard)
+7271:0.0:Challenge scroll (hard)
+7272:0.0:Clue scroll (hard)
+7273:0.0:Challenge scroll (hard)
+7274:0.0:Clue scroll (medium)
+7275:0.0:Challenge scroll (medium)
+7276:0.0:Clue scroll (medium)
+7277:0.0:Challenge scroll (medium)
+7278:0.0:Clue scroll (medium)
+7279:0.0:Challenge scroll (medium)
+7280:0.0:Clue scroll (medium)
+7281:0.0:Challenge scroll (medium)
+7282:0.0:Clue scroll (medium)
+7283:0.0:Challenge scroll (medium)
+7284:0.0:Clue scroll (medium)
+7285:0.0:Challenge scroll (medium)
+7286:0.0:Clue scroll (medium)
+7287:5.0:Casket (medium)
+7288:0.0:Clue scroll (medium)
+7289:5.0:Casket (medium)
+7290:0.0:Clue scroll (medium)
+7291:5.0:Casket (medium)
+7292:0.0:Clue scroll (medium)
+7293:5.0:Casket (medium)
+7294:0.0:Clue scroll (medium)
+7295:5.0:Casket (medium)
+7296:0.0:Clue scroll (medium)
+7298:0.0:Clue scroll (medium)
+7300:0.0:Clue scroll (medium)
+7301:0.0:Clue scroll (medium)
+7303:0.0:Clue scroll (medium)
+7304:0.0:Clue scroll (medium)
+7305:0.0:Clue scroll (medium)
+7306:5.0:Casket (medium)
+7307:0.0:Clue scroll (medium)
+7308:5.0:Casket (medium)
+7309:0.0:Clue scroll (medium)
+7310:5.0:Casket (medium)
+7311:0.0:Clue scroll (medium)
+7312:5.0:Casket (medium)
+7313:0.0:Clue scroll (medium)
+7314:5.0:Casket (medium)
+7315:0.0:Clue scroll (medium)
+7316:5.0:Casket (medium)
+7317:0.0:Clue scroll (medium)
+7318:5.0:Casket (medium)
+7319:0.0:Red boater
+7321:0.0:Orange boater
+7323:0.0:Green boater
+7325:0.0:Blue boater
+7327:0.0:Black boater
+7329:0.0:Red firelighter
+7330:0.0:Green firelighter
+7331:0.0:Blue firelighter
+7332:4.0:Black shield (h1)
+7334:5.0:Adamant shield (h1)
+7336:5.44:Rune shield (h1)
+7338:4.0:Black shield (h2)
+7340:5.0:Adamant shield (h2)
+7342:5.44:Rune shield (h2)
+7344:4.0:Black shield (h3)
+7346:5.0:Adamant shield (h3)
+7348:5.44:Rune shield (h3)
+7350:4.0:Black shield (h4)
+7352:5.0:Adamant shield (h4)
+7354:5.44:Rune shield (h4)
+7356:4.0:Black shield (h5)
+7358:5.0:Adamant shield (h5)
+7360:5.44:Rune shield (h5)
+7362:5.4:Studded body (g)
+7364:5.4:Studded body (t)
+7366:4.5:Studded chaps (g)
+7368:4.5:Studded chaps (t)
+7370:6.8:Green d'hide body (g)
+7372:6.8:Green d'hide body (t)
+7374:6.8:Blue d'hide body (g)
+7376:6.8:Blue d'hide body (t)
+7378:5.4:Green d'hide chaps (g)
+7380:5.4:Green d'hide chaps (t)
+7382:5.4:Blue d'hide chaps (g)
+7384:5.4:Blue d'hide chaps (t)
+7386:0.0:Blue skirt (g)
+7388:0.0:Blue skirt (t)
+7390:1.0:Blue wizard robe (g)
+7392:1.0:Blue wizard robe (t)
+7394:1.0:Blue wizard hat (g)
+7396:0.0:Blue wizard hat (t)
+7398:1.0:Enchanted robe
+7399:1.0:Enchanted top
+7400:0.0:Enchanted hat
+7404:2.0:Red logs
+7405:2.0:Green logs
+7406:2.0:Blue logs
+7408:0.0:Draynor skull
+7409:0.0:Magic secateurs
+7410:0.0:Queen's secateurs
+7413:0.0:Bird nest
+7416:0.0:Mole claw
+7418:0.0:Mole skin
+7432:0.1:Fungicide
+7433:0.4:Wooden spoon
+7435:0.0:Egg whisk
+7437:1.8:Spork
+7439:3.6:Spatula
+7441:1.5:Frying pan
+7443:2.0:Skewer
+7445:1.8:Rolling pin
+7447:0.4:Kitchen knife
+7449:1.0:Meat tenderiser
+7451:0.5:Cleaver
+7453:0.2:Hardleather gloves
+7454:0.2:Bronze gloves
+7455:0.2:Iron gloves
+7456:0.2:Steel gloves
+7457:0.2:Black gloves
+7458:0.2:Mithril gloves
+7459:0.2:Adamant gloves
+7460:0.2:Rune gloves
+7461:0.2:Dragon gloves
+7462:0.2:Barrows gloves
+7463:0.0:Cornflour
+7464:0.0:Book on chickens
+7465:0.0:Vanilla pod
+7466:0.0:Cornflour
+7468:1.0:Pot of cornflour
+7470:1.0:Cornflour mixture
+7471:1.0:Milky mixture
+7472:0.0:Cinnamon
+7476:0.0:Brulee supreme
+7477:0.0:Evil chicken's egg
+7478:0.0:Dragon token
+7479:1.5:Spicy stew
+7496:0.0:Empty spice shaker
+7497:0.0:Dirty blast
+7498:0.0:Antique lamp
+7509:0.0:Dwarven rock cake
+7510:0.0:Dwarven rock cake
+7511:0.0:Slop of compromise
+7512:0.0:Soggy bread
+7513:0.0:Spicy maggots
+7514:0.0:Dyed orange
+7515:0.0:Breadcrumbs
+7516:0.0:Kelp
+7517:2.0:Ground kelp
+7518:0.0:Crab meat
+7519:0.0:Crab meat
+7521:0.0:Cooked crab meat
+7523:0.0:Cooked crab meat
+7524:0.0:Cooked crab meat
+7525:0.0:Cooked crab meat
+7526:0.0:Cooked crab meat
+7527:0.0:Ground crab meat
+7528:0.0:Ground cod
+7529:0.0:Raw fishcake
+7530:0.0:Cooked fishcake
+7532:1.0:Mudskipper hide
+7534:5.0:Fishbowl helmet
+7535:10.0:Diving apparatus
+7536:0.0:Fresh crab claw
+7537:0.0:Crab claw
+7538:0.9:Fresh crab shell
+7539:0.0:Crab helmet
+7540:0.0:Broken crab claw
+7541:0.0:Broken crab shell
+7542:0.0:Cake of guidance
+7543:0.0:Raw guide cake
+7544:0.0:Enchanted egg
+7545:2.0:Enchanted milk
+7546:1.0:Enchanted flour
+7547:0.0:Druid pouch
+7552:0.0:Mithril arrow
+7554:0.0:Fire rune
+7556:0.0:Water rune
+7558:0.0:Air rune
+7560:0.0:Chaos rune
+7564:4.0:Balloon toad
+7565:4.0:Balloon toad
+7566:10.0:Raw jubbly
+7568:10.0:Cooked jubbly
+7572:1.0:Red banana
+7573:0.0:Tchiki monkey nuts
+7574:0.0:Sliced red banana
+7575:0.0:Tchiki nut paste
+7576:3.0:Snake corpse
+7577:3.0:Raw stuffed snake
+7578:3.0:Odd stuffed snake
+7579:3.0:Stuffed snake
+7580:0.0:Snake over-cooked
+7587:0.0:Coffin
+7588:0.0:Coffin
+7589:0.0:Coffin
+7590:0.0:Coffin
+7591:0.0:Coffin
+7592:0.0:Zombie shirt
+7593:0.0:Zombie trousers
+7594:0.0:Zombie mask
+7595:0.0:Zombie gloves
+7596:0.0:Zombie boots
+7597:0.0:Item
+7598:0.0:Item
+7599:0.0:Item
+7600:0.0:Item
+7601:0.0:Item
+7602:0.0:Item
+7603:0.0:Item
+7604:0.0:Item
+7605:0.0:Item
+7606:0.0:Item
+7607:0.0:Item
+7608:0.0:Item
+7609:0.0:Item
+7610:0.0:Item
+7611:0.0:Item
+7612:0.0:Item
+7613:0.0:Item
+7614:0.0:Item
+7615:0.0:Item
+7616:0.0:Item
+7617:0.0:Item
+7618:0.0:Item
+7620:0.0:Silvthrill rod
+7622:2.0:Bucket of rubble
+7624:2.0:Bucket of rubble
+7626:2.0:Bucket of rubble
+7628:1.0:Plaster fragment
+7629:0.0:Dusty scroll
+7632:0.0:Temple library key
+7633:0.5:Ancient book
+7634:0.0:Battered tome
+7635:0.0:Leather book
+7636:0.0:Rod dust
+7637:0.0:Silvthrill rod
+7638:0.0:Silvthrill rod
+7649:0.0:Rod clay mould
+7650:0.33:Silver dust
+7652:0.0:Guthix balance (unf)
+7654:0.0:Guthix balance (unf)
+7656:0.0:Guthix balance (unf)
+7658:0.0:Guthix balance (unf)
+7668:1.8:Gadderhammer
+7671:0.4:Boxing gloves
+7673:0.4:Boxing gloves
+7675:0.0:Wooden sword
+7676:2.0:Wooden shield
+7678:0.0:Prize key
+7679:0.0:Pugel
+7681:1.0:Game book
+7688:0.0:Kettle
+7690:0.0:Full kettle
+7691:0.0:Hot kettle
+7700:1.5:Teapot with leaves
+7702:0.4:Teapot
+7712:1.5:Teapot with leaves
+7714:0.4:Teapot
+7724:1.5:Teapot with leaves
+7726:0.4:Teapot
+7728:0.0:Empty cup
+7730:0.1:Cup of tea
+7731:0.1:Cup of tea
+7732:0.0:Porcelain cup
+7733:0.1:Cup of tea
+7734:0.1:Cup of tea
+7735:0.0:Porcelain cup
+7736:0.1:Cup of tea
+7737:0.1:Cup of tea
+7738:0.0:Tea leaves
+7740:1.0:Beer
+7742:0.05:Beer glass
+7744:0.0:Asgarnian ale
+7746:0.0:Greenman's ale
+7748:1.0:Dragon bitter
+7750:0.0:Moonlight mead
+7752:1.0:Cider
+7754:0.0:Chef's delight
+7758:2.0:Rusty sword
+7759:1.0:Toy soldier
+7763:1.0:Toy doll
+7767:1.0:Toy mouse
+7771:1.0:Toy cat
+7773:1.0:Branch
+7774:0.0:Reward token
+7775:0.0:Reward token
+7776:0.0:Reward token
+7777:0.0:Long vine
+7778:0.0:Short vine
+7779:1.0:Fishing tome
+7780:1.0:Fishing tome
+7781:1.0:Fishing tome
+7782:1.0:Agility tome
+7783:1.0:Agility tome
+7784:1.0:Agility tome
+7785:1.0:Thieving tome
+7786:1.0:Thieving tome
+7787:1.0:Thieving tome
+7788:1.0:Slayer tome
+7789:1.0:Slayer tome
+7790:1.0:Slayer tome
+7794:1.0:Firemaking tome
+7795:1.0:Firemaking tome
+7796:1.0:Firemaking tome
+7797:1.0:Woodcutting tome
+7798:1.0:Woodcutting tome
+7799:1.0:Woodcutting tome
+7800:7.0:Snail shell
+7801:0.5:Snake hide
+7803:0.0:Yin yang amulet
+7806:0.0:Anger sword
+7807:0.0:Anger battleaxe
+7808:0.0:Anger mace
+7809:0.0:Anger spear
+7810:1.0:Jug of vinegar
+7811:1.3:Pot of vinegar
+7812:0.4:Goblin skull
+7813:1.0:Bone in vinegar
+7814:0.4:Goblin skull
+7815:0.0:Bear ribs
+7816:1.0:Bone in vinegar
+7817:0.0:Bear ribs
+7818:0.4:Ram skull
+7819:1.0:Bone in vinegar
+7820:0.4:Ram skull
+7821:0.4:Unicorn bone
+7822:1.0:Bone in vinegar
+7823:0.4:Unicorn bone
+7824:0.4:Giant rat bone
+7825:1.0:Bone in vinegar
+7826:0.4:Giant rat bone
+7827:0.4:Giant bat wing
+7828:1.0:Bone in vinegar
+7829:0.4:Giant bat wing
+7830:0.9:Wolf bone
+7831:1.0:Bone in vinegar
+7832:0.9:Wolf bone
+7833:0.9:Bat wing
+7834:1.0:Bone in vinegar
+7835:0.9:Bat wing
+7836:0.4:Rat bone
+7837:1.0:Bone in vinegar
+7838:0.4:Rat bone
+7839:0.9:Baby dragon bone
+7840:1.0:Bone in vinegar
+7841:0.9:Baby dragon bone
+7842:0.9:Ogre ribs
+7843:1.0:Bone in vinegar
+7844:0.9:Ogre ribs
+7845:0.9:Jogre bone
+7846:1.0:Bone in vinegar
+7847:0.9:Jogre bone
+7848:0.9:Zogre bone
+7849:1.0:Bone in vinegar
+7850:0.9:Zogre bone
+7851:0.9:Mogre bone
+7852:1.0:Bone in vinegar
+7853:0.9:Mogre bone
+7854:0.4:Monkey paw
+7855:1.0:Bone in vinegar
+7856:0.4:Monkey paw
+7857:0.9:Dagannoth ribs
+7858:1.0:Bone in vinegar
+7859:0.9:Dagannoth ribs
+7860:0.9:Snake spine
+7861:1.0:Bone in vinegar
+7862:0.9:Snake spine
+7863:0.9:Zombie bone
+7864:1.0:Bone in vinegar
+7865:0.9:Zombie bone
+7866:0.9:Werewolf bone
+7867:1.0:Bone in vinegar
+7868:0.9:Werewolf bone
+7869:0.0:Moss giant bone
+7870:1.0:Bone in vinegar
+7871:0.0:Moss giant bone
+7872:0.9:Fire giant bone
+7873:1.0:Bone in vinegar
+7874:0.9:Fire giant bone
+7875:0.9:Ice giant ribs
+7876:1.0:Bone in vinegar
+7877:0.9:Ice giant ribs
+7878:0.9:Terrorbird wing
+7879:1.0:Bone in vinegar
+7880:0.9:Terrorbird wing
+7881:0.9:Ghoul bone
+7882:1.0:Bone in vinegar
+7883:0.9:Ghoul bone
+7884:0.9:Troll bone
+7885:1.0:Bone in vinegar
+7886:0.9:Troll bone
+7887:0.9:Seagull wing
+7888:1.0:Bone in vinegar
+7889:0.9:Seagull wing
+7890:0.9:Undead cow ribs
+7891:1.0:Bone in vinegar
+7892:0.9:Undead cow ribs
+7893:0.9:Experiment bone
+7894:1.0:Bone in vinegar
+7895:0.9:Experiment bone
+7896:0.9:Rabbit bone
+7897:1.0:Bone in vinegar
+7898:0.9:Rabbit bone
+7899:0.9:Basilisk bone
+7900:1.0:Bone in vinegar
+7901:0.9:Basilisk bone
+7902:0.9:Desert lizard bone
+7903:1.0:Bone in vinegar
+7904:0.9:Desert lizard bone
+7905:0.9:Cave goblin skull
+7906:1.0:Bone in vinegar
+7907:0.9:Cave goblin skull
+7908:0.4:Big frog leg
+7909:1.0:Bone in vinegar
+7910:0.4:Big frog leg
+7911:0.9:Vulture wing
+7912:1.0:Bone in vinegar
+7913:0.9:Vulture wing
+7914:0.0:Jackal bone
+7915:1.0:Bone in vinegar
+7916:0.0:Jackal bone
+7917:3.0:Ram skull helm
+7918:0.0:Bonesack
+7919:1.0:Bottle of wine
+7921:1.0:Empty wine bottle
+7922:0.0:Al kharid flyer
+7927:0.0:Easter ring
+7928:0.0:Easter egg
+7929:0.0:Easter egg
+7930:0.0:Easter egg
+7931:0.0:Easter egg
+7932:0.0:Easter egg
+7933:0.0:Easter egg
+7934:0.0:Field ration
+7936:0.0:Pure essence
+7939:6.8:Tortoise shell
+7941:1.75:Iron sheet
+7942:0.0:Fresh monkfish
+7943:0.0:Fresh monkfish
+7944:0.4:Raw monkfish
+7946:0.4:Monkfish
+7950:0.0:Bone seeds
+7951:0.09:Herman's book
+7956:5.0:Casket
+7957:0.0:White apron
+7959:0.0:Heavy box
+7960:0.0:Empty box
+7961:0.0:Burnt diary
+7962:0.0:Burnt diary
+7963:0.0:Burnt diary
+7964:0.0:Burnt diary
+7965:0.0:Burnt diary
+7967:0.0:Engine
+7969:0.0:Pulley beam
+7970:0.0:Long pulley beam
+7971:0.0:Longer pulley beam
+7972:0.0:Lift manual
+7973:0.0:Beam
+7976:2.0:Cockatrice head
+7977:10.0:Basilisk head
+7978:10.0:Kurask head
+7979:10.0:Abyssal head
+7980:10.0:Kbd heads
+7981:10.0:Kq head
+7983:2.0:Cockatrice head
+7984:10.0:Basilisk head
+7985:10.0:Kurask head
+7986:10.0:Abyssal head
+7987:10.0:Kbd heads
+7988:10.0:Kq head
+7989:0.0:Big bass
+7990:0.0:Big bass
+7991:0.0:Big swordfish
+7992:0.0:Big swordfish
+7993:0.7:Big shark
+7994:0.7:Big shark
+7995:1.0:Arthur portrait
+7996:1.0:Elena portrait
+7997:1.0:Keldagrim portrait
+7998:1.0:Misc. portrait
+7999:1.0:Desert painting
+8000:1.0:Isafdar painting
+8001:1.0:Karamja painting
+8002:1.0:Lumbridge painting
+8003:1.0:Morytania painting
+8007:0.0:Varrock teleport
+8008:0.0:Lumbridge teleport
+8009:0.0:Falador teleport
+8010:0.0:Camelot teleport
+8011:0.0:Ardougne teleport
+8012:0.0:Watchtower teleport
+8013:0.0:Teleport to house
+8014:0.0:Bones to bananas
+8015:0.0:Bones to peaches
+8016:0.0:Enchant sapphire
+8017:0.0:Enchant emerald
+8018:0.0:Enchant ruby
+8019:0.0:Enchant diamond
+8020:0.0:Enchant dragonstn.
+8021:0.0:Enchant onyx
+8210:0.0:Rosemary
+8214:0.0:Marigolds
+8241:0.0:Asgarnian ale
+8242:0.0:Greenman's ale
+8243:1.0:Dragon bitter
+8244:0.0:Chef's delight
+8261:2.0:Cockatrice head
+8262:10.0:Basilisk head
+8263:10.0:Kurask head
+8264:10.0:Abyssal head
+8265:10.0:Kbd heads
+8266:10.0:Kq head
+8279:1.0:Silverlight
+8280:2.2:Excalibur
+8281:1.0:Darklight
+8282:5.4:Anti-dragon shield
+8283:0.3:Amulet of glory
+8284:1.8:Cape of legends
+8417:10.0:Bagged dead tree
+8419:10.0:Bagged nice tree
+8421:10.0:Bagged oak tree
+8423:10.0:Bagged willow tree
+8425:10.0:Bagged maple tree
+8427:10.0:Bagged yew tree
+8429:10.0:Bagged magic tree
+8431:10.0:Bagged plant 1
+8433:10.0:Bagged plant 2
+8435:10.0:Bagged plant 3
+8453:10.0:Bagged daffodils
+8455:10.0:Bagged bluebells
+8457:10.0:Bagged sunflower
+8459:10.0:Bagged marigolds
+8461:10.0:Bagged roses
+8463:1.0:Construction guide
+8520:0.0:Asgarnian ale
+8522:0.0:Greenman's ale
+8524:1.0:Dragon bitter
+8526:0.0:Chef's delight
+8682:2.7:Steel heraldic helm
+8684:2.7:Steel heraldic helm
+8686:2.7:Steel heraldic helm
+8688:2.7:Steel heraldic helm
+8690:2.7:Steel heraldic helm
+8692:2.7:Steel heraldic helm
+8694:2.7:Steel heraldic helm
+8696:2.7:Steel heraldic helm
+8698:2.7:Steel heraldic helm
+8700:2.7:Steel heraldic helm
+8702:2.7:Steel heraldic helm
+8704:2.7:Steel heraldic helm
+8706:2.7:Steel heraldic helm
+8708:2.7:Steel heraldic helm
+8710:2.7:Steel heraldic helm
+8712:2.7:Steel heraldic helm
+8714:5.0:Rune kiteshield
+8716:5.0:Rune kiteshield
+8718:5.0:Rune kiteshield
+8720:5.0:Rune kiteshield
+8722:5.0:Rune kiteshield
+8724:5.0:Rune kiteshield
+8726:5.0:Rune kiteshield
+8728:5.0:Rune kiteshield
+8730:5.0:Rune kiteshield
+8732:5.0:Rune kiteshield
+8734:5.0:Rune kiteshield
+8736:5.0:Rune kiteshield
+8738:5.0:Rune kiteshield
+8740:5.0:Rune kiteshield
+8742:5.0:Rune kiteshield
+8744:5.0:Rune kiteshield
+8746:5.0:Steel kiteshield
+8748:5.0:Steel kiteshield
+8750:5.0:Steel kiteshield
+8752:5.0:Steel kiteshield
+8754:5.0:Steel kiteshield
+8756:5.0:Steel kiteshield
+8758:5.0:Steel kiteshield
+8760:5.0:Steel kiteshield
+8762:5.0:Steel kiteshield
+8764:5.0:Steel kiteshield
+8766:5.0:Steel kiteshield
+8768:5.0:Steel kiteshield
+8770:5.0:Steel kiteshield
+8772:5.0:Steel kiteshield
+8774:5.0:Steel kiteshield
+8776:5.0:Steel kiteshield
+8778:0.8:Oak plank
+8780:0.3:Teak plank
+8782:0.8:Mahogany plank
+8784:1.0:Gold leaf
+8786:13.6:Marble block
+8788:1.0:Magic stone
+8790:1.0:Bolt of cloth
+8792:1.0:Clockwork
+8794:1.0:Saw
+8796:1.0:Limestone brick
+8837:0.0:Timber beam
+8839:6.0:Void knight top
+8840:8.0:Void knight robe
+8841:1.0:Void knight mace
+8842:0.0:Void knight gloves
+8844:0.0:Bronze defender
+8845:0.0:Iron defender
+8846:0.0:Steel defender
+8847:0.0:Black defender
+8848:0.0:Mithril defender
+8849:0.4:Adamant defender
+8850:0.4:Rune defender
+8856:3.6:Defensive shield
+8865:0.0:Ground ashes
+8869:0.0:Iron key
+8871:32.0:Crate with zanik
+8872:0.4:Bone dagger
+8880:2.2:Dorgeshuun crossbow
+8882:0.0:Bone bolts
+8901:9.5:Black mask (10)
+8903:9.5:Black mask (9)
+8905:9.5:Black mask (8)
+8907:9.5:Black mask (7)
+8909:9.5:Black mask (6)
+8911:9.5:Black mask (5)
+8913:9.5:Black mask (4)
+8915:9.5:Black mask (3)
+8917:9.5:Black mask (2)
+8919:9.5:Black mask (1)
+8921:9.5:Black mask
+8923:0.0:Witchwood icon
+8924:0.1:Bandana eyepatch
+8925:0.1:Bandana eyepatch
+8926:0.1:Bandana eyepatch
+8927:0.1:Bandana eyepatch
+8928:0.1:Hat eyepatch
+8929:1.0:Crabclaw hook
+8934:0.0:Scrapey tree logs
+8936:0.0:Blue flowers
+8938:0.0:Red flowers
+8949:0.1:Pirate bandana
+8950:0.0:Pirate hat
+8966:6.0:Cutthroat flag
+8967:6.0:Guilded smile flag
+8968:6.0:Bronze fist flag
+8969:6.0:Lucky shot flag
+8970:6.0:Treasure flag
+8971:6.0:Phasmatys flag
+8972:0.0:Bowl of red water
+8974:0.0:Bowl of blue water
+8977:1.1:Scrapey bark
+8986:1.0:Bucket
+8987:0.5:Torch
+8988:0.0:The stuff
+8989:0.0:Brewin' guide
+8990:0.0:Brewin' guide
+9003:0.0:Security book
+9004:0.0:Stronghold notes
+9005:0.0:Fancy boots
+9006:0.0:Fighting boots
+9007:1.0:Right skull half
+9008:4.0:Left skull half
+9009:1.2:Strange skull
+9010:2.0:Top of sceptre
+9011:1.8:Bottom of sceptre
+9012:3.0:Runed sceptre
+9013:1.8:Skull sceptre
+9016:0.0:Gorak claws
+9017:0.0:Star flower
+9018:1.0:Gorak claw powder
+9019:0.0:Magic essence (unf)
+9020:0.0:Queen's secateurs
+9025:0.0:Nuff's certificate
+9026:0.0:Ivory comb
+9028:0.1:Golden scarab
+9030:0.1:Stone scarab
+9032:0.0:Pottery scarab
+9034:0.1:Golden statuette
+9036:0.0:Pottery statuette
+9038:0.1:Stone statuette
+9040:0.1:Gold seal
+9042:0.1:Stone seal
+9050:2.0:Pharaoh's sceptre
+9052:0.0:Locust meat
+9064:1.3:Emerald lantern
+9065:1.3:Emerald lantern
+9066:0.0:Emerald lens
+9067:1.0:Dream log
+9068:0.0:Moonclan helm
+9069:1.0:Moonclan hat
+9070:4.0:Moonclan armour
+9071:3.0:Moonclan skirt
+9072:0.0:Moonclan gloves
+9073:0.0:Moonclan boots
+9074:0.0:Moonclan cape
+9075:0.0:Astral rune
+9076:7.0:Lunar ore
+9077:0.0:Lunar bar
+9078:0.0:Moonclan manual
+9079:0.0:Suqah tooth
+9080:3.0:Suqah hide
+9081:3.0:Suqah leather
+9082:0.0:Ground tooth
+9083:4.0:Seal of passage
+9084:2.0:Lunar staff
+9085:0.0:Empty vial
+9086:0.0:Vial of water
+9087:0.0:Waking sleep vial
+9088:0.0:Guam vial
+9090:0.0:Guam-marr vial
+9094:0.0:Kindling
+9095:0.0:Soaked kindling
+9096:0.9:Lunar helm
+9097:4.0:Lunar torso
+9098:3.0:Lunar legs
+9099:0.0:Lunar gloves
+9100:0.9:Lunar boots
+9101:0.4:Lunar cape
+9102:0.0:Lunar amulet
+9103:0.0:A special tiara
+9104:0.0:Lunar ring
+9139:0.0:Blurite bolts
+9140:0.0:Iron bolts
+9141:0.0:Steel bolts
+9142:0.0:Mithril bolts
+9143:0.0:Adamant bolts
+9144:0.0:Runite bolts
+9145:0.0:Silver bolts
+9174:2.0:Bronze crossbow
+9176:4.0:Blurite crossbow
+9177:4.0:Iron crossbow
+9179:4.0:Steel crossbow
+9181:6.0:Mith crossbow
+9183:4.0:Adamant crossbow
+9185:6.0:Rune crossbow
+9187:0.0:Jade bolt tips
+9188:0.0:Topaz bolt tips
+9189:0.0:Sapphire bolt tips
+9190:0.0:Emerald bolt tips
+9191:0.0:Ruby bolt tips
+9192:0.0:Diamond bolt tips
+9193:0.0:Dragon bolt tips
+9194:0.0:Onyx bolt tips
+9236:0.0:Opal bolts (e)
+9237:0.0:Jade bolts (e)
+9238:0.0:Pearl bolts (e)
+9239:0.0:Topaz bolts (e)
+9240:0.0:Sapphire bolts (e)
+9241:0.0:Emerald bolts (e)
+9242:0.0:Ruby bolts (e)
+9243:0.0:Diamond bolts (e)
+9244:0.0:Dragon bolts (e)
+9245:0.0:Onyx bolts (e)
+9335:0.0:Jade bolts
+9336:0.0:Topaz bolts
+9337:0.0:Sapphire bolts
+9338:0.0:Emerald bolts
+9339:0.0:Ruby bolts
+9340:0.0:Diamond bolts
+9341:0.0:Dragon bolts
+9342:0.0:Onyx bolts
+9375:0.0:Bronze bolts (unf)
+9376:0.0:Blurite bolts (unf)
+9377:0.0:Iron bolts (unf)
+9378:0.0:Steel bolts (unf)
+9379:0.0:Mithril bolts (unf)
+9381:0.0:Runite bolts (unf)
+9382:0.0:Silver bolts (unf)
+9415:0.0:Grapple
+9416:0.0:Mith grapple tip
+9418:0.0:Mith grapple
+9419:0.0:Mith grapple
+9420:1.0:Bronze limbs
+9422:1.0:Blurite limbs
+9423:1.0:Iron limbs
+9425:2.0:Steel limbs
+9427:2.0:Mithril limbs
+9429:3.0:Adamantite limbs
+9431:3.0:Runite limbs
+9433:1.0:Bolt pouch
+9434:0.4:Bolt mould
+9436:0.0:Sinew
+9438:0.0:Crossbow string
+9440:3.0:Wooden stock
+9442:3.0:Oak stock
+9444:3.0:Willow stock
+9446:3.0:Teak stock
+9448:3.0:Maple stock
+9450:0.0:Mahogany stock
+9452:0.0:Yew stock
+9454:8.0:Bronze crossbow (u)
+9456:8.0:Blurite crossbow (u)
+9457:8.0:Iron crossbow (u)
+9459:8.0:Steel crossbow (u)
+9461:8.0:Mithril crossbow (u)
+9463:8.0:Adamant crossbow (u)
+9465:2.0:Runite crossbow (u)
+9467:1.8:Blurite bar
+9468:0.5:Sawdust
+9469:0.0:Grand seed pod
+9470:0.2:Gnome scarf
+9472:0.0:Gnome goggles
+9474:0.0:Reward token
+9475:0.1:Mint cake
+9478:0.0:Half made batta
+9479:0.25:Unfinished batta
+9480:0.0:Half made batta
+9481:0.25:Unfinished batta
+9482:0.0:Half made batta
+9483:0.0:Half made batta
+9484:0.25:Unfinished batta
+9485:0.0:Half made batta
+9486:0.25:Unfinished batta
+9487:1.0:Wizard blizzard
+9489:1.0:Wizard blizzard
+9508:1.0:Wizard blizzard
+9510:0.0:Short green guy
+9512:0.0:Pineapple punch
+9514:0.0:Fruit blast
+9516:0.0:Drunk dragon
+9518:0.1:Choc saturday
+9520:0.0:Blurberry special
+9522:0.1:Batta tin
+9524:0.1:Batta tin
+9527:0.0:Fruit batta
+9529:0.0:Toad batta
+9531:0.0:Worm batta
+9533:0.2:Vegetable batta
+9535:0.2:Cheese+tom batta
+9538:0.0:Toad crunchies
+9540:0.0:Spicy crunchies
+9542:0.0:Worm crunchies
+9544:0.2:Chocchip crunchies
+9547:0.0:Worm hole
+9549:0.0:Veg ball
+9551:0.3:Tangled toads' legs
+9553:0.3:Chocolate bomb
+9558:0.2:Half made bowl
+9559:0.2:Half made bowl
+9560:0.0:Unfinished bowl
+9561:0.2:Half made bowl
+9562:0.0:Unfinished bowl
+9563:0.2:Half made bowl
+9564:0.0:Unfinished bowl
+9566:0.0:Mixed blizzard
+9567:0.0:Mixed sgg
+9568:0.0:Mixed blast
+9569:0.0:Mixed punch
+9577:0.0:Half made crunchy
+9578:0.0:Unfinished crunchy
+9579:0.0:Half made crunchy
+9580:0.0:Unfinished crunchy
+9581:0.0:Half made crunchy
+9582:0.0:Unfinished crunchy
+9583:0.0:Half made crunchy
+9584:0.0:Unfinished crunchy
+9589:0.0:Dossier
+9590:0.0:Dossier
+9592:3.0:Magic glue
+9593:2.5:Weird gloop
+9594:0.0:Ground mud runes
+9604:0.0:Orange pentagon
+9625:1.0:Crystal saw
+9626:1.0:Small crystal seed
+9627:0.0:A handwritten book
+9629:0.9:Tyras helm
+9632:2.0:Daeyalt ore
+9634:0.0:Vyrewatch top
+9636:0.0:Vyrewatch legs
+9638:0.0:Vyrewatch shoes
+9640:0.0:Citizen top
+9642:0.0:Citizen trousers
+9644:0.0:Citizen shoes
+9646:0.0:Castle sketch 1
+9647:0.0:Castle sketch 2
+9648:0.0:Castle sketch 3
+9651:0.0:Large ornate key
+9652:0.0:Haemalchemy
+9653:0.0:Sealed message
+9655:0.0:Ladder top
+9659:3.0:Bucket of water
+9660:1.0:Bucket
+9662:0.0:Shortcut key
+9665:0.5:Torch
+9666:2.2:Proselyte harness m
+9668:2.2:Initiate harness m
+9670:2.2:Proselyte harness f
+9672:2.0:Proselyte sallet
+9674:8.6:Proselyte hauberk
+9676:7.7:Proselyte cuisse
+9678:9.0:Proselyte tasset
+9680:0.0:Sea slug glue
+9681:0.0:Commorb v2
+9682:0.0:Door transcription
+9683:0.0:Dead sea slug
+9684:0.0:Page 1
+9685:0.0:Page 2
+9686:0.0:Page 3
+9687:0.01:Fragment 1
+9688:0.01:Fragment 2
+9689:0.01:Fragment 3
+9690:0.0:Blank water rune
+9691:0.0:Water rune
+9692:0.0:Blank air rune
+9693:0.0:Air rune
+9694:0.0:Blank earth rune
+9695:0.0:Earth rune
+9696:0.0:Blank mind rune
+9697:0.0:Mind rune
+9698:0.0:Blank fire rune
+9699:0.0:Fire rune
+9703:1.0:Training sword
+9704:5.0:Training shield
+9705:1.3:Training bow
+9706:0.0:Training arrows
+9715:0.1:Slashed book
+9717:0.1:Beaten book
+9718:0.0:Crane schematic
+9719:0.0:Lever schematic
+9720:1.0:Crane claw
+9724:1.0:Large cog
+9725:1.0:Medium cog
+9726:1.0:Small cog
+9727:1.8:Primed bar
+9728:1.0:Primed mind bar
+9729:0.1:Elemental helmet
+9731:0.2:Mind shield
+9733:0.0:Mind helmet
+9735:0.4:Desert goat horn
+9736:0.4:Goat horn dust
+9741:0.0:Combat potion(3)
+9747:0.4:Attack cape
+9749:0.0:Attack hood
+9750:0.4:Strength cape
+9752:0.4:Strength hood
+9753:0.4:Defence cape
+9755:0.4:Defence hood
+9756:0.4:Ranging cape
+9758:0.4:Ranging hood
+9759:0.4:Prayer cape
+9761:0.4:Prayer hood
+9762:0.4:Magic cape
+9764:0.4:Magic hood
+9765:0.4:Runecraft cape
+9767:0.4:Runecrafting hood
+9768:0.4:Hitpoints cape
+9770:0.4:Hitpoints hood
+9771:0.0:Agility cape
+9773:0.0:Agility hood
+9774:0.4:Herblore cape
+9776:0.4:Herblore hood
+9777:0.4:Thieving cape
+9779:0.4:Thieving hood
+9780:0.4:Crafting cape
+9782:0.4:Crafting hood
+9783:0.4:Fletching cape
+9785:0.4:Fletching hood
+9786:0.4:Slayer cape
+9788:0.4:Slayer hood
+9789:0.4:Construct. cape
+9791:0.0:Construct. hood
+9792:0.4:Mining cape
+9794:0.4:Mining hood
+9795:0.4:Smithing cape
+9797:0.4:Smithing hood
+9798:0.4:Fishing cape
+9800:0.4:Fishing hood
+9801:0.4:Cooking cape
+9803:0.4:Cooking hood
+9804:0.4:Firemaking cape
+9806:0.4:Firemaking hood
+9807:0.4:Woodcutting cape
+9809:0.4:Woodcutting hood
+9810:0.4:Farming cape
+9812:0.4:Farming hood
+9813:0.0:Quest point cape
+9814:0.0:Quest point hood
+9815:0.0:Bobble hat
+9816:0.0:Bobble scarf
+9901:0.0:Goutweedy lump
+9902:0.0:Hardy gout tubers
+9903:0.0:Farming manual
+9906:0.0:Ghost buster 500
+9907:0.0:Ghost buster 500
+9908:0.0:Ghost buster 500
+9909:0.0:Ghost buster 500
+9910:0.0:Ghost buster 500
+9911:0.0:Ghost buster 500
+9912:0.0:Ghost buster 500
+9913:0.0:White destabiliser
+9919:0.0:Evil root
+9920:0.0:Jack lantern mask
+9921:2.0:Skeleton boots
+9922:2.0:Skeleton gloves
+9923:2.0:Skeleton leggings
+9924:2.0:Skeleton shirt
+9925:2.0:Skeleton mask
+9932:0.9:Auguste's sapling
+9933:0.0:Balloon structure
+9934:0.0:Origami balloon
+9939:0.0:Green balloon
+9943:1.5:Sandbag
+9944:1.0:Bomber jacket
+9945:0.0:Bomber cap
+9946:0.0:Cap and goggles
+9947:0.0:Old red disk
+9948:0.4:Hunter cape
+9950:0.4:Hunter hood
+9976:0.0:Chinchompa
+9977:0.0:Red chinchompa
+9978:0.15:Raw bird meat
+9980:0.1:Roast bird meat
+9986:2.0:Raw beast meat
+9988:2.0:Roast beast meat
+9992:3.5:Skewered beast
+9994:0.2:Spicy tomato
+10006:0.0:Bird snare
+10008:0.2:Box trap
+10010:0.2:Butterfly net
+10012:0.0:Butterfly jar
+10023:1.8:Falconer's glove
+10024:1.8:Falconer's glove
+10025:1.0:Magic box
+10029:0.0:Teasing stick
+10031:0.02:Rabbit snare
+10033:0.0:Chinchompa
+10034:0.0:Red chinchompa
+10035:0.2:Kyatt legs
+10037:0.2:Kyatt top
+10039:0.2:Kyatt hat
+10041:0.2:Larupia legs
+10043:0.2:Larupia top
+10045:0.2:Larupia hat
+10047:0.2:Graahk legs
+10049:0.2:Graahk top
+10051:0.2:Graahk headdress
+10053:0.2:Wood camo top
+10055:0.2:Wood camo legs
+10057:0.2:Jungle camo top
+10059:0.2:Jungle camo legs
+10061:0.2:Desert camo top
+10063:0.2:Desert camo legs
+10065:0.2:Polar camo top
+10067:0.2:Polar camo legs
+10069:0.0:Spotted cape
+10071:0.0:Spottier cape
+10073:0.0:Spotted cape
+10074:0.0:Spottier cape
+10075:0.0:Gloves of silence
+10077:1.0:Spiky vambraces
+10079:0.2:Green spiky vambs
+10081:0.2:Blue spiky vambs
+10083:0.2:Red spiky vambs
+10085:0.2:Black spiky vambs
+10087:0.0:Stripy feather
+10088:0.0:Red feather
+10089:0.0:Blue feather
+10090:0.0:Yellow feather
+10091:0.0:Orange feather
+10093:2.0:Tatty larupia fur
+10095:2.0:Larupia fur
+10097:2.0:Tatty graahk fur
+10099:2.0:Graahk fur
+10101:0.0:Tatty kyatt fur
+10103:2.0:Kyatt fur
+10105:0.0:Kebbit spike
+10109:0.0:Kebbit teeth
+10111:0.0:Kebbit teeth dust
+10113:0.0:Kebbit claws
+10115:1.0:Dark kebbit fur
+10117:0.4:Polar kebbit fur
+10119:0.4:Feldip weasel fur
+10121:0.4:Common kebbit fur
+10123:0.4:Desert devil fur
+10125:0.4:Spotted kebbit fur
+10127:0.0:Dashing kebbit fur
+10129:1.3:Barb-tail harpoon
+10132:0.0:Strung rabbit foot
+10134:0.0:Rabbit foot
+10136:1.0:Rainbow fish
+10138:5.0:Raw rainbow fish
+10142:0.0:Guam tar
+10143:0.0:Marrentill tar
+10144:0.0:Tarromin tar
+10145:0.0:Harralander tar
+10146:4.0:Orange salamander
+10147:4.0:Red salamander
+10148:4.0:Black salamander
+10149:4.0:Swamp lizard
+10150:1.0:Noose wand
+10156:5.0:Hunters' crossbow
+10158:0.0:Kebbit bolts
+10159:0.0:Long kebbit bolts
+10167:0.0:Eagle feather
+10171:0.2:Eagle cape
+10172:0.0:Fake beak
+10173:0.0:Bird book
+10174:0.0:Metal feather
+10176:1.0:Silver feather
+10177:0.0:Bronze feather
+10178:0.0:Odd bird seed
+10179:0.0:Feathered journal
+10180:0.0:Clue scroll (easy)
+10181:5.0:Casket (easy)
+10182:0.0:Clue scroll (easy)
+10183:5.0:Casket (easy)
+10184:0.0:Clue scroll (easy)
+10185:5.0:Casket (easy)
+10186:0.0:Clue scroll (easy)
+10187:5.0:Casket (easy)
+10188:0.0:Clue scroll (easy)
+10189:5.0:Casket (easy)
+10190:0.0:Clue scroll (easy)
+10191:5.0:Casket (easy)
+10192:0.0:Clue scroll (easy)
+10193:5.0:Casket (easy)
+10194:0.0:Clue scroll (easy)
+10195:5.0:Casket (easy)
+10196:0.0:Clue scroll (easy)
+10197:5.0:Casket (easy)
+10198:0.0:Clue scroll (easy)
+10199:5.0:Casket (easy)
+10200:0.0:Clue scroll (easy)
+10201:5.0:Casket (easy)
+10202:0.0:Clue scroll (easy)
+10203:5.0:Casket (easy)
+10204:0.0:Clue scroll (easy)
+10205:5.0:Casket (easy)
+10206:0.0:Clue scroll (easy)
+10207:5.0:Casket (easy)
+10208:0.0:Clue scroll (easy)
+10209:5.0:Casket (easy)
+10210:0.0:Clue scroll (easy)
+10211:5.0:Casket (easy)
+10212:0.0:Clue scroll (easy)
+10213:5.0:Casket (easy)
+10214:0.0:Clue scroll (easy)
+10215:5.0:Casket (easy)
+10216:0.0:Clue scroll (easy)
+10217:5.0:Casket (easy)
+10218:0.0:Clue scroll (easy)
+10219:5.0:Casket (easy)
+10220:0.0:Clue scroll (easy)
+10221:5.0:Casket (easy)
+10222:0.0:Clue scroll (easy)
+10223:5.0:Casket (easy)
+10224:0.0:Clue scroll (easy)
+10225:5.0:Casket (easy)
+10226:0.0:Clue scroll (easy)
+10227:5.0:Casket (easy)
+10228:0.0:Clue scroll (easy)
+10229:5.0:Casket (easy)
+10230:0.0:Clue scroll (easy)
+10231:5.0:Casket (easy)
+10232:0.0:Clue scroll (easy)
+10233:5.0:Casket (easy)
+10234:0.0:Clue scroll (hard)
+10235:5.0:Casket (hard)
+10236:0.0:Clue scroll (hard)
+10237:5.0:Casket (hard)
+10238:0.0:Clue scroll (hard)
+10239:5.0:Casket (hard)
+10240:0.0:Clue scroll (hard)
+10241:5.0:Casket (hard)
+10242:0.0:Clue scroll (hard)
+10243:5.0:Casket (hard)
+10244:0.0:Clue scroll (hard)
+10245:5.0:Casket (hard)
+10246:0.0:Clue scroll (hard)
+10247:5.0:Casket (hard)
+10248:0.0:Clue scroll (hard)
+10249:5.0:Casket (hard)
+10250:0.0:Clue scroll (hard)
+10251:5.0:Casket (hard)
+10252:0.0:Clue scroll (hard)
+10253:5.0:Casket (hard)
+10254:0.0:Clue scroll (medium)
+10255:5.0:Casket (medium)
+10256:0.0:Clue scroll (medium)
+10257:5.0:Casket (medium)
+10258:0.0:Clue scroll (medium)
+10259:5.0:Casket (medium)
+10260:0.0:Clue scroll (medium)
+10261:5.0:Casket (medium)
+10262:0.0:Clue scroll (medium)
+10263:5.0:Casket (medium)
+10264:0.0:Clue scroll (medium)
+10265:5.0:Casket (medium)
+10266:0.0:Clue scroll (medium)
+10267:5.0:Casket (medium)
+10268:0.0:Clue scroll (medium)
+10269:5.0:Casket (medium)
+10270:0.0:Clue scroll (medium)
+10271:5.0:Casket (medium)
+10272:0.0:Clue scroll (medium)
+10273:5.0:Casket (medium)
+10274:0.0:Clue scroll (medium)
+10275:5.0:Casket (medium)
+10276:0.0:Clue scroll (medium)
+10277:5.0:Casket (medium)
+10278:0.0:Clue scroll (medium)
+10279:5.0:Casket (medium)
+10280:1.8:Willow comp bow
+10282:1.8:Yew comp bow
+10284:1.0:Magic comp bow
+10286:2.72:Rune helm (h1)
+10288:2.72:Rune helm (h2)
+10290:2.72:Rune helm (h3)
+10292:2.72:Rune helm (h4)
+10294:2.72:Rune helm (h5)
+10296:3.0:Adamant helm (h1)
+10298:3.0:Adamant helm (h2)
+10300:3.0:Adamant helm (h3)
+10302:3.0:Adamant helm (h4)
+10304:3.0:Adamant helm (h5)
+10306:1.8:Black helm (h1)
+10308:1.8:Black helm (h2)
+10310:1.8:Black helm (h3)
+10312:1.8:Black helm (h4)
+10314:1.8:Black helm (h5)
+10316:2.0:Bob's red shirt
+10318:2.0:Bob's blue shirt
+10320:2.0:Bob's green shirt
+10322:2.0:Bob's black shirt
+10324:2.0:Bob's purple shirt
+10326:0.0:Purple firelighter
+10327:0.0:White firelighter
+10328:2.0:White logs
+10329:2.0:Purple logs
+10330:4.0:3rd age range top
+10332:6.0:3rd age range legs
+10334:1.0:3rd age range coif
+10336:1.0:3rd age vambraces
+10338:2.0:3rd age robe top
+10340:1.0:3rd age robe
+10342:0.0:3rd age mage hat
+10344:0.0:3rd age amulet
+10346:2.0:3rd age platelegs
+10348:9.0:3rd age platebody
+10350:1.0:3rd age full helmet
+10352:2.0:3rd age kiteshield
+10354:0.0:Amulet of glory (t4)
+10356:0.0:Amulet of glory (t3)
+10358:0.0:Amulet of glory (t2)
+10360:0.0:Amulet of glory (t1)
+10362:0.0:Amulet of glory (t)
+10364:0.0:Strength amulet (t)
+10366:0.0:Amulet of magic (t)
+10368:0.0:Zamorak bracers
+10370:6.0:Zamorak d'hide
+10372:5.0:Zamorak chaps
+10374:0.0:Zamorak coif
+10376:0.0:Guthix bracers
+10378:6.0:Guthix dragonhide
+10380:5.0:Guthix chaps
+10382:0.0:Guthix coif
+10384:0.0:Saradomin bracers
+10386:6.0:Saradomin d'hide
+10388:5.0:Saradomin chaps
+10390:0.0:Saradomin coif
+10392:2.0:A powdered wig
+10394:1.0:Flared trousers
+10396:1.0:Pantaloons
+10398:2.0:Sleeping cap
+10400:1.0:Black elegant shirt
+10402:1.0:Black elegant legs
+10404:1.0:Red elegant shirt
+10406:1.0:Red elegant legs
+10408:1.0:Blue elegant shirt
+10410:1.0:Blue elegant legs
+10412:1.0:Green elegant shirt
+10414:1.0:Green elegant legs
+10416:1.0:Purple elegant shirt
+10418:1.0:Purple elegant legs
+10420:1.0:White elegant blouse
+10422:1.0:White elegant skirt
+10424:1.0:Red elegant blouse
+10426:1.0:Red elegant skirt
+10428:1.0:Blue elegant blouse
+10430:1.0:Blue elegant skirt
+10432:1.0:Green elegant blouse
+10434:1.0:Green elegant skirt
+10436:1.0:Purple elegant blouse
+10438:1.0:Purple elegant skirt
+10440:2.0:Saradomin crozier
+10442:2.0:Guthix crozier
+10444:2.0:Zamorak crozier
+10446:0.4:Saradomin cloak
+10448:1.0:Guthix cloak
+10450:0.4:Zamorak cloak
+10452:0.0:Saradomin mitre
+10454:0.0:Guthix mitre
+10456:0.0:Zamorak mitre
+10458:1.0:Saradomin robe top
+10460:1.0:Zamorak robe top
+10462:1.0:Guthix robe top
+10464:0.0:Saradomin robe legs
+10466:2.0:Guthix robe legs
+10468:1.0:Zamorak robe legs
+10470:0.0:Saradomin stole
+10472:0.0:Guthix stole
+10474:0.0:Zamorak stole
+10476:0.0:Purple sweets
+10486:0.4:Empty sack
+10488:0.0:Selected iron
+10489:0.0:Bar magnet
+10490:0.4:Undead twigs
+10491:1.0:Blessed axe
+10492:0.0:Research notes
+10493:0.0:Translated notes
+10494:0.0:A pattern
+10495:0.0:A container
+10496:0.0:Polished buttons
+10498:4.0:Ava's attractor
+10499:4.5:Ava's accumulator
+10500:5.0:Crone-made amulet
+10501:0.0:Snowball
+10506:9.0:Gublinch shards
+10507:2.0:Reindeer hat
+10508:10.0:Wintumber tree
+10547:2.0:Healer hat
+10548:2.0:Fighter hat
+10549:1.0:Runner hat
+10550:2.0:Ranger hat
+10551:4.0:Fighter torso
+10552:0.0:Runner boots
+10553:0.0:Penance gloves
+10554:0.0:Penance gloves
+10555:3.0:Penance skirt
+10562:0.0:Queen help book
+10564:22.0:Granite body
+10566:1.8:Fire cape
+10581:0.0:Keris
+10586:0.0:Combat lamp
+10587:0.0:Tarn's diary
+10588:0.6:Salve amulet (e)
+10589:4.0:Granite helm
+10592:0.0:Penguin bongos
+10593:2.0:Cowbells
+10594:1.0:Clockwork book
+10595:2.0:Clockwork suit
+10596:2.0:Clockwork suit
+10600:0.0:Kgp id card
+10601:0.4:Mystic hat
+10602:0.4:Mystic hat (dark)
+10603:0.4:Mystic hat (light)
+10604:1.0:Skeletal helm
+10605:2.0:Infinity top
+10606:0.9:Splitbark helm
+10607:0.0:Ghostly boots
+10608:1.0:Moonclan hat
+10609:0.9:Lunar helm
+10611:6.0:Void knight top
+10612:0.0:Rogue mask
+10613:2.0:Rock-shell helm
+10614:1.0:Spined helm
+10615:2.0:Tribal mask
+10616:2.0:Tribal mask
+10617:2.0:Tribal mask
+10618:9.9:White platebody
+10619:8.0:Initiate hauberk
+10620:8.6:Proselyte hauberk
+10621:2.0:Mourner top
+10622:0.2:Kyatt top
+10623:0.2:Larupia top
+10624:0.2:Graahk top
+10625:0.2:Wood camo top
+10626:0.2:Jungle camo top
+10627:0.2:Desert camo top
+10628:0.2:Polar camo top
+10629:0.0:Mime mask
+10630:2.0:Princess blouse
+10631:0.0:Zombie shirt
+10632:2.7:Camo top
+10633:2.0:Lederhosen top
+10634:1.0:Shade robe
+10635:1.8:Cape of legends
+10636:1.8:Obsidian cape
+10637:1.8:Fire cape
+10638:0.4:Team-1 cape
+10639:0.4:Attack cape
+10640:0.4:Strength cape
+10641:0.4:Defence cape
+10642:0.4:Ranging cape
+10643:0.4:Prayer cape
+10644:0.4:Magic cape
+10645:0.4:Runecraft cape
+10646:0.4:Hunter cape
+10647:0.4:Hitpoints cape
+10648:0.0:Agility cape
+10649:0.4:Herblore cape
+10650:0.4:Thieving cape
+10651:0.4:Crafting cape
+10652:0.4:Fletching cape
+10653:0.4:Slayer cape
+10654:0.4:Construct. cape
+10655:0.4:Mining cape
+10656:0.4:Smithing cape
+10657:0.4:Fishing cape
+10658:0.4:Cooking cape
+10659:0.4:Firemaking cape
+10660:0.4:Woodcutting cape
+10661:0.4:Farming cape
+10662:0.0:Quest point cape
+10663:0.0:Spotted cape
+10664:0.0:Spottier cape
+10665:4.0:Black shield (h1)
+10666:5.0:Adamant shield (h1)
+10667:5.44:Rune shield (h1)
+10668:4.0:Black shield (h2)
+10669:5.0:Adamant shield (h2)
+10670:5.44:Rune shield (h2)
+10671:4.0:Black shield (h3)
+10672:5.0:Adamant shield (h3)
+10673:5.44:Rune shield (h3)
+10674:4.0:Black shield (h4)
+10675:5.0:Adamant shield (h4)
+10676:5.44:Rune shield (h4)
+10677:4.0:Black shield (h5)
+10678:5.0:Adamant shield (h5)
+10679:5.44:Rune shield (h5)
+10680:5.4:Studded body (g)
+10681:5.4:Studded body (t)
+10688:1.0:Enchanted top
+10689:1.0:Wizard boots
+10690:9.0:Black platebody (t)
+10691:9.07:Black platebody (g)
+10692:0.0:Highwayman mask
+10693:0.0:Blue beret
+10694:0.0:Black beret
+10695:0.0:White beret
+10696:0.2:Ranger boots
+10697:9.07:Adamant platebody (t)
+10698:9.07:Adamant platebody (g)
+10699:1.8:Black helm (h1)
+10700:1.8:Black helm (h2)
+10701:1.8:Black helm (h3)
+10702:1.8:Black helm (h4)
+10703:1.8:Black helm (h5)
+10704:2.72:Rune helm (h1)
+10705:2.72:Rune helm (h2)
+10706:2.72:Rune helm (h3)
+10707:2.72:Rune helm (h4)
+10708:2.72:Rune helm (h5)
+10709:3.0:Adamant helm (h1)
+10710:3.0:Adamant helm (h2)
+10711:3.0:Adamant helm (h3)
+10712:3.0:Adamant helm (h4)
+10713:3.0:Adamant helm (h5)
+10714:2.0:Bob's red shirt
+10715:2.0:Bob's blue shirt
+10716:2.0:Bob's green shirt
+10717:2.0:Bob's black shirt
+10718:2.0:Bob's purple shirt
+10719:0.0:Amulet of glory (t)
+10720:0.4:Guthix cape
+10721:0.0:Frog mask
+10722:2.0:Reindeer hat
+10723:0.0:Jack lantern mask
+10724:2.0:Skeleton boots
+10725:2.0:Skeleton gloves
+10726:2.0:Skeleton leggings
+10727:2.0:Skeleton shirt
+10728:2.0:Skeleton mask
+10729:0.0:Easter ring
+10730:0.0:Blue marionette
+10731:0.0:Zombie head
+10732:0.0:Rubber chicken
+10733:0.0:Yo-yo
+10734:0.0:Bunny ears
+10735:3.0:Scythe
+10736:0.0:Strength amulet (t)
+10738:0.0:Amulet of magic (t)
+10740:2.0:A powdered wig
+10742:1.0:Flared trousers
+10744:1.0:Pantaloons
+10746:2.0:Sleeping cap
+10748:1.0:Black elegant shirt
+10750:1.0:Red elegant shirt
+10752:1.0:Blue elegant shirt
+10754:1.0:Green elegant shirt
+10756:1.0:Purple elegant shirt
+10758:0.0:Red boater
+10760:0.0:Orange boater
+10762:0.0:Green boater
+10764:0.0:Blue boater
+10766:0.0:Black boater
+10768:0.0:Red headband
+10770:0.0:Black headband
+10772:0.0:Brown headband
+10774:0.0:Pirate's hat
+10776:9.9:Zamorak platebody
+10778:9.9:Saradomin plate
+10780:9.0:Guthix platebody
+10782:10.0:Gilded platebody
+10784:1.0:Saradomin robe top
+10786:1.0:Zamorak robe top
+10788:1.0:Guthix robe top
+10790:6.0:Zamorak d'hide
+10792:6.0:Saradomin d'hide
+10794:6.0:Guthix dragonhide
+10796:0.2:Robin hood hat
+10798:9.0:Rune platebody (g)
+10800:9.07:Rune platebody (t)
+10802:0.0:Tan cavalier
+10804:0.0:Dark cavalier
+10806:0.0:Black cavalier
+10808:2.0:Arctic pyre logs
+10810:1.0:Arctic pine logs
+10812:1.8:Split log
+10814:0.0:Hair
+10816:3.0:Raw yak meat
+10818:0.4:Yak-hide
+10820:0.4:Cured yak-hide
+10826:2.2:Fremennik shield
+10828:2.2:Helm of neitiznot
+10830:0.0:Royal decree
+10831:0.0:Empty tax bag
+10832:1.8:Light tax bag
+10833:3.6:Normal tax bag
+10834:5.4:Hefty tax bag
+10836:2.72:Silly jester hat
+10837:6.8:Silly jester top
+10838:0.9:Silly jester tights
+10839:1.36:Silly jester boots
+10842:3.0:Decapitated head
+10844:0.0:Spring sq'irk
+10845:0.0:Summer sq'irk
+10846:0.0:Autumn sq'irk
+10847:0.0:Winter sq'irk
+10848:1.0:Spring sq'irkjuice
+10849:1.0:Summer sq'irkjuice
+10850:1.0:Autumn sq'irkjuice
+10851:1.0:Winter sq'irkjuice
+10856:0.0:Sin seer's note
+10857:12.0:Severed leg
+10858:3.6:Shadow sword
+10859:0.1:Tea flask
+10860:0.1:Tea flask
+10861:0.1:Tea flask
+10862:2.0:Hard hat
+10863:0.9:Builder's shirt
+10864:1.0:Builder's trousers
+10865:0.4:Builder's boots
+10866:0.0:Rivets
+10870:0.0:Binding fluid
+10872:0.0:Pipe ring
+10873:0.0:Metal sheet
+10874:0.0:Coloured ball
+10875:0.0:Valve wheel
+10876:0.0:Metal bar
+10877:0.1:Plain satchel
+10878:0.1:Green satchel
+10879:0.1:Red satchel
+10880:0.1:Black satchel
+10881:0.1:Gold satchel
+10882:0.1:Rune satchel
+10883:2.0:Hard hat
+10884:0.0:Fuse
+10885:0.0:Keg
+10886:1.0:Prayer book
+10887:30.0:Barrelchest anchor
+10888:30.0:Barrelchest anchor
+10889:0.0:Blessed lamp
+10890:1.0:Prayer book
+10891:0.0:Wooden cat
+10893:0.0:Cranial clamp
+10894:2.0:Brain tongs
+10895:1.0:Bell jar
+10896:0.0:Wolf whistle
+10897:0.0:Shipping order
+10898:0.0:Keg
+10899:0.0:Crate part
+10904:0.0:Skull staple
+10925:0.0:Sanfew serum(4)
+10933:0.0:Lumberjack boots
+10934:0.0:Reward token
+10935:0.0:Reward token
+10936:0.0:Reward token
+10937:0.0:Nail beast nails
+10939:1.3:Lumberjack top
+10940:0.9:Lumberjack legs
+10941:0.4:Lumberjack hat
+10942:0.0:Reward token
+10943:0.0:Reward token
+10944:0.0:Reward token
+10945:1.3:Lumberjack top
+10952:0.0:Slayer bell
+10954:5.0:Frog-leather body
+10956:3.0:Frog-leather chaps
+10958:1.0:Frog-leather boots
+10960:0.0:Green gloop soup
+10961:0.0:Frogspawn gumbo
+10962:0.0:Frogburger
+10963:0.0:Coated frogs' legs
+10964:0.0:Bat shish
+10965:0.0:Fingers
+10966:1.0:Grubs � la mode
+10967:1.0:Roast frog
+10968:0.0:Mushrooms
+10969:0.0:Fillets
+10970:1.0:Loach
+10971:0.0:Eel sushi
+10972:0.0:Sphere
+10973:0.0:Light orb
+10975:1.0:Spanner
+10976:0.0:Long bone
+10977:1.0:Curved bone
+10978:0.2:Swamp weed
+10980:0.0:Empty light orb
+10981:1.0:Cave goblin wire
+10983:3.0:Cog
+10984:3.0:Cog
+10985:0.0:Fuse
+10986:0.0:Fuse
+10987:0.0:Meter
+10988:0.0:Meter
+10989:0.0:Capacitor
+10990:0.0:Capacitor
+10995:6.8:Perfect shell
+10996:7.0:Perfect snail shell
+10999:0.1:Goblin book
+11001:0.0:Dagon'hai history
+11002:0.0:Sin'keth's diary
+11003:0.0:An empty folder
+11006:0.0:Used folder
+11007:0.0:Full folder
+11008:0.0:Rat's paper
+11009:0.0:Letter to surok
+11010:0.0:Surok's letter
+11011:0.0:Zaff's instructions
+11013:0.0:Infused wand
+11014:0.0:Beacon ring
+11015:0.2:Chicken head
+11016:0.2:Chicken feet
+11017:0.2:Chicken wings
+11018:0.2:Chicken legs
+11019:0.2:Chicken feet
+11020:0.2:Chicken wings
+11021:0.2:Chicken head
+11022:0.2:Chicken legs
+11024:0.0:Rabbit mould
+11027:0.0:Easter egg
+11028:0.0:Easter egg
+11029:0.0:Easter egg
+11030:0.0:Easter egg
+11031:0.0:Damp planks
+11032:0.0:Crude carving
+11033:0.0:Cruder carving
+11034:0.0:Sven's last map
+11035:0.0:Windswept logs
+11037:2.0:Brine sabre
+11044:0.0:Rotten barrel
+11045:0.0:Rotten barrel
+11046:1.3:Rope
+11048:0.0:Armour shard
+11049:0.0:Artefact
+11050:0.0:Axe head
+11051:0.0:Artefact
+11052:0.0:Helmet fragment
+11053:0.0:Artefact
+11054:0.0:Shield fragment
+11055:0.0:Artefact
+11056:0.0:Sword fragment
+11057:0.0:Artefact
+11059:0.0:Artefact
+11060:0.0:Goblin village sphere
+11061:1.0:Ancient mace
+11065:0.0:Bracelet mould
+11068:0.2:Gold bracelet
+11069:0.2:Gold bracelet
+11071:0.25:Sapphire bracelet
+11072:0.25:Sapphire bracelet
+11074:0.0:Bracelet of clay
+11076:0.2:Emerald bracelet
+11078:0.2:Emerald bracelet
+11085:0.2:Ruby bracelet
+11087:0.2:Ruby bracelet
+11088:0.25:Inoculation bracelet
+11090:0.0:Phoenix necklace
+11092:0.0:Diamond bracelet
+11094:0.0:Diamond bracelet
+11105:0.0:Skills necklace(4)
+11107:0.0:Skills necklace(3)
+11109:0.0:Skills necklace(2)
+11111:0.0:Skills necklace(1)
+11113:0.0:Skills necklace
+11115:0.2:Dragonstone bracelet
+11117:0.2:Dragon bracelet
+11118:0.3:Combat bracelet(4)
+11120:0.3:Combat bracelet(3)
+11122:0.3:Combat bracelet(2)
+11124:0.3:Combat bracelet(1)
+11126:0.3:Combat bracelet
+11128:0.0:Berserker necklace
+11130:0.0:Onyx bracelet
+11132:0.0:Onyx bracelet
+11133:1.0:Regen bracelet
+11135:1.0:Bomber jacket
+11136:0.0:Karamja gloves 1
+11137:0.0:Antique lamp
+11138:0.0:Karamja gloves 2
+11139:0.0:Antique lamp
+11140:0.0:Karamja gloves 3
+11141:0.0:Antique lamp
+11154:0.0:Dream potion
+11155:0.0:Ground astral rune
+11156:0.0:Astral rune shards
+11157:0.0:Dreamy lamp
+11158:6.0:Cyrisus's chest
+11159:0.4:Hunter kit
+11165:3.6:Phoenix crossbow
+11167:3.6:Phoenix crossbow
+11169:0.0:Newspaper
+11171:0.0:Newspaper
+11173:0.0:Half certificate
+11174:0.0:Half certificate
+11175:0.0:Uncleaned find
+11178:0.0:Pottery
+11179:0.0:Old coin
+11180:0.0:Ancient coin
+11181:0.0:Ancient symbol
+11182:0.0:Old symbol
+11183:0.0:Old chipped vase
+11185:0.0:Antique lamp
+11186:0.0:Antique lamp
+11187:0.0:Antique lamp
+11188:0.0:Antique lamp
+11189:0.0:Antique lamp
+11190:0.5:Digsite pendant (1)
+11191:0.5:Digsite pendant (2)
+11192:0.5:Digsite pendant (3)
+11193:0.5:Digsite pendant (4)
+11194:0.5:Digsite pendant (5)
+11195:0.0:Clean necklace
+11196:0.0:Griffin feather
+11197:0.0:Miazrqa's pendant
+11198:0.0:Music sheet
+11199:1.0:Rupert's helmet
+11200:1.0:Dwarven helmet
+11202:0.0:Shrinking recipe
+11203:0.0:To-do list
+11204:0.0:Shrink-me-quick
+11205:0.0:Shrunk ogleroot
+11210:30.0:Golden goblin
+11211:0.0:Magic beans
+11212:0.0:Dragon arrow
+11217:0.0:Dragon fire arrows
+11222:0.0:Dragon fire arrows
+11230:0.0:Dragon dart
+11232:0.0:Dragon dart tip
+11235:1.9:Dark bow
+11237:0.0:Dragon arrowtips
+11238:0.0:Baby impling jar
+11240:0.0:Young impling jar
+11244:2.0:Earth impling jar
+11248:2.0:Eclectic impling jar
+11250:2.0:Nature impling jar
+11252:1.0:Magpie impling jar
+11254:1.0:Ninja impling jar
+11256:0.0:Dragon impling jar
+11258:1.0:Jar generator
+11259:0.2:Magic butterfly net
+11260:0.0:Impling jar
+11262:2.2:Imp repellent
+11264:0.0:Anchovy oil
+11273:0.0:Impling scroll
+11274:0.0:Ham shirt
+11277:1.0:Cavalier mask
+11278:1.0:Beret mask
+11279:0.0:Elvarg's head
+11280:1.0:Cavalier mask
+11282:1.0:Beret mask
+11283:9.0:Dragonfire shield
+11284:9.0:Dragonfire shield
+11286:1.8:Draconic visage
+11323:1.0:Barbarian rod
+11324:0.05:Roe
+11326:0.05:Caviar
+11328:0.0:Leaping trout
+11330:0.0:Leaping salmon
+11332:0.0:Leaping sturgeon
+11334:0.0:Fish offcuts
+11335:2.0:Dragon full helm
+11337:12.0:Mangled bones
+11338:9.6:Chewed bones
+11339:0.0:My notes
+11340:0.0:Barbarian skills
+11341:0.0:Ancient page
+11342:0.0:Ancient page
+11343:0.0:Ancient page
+11344:0.0:Ancient page
+11345:0.0:Ancient page
+11346:0.0:Ancient page
+11347:0.0:Ancient page
+11348:0.0:Ancient page
+11349:0.0:Ancient page
+11350:0.0:Ancient page
+11351:0.0:Ancient page
+11352:0.0:Ancient page
+11353:0.0:Ancient page
+11354:0.0:Ancient page
+11355:0.0:Ancient page
+11356:0.0:Ancient page
+11357:0.0:Ancient page
+11358:0.0:Ancient page
+11359:0.0:Ancient page
+11360:0.0:Ancient page
+11361:0.0:Ancient page
+11362:0.0:Ancient page
+11363:0.0:Ancient page
+11364:0.0:Ancient page
+11365:0.0:Ancient page
+11366:0.0:Ancient page
+11367:2.2:Bronze hasta
+11369:2.0:Iron hasta
+11371:2.2:Steel hasta
+11373:1.0:Mithril hasta
+11375:2.0:Adamant hasta
+11377:2.2:Rune hasta
+11497:0.0:Super def. mix(2)
+11640:1.0:Book of knowledge
+11656:0.0:Glassblowing book
+11663:0.0:Void mage helm
+11664:0.0:Void ranger helm
+11665:0.0:Void melee helm
+11674:0.0:Void mage helm
+11675:0.0:Void ranger helm
+11676:0.0:Void melee helm
+11677:0.51:Explorer's notes
+11678:3.0:Black knight helm
+11679:0.0:Antique lamp
+11681:0.0:Scrap paper
+11682:0.0:Hair clip
+11686:0.0:Fire rune
+11687:0.0:Water rune
+11688:0.0:Air rune
+11689:0.0:Earth rune
+11690:0.0:Mind rune
+11691:0.0:Body rune
+11692:0.0:Death rune
+11693:0.0:Nature rune
+11694:0.0:Chaos rune
+11695:0.0:Law rune
+11696:0.0:Cosmic rune
+11697:0.0:Blood rune
+11698:0.0:Soul rune
+11699:0.0:Astral rune
+11700:0.0:Bronze arrow
+11701:0.0:Iron arrow
+11702:0.0:Steel arrow
+11703:0.0:Mithril arrow
+11704:10.0:Raw pheasant
+11705:0.0:Beach boxing gloves
+11706:0.0:Beach boxing gloves
+11707:2.0:Cursed goblin hammer
+11708:2.0:Cursed goblin bow
+11709:2.0:Cursed goblin staff
+11710:5.4:Anti-dragon shield (nz)
+11711:0.0:Magic secateurs (nz)
+11712:0.0:Chaos rune (nz)
+11713:0.0:Death rune (nz)
+11714:0.0:Blood rune (nz)
+11715:0.0:Air rune (nz)
+11716:0.0:Water rune (nz)
+11717:0.0:Earth rune (nz)
+11718:0.0:Fire rune (nz)
+11719:2.2:Rune pickaxe (nz)
+11721:2.25:Iron pickaxe (nz)
+11722:0.0:Super ranging (4)
+11723:0.0:Super ranging (3)
+11724:0.0:Super ranging (2)
+11725:0.0:Super ranging (1)
+11726:0.0:Super magic potion (4)
+11727:0.0:Super magic potion (3)
+11728:0.0:Super magic potion (2)
+11729:0.0:Super magic potion (1)
+11730:0.0:Overload (4)
+11731:0.0:Overload (3)
+11732:0.0:Overload (2)
+11733:0.0:Overload (1)
+11734:0.0:Absorption (4)
+11735:0.0:Absorption (3)
+11736:0.0:Absorption (2)
+11737:0.0:Absorption (1)
+11738:0.0:Herb box
+11739:0.0:Opened herb box
+11740:0.0:Scroll of redirection
+11741:0.0:Rimmington teleport
+11742:0.0:Taverley teleport
+11743:0.0:Pollnivneach teleport
+11744:0.0:Rellekka teleport
+11745:0.0:Brimhaven teleport
+11746:0.0:Yanille teleport
+11747:0.0:Trollheim teleport
+11748:2.0:New crystal bow (i)
+11749:2.0:Crystal bow full (i)
+11750:2.0:Crystal bow 9/10 (i)
+11751:2.0:Crystal bow 8/10 (i)
+11752:2.0:Crystal bow 7/10 (i)
+11753:2.0:Crystal bow 6/10 (i)
+11754:2.0:Crystal bow 5/10 (i)
+11755:2.0:Crystal bow 4/10 (i)
+11756:2.0:Crystal bow 3/10 (i)
+11757:2.0:Crystal bow 2/10 (i)
+11758:2.0:Crystal bow 1/10 (i)
+11759:2.7:New crystal shield (i)
+11760:2.7:Crystal shield full (i)
+11761:2.7:Crystal shield 9/10 (i)
+11762:2.7:Crystal shield 8/10 (i)
+11763:2.7:Crystal shield 7/10 (i)
+11764:2.7:Crystal shield 6/10 (i)
+11765:2.7:Crystal shield 5/10 (i)
+11766:2.7:Crystal shield 4/10 (i)
+11767:2.7:Crystal shield 3/10 (i)
+11768:2.7:Crystal shield 2/10 (i)
+11769:2.7:Crystal shield 1/10 (i)
+11770:0.0:Seers ring (i)
+11771:0.0:Archers ring (i)
+11772:0.0:Warrior ring (i)
+11773:0.0:Berserker ring (i)
+11774:10.0:Black mask (10) (i)
+11775:10.0:Black mask (9) (i)
+11776:10.0:Black mask (8) (i)
+11777:10.0:Black mask (7) (i)
+11778:10.0:Black mask (6) (i)
+11779:10.0:Black mask (5) (i)
+11780:10.0:Black mask (4) (i)
+11781:10.0:Black mask (3) (i)
+11782:10.0:Black mask (2) (i)
+11783:10.0:Black mask (1) (i)
+11784:10.0:Black mask (i)
+11785:1.0:Armadyl crossbow
+11787:2.0:Steam battlestaff
+11789:2.0:Mystic steam staff
+11791:1.0:Staff of the dead
+11794:2.0:Godsword shards 1 & 2
+11796:2.0:Godsword shards 1 & 3
+11798:7.5:Godsword blade
+11800:2.0:Godsword shards 2 & 3
+11802:11.0:Armadyl godsword
+11804:10.0:Bandos godsword
+11806:10.0:Saradomin godsword
+11808:10.0:Zamorak godsword
+11810:3.0:Armadyl hilt
+11812:2.5:Bandos hilt
+11814:2.5:Saradomin hilt
+11818:2.0:Godsword shard 1
+11820:2.0:Godsword shard 2
+11822:2.0:Godsword shard 3
+11824:3.0:Zamorakian spear
+11826:1.0:Armadyl helmet
+11828:4.0:Armadyl chestplate
+11830:1.0:Armadyl chainskirt
+11832:12.0:Bandos chestplate
+11834:8.0:Bandos tassets
+11836:6.0:Bandos boots
+11838:3.0:Saradomin sword
+11840:1.0:Dragon boots
+11842:0.0:Knight's notes
+11843:0.0:Knight's notes
+11847:0.0:Black h'ween mask
+11848:0.0:Rancid turkey
+11849:0.0:Mark of grace
+11850:0.6:Graceful hood
+11851:0.6:Graceful hood
+11852:0.0:Graceful cape
+11853:0.0:Graceful cape
+11854:0.9:Graceful top
+11855:0.9:Graceful top
+11856:0.0:Graceful legs
+11857:0.0:Graceful legs
+11858:0.0:Graceful gloves
+11859:0.0:Graceful gloves
+11860:0.0:Graceful boots
+11861:0.0:Graceful boots
+11862:0.0:Black partyhat
+11863:0.0:Rainbow partyhat
+11864:2.2:Slayer helmet
+11865:2.2:Slayer helmet (i)
+11866:0.0:Slayer ring (8)
+11867:0.0:Slayer ring (7)
+11868:0.0:Slayer ring (6)
+11869:0.0:Slayer ring (5)
+11870:0.0:Slayer ring (4)
+11871:0.0:Slayer ring (3)
+11872:0.0:Slayer ring (2)
+11873:0.0:Slayer ring (1)
+11874:0.0:Broad arrowheads
+11875:0.0:Broad bolts
+11876:0.0:Unfinished broad bolts
+11877:0.0:Empty vial pack
+11879:0.0:Water-filled vial pack
+11881:0.0:Feather pack
+11883:0.0:Bait pack
+11885:0.0:Broad arrowhead pack
+11887:0.0:Unfinished broad bolt pack
+11889:3.0:Zamorakian hasta
+11891:0.0:Saradomin banner
+11892:0.0:Zamorak banner
+11902:1.0:Leaf-bladed sword
+11904:0.0:Entomologist's diary
+11905:1.0:Trident of the seas (full)
+11907:1.0:Trident of the seas
+11908:1.0:Uncharged trident
+11910:0.0:Chocolate strawberry
+11912:0.0:Box of chocolate strawberries
+11914:0.0:Box of chocolate strawberries
+11916:0.0:Slice of birthday cake
+11918:0.0:Birthday present
+11919:0.0:Cow mask
+11920:2.2:Dragon pickaxe
+11922:1.0:Bonemeal
+11924:3.0:Malediction ward
+11926:3.0:Odium ward
+11928:0.5:Odium shard 1
+11930:0.5:Odium shard 3
+11931:0.5:Malediction shard 1
+11932:0.5:Malediction shard 2
+11933:0.5:Malediction shard 3
+11934:0.3:Raw dark crab
+11936:0.3:Dark crab
+11938:0.0:Burnt dark crab
+11940:0.0:Dark fishing bait
+11941:0.0:Looting bag
+11942:0.0:Ecumenical key
+11943:1.5:Lava dragon bones
+11951:0.0:Extended antifire (4)
+11953:0.0:Extended antifire (3)
+11955:0.0:Extended antifire (2)
+11957:0.0:Extended antifire (1)
+11959:0.0:Black chinchompa
+11960:0.0:Extended antifire mix(2)
+11962:0.0:Extended antifire mix(1)
+11964:0.0:Amulet of glory (t6)
+11966:0.0:Amulet of glory (t5)
+11968:0.0:Skills necklace(6)
+11970:0.0:Skills necklace(5)
+11972:0.3:Combat bracelet(6)
+11974:0.3:Combat bracelet(5)
+11976:0.3:Amulet of glory(5)
+11978:0.3:Amulet of glory(6)
+11980:0.0:Ring of wealth (5)
+11982:0.0:Ring of wealth (4)
+11984:0.0:Ring of wealth (3)
+11986:0.0:Ring of wealth (2)
+11988:0.0:Ring of wealth (1)
+11990:0.0:Fedora
+11992:0.0:Lava scale
+11994:0.0:Lava scale shard
+11995:1.0:Pet chaos elemental
+11996:0.0:Holiday tool
+11998:2.0:Smoke battlestaff
+12000:2.0:Mystic smoke staff
+12002:1.0:Occult necklace
+12004:0.0:Kraken tentacle
+12006:0.0:Abyssal tentacle
+12007:0.0:Jar of dirt
+12009:4.0:Soft clay pack
+12010:4.0:Soft clay pack
+12011:1.33:Pay-dirt
+12012:0.0:Golden nugget
+12013:0.5:Prospector helmet
+12014:1.5:Prospector jacket
+12015:0.5:Prospector legs
+12016:0.5:Prospector boots
+12017:0.6:Salve amulet(i)
+12018:0.6:Salve amulet(ei)
+12019:10.0:Coal bag
+12020:0.0:Gem bag
+12021:0.0:Clue scroll (medium)
+12022:5.0:Casket (medium)
+12023:0.0:Clue scroll (medium)
+12024:5.0:Casket (medium)
+12025:0.0:Clue scroll (medium)
+12026:5.0:Casket (medium)
+12027:0.0:Clue scroll (medium)
+12028:5.0:Casket (medium)
+12029:0.0:Clue scroll (medium)
+12030:5.0:Casket (medium)
+12031:0.0:Clue scroll (medium)
+12032:5.0:Casket (medium)
+12033:0.0:Clue scroll (medium)
+12034:5.0:Casket (medium)
+12035:0.0:Clue scroll (medium)
+12036:5.0:Casket (medium)
+12037:0.0:Clue scroll (medium)
+12038:5.0:Casket (medium)
+12039:0.0:Clue scroll (medium)
+12040:5.0:Casket (medium)
+12041:0.0:Clue scroll (medium)
+12042:5.0:Casket (medium)
+12043:0.0:Clue scroll (medium)
+12044:5.0:Casket (medium)
+12045:0.0:Clue scroll (medium)
+12046:5.0:Casket (medium)
+12047:0.0:Clue scroll (medium)
+12048:5.0:Casket (medium)
+12049:0.0:Clue scroll (medium)
+12050:5.0:Casket (medium)
+12051:0.0:Clue scroll (medium)
+12052:5.0:Casket (medium)
+12053:0.0:Clue scroll (medium)
+12054:5.0:Casket (medium)
+12055:0.0:Clue scroll (medium)
+12056:0.0:Challenge scroll (medium)
+12057:0.0:Clue scroll (medium)
+12058:0.0:Challenge scroll (medium)
+12059:0.0:Clue scroll (medium)
+12060:0.0:Challenge scroll (medium)
+12061:0.0:Clue scroll (medium)
+12062:0.0:Challenge scroll (medium)
+12063:0.0:Clue scroll (medium)
+12064:0.0:Challenge scroll (medium)
+12065:0.0:Clue scroll (medium)
+12066:0.0:Challenge scroll (medium)
+12067:0.0:Clue scroll (medium)
+12068:0.0:Challenge scroll (medium)
+12069:0.0:Clue scroll (medium)
+12070:0.0:Challenge scroll (medium)
+12071:0.0:Clue scroll (medium)
+12072:0.0:Challenge scroll (medium)
+12073:0.0:Clue scroll (elite)
+12074:0.0:Clue scroll (elite)
+12075:0.0:Clue scroll (elite)
+12076:0.0:Clue scroll (elite)
+12077:0.0:Clue scroll (elite)
+12078:0.0:Clue scroll (elite)
+12079:0.0:Clue scroll (elite)
+12080:0.0:Clue scroll (elite)
+12081:0.0:Clue scroll (elite)
+12082:0.0:Clue scroll (elite)
+12083:0.0:Clue scroll (elite)
+12084:5.0:Casket (elite)
+12085:0.0:Clue scroll (elite)
+12086:0.0:Clue scroll (elite)
+12087:0.0:Clue scroll (elite)
+12088:0.0:Clue scroll (elite)
+12089:0.0:Clue scroll (elite)
+12090:0.0:Clue scroll (elite)
+12091:0.0:Clue scroll (elite)
+12092:0.0:Clue scroll (elite)
+12093:0.0:Clue scroll (elite)
+12094:0.0:Clue scroll (elite)
+12095:0.0:Clue scroll (elite)
+12096:0.0:Clue scroll (elite)
+12097:0.0:Clue scroll (elite)
+12098:0.0:Clue scroll (elite)
+12099:0.0:Clue scroll (elite)
+12100:0.0:Clue scroll (elite)
+12101:0.0:Clue scroll (elite)
+12102:0.0:Clue scroll (elite)
+12103:0.0:Clue scroll (elite)
+12104:0.0:Clue scroll (elite)
+12105:0.0:Clue scroll (elite)
+12106:0.0:Clue scroll (elite)
+12107:0.0:Clue scroll (elite)
+12108:0.0:Clue scroll (elite)
+12109:0.0:Clue scroll (elite)
+12110:0.0:Clue scroll (elite)
+12111:0.0:Clue scroll (elite)
+12112:5.0:Casket (elite)
+12113:0.0:Clue scroll (elite)
+12114:0.0:Clue scroll (elite)
+12115:0.0:Clue scroll (elite)
+12116:0.0:Clue scroll (elite)
+12117:0.0:Clue scroll (elite)
+12118:0.0:Clue scroll (elite)
+12119:0.0:Clue scroll (elite)
+12120:0.0:Clue scroll (elite)
+12121:0.0:Clue scroll (elite)
+12122:0.0:Clue scroll (elite)
+12123:0.0:Clue scroll (elite)
+12124:0.0:Clue scroll (elite)
+12125:0.0:Clue scroll (elite)
+12126:0.0:Clue scroll (elite)
+12127:0.0:Clue scroll (elite)
+12128:0.0:Challenge scroll (elite)
+12129:5.0:Casket (elite)
+12130:0.0:Clue scroll (elite)
+12131:5.0:Casket (elite)
+12132:0.0:Clue scroll (elite)
+12133:0.0:Clue scroll (elite)
+12134:0.0:Clue scroll (elite)
+12135:0.0:Clue scroll (elite)
+12136:0.0:Clue scroll (elite)
+12137:0.0:Clue scroll (elite)
+12138:0.0:Clue scroll (elite)
+12139:0.0:Challenge scroll (elite)
+12140:0.0:Clue scroll (elite)
+12141:0.0:Clue scroll (elite)
+12142:0.0:Clue scroll (elite)
+12143:0.0:Clue scroll (elite)
+12144:0.0:Clue scroll (elite)
+12145:0.0:Clue scroll (elite)
+12146:0.0:Clue scroll (elite)
+12147:0.0:Clue scroll (elite)
+12148:0.0:Clue scroll (elite)
+12149:0.0:Clue scroll (elite)
+12150:0.0:Clue scroll (elite)
+12151:0.0:Clue scroll (elite)
+12152:0.0:Clue scroll (elite)
+12153:0.0:Clue scroll (elite)
+12154:0.0:Clue scroll (elite)
+12155:0.0:Clue scroll (elite)
+12156:0.0:Clue scroll (elite)
+12157:0.0:Clue scroll (elite)
+12158:0.0:Clue scroll (elite)
+12159:0.0:Clue scroll (elite)
+12160:5.0:Casket (elite)
+12161:0.0:Puzzle box (elite)
+12162:0.0:Clue scroll (easy)
+12163:5.0:Casket (easy)
+12164:0.0:Clue scroll (easy)
+12165:5.0:Casket (easy)
+12166:0.0:Clue scroll (easy)
+12167:0.0:Clue scroll (easy)
+12168:0.0:Clue scroll (easy)
+12169:0.0:Clue scroll (easy)
+12170:0.0:Clue scroll (easy)
+12171:5.0:Casket (easy)
+12172:0.0:Clue scroll (easy)
+12173:0.0:Clue scroll (easy)
+12174:0.0:Clue scroll (easy)
+12175:0.0:Clue scroll (easy)
+12176:0.0:Clue scroll (easy)
+12177:0.0:Clue scroll (easy)
+12178:0.0:Clue scroll (easy)
+12179:0.0:Clue scroll (easy)
+12180:5.0:Casket (easy)
+12181:0.0:Clue scroll (easy)
+12182:0.0:Clue scroll (easy)
+12183:0.0:Clue scroll (easy)
+12184:0.0:Clue scroll (easy)
+12185:0.0:Clue scroll (easy)
+12186:0.0:Clue scroll (easy)
+12187:0.0:Clue scroll (easy)
+12188:0.0:Clue scroll (easy)
+12189:0.0:Clue scroll (easy)
+12190:0.0:Clue scroll (easy)
+12191:0.0:Clue scroll (easy)
+12192:0.0:Clue scroll (easy)
+12193:1.8:Ancient robe top
+12195:2.0:Ancient robe legs
+12197:1.0:Ancient cloak
+12199:2.0:Ancient crozier
+12201:0.0:Ancient stole
+12203:0.0:Ancient mitre
+12205:9.5:Bronze platebody (g)
+12207:9.0:Bronze platelegs (g)
+12209:9.0:Bronze plateskirt (g)
+12211:2.7:Bronze full helm (g)
+12213:4.5:Bronze kiteshield (g)
+12215:9.5:Bronze platebody (t)
+12217:9.0:Bronze platelegs (t)
+12219:9.0:Bronze plateskirt (t)
+12221:2.7:Bronze full helm (t)
+12223:4.5:Bronze kiteshield (t)
+12225:9.0:Iron platebody (t)
+12227:9.0:Iron platelegs (t)
+12229:8.0:Iron plateskirt (t)
+12231:2.0:Iron full helm (t)
+12233:4.5:Iron kiteshield (t)
+12235:9.0:Iron platebody (g)
+12237:9.0:Iron platelegs (g)
+12239:8.0:Iron plateskirt (g)
+12241:2.0:Iron full helm (g)
+12243:4.5:Iron kiteshield (g)
+12245:0.0:Beanie
+12247:0.0:Red beret
+12249:0.0:Imp mask
+12251:0.0:Goblin mask
+12253:1.8:Armadyl robe top
+12255:2.0:Armadyl robe legs
+12257:0.0:Armadyl stole
+12259:0.0:Armadyl mitre
+12261:1.0:Armadyl cloak
+12263:2.0:Armadyl crozier
+12265:1.0:Bandos robe top
+12267:2.0:Bandos robe legs
+12269:0.0:Bandos stole
+12271:0.0:Bandos mitre
+12273:1.0:Bandos cloak
+12275:2.0:Bandos crozier
+12277:8.0:Mithril platebody (g)
+12279:7.7:Mithril platelegs (g)
+12281:4.5:Mithril kiteshield (g)
+12283:2.2:Mithril full helm (g)
+12285:7.0:Mithril plateskirt (g)
+12287:8.0:Mithril platebody (t)
+12289:7.7:Mithril platelegs (t)
+12291:4.5:Mithril kiteshield (t)
+12293:2.2:Mithril full helm (t)
+12295:7.0:Mithril plateskirt (t)
+12297:0.0:Black pickaxe
+12299:0.0:White headband
+12301:0.0:Blue headband
+12303:0.0:Gold headband
+12305:0.0:Pink headband
+12307:0.0:Green headband
+12309:0.0:Pink boater
+12311:0.0:Purple boater
+12313:0.0:White boater
+12315:1.0:Pink elegant shirt
+12317:1.0:Pink elegant legs
+12319:0.0:Crier hat
+12321:0.0:White cavalier
+12323:0.0:Red cavalier
+12325:0.0:Navy cavalier
+12327:7.0:Red d'hide body (g)
+12329:5.0:Red d'hide chaps (g)
+12331:7.0:Red d'hide body (t)
+12333:5.0:Red d'hide chaps (t)
+12335:0.0:Briefcase
+12337:0.0:Sagacious spectacles
+12339:1.0:Pink elegant blouse
+12341:1.0:Pink elegant skirt
+12343:1.0:Gold elegant blouse
+12345:1.0:Gold elegant skirt
+12347:1.0:Gold elegant shirt
+12349:1.0:Gold elegant legs
+12351:0.5:Musketeer hat
+12353:0.0:Monocle
+12355:0.0:Big pirate hat
+12357:0.0:Katana
+12359:0.0:Leprechaun hat
+12361:0.0:Cat mask
+12363:2.0:Bronze dragon mask
+12365:2.0:Iron dragon mask
+12367:2.0:Steel dragon mask
+12369:2.0:Mithril dragon mask
+12371:2.0:Lava dragon mask
+12373:1.0:Dragon cane
+12375:0.5:Black cane
+12377:0.5:Adamant cane
+12379:0.5:Rune cane
+12381:6.8:Black d'hide body (g)
+12383:5.0:Black d'hide chaps (g)
+12385:6.8:Black d'hide body (t)
+12387:5.0:Black d'hide chaps (t)
+12389:1.8:Gilded scimitar
+12391:1.3:Gilded boots
+12393:1.0:Royal gown top
+12395:1.0:Royal gown bottom
+12397:0.0:Royal crown
+12399:0.1:Partyhat & specs
+12402:0.0:Nardah teleport
+12403:0.0:Digsite teleport
+12404:0.0:Feldip hills teleport
+12405:0.0:Lunar isle teleport
+12406:0.0:Mort'ton teleport
+12407:0.0:Pest control teleport
+12408:0.0:Piscatoris teleport
+12409:0.0:Tai bwo wannai teleport
+12410:0.0:Elf camp teleport
+12411:0.0:Mos le'harmless teleport
+12412:0.1:Pirate hat & patch
+12414:6.0:Dragon chainbody (g)
+12415:9.0:Dragon platelegs (g)
+12416:9.0:Dragon plateskirt (g)
+12417:2.0:Dragon full helm (g)
+12418:3.0:Dragon sq shield (g)
+12419:0.0:Light infinity hat
+12420:2.0:Light infinity top
+12421:0.0:Light infinity bottoms
+12422:3.0:3rd age wand
+12424:1.5:3rd age bow
+12426:1.0:3rd age longsword
+12428:1.0:Penguin mask
+12430:0.2:Afro
+12432:0.0:Top hat
+12434:0.1:Top hat & monocle
+12436:0.0:Amulet of fury (or)
+12437:3.0:3rd age cloak
+12439:4.0:Royal sceptre
+12441:0.5:Musketeer tabard
+12443:1.0:Musketeer pants
+12445:0.9:Black skirt (g)
+12447:0.9:Black skirt (t)
+12449:1.0:Black wizard robe (g)
+12451:1.0:Black wizard robe (t)
+12453:0.4:Black wizard hat (g)
+12455:0.4:Black wizard hat (t)
+12457:0.0:Dark infinity hat
+12458:2.0:Dark infinity top
+12459:0.0:Dark infinity bottoms
+12460:9.0:Ancient platebody
+12462:9.5:Ancient platelegs
+12464:9.0:Ancient plateskirt
+12466:2.0:Ancient full helm
+12468:5.0:Ancient kiteshield
+12470:9.9:Armadyl platebody
+12472:9.0:Armadyl platelegs
+12474:9.0:Armadyl plateskirt
+12476:2.0:Armadyl full helm
+12478:5.0:Armadyl kiteshield
+12480:9.9:Bandos platebody
+12482:9.0:Bandos platelegs
+12484:9.0:Bandos plateskirt
+12486:2.0:Bandos full helm
+12488:5.0:Bandos kiteshield
+12490:0.0:Ancient bracers
+12492:6.0:Ancient d'hide
+12494:5.0:Ancient chaps
+12496:0.0:Ancient coif
+12498:1.0:Bandos bracers
+12500:6.0:Bandos d'hide
+12502:4.5:Bandos chaps
+12504:0.0:Bandos coif
+12506:1.0:Armadyl bracers
+12508:6.0:Armadyl d'hide
+12510:5.0:Armadyl chaps
+12512:0.0:Armadyl coif
+12514:2.0:Explorer backpack
+12516:0.5:Pith helmet
+12518:2.0:Green dragon mask
+12520:2.0:Blue dragon mask
+12522:2.0:Red dragon mask
+12524:2.0:Black dragon mask
+12526:0.0:Fury ornament kit
+12528:0.0:Dark infinity colour kit
+12530:0.0:Light infinity colour kit
+12532:0.0:Dragon sq shield ornament kit
+12534:0.0:Dragon chainbody ornament kit
+12536:0.0:Dragon plate/skirt ornament kit
+12538:0.0:Dragon full helm ornament kit
+12540:0.0:Deerstalker
+12542:0.0:Clue scroll (hard)
+12543:5.0:Casket (hard)
+12544:0.0:Clue scroll (hard)
+12545:5.0:Casket (hard)
+12546:0.0:Clue scroll (hard)
+12547:5.0:Casket (hard)
+12548:0.0:Clue scroll (hard)
+12549:5.0:Casket (hard)
+12550:0.0:Clue scroll (hard)
+12551:5.0:Casket (hard)
+12552:0.0:Clue scroll (hard)
+12553:5.0:Casket (hard)
+12554:0.0:Clue scroll (hard)
+12555:5.0:Casket (hard)
+12556:0.0:Clue scroll (hard)
+12557:5.0:Casket (hard)
+12558:0.0:Clue scroll (hard)
+12559:5.0:Casket (hard)
+12560:0.0:Clue scroll (hard)
+12561:5.0:Casket (hard)
+12562:0.0:Clue scroll (hard)
+12563:5.0:Casket (hard)
+12564:0.0:Clue scroll (hard)
+12565:5.0:Casket (hard)
+12566:0.0:Clue scroll (hard)
+12567:0.0:Challenge scroll (hard)
+12568:0.0:Clue scroll (hard)
+12569:0.0:Challenge scroll (hard)
+12570:0.0:Clue scroll (hard)
+12571:0.0:Challenge scroll (hard)
+12572:0.0:Clue scroll (hard)
+12573:0.0:Challenge scroll (hard)
+12574:0.0:Clue scroll (hard)
+12575:0.0:Challenge scroll (hard)
+12576:0.0:Clue scroll (hard)
+12577:0.0:Challenge scroll (hard)
+12578:0.0:Clue scroll (hard)
+12579:0.0:Puzzle box (hard)
+12580:5.0:Casket (hard)
+12581:0.0:Clue scroll (hard)
+12582:0.0:Puzzle box (hard)
+12583:5.0:Casket (hard)
+12584:0.0:Clue scroll (hard)
+12585:0.0:Puzzle box (hard)
+12586:5.0:Casket (hard)
+12587:0.0:Clue scroll (hard)
+12588:0.0:Puzzle box (hard)
+12589:5.0:Casket (hard)
+12590:0.0:Clue scroll (hard)
+12591:5.0:Casket (hard)
+12596:3.0:Rangers' tunic
+12598:0.0:Holy sandals
+12600:5.0:Druidic wreath
+12601:0.0:Ring of the gods
+12603:0.0:Tyrannical ring
+12605:0.0:Treasonous ring
+12608:1.0:Book of war
+12610:1.0:Book of law
+12612:1.0:Book of darkness
+12613:0.0:Bandos page 1
+12614:0.0:Bandos page 2
+12615:0.0:Bandos page 3
+12616:0.0:Bandos page 4
+12617:0.0:Armadyl page 1
+12618:0.0:Armadyl page 2
+12619:0.0:Armadyl page 3
+12620:0.0:Armadyl page 4
+12621:0.0:Ancient page 1
+12622:0.0:Ancient page 2
+12623:0.0:Ancient page 3
+12624:0.0:Ancient page 4
+12625:0.0:Stamina potion(4)
+12627:0.0:Stamina potion(3)
+12629:0.0:Stamina potion(2)
+12631:0.0:Stamina potion(1)
+12633:0.0:Stamina mix(2)
+12635:0.0:Stamina mix(1)
+12637:0.0:Saradomin halo
+12638:0.0:Zamorak halo
+12639:0.0:Guthix halo
+12640:0.0:Amylase crystal
+12641:0.0:Amylase pack
+12642:0.0:Lumberyard teleport
+12643:1.0:Pet dagannoth supreme
+12644:1.0:Pet dagannoth prime
+12645:1.0:Pet dagannoth rex
+12646:1.0:Baby mole
+12647:0.0:Kalphite princess
+12648:1.0:Pet smoke devil
+12649:1.0:Pet kree'arra
+12650:1.0:Pet general graardor
+12651:1.0:Pet zilyana
+12652:1.0:Pet k'ril tsutsaroth
+12653:1.0:Prince black dragon
+12654:0.0:Kalphite princess
+12655:1.0:Pet kraken
+12658:2.2:Iban's staff (u)
+12691:0.0:Tyrannical ring (i)
+12692:0.0:Treasonous ring (i)
+12695:0.0:Super combat potion(4)
+12697:0.0:Super combat potion(3)
+12699:0.0:Super combat potion(2)
+12701:0.0:Super combat potion(1)
+12703:1.0:Pet penance queen
+12727:1.0:Event rpg
+12728:0.0:Air rune pack
+12730:0.0:Water rune pack
+12732:0.0:Earth rune pack
+12734:0.0:Fire rune pack
+12736:0.0:Mind rune pack
+12738:0.0:Chaos rune pack
+12740:0.0:Bird snare pack
+12742:0.0:Box trap pack
+12744:0.0:Magic imp box pack
+12746:0.0:Mysterious emblem
+12748:0.0:Mysterious emblem (tier 2)
+12749:0.0:Mysterious emblem (tier 3)
+12750:0.0:Mysterious emblem (tier 4)
+12751:0.0:Mysterious emblem (tier 5)
+12752:0.0:Mysterious emblem (tier 6)
+12753:0.0:Mysterious emblem (tier 7)
+12754:0.0:Mysterious emblem (tier 8)
+12755:0.0:Mysterious emblem (tier 9)
+12756:0.0:Mysterious emblem (tier 10)
+12757:0.0:Blue dark bow paint
+12759:0.0:Green dark bow paint
+12761:0.0:Yellow dark bow paint
+12763:0.0:White dark bow paint
+12765:1.9:Dark bow
+12766:1.9:Dark bow
+12767:1.9:Dark bow
+12768:1.9:Dark bow
+12769:0.0:Frozen whip mix
+12771:0.0:Volcanic whip mix
+12773:0.45:Volcanic abyssal whip
+12774:0.45:Frozen abyssal whip
+12775:0.0:Annakarl teleport
+12776:0.0:Carrallangar teleport
+12777:0.0:Dareeyak teleport
+12778:0.0:Ghorrock teleport
+12779:0.0:Kharyrll teleport
+12780:0.0:Lassar teleport
+12781:0.0:Paddewwa teleport
+12782:0.0:Senntisten teleport
+12783:0.0:Ring of wealth scroll
+12785:0.0:Ring of wealth (i)
+12786:0.0:Magic shortbow scroll
+12788:1.0:Magic shortbow (i)
+12789:0.0:Clue box
+12791:1.0:Rune pouch
+12792:1.0:Nest box (empty)
+12793:1.0:Nest box (seeds)
+12794:1.0:Nest box (ring)
+12795:2.0:Steam battlestaff
+12796:2.0:Mystic steam staff
+12797:2.2:Dragon pickaxe
+12798:0.0:Steam staff upgrade kit
+12800:0.0:Dragon pickaxe upgrade kit
+12802:0.0:Ward upgrade kit
+12804:0.0:Saradomin's tear
+12806:3.0:Malediction ward
+12807:3.0:Odium ward
+12808:3.0:Sara's blessed sword (full)
+12809:3.0:Saradomin's blessed sword
+12810:2.0:Ironman helm
+12811:9.0:Ironman platebody
+12812:9.0:Ironman platelegs
+12813:2.0:Ultimate ironman helm
+12814:9.0:Ultimate ironman platebody
+12815:9.0:Ultimate ironman platelegs
+12816:1.0:Pet dark core
+12817:2.0:Elysian spirit shield
+12819:3.0:Elysian sigil
+12821:2.6:Spectral spirit shield
+12823:3.0:Spectral sigil
+12825:2.6:Arcane spirit shield
+12827:0.0:Arcane sigil
+12829:2.5:Spirit shield
+12831:2.5:Blessed spirit shield
+12833:2.0:Holy elixir
+12836:0.0:Grim reaper's diary
+12837:1.0:Grim robe
+12838:0.0:Will and testament
+12839:1.0:Human bones
+12840:1.0:Servant's skull
+12842:1.0:Scythe sharpener
+12843:0.0:Human eye
+12844:0.0:Voice potion
+12845:0.0:Grim reaper hood
+12846:0.0:Bounty teleport scroll
+12848:4.5:Granite maul
+12849:0.0:Granite clamp
+12851:0.0:Amulet of the damned (full)
+12853:0.0:Amulet of the damned
+12854:6.0:Flamtaer bag
+12855:0.0:Hunter's honour
+12856:0.0:Rogue's revenge
+12857:0.0:Olive oil pack
+12859:0.0:Eye of newt pack
+12861:0.2:Thanksgiving dinner
+12862:0.2:Thanksgiving dinner
+12863:0.0:Dwarf cannon set
+12865:0.0:Green dragonhide set
+12867:0.0:Blue dragonhide set
+12869:0.0:Red dragonhide set
+12871:0.0:Black dragonhide set
+12873:0.0:Guthan's armour set
+12875:0.0:Verac's armour set
+12877:0.0:Dharok's armour set
+12879:0.0:Torag's armour set
+12881:0.0:Ahrim's armour set
+12883:0.0:Karil's armour set
+12885:0.0:Jar of sand
+12887:0.0:Santa mask
+12888:0.0:Santa jacket
+12889:0.0:Santa pantaloons
+12890:0.0:Santa gloves
+12891:0.0:Santa boots
+12892:0.0:Antisanta mask
+12893:0.0:Antisanta jacket
+12894:0.0:Antisanta pantaloons
+12895:0.0:Antisanta gloves
+12896:0.0:Antisanta boots
+12897:0.0:Antisanta's coal box
+12898:0.0:Antisanta's coal box (full)
+12899:1.0:Trident of the swamp
+12900:1.0:Uncharged toxic trident
+12902:1.0:Toxic staff (uncharged)
+12904:1.0:Toxic staff of the dead
+12905:0.0:Anti-venom(4)
+12907:0.0:Anti-venom(3)
+12909:0.0:Anti-venom(2)
+12911:0.0:Anti-venom(1)
+12913:0.0:Anti-venom+(4)
+12915:0.0:Anti-venom+(3)
+12917:0.0:Anti-venom+(2)
+12919:0.0:Anti-venom+(1)
+12921:1.0:Pet snakeling
+12922:0.0:Tanzanite fang
+12924:0.0:Toxic blowpipe (empty)
+12926:0.0:Toxic blowpipe
+12927:1.0:Serpentine visage
+12929:0.0:Serpentine helm (uncharged)
+12931:0.0:Serpentine helm
+12932:0.0:Magic fang
+12934:0.0:Zulrah's scales
+12935:0.0:Ohn's diary
+12936:0.0:Jar of swamp
+12938:0.0:Zul-andra teleport
+12939:1.0:Pet snakeling
+12940:1.0:Pet snakeling
+12954:0.4:Dragon defender
+12955:0.0:Free to play starter pack
+12956:3.0:Cow top
+12957:3.0:Cow trousers
+12958:0.5:Cow gloves
+12959:0.5:Cow shoes
+12960:6.0:Bronze set (lg)
+12962:6.0:Bronze set (sk)
+12964:6.0:Bronze trimmed set (lg)
+12966:6.0:Bronze trimmed set (sk)
+12968:6.0:Bronze gold-trimmed set (lg)
+12970:6.0:Bronze gold-trimmed set (sk)
+12972:6.0:Iron set (lg)
+12974:6.0:Iron set (sk)
+12976:6.0:Iron trimmed set (lg)
+12978:6.0:Iron trimmed set (sk)
+12980:6.0:Iron gold-trimmed set (lg)
+12982:6.0:Iron gold-trimmed set (sk)
+12984:6.0:Steel set (lg)
+12986:6.0:Steel set (sk)
+12988:6.0:Black set (lg)
+12990:6.0:Black set (sk)
+12992:6.0:Black trimmed set (lg)
+12994:6.0:Black trimmed set (sk)
+12996:6.0:Black gold-trimmed set (lg)
+12998:6.0:Black gold-trimmed set (sk)
+13000:6.0:Mithril set (lg)
+13002:6.0:Mithril set (sk)
+13004:6.0:Mithril trimmed set (lg)
+13006:6.0:Mithril trimmed set (sk)
+13008:6.0:Mithril gold-trimmed set (lg)
+13010:6.0:Mithril gold-trimmed set (sk)
+13012:6.0:Adamant set (lg)
+13014:6.0:Adamant set (sk)
+13016:6.0:Adamant trimmed set (lg)
+13018:6.0:Adamant trimmed set (sk)
+13020:6.0:Adamant gold-trimmed set (lg)
+13022:6.0:Adamant gold-trimmed set (sk)
+13024:6.0:Rune armour set (lg)
+13026:6.0:Rune armour set (sk)
+13028:6.0:Rune trimmed set (lg)
+13030:6.0:Rune trimmed set (sk)
+13032:6.0:Rune gold-trimmed set (lg)
+13034:6.0:Rune gold-trimmed set (sk)
+13036:6.0:Gilded armour set (lg)
+13038:6.0:Gilded armour set (sk)
+13040:6.0:Saradomin armour set (lg)
+13042:6.0:Saradomin armour set (sk)
+13044:6.0:Zamorak armour set (lg)
+13046:6.0:Zamorak armour set (sk)
+13048:6.0:Guthix armour set (lg)
+13050:6.0:Guthix armour set (sk)
+13052:6.0:Armadyl rune armour set (lg)
+13054:6.0:Armadyl rune armour set (sk)
+13056:6.0:Bandos rune armour set (lg)
+13058:6.0:Bandos rune armour set (sk)
+13060:6.0:Ancient rune armour set (lg)
+13062:6.0:Ancient rune armour set (sk)
+13064:0.0:Combat potion set
+13066:0.0:Super potion set
+13068:0.0:Quest point cape (t)
+13069:0.0:Achievement diary cape (t)
+13070:0.0:Achievement diary hood
+13071:1.0:Chompy chick
+13072:6.0:Elite void top
+13073:8.0:Elite void robe
+13074:2.0:Pharaoh's sceptre (8)
+13075:2.0:Pharaoh's sceptre (7)
+13076:2.0:Pharaoh's sceptre (6)
+13077:2.0:Pharaoh's sceptre (5)
+13078:2.0:Pharaoh's sceptre (4)
+13079:1.8:Enchanted lyre(5)
+13080:2.0:New crystal halberd full (i)
+13081:2.0:Crystal halberd full (i)
+13082:2.0:Crystal halberd 9/10 (i)
+13083:2.0:Crystal halberd 8/10 (i)
+13084:2.0:Crystal halberd 7/10 (i)
+13085:2.0:Crystal halberd 6/10 (i)
+13086:2.0:Crystal halberd 5/10 (i)
+13087:2.0:Crystal halberd 4/10 (i)
+13088:2.0:Crystal halberd 3/10 (i)
+13089:2.0:Crystal halberd 2/10 (i)
+13090:2.0:Crystal halberd 1/10 (i)
+13091:2.0:New crystal halberd full
+13092:2.0:Crystal halberd full
+13093:2.0:Crystal halberd 9/10
+13094:2.0:Crystal halberd 8/10
+13095:2.0:Crystal halberd 7/10
+13096:2.0:Crystal halberd 6/10
+13097:2.0:Crystal halberd 5/10
+13098:2.0:Crystal halberd 4/10
+13099:2.0:Crystal halberd 3/10
+13100:2.0:Crystal halberd 2/10
+13101:2.0:Crystal halberd 1/10
+13102:0.0:Teleport crystal (5)
+13103:0.0:Karamja gloves 4
+13104:1.0:Varrock armour 1
+13105:1.0:Varrock armour 2
+13106:1.0:Varrock armour 3
+13107:1.0:Varrock armour 4
+13108:1.0:Wilderness sword 1
+13109:1.0:Wilderness sword 2
+13110:0.0:Wilderness sword 3
+13111:0.0:Wilderness sword 4
+13112:1.8:Morytania legs 1
+13113:9.0:Morytania legs 2
+13114:9.0:Morytania legs 3
+13115:1.8:Morytania legs 4
+13116:0.0:Bonecrusher
+13117:5.0:Falador shield 1
+13118:5.0:Falador shield 2
+13119:5.0:Falador shield 3
+13120:5.0:Falador shield 4
+13121:0.0:Ardougne cloak 1
+13122:1.0:Ardougne cloak 2
+13123:0.0:Ardougne cloak 3
+13124:0.0:Ardougne cloak 4
+13125:0.0:Explorer's ring 1
+13126:0.0:Explorer's ring 2
+13127:0.0:Explorer's ring 3
+13128:0.0:Explorer's ring 4
+13129:0.0:Fremennik sea boots 1
+13130:0.0:Fremennik sea boots 2
+13131:0.0:Fremennik sea boots 3
+13132:0.0:Fremennik sea boots 4
+13133:0.0:Desert amulet 1
+13134:0.0:Desert amulet 2
+13135:0.0:Desert amulet 3
+13136:0.0:Desert amulet 4
+13137:0.0:Kandarin headgear 1
+13138:0.0:Kandarin headgear 2
+13139:0.0:Kandarin headgear 3
+13140:0.0:Kandarin headgear 4
+13141:2.0:Western banner 1
+13142:2.0:Western banner 2
+13143:2.0:Western banner 3
+13144:2.0:Western banner 4
+13145:0.0:Antique lamp
+13146:0.0:Antique lamp
+13147:0.0:Antique lamp
+13148:0.0:Antique lamp
+13149:0.0:Holy book page set
+13151:0.0:Unholy book page set
+13153:0.0:Book of balance page set
+13155:0.0:Book of war page set
+13157:0.0:Book of law page set
+13159:0.0:Book of darkness page set
+13161:0.0:Zamorak dragonhide set
+13163:0.0:Saradomin dragonhide set
+13165:0.0:Guthix dragonhide set
+13167:0.0:Bandos dragonhide set
+13169:0.0:Armadyl dragonhide set
+13171:0.0:Ancient dragonhide set
+13173:0.0:Partyhat set
+13175:0.0:Halloween mask set
+13177:1.0:Venenatis spiderling
+13178:1.0:Callisto cub
+13179:1.0:Vet'ion jr.
+13180:1.0:Vet'ion jr.
+13181:1.0:Scorpia's offspring
+13182:0.0:Bunny feet
+13183:0.0:Empty blaster
+13184:0.0:Incomplete blaster
+13185:0.0:Easter blaster
+13186:0.0:Volatile mineral
+13187:0.0:Package
+13188:0.0:Diango's claws
+13190:0.0:Old school bond
+13193:0.0:Bone bolt pack
+13195:0.0:Oddskull
+13196:0.0:Tanzanite helm (uncharged)
+13197:0.0:Tanzanite helm
+13198:0.0:Magma helm (uncharged)
+13199:0.0:Magma helm
+13200:0.0:Tanzanite mutagen
+13201:0.0:Magma mutagen
+13202:0.0:Ring of the gods (i)
+13203:5.0:Mask of balance
+13204:0.0:Platinum token
+13205:0.0:Rotten egg
+13215:0.0:Tiger toy
+13216:0.0:Lion toy
+13217:0.0:Snow leopard toy
+13218:0.0:Amur leopard toy
+13221:0.0:Music cape
+13223:0.0:Music hood
+13224:0.0:Music cape
+13225:1.0:Tzrek-jad
+13226:1.0:Herb sack
+13227:0.0:Eternal crystal
+13229:0.0:Pegasian crystal
+13231:0.0:Primordial crystal
+13233:0.0:Smouldering stone
+13235:1.0:Eternal boots
+13237:1.0:Pegasian boots
+13239:1.0:Primordial boots
+13241:2.0:Infernal axe
+13243:2.0:Infernal pickaxe
+13245:0.0:Jar of souls
+13247:1.0:Hellpuppy
+13249:0.0:Key master teleport
+13250:0.0:Plant pot pack
+13252:0.0:Sack pack
+13254:0.0:Basket pack
+13256:0.0:Saradomin's light
+13258:4.0:Angler hat
+13259:9.0:Angler top
+13260:12.0:Angler waders
+13261:9.0:Angler boots
+13262:1.0:Abyssal orphan
+13263:0.0:Abyssal bludgeon
+13265:0.0:Abyssal dagger
+13267:0.0:Abyssal dagger (p)
+13269:0.0:Abyssal dagger (p+)
+13271:0.0:Abyssal dagger (p++)
+13273:1.0:Unsired
+13274:2.0:Bludgeon spine
+13275:2.0:Bludgeon claw
+13276:2.0:Bludgeon axon
+13277:0.0:Jar of miasma
+13279:0.0:Overseer's book
+13280:0.4:Max cape
+13281:0.4:Max hood
+13282:0.4:Max cape
+13283:0.0:Gravedigger mask
+13284:1.0:Gravedigger top
+13285:1.0:Gravedigger leggings
+13286:0.5:Gravedigger boots
+13287:0.5:Gravedigger gloves
+13288:0.0:Anti-panties
+13302:0.0:Bank key
+13303:0.0:Bank key
+13304:0.0:Bank key
+13305:0.0:Bank key
+13306:0.0:Bank key
+13307:0.0:Blood money
+13317:9.5:Deadman's chest
+13318:9.5:Deadman's legs
+13319:0.0:Deadman's cape
+13320:1.0:Heron
+13321:1.0:Rock golem
+13322:1.0:Beaver
+13323:1.0:Baby chinchompa
+13324:1.0:Baby chinchompa
+13325:1.0:Baby chinchompa
+13326:1.0:Baby chinchompa
+13327:0.0:Rotten onion
+13328:2.0:Green banner
+13329:0.4:Fire max cape
+13330:0.4:Fire max hood
+13331:0.4:Saradomin max cape
+13332:0.4:Saradomin max hood
+13333:0.4:Zamorak max cape
+13334:0.4:Zamorak max hood
+13335:0.4:Guthix max cape
+13336:0.4:Guthix max hood
+13337:0.4:Ava's max cape
+13338:0.4:Ava's max hood
+13339:0.0:Sacred eel
+13340:0.0:Agility cape
+13342:0.4:Max cape
+13343:0.0:Black santa hat
+13344:0.0:Inverted santa hat
+13345:1.0:Anti-present
+13346:0.0:Present
+13352:0.0:Vial of sorrow
+20792:2.0:Hardcore ironman helm
+20794:9.0:Hardcore ironman platebody
+20796:9.0:Hardcore ironman platelegs

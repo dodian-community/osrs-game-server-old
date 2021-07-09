@@ -54,9 +54,11 @@ public class PacketProcessingTask implements Task {
 			player.pendingActions().clear();
 			
 			// Sync containers, if dirty. Why here? Because... Fake lag fix. Just don't question me :-)
-			//player.postcycle_dirty();
+			player.postcycle_dirty();
 
-			player.channel().flush();
+			// Flush net
+			if (!player.bot())
+				player.channel().flush();
 		});
 	}
 	

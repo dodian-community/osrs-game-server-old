@@ -469,4 +469,8 @@ public abstract class Entity {
     public ItemContainer equipment() {
         return equipment;
     }
+
+    public void graphic(int id, int height, int delay) {
+        sync.graphic(id, height, delay);
+    }
 }
