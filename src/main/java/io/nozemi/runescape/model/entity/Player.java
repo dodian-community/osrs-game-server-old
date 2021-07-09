@@ -9,11 +9,14 @@ import io.nozemi.runescape.model.instance.InstancedMap;
 import io.nozemi.runescape.model.instance.InstancedMapIdentifier;
 import io.nozemi.runescape.model.item.Item;
 import io.nozemi.runescape.model.item.ItemContainer;
+import io.nozemi.runescape.model.map.steroids.Direction;
+import io.nozemi.runescape.model.map.steroids.RouteFinder;
 import io.nozemi.runescape.net.future.ClosingChannelFuture;
 import io.nozemi.runescape.net.message.game.Action;
 import io.nozemi.runescape.net.message.game.command.*;
 import io.nozemi.runescape.script.Timer;
 import io.nozemi.runescape.script.TimerKey;
+import io.nozemi.runescape.util.RunEnergy;
 import io.nozemi.runescape.util.Tuple;
 import io.nozemi.runescape.util.Varbit;
 import io.nozemi.runescape.util.Varp;
@@ -314,8 +317,84 @@ public class Player extends Entity {
 
     @Override
     public void post_cycle_movement() {
+        Player player = this;
+        Tile origin = tile();
 
+        // Were we teleported?
+        if (sync().teleported() || !remoteLocation().equals(tile())) {
+            sync().teleportMode(127);
+            pathQueue.clear();
+            sync.clearMovement();
+            //MultiwayCombat.tileChanged(player);
+            //player.world().server().scriptRepository().triggerWalkDestination(player);
+        }
+
+
+        if (!player.pathQueue().empty()) {
+            PathQueue.Step walkStep = player.pathQueue().next();
+            int walkDirection = PathQueue.calculateDirection(player.tile().x, player.tile().z, walkStep.x, walkStep.z);
+            int runDirection = -1;
+
+            // Make sure this clip tile is still valid
+            boolean legal = !walkStep.clipped || RouteFinder.isLegal(player.world(), player.tile(), Direction.orthogonal(walkStep.x - player.tile().x, walkStep.z - player.tile().z), 1);
+            if (!legal) {
+                walkDirection = -1;
+                player.pathQueue().clear();
+                player.write(new ChangeMapMarker(player.tile().x, player.tile().z));
+            } else {
+                player.putattrib(AttributeKey.FACING_DIRECTION, walkDirection);
+                player.tile(new Tile(walkStep.x, walkStep.z, player.tile().level));
+                player.sync().movementMode(1);
+
+                boolean running = (walkStep.type == PathQueue.StepType.FORCED_RUN || player.pathQueue().running()) && !player.pathQueue().empty() && walkStep.type != PathQueue.StepType.FORCED_WALK;
+                if (!running) {
+                    player.runenergy().update();
+                } else {
+                    player.runenergy().drainForMove();
+
+                    PathQueue.Step runStep = player.pathQueue().next();
+                    runDirection = PathQueue.calculateRunDirection(origin.x, origin.z, runStep.x, runStep.z);
+                    legal = !runStep.clipped || RouteFinder.isLegal(player.world(), player.tile(), Direction.orthogonal(runStep.x - player.tile().x, runStep.z - player.tile().z), 1);
+
+                    if (!legal) {
+                        runDirection = -1;
+                        player.pathQueue().clear();
+                        player.write(new ChangeMapMarker(player.tile().x, player.tile().z));
+                    } else {
+                        // New GPI has a thing where run mode can also take a walk step, e.g. diagonal and then pathfind
+                        // its way there.
+                        if (runDirection == -1) {
+                            walkDirection = PathQueue.calculateDirection(origin.x, origin.z, runStep.x, runStep.z);
+                        }
+
+                        player.putattrib(AttributeKey.FACING_DIRECTION, runDirection);
+                        player.tile(new Tile(runStep.x, runStep.z, player.tile().level));
+                        player.sync().movementMode(2);
+                    }
+                }
+                //MultiwayCombat.tileChanged(player);
+                //player.world().server().scriptRepository().triggerWalkDestination(player);
+            }
+
+            player.sync().step(walkDirection, runDirection);
+        } else {
+            int currentOrDefaultFaceDir = player.attribOr(AttributeKey.FACING_DIRECTION, -1);
+            if (currentOrDefaultFaceDir == -1) { // Attrib doesn't exist yet.
+                currentOrDefaultFaceDir = 6;
+                player.putattrib(AttributeKey.FACING_DIRECTION, currentOrDefaultFaceDir);
+            }
+            player.runenergy().update();
+        }
+
+        player.sync().updateAttributeMapFlags();
+
+        if (player.reqPidMoveReset) {
+            pathQueue.clear();
+            player.reqPidMoveReset = false;
+        }
     }
+
+    public boolean reqPidMoveReset;
 
     public void postcycle_dirty() {
         // Sync equipment if dirty
@@ -593,5 +672,39 @@ public class Player extends Entity {
 
     public Skills skills() {
         return skills;
+    }
+
+    private RunEnergy runEnergy = new RunEnergy(this);
+    public RunEnergy runenergy() {
+        return runEnergy;
+    }
+
+    public double getEnergyDeprecation() {
+        // TODO: Look at weight thing
+        double weight = Math.max(0, Math.min(54, 2)); // Capped at 54kg - where stamina affect no longer works.. for a QoL. Stamina always helpful!
+        return (0.67) + weight / 100.0;
+    }
+
+    public double getRecoveryRate() {
+        return (8.0 + (skills().level(Skills.AGILITY) / 6.0)) / 100;
+    }
+
+    public void setRunningEnergy(double runningEnergy, boolean send) {
+        if (runningEnergy > 100) {
+            runningEnergy = 100;
+        } else if (runningEnergy < 0) {
+            runningEnergy = 0;
+        }
+
+        if (runningEnergy < 1.0) {
+            varps().varp(Varp.RUNNING_ENABLED, 0);
+        }
+
+        putattrib(AttributeKey.RUN_ENERGY, runningEnergy);
+
+        int re = (int) runningEnergy;
+        if (send) {
+            write(SetRunEnergy.get(re));
+        }
     }
 }
