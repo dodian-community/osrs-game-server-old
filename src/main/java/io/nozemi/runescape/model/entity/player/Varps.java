@@ -1,6 +1,7 @@
-package io.nozemi.runescape.model.entity;
+package io.nozemi.runescape.model.entity.player;
 
 import io.nozemi.runescape.fs.VarbitDefinition;
+import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.net.message.game.command.SetVarp;
 import io.nozemi.runescape.util.Varp;
 

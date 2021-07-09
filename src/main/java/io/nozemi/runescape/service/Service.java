@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public interface Service {
     void setup();
-    void start();
-    void stop();
-    void isAlive();
+    boolean start();
+    boolean stop();
+    boolean isAlive();
 }

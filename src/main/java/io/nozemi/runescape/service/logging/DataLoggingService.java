@@ -12,17 +12,17 @@ public class DataLoggingService implements Service {
     }
 
     @Override
-    public void start() {
-
+    public boolean start() {
+        return true;
     }
 
     @Override
-    public void stop() {
-
+    public boolean stop() {
+        return true;
     }
 
     @Override
-    public void isAlive() {
-
+    public boolean isAlive() {
+        return true;
     }
 }

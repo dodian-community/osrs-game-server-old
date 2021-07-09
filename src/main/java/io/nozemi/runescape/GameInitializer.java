@@ -12,7 +12,10 @@ import io.nozemi.runescape.handlers.impl.ConfigHandler;
 import io.nozemi.runescape.handlers.impl.DataHandler;
 import io.nozemi.runescape.model.World;
 import io.nozemi.runescape.net.ClientInitializer;
+import io.nozemi.runescape.script.ScriptRepository;
+import io.nozemi.runescape.util.map.MapDecryptionKeys;
 import nl.bartpelle.dawnguard.DataStore;
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
@@ -25,6 +28,8 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,9 +39,10 @@ public class GameInitializer implements InitializingBean, BeanFactoryAware {
 
     private final Logger logger = LogManager.getLogger(GameInitializer.class);
 
-    private final ClientInitializer clientInitializer;
-
+    private static ClientInitializer clientInitializer;
     private static List<Handler> handlers;
+    private static ScriptRepository scriptRepository;
+    private static ServerProcessor serverProcessor;
 
     private ServerBootstrap bootstrap;
     private BeanFactory beanFactory;
@@ -49,13 +55,12 @@ public class GameInitializer implements InitializingBean, BeanFactoryAware {
     private static boolean devServer = true;
 
     @Autowired
-    public GameInitializer(List<Handler> handlers, ClientInitializer clientInitializer) {
+    public GameInitializer(List<Handler> handlers) {
         prepareHandlers(handlers);
-        this.clientInitializer = clientInitializer;
     }
 
     @Override
-    public void afterPropertiesSet() throws InterruptedException {
+    public void afterPropertiesSet() throws InterruptedException, IOException {
         System.setProperty("io.netty.buffer.bytebuf.checkAccessible", "false");
 
         ConfigHandler configHandler = handler(ConfigHandler.class)
@@ -67,13 +72,27 @@ public class GameInitializer implements InitializingBean, BeanFactoryAware {
         config = configHandler.config();
         store = dataHandler.dataStore();
 
+        File mapKeysFile = new File(config.getString("server.mapkeys"));
+
+        if(!mapKeysFile.exists()) {
+            throw new RuntimeException("Failed to find mapkeys at: " + mapKeysFile.getAbsolutePath() + ".");
+        }
+
+        MapDecryptionKeys.load(mapKeysFile);
+        loadScripts();
+
         world = beanFactory.getBean(World.class);
+        world.postLoad();
 
         testServer = !config.hasPath("server.test") || config.getBoolean("server.test");
         devServer = !config.hasPath("server.dev") || config.getBoolean("server.dev");
 
         EventLoopGroup acceptGroup = new NioEventLoopGroup(config.getInt("net.acceptthreads"));
         EventLoopGroup ioGroup = new NioEventLoopGroup(config.getInt("net.iothreads"));
+
+        clientInitializer = beanFactory.getBean(ClientInitializer.class);
+
+        serverProcessor = new ServerProcessor();
 
         bootstrap = new ServerBootstrap();
         bootstrap.group(acceptGroup, ioGroup);
@@ -104,6 +123,12 @@ public class GameInitializer implements InitializingBean, BeanFactoryAware {
         handlers.forEach(Handler::initialize);
     }
 
+    public void loadScripts() {
+        logger.log(Level.INFO, "Loading scripts...");
+        scriptRepository = new ScriptRepository();
+        scriptRepository.load();
+    }
+
     public static List<Handler> handlers() {
         return handlers;
     }
@@ -132,5 +157,21 @@ public class GameInitializer implements InitializingBean, BeanFactoryAware {
 
     public static DataStore store() {
         return store;
+    }
+
+    public static ClientInitializer clientInitializer() {
+        return clientInitializer;
+    }
+
+    public static World world() {
+        return world;
+    }
+
+    public static ScriptRepository scriptRepository() {
+        return scriptRepository;
+    }
+
+    public static ServerProcessor serverProcessor() {
+        return serverProcessor;
     }
 }

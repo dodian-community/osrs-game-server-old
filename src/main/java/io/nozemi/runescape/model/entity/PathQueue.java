@@ -3,6 +3,7 @@ package io.nozemi.runescape.model.entity;
 import io.nozemi.runescape.model.Area;
 import io.nozemi.runescape.model.Entity;
 import io.nozemi.runescape.model.Tile;
+import io.nozemi.runescape.model.entity.player.Varps;
 import io.nozemi.runescape.model.map.steroids.Direction;
 import io.nozemi.runescape.util.Varp;
 

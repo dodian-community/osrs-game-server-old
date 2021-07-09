@@ -376,4 +376,8 @@ public class ScriptRepository {
 				break;
 		}
 	}
+
+	public void triggerWorldInit(World world) {
+		//worldInitTriggers.forEach(t -> executor.executeScript(world, t));
+	}
 }

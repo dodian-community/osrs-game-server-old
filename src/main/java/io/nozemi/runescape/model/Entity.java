@@ -1,6 +1,7 @@
 package io.nozemi.runescape.model;
 
 import io.nozemi.runescape.model.entity.*;
+import io.nozemi.runescape.model.entity.player.Varps;
 import io.nozemi.runescape.model.map.FixedTileStrategy;
 import io.nozemi.runescape.model.map.WalkRouteFinder;
 import io.nozemi.runescape.model.map.steroids.Direction;
@@ -18,7 +19,7 @@ public abstract class Entity {
     protected int index;
     protected World world;
     protected Tile tile;
-    private Varps varps;
+    protected Varps varps;
     protected PathQueue pathQueue;
     protected Map<AttributeKey, Object> attribs;
     protected TimerRepository timers = new TimerRepository();
@@ -55,12 +56,35 @@ public abstract class Entity {
         return this.world;
     }
 
+    public void world(World world) {
+        this.world = world;
+    }
+
     public Tile tile() {
         return tile;
     }
 
     public void tile(Tile tile) {
         this.tile = tile;
+    }
+
+    public void teleport(Tile tile) {
+        teleport(tile.x, tile.z, tile.level);
+    }
+
+    public void teleport(int x, int z) {
+        teleport(x, z, 0);
+    }
+
+    public void teleport(int x, int z, int level) {
+        // TODO: Look into transmogification
+        /*if (this.isPlayer() && Transmogrify.isTransmogrified((Player) this)) {
+            Transmogrify.hardReset((Player) this);
+        }*/
+
+        tile = new Tile(x, z, level);
+        sync.teleported(true);
+        pathQueue.clear();
     }
 
     public int size() {
@@ -127,6 +151,15 @@ public abstract class Entity {
             attribs = new EnumMap<>(AttributeKey.class);
         attribs.put(key, v);
     }
+
+    public void faceTile(Tile tile) {
+        sync.facetile(new Tile(tile.x, tile.z));
+    }
+
+    public void faceTile(double x, double z) {
+        sync.facetile(new Tile((int) x, (int) z));
+    }
+
     public Tile walkTo(Tile tile, PathQueue.StepType mode) {
         return walkTo(tile.x, tile.z, mode);
     }
@@ -428,4 +461,6 @@ public abstract class Entity {
     public abstract int attackAnimation();
 
     public abstract void post_cycle_movement();
+
+    public int pvpPid = -1;
 }

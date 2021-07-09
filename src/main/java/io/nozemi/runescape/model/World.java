@@ -2,6 +2,7 @@ package io.nozemi.runescape.model;
 
 import com.typesafe.config.Config;
 import io.nozemi.runescape.GameInitializer;
+import io.nozemi.runescape.content.mechanics.VarbitAttributes;
 import io.nozemi.runescape.fs.DefinitionRepository;
 import io.nozemi.runescape.fs.MapDefinition;
 import io.nozemi.runescape.model.entity.Npc;
@@ -10,26 +11,35 @@ import io.nozemi.runescape.model.entity.npc.NpcCombatInfo;
 import io.nozemi.runescape.model.item.Item;
 import io.nozemi.runescape.model.map.Flags;
 import io.nozemi.runescape.model.map.MapObj;
-import io.nozemi.runescape.net.message.game.command.AddGroundItem;
-import io.nozemi.runescape.net.message.game.command.RemoveObject;
-import io.nozemi.runescape.net.message.game.command.SetMapBase;
-import io.nozemi.runescape.net.message.game.command.SpawnObject;
+import io.nozemi.runescape.net.message.game.command.*;
 import kotlin.ranges.IntRange;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
 import java.security.SecureRandom;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class World {
 
+    private static final Logger logger = LogManager.getLogger(World.class);
+
+    public static int plimit = 2000;
+
     private Realm realm;
     private DefinitionRepository definitionRepository;
 
+    private InstanceAllocator instanceAllocator = new InstanceAllocator(this);
+
     private EntityList<Player> players = new EntityList<>(2048);
+    private EntityList<Player> pvpShuffablePid = new EntityList<>(2048);
     private Map<Object, Player> playerLookupMap = new HashMap<>();
     private Map<String, Player> playerNameLookupMap = new HashMap<>();
 
@@ -47,7 +57,12 @@ public class World {
 
     public int gameCycles; // Used more accurately identify an action that happened on a cycle, regardless of PID
 
-    public World() {
+    private int ticksUntilSystemUpdate = -1;
+
+    @Autowired
+    public World(DefinitionRepository definitionRepository) {
+        this.definitionRepository = definitionRepository;
+
         Config config = GameInitializer.config();
         realm(config.getString("server.realm"));
     }
@@ -72,6 +87,10 @@ public class World {
         performance = b;
     }
 
+    public InstanceAllocator allocator() {
+        return instanceAllocator;
+    }
+
     public EntityList<Player> players() {
         return players;
     }
@@ -82,6 +101,65 @@ public class World {
 
     public DefinitionRepository definitions() {
         return definitionRepository;
+    }
+
+    public void update(int ticks) {
+        ticksUntilSystemUpdate = ticks;
+    }
+
+    public int ticksUntilUpdate() {
+        return ticksUntilSystemUpdate;
+    }
+
+    private void syncChunk(Player p, int x, int z) { // POST UPDATE
+        Area area = new Area(x, z, x + 7, z + 7);
+        for (GroundItem item : groundItems) {
+            if (item != null && area.contains(item.tile()) && Tile.sameH(p, item)) {
+                // Is this an item for us?
+                if (!p.id().equals(item.owner()) && !item.broadcasted()) {// Not ours, and not public yet. Bye.
+                    continue;
+                }
+                p.write(new SetMapBase(p, item.tile()));
+                p.write(new AddGroundItem(item));
+            }
+        }
+        for (MapObj obj : removedObjs) {
+            if (obj != null && area.contains(obj.tile()) && Tile.sameH(p, obj)) {
+                p.write(new SetMapBase(p, obj.tile()));
+                p.write(new RemoveObject(obj));
+            }
+        }
+        for (MapObj obj : spawnedObjs) {
+            if (obj != null && area.contains(obj.tile()) && Tile.sameH(p, obj)) {
+                p.write(new SetMapBase(p, obj.tile()));
+                p.write(new SpawnObject(obj));
+            }
+        }
+    }
+
+    private void desyncChunk(Player p, int x, int z) { // PRE UPDATE
+        Area chunk = new Area(x, z, x + 7, z + 7);
+        groundItems.stream().filter(g -> (g.broadcasted() || g.owner() == p.id()) && chunk.contains(g.tile()) && Tile.sameLastH(p, g)).forEach(item -> {
+            p.write(new SetMapBase(p, item.tile()));
+            p.write(new RemoveGroundItem(item));
+        });
+        for (MapObj obj : spawnedObjs) {
+            if (obj != null && chunk.contains(obj.tile()) && Tile.sameLastH(p, obj)) {
+                p.write(new SetMapBase(p, obj.tile()));
+                p.write(new RemoveObject(obj));
+            }
+        }
+    }
+
+    public void syncMap(Player player, Area previousMap, boolean levelChange) {
+        Area active = player.activeArea();
+        for (int x = active.x1(); x < active.x2(); x += 8) {
+            for (int z = active.z1(); z < active.z2(); z += 8) {
+                if (previousMap == null || !previousMap.containsClosed(new Tile(x, z)) || levelChange) { // prev map is 104x104. dont re-send already visible stuff.
+                    syncChunk(player, x, z);
+                }
+            }
+        }
     }
 
     public int floorAt(Tile tile) {
@@ -219,6 +297,16 @@ public class World {
         return item;
     }
 
+    public void syncDespawnOldHeight(Player player, Area previousMap) {
+        for (int x = previousMap.x1(); x < previousMap.x2(); x += 8) {
+            for (int z = previousMap.z1(); z < previousMap.z2(); z += 8) {
+                if (previousMap.containsClosed(new Tile(x, z))) { // prev map is 104x104. dont re-send already visible stuff.
+                    desyncChunk(player, x, z);
+                }
+            }
+        }
+    }
+
     public boolean groundItemValid(GroundItem item) {
         return groundItems.contains(item);
     }
@@ -288,5 +376,119 @@ public class World {
 
     public int cycleCount() {
         return gameCycles;
+    }
+
+    public boolean registerPlayer(Player player) {
+        int slot = players.add(player);
+
+
+        if (slot == -1)
+            return false;
+
+        player.index(slot);
+        player.pvpPid = getPvpShuffablePid().add(player);
+        playerLookupMap.put(player.id(), player);
+        playerNameLookupMap.put(player.username().toLowerCase(), player);
+        return true;
+    }
+
+    public void unregisterPlayer(Player player) {
+        players.remove(player);
+        getPvpShuffablePid().remove(player);
+        player.pvpPid = -1;
+        playerLookupMap.remove(player.id());
+        playerNameLookupMap.remove(player.username().toLowerCase());
+        player.index(-1);//sets our PID as -1, representing this instance is no longer valid.
+
+        try {
+            // If status is offline, this will already have been pushed.
+            if (VarbitAttributes.varbit(player, VarbitAttributes.VarbitInfo.PM_STATUS.getVarbitid()) != 2) {
+                /*server.service(PmService.class, true).ifPresent(s -> {
+                    s.onUserOffline(player);
+                });*/
+            }
+
+            // Clan chat removal
+            //ClanChat.current(player).ifPresent(cc -> cc.leave(player, true));
+
+            //Log kills
+            /*server.service(LoggingService.class, true).ifPresent(s -> {
+                player.npcKills().forEach((k, v) -> {
+                    s.logNpcKill(player.characterId(), k, v);
+                });
+            });*/
+        } catch (Exception e) {
+            logger.error("Error unregistering player!", e);
+        }
+    }
+
+    /**
+     * Unregisters all entities in the {@link #npcs} and {@link #players} collection.
+     *
+     * @param area the area the entities must be within bounds of.
+     */
+    public void unregisterAll(Area area) {
+        if (area == null) return;
+        List<Npc> npcsToRemove = npcs.stream().filter(Objects::nonNull).filter(area::contains).
+                collect(Collectors.toList());
+        npcsToRemove.forEach(npc -> {
+            npc.stopActions(true);
+            unregisterNpc(npc);
+        });
+        List<GroundItem> itemsToRemove = groundItems.stream().filter(Objects::nonNull).filter(item -> area.contains(item.tile())).
+                collect(Collectors.toList());
+        itemsToRemove.forEach(this::removeGroundItem);
+
+        spawnedObjs.removeIf(obj -> obj != null && area.contains(obj.tile()));
+        removedObjs.removeIf(obj -> obj != null && area.contains(obj.tile()));
+    }
+
+    public boolean removeGroundItem(GroundItem item) {
+        boolean b = groundItems.remove(item);
+        despawnItem(item);
+        // Being picked up, not despawning by lifetime expiration
+        return b;
+    }
+
+    private void despawnItem(GroundItem item) {
+        players().forEach(p -> {
+            if (p.seesChunk(item.tile().x, item.tile().z) && Tile.sameH(p, item)) {
+                if (item.broadcasted() || p.id().equals(item.owner())) {
+                    p.write(new SetMapBase(p, item.tile()));
+                    p.write(new RemoveGroundItem(item));
+                }
+            }
+        });
+    }
+
+    public EntityList<Player> getPvpShuffablePid() {
+        return pvpShuffablePid;
+    }
+
+    public void setPvpShuffablePid(EntityList<Player> pvpShuffablePid) {
+        this.pvpShuffablePid = pvpShuffablePid;
+    }
+
+    public void postLoad() {
+        /*loadPrices();
+
+        loadEquipmentInfo();
+
+        // Load npc spawns
+        loadNpcCombatInfo();
+
+        loadShops();
+        itemPriceRepository.reload();
+
+        loadNpcSpawns(new File("data/map/npcs"));
+        logger.info("Loaded {} NPC spawns.", npcs.size());
+
+        loadItemSpawns(new File("data/map/items"));
+        ItemWeight.init();
+        loadDrops();
+        Teleports.loadTeleports();
+        Help.loadHelp();
+        DmmZones.loadJson();
+        W2tradables.verify(this);*/
     }
 }
