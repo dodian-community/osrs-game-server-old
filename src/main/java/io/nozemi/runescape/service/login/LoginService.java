@@ -107,8 +107,8 @@ public class LoginService implements Service, BeanFactoryAware {
 
             @Override
             public void process(Player player) {
-                player.putattrib(AttributeKey.NO_GPI, true);
-                player.interfaces().loginScreen();
+                player.interfaces().setupGamepane(true);
+                player.initiate();
             }
         });
     }

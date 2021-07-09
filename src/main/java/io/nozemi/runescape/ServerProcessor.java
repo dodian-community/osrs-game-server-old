@@ -45,11 +45,16 @@ public class ServerProcessor extends Thread {
         logicJobs = new ConcurrentLinkedQueue<>();
 
         tasks.add(new PacketProcessingTask());
+        tasks.add(new ScriptProcessingTask());
         tasks.add(new PlayerProcessingTask());
+        tasks.add(new NpcProcessingTask());
 
         tasks.add(new PlayerPreSyncTask());
+        tasks.add(new NpcViewportTask());
         tasks.add(new PlayerSyncTask());
+        tasks.add(new NpcSyncTask());
         tasks.add(new PlayerPostSyncTask());
+        tasks.add(new NpcPostSyncTask());
 
         tasks.add(new NetworkFlushTask());
 

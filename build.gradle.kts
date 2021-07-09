@@ -36,6 +36,7 @@ dependencies {
     implementation("it.unimi.dsi:fastutil:8.1.0")
     implementation("org.reflections:reflections:0.9.11")
     implementation("backport-util-concurrent:backport-util-concurrent:3.1")
+    implementation("com.google.code.gson:gson:2.8.1")
 
     runtimeOnly("org.xerial:sqlite-jdbc:3.36.0.1")
 

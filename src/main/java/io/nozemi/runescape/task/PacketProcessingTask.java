@@ -55,6 +55,8 @@ public class PacketProcessingTask implements Task {
 			
 			// Sync containers, if dirty. Why here? Because... Fake lag fix. Just don't question me :-)
 			//player.postcycle_dirty();
+
+			player.channel().flush();
 		});
 	}
 	

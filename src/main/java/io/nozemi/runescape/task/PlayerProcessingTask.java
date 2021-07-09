@@ -40,6 +40,9 @@ public class PlayerProcessingTask implements Task {
 				if (update) {
 					player.write(new SystemUpdateTimer(world.ticksUntilUpdate()));
 				}
+
+				// Flush network channel
+				player.channel().flush();
 				
 				long taken = System.currentTimeMillis() - start;
 				ServerProcessor.computeTimes.compute(player.username(), (String s, Long integer) -> {

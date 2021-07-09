@@ -2,6 +2,7 @@ package io.nozemi.runescape.model;
 
 import io.nozemi.runescape.model.entity.*;
 import io.nozemi.runescape.model.entity.player.Varps;
+import io.nozemi.runescape.model.item.ItemContainer;
 import io.nozemi.runescape.model.map.FixedTileStrategy;
 import io.nozemi.runescape.model.map.WalkRouteFinder;
 import io.nozemi.runescape.model.map.steroids.Direction;
@@ -463,4 +464,9 @@ public abstract class Entity {
     public abstract void post_cycle_movement();
 
     public int pvpPid = -1;
+
+    private ItemContainer equipment;
+    public ItemContainer equipment() {
+        return equipment;
+    }
 }

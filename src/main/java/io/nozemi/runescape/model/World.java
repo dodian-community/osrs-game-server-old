@@ -12,6 +12,10 @@ import io.nozemi.runescape.model.item.Item;
 import io.nozemi.runescape.model.map.Flags;
 import io.nozemi.runescape.model.map.MapObj;
 import io.nozemi.runescape.net.message.game.command.*;
+import io.nozemi.runescape.script.Timer;
+import io.nozemi.runescape.script.TimerKey;
+import io.nozemi.runescape.script.TimerRepository;
+import io.nozemi.runescape.util.EquipmentInfo;
 import kotlin.ranges.IntRange;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,6 +27,7 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.security.SecureRandom;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 @Component
@@ -54,6 +59,7 @@ public class World {
 
     private Random random = new SecureRandom();
     private boolean performance;
+    private TimerRepository timers = new TimerRepository();
 
     public int gameCycles; // Used more accurately identify an action that happened on a cycle, regardless of PID
 
@@ -470,25 +476,99 @@ public class World {
     }
 
     public void postLoad() {
-        /*loadPrices();
-
         loadEquipmentInfo();
+    }
 
-        // Load npc spawns
-        loadNpcCombatInfo();
 
-        loadShops();
-        itemPriceRepository.reload();
+    // Despawn because the time ran out, NOT because it was picked up or called to be removed some other way.
+    public static void onDespawned(GroundItem item, World world) {
+        int droppedId = item.item().id();
+        /*for (int untradId : ItemsOnDeath.RS_UNTRADABLES_LIST) {
+            if (droppedId == untradId) {
+                world.playerForId(item.owner()).ifPresent(p -> {
+                    p.message("<col=FF0000>Your " + item.item().name(p.world()) + " despawned and has been lost forever.");
+                });
+            }
+        }*/
+        /*if (item.item() != null && item.item().realPrice(world) >= (world.realm().isPVP() ? 5_000 : 500_000)) {
+            world.server().service(LoggingService.class, true).ifPresent(s -> s.logGrounditemExpired(item, world));
+        }*/
+    }
 
-        loadNpcSpawns(new File("data/map/npcs"));
-        logger.info("Loaded {} NPC spawns.", npcs.size());
+    private long lastMinuteScan;
 
-        loadItemSpawns(new File("data/map/items"));
-        ItemWeight.init();
-        loadDrops();
-        Teleports.loadTeleports();
-        Help.loadHelp();
-        DmmZones.loadJson();
-        W2tradables.verify(this);*/
+    public void cycle() {
+        timers.cycle();
+
+        //Temporary minute check until a better system is created.
+        if (TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis() - lastMinuteScan) >= 60) {
+
+            lastMinuteScan = System.currentTimeMillis();
+        }
+
+        // Fire timers
+        for (Iterator<Timer> it = timers.timers().iterator(); it.hasNext(); ) {
+            Timer entry = it.next();
+
+            if (entry != null && entry.ticks() < 1) {
+                TimerKey key = entry.key();
+                timers.cancel(key);
+
+                //server.scriptRepository().triggerWorldTimer(this, key);
+            }
+        }
+
+        // Ground items which need synching...
+        groundItems.stream().filter(g -> !g.broadcasted() && g.shouldBroadcast()).forEach(item -> {
+            item.broadcasted(true);
+            item.forceBroadcast(false);
+
+            // See who's getting broadcasted!
+            players().forEach(p -> {
+                if (!p.bot() && !p.id().equals(item.owner()) && p.seesChunk(item.tile().x, item.tile().z) && Tile.sameH(p, item)) {
+                    p.write(new SetMapBase(p, item.tile()));
+                    p.write(new AddGroundItem(item));
+                }
+            });
+        });
+
+        // Ground items which need removal..
+        for (Iterator<GroundItem> gi = groundItems.iterator(); gi.hasNext(); ) {
+            GroundItem g = gi.next();
+            if (g.shouldBeRemoved()) {
+                this.despawnItem(g);
+                onDespawned(g, this);
+                gi.remove();
+            }
+        }
+
+        // System update
+        if (ticksUntilSystemUpdate-- == 0) {
+            players.forEach(p -> {
+                if (p != null) {
+                    try {
+                        p.logout();
+                    } catch (Exception e) {
+                        logger.error("Error logging player from game!", e);
+                    }
+                }
+            });
+
+            ticksUntilSystemUpdate = 1; // Next tick we GO ALL OVER AGAIN to make sure everyone goes out.
+        }
+    }
+
+    private EquipmentInfo equipmentInfo;
+    public EquipmentInfo equipmentInfo() {
+        return equipmentInfo;
+    }
+
+    public void loadEquipmentInfo() {
+        equipmentInfo = new EquipmentInfo(
+                new File("data/list/equipment_info.json"),
+                new File("data/list/renderpairs.txt"),
+                new File("data/list/bonuses.json"),
+                new File("data/list/weapon_types.txt"),
+                new File("data/list/weapon_speeds.txt"));
     }
 }

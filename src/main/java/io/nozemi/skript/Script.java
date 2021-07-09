@@ -1,18 +1,12 @@
 package io.nozemi.skript;
 
-import kotlin.Pair;
-import kotlin.jvm.functions.Function1;
-import io.nozemi.runescape.content.npcs.NpcFacingPlayerPolicy;
-import io.nozemi.runescape.fs.NpcDefinition;
 import io.nozemi.runescape.model.AttributeKey;
 import io.nozemi.runescape.model.Entity;
 import io.nozemi.runescape.model.entity.Npc;
 import io.nozemi.runescape.model.entity.Player;
-import io.nozemi.runescape.net.message.game.command.*;
+import kotlin.jvm.functions.Function1;
 
 import java.lang.ref.WeakReference;
-import java.util.Arrays;
-import java.util.stream.Collectors;
 
 /**
  * Created by Bart on 1/6/2017.
@@ -21,6 +15,7 @@ public class Script {
 	
 	private boolean started;
 	private boolean interrupted;
+	private Fiber fiber;
 	private Object context;
 	private WaitReason waitReason;
 	private Object waitParam;
@@ -47,7 +42,15 @@ public class Script {
 		}
 		interrupted = true;
 	}
-	
+
+
+	public final Fiber getFiber() {
+		return this.fiber;
+	}
+
+	public final void setFiber(Fiber x) {
+		this.fiber = x;
+	}
 	
 	public final <T> T ctx() {
 		return (T) this.context;
@@ -104,9 +107,10 @@ public class Script {
 	public final void setInterruptCall(Function1 x) {
 		this.interruptCall = x;
 	}
-	
-	public Script(Object context, WaitReason waitReason, Object waitParam, int lastTick, Object waitReturnVal, Function1 interruptCall, Function1<Script, ?> executedFunction) {
+
+	public Script(Fiber fiber, Object context, WaitReason waitReason, Object waitParam, int lastTick, Object waitReturnVal, Function1 interruptCall, Function1<Script, ?> executedFunction) {
 		super();
+		this.fiber = fiber;
 		this.context = context;
 		this.waitReason = waitReason;
 		this.waitParam = waitParam;
@@ -181,5 +185,4 @@ public class Script {
 	public Npc targetNpc() {
 		return (Npc) entity().<WeakReference<Entity>>attrib(AttributeKey.TARGET).get();
 	}
-	
 }

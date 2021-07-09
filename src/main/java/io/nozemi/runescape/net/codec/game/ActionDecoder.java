@@ -97,7 +97,7 @@ public class ActionDecoder extends ByteToMessageDecoder {
 			
 			case SIZE:
 				if (actionRepository[opcode] == null && !ignored.containsKey(opcode)) {
-					logger.warn("Unknown action {}, probable size: {}.", opcode, buffer.get().readableBytes());
+					logger.warn("Unknown action: {}, probable size: {}.", opcode, buffer.get().readableBytes());
 					
 					size = in.readableBytes();
 				} else {

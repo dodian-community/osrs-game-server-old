@@ -3,11 +3,15 @@ package io.nozemi.runescape.net.message.game.command;
 import io.nozemi.runescape.io.RSBuffer;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.net.message.game.Command;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Created by Bart Pelle on 8/22/2014.
  */
 public class InvokeScript extends Command {
+
+	private static final Logger logger = LogManager.getLogger(InvokeScript.class);
 	
 	private int id;
 	private Object[] args;
@@ -19,6 +23,8 @@ public class InvokeScript extends Command {
 	public InvokeScript(int id, Object... args) {
 		this.id = id;
 		this.args = args;
+
+		logger.info("Invoking script with id {} ...", id);
 
 		/* Calculate types */
 		size = 1 + 2 + 4;
