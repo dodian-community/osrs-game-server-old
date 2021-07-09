@@ -1,6 +1,9 @@
 package io.nozemi.runescape.service.serializers;
 
+import io.nozemi.runescape.model.AttributeKey;
 import io.nozemi.runescape.model.entity.Player;
+import io.nozemi.runescape.model.entity.player.EquipSlot;
+import io.nozemi.runescape.model.item.Item;
 import io.nozemi.runescape.model.uid.UIDProvider;
 import io.nozemi.runescape.net.message.LoginRequestMessage;
 import org.apache.logging.log4j.LogManager;
@@ -31,6 +34,10 @@ public class JSONFileSerializer extends PlayerSerializer {
 	
 	@Override
 	public boolean loadPlayer(Player player, Object uid, String password, Consumer<PlayerLoadResult> fn, LoginRequestMessage loginRequestMessage) {
+		player.putattrib(AttributeKey.NEW_ACCOUNT, true);
+
+		//player.equipment().set(EquipSlot.HEAD, new Item(1040, 1));
+
 		fn.accept(PlayerLoadResult.OK);
 		return true;
 	}

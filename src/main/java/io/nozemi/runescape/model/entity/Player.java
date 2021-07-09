@@ -194,6 +194,10 @@ public class Player extends Entity {
         return this;
     }
 
+    public ItemContainer equipment() {
+        return equipment;
+    }
+
     public String ip() {
         return ip;
     }
@@ -314,17 +318,6 @@ public class Player extends Entity {
     }
 
     public void postcycle_dirty() {
-        // Does weight need to be recomputed?
-        /*if (inventory.dirty() || equipment.dirty()) {
-            ItemWeight.calculateWeight(this);
-        }
-
-        // Sync inventory
-        if (inventory.dirty()) {
-            write(new SetItems(93, 149, 0, inventory));
-            inventory.clean();
-        }
-
         // Sync equipment if dirty
         if (equipment.dirty()) {
             write(new SetItems(94, equipment));
@@ -334,29 +327,6 @@ public class Player extends Entity {
             // Also send the stuff required to make the weaponry panel proper
             updateWeaponInterface();
         }
-
-        // Sync bank if dirty
-        if (bank.dirty()) {
-            write(new SetItems(95, bank));
-            bank.clean();
-        }
-
-        //Sync looting bag if dirty
-        if (lootingBag.dirty()) {
-            write(new SetItems(516, lootingBag));
-            lootingBag.clean();
-        }
-
-        // Sync skills if dirty
-        skills.syncDirty();
-
-        if (attribOr(AttributeKey.SHOP_DIRTY, false)) {
-            Shop shop = attribOr(AttributeKey.SHOP, null);
-            if (shop != null) {
-                shop.refreshFor(this);
-            }
-            clearattrib(AttributeKey.SHOP_DIRTY);
-        }*/
     }
 
     @Override
@@ -619,5 +589,9 @@ public class Player extends Entity {
         } catch (Exception e) {
             logger.error("Error processing timers for {}.", this, e);
         }
+    }
+
+    public Skills skills() {
+        return skills;
     }
 }

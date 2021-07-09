@@ -115,28 +115,29 @@ public class Looks {
 				// TODO: Look into equipment info
                 EquipmentInfo equipInfo = player.world().equipmentInfo();
                 for (int i = 0; i < 12; i++) {
-                    Item item = new Item(-1, -1);
-                    if (i == 6 || i == 8 || i == 11) { //TODO fix beard & hair issues
-                        if (item != null) {
-                            int equipmentType = 0;
-                            if ((equipmentType == 6 && i == 6) ||
-                                    (i == 8 && (equipmentType == 8 && !equipInfo.showBeard(item.id())))
-                                    || i == 11) {
-                                calcBuffer.writeByte(0);
-                                continue;
-                            }
-                            if (i != 8 || equipmentType != 8)
-                                item = null;
-                        }
-                    }
-                    if (item != null)
-                        calcBuffer.writeShort(0x200 + (item.id() == 6767 ? 12006 : item.id()));
-                    else {
-                        if (TRANSLATION_TABLE_BACK[i] != -1)
-                            calcBuffer.writeShort(0x100 + looks[TRANSLATION_TABLE_BACK[i]]);
-                        else
-                            calcBuffer.writeByte(0);
-                    }
+					Item item = player.equipment().get(i);
+					if (i == 6 || i == 8 || i == 11) { //TODO fix beard & hair issues
+						item = player.equipment().get(i == 6 ? EquipSlot.BODY : EquipSlot.HEAD);
+						if (item != null) {
+							int equipmentType = equipInfo.typeFor(item.id());
+							if ((equipmentType == 6 && i == 6) ||
+									(i == 8 && (equipmentType == 8 && !equipInfo.showBeard(item.id())))
+									|| (!equipInfo.showBeard(item.id()) && i == 11)) {
+								calcBuffer.writeByte(0);
+								continue;
+							}
+							if (i != 8 || equipmentType != 8)
+								item = null;
+						}
+					}
+					if (item != null)
+						calcBuffer.writeShort(0x200 + (item.id() == 6767 ? 12006 : item.id()));
+					else {
+						if (TRANSLATION_TABLE_BACK[i] != -1)
+							calcBuffer.writeShort(0x100 + looks[TRANSLATION_TABLE_BACK[i]]);
+						else
+							calcBuffer.writeByte(0);
+					}
                 }
             }
         } else {
@@ -150,8 +151,7 @@ public class Looks {
 			int col = Math.max(0, colors[idx]);
 			calcBuffer.writeByte(col);
 		}
-		
-		
+
 		int weapon = -1;
 		int[] renderpair = renderpairOverride != null ? renderpairOverride : player.world().equipmentInfo().renderPair(weapon);
 		// Stand, walk sideways, walk, turn 180, turn 90 cw, turn 90 ccw, run
@@ -162,7 +162,11 @@ public class Looks {
 		calcBuffer.writeBytes(player.username().getBytes()).writeByte(0);//with terminator 0
 
 		// TODO: Write combat level...
-		calcBuffer.writeByte(50);
+		if(player.skills() == null) {
+			calcBuffer.writeByte(3);
+		} else {
+			calcBuffer.writeByte(player.skills().combatLevel());
+		}
 		calcBuffer.writeShort(0);
 		calcBuffer.writeByte(0);//removed hidden var - not sure of what this byte does but it certainly doesnt hide the player.
 		
