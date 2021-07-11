@@ -1,2 +1,1 @@
-rootProject.name = "OSZemi Client"
-
+rootProject.name = "dodian-osrs-client"
