@@ -1,22 +1,21 @@
-# Nozemi's OSRS
-This is a OSRS base heavily influenced by OS-Scape source code. I've tried to retain the classes author comments for code that is a copy of OSS code.
+# Dodian OSRS
+This is a OSRS base heavily influenced by [OS-Scape](https://www.rune-server.ee/runescape-development/rs2-server/downloads/697645-os-scape-171-server.html) source code. I've tried to retain the classes author comments for code that is a copy of OSS code.
 
-### **Goals for this project are:**
-1. Making it less coupled\
-   1.1. Implementing Spring (without the web server for now) to leverage it's dependency injection\
-   1.2. Also leveraging Spring for data loading, because it's very easy to switch database technology
-2. Getting rid of Quasar\
-   2.1 Wondering if I can use Kotlin naitvely instead.
-   
-### Supported Data Storage
-#### Characters
-- SQLite
-- PostgreSQL
-- JSON (flatfile)
+**What's different here vs original [OS-S](https://www.rune-server.ee/runescape-development/rs2-server/downloads/697645-os-scape-171-server.html)?** \
+Created a blank Spring-based project, with web server disabled (we don't need it, at least not yet). Then code related to networking, logging in etc was copied over from [OS-S](https://www.rune-server.ee/runescape-development/rs2-server/downloads/697645-os-scape-171-server.html). This essentially gave us a blank base without [Quasar](https://docs.paralleluniverse.co/quasar/). Once that was done, the process of reimplementing necessary fundamental core functionality (like Redis, serializer, command system, etc) was started.
 
-#### NPC Spawns
-- SQLIte
-- PostgreSQL
-- JSON (flatfile)
+**What's the goal of this project?** \
+The project aims to use as much of [OS-S](https://www.rune-server.ee/runescape-development/rs2-server/downloads/697645-os-scape-171-server.html) original code as possible, but eliminating the Quasar library and implementing Spring framework to leverage it's dependency injection, and possible web server to serve real time data from the server with REST APIs.
 
-_Need to update this readme later... For now the information isn't all accurate_
+The goal is then to create an okay base to start piecing together a [Dodian](https://dodian.net/) remake. There is currently a server for [Dodian](https://dodian.net/), however it's awfully bugged and is a nightmare to maintain in just about any way.
+
+### Information
+- [Example server config](/data/server.conf.example)
+
+### Credits
+- [Situations](https://www.rune-server.ee/members/situations/)
+- [Velocity](https://www.rune-server.ee/members/velocity/)
+- [Savions](https://www.rune-server.ee/members/savions/)
+- [Shadowy](https://www.rune-server.ee/members/shadowy/) \
+^ 4 above are the original developers of [OS-S](https://www.rune-server.ee/runescape-development/rs2-server/downloads/697645-os-scape-171-server.html).
+- Me ([Nozemi](https://www.rune-server.ee/members/nozemi/))
