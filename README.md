@@ -5,7 +5,7 @@ This is a OSRS base heavily influenced by [OS-Scape](https://www.rune-server.ee/
 Created a blank Spring-based project, with web server disabled (we don't need it, at least not yet). Then code related to networking, logging in etc was copied over from [OS-S](https://www.rune-server.ee/runescape-development/rs2-server/downloads/697645-os-scape-171-server.html). This essentially gave us a blank base without [Quasar](https://docs.paralleluniverse.co/quasar/). Once that was done, the process of reimplementing necessary fundamental core functionality (like Redis, serializer, command system, etc) was started.
 
 **What's the goal of this project?** \
-The project aims to use as much of [OS-S](https://www.rune-server.ee/runescape-development/rs2-server/downloads/697645-os-scape-171-server.html) original code as possible, but eliminating the Quasar library and implementing Spring framework to leverage it's dependency injection, and possible web server to serve real time data from the server with REST APIs.
+The project aims to use as much of [OS-S](https://www.rune-server.ee/runescape-development/rs2-server/downloads/697645-os-scape-171-server.html) original code as possible. However, eliminating the Quasar library and implementing Spring framework to leverage its dependency injection. Possibly also web server to serve real time data from the server from REST APIs.
 
 The goal is then to create an okay base to start piecing together a [Dodian](https://dodian.net/) remake. There is currently a server for [Dodian](https://dodian.net/), however it's awfully bugged and is a nightmare to maintain in just about any way.
 
