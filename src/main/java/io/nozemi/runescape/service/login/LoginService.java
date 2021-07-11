@@ -1,6 +1,7 @@
 package io.nozemi.runescape.service.login;
 
 import io.netty.channel.ChannelHandlerContext;
+import io.nozemi.runescape.GameInitializer;
 import io.nozemi.runescape.io.RSBuffer;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.model.instance.InstancedMap;
@@ -13,6 +14,7 @@ import io.nozemi.runescape.net.message.game.command.SetRealm;
 import io.nozemi.runescape.service.Service;
 import io.nozemi.runescape.service.serializers.JSONFileSerializer;
 import io.nozemi.runescape.service.serializers.PlayerSerializer;
+import io.nozemi.runescape.service.serializers.SpringSerializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
@@ -38,16 +40,15 @@ public class LoginService implements Service, BeanFactoryAware {
 
     private Executor executor;
 
-    private PlayerSerializer serializer;
-    private UIDProvider uidProvider;
+    private static PlayerSerializer serializer;
 
     @Autowired
-    public LoginService() {
+    public LoginService(SpringSerializer springSerializer) {
+        serializer = springSerializer;
     }
 
     @Override
     public void setup() {
-        this.serializer = new JSONFileSerializer();
         logger.info("Using {} to serialize and deserialize player data.", serializer.getClass().getSimpleName());
     }
 
@@ -115,7 +116,7 @@ public class LoginService implements Service, BeanFactoryAware {
         return messages;
     }
 
-    public PlayerSerializer serializer() {
+    public static PlayerSerializer serializer() {
         return serializer;
     }
 

@@ -39,6 +39,10 @@ public class CommandHandler implements Handler {
     }
 
     public static void triggerCommand(Player player, String command, String[] arguments) {
-        commands.get(command).execute(player, arguments);
+        if(commands.containsKey(command)) {
+            commands.get(command).execute(player, arguments);
+        } else {
+            player.message("<col=FF0000>This command does not exist.");
+        }
     }
 }

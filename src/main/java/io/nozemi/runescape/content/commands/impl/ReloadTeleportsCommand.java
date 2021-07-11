@@ -28,9 +28,12 @@ public class ReloadTeleportsCommand implements GameCommand {
     public void execute(Player player, String[] arguments) {
         try {
             teleportEffectChainHandler.loadTeleports();
+            player.message("Successfully reloaded the teleport effects chains.");
             logger.info("Loaded new teleport effect chains...");
         } catch (IOException e) {
             logger.info("Failed to load teleport effect chains...", e);
+            player.message("Something went wrong while reloading the effects chains...");
+            player.message("<col=FF0000>" + e.getMessage());
         }
     }
 }

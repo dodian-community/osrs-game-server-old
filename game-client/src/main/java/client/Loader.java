@@ -22,7 +22,7 @@ public class Loader implements AppletStub {
 	public static final int REVISION = 149;
 	public static int port = 43594;
 
-	private static String[] MEMES = {"Gear up & Dismantle", "Alt-F4 Simulator", "Human Nature Simulator 2018", "Online Meme RPG", "The Movie", "Best served with salt"};
+	private static String[] MEMES = {"The nulls were back! Not anymore!"};
 
 	public static Properties parameters = new Properties();
 
@@ -40,7 +40,7 @@ public class Loader implements AppletStub {
 		applet.readParameters();
 
 		final GameClient instance = new GameClient();
-		final JFrame frame = new JFrame("OS-Scape - " + MEMES[new Random().nextInt(MEMES.length)]);
+		final JFrame frame = new JFrame("Dodian.net Client - Uber Server OSRS - " + MEMES[new Random().nextInt(MEMES.length)]);
 
 		instance.setBounds(0, 0, 765, 503);
 		// TODOD new OverlayPanel();

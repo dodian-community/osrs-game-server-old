@@ -1,10 +1,12 @@
 package io.nozemi.runescape.service.serializers;
 
-import com.typesafe.config.Config;
+
+import io.nozemi.runescape.model.Tile;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.model.uid.UIDProvider;
 import io.nozemi.runescape.net.message.LoginRequestMessage;
 import io.nozemi.runescape.service.Service;
+import io.nozemi.runescape.orm.models.Character;
 import org.springframework.stereotype.Component;
 
 import java.util.function.Consumer;
@@ -36,5 +38,13 @@ public abstract class PlayerSerializer implements Service {
     @Override
     public boolean stop() {
         return true;
+    }
+
+    protected Character createCharacter(Player player) {
+        Character character = new Character();
+        character.setUsername(player.username());
+        character.setRunEnergy(100.0);
+        character.setPos(new Tile(2606, 3102));
+        return character;
     }
 }

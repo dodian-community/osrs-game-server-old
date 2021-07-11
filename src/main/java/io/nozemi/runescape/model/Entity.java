@@ -147,6 +147,10 @@ public abstract class Entity {
         return new Area(t.x, t.z, t.x, t.z);
     }
 
+    public Map<AttributeKey, Object> attribs() {
+        return attribs;
+    }
+
     public boolean hasAttrib(AttributeKey key) {
         return attribs != null && attribs.containsKey(key);
     }

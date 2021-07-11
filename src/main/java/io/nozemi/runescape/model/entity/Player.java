@@ -1,6 +1,7 @@
 package io.nozemi.runescape.model.entity;
 
 import io.netty.channel.Channel;
+import io.nozemi.runescape.GameInitializer;
 import io.nozemi.runescape.content.mechanics.VarbitAttributes;
 import io.nozemi.runescape.crypto.IsaacRand;
 import io.nozemi.runescape.model.*;
@@ -16,6 +17,7 @@ import io.nozemi.runescape.net.message.game.Action;
 import io.nozemi.runescape.net.message.game.command.*;
 import io.nozemi.runescape.script.Timer;
 import io.nozemi.runescape.script.TimerKey;
+import io.nozemi.runescape.service.login.LoginService;
 import io.nozemi.runescape.util.RunEnergy;
 import io.nozemi.runescape.util.Tuple;
 import io.nozemi.runescape.util.Varbit;
@@ -116,7 +118,10 @@ public class Player extends Entity {
         write(new UpdateStateCustom(worldFlag));
 
         // Trigger scripts here(?)
-        message("Welcome to OS-Scape. On here, you die.");
+        if(GameInitializer.config().hasPath("world.welcome-messages")) {
+            GameInitializer.config().getList("world.welcome-messages")
+                    .forEach(configValue -> message("" + configValue.unwrapped()));
+        }
 
         invokeScript(1350);
         write(new InvokeScript(389, skills.combatLevel()));
@@ -136,7 +141,7 @@ public class Player extends Entity {
         varps.sync(Varp.CLIENT_SETTINGS);
 
         // Piety chivy plzzz
-        //varps.varbit(3909, 8);
+        varps.varbit(3909, 8);
 
         // Since recent revisions, synching the varbit for attack options is required.
         // Since the varps are by default 0, and 0 does not get synched, attack options are missing.
@@ -548,7 +553,7 @@ public class Player extends Entity {
 
     public void unregister() {
         world.unregisterPlayer(this);
-        //savePlayer(true);
+        savePlayer(true);
         //saveHighscores();
     }
 
@@ -652,9 +657,13 @@ public class Player extends Entity {
 
 
         if (System.currentTimeMillis() > nextSave) {
-            //savePlayer(false);
+            savePlayer(false);
             nextSave = System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(10 + world.random(5));
         }
+    }
+
+    public void savePlayer(boolean removeOnline) {
+        LoginService.serializer().savePlayer(this, removeOnline);
     }
 
     private void fire_timers() {
