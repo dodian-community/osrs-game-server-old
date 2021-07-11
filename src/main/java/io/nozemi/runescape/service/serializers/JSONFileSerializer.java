@@ -36,6 +36,7 @@ public class JSONFileSerializer extends PlayerSerializer {
 	public boolean loadPlayer(Player player, Object uid, String password, Consumer<PlayerLoadResult> fn, LoginRequestMessage loginRequestMessage) {
 		player.putattrib(AttributeKey.NEW_ACCOUNT, true);
 
+		player.putattrib(AttributeKey.RUN_ENERGY, 100.0);
 		//player.equipment().set(EquipSlot.HEAD, new Item(1040, 1));
 
 		fn.accept(PlayerLoadResult.OK);

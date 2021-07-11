@@ -218,7 +218,7 @@ public class Npc extends Entity {
 			
 			// Now we need to be clever and check what sort of combat style this npc uses
 			int dist = 1;
-			if (combatInfo() != null && combatInfo().scripts != null && combatInfo().scripts.combat_ != null) { // This will have to do
+			if (combatInfo() != null && combatInfo().scripts != null && combatInfo().scripts.combat != null) { // This will have to do
 				// Custom script could still be melee in which case it'll use the wrong distance.
 				dist = 10;
 			}

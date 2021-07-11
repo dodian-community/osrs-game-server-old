@@ -115,7 +115,7 @@ public class Player extends Entity {
         write(new UpdateStateCustom(worldFlag));
 
         // Trigger scripts here(?)
-        //message("Welcome to OS-Scape. On here, you die.");
+        message("Welcome to OS-Scape. On here, you die.");
 
         invokeScript(1350);
         write(new InvokeScript(389, skills.combatLevel()));
@@ -411,6 +411,16 @@ public class Player extends Entity {
     @Override
     public PlayerSyncInfo sync() {
         return (PlayerSyncInfo) sync;
+    }
+
+    public void sound(int[] values) {
+        if(values.length == 1) {
+            this.sound(values[0]);
+        } else if(values.length == 2) {
+            this.sound(values[0], values[1]);
+        } else if(values.length >= 3) {
+            this.sound(values[0], values[1], values[2]);
+        }
     }
 
     public void sound(int id) {

@@ -1,0 +1,64 @@
+[
+  //Zul-Harcinqa
+  {
+	"id": 1616,
+	"x": 2192,
+	"z": 3055,
+	"direction": "E"
+  },
+  //Zul-Areth
+  {
+	"id": 2040,
+	"x": 2197,
+	"z": 3061,
+	"radius": 1
+  },
+  //Zul-Aniel
+  {
+	"id": 2039,
+	"x": 2194,
+	"z": 3059,
+	"radius": 1
+  },
+  //Zul-Cheray
+  {
+	"id": 2035,
+	"x": 2204,
+	"z": 3050
+  },
+  //Zul-Onan
+  {
+	"id": 2038,
+	"x": 2189,
+	"z": 3069,
+	"direction": "N"
+  },
+  //Zul-Urgish
+  {
+	"id": 2034,
+	"x": 2199,
+	"z": 3055,
+	"radius": 1
+  },
+  //Zul-Gutusolly
+  {
+	"id": 2036,
+	"x": 2201,
+	"z": 3049,
+	"radius": 1
+  },
+  //Sacrifice
+  {
+	"id": 2037,
+	"x": 2210,
+	"z": 3056,
+	"radius": 1
+  },
+  //Zul-Gwenwynig
+  {
+	"id": 2033,
+	"x": 2212,
+	"z": 3056,
+	"radius": 1
+  }
+]

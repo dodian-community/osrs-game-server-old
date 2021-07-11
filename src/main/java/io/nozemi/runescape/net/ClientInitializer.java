@@ -14,6 +14,10 @@ import io.nozemi.runescape.net.codec.pregame.HandshakeResponseEncoder;
 import io.nozemi.runescape.net.codec.pregame.Js5DataEncoder;
 import io.nozemi.runescape.net.codec.pregame.PreGameDecoder;
 import io.nozemi.runescape.net.codec.pregame.PreGameLoginEncoder;
+import org.jetbrains.annotations.NotNull;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
@@ -24,11 +28,11 @@ import java.util.concurrent.TimeUnit;
 
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
-public class ClientInitializer extends ChannelInitializer<Channel> {
+public class ClientInitializer extends ChannelInitializer<Channel> implements BeanFactoryAware {
 
     private final GlobalTrafficShapingHandler trafficHandler = new GlobalTrafficShapingHandler(Executors.newSingleThreadScheduledExecutor(), 0, 0, 1000);
 
-    //private static ServerHandler serverHandler;
+    private BeanFactory beanFactory;
 
     private final LoginHandler loginHandler;
     private final Js5Handler js5Handler;
@@ -63,11 +67,17 @@ public class ClientInitializer extends ChannelInitializer<Channel> {
                 channel.pipeline().removeLast();
             }
 
-            channel.pipeline().addLast(new ReadTimeoutHandler(30, TimeUnit.SECONDS), trafficHandler, commandEncoder, new ActionDecoder(), serverHandler);
+            channel.pipeline().addLast(new ReadTimeoutHandler(30, TimeUnit.SECONDS), trafficHandler, commandEncoder,
+                    beanFactory.getBean(ActionDecoder.class), serverHandler);
         }
     }
 
     public TrafficCounter trafficStats() {
         return trafficHandler.trafficCounter();
+    }
+
+    @Override
+    public void setBeanFactory(@NotNull BeanFactory beanFactory) throws BeansException {
+        this.beanFactory = beanFactory;
     }
 }

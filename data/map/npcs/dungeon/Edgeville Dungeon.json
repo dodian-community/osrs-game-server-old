@@ -1,0 +1,567 @@
+[
+  {
+	"id": 3017,
+	"x": 3096,
+	"z": 9878,
+	"radius": 6
+  },
+  // Spider
+  {
+	"id": 3017,
+	"x": 3097,
+	"z": 9878,
+	"radius": 6
+  },
+  // Spider
+  {
+	"id": 2856,
+	"x": 3102,
+	"z": 9880,
+	"radius": 6
+  },
+  // Giant rat
+  {
+	"id": 2854,
+	"x": 3110,
+	"z": 9882,
+	"radius": 6
+  },
+  // Rat
+  {
+	"id": 2863,
+	"x": 3119,
+	"z": 9888,
+	"radius": 4
+  },
+  // Giant rat
+  {
+	"id": 2864,
+	"x": 3121,
+	"z": 9890,
+	"radius": 4
+  },
+  // Giant rat
+  {
+	"id": 2856,
+	"x": 3118,
+	"z": 9891,
+	"radius": 4
+  },
+  // Giant rat
+  {
+	"id": 76,
+	"x": 3095,
+	"z": 9893,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 75,
+	"x": 3096,
+	"z": 9895,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 74,
+	"x": 3095,
+	"z": 9899,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 76,
+	"x": 3096,
+	"z": 9904,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 75,
+	"x": 3098,
+	"z": 9907,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 74,
+	"x": 3097,
+	"z": 9911,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 77,
+	"x": 3112,
+	"z": 9909,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 71,
+	"x": 3116,
+	"z": 9909,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 71,
+	"x": 3132,
+	"z": 9908,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 73,
+	"x": 3133,
+	"z": 9911,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 70,
+	"x": 3130,
+	"z": 9913,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 77,
+	"x": 3131,
+	"z": 9906,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 77,
+	"x": 3140,
+	"z": 9910,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 2863,
+	"x": 3090,
+	"z": 9894,
+	"radius": 4
+  },
+  // Giant rat
+  {
+	"id": 2856,
+	"x": 3090,
+	"z": 9896,
+	"radius": 4
+  },
+  // Giant rat
+  {
+	"id": 403,
+	"x": 3147,
+	"z": 9913,
+	"radius": 2,
+	"realismExclusive": true,
+	"economyExclusive": true
+  },
+  // Vannaka
+  {
+	"id": 42,
+	"x": 3146,
+	"z": 9907,
+	"radius": 5
+  },
+  // Zombie
+  {
+	"id": 43,
+	"x": 3142,
+	"z": 9904,
+	"radius": 5
+  },
+  // Zombie
+  {
+	"id": 44,
+	"x": 3147,
+	"z": 9903,
+	"radius": 5
+  },
+  // Zombie
+  {
+	"id": 44,
+	"x": 3141,
+	"z": 9898,
+	"radius": 5
+  },
+  // Zombie
+  {
+	"id": 44,
+	"x": 3147,
+	"z": 9898,
+	"radius": 5
+  },
+  // Zombie
+  {
+	"id": 44,
+	"x": 3150,
+	"z": 9891,
+	"radius": 5
+  },
+  // Zombie
+  {
+	"id": 43,
+	"x": 3139,
+	"z": 9891,
+	"radius": 5
+  },
+  // Zombie
+  {
+	"id": 42,
+	"x": 3145,
+	"z": 9891,
+	"radius": 5
+  },
+  // Zombie
+  {
+	"id": 42,
+	"x": 3145,
+	"z": 9885,
+	"radius": 5
+  },
+  // Zombie
+  {
+	"id": 42,
+	"x": 3140,
+	"z": 9884,
+	"radius": 5
+  },
+  // Zombie
+  {
+	"id": 44,
+	"x": 3145,
+	"z": 9882,
+	"radius": 5
+  },
+  // Zombie
+  {
+	"id": 78,
+	"x": 3151,
+	"z": 9877,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 80,
+	"x": 3141,
+	"z": 9870,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 81,
+	"x": 3140,
+	"z": 9873,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 77,
+	"x": 3137,
+	"z": 9872,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 79,
+	"x": 3138,
+	"z": 9876,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 73,
+	"x": 3136,
+	"z": 9875,
+	"radius": 5
+  },
+  // Skeleton
+  {
+	"id": 3049,
+	"x": 3128,
+	"z": 9875,
+	"radius": 5
+  },
+  // Hobgoblin
+  {
+	"id": 3050,
+	"x": 3125,
+	"z": 9873,
+	"radius": 5
+  },
+  // Hobgoblin
+  {
+	"id": 3050,
+	"x": 3124,
+	"z": 9877,
+	"radius": 5
+  },
+  // Hobgoblin
+  {
+	"id": 3050,
+	"x": 3122,
+	"z": 9874,
+	"radius": 5
+  },
+  // Hobgoblin
+  {
+	"id": 3050,
+	"x": 3121,
+	"z": 9872,
+	"radius": 5
+  },
+  // Hobgoblin
+  {
+	"id": 56,
+	"x": 3117,
+	"z": 9868,
+	"radius": 5
+  },
+  // Zombie
+  {
+	"id": 55,
+	"x": 3122,
+	"z": 9863,
+	"radius": 5
+  },
+  // Zombie
+  {
+	"id": 57,
+	"x": 3127,
+	"z": 9864,
+	"radius": 5
+  },
+  // Zombie
+  {
+	"id": 58,
+	"x": 3129,
+	"z": 9861,
+	"radius": 5
+  },
+  // Zombie
+  
+  {
+	"id": 2098,
+	"x": 3118,
+	"z": 9849,
+	"radius": 6
+  },
+  // Hill giant
+  {
+	"id": 2100,
+	"x": 3120,
+	"z": 9845,
+	"radius": 6
+  },
+  // Hill giant
+  {
+	"id": 2099,
+	"x": 3116,
+	"z": 9845,
+	"radius": 6
+  },
+  // Hill giant
+  {
+	"id": 2101,
+	"x": 3110,
+	"z": 9843,
+	"radius": 6
+  },
+  // Hill giant
+  {
+	"id": 2098,
+	"x": 3111,
+	"z": 9840,
+	"radius": 6
+  },
+  // Hill giant
+  {
+	"id": 2102,
+	"x": 3117,
+	"z": 9835,
+	"radius": 6
+  },
+  // Hill giant
+  {
+	"id": 2102,
+	"x": 3116,
+	"z": 9832,
+	"radius": 6
+  },
+  // Hill giant
+  {
+	"id": 2103,
+	"x": 3112,
+	"z": 9832,
+	"radius": 6
+  },
+  // Hill giant
+  {
+	"id": 2101,
+	"x": 3108,
+	"z": 9833,
+	"radius": 6
+  },
+  // Hill giant
+  {
+	"id": 2103,
+	"x": 3106,
+	"z": 9828,
+	"radius": 6
+  },
+  // Hill giant
+  {
+	"id": 2099,
+	"x": 3102,
+	"z": 9831,
+	"radius": 6
+  },
+  // Hill giant
+  {
+	"id": 2100,
+	"x": 3100,
+	"z": 9834,
+	"radius": 6
+  },
+  // Hill giant
+  
+  {
+	"id": 2883,
+	"x": 3132,
+	"z": 9923,
+	"radius": 6
+  },
+  // Thug
+  {
+	"id": 2883,
+	"x": 3133,
+	"z": 9924,
+	"radius": 6
+  },
+  // Thug
+  {
+	"id": 2883,
+	"x": 3131,
+	"z": 9927,
+	"radius": 6
+  },
+  // Thug
+  {
+	"id": 2883,
+	"x": 3129,
+	"z": 9929,
+	"radius": 6
+  },
+  // Thug
+  {
+	"id": 2883,
+	"x": 3127,
+	"z": 9931,
+	"radius": 6
+  },
+  // Thug
+  {
+	"id": 2883,
+	"x": 3127,
+	"z": 9929,
+	"radius": 6
+  },
+  // Thug
+  {
+	"id": 2883,
+	"x": 3132,
+	"z": 9932,
+	"radius": 6
+  },
+  // Thug
+  {
+	"id": 2883,
+	"x": 3130,
+	"z": 9933,
+	"radius": 6
+  },
+  // Thug
+  {
+	"id": 2883,
+	"x": 3125,
+	"z": 9930,
+	"radius": 6
+  },
+  // Thug
+  
+  {
+	"id": 2878,
+	"x": 3118,
+	"z": 9926,
+	"radius": 6
+  },
+  // Chaos druid
+  {
+	"id": 2878,
+	"x": 3118,
+	"z": 9929,
+	"radius": 6
+  },
+  // Chaos druid
+  {
+	"id": 2878,
+	"x": 3114,
+	"z": 9927,
+	"radius": 6
+  },
+  // Chaos druid
+  {
+	"id": 2878,
+	"x": 3114,
+	"z": 9930,
+	"radius": 6
+  },
+  // Chaos druid
+  {
+	"id": 2878,
+	"x": 3111,
+	"z": 9932,
+	"radius": 6
+  },
+  // Chaos druid
+  {
+	"id": 2878,
+	"x": 3105,
+	"z": 9936,
+	"radius": 6
+  },
+  // Chaos druid
+  {
+	"id": 2878,
+	"x": 3105,
+	"z": 9940,
+	"radius": 6
+  },
+  // Chaos druid
+  {
+	"id": 2878,
+	"x": 3111,
+	"z": 9940,
+	"radius": 6
+  },
+  // Chaos druid
+  {
+	"id": 2878,
+	"x": 3107,
+	"z": 9943,
+	"radius": 6
+  },
+  // Chaos druid
+  {
+	"id": 2878,
+	"x": 3105,
+	"z": 9940,
+	"radius": 6
+  }
+  // Chaos druid
+]

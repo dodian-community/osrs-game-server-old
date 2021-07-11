@@ -1,0 +1,565 @@
+[
+  {
+	"id": 2163,
+	"x": 2454,
+	"z": 5141,
+	"radius": 3
+  },
+  // TzHaar-Hur
+  {
+	"id": 2170,
+	"x": 2455,
+	"z": 5153,
+	"radius": 4
+  },
+  // TzHaar-Xil
+  {
+	"id": 2187,
+	"x": 2457,
+	"z": 5121,
+	"radius": 1
+  },
+  // TzHaar-Ket
+  {
+	"id": 2179,
+	"x": 2458,
+	"z": 5130,
+	"radius": 4
+  },
+  // TzHaar-Ket
+  {
+	"id": 2169,
+	"x": 2459,
+	"z": 5157,
+	"radius": 4
+  },
+  // TzHaar-Xil
+  {
+	"id": 2164,
+	"x": 2460,
+	"z": 5124,
+	"radius": 2
+  },
+  // TzHaar-Hur
+  {
+	"id": 2164,
+	"x": 2458,
+	"z": 5127,
+	"radius": 3
+  },
+  // TzHaar-Hur
+  {
+	"id": 2178,
+	"x": 2458,
+	"z": 5160,
+	"radius": 4
+  },
+  // TzHaar-Ket
+  {
+	"id": 2170,
+	"x": 2459,
+	"z": 5160,
+	"radius": 3
+  },
+  // TzHaar-Xil
+  {
+	"id": 2158,
+	"x": 2461,
+	"z": 5142,
+	"radius": 4
+  },
+  // TzHaar-Mej
+  {
+	"id": 2185,
+	"x": 2461,
+	"z": 5125,
+	"radius": 1
+  },
+  // TzHaar-Mej-Roh
+  {
+	"id": 2164,
+	"x": 2461,
+	"z": 5140,
+	"radius": 3
+  },
+  // TzHaar-Hur
+  {
+	"id": 2184,
+	"x": 2464,
+	"z": 5149,
+	"radius": 1,
+	"realismExclusive": true
+  },
+  // TzHaar-Hur-Lek
+  {
+	"id": 2184,
+	"x": 2464,
+	"z": 5149,
+	"radius": 1,
+	"economyExclusive": true
+  },
+  // TzHaar-Hur-Lek
+  {
+	"id": 2178,
+	"x": 2463,
+	"z": 5163,
+	"radius": 4
+  },
+  // TzHaar-Ket
+  {
+	"id": 2179,
+	"x": 2466,
+	"z": 5142,
+	"radius": 4
+  },
+  // TzHaar-Ket
+  {
+	"id": 2165,
+	"x": 2469,
+	"z": 5145,
+	"radius": 4
+  },
+  // TzHaar-Hur
+  {
+	"id": 2179,
+	"x": 2471,
+	"z": 5123,
+	"radius": 3
+  },
+  // TzHaar-Ket
+  {
+	"id": 2169,
+	"x": 2471,
+	"z": 5166,
+	"radius": 4
+  },
+  // TzHaar-Xil
+  {
+	"id": 2159,
+	"x": 2470,
+	"z": 5124,
+	"radius": 3
+  },
+  // TzHaar-Mej
+  {
+	"id": 2186,
+	"x": 2472,
+	"z": 5139,
+	"radius": 1
+  },
+  // TzHaar-Ket
+  {
+	"id": 2165,
+	"x": 2471,
+	"z": 5143,
+	"radius": 3
+  },
+  // TzHaar-Hur
+  {
+	"id": 2179,
+	"x": 2471,
+	"z": 5166,
+	"radius": 3
+  },
+  // TzHaar-Ket
+  {
+	"id": 2158,
+	"x": 2472,
+	"z": 5125,
+	"radius": 4
+  },
+  // TzHaar-Mej
+  {
+	"id": 2179,
+	"x": 2474,
+	"z": 5147,
+	"radius": 2
+  },
+  // TzHaar-Ket
+  {
+	"id": 2178,
+	"x": 2474,
+	"z": 5130,
+	"radius": 4
+  },
+  // TzHaar-Ket
+  {
+	"id": 2186,
+	"x": 2474,
+	"z": 5141,
+	"radius": 1
+  },
+  // TzHaar-Ket
+  {
+	"id": 2166,
+	"x": 2476,
+	"z": 5152,
+	"radius": 4
+  },
+  // TzHaar-Hur
+  {
+	"id": 2183,
+	"x": 2477,
+	"z": 5146,
+	"radius": 1
+  },
+  // TzHaar-Hur-Tel
+  {
+	"id": 2160,
+	"x": 2480,
+	"z": 5135,
+	"radius": 4
+  },
+  // TzHaar-Mej
+  {
+	"id": 2170,
+	"x": 2478,
+	"z": 5166,
+	"radius": 4
+  },
+  // TzHaar-Xil
+  {
+	"id": 2179,
+	"x": 2479,
+	"z": 5167,
+	"radius": 4
+  },
+  // TzHaar-Ket
+  {
+	"id": 2155,
+	"x": 2479,
+	"z": 5154,
+	"radius": 4
+  },
+  // TzHaar-Mej
+  {
+	"id": 2179,
+	"x": 2480,
+	"z": 5153,
+	"radius": 3
+  },
+  // TzHaar-Ket
+  {
+	"id": 2178,
+	"x": 2482,
+	"z": 5159,
+	"radius": 5
+  },
+  // TzHaar-Ket
+  {
+	"id": 2177,
+	"x": 2482,
+	"z": 5137,
+	"radius": 4
+  },
+  // TzHaar-Ket
+  {
+	"id": 2166,
+	"x": 2483,
+	"z": 5157,
+	"radius": 4
+  },
+  // TzHaar-Hur
+  {
+	"id": 2160,
+	"x": 2487,
+	"z": 5140,
+	"radius": 4
+  },
+  // TzHaar-Mej
+  {
+	"id": 2169,
+	"x": 2487,
+	"z": 5171,
+	"radius": 4
+  },
+  // TzHaar-Xil
+  {
+	"id": 2166,
+	"x": 2486,
+	"z": 5157,
+	"radius": 4
+  },
+  // TzHaar-Hur
+  {
+	"id": 2178,
+	"x": 2490,
+	"z": 5142,
+	"radius": 3
+  },
+  // TzHaar-Ket
+  {
+	"id": 2170,
+	"x": 2489,
+	"z": 5175,
+	"radius": 3
+  },
+  // TzHaar-Xil
+  {
+	"id": 2154,
+	"x": 2490,
+	"z": 5158,
+	"radius": 3
+  },
+  // TzHaar-Mej
+  {
+	"id": 2166,
+	"x": 2490,
+	"z": 5157,
+	"radius": 3
+  },
+  // TzHaar-Hur
+  {
+	"id": 2178,
+	"x": 2490,
+	"z": 5173,
+	"radius": 4
+  },
+  // TzHaar-Ket
+  {
+	"id": 2160,
+	"x": 2492,
+	"z": 5142,
+	"radius": 3
+  },
+  // TzHaar-Mej
+  {
+	"id": 2187,
+	"x": 2491,
+	"z": 5173,
+	"radius": 1
+  },
+  // TzHaar-Ket
+  {
+	"id": 2187,
+	"x": 2491,
+	"z": 5176,
+	"radius": 1
+  },
+  // TzHaar-Ket
+  {
+	"id": 2166,
+	"x": 2491,
+	"z": 5155,
+	"radius": 3
+  },
+  // TzHaar-Hur
+  {
+	"id": 2187,
+	"x": 2492,
+	"z": 5156,
+	"radius": 1
+  },
+  // TzHaar-Ket
+  {
+	"id": 2187,
+	"x": 2492,
+	"z": 5159,
+	"radius": 1
+  },
+  // TzHaar-Ket
+  {
+	"id": 2181,
+	"x": 2398,
+	"z": 5179,
+	"radius": 0
+  },
+  // TzHaar-Mej-Kah
+  {
+	"id": 2187,
+	"x": 2436,
+	"z": 5122,
+	"radius": 0
+  },
+  // TzHaar-Ket
+  {
+	"id": 2171,
+	"x": 2436,
+	"z": 5171,
+	"radius": 4
+  },
+  // TzHaar-Xil
+  {
+	"id": 2172,
+	"x": 2438,
+	"z": 5125,
+	"radius": 1
+  },
+  // TzHaar-Xil
+  {
+	"id": 2172,
+	"x": 2435,
+	"z": 5125,
+	"radius": 2
+  },
+  // TzHaar-Xil
+  {
+	"id": 2180,
+	"x": 2438,
+	"z": 5169,
+	"radius": 1
+  },
+  // TzHaar-Mej-Jal
+  {
+	"id": 2178,
+	"x": 2439,
+	"z": 5130,
+	"radius": 3
+  },
+  // TzHaar-Ket
+  {
+	"id": 2171,
+	"x": 2442,
+	"z": 5140,
+	"radius": 4
+  },
+  // TzHaar-Xil
+  {
+	"id": 2171,
+	"x": 2441,
+	"z": 5137,
+	"radius": 4
+  },
+  // TzHaar-Xil
+  {
+	"id": 2178,
+	"x": 2444,
+	"z": 5145,
+	"radius": 4
+  },
+  // TzHaar-Ket
+  {
+	"id": 2177,
+	"x": 2446,
+	"z": 5168,
+	"radius": 4
+  },
+  // TzHaar-Ket
+  {
+	"id": 7677,
+	"x": 2444,
+	"z": 5179,
+	"radius": 2
+  },
+  // TzHaar-Ket-Zuh
+  {
+	"id": 7677,
+	"x": 2542,
+	"z": 5140,
+	"radius": 2
+  },
+  // TzHaar-Ket-Zuh
+  {
+	"id": 2177,
+	"x": 2448,
+	"z": 5143,
+	"radius": 5
+  },
+  // TzHaar-Ket
+  {
+	"id": 2187,
+	"x": 2450,
+	"z": 5121,
+	"radius": 1
+  },
+  // TzHaar-Ket
+  {
+	"id": 2171,
+	"x": 2449,
+	"z": 5147,
+	"radius": 5
+  },
+  // TzHaar-Xil
+  {
+	"id": 2170,
+	"x": 2450,
+	"z": 5167,
+	"radius": 4
+  },
+  // TzHaar-Xil
+  {
+	"id": 2163,
+	"x": 2451,
+	"z": 5123,
+	"radius": 2
+  },
+  // TzHaar-Hur
+  {
+	"id": 2179,
+	"x": 2452,
+	"z": 5151,
+	"radius": 4
+  },
+  // TzHaar-Ket
+  {
+	"id": 5516,
+	"x": 2454,
+	"z": 5133,
+	"radius": 0
+  },
+  // TzHaar-Mej
+  {
+	"id": 2160,
+	"x": 2455,
+	"z": 5124,
+	"radius": 5
+  },
+  // TzHaar-Mej
+  
+  //Inferno start
+  {
+	"id": 7690,
+	"x": 2494,
+	"z": 5114,
+	"radius": 0
+  },
+  {
+	"id": 7676,
+	"x": 2541,
+	"z": 5088,
+	"radius": 0
+  },
+  //Fishing spot
+  {
+	"id": 7676,
+	"x": 2540,
+	"z": 5088,
+	"radius": 0
+  },
+  //Fishing spot
+  {
+	"id": 7676,
+	"x": 2536,
+	"z": 5086,
+	"radius": 0
+  },
+  //Fishing spot
+  
+  {
+	"id": 7676,
+	"x": 2479,
+	"z": 5078,
+	"radius": 0
+  },
+  //Fishing spot
+  {
+	"id": 7676,
+	"x": 2478,
+	"z": 5078,
+	"radius": 0
+  },
+  //Fishing spot
+  {
+	"id": 7676,
+	"x": 2444,
+	"z": 5105,
+	"radius": 0
+  },
+  //Inner Mor-Ul-Rek Equipment Shop Owner
+  {
+	"id": 2183,
+	"x": 2491,
+	"z": 5070,
+	"radius": 3
+  }
+]

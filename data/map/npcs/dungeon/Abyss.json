@@ -1,0 +1,611 @@
+[
+  {
+	"id": 2585,
+	"x": 3037,
+	"z": 4855,
+	"radius": 4
+  },
+  // Abyssal guardian
+  {
+	"id": 2584,
+	"x": 3040,
+	"z": 4808,
+	"radius": 1
+  },
+  // Abyssal leech
+  {
+	"id": 2584,
+	"x": 3044,
+	"z": 4854,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2586,
+	"x": 3046,
+	"z": 4811,
+	"radius": 5
+  },
+  // Abyssal walker
+  {
+	"id": 2586,
+	"x": 3049,
+	"z": 4808,
+	"radius": 3
+  },
+  // Abyssal walker
+  {
+	"id": 2584,
+	"x": 3047,
+	"z": 4853,
+	"radius": 5
+  },
+  // Abyssal leech
+  {
+	"id": 2586,
+	"x": 3050,
+	"z": 4810,
+	"radius": 3
+  },
+  // Abyssal walker
+  {
+	"id": 2585,
+	"x": 3049,
+	"z": 4852,
+	"radius": 4
+  },
+  // Abyssal guardian
+  {
+	"id": 2584,
+	"x": 3050,
+	"z": 4853,
+	"radius": 4
+  },
+  // Abyssal leech
+  {
+	"id": 2586,
+	"x": 3050,
+	"z": 4811,
+	"radius": 4
+  },
+  // Abyssal walker
+  {
+	"id": 2586,
+	"x": 3050,
+	"z": 4853,
+	"radius": 4
+  },
+  // Abyssal walker
+  {
+	"id": 2586,
+	"x": 3053,
+	"z": 4811,
+	"radius": 4
+  },
+  // Abyssal walker
+  {
+	"id": 2586,
+	"x": 3057,
+	"z": 4814,
+	"radius": 4
+  },
+  // Abyssal walker
+  {
+	"id": 2584,
+	"x": 3054,
+	"z": 4810,
+	"radius": 2
+  },
+  // Abyssal leech
+  {
+	"id": 2584,
+	"x": 3056,
+	"z": 4849,
+	"radius": 4
+  },
+  // Abyssal leech
+  {
+	"id": 2585,
+	"x": 3054,
+	"z": 4851,
+	"radius": 5
+  },
+  // Abyssal guardian
+  {
+	"id": 2585,
+	"x": 3057,
+	"z": 4820,
+	"radius": 4
+  },
+  // Abyssal guardian
+  {
+	"id": 2585,
+	"x": 3054,
+	"z": 4848,
+	"radius": 4
+  },
+  // Abyssal guardian
+  {
+	"id": 2586,
+	"x": 3055,
+	"z": 4811,
+	"radius": 3
+  },
+  // Abyssal walker
+  {
+	"id": 2586,
+	"x": 3056,
+	"z": 4811,
+	"radius": 3
+  },
+  // Abyssal walker
+  {
+	"id": 2586,
+	"x": 3057,
+	"z": 4814,
+	"radius": 3
+  },
+  // Abyssal walker
+  {
+	"id": 2585,
+	"x": 3055,
+	"z": 4847,
+	"radius": 4
+  },
+  // Abyssal guardian
+  {
+	"id": 2585,
+	"x": 3057,
+	"z": 4813,
+	"radius": 2
+  },
+  // Abyssal guardian
+  {
+	"id": 2584,
+	"x": 3060,
+	"z": 4818,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2586,
+	"x": 3058,
+	"z": 4844,
+	"radius": 2
+  },
+  // Abyssal walker
+  {
+	"id": 2585,
+	"x": 3059,
+	"z": 4810,
+	"radius": 3
+  },
+  // Abyssal guardian
+  {
+	"id": 2585,
+	"x": 3060,
+	"z": 4820,
+	"radius": 4
+  },
+  // Abyssal guardian
+  {
+	"id": 2586,
+	"x": 3059,
+	"z": 4819,
+	"radius": 2
+  },
+  // Abyssal walker
+  {
+	"id": 2585,
+	"x": 3061,
+	"z": 4826,
+	"radius": 3
+  },
+  // Abyssal guardian
+  {
+	"id": 2585,
+	"x": 3061,
+	"z": 4839,
+	"radius": 3
+  },
+  // Abyssal guardian
+  {
+	"id": 2584,
+	"x": 3061,
+	"z": 4835,
+	"radius": 2
+  },
+  // Abyssal leech
+  {
+	"id": 2586,
+	"x": 3059,
+	"z": 4812,
+	"radius": 2
+  },
+  // Abyssal walker
+  {
+	"id": 2586,
+	"x": 3061,
+	"z": 4818,
+	"radius": 5
+  },
+  // Abyssal walker
+  {
+	"id": 2586,
+	"x": 3060,
+	"z": 4826,
+	"radius": 2
+  },
+  // Abyssal walker
+  {
+	"id": 2585,
+	"x": 3059,
+	"z": 4842,
+	"radius": 4
+  },
+  // Abyssal guardian
+  {
+	"id": 2586,
+	"x": 3061,
+	"z": 4823,
+	"radius": 3
+  },
+  // Abyssal walker
+  {
+	"id": 2584,
+	"x": 3062,
+	"z": 4837,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2585,
+	"x": 3064,
+	"z": 4824,
+	"radius": 4
+  },
+  // Abyssal guardian
+  {
+	"id": 2585,
+	"x": 3062,
+	"z": 4829,
+	"radius": 2
+  },
+  // Abyssal guardian
+  {
+	"id": 2585,
+	"x": 3063,
+	"z": 4838,
+	"radius": 3
+  },
+  // Abyssal guardian
+  {
+	"id": 2584,
+	"x": 3064,
+	"z": 4824,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2585,
+	"x": 3016,
+	"z": 4826,
+	"radius": 6
+  },
+  // Abyssal guardian
+  {
+	"id": 2584,
+	"x": 3016,
+	"z": 4838,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2584,
+	"x": 3015,
+	"z": 4828,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2584,
+	"x": 3015,
+	"z": 4836,
+	"radius": 4
+  },
+  // Abyssal leech
+  {
+	"id": 2584,
+	"x": 3015,
+	"z": 4825,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2584,
+	"x": 3015,
+	"z": 4830,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2586,
+	"x": 3015,
+	"z": 4829,
+	"radius": 4
+  },
+  // Abyssal walker
+  {
+	"id": 2584,
+	"x": 3015,
+	"z": 4833,
+	"radius": 4
+  },
+  // Abyssal leech
+  {
+	"id": 2584,
+	"x": 3016,
+	"z": 4839,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2584,
+	"x": 3018,
+	"z": 4811,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2584,
+	"x": 3019,
+	"z": 4816,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2586,
+	"x": 3016,
+	"z": 4825,
+	"radius": 4
+  },
+  // Abyssal walker
+  {
+	"id": 2584,
+	"x": 3016,
+	"z": 4824,
+	"radius": 2
+  },
+  // Abyssal leech
+  {
+	"id": 2585,
+	"x": 3019,
+	"z": 4845,
+	"radius": 5
+  },
+  // Abyssal guardian
+  {
+	"id": 2584,
+	"x": 3017,
+	"z": 4841,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2586,
+	"x": 3029,
+	"z": 4870,
+	"radius": 1
+  },
+  // Abyssal walker
+  {
+	"id": 2584,
+	"x": 3018,
+	"z": 4844,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2584,
+	"x": 3018,
+	"z": 4814,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2586,
+	"x": 3022,
+	"z": 4816,
+	"radius": 5
+  },
+  // Abyssal walker
+  {
+	"id": 2584,
+	"x": 3020,
+	"z": 4845,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2584,
+	"x": 3021,
+	"z": 4812,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2586,
+	"x": 3020,
+	"z": 4849,
+	"radius": 3
+  },
+  // Abyssal walker
+  {
+	"id": 2584,
+	"x": 3040,
+	"z": 4870,
+	"radius": 1
+  },
+  // Abyssal leech
+  {
+	"id": 2586,
+	"x": 3023,
+	"z": 4813,
+	"radius": 4
+  },
+  // Abyssal walker
+  {
+	"id": 2584,
+	"x": 3024,
+	"z": 4851,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2586,
+	"x": 3028,
+	"z": 4809,
+	"radius": 3
+  },
+  // Abyssal walker
+  {
+	"id": 2584,
+	"x": 3025,
+	"z": 4851,
+	"radius": 5
+  },
+  // Abyssal leech
+  {
+	"id": 2586,
+	"x": 3028,
+	"z": 4811,
+	"radius": 4
+  },
+  // Abyssal walker
+  {
+	"id": 2585,
+	"x": 3027,
+	"z": 4811,
+	"radius": 3
+  },
+  // Abyssal guardian
+  {
+	"id": 2586,
+	"x": 3028,
+	"z": 4807,
+	"radius": 4
+  },
+  // Abyssal walker
+  {
+	"id": 2584,
+	"x": 3051,
+	"z": 4871,
+	"radius": 0
+  },
+  // Abyssal leech
+  {
+	"id": 2586,
+	"x": 3029,
+	"z": 4810,
+	"radius": 5
+  },
+  // Abyssal walker
+  {
+	"id": 2584,
+	"x": 3029,
+	"z": 4853,
+	"radius": 4
+  },
+  // Abyssal leech
+  {
+	"id": 2584,
+	"x": 3030,
+	"z": 4810,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2586,
+	"x": 3030,
+	"z": 4809,
+	"radius": 5
+  },
+  // Abyssal walker
+  {
+	"id": 2586,
+	"x": 3030,
+	"z": 4853,
+	"radius": 5
+  },
+  // Abyssal walker
+  {
+	"id": 2586,
+	"x": 3030,
+	"z": 4809,
+	"radius": 5
+  },
+  // Abyssal walker
+  {
+	"id": 2586,
+	"x": 3033,
+	"z": 4810,
+	"radius": 5
+  },
+  // Abyssal walker
+  {
+	"id": 2584,
+	"x": 3032,
+	"z": 4854,
+	"radius": 4
+  },
+  // Abyssal leech
+  {
+	"id": 2586,
+	"x": 3033,
+	"z": 4809,
+	"radius": 4
+  },
+  // Abyssal walker
+  {
+	"id": 2586,
+	"x": 3037,
+	"z": 4809,
+	"radius": 6
+  },
+  // Abyssal walker
+  {
+	"id": 2586,
+	"x": 3038,
+	"z": 4810,
+	"radius": 4
+  },
+  // Abyssal walker
+  {
+	"id": 2586,
+	"x": 3038,
+	"z": 4809,
+	"radius": 4
+  },
+  // Abyssal walker
+  {
+	"id": 2584,
+	"x": 3037,
+	"z": 4854,
+	"radius": 3
+  },
+  // Abyssal leech
+  {
+	"id": 2583,
+	"x": 3039,
+	"z": 4834,
+	"direction": "S"
+  },
+  // Dark mage
+  {
+	"id": 2586,
+	"x": 3043,
+	"z": 4810,
+	"radius": 4
+  }
+  // Abyssal walker
+]

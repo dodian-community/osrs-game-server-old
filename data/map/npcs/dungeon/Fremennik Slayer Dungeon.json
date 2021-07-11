@@ -1,0 +1,450 @@
+[
+  {
+	"id": 406,
+	"x": 2797,
+	"z": 9996,
+	"radius": 6
+  },
+  // Cave Crawler
+  {
+	"id": 406,
+	"x": 2793,
+	"z": 9998,
+	"radius": 6
+  },
+  // Cave Crawler
+  {
+	"id": 407,
+	"x": 2792,
+	"z": 9993,
+	"radius": 6
+  },
+  // Cave Crawler
+  {
+	"id": 407,
+	"x": 2790,
+	"z": 9997,
+	"radius": 6
+  },
+  // Cave Crawler
+  {
+	"id": 408,
+	"x": 2787,
+	"z": 9994,
+	"radius": 6
+  },
+  // Cave Crawler
+  {
+	"id": 408,
+	"x": 2784,
+	"z": 9995,
+	"radius": 6
+  },
+  // Cave Crawler
+  {
+	"id": 409,
+	"x": 2782,
+	"z": 10000,
+	"radius": 6
+  },
+  // Cave Crawler
+  {
+	"id": 409,
+	"x": 2785,
+	"z": 9999,
+	"radius": 6
+  },
+  // Cave Crawler
+  {
+	"id": 421,
+	"x": 2794,
+	"z": 10016,
+	"radius": 6
+  },
+  // Rockslug
+  {
+	"id": 421,
+	"x": 2792,
+	"z": 10019,
+	"radius": 6
+  },
+  // Rockslug
+  {
+	"id": 421,
+	"x": 2800,
+	"z": 10013,
+	"radius": 6
+  },
+  // Rockslug
+  {
+	"id": 421,
+	"x": 2798,
+	"z": 10018,
+	"radius": 6
+  },
+  // Rockslug
+  {
+	"id": 421,
+	"x": 2802,
+	"z": 10021,
+	"radius": 6
+  },
+  // Rockslug
+  {
+	"id": 421,
+	"x": 2804,
+	"z": 10017,
+	"radius": 6
+  },
+  // Rockslug
+  {
+	"id": 421,
+	"x": 2806,
+	"z": 10021,
+	"radius": 6
+  },
+  // Rockslug
+  {
+	"id": 419,
+	"x": 2802,
+	"z": 10032,
+	"radius": 6
+  },
+  // Cockatrice
+  {
+	"id": 419,
+	"x": 2797,
+	"z": 10031,
+	"radius": 6
+  },
+  // Cockatrice
+  {
+	"id": 419,
+	"x": 2800,
+	"z": 10036,
+	"radius": 6
+  },
+  // Cockatrice
+  {
+	"id": 419,
+	"x": 2796,
+	"z": 10034,
+	"radius": 6
+  },
+  // Cockatrice
+  {
+	"id": 419,
+	"x": 2792,
+	"z": 10037,
+	"radius": 6
+  },
+  // Cockatrice
+  {
+	"id": 419,
+	"x": 2788,
+	"z": 10034,
+	"radius": 6
+  },
+  // Cockatrice
+  {
+	"id": 419,
+	"x": 2785,
+	"z": 10038,
+	"radius": 6
+  },
+  // Cockatrice
+  {
+	"id": 433,
+	"x": 2757,
+	"z": 10011,
+	"radius": 6
+  },
+  // Pyrefiend
+  {
+	"id": 433,
+	"x": 2761,
+	"z": 10012,
+	"radius": 6
+  },
+  // Pyrefiend
+  {
+	"id": 434,
+	"x": 2760,
+	"z": 10008,
+	"radius": 6
+  },
+  // Pyrefiend
+  {
+	"id": 434,
+	"x": 2757,
+	"z": 10006,
+	"radius": 6
+  },
+  // Pyrefiend
+  {
+	"id": 435,
+	"x": 2759,
+	"z": 10003,
+	"radius": 6
+  },
+  // Pyrefiend
+  {
+	"id": 435,
+	"x": 2762,
+	"z": 10005,
+	"radius": 6
+  },
+  // Pyrefiend
+  {
+	"id": 436,
+	"x": 2766,
+	"z": 10002,
+	"radius": 6
+  },
+  // Pyrefiend
+  {
+	"id": 436,
+	"x": 2760,
+	"z": 10000,
+	"radius": 6
+  },
+  // Pyrefiend
+  {
+	"id": 433,
+	"x": 2766,
+	"z": 10004,
+	"radius": 6
+  },
+  // Pyrefiend
+  {
+	"id": 435,
+	"x": 2761,
+	"z": 9997,
+	"radius": 6
+  },
+  // Pyrefiend
+  {
+	"id": 417,
+	"x": 2745,
+	"z": 10004,
+	"radius": 6
+  },
+  // Basilisk
+  {
+	"id": 417,
+	"x": 2740,
+	"z": 10005,
+	"radius": 6
+  },
+  // Basilisk
+  {
+	"id": 417,
+	"x": 2740,
+	"z": 10010,
+	"radius": 6
+  },
+  // Basilisk
+  {
+	"id": 417,
+	"x": 2746,
+	"z": 10008,
+	"radius": 6
+  },
+  // Basilisk
+  {
+	"id": 417,
+	"x": 2743,
+	"z": 10012,
+	"radius": 6
+  },
+  // Basilisk
+  {
+	"id": 417,
+	"x": 2746,
+	"z": 10014,
+	"radius": 6
+  },
+  // Basilisk
+  {
+	"id": 417,
+	"x": 2741,
+	"z": 10016,
+	"radius": 6
+  },
+  // Basilisk
+  {
+	"id": 437,
+	"x": 2711,
+	"z": 10031,
+	"radius": 6
+  },
+  // Jelly
+  {
+	"id": 438,
+	"x": 2712,
+	"z": 10026,
+	"radius": 6
+  },
+  // Jelly
+  {
+	"id": 439,
+	"x": 2709,
+	"z": 10023,
+	"radius": 6
+  },
+  // Jelly
+  {
+	"id": 439,
+	"x": 2707,
+	"z": 10028,
+	"radius": 6
+  },
+  // Jelly
+  {
+	"id": 440,
+	"x": 2705,
+	"z": 10025,
+	"radius": 6
+  },
+  // Jelly
+  {
+	"id": 440,
+	"x": 2703,
+	"z": 10022,
+	"radius": 6
+  },
+  // Jelly
+  {
+	"id": 441,
+	"x": 2699,
+	"z": 10023,
+	"radius": 6
+  },
+  // Jelly
+  {
+	"id": 441,
+	"x": 2697,
+	"z": 10027,
+	"radius": 6
+  },
+  // Jelly
+  {
+	"id": 442,
+	"x": 2700,
+	"z": 10030,
+	"radius": 6
+  },
+  // Jelly
+  {
+	"id": 442,
+	"x": 2703,
+	"z": 10032,
+	"radius": 6
+  },
+  // Jelly
+  {
+	"id": 427,
+	"x": 2716,
+	"z": 10010,
+	"radius": 6
+  },
+  // Turoth
+  {
+	"id": 427,
+	"x": 2720,
+	"z": 10012,
+	"radius": 6
+  },
+  // Turoth
+  {
+	"id": 427,
+	"x": 2720,
+	"z": 10008,
+	"radius": 6
+  },
+  // Turoth
+  {
+	"id": 428,
+	"x": 2719,
+	"z": 10004,
+	"radius": 6
+  },
+  // Turoth
+  {
+	"id": 428,
+	"x": 2723,
+	"z": 10006,
+	"radius": 6
+  },
+  // Turoth
+  {
+	"id": 428,
+	"x": 2724,
+	"z": 10011,
+	"radius": 6
+  },
+  // Turoth
+  {
+	"id": 429,
+	"x": 2726,
+	"z": 10007,
+	"radius": 6
+  },
+  // Turoth
+  {
+	"id": 429,
+	"x": 2722,
+	"z": 10001,
+	"radius": 6
+  },
+  // Turoth
+  {
+	"id": 430,
+	"x": 2722,
+	"z": 9996,
+	"radius": 6
+  },
+  // Turoth
+  {
+	"id": 430,
+	"x": 2729,
+	"z": 9998,
+	"radius": 6
+  },
+  // Turoth
+  {
+	"id": 410,
+	"x": 2703,
+	"z": 10001,
+	"radius": 6
+  },
+  // Korask
+  {
+	"id": 411,
+	"x": 2704,
+	"z": 9995,
+	"radius": 6
+  },
+  // Korask
+  {
+	"id": 410,
+	"x": 2696,
+	"z": 9994,
+	"radius": 6
+  },
+  // Korask
+  {
+	"id": 411,
+	"x": 2695,
+	"z": 10002,
+	"radius": 6
+  },
+  // Korask
+  {
+	"id": 410,
+	"x": 2699,
+	"z": 9998,
+	"radius": 6
+  }
+  // Korask
+]

@@ -1,7 +1,6 @@
 package io.nozemi.runescape.task;
 
 import io.nozemi.runescape.model.World;
-import io.nozemi.skript.Fiber;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

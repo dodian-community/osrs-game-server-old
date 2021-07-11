@@ -37,6 +37,9 @@ dependencies {
     implementation("org.reflections:reflections:0.9.11")
     implementation("backport-util-concurrent:backport-util-concurrent:3.1")
     implementation("com.google.code.gson:gson:2.8.1")
+    implementation("com.michael-bull.kotlin-inline-logger:kotlin-inline-logger:1.0.3")
+    implementation("io.github.classgraph:classgraph:4.8.102")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
 
     runtimeOnly("org.xerial:sqlite-jdbc:3.36.0.1")
 

@@ -1,0 +1,1514 @@
+[
+  {
+	"id": 5126,
+	"x": 2902,
+	"z": 9863,
+	"radius": 3
+  },
+  // Experiment No.2
+  {
+	"id": 5126,
+	"x": 2906,
+	"z": 9862,
+	"radius": 7
+  },
+  // Experiment No.2
+  {
+	"id": 5126,
+	"x": 2909,
+	"z": 9863,
+	"radius": 7
+  },
+  // Experiment No.2
+  {
+	"id": 5126,
+	"x": 2913,
+	"z": 9863,
+	"radius": 6
+  },
+  // Experiment No.2
+  {
+	"id": 5133,
+	"x": 2913,
+	"z": 9867,
+	"radius": 0
+  },
+  // Cage
+  {
+	"id": 5131,
+	"x": 2914,
+	"z": 9867,
+	"radius": 0
+  },
+  // Winkin
+  {
+	"id": 5133,
+	"x": 2915,
+	"z": 9867,
+	"radius": 0
+  },
+  // Cage
+  {
+	"id": 5133,
+	"x": 2916,
+	"z": 9867,
+	"radius": 0
+  },
+  // Cage
+  {
+	"id": 5126,
+	"x": 2918,
+	"z": 9863,
+	"radius": 2
+  },
+  // Experiment No.2
+  {
+	"id": 5133,
+	"x": 2917,
+	"z": 9867,
+	"radius": 0
+  },
+  // Cage
+  {
+	"id": 5126,
+	"x": 2918,
+	"z": 9863,
+	"radius": 5
+  },
+  // Experiment No.2
+  {
+	"id": 2844,
+	"x": 2955,
+	"z": 9791,
+	"radius": 9
+  },
+  // Magic axe
+  {
+	"id": 2844,
+	"x": 2955,
+	"z": 9778,
+	"radius": 7
+  },
+  // Magic axe
+  {
+	"id": 2844,
+	"x": 2956,
+	"z": 9788,
+	"radius": 10
+  },
+  // Magic axe
+  {
+	"id": 4928,
+	"x": 2889,
+	"z": 9766,
+	"radius": 0
+  },
+  // Fishing spot
+  {
+	"id": 2844,
+	"x": 2959,
+	"z": 9782,
+	"radius": 8
+  },
+  // Magic axe
+  {
+	"id": 4928,
+	"x": 2890,
+	"z": 9766,
+	"radius": 0
+  },
+  // Fishing spot
+  {
+	"id": 2844,
+	"x": 2961,
+	"z": 9791,
+	"radius": 8
+  },
+  // Magic axe
+  {
+	"id": 4928,
+	"x": 2891,
+	"z": 9766,
+	"radius": 0
+  },
+  // Fishing spot
+  {
+	"id": 2844,
+	"x": 2963,
+	"z": 9778,
+	"radius": 7
+  },
+  // Magic axe
+  {
+	"id": 241,
+	"x": 2896,
+	"z": 9765,
+	"radius": 2
+  },
+  // Baby dragon
+  {
+	"id": 2844,
+	"x": 2962,
+	"z": 9784,
+	"radius": 7
+  },
+  // Magic axe
+  {
+	"id": 242,
+	"x": 2894,
+	"z": 9770,
+	"radius": 3
+  },
+  // Baby dragon
+  {
+	"id": 243,
+	"x": 2898,
+	"z": 9765,
+	"radius": 2
+  },
+  // Baby dragon
+  {
+	"id": 2101,
+	"x": 2902,
+	"z": 9735,
+	"radius": 3
+  },
+  // Hill Giant
+  {
+	"id": 268,
+	"x": 2902,
+	"z": 9779,
+	"radius": 3
+  },
+  // Blue dragon
+  {
+	"id": 269,
+	"x": 2904,
+	"z": 9783,
+	"radius": 3
+  },
+  // Blue dragon
+  {
+	"id": 2099,
+	"x": 2905,
+	"z": 9732,
+	"radius": 3
+  },
+  // Hill Giant
+  {
+	"id": 267,
+	"x": 2907,
+	"z": 9776,
+	"radius": 4
+  },
+  // Blue dragon
+  {
+	"id": 2100,
+	"x": 2907,
+	"z": 9735,
+	"radius": 3
+  },
+  // Hill Giant
+  {
+	"id": 267,
+	"x": 2911,
+	"z": 9784,
+	"radius": 4
+  },
+  // Blue dragon
+  {
+	"id": 266,
+	"x": 2911,
+	"z": 9779,
+	"radius": 2
+  },
+  // Blue dragon
+  {
+	"id": 2098,
+	"x": 2912,
+	"z": 9732,
+	"radius": 2
+  },
+  // Hill Giant
+  {
+	"id": 2103,
+	"x": 2913,
+	"z": 9740,
+	"radius": 3
+  },
+  // Hill Giant
+  {
+	"id": 291,
+	"x": 2921,
+	"z": 9760,
+	"radius": 9
+  },
+  // Chaos dwarf
+  {
+	"id": 265,
+	"x": 2920,
+	"z": 9784,
+	"radius": 2
+  },
+  // Blue dragon
+  {
+	"id": 291,
+	"x": 2923,
+	"z": 9755,
+	"radius": 11
+  },
+  // Chaos dwarf
+  {
+	"id": 291,
+	"x": 2930,
+	"z": 9776,
+	"radius": 11
+  },
+  // Chaos dwarf
+  {
+	"id": 242,
+	"x": 2924,
+	"z": 9788,
+	"radius": 4
+  },
+  // Baby dragon
+  {
+	"id": 291,
+	"x": 2925,
+	"z": 9761,
+	"radius": 10
+  },
+  // Chaos dwarf
+  {
+	"id": 3025,
+	"x": 2926,
+	"z": 9749,
+	"radius": 3
+  },
+  // Poison Scorpion
+  {
+	"id": 291,
+	"x": 2935,
+	"z": 9790,
+	"radius": 8
+  },
+  // Chaos dwarf
+  {
+	"id": 3025,
+	"x": 2934,
+	"z": 9772,
+	"radius": 7
+  },
+  // Poison Scorpion
+  {
+	"id": 3025,
+	"x": 2927,
+	"z": 9761,
+	"radius": 7
+  },
+  // Poison Scorpion
+  {
+	"id": 3025,
+	"x": 2934,
+	"z": 9767,
+	"radius": 10
+  },
+  // Poison Scorpion
+  {
+	"id": 291,
+	"x": 2935,
+	"z": 9787,
+	"radius": 5
+  },
+  // Chaos dwarf
+  {
+	"id": 3025,
+	"x": 2943,
+	"z": 9774,
+	"radius": 4
+  },
+  // Poison Scorpion
+  {
+	"id": 2051,
+	"x": 2827,
+	"z": 9791,
+	"radius": 4
+  },
+  // Black Demon
+  {
+	"id": 2050,
+	"x": 2831,
+	"z": 9791,
+	"radius": 3
+  },
+  // Black Demon
+  {
+	"id": 2048,
+	"x": 2838,
+	"z": 9787,
+	"radius": 4
+  },
+  // Black Demon
+  {
+	"id": 64,
+	"x": 2842,
+	"z": 9766,
+	"radius": 3
+  },
+  // Zombie
+  {
+	"id": 2051,
+	"x": 2842,
+	"z": 9786,
+	"radius": 3
+  },
+  // Black Demon
+  {
+	"id": 65,
+	"x": 2839,
+	"z": 9767,
+	"radius": 0
+  },
+  // Zombie
+  {
+	"id": 67,
+	"x": 2847,
+	"z": 9754,
+	"radius": 1
+  },
+  // Zombie
+  {
+	"id": 68,
+	"x": 2844,
+	"z": 9761,
+	"radius": 1
+  },
+  // Zombie
+  {
+	"id": 2050,
+	"x": 2842,
+	"z": 9792,
+	"radius": 3
+  },
+  // Black Demon
+  {
+	"id": 66,
+	"x": 2845,
+	"z": 9764,
+	"radius": 3
+  },
+  // Zombie
+  {
+	"id": 2048,
+	"x": 2850,
+	"z": 9778,
+	"radius": 4
+  },
+  // Black Demon
+  {
+	"id": 2049,
+	"x": 2848,
+	"z": 9791,
+	"radius": 2
+  },
+  // Black Demon
+  {
+	"id": 2048,
+	"x": 2853,
+	"z": 9783,
+	"radius": 5
+  },
+  // Black Demon
+  {
+	"id": 2050,
+	"x": 2855,
+	"z": 9778,
+	"radius": 4
+  },
+  // Black Demon
+  {
+	"id": 2051,
+	"x": 2858,
+	"z": 9775,
+	"radius": 5
+  },
+  // Black Demon
+  {
+	"id": 2049,
+	"x": 2860,
+	"z": 9764,
+	"radius": 3
+  },
+  // Black Demon
+  {
+	"id": 2049,
+	"x": 2862,
+	"z": 9781,
+	"radius": 3
+  },
+  // Black Demon
+  {
+	"id": 2028,
+	"x": 2857,
+	"z": 9751,
+	"radius": 0
+  },
+  // Greater demon
+  {
+	"id": 2026,
+	"x": 2862,
+	"z": 9751,
+	"radius": 1
+  },
+  // Greater demon
+  {
+	"id": 2048,
+	"x": 2863,
+	"z": 9777,
+	"radius": 7
+  },
+  // Black Demon
+  {
+	"id": 2050,
+	"x": 2862,
+	"z": 9769,
+	"radius": 5
+  },
+  // Black Demon
+  {
+	"id": 2052,
+	"x": 2865,
+	"z": 9783,
+	"radius": 6
+  },
+  // Black Demon
+  {
+	"id": 2049,
+	"x": 2867,
+	"z": 9776,
+	"radius": 6
+  },
+  // Black Demon
+  {
+	"id": 2051,
+	"x": 2871,
+	"z": 9784,
+	"radius": 7
+  },
+  // Black Demon
+  {
+	"id": 2050,
+	"x": 2876,
+	"z": 9774,
+	"radius": 7
+  },
+  // Black Demon
+  {
+	"id": 2887,
+	"x": 2828,
+	"z": 9809,
+	"radius": 6
+  },
+  // Monk of Zamorak
+  {
+	"id": 2887,
+	"x": 2831,
+	"z": 9809,
+	"radius": 7
+  },
+  // Monk of Zamorak
+  {
+	"id": 2887,
+	"x": 2830,
+	"z": 9810,
+	"radius": 7
+  },
+  // Monk of Zamorak
+  {
+	"id": 2887,
+	"x": 2828,
+	"z": 9814,
+	"radius": 6
+  },
+  // Monk of Zamorak
+  {
+	"id": 253,
+	"x": 2831,
+	"z": 9823,
+	"radius": 3
+  },
+  // Black dragon
+  {
+	"id": 2050,
+	"x": 2833,
+	"z": 9794,
+	"radius": 4
+  },
+  // Black Demon
+  {
+	"id": 2887,
+	"x": 2834,
+	"z": 9810,
+	"radius": 10
+  },
+  // Monk of Zamorak
+  {
+	"id": 2887,
+	"x": 2836,
+	"z": 9815,
+	"radius": 9
+  },
+  // Monk of Zamorak
+  {
+	"id": 252,
+	"x": 2835,
+	"z": 9823,
+	"radius": 3
+  },
+  // Black dragon
+  {
+	"id": 2048,
+	"x": 2838,
+	"z": 9793,
+	"radius": 5
+  },
+  // Black Demon
+  {
+	"id": 2048,
+	"x": 2837,
+	"z": 9798,
+	"radius": 3
+  },
+  // Black Demon
+  {
+	"id": 2049,
+	"x": 2846,
+	"z": 9794,
+	"radius": 5
+  },
+  // Black Demon
+  {
+	"id": 3023,
+	"x": 2858,
+	"z": 9810,
+	"radius": 3
+  },
+  // Poison spider
+  {
+	"id": 104,
+	"x": 2851,
+	"z": 9851,
+	"radius": 1
+  },
+  // Hellhound
+  {
+	"id": 104,
+	"x": 2856,
+	"z": 9837,
+	"radius": 4
+  },
+  // Hellhound
+  {
+	"id": 104,
+	"x": 2857,
+	"z": 9846,
+	"radius": 2
+  },
+  // Hellhound
+  {
+	"id": 3023,
+	"x": 2859,
+	"z": 9820,
+	"radius": 8
+  },
+  // Poison spider
+  {
+	"id": 104,
+	"x": 2858,
+	"z": 9841,
+	"radius": 3
+  },
+  // Hellhound
+  {
+	"id": 3023,
+	"x": 2859,
+	"z": 9803,
+	"radius": 7
+  },
+  // Poison spider
+  {
+	"id": 3023,
+	"x": 2860,
+	"z": 9814,
+	"radius": 4
+  },
+  // Poison spider
+  {
+	"id": 104,
+	"x": 2859,
+	"z": 9851,
+	"radius": 3
+  },
+  // Hellhound
+  {
+	"id": 104,
+	"x": 2860,
+	"z": 9837,
+	"radius": 3
+  },
+  // Hellhound
+  {
+	"id": 3023,
+	"x": 2864,
+	"z": 9817,
+	"radius": 8
+  },
+  // Poison spider
+  {
+	"id": 104,
+	"x": 2864,
+	"z": 9850,
+	"radius": 2
+  },
+  // Hellhound
+  {
+	"id": 104,
+	"x": 2868,
+	"z": 9839,
+	"radius": 3
+  },
+  // Hellhound
+  {
+	"id": 104,
+	"x": 2868,
+	"z": 9833,
+	"radius": 2
+  },
+  // Hellhound
+  {
+	"id": 104,
+	"x": 2869,
+	"z": 9829,
+	"radius": 3
+  },
+  // Hellhound
+  {
+	"id": 3023,
+	"x": 2869,
+	"z": 9800,
+	"radius": 10
+  },
+  // Poison spider
+  {
+	"id": 104,
+	"x": 2869,
+	"z": 9825,
+	"radius": 2
+  },
+  // Hellhound
+  {
+	"id": 3023,
+	"x": 2870,
+	"z": 9789,
+	"radius": 10
+  },
+  // Poison spider
+  {
+	"id": 104,
+	"x": 2870,
+	"z": 9819,
+	"radius": 3
+  },
+  // Hellhound
+  {
+	"id": 104,
+	"x": 2870,
+	"z": 9822,
+	"radius": 3
+  },
+  // Hellhound
+  {
+	"id": 3023,
+	"x": 2875,
+	"z": 9807,
+	"radius": 8
+  },
+  // Poison spider
+  {
+	"id": 5228,
+	"x": 2877,
+	"z": 9796,
+	"radius": 3
+  },
+  // Kharid Scorpion
+  {
+	"id": 73,
+	"x": 2884,
+	"z": 9825,
+	"radius": 7
+  },
+  // Skeleton
+  {
+	"id": 77,
+	"x": 2884,
+	"z": 9837,
+	"radius": 6
+  },
+  // Skeleton
+  {
+	"id": 73,
+	"x": 2883,
+	"z": 9819,
+	"radius": 8
+  },
+  // Skeleton
+  {
+	"id": 71,
+	"x": 2884,
+	"z": 9823,
+	"radius": 8
+  },
+  // Skeleton
+  {
+	"id": 71,
+	"x": 2883,
+	"z": 9811,
+	"radius": 7
+  },
+  // Skeleton
+  {
+	"id": 72,
+	"x": 2883,
+	"z": 9816,
+	"radius": 8
+  },
+  // Skeleton
+  {
+	"id": 70,
+	"x": 2883,
+	"z": 9820,
+	"radius": 7
+  },
+  // Skeleton
+  {
+	"id": 90,
+	"x": 2889,
+	"z": 9846,
+	"radius": 7
+  },
+  // Ghost
+  {
+	"id": 3019,
+	"x": 2893,
+	"z": 9831,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 242,
+	"x": 2895,
+	"z": 9798,
+	"radius": 5
+  },
+  // Baby dragon
+  {
+	"id": 3019,
+	"x": 2893,
+	"z": 9831,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 89,
+	"x": 2894,
+	"z": 9848,
+	"radius": 8
+  },
+  // Ghost
+  {
+	"id": 3019,
+	"x": 2893,
+	"z": 9831,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 267,
+	"x": 2895,
+	"z": 9795,
+	"radius": 1
+  },
+  // Blue dragon
+  {
+	"id": 265,
+	"x": 2898,
+	"z": 9801,
+	"radius": 2
+  },
+  // Blue dragon
+  {
+	"id": 85,
+	"x": 2900,
+	"z": 9820,
+	"radius": 8
+  },
+  // Ghost
+  {
+	"id": 88,
+	"x": 2901,
+	"z": 9849,
+	"radius": 5
+  },
+  // Ghost
+  {
+	"id": 243,
+	"x": 2904,
+	"z": 9796,
+	"radius": 4
+  },
+  // Baby dragon
+  {
+	"id": 268,
+	"x": 2905,
+	"z": 9799,
+	"radius": 3
+  },
+  // Blue dragon
+  {
+	"id": 2834,
+	"x": 2905,
+	"z": 9831,
+	"radius": 7
+  },
+  // Giant bat
+  {
+	"id": 87,
+	"x": 2905,
+	"z": 9849,
+	"radius": 7
+  },
+  // Ghost
+  {
+	"id": 86,
+	"x": 2907,
+	"z": 9819,
+	"radius": 8
+  },
+  // Ghost
+  {
+	"id": 2834,
+	"x": 2908,
+	"z": 9830,
+	"radius": 7
+  },
+  // Giant bat
+  {
+	"id": 242,
+	"x": 2909,
+	"z": 9806,
+	"radius": 4
+  },
+  // Baby dragon
+  {
+	"id": 2834,
+	"x": 2909,
+	"z": 9836,
+	"radius": 7
+  },
+  // Giant bat
+  {
+	"id": 86,
+	"x": 2908,
+	"z": 9849,
+	"radius": 7
+  },
+  // Ghost
+  {
+	"id": 241,
+	"x": 2911,
+	"z": 9798,
+	"radius": 3
+  },
+  // Baby dragon
+  {
+	"id": 241,
+	"x": 2911,
+	"z": 9807,
+	"radius": 4
+  },
+  // Baby dragon
+  {
+	"id": 87,
+	"x": 2911,
+	"z": 9819,
+	"radius": 6
+  },
+  // Ghost
+  {
+	"id": 2834,
+	"x": 2914,
+	"z": 9829,
+	"radius": 8
+  },
+  // Giant bat
+  {
+	"id": 2834,
+	"x": 2913,
+	"z": 9839,
+	"radius": 7
+  },
+  // Giant bat
+  {
+	"id": 6746,
+	"x": 2931,
+	"z": 9692,
+	"radius": 0
+  },
+  // Leo
+  {
+	"id": 85,
+	"x": 2915,
+	"z": 9849,
+	"radius": 8
+  },
+  // Ghost
+  {
+	"id": 243,
+	"x": 2917,
+	"z": 9800,
+	"radius": 4
+  },
+  // Baby dragon
+  {
+	"id": 242,
+	"x": 2918,
+	"z": 9792,
+	"radius": 4
+  },
+  // Baby dragon
+  {
+	"id": 2834,
+	"x": 2918,
+	"z": 9831,
+	"radius": 7
+  },
+  // Giant bat
+  {
+	"id": 88,
+	"x": 2918,
+	"z": 9820,
+	"radius": 6
+  },
+  // Ghost
+  {
+	"id": 92,
+	"x": 2919,
+	"z": 9849,
+	"radius": 7
+  },
+  // Ghost
+  {
+	"id": 2834,
+	"x": 2921,
+	"z": 9827,
+	"radius": 7
+  },
+  // Giant bat
+  {
+	"id": 2834,
+	"x": 2922,
+	"z": 9832,
+	"radius": 8
+  },
+  // Giant bat
+  {
+	"id": 241,
+	"x": 2922,
+	"z": 9792,
+	"radius": 3
+  },
+  // Baby dragon
+  {
+	"id": 2834,
+	"x": 2923,
+	"z": 9831,
+	"radius": 5
+  },
+  // Giant bat
+  {
+	"id": 2007,
+	"x": 2927,
+	"z": 9801,
+	"radius": 5
+  },
+  // Lesser demon
+  {
+	"id": 2878,
+	"x": 2931,
+	"z": 9847,
+	"radius": 4
+  },
+  // Chaos druid
+  {
+	"id": 2008,
+	"x": 2932,
+	"z": 9797,
+	"radius": 5
+  },
+  // Lesser demon
+  {
+	"id": 2005,
+	"x": 2930,
+	"z": 9807,
+	"radius": 3
+  },
+  // Lesser demon
+  {
+	"id": 2878,
+	"x": 2931,
+	"z": 9846,
+	"radius": 5
+  },
+  // Chaos druid
+  {
+	"id": 2006,
+	"x": 2931,
+	"z": 9808,
+	"radius": 3
+  },
+  // Lesser demon
+  {
+	"id": 2878,
+	"x": 2932,
+	"z": 9850,
+	"radius": 3
+  },
+  // Chaos druid
+  {
+	"id": 91,
+	"x": 2932,
+	"z": 9836,
+	"radius": 6
+  },
+  // Ghost
+  {
+	"id": 2018,
+	"x": 2932,
+	"z": 9795,
+	"radius": 7
+  },
+  // Lesser demon
+  {
+	"id": 89,
+	"x": 2934,
+	"z": 9830,
+	"radius": 5
+  },
+  // Ghost
+  {
+	"id": 2878,
+	"x": 2935,
+	"z": 9847,
+	"radius": 3
+  },
+  // Chaos druid
+  {
+	"id": 2878,
+	"x": 2934,
+	"z": 9849,
+	"radius": 2
+  },
+  // Chaos druid
+  {
+	"id": 2878,
+	"x": 2935,
+	"z": 9848,
+	"radius": 3
+  },
+  // Chaos druid
+  {
+	"id": 90,
+	"x": 2935,
+	"z": 9834,
+	"radius": 5
+  },
+  // Ghost
+  {
+	"id": 2875,
+	"x": 2938,
+	"z": 9811,
+	"radius": 8
+  },
+  // Black Knight
+  {
+	"id": 2875,
+	"x": 2944,
+	"z": 9801,
+	"radius": 7
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2895,
+	"z": 9691,
+	"radius": 7
+  },
+  // Black Knight
+  {
+	"id": 2875,
+	"x": 2892,
+	"z": 9702,
+	"radius": 3
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2894,
+	"z": 9680,
+	"radius": 4
+  },
+  // Black Knight
+  {
+	"id": 4929,
+	"x": 2892,
+	"z": 9680,
+	"radius": 0
+  },
+  // Lord Daquarius
+  {
+	"id": 2874,
+	"x": 2897,
+	"z": 9682,
+	"radius": 6
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2895,
+	"z": 9693,
+	"radius": 6
+  },
+  // Black Knight
+  {
+	"id": 2875,
+	"x": 2892,
+	"z": 9709,
+	"radius": 3
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2900,
+	"z": 9705,
+	"radius": 6
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2892,
+	"z": 9709,
+	"radius": 3
+  },
+  // Black Knight
+  {
+	"id": 2875,
+	"x": 2900,
+	"z": 9678,
+	"radius": 6
+  },
+  // Black Knight
+  {
+	"id": 2875,
+	"x": 2898,
+	"z": 9691,
+	"radius": 9
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2898,
+	"z": 9683,
+	"radius": 7
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2893,
+	"z": 9702,
+	"radius": 3
+  },
+  // Black Knight
+  {
+	"id": 2875,
+	"x": 2905,
+	"z": 9706,
+	"radius": 6
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2900,
+	"z": 9681,
+	"radius": 7
+  },
+  // Black Knight
+  {
+	"id": 2875,
+	"x": 2902,
+	"z": 9701,
+	"radius": 9
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2903,
+	"z": 9709,
+	"radius": 8
+  },
+  // Black Knight
+  {
+	"id": 2875,
+	"x": 2904,
+	"z": 9693,
+	"radius": 9
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2904,
+	"z": 9689,
+	"radius": 10
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2906,
+	"z": 9693,
+	"radius": 9
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2907,
+	"z": 9676,
+	"radius": 6
+  },
+  // Black Knight
+  {
+	"id": 2875,
+	"x": 2906,
+	"z": 9687,
+	"radius": 9
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2907,
+	"z": 9707,
+	"radius": 8
+  },
+  // Black Knight
+  {
+	"id": 2875,
+	"x": 2906,
+	"z": 9676,
+	"radius": 9
+  },
+  // Black Knight
+  {
+	"id": 2875,
+	"x": 2905,
+	"z": 9709,
+	"radius": 7
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2908,
+	"z": 9693,
+	"radius": 10
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2907,
+	"z": 9702,
+	"radius": 9
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2911,
+	"z": 9688,
+	"radius": 9
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2912,
+	"z": 9679,
+	"radius": 8
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2914,
+	"z": 9683,
+	"radius": 9
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2912,
+	"z": 9687,
+	"radius": 10
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2913,
+	"z": 9691,
+	"radius": 10
+  },
+  // Black Knight
+  {
+	"id": 2875,
+	"x": 2914,
+	"z": 9703,
+	"radius": 10
+  },
+  // Black Knight
+  {
+	"id": 5043,
+	"x": 2885,
+	"z": 9830,
+	"radius": 3
+  },
+  // Suit of armour
+  {
+	"id": 2874,
+	"x": 2911,
+	"z": 9708,
+	"radius": 7
+  },
+  // Black Knight
+  {
+	"id": 2875,
+	"x": 2916,
+	"z": 9679,
+	"radius": 6
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2915,
+	"z": 9692,
+	"radius": 10
+  },
+  // Black Knight
+  {
+	"id": 2875,
+	"x": 2918,
+	"z": 9684,
+	"radius": 8
+  },
+  // Black Knight
+  {
+	"id": 2875,
+	"x": 2917,
+	"z": 9692,
+	"radius": 8
+  },
+  // Black Knight
+  {
+	"id": 5043,
+	"x": 2885,
+	"z": 9833,
+	"radius": 2
+  },
+  // Suit of armour
+  {
+	"id": 2874,
+	"x": 2915,
+	"z": 9681,
+	"radius": 7
+  },
+  // Black Knight
+  {
+	"id": 2875,
+	"x": 2921,
+	"z": 9702,
+	"radius": 3
+  },
+  // Black Knight
+  {
+	"id": 2874,
+	"x": 2921,
+	"z": 9709,
+	"radius": 3
+  },
+  // Black Knight
+  {
+	"id": 2875,
+	"x": 2921,
+	"z": 9709,
+	"radius": 3
+  },
+  // Black Knight
+  {
+	"id": 290,
+	"x": 2931,
+	"z": 9699,
+	"radius": 4
+  },
+  // Dwarf
+  {
+	"id": 2854,
+	"x": 2931,
+	"z": 9699,
+	"radius": 4
+  },
+  // Rat
+  {
+	"id": 4925,
+	"x": 2931,
+	"z": 9686,
+	"radius": 3
+  },
+  // Velrak the explorer
+  {
+	"id": 290,
+	"x": 2931,
+	"z": 9699,
+	"radius": 4
+  },
+  // Dwarf
+  {
+	"id": 2854,
+	"x": 2931,
+	"z": 9686,
+	"radius": 3
+  },
+  // Rat
+  {
+	"id": 2854,
+	"x": 2925,
+	"z": 9692,
+	"radius": 8
+  },
+  // Rat
+  {
+	"id": 2854,
+	"x": 2931,
+	"z": 9699,
+	"radius": 4
+  },
+  // Rat
+  {
+	"id": 300,
+	"x": 2931,
+	"z": 9692,
+	"radius": 3
+  }
+  // Jailer
+]

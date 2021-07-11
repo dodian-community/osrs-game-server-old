@@ -1,0 +1,471 @@
+[
+  // Scorpions in the north mines
+  {
+	"id": 3024,
+	"x": 3301,
+	"z": 3274,
+	"radius": 3
+  },
+  {
+	"id": 3024,
+	"x": 3296,
+	"z": 3274,
+	"radius": 3
+  },
+  {
+	"id": 3024,
+	"x": 3300,
+	"z": 3307,
+	"radius": 3
+  },
+  {
+	"id": 3024,
+	"x": 3300,
+	"z": 3282,
+	"radius": 3
+  },
+  {
+	"id": 3024,
+	"x": 3297,
+	"z": 3286,
+	"radius": 3
+  },
+  {
+	"id": 3024,
+	"x": 3299,
+	"z": 3290,
+	"radius": 3
+  },
+  {
+	"id": 3024,
+	"x": 3295,
+	"z": 3297,
+	"radius": 3
+  },
+  {
+	"id": 3024,
+	"x": 3300,
+	"z": 3302,
+	"radius": 3
+  },
+  {
+	"id": 3024,
+	"x": 3298,
+	"z": 3309,
+	"radius": 3
+  },
+  {
+	"id": 6089,
+	"x": 3284,
+	"z": 3212,
+	"direction": "S"
+  },
+  // Captain Dalbur
+  {
+	"id": 526,
+	"x": 3288,
+	"z": 3212,
+	"radius": 2
+  },
+  // Gem trader
+  {
+	"id": 5951,
+	"x": 3289,
+	"z": 3209,
+	"radius": 4
+  },
+  // Ollie the camel
+  {
+	"id": 5950,
+	"x": 3313,
+	"z": 3209,
+	"radius": 4
+  },
+  // Elly the camel
+  {
+	"id": 3080,
+	"x": 3298,
+	"z": 3206,
+	"radius": 4
+  },
+  // Man
+  {
+	"id": 525,
+	"x": 3299,
+	"z": 3204,
+	"radius": 2
+  },
+  // Silk trader
+  {
+	"id": 310,
+	"x": 3315,
+	"z": 3205,
+	"radius": 2
+  },
+  // Ayesha
+  {
+	"id": 531,
+	"x": 3321,
+	"z": 3194,
+	"radius": 3
+  },
+  // Dommik
+  {
+	"id": 510,
+	"x": 3316,
+	"z": 3181,
+	"radius": 4
+  },
+  // Shop keeper
+  {
+	"id": 511,
+	"x": 3316,
+	"z": 3182,
+	"radius": 4
+  },
+  // Shop assistant
+  {
+	"id": 528,
+	"x": 3316,
+	"z": 3175,
+	"radius": 2
+  },
+  // Louie legs
+  {
+	"id": 530,
+	"x": 3315,
+	"z": 3163,
+	"radius": 2
+  },
+  // Ranael
+  {
+	"id": 3019,
+	"x": 3324,
+	"z": 3138,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 3019,
+	"x": 3322,
+	"z": 3141,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 3019,
+	"x": 3319,
+	"z": 3139,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 1808,
+	"x": 3321,
+	"z": 3139,
+	"radius": 4
+  },
+  // Apprentice
+  {
+	"id": 893,
+	"x": 3272,
+	"z": 3160,
+	"radius": 4
+  },
+  // Father Reen
+  {
+	"id": 3533,
+	"x": 3304,
+	"z": 3211,
+	"direction": "E"
+  },
+  // Ali Morrisane
+  {
+	"id": 0,
+	"x": 3319,
+	"z": 3204,
+	"direction": "S"
+  },
+  // Tool leprechaun
+  {
+	"id": 5949,
+	"x": 3277,
+	"z": 3166,
+	"radius": 4
+  },
+  // Al the camel
+  {
+	"id": 2835,
+	"x": 3285,
+	"z": 3198,
+	"radius": 5
+  },
+  // Camel
+  {
+	"id": 529,
+	"x": 3273,
+	"z": 3180,
+	"radius": 2
+  },
+  // Karim
+  {
+	"id": 3101,
+	"x": 3277,
+	"z": 3187,
+	"radius": 5
+  },
+  // Man
+  {
+	"id": 3101,
+	"x": 3293,
+	"z": 3205,
+	"radius": 4
+  },
+  // Man
+  {
+	"id": 3231,
+	"x": 3274,
+	"z": 3191,
+	"radius": 3
+  },
+  // Ellis
+  {
+	"id": 527,
+	"x": 3288,
+	"z": 3189,
+	"radius": 2
+  },
+  // Zeke
+  {
+	"id": 3079,
+	"x": 3294,
+	"z": 3196,
+	"radius": 4
+  },
+  // Man
+  {
+	"id": 3078,
+	"x": 3284,
+	"z": 3199,
+	"radius": 5
+  },
+  // Man
+  {
+	"id": 3080,
+	"x": 3303,
+	"z": 3199,
+	"radius": 5
+  },
+  // Man
+  
+  // Bankers
+  {
+	"id": 396,
+	"x": 3267,
+	"z": 3164,
+	"direction": "E"
+  },
+  {
+	"id": 397,
+	"x": 3267,
+	"z": 3166,
+	"direction": "E"
+  },
+  {
+	"id": 396,
+	"x": 3267,
+	"z": 3167,
+	"direction": "E"
+  },
+  {
+	"id": 397,
+	"x": 3267,
+	"z": 3168,
+	"direction": "E"
+  },
+  {
+	"id": 396,
+	"x": 3267,
+	"z": 3169,
+	"direction": "E"
+  },
+  // Desert
+  {
+	"id": 5551,
+	"x": 3397,
+	"z": 3099,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3401,
+	"z": 3106,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3405,
+	"z": 3104,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3407,
+	"z": 3099,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3409,
+	"z": 3096,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3407,
+	"z": 3091,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3411,
+	"z": 3089,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3405,
+	"z": 3086,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3401,
+	"z": 3088,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3399,
+	"z": 3091,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3400,
+	"z": 3095,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3405,
+	"z": 3080,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3409,
+	"z": 3076,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3411,
+	"z": 3071,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3417,
+	"z": 3069,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3421,
+	"z": 3073,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3418,
+	"z": 3077,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3419,
+	"z": 3082,
+	"radius": 5
+  },
+  // Warlber
+  {
+	"id": 5551,
+	"x": 3413,
+	"z": 3085,
+	"radius": 5
+  },
+  // Warlber
+  
+  // Shanty pass
+  {
+	"id": 17,
+	"x": 3310,
+	"z": 3108,
+	"radius": 1
+  },
+  // Rug merchant (carpet travel)
+  
+  // Uzer
+  {
+	"id": 20,
+	"x": 3467,
+	"z": 3110,
+	"radius": 0
+  },
+  // Rug merchant (carpet travel)
+  
+  // Bedabin camp
+  {
+	"id": 22,
+	"x": 3182,
+	"z": 3041,
+	"radius": 0
+  },
+  // Rug merchant (carpet travel)
+  
+  // Pollnivneach north
+  {
+	"id": 22,
+	"x": 3350,
+	"z": 3000,
+	"radius": 0
+  },
+  // Rug merchant (carpet travel)
+  
+  // Pollnivneach south
+  {
+	"id": 22,
+	"x": 3348,
+	"z": 2942,
+	"radius": 0
+  }
+  // Rug merchant (carpet travel)
+]

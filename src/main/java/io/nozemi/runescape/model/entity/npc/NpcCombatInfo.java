@@ -1,7 +1,6 @@
 package io.nozemi.runescape.model.entity.npc;
 
 import io.nozemi.runescape.model.Entity;
-import io.nozemi.skript.Script;
 import kotlin.jvm.functions.Function1;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -98,17 +97,11 @@ public class NpcCombatInfo {
 		public String droptable;
 		public String death;
 		public String aggression;
-		
-		public Function1<Script, Object> hit_;
-		public Function1<Script, Object> combat_;
-		public Function1<Script, Object> death_;
+
 		public Function1<Entity, Boolean> aggression_;
 		
 		public void resolve() {
 			try {
-				hit_ = (Function1<Script, Object>) resolveField(hit);
-				combat_ = (Function1<Script, Object>) resolveField(combat);
-				death_ = (Function1<Script, Object>) resolveField(death);
 				aggression_ = (Function1<Entity, Boolean>) resolveField(aggression);
 			} catch (Exception e) {
 				e.printStackTrace();

@@ -1,0 +1,261 @@
+[
+  {
+	"id": 6616,
+	"x": 3221,
+	"z": 10336,
+	"radius": 1
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3221,
+	"z": 10339,
+	"radius": 1
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3221,
+	"z": 10344,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3221,
+	"z": 10349,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3223,
+	"z": 10333,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3223,
+	"z": 10347,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3224,
+	"z": 10336,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3225,
+	"z": 10349,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3229,
+	"z": 10333,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3230,
+	"z": 10349,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3231,
+	"z": 10344,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3233,
+	"z": 10333,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6615,
+	"x": 3234,
+	"z": 10340,
+	"radius": 8
+  },
+  // Scorpia
+  {
+	"id": 6616,
+	"x": 3233,
+	"z": 10348,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3234,
+	"z": 10339,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3237,
+	"z": 10333,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3237,
+	"z": 10349,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3238,
+	"z": 10344,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3241,
+	"z": 10333,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3241,
+	"z": 10349,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3242,
+	"z": 10336,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 106,
+	"x": 3222,
+	"z": 3928,
+	"radius": 2
+  },
+  // Wolf
+  {
+	"id": 6616,
+	"x": 3242,
+	"z": 10347,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3244,
+	"z": 10349,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 3024,
+	"x": 3225,
+	"z": 3944,
+	"radius": 2
+  },
+  // Scorpion
+  {
+	"id": 6616,
+	"x": 3244,
+	"z": 10333,
+	"radius": 1
+  },
+  // Scorpia's offspring
+  {
+	"id": 6616,
+	"x": 3244,
+	"z": 10337,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 3024,
+	"x": 3234,
+	"z": 3943,
+	"radius": 6
+  },
+  // Scorpion
+  {
+	"id": 6616,
+	"x": 3244,
+	"z": 10340,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 3024,
+	"x": 3234,
+	"z": 3943,
+	"radius": 7
+  },
+  // Scorpion
+  {
+	"id": 6616,
+	"x": 3244,
+	"z": 10344,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 3024,
+	"x": 3240,
+	"z": 3942,
+	"radius": 5
+  },
+  // Scorpion
+  {
+	"id": 106,
+	"x": 3236,
+	"z": 3923,
+	"radius": 0
+  },
+  // Wolf
+  {
+	"id": 6616,
+	"x": 3244,
+	"z": 10347,
+	"radius": 2
+  },
+  // Scorpia's offspring
+  {
+	"id": 3024,
+	"x": 3242,
+	"z": 3944,
+	"radius": 4
+  },
+  // Scorpion
+  {
+	"id": 3024,
+	"x": 3249,
+	"z": 3949,
+	"radius": 2
+  },
+  // Scorpion
+  {
+	"id": 3024,
+	"x": 3257,
+	"z": 3952,
+	"radius": 2
+  }
+  // Scorpion
+]

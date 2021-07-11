@@ -1,8 +1,10 @@
 package io.nozemi.runescape.fs
 
+import io.nozemi.runescape.model.AttributeKey
 import it.unimi.dsi.fastutil.objects.ObjectArrayList
 import io.nozemi.runescape.model.Tile
 import io.nozemi.runescape.model.World
+import io.nozemi.runescape.model.entity.Player
 import io.nozemi.runescape.model.map.MapObj
 import java.nio.ByteBuffer
 import kotlin.experimental.and

@@ -1,0 +1,275 @@
+[
+  {
+	"id": 394,
+	"x": 3090,
+	"z": 3245,
+	"direction": "E"
+  },
+  //Banker
+  {
+	"id": 395,
+	"x": 3090,
+	"z": 3243,
+	"direction": "E"
+  },
+  //Banker
+  {
+	"id": 395,
+	"x": 3090,
+	"z": 3242,
+	"direction": "E"
+  },
+  //Banker
+  {
+	"id": 394,
+	"x": 3088,
+	"z": 3242,
+	"direction": "S"
+  },
+  //Banker
+  {
+	"id": 3091,
+	"x": 3119,
+	"z": 3280,
+	"radius": 7
+  },
+  //Farmer
+  {
+	"id": 3034,
+	"x": 3105,
+	"z": 3281,
+	"radius": 5
+  },
+  //Goblin
+  {
+	"id": 2854,
+	"x": 3103,
+	"z": 3283,
+	"radius": 10
+  },
+  //Rat
+  {
+	"id": 3078,
+	"x": 3099,
+	"z": 3280,
+	"radius": 3
+  },
+  //Man
+  {
+	"id": 3479,
+	"x": 3098,
+	"z": 3268,
+	"radius": 3
+  },
+  //Morgan
+  {
+	"id": 4280,
+	"x": 3098,
+	"z": 3258,
+	"radius": 2
+  },
+  //Ned
+  {
+	"id": 2854,
+	"x": 3097,
+	"z": 3258,
+	"radius": 10
+  },
+  //Rat
+  {
+	"id": 4284,
+	"x": 3086,
+	"z": 3258,
+	"radius": 2
+  },
+  //Aggie
+  {
+	"id": 2116,
+	"x": 3095,
+	"z": 3252,
+	"direction": "S"
+  },
+  //Miss Schism
+  {
+	"id": 2109,
+	"x": 3088,
+	"z": 3255,
+	"direction": "S"
+  },
+  //Wise Old Man
+  {
+	"id": 2123,
+	"x": 3087,
+	"z": 3248,
+	"radius": 3
+  },
+  //Bank Guard
+  {
+	"id": 1260,
+	"x": 3085,
+	"z": 3250,
+	"radius": 2
+  },
+  //Fortunato
+  {
+	"id": 1308,
+	"x": 3081,
+	"z": 3246,
+	"radius": 2
+  },
+  //Diango
+  {
+	"id": 3257,
+	"x": 3079,
+	"z": 3251,
+	"radius": 6
+  },
+  //Master Farmer
+  {
+	"id": 5832,
+	"x": 3080,
+	"z": 3258,
+	"radius": 5
+  },
+  //Martin the master gardener
+  {
+	"id": 2811,
+	"x": 3078,
+	"z": 3258,
+	"radius": 2
+  },
+  //Pig
+  {
+	"id": 2812,
+	"x": 3076,
+	"z": 3260,
+	"radius": 3
+  },
+  //Pig
+  {
+	"id": 2812,
+	"x": 3076,
+	"z": 3260,
+	"radius": 1
+  },
+  //Pig
+  {
+	"id": 2814,
+	"x": 3078,
+	"z": 3261,
+	"radius": 1
+  },
+  //Pig
+  {
+	"id": 2815,
+	"x": 3079,
+	"z": 3260,
+	"radius": 1
+  },
+  //Pig
+  {
+	"id": 2811,
+	"x": 3076,
+	"z": 3261,
+	"radius": 1
+  },
+  //Pig
+  {
+	"id": 2813,
+	"x": 3076,
+	"z": 3261,
+	"radius": 1
+  },
+  //Pig
+  {
+	"id": 2870,
+	"x": 3085,
+	"z": 3234,
+	"radius": 1
+  },
+  //Dark wizard
+  {
+	"id": 2870,
+	"x": 3088,
+	"z": 3237,
+	"radius": 2
+  },
+  //Dark wizard
+  {
+	"id": 4289,
+	"x": 3079,
+	"z": 3230,
+	"radius": 5
+  },
+  //Gull
+  {
+	"id": 4290,
+	"x": 3081,
+	"z": 3224,
+	"radius": 4
+  },
+  //Gull
+  {
+	"id": 2874,
+	"x": 3097,
+	"z": 3219,
+	"radius": 5
+  },
+  //Black knight
+  {
+	"id": 5527,
+	"x": 3097,
+	"z": 3224,
+	"radius": 3
+  },
+  //Twiggy O'Korn
+  {
+	"id": 5528,
+	"x": 3096,
+	"z": 3225,
+	"radius": 4
+  },
+  //Squirrel
+  {
+	"id": 4274,
+	"x": 3113,
+	"z": 3262,
+	"radius": 3
+  },
+  //Leela
+  {
+	"id": 4275,
+	"x": 3123,
+	"z": 3245,
+	"radius": 2
+  },
+  //Jail Guard
+  {
+	"id": 4282,
+	"x": 3123,
+	"z": 3241,
+	"radius": 2
+  },
+  //Prince Ali
+  {
+	"id": 4281,
+	"x": 3129,
+	"z": 3245,
+	"radius": 2
+  },
+  //Lady Keli
+  {
+	"id": 4279,
+	"x": 3128,
+	"z": 3249,
+	"radius": 5
+  },
+  //Jail Guard
+  {
+	"id": 4276,
+	"x": 3126,
+	"z": 3251,
+	"radius": 5
+  }
+  //Jail Guard
+]

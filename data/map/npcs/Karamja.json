@@ -1,0 +1,51 @@
+[
+  {
+	"id": 3082,
+	"x": 2884,
+	"z": 3174,
+	"radius": 7
+  },
+  //Man
+  {
+	"id": 1331,
+	"x": 2954,
+	"z": 3157,
+	"radius": 3
+  },
+  //Trader crewmember
+  {
+	"id": 1333,
+	"x": 2954,
+	"z": 3152,
+	"radius": 3
+  },
+  //Trader crewmember
+  {
+	"id": 3648,
+	"x": 2953,
+	"z": 3146,
+	"radius": 2
+  },
+  //Customs officer
+  {
+	"id": 3652,
+	"x": 2948,
+	"z": 3146,
+	"radius": 4
+  },
+  //Man
+  {
+	"id": 1037,
+	"x": 2926,
+	"z": 3143,
+	"radius": 4
+  },
+  //Zambo
+  {
+	"id": 6092,
+	"x": 2969,
+	"z": 2972,
+	"radius": 4
+  }
+  // Gnome Glider captain
+]

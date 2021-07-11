@@ -1,0 +1,7381 @@
+[
+  {
+	"id": 1,
+	"name": "Lumbridge General Store",
+	"general": true,
+	"stock": [
+	  {
+		"id": 233,
+		"amount": 500
+	  },
+	  // Pestle and mortar
+	  {
+		"id": 1755,
+		"amount": 500
+	  },
+	  // Chisel
+	  {
+		"id": 1523,
+		"amount": 500
+	  },
+	  // Lock pick
+	  {
+		"id": 952,
+		"amount": 500
+	  },
+	  // Spade
+	  {
+		"id": 1755,
+		"amount": 500
+	  },
+	  // Chisel
+	  {
+		"id": 2347,
+		"amount": 500
+	  },
+	  // Hammer
+	  {
+		"id": 1735,
+		"amount": 500
+	  },
+	  // Shears
+	  {
+		"id": 946,
+		"amount": 500
+	  },
+	  // Knife
+	  {
+		"id": 1935,
+		"amount": 500
+	  },
+	  // Jug
+	  {
+		"id": 1925,
+		"amount": 500
+	  },
+	  // Bucket
+	  {
+		"id": 1931,
+		"amount": 500
+	  },
+	  // Pot
+	  {
+		"id": 1923,
+		"amount": 500
+	  },
+	  // Bowl
+	  {
+		"id": 1887,
+		"amount": 500
+	  },
+	  // Cake tin
+	  {
+		"id": 590,
+		"amount": 500
+	  },
+	  // Tinderbox
+	  {
+		"id": 1540,
+		"amount": 500
+	  },
+	  // Anti-dragon shield
+	  {
+		"id": 11879,
+		"amount": 1000
+	  },
+	  // Water-filled vial pack
+	  {
+		"id": 1733,
+		"amount": 50000
+	  },
+	  // Needle
+	  {
+		"id": 1734,
+		"amount": 50000
+	  },
+	  // Thread
+	  {
+		"id": 1592,
+		"amount": 500
+	  },
+	  // Ring mould
+	  {
+		"id": 1595,
+		"amount": 500
+	  },
+	  // Amulet mould
+	  {
+		"id": 1597,
+		"amount": 500
+	  },
+	  // Necklace mould
+	  {
+		"id": 11065,
+		"amount": 500
+	  },
+	  // Bracelet mould
+	  {
+		"id": 228,
+		"amount": 1000
+	  },
+	  // Vial of water
+	  {
+		"id": 1760,
+		"amount": 1000
+	  },
+	  // Ball of wool
+	  {
+		"id": 954,
+		"amount": 1000
+	  },
+	  // Rope
+	  {
+		"id": 20742,
+		"amount": 1000
+	  }
+	  // Empty water jug pack
+	]
+  },
+  {
+	"id": 2,
+	"name": "Bob's Brilliant Axes.",
+	"stock": [
+	  {
+		"id": 1265,
+		"amount": 5
+	  },
+	  // Bronze pickaxe
+	  {
+		"id": 1351,
+		"amount": 10
+	  },
+	  // Bronze axe
+	  {
+		"id": 1349,
+		"amount": 5
+	  },
+	  // Iron axe
+	  {
+		"id": 1353,
+		"amount": 3
+	  },
+	  // Steel axe
+	  {
+		"id": 1359,
+		"amount": 15
+	  },
+	  // Rune axe
+	  {
+		"id": 1363,
+		"amount": 5
+	  },
+	  // Iron battleaxe
+	  {
+		"id": 1365,
+		"amount": 2
+	  },
+	  // Steel battleaxe
+	  {
+		"id": 1369,
+		"amount": 1
+	  }
+	  // Mithril battleaxe
+	]
+  },
+  {
+	"id": 3,
+	"name": "Drogo's Mining Emporium.",
+	"stock": [
+	  {
+		"id": 2347,
+		"amount": 4
+	  },
+	  // Hammer
+	  {
+		"id": 1265,
+		"amount": 4
+	  },
+	  // Bronze pickaxe
+	  {
+		"id": 436,
+		"amount": 0
+	  },
+	  // Copper ore
+	  {
+		"id": 438,
+		"amount": 0
+	  },
+	  // Tin ore
+	  {
+		"id": 440,
+		"amount": 0
+	  },
+	  // Iron ore
+	  {
+		"id": 453,
+		"amount": 0
+	  },
+	  // Coal
+	  {
+		"id": 2349,
+		"amount": 0
+	  },
+	  // Bronze bar
+	  {
+		"id": 2351,
+		"amount": 0
+	  },
+	  // Iron bar
+	  {
+		"id": 2357,
+		"amount": 0
+	  }
+	  // Gold bar
+	]
+  },
+  {
+	"id": 4,
+	"name": "Nurmof's Pickaxe Shop.",
+	"stock": [
+	  {
+		"id": 1265,
+		"amount": 20
+	  },
+	  // Bronze pickaxe
+	  {
+		"id": 1267,
+		"amount": 20
+	  },
+	  // Iron pickaxe
+	  {
+		"id": 1269,
+		"amount": 20
+	  },
+	  // Steel pickaxe
+	  {
+		"id": 1273,
+		"amount": 20
+	  },
+	  // Mithril pickaxe
+	  {
+		"id": 1271,
+		"amount": 10
+	  },
+	  // Adamant pickaxe
+	  {
+		"id": 1275,
+		"amount": 5
+	  }
+	  // Rune pickaxe
+	]
+  },
+  {
+	"id": 5,
+	"name": "Varrock Swordshop",
+	"noiron": true,
+	"stock": [
+	  {
+		"id": 1323,
+		"amount": 1000
+	  },
+	  // Iron scimitar
+	  {
+		"id": 1325,
+		"amount": 1000
+	  },
+	  // Steel scimitar
+	  {
+		"id": 1327,
+		"amount": 1000
+	  },
+	  // Black scimitar
+	  {
+		"id": 1329,
+		"amount": 1000
+	  },
+	  // Mithril scimitar
+	  {
+		"id": 1331,
+		"amount": 1000
+	  },
+	  // Addy scimitar
+	  {
+		"id": 1333,
+		"amount": 1000
+	  },
+	  // Rune scimitar
+	  {
+		"id": 4587,
+		"amount": 1000
+	  },
+	  // Dragon scimitar
+	  {
+		"id": 1215,
+		"amount": 1000
+	  },
+	  // Dragon dagger
+	  {
+		"id": 1434,
+		"amount": 1000
+	  },
+	  // Dragon mace
+	  {
+		"id": 1305,
+		"amount": 1000
+	  }
+	  // Dragon longsword
+	]
+  },
+  {
+	"id": 6,
+	"name": "Varrock General Store",
+	"noiron": true,
+	"general": true,
+	"stock": [
+	  {
+		"id": 233,
+		"amount": 500
+	  },
+	  // Pestle and mortar
+	  {
+		"id": 1755,
+		"amount": 500
+	  },
+	  // Chisel
+	  {
+		"id": 1523,
+		"amount": 500
+	  },
+	  // Lock pick
+	  {
+		"id": 952,
+		"amount": 500
+	  },
+	  // Spade
+	  {
+		"id": 2347,
+		"amount": 500
+	  },
+	  // Hammer
+	  {
+		"id": 1735,
+		"amount": 500
+	  },
+	  // Shears
+	  {
+		"id": 946,
+		"amount": 500
+	  },
+	  // Knife
+	  {
+		"id": 1935,
+		"amount": 500
+	  },
+	  // Jug
+	  {
+		"id": 1925,
+		"amount": 500
+	  },
+	  // Bucket
+	  {
+		"id": 1931,
+		"amount": 500
+	  },
+	  // Pot
+	  {
+		"id": 1923,
+		"amount": 500
+	  },
+	  // Bowl
+	  {
+		"id": 1887,
+		"amount": 500
+	  },
+	  // Cake tin
+	  {
+		"id": 590,
+		"amount": 500
+	  },
+	  // Tinderbox
+	  {
+		"id": 1540,
+		"amount": 500
+	  },
+	  // Anti-dragon shield
+	  {
+		"id": 11879,
+		"amount": 1000
+	  },
+	  // Water-filled vial pack
+	  {
+		"id": 1733,
+		"amount": 50000
+	  },
+	  // Needle
+	  {
+		"id": 1734,
+		"amount": 50000
+	  },
+	  // Thread
+	  {
+		"id": 1592,
+		"amount": 500
+	  },
+	  // Ring mould
+	  {
+		"id": 1595,
+		"amount": 500
+	  },
+	  // Amulet mould
+	  {
+		"id": 1597,
+		"amount": 500
+	  },
+	  // Necklace mould
+	  {
+		"id": 11065,
+		"amount": 500
+	  },
+	  // Bracelet mould
+	  {
+		"id": 228,
+		"amount": 1000
+	  },
+	  // Vial of water
+	  {
+		"id": 1760,
+		"amount": 1000
+	  },
+	  // Ball of wool
+	  {
+		"id": 955,
+		"amount": 1000
+	  },
+	  // Rope
+	  {
+		"id": 20742,
+		"amount": 1000
+	  }
+	  // Empty water jug pack
+	]
+  },
+  {
+	"id": 7,
+	"name": "Lowe's Archery Emporium",
+	"noiron": true,
+	"stock": [
+	  {
+		"id": 882,
+		"amount": 2000
+	  },
+	  // Bronze arrows
+	  {
+		"id": 884,
+		"amount": 1500
+	  },
+	  // Iron arrows
+	  {
+		"id": 886,
+		"amount": 1000
+	  },
+	  // Steel arrows
+	  {
+		"id": 888,
+		"amount": 800
+	  },
+	  // Mithril arrows
+	  {
+		"id": 890,
+		"amount": 600
+	  },
+	  // Adamant arrows
+	  {
+		"id": 877,
+		"amount": 1500
+	  },
+	  // Bronze bolts
+	  {
+		"id": 9140,
+		"amount": 1500
+	  },
+	  // Iron bolts
+	  {
+		"id": 9141,
+		"amount": 1500
+	  },
+	  // Steel bolts
+	  {
+		"id": 9142,
+		"amount": 1500
+	  },
+	  // Mithril bolts
+	  {
+		"id": 9143,
+		"amount": 1500
+	  },
+	  // Addy bolts
+	  {
+		"id": 841,
+		"amount": 100
+	  },
+	  // Shortbow
+	  {
+		"id": 843,
+		"amount": 100
+	  },
+	  // Oak shortbow
+	  {
+		"id": 849,
+		"amount": 100
+	  },
+	  // Willow shortbow
+	  {
+		"id": 853,
+		"amount": 100
+	  },
+	  // Maple shortbow
+	  {
+		"id": 9174,
+		"amount": 100
+	  },
+	  // Crossbow
+	  {
+		"id": 9177,
+		"amount": 100
+	  },
+	  // Iron Crossbow
+	  {
+		"id": 9179,
+		"amount": 100
+	  },
+	  // Steel Crossbow
+	  {
+		"id": 9181,
+		"amount": 100
+	  },
+	  // Mithril Crossbow
+	  {
+		"id": 9183,
+		"amount": 100
+	  },
+	  // Addy Crossbow
+	  {
+		"id": 1169,
+		"amount": 100
+	  },
+	  // Coif
+	  {
+		"id": 1167,
+		"amount": 100
+	  },
+	  // Leather coif
+	  {
+		"id": 1129,
+		"amount": 100
+	  },
+	  // Leather body
+	  {
+		"id": 1095,
+		"amount": 100
+	  },
+	  // Leather chaps
+	  {
+		"id": 1063,
+		"amount": 100
+	  },
+	  // Leather vambraces
+	  {
+		"id": 1131,
+		"amount": 100
+	  },
+	  // Hardleather body
+	  {
+		"id": 1133,
+		"amount": 100
+	  },
+	  // Studded body
+	  {
+		"id": 1097,
+		"amount": 100
+	  },
+	  // Sudded chaps
+	  {
+		"id": 1135,
+		"amount": 100
+	  },
+	  // Green d'hide body
+	  {
+		"id": 1099,
+		"amount": 100
+	  },
+	  // Green d'hide chaps
+	  {
+		"id": 1065,
+		"amount": 100
+	  },
+	  // Green d'hide vambs
+	  {
+		"id": 2499,
+		"amount": 100
+	  },
+	  // Blue d'hide body
+	  {
+		"id": 2493,
+		"amount": 100
+	  },
+	  // Blue d'hide chaps
+	  {
+		"id": 2487,
+		"amount": 100
+	  },
+	  // Blue d'hide vambs
+	  {
+		"id": 2501,
+		"amount": 100
+	  },
+	  // Red d'hide body
+	  {
+		"id": 2495,
+		"amount": 100
+	  },
+	  // Red d'hide chaps
+	  {
+		"id": 2489,
+		"amount": 100
+	  },
+	  // Red d'hide vambs
+	  {
+		"id": 2503,
+		"amount": 100
+	  },
+	  // Black d'hide body
+	  {
+		"id": 2497,
+		"amount": 100
+	  },
+	  // Black d'hide chaps
+	  {
+		"id": 2491,
+		"amount": 100
+	  },
+	  // Black d'hide chaps
+	  {
+		"id": 9185,
+		"amount": 25
+	  }
+	  // Runite c'bow
+	]
+  },
+  {
+	"id": 8,
+	"name": "Aubury's Rune Shop.",
+	"noiron": true,
+	"stock": [
+	  {
+		"id": 554,
+		"amount": 5000
+	  },
+	  // Fire rune
+	  {
+		"id": 555,
+		"amount": 5000
+	  },
+	  // Water rune
+	  {
+		"id": 556,
+		"amount": 5000
+	  },
+	  // Air rune
+	  {
+		"id": 557,
+		"amount": 5000
+	  },
+	  // Earth rune
+	  {
+		"id": 558,
+		"amount": 5000
+	  },
+	  // Mind rune
+	  {
+		"id": 559,
+		"amount": 5000
+	  },
+	  // Body rune
+	  {
+		"id": 560,
+		"amount": 5000
+	  },
+	  // Death rune
+	  {
+		"id": 561,
+		"amount": 5000
+	  },
+	  // Nature rune
+	  {
+		"id": 562,
+		"amount": 5000
+	  },
+	  // Chaos rune
+	  {
+		"id": 563,
+		"amount": 5000
+	  },
+	  // Law rune
+	  {
+		"id": 564,
+		"amount": 5000
+	  },
+	  // Cosmic rune
+	  {
+		"id": 565,
+		"amount": 5000
+	  },
+	  // Blood rune
+	  {
+		"id": 566,
+		"amount": 5000
+	  },
+	  // Soul rune
+	  {
+		"id": 9075,
+		"amount": 5000
+	  },
+	  // Astral rune
+	  {
+		"id": 12734,
+		"amount": 250
+	  },
+	  // Fire rune pack
+	  {
+		"id": 12730,
+		"amount": 250
+	  },
+	  // Water rune pack
+	  {
+		"id": 12728,
+		"amount": 250
+	  },
+	  // Air rune pack
+	  {
+		"id": 12732,
+		"amount": 250
+	  },
+	  // Earth rune pack
+	  {
+		"id": 12736,
+		"amount": 250
+	  },
+	  // Mind rune pack
+	  {
+		"id": 12738,
+		"amount": 250
+	  }
+	  // Chaos rune pack
+	]
+  },
+  {
+	"id": 9,
+	"name": "Gem Trader.",
+	"noiron": true,
+	"stock": [
+	  {
+		"id": 1623,
+		"amount": 50
+	  },
+	  // Uncut Sapphire
+	  {
+		"id": 1621,
+		"amount": 50
+	  },
+	  // Uncut Emerald
+	  {
+		"id": 1619,
+		"amount": 50
+	  },
+	  // Uncut Ruby
+	  {
+		"id": 1617,
+		"amount": 25
+	  },
+	  // Uncut Diamond
+	  {
+		"id": 1607,
+		"amount": 50
+	  },
+	  // Sapphire
+	  {
+		"id": 1605,
+		"amount": 50
+	  },
+	  // Emerald
+	  {
+		"id": 1603,
+		"amount": 50
+	  },
+	  // Ruby
+	  {
+		"id": 1601,
+		"amount": 25
+	  }
+	  // Diamond
+	]
+  },
+  {
+	"id": 10,
+	"name": "Slayer Equipment",
+	"stock": [
+	  {
+		"id": 4155,
+		"amount": 50
+	  },
+	  // Slayer gem
+	  {
+		"id": 4156,
+		"amount": 50
+	  },
+	  // Mirror shield
+	  {
+		"id": 4158,
+		"amount": 50
+	  },
+	  // Leaf-bladed spear
+	  {
+		"id": 4160,
+		"amount": 50000
+	  },
+	  // Broad arrows
+	  {
+		"id": 4161,
+		"amount": 5000
+	  },
+	  // Bag of salt
+	  {
+		"id": 4162,
+		"amount": 50
+	  },
+	  // Rock hammer
+	  {
+		"id": 4164,
+		"amount": 50
+	  },
+	  // Facemask
+	  {
+		"id": 4166,
+		"amount": 50
+	  },
+	  // Earmuffs
+	  {
+		"id": 4168,
+		"amount": 50
+	  },
+	  // Earmuffs
+	  {
+		"id": 4170,
+		"amount": 50
+	  },
+	  // Slayer's staff
+	  {
+		"id": 4551,
+		"amount": 50
+	  },
+	  // Spiny helmet
+	  {
+		"id": 6664,
+		"amount": 5000
+	  },
+	  // Fishing explosive
+	  {
+		"id": 6696,
+		"amount": 5000
+	  },
+	  // Ice cooler
+	  {
+		"id": 6720,
+		"amount": 50
+	  },
+	  // Slayer gloves
+	  {
+		"id": 7051,
+		"amount": 50
+	  },
+	  // Unlit bug lantern
+	  {
+		"id": 7159,
+		"amount": 50
+	  },
+	  // Insulated boots
+	  {
+		"id": 7421,
+		"amount": 50
+	  },
+	  // Fungicide spray
+	  {
+		"id": 7432,
+		"amount": 5000
+	  },
+	  // Fungicide
+	  {
+		"id": 8923,
+		"amount": 50
+	  },
+	  // Witchwood icon
+	  {
+		"id": 10952,
+		"amount": 50
+	  },
+	  // Slayer bell
+	  {
+		"id": 11874,
+		"amount": 3000
+	  },
+	  // Broad arrowheads
+	  {
+		"id": 11885,
+		"amount": 800
+	  },
+	  // Broad arrowhead pack
+	  {
+		"id": 11876,
+		"amount": 5000
+	  },
+	  // Unfinished broad bolts
+	  {
+		"id": 11887,
+		"amount": 1000
+	  }
+	  // Unfinished broad bolt pack
+	]
+  },
+  {
+	"id": 11,
+	"name": "Zaff's Superior Supplies!",
+	"noiron": true,
+	"stock": [
+	  {
+		"id": 1381,
+		"amount": 1000
+	  },
+	  // Staff of air
+	  {
+		"id": 1383,
+		"amount": 1000
+	  },
+	  // Staff of water
+	  {
+		"id": 1385,
+		"amount": 1000
+	  },
+	  // Staff of earth
+	  {
+		"id": 1387,
+		"amount": 1000
+	  },
+	  // Staff of fire
+	  {
+		"id": 4675,
+		"amount": 1000
+	  },
+	  // Ancient staff
+	  {
+		"id": 1017,
+		"amount": 1000
+	  },
+	  // Wizard hat
+	  {
+		"id": 426,
+		"amount": 1000
+	  },
+	  // Preist gown
+	  {
+		"id": 428,
+		"amount": 1000
+	  },
+	  // Priest gown
+	  {
+		"id": 579,
+		"amount": 1000
+	  },
+	  // //Blue wizard hat
+	  {
+		"id": 577,
+		"amount": 1000
+	  },
+	  // Blue wizard robe
+	  {
+		"id": 1011,
+		"amount": 1000
+	  },
+	  // Blue skirt
+	  {
+		"id": 4089,
+		"amount": 1000
+	  },
+	  // Mystic hat (blue)
+	  {
+		"id": 4091,
+		"amount": 1000
+	  },
+	  // Mystic body (blue)
+	  {
+		"id": 4093,
+		"amount": 1000
+	  },
+	  // Mystic skirt (blue)
+	  {
+		"id": 4095,
+		"amount": 1000
+	  },
+	  // Mystic gloves (blue)
+	  {
+		"id": 4097,
+		"amount": 1000
+	  },
+	  // Mystic boots (blue)
+	  {
+		"id": 6109,
+		"amount": 1000
+	  },
+	  // Ghostly robe hood
+	  {
+		"id": 6107,
+		"amount": 1000
+	  },
+	  // Ghostly robe top
+	  {
+		"id": 6108,
+		"amount": 1000
+	  },
+	  // Ghostly robe skirt
+	  {
+		"id": 1035,
+		"amount": 1000
+	  },
+	  // Zamorak robe top
+	  {
+		"id": 1033,
+		"amount": 1000
+	  },
+	  // Zamorak robe skirt
+	  {
+		"id": 2890,
+		"amount": 1000
+	  },
+	  // Elemental shield
+	  {
+		"id": 9729,
+		"amount": 1000
+	  },
+	  // Elemental helmet
+	  
+	  {
+		"id": 8007,
+		"amount": 1000
+	  },
+	  // Varrock teleport
+	  {
+		"id": 8008,
+		"amount": 1000
+	  },
+	  // Lumbridge teleport
+	  {
+		"id": 8009,
+		"amount": 1000
+	  },
+	  // Falador teleport
+	  {
+		"id": 8010,
+		"amount": 1000
+	  },
+	  // Camelot teleport
+	  {
+		"id": 8011,
+		"amount": 1000
+	  },
+	  // Ardougne teleport
+	  {
+		"id": 8012,
+		"amount": 1000
+	  },
+	  // Watchtower teleport
+	  
+	  {
+		"id": 19613,
+		"amount": 1000
+	  },
+	  // Lumbridge Graveyard teleport
+	  {
+		"id": 19615,
+		"amount": 1000
+	  },
+	  // Draynor Manor teleport
+	  {
+		"id": 19617,
+		"amount": 1000
+	  },
+	  // Mind Altar teleport
+	  {
+		"id": 19619,
+		"amount": 1000
+	  },
+	  // Salve Graveyard teleport
+	  {
+		"id": 19621,
+		"amount": 1000
+	  },
+	  // Fenkenstrain's teleport
+	  {
+		"id": 19623,
+		"amount": 1000
+	  },
+	  // West Ardougne teleport
+	  {
+		"id": 19625,
+		"amount": 1000
+	  },
+	  // Harmony Island teleport
+	  {
+		"id": 19627,
+		"amount": 1000
+	  },
+	  // Cementery teleport
+	  {
+		"id": 19629,
+		"amount": 1000
+	  },
+	  // Barrows teleport
+	  {
+		"id": 19631,
+		"amount": 1000
+	  }
+	  // Ape Atoll teleport
+	]
+  },
+  {
+	"id": 12,
+	"name": "Varrock Swordshop - Ironman",
+	"noiron": false,
+	"stock": [
+	  {
+		"id": 1277,
+		"amount": 5
+	  },
+	  // Bronze Sword
+	  {
+		"id": 1279,
+		"amount": 4
+	  },
+	  // Iron Sword
+	  {
+		"id": 1281,
+		"amount": 4
+	  },
+	  // Steel Sword
+	  {
+		"id": 1283,
+		"amount": 3
+	  },
+	  // Black Sword
+	  {
+		"id": 1285,
+		"amount": 3
+	  },
+	  // Mithril Sword
+	  {
+		"id": 1287,
+		"amount": 2
+	  },
+	  // Adamant Sword
+	  {
+		"id": 1291,
+		"amount": 4
+	  },
+	  // Bronze Longsword
+	  {
+		"id": 1293,
+		"amount": 3
+	  },
+	  // Iron Longsword
+	  {
+		"id": 1295,
+		"amount": 3
+	  },
+	  // Steel Longsword
+	  {
+		"id": 1297,
+		"amount": 2
+	  },
+	  // Black Longsword
+	  {
+		"id": 1299,
+		"amount": 2
+	  },
+	  // Mithril Longsword
+	  {
+		"id": 1301,
+		"amount": 1
+	  },
+	  // Adamant Longsword
+	  {
+		"id": 1205,
+		"amount": 10
+	  },
+	  // Bronze Dagger
+	  {
+		"id": 1203,
+		"amount": 6
+	  },
+	  // Iron Dagger
+	  {
+		"id": 1207,
+		"amount": 5
+	  },
+	  // Steel Dagger
+	  {
+		"id": 1217,
+		"amount": 4
+	  },
+	  // Black Dagger
+	  {
+		"id": 1209,
+		"amount": 3
+	  },
+	  // Mithril Dagger
+	  {
+		"id": 1211,
+		"amount": 2
+	  },
+	  // Adamant Dagger
+	  {
+		"id": 4587,
+		"amount": 2
+	  },
+	  // Dragon scim
+	  {
+		"id": 1215,
+		"amount": 2
+	  }
+	  // Dragon dagger
+	]
+  },
+  {
+	"id": 13,
+	"name": "Thessalia.",
+	"noiron": false,
+	"stock": [
+	  {
+		"id": 1005,
+		"amount": 3
+	  },
+	  // White Apron
+	  {
+		"id": 1129,
+		"amount": 12
+	  },
+	  // Leather Body
+	  {
+		"id": 1059,
+		"amount": 10
+	  },
+	  // Leather Gloves
+	  {
+		"id": 1061,
+		"amount": 10
+	  },
+	  // Leather Boots
+	  {
+		"id": 1757,
+		"amount": 1
+	  },
+	  // Brown Apron
+	  {
+		"id": 1013,
+		"amount": 5
+	  },
+	  // Pink Skirt
+	  {
+		"id": 1015,
+		"amount": 3
+	  },
+	  // Black Skirt
+	  {
+		"id": 1011,
+		"amount": 2
+	  },
+	  // Blue Skirt
+	  {
+		"id": 1007,
+		"amount": 4
+	  },
+	  // Red Cape
+	  {
+		"id": 950,
+		"amount": 5
+	  },
+	  // Silk
+	  {
+		"id": 426,
+		"amount": 3
+	  },
+	  // Priest Gown (Bottom)
+	  {
+		"id": 428,
+		"amount": 3
+	  },
+	  // Priest Gown (Top)
+	  
+	  {
+		"id": 9748,
+		"amount": 10
+	  },
+	  // Attack cape
+	  {
+		"id": 9751,
+		"amount": 10
+	  },
+	  // Str cape
+	  {
+		"id": 9754,
+		"amount": 10
+	  },
+	  // Def cape
+	  {
+		"id": 9757,
+		"amount": 10
+	  },
+	  // Range cape
+	  {
+		"id": 9760,
+		"amount": 10
+	  },
+	  // Pray cape
+	  {
+		"id": 9763,
+		"amount": 10
+	  },
+	  // Mage cape
+	  {
+		"id": 9766,
+		"amount": 10
+	  },
+	  // Runecraft cape
+	  {
+		"id": 9769,
+		"amount": 10
+	  },
+	  // HP cape
+	  {
+		"id": 9772,
+		"amount": 10
+	  },
+	  // Agility cape
+	  {
+		"id": 9775,
+		"amount": 10
+	  },
+	  // Herb cape
+	  {
+		"id": 9778,
+		"amount": 10
+	  },
+	  // Thieving cape
+	  {
+		"id": 9781,
+		"amount": 10
+	  },
+	  // Crafting cape
+	  {
+		"id": 9784,
+		"amount": 10
+	  },
+	  // Fletching cape
+	  {
+		"id": 9787,
+		"amount": 10
+	  },
+	  // Slayer cape
+	  {
+		"id": 9790,
+		"amount": 10
+	  },
+	  // Constr cape
+	  {
+		"id": 9793,
+		"amount": 10
+	  },
+	  // Mining cape
+	  {
+		"id": 9796,
+		"amount": 10
+	  },
+	  // Smithing cape
+	  {
+		"id": 9799,
+		"amount": 10
+	  },
+	  // Fishing cape
+	  {
+		"id": 9802,
+		"amount": 10
+	  },
+	  // Cook cape
+	  {
+		"id": 9805,
+		"amount": 10
+	  },
+	  // FM cape
+	  {
+		"id": 9808,
+		"amount": 10
+	  },
+	  // Wc cape
+	  {
+		"id": 9811,
+		"amount": 10
+	  },
+	  // Farm cape
+	  {
+		"id": 9949,
+		"amount": 10
+	  }
+	  // Hunter cape
+	]
+  },
+  {
+	"id": 14,
+	"name": "Zaff's Superior Supplies - Ironman!",
+	"noiron": false,
+	"stock": [
+	  {
+		"id": 1391,
+		"amount": 2
+	  },
+	  // Battlestaff
+	  {
+		"id": 1379,
+		"amount": 5
+	  },
+	  // Staff
+	  {
+		"id": 1389,
+		"amount": 5
+	  },
+	  // Magic Staff
+	  {
+		"id": 1381,
+		"amount": 2
+	  },
+	  // Staff of Air
+	  {
+		"id": 1383,
+		"amount": 2
+	  },
+	  // Staff of Water
+	  {
+		"id": 1385,
+		"amount": 2
+	  },
+	  // Staff of Earth
+	  {
+		"id": 1387,
+		"amount": 2
+	  }
+	  // Staff of Fire
+	]
+  },
+  {
+	"id": 15,
+	"name": "Horvik's Armour Shop - Ironman.",
+	"noiron": false,
+	"stock": [
+	  {
+		"id": 1103,
+		"amount": 5
+	  },
+	  // Bronze Chainbody
+	  {
+		"id": 1101,
+		"amount": 3
+	  },
+	  // Iron Chainbody
+	  {
+		"id": 1105,
+		"amount": 3
+	  },
+	  // Steel Chainbody
+	  {
+		"id": 1109,
+		"amount": 1
+	  },
+	  // Mithril Chainbody
+	  {
+		"id": 1117,
+		"amount": 3
+	  },
+	  // Bronze Platebody
+	  {
+		"id": 1115,
+		"amount": 1
+	  },
+	  // Iron Platebody
+	  {
+		"id": 1119,
+		"amount": 1
+	  },
+	  // Steel Platebody
+	  {
+		"id": 1125,
+		"amount": 1
+	  },
+	  // Black Platebody
+	  {
+		"id": 1121,
+		"amount": 1
+	  },
+	  // Mithril Platebody
+	  {
+		"id": 1067,
+		"amount": 1
+	  },
+	  // Iron Platelegs
+	  {
+		"id": 1133,
+		"amount": 1
+	  },
+	  // Studded Body
+	  {
+		"id": 1097,
+		"amount": 1
+	  },
+	  // Studded Chaps
+	  {
+		"id": 2368,
+		"amount": 1
+	  }
+	  // Shield right half
+	]
+  },
+  {
+	"id": 16,
+	"name": "Lowe's Archery Emporium - Ironman.",
+	"noiron": false,
+	"stock": [
+	  {
+		"id": 882,
+		"amount": 2000
+	  },
+	  // Bronze arrows
+	  {
+		"id": 884,
+		"amount": 1500
+	  },
+	  // Iron arrows
+	  {
+		"id": 886,
+		"amount": 1000
+	  },
+	  // Steel arrows
+	  {
+		"id": 888,
+		"amount": 800
+	  },
+	  // Mithril arrows
+	  {
+		"id": 890,
+		"amount": 600
+	  },
+	  // Adamant arrows
+	  {
+		"id": 877,
+		"amount": 1500
+	  },
+	  // Bronze Bolts
+	  {
+		"id": 841,
+		"amount": 4
+	  },
+	  // Shortbow
+	  {
+		"id": 839,
+		"amount": 4
+	  },
+	  // Longbow
+	  {
+		"id": 843,
+		"amount": 3
+	  },
+	  // Oak Shortbow
+	  {
+		"id": 845,
+		"amount": 3
+	  },
+	  // Oak Longbow
+	  {
+		"id": 849,
+		"amount": 2
+	  },
+	  // Willow Shortbow
+	  {
+		"id": 847,
+		"amount": 2
+	  },
+	  // Willow Longbow
+	  {
+		"id": 853,
+		"amount": 1
+	  },
+	  // Maple Shortbow
+	  {
+		"id": 851,
+		"amount": 1
+	  },
+	  // Maple Longbow
+	  {
+		"id": 837,
+		"amount": 2
+	  }
+	  // Crossbow
+	]
+  },
+  {
+	"id": 17,
+	"name": "Aubury's Rune Shop - Ironman.",
+	"noiron": false,
+	"stock": [
+	  {
+		"id": 554,
+		"amount": 5000
+	  },
+	  //  Fire Rune
+	  {
+		"id": 555,
+		"amount": 5000
+	  },
+	  // Water Rune
+	  {
+		"id": 556,
+		"amount": 5000
+	  },
+	  // Air Rune
+	  {
+		"id": 557,
+		"amount": 5000
+	  },
+	  // Earth Rune
+	  {
+		"id": 558,
+		"amount": 5000
+	  },
+	  // Mind Rune
+	  {
+		"id": 559,
+		"amount": 5000
+	  },
+	  // Body Rune
+	  {
+		"id": 562,
+		"amount": 250
+	  },
+	  // Chaos Rune
+	  {
+		"id": 560,
+		"amount": 250
+	  },
+	  // Death Rune
+	  {
+		"id": 12734,
+		"amount": 80
+	  },
+	  // Fire Rune Pack
+	  {
+		"id": 12730,
+		"amount": 80
+	  },
+	  // Water Rune Pack
+	  {
+		"id": 12728,
+		"amount": 80
+	  },
+	  // Air Rune Pack
+	  {
+		"id": 12732,
+		"amount": 80
+	  },
+	  // Earth Rune Pack
+	  {
+		"id": 12736,
+		"amount": 40
+	  },
+	  // Mind Rune Pack
+	  {
+		"id": 12738,
+		"amount": 35
+	  }
+	  // Chaos Rune Pack
+	]
+  },
+  {
+	"id": 18,
+	"name": "Fancy Dress Shop Owner.",
+	"noiron": false,
+	"stock": [
+	  {
+		"id": 1949,
+		"amount": 0
+	  },
+	  //  Chef's Hat
+	  {
+		"id": 579,
+		"amount": 3
+	  },
+	  //  Blue Wizard's Hat
+	  {
+		"id": 1023,
+		"amount": 1
+	  },
+	  //  Yellow Cape
+	  {
+		"id": 958,
+		"amount": 3
+	  },
+	  //  Grey Wolf Fur
+	  {
+		"id": 948,
+		"amount": 3
+	  },
+	  //  Bear Fur
+	  {
+		"id": 1733,
+		"amount": 3
+	  },
+	  //  Needle
+	  {
+		"id": 1734,
+		"amount": 100
+	  },
+	  //  Thread
+	  {
+		"id": 1059,
+		"amount": 10
+	  },
+	  //  Leather Gloves
+	  {
+		"id": 1061,
+		"amount": 10
+	  },
+	  //  Leather Boots
+	  {
+		"id": 426,
+		"amount": 3
+	  },
+	  //  Priest Gown (Bottom)
+	  {
+		"id": 428,
+		"amount": 3
+	  },
+	  //  Priest Gown (Top)
+	  {
+		"id": 1757,
+		"amount": 1
+	  },
+	  //  Brown Apron
+	  {
+		"id": 1013,
+		"amount": 5
+	  },
+	  //  Pink Skirt
+	  {
+		"id": 1015,
+		"amount": 3
+	  },
+	  //  Black Skirt
+	  {
+		"id": 1011,
+		"amount": 2
+	  },
+	  //  Blue Skirt
+	  {
+		"id": 1007,
+		"amount": 4
+	  },
+	  //  Red Cape
+	  {
+		"id": 1025,
+		"amount": 3
+	  },
+	  //  Eye Patch
+	  {
+		"id": 10088,
+		"amount": 0
+	  },
+	  //  Red Feather
+	  {
+		"id": 10090,
+		"amount": 0
+	  },
+	  //  Yellow Feather
+	  {
+		"id": 10091,
+		"amount": 0
+	  },
+	  //  Orange Feather
+	  {
+		"id": 10089,
+		"amount": 0
+	  },
+	  //  Blue Feather
+	  {
+		"id": 10087,
+		"amount": 0
+	  }
+	  //  Stripy Feather
+	]
+  },
+  {
+	"id": 19,
+	"name": "Varrock General Store - Ironman",
+	"noiron": false,
+	"general": true,
+	"stock": [
+	  {
+		"id": 233,
+		"amount": 500
+	  },
+	  // Pestle and mortar
+	  {
+		"id": 1755,
+		"amount": 500
+	  },
+	  // Chisel
+	  {
+		"id": 1523,
+		"amount": 500
+	  },
+	  // Lock pick
+	  {
+		"id": 952,
+		"amount": 500
+	  },
+	  // Spade
+	  {
+		"id": 2347,
+		"amount": 500
+	  },
+	  // Hammer
+	  {
+		"id": 1735,
+		"amount": 500
+	  },
+	  // Shears
+	  {
+		"id": 946,
+		"amount": 500
+	  },
+	  // Knife
+	  {
+		"id": 1935,
+		"amount": 500
+	  },
+	  // Jug
+	  {
+		"id": 1925,
+		"amount": 500
+	  },
+	  // Bucket
+	  {
+		"id": 1931,
+		"amount": 500
+	  },
+	  // Pot
+	  {
+		"id": 1923,
+		"amount": 500
+	  },
+	  // Bowl
+	  {
+		"id": 1887,
+		"amount": 500
+	  },
+	  // Cake tin
+	  {
+		"id": 590,
+		"amount": 500
+	  },
+	  // Tinderbox
+	  {
+		"id": 1540,
+		"amount": 500
+	  },
+	  // Anti-dragon shield
+	  {
+		"id": 11879,
+		"amount": 1000
+	  },
+	  // Water-filled vial pack
+	  {
+		"id": 1733,
+		"amount": 50000
+	  },
+	  // Needle
+	  {
+		"id": 1734,
+		"amount": 50000
+	  },
+	  // Thread
+	  {
+		"id": 1592,
+		"amount": 500
+	  },
+	  // Ring mould
+	  {
+		"id": 1595,
+		"amount": 500
+	  },
+	  // Amulet mould
+	  {
+		"id": 1597,
+		"amount": 500
+	  },
+	  // Necklace mould
+	  {
+		"id": 11065,
+		"amount": 500
+	  },
+	  // Bracelet mould
+	  {
+		"id": 228,
+		"amount": 1000
+	  },
+	  // Vial of water
+	  {
+		"id": 1760,
+		"amount": 1000
+	  },
+	  // Ball of wool
+	  {
+		"id": 955,
+		"amount": 1000
+	  },
+	  // Rope
+	  {
+		"id": 20742,
+		"amount": 1000
+	  }
+	  // Empty water jug pack
+	]
+  },
+  {
+	"id": 20,
+	"name": "Horvik's Armour Shop.",
+	"noiron": true,
+	"stock": [
+	  {
+		"id": 1155,
+		"amount": 1000
+	  },
+	  // Bronze full helm
+	  {
+		"id": 1153,
+		"amount": 1000
+	  },
+	  // Iron full helm
+	  {
+		"id": 1157,
+		"amount": 1000
+	  },
+	  // Steel full helm
+	  {
+		"id": 1165,
+		"amount": 1000
+	  },
+	  // Black full helm
+	  {
+		"id": 1159,
+		"amount": 1000
+	  },
+	  // Mith full helm
+	  {
+		"id": 1161,
+		"amount": 1000
+	  },
+	  // Addy full helm
+	  {
+		"id": 1163,
+		"amount": 1000
+	  },
+	  // Rune full helm
+	  {
+		"id": 5574,
+		"amount": 1000
+	  },
+	  // Initiate sallet
+	  {
+		"id": 1117,
+		"amount": 1000
+	  },
+	  // Bronze platebody
+	  {
+		"id": 1115,
+		"amount": 1000
+	  },
+	  // Iron platebody
+	  {
+		"id": 1119,
+		"amount": 1000
+	  },
+	  // Steel platebody
+	  {
+		"id": 1125,
+		"amount": 1000
+	  },
+	  // Black platebody
+	  {
+		"id": 1121,
+		"amount": 1000
+	  },
+	  // Mith platebody
+	  {
+		"id": 1123,
+		"amount": 1000
+	  },
+	  // Addy platebody
+	  {
+		"id": 1127,
+		"amount": 1000
+	  },
+	  // Rune platebody
+	  {
+		"id": 5575,
+		"amount": 1000
+	  },
+	  // Initiate haberk
+	  {
+		"id": 1075,
+		"amount": 1000
+	  },
+	  // Bronze platelegs
+	  {
+		"id": 1067,
+		"amount": 1000
+	  },
+	  // Iron platelegs
+	  {
+		"id": 1069,
+		"amount": 1000
+	  },
+	  // Steel platelegs
+	  {
+		"id": 1077,
+		"amount": 1000
+	  },
+	  // Black platelegs
+	  {
+		"id": 1071,
+		"amount": 1000
+	  },
+	  // Mith platelegs
+	  {
+		"id": 1073,
+		"amount": 1000
+	  },
+	  // Addy platelegs
+	  {
+		"id": 1079,
+		"amount": 1000
+	  },
+	  // Rune platelegs
+	  {
+		"id": 5576,
+		"amount": 1000
+	  },
+	  // Initiate cuisse
+	  {
+		"id": 1189,
+		"amount": 1000
+	  },
+	  // Bronze kiteshield
+	  {
+		"id": 1191,
+		"amount": 1000
+	  },
+	  // Iron kiteshield
+	  {
+		"id": 1193,
+		"amount": 1000
+	  },
+	  // Steel kiteshield
+	  {
+		"id": 1195,
+		"amount": 1000
+	  },
+	  // Black kiteshield
+	  {
+		"id": 1197,
+		"amount": 1000
+	  },
+	  // Mith kiteshield
+	  {
+		"id": 1199,
+		"amount": 1000
+	  },
+	  // Addy kiteshield
+	  {
+		"id": 1201,
+		"amount": 1000
+	  },
+	  // Rune kiteshield
+	  {
+		"id": 3105,
+		"amount": 1000
+	  },
+	  // Climbing boots
+	  {
+		"id": 2368,
+		"amount": 1000
+	  },
+	  // Shield right half
+	  {
+		"id": 10828,
+		"amount": 1000
+	  },
+	  // Helm of neitiznot
+	  {
+		"id": 3749,
+		"amount": 1000
+	  },
+	  // Archer helm
+	  {
+		"id": 3751,
+		"amount": 1000
+	  },
+	  // Berseker helm
+	  {
+		"id": 3753,
+		"amount": 1000
+	  },
+	  // Warrior helm
+	  {
+		"id": 3755,
+		"amount": 1000
+	  }
+	  // Farseer helm
+	]
+  },
+  {
+	"id": 21,
+	"name": "Harry's Fishing Shop.",
+	"stock": [
+	  {
+		"id": 303,
+		"amount": 5
+	  },
+	  // Small fish net
+	  {
+		"id": 307,
+		"amount": 5
+	  },
+	  // Fishing rod
+	  {
+		"id": 311,
+		"amount": 2
+	  },
+	  // Harpoon
+	  {
+		"id": 301,
+		"amount": 2
+	  },
+	  // Lobster pot
+	  {
+		"id": 313,
+		"amount": 1200
+	  },
+	  // Fishing bait
+	  {
+		"id": 11883,
+		"amount": 80
+	  },
+	  // Bait pack
+	  {
+		"id": 305,
+		"amount": 5
+	  },
+	  // Big fish net
+	  
+	  {
+		"id": 317,
+		"amount": 0
+	  },
+	  // Raw shrimp
+	  {
+		"id": 327,
+		"amount": 0
+	  },
+	  // Raw sardine
+	  {
+		"id": 345,
+		"amount": 0
+	  },
+	  // Raw herring
+	  {
+		"id": 353,
+		"amount": 0
+	  },
+	  // Raw mackerel
+	  {
+		"id": 341,
+		"amount": 0
+	  },
+	  // Raw cod
+	  {
+		"id": 321,
+		"amount": 0
+	  },
+	  // Raw anchovies
+	  {
+		"id": 359,
+		"amount": 0
+	  },
+	  // Raw tuna
+	  {
+		"id": 377,
+		"amount": 0
+	  },
+	  // Raw lobster
+	  {
+		"id": 363,
+		"amount": 0
+	  },
+	  // Raw bass
+	  {
+		"id": 371,
+		"amount": 0
+	  },
+	  // Raw swordfish
+	  {
+		"id": 383,
+		"amount": 0
+	  }
+	  // Raw shark
+	]
+  },
+  {
+	"id": 22,
+	"name": "Gerrant's Fishy Business.",
+	"stock": [
+	  {
+		"id": 303,
+		"amount": 5
+	  },
+	  // Small fish net
+	  {
+		"id": 307,
+		"amount": 5
+	  },
+	  // Fishing rod
+	  {
+		"id": 309,
+		"amount": 5
+	  },
+	  // Fly fishing rod
+	  {
+		"id": 311,
+		"amount": 2
+	  },
+	  // Harpoon
+	  {
+		"id": 301,
+		"amount": 2
+	  },
+	  // Lobster pot
+	  {
+		"id": 313,
+		"amount": 1500
+	  },
+	  // Fishing bait
+	  {
+		"id": 11883,
+		"amount": 80
+	  },
+	  // Bait pack
+	  {
+		"id": 314,
+		"amount": 1000
+	  },
+	  // Feather
+	  {
+		"id": 11881,
+		"amount": 100
+	  },
+	  // Feather pack
+	  
+	  {
+		"id": 317,
+		"amount": 0
+	  },
+	  // Raw shrimp
+	  {
+		"id": 327,
+		"amount": 200
+	  },
+	  // Raw sardine
+	  {
+		"id": 345,
+		"amount": 0
+	  },
+	  // Raw herring
+	  {
+		"id": 321,
+		"amount": 0
+	  },
+	  // Raw anchovies
+	  {
+		"id": 335,
+		"amount": 0
+	  },
+	  // Raw trout
+	  {
+		"id": 349,
+		"amount": 0
+	  },
+	  // Raw pike
+	  {
+		"id": 331,
+		"amount": 0
+	  },
+	  // Raw salmon
+	  {
+		"id": 359,
+		"amount": 0
+	  },
+	  // Raw tuna
+	  {
+		"id": 377,
+		"amount": 0
+	  },
+	  // Raw lobster
+	  {
+		"id": 371,
+		"amount": 0
+	  }
+	  // Raw swordfish
+	]
+  },
+  {
+	"id": 23,
+	"name": "Lumbridge General Store",
+	"noiron": true,
+	"general": true,
+	"stock": [
+	  {
+		"id": 233,
+		"amount": 500
+	  },
+	  // Pestle and mortar
+	  {
+		"id": 1755,
+		"amount": 500
+	  },
+	  // Chisel
+	  {
+		"id": 1523,
+		"amount": 500
+	  },
+	  // Lock pick
+	  {
+		"id": 952,
+		"amount": 500
+	  },
+	  // Spade
+	  {
+		"id": 1755,
+		"amount": 500
+	  },
+	  // Chisel
+	  {
+		"id": 2347,
+		"amount": 500
+	  },
+	  // Hammer
+	  {
+		"id": 1735,
+		"amount": 500
+	  },
+	  // Shears
+	  {
+		"id": 946,
+		"amount": 500
+	  },
+	  // Knife
+	  {
+		"id": 1935,
+		"amount": 500
+	  },
+	  // Jug
+	  {
+		"id": 1925,
+		"amount": 500
+	  },
+	  // Bucket
+	  {
+		"id": 1931,
+		"amount": 500
+	  },
+	  // Pot
+	  {
+		"id": 1923,
+		"amount": 500
+	  },
+	  // Bowl
+	  {
+		"id": 1887,
+		"amount": 500
+	  },
+	  // Cake tin
+	  {
+		"id": 590,
+		"amount": 500
+	  },
+	  // Tinderbox
+	  {
+		"id": 1540,
+		"amount": 500
+	  },
+	  // Anti-dragon shield
+	  {
+		"id": 11879,
+		"amount": 1000
+	  },
+	  // Water-filled vial pack
+	  {
+		"id": 1733,
+		"amount": 50000
+	  },
+	  // Needle
+	  {
+		"id": 1734,
+		"amount": 50000
+	  },
+	  // Thread
+	  {
+		"id": 1592,
+		"amount": 500
+	  },
+	  // Ring mould
+	  {
+		"id": 1595,
+		"amount": 500
+	  },
+	  // Amulet mould
+	  {
+		"id": 1597,
+		"amount": 500
+	  },
+	  // Necklace mould
+	  {
+		"id": 11065,
+		"amount": 500
+	  },
+	  // Bracelet mould
+	  {
+		"id": 228,
+		"amount": 1000
+	  },
+	  // Vial of water
+	  {
+		"id": 1760,
+		"amount": 1000
+	  },
+	  // Ball of wool
+	  {
+		"id": 954,
+		"amount": 1000
+	  },
+	  // Rope
+	  {
+		"id": 20742,
+		"amount": 1000
+	  }
+	  // Empty water jug pack
+	]
+  },
+  {
+	"id": 24,
+	"name": "Shanomi's Treasures",
+	"noiron": true,
+	"stock": [
+	  {
+		"id": 2414,
+		"amount": 500
+	  },
+	  // Zamorak Cape
+	  {
+		"id": 2412,
+		"amount": 500
+	  },
+	  // Saradomin Cape
+	  {
+		"id": 2413,
+		"amount": 500
+	  },
+	  // Guthix Cape
+	  {
+		"id": 3842,
+		"amount": 500
+	  },
+	  // Unholy Book
+	  {
+		"id": 3840,
+		"amount": 500
+	  },
+	  // Holy Book
+	  {
+		"id": 3844,
+		"amount": 500
+	  },
+	  // Book of Balance
+	  {
+		"id": 10548,
+		"amount": 500
+	  },
+	  // Fighter hat
+	  {
+		"id": 10551,
+		"amount": 1000
+	  },
+	  // Fighter torso
+	  {
+		"id": 7454,
+		"amount": 500
+	  },
+	  // Bronze Gloves
+	  {
+		"id": 7455,
+		"amount": 500
+	  },
+	  // Iron Gloves
+	  {
+		"id": 7456,
+		"amount": 500
+	  },
+	  // Steel Gloves
+	  {
+		"id": 7457,
+		"amount": 500
+	  },
+	  // Black Gloves
+	  {
+		"id": 7458,
+		"amount": 500
+	  },
+	  // Mithril Gloves
+	  {
+		"id": 7459,
+		"amount": 500
+	  },
+	  // Adamant Gloves
+	  {
+		"id": 7460,
+		"amount": 500
+	  },
+	  // Runite Gloves
+	  {
+		"id": 7461,
+		"amount": 500
+	  },
+	  // Dragon Gloves
+	  {
+		"id": 7462,
+		"amount": 500
+	  },
+	  // Barrows Gloves
+	  {
+		"id": 8839,
+		"amount": 500
+	  },
+	  // Void Knight Top
+	  {
+		"id": 8840,
+		"amount": 500
+	  },
+	  // Void Knight Robe
+	  {
+		"id": 8841,
+		"amount": 500
+	  },
+	  // Void Knight Mace
+	  {
+		"id": 8842,
+		"amount": 500
+	  },
+	  // Void Knight Gloves
+	  {
+		"id": 11663,
+		"amount": 500
+	  },
+	  // Void Mage Helm
+	  {
+		"id": 11664,
+		"amount": 500
+	  },
+	  // Void Ranger Helm
+	  {
+		"id": 11665,
+		"amount": 500
+	  },
+	  // Void Melee Helm
+	  {
+		"id": 13072,
+		"amount": 500
+	  },
+	  // Elite Void Top
+	  {
+		"id": 13073,
+		"amount": 500
+	  },
+	  // Elite Void Robe
+	  {
+		"id": 10499,
+		"amount": 500
+	  },
+	  // Ava's Accumulator
+	  {
+		"id": 13124,
+		"amount": 500
+	  }
+	  // Ardougne Cloak 4
+	]
+  },
+  {
+	"id": 25,
+	"name": "Arhein Store",
+	"noiron": true,
+	"general": true,
+	"stock": [
+	  {
+		"id": 233,
+		"amount": 500
+	  },
+	  // Pestle and mortar
+	  {
+		"id": 1755,
+		"amount": 500
+	  },
+	  // Chisel
+	  {
+		"id": 1523,
+		"amount": 500
+	  },
+	  // Lock pick
+	  {
+		"id": 952,
+		"amount": 500
+	  },
+	  // Spade
+	  {
+		"id": 1755,
+		"amount": 500
+	  },
+	  // Chisel
+	  {
+		"id": 2347,
+		"amount": 500
+	  },
+	  // Hammer
+	  {
+		"id": 1735,
+		"amount": 500
+	  },
+	  // Shears
+	  {
+		"id": 946,
+		"amount": 500
+	  },
+	  // Knife
+	  {
+		"id": 1935,
+		"amount": 500
+	  },
+	  // Jug
+	  {
+		"id": 1925,
+		"amount": 500
+	  },
+	  // Bucket
+	  {
+		"id": 1931,
+		"amount": 500
+	  },
+	  // Pot
+	  {
+		"id": 1923,
+		"amount": 500
+	  },
+	  // Bowl
+	  {
+		"id": 1887,
+		"amount": 500
+	  },
+	  // Cake tin
+	  {
+		"id": 590,
+		"amount": 500
+	  },
+	  // Tinderbox
+	  {
+		"id": 1540,
+		"amount": 500
+	  },
+	  // Anti-dragon shield
+	  {
+		"id": 11879,
+		"amount": 1000
+	  },
+	  // Water-filled vial pack
+	  {
+		"id": 380,
+		"amount": 1000
+	  },
+	  // Lobster
+	  {
+		"id": 7947,
+		"amount": 1000
+	  },
+	  // Monkfish
+	  {
+		"id": 176,
+		"amount": 1000
+	  },
+	  // Antiposion potion
+	  {
+		"id": 2455,
+		"amount": 1000
+	  },
+	  // Antifire potion
+	  {
+		"id": 122,
+		"amount": 1000
+	  },
+	  // Attack potion
+	  {
+		"id": 116,
+		"amount": 1000
+	  },
+	  // Strength potion
+	  {
+		"id": 134,
+		"amount": 1000
+	  },
+	  // Defence potion
+	  {
+		"id": 228,
+		"amount": 1000
+	  }
+	  // Vial of water
+	]
+  },
+  {
+	"id": 26,
+	"name": "Arhein Store - Ironman",
+	"noiron": false,
+	"general": true,
+	"stock": [
+	  {
+		"id": 1931,
+		"amount": 5
+	  },
+	  // Pot
+	  {
+		"id": 1935,
+		"amount": 2
+	  },
+	  // Jug
+	  {
+		"id": 1735,
+		"amount": 2
+	  },
+	  // Shears
+	  {
+		"id": 946,
+		"amount": 500
+	  },
+	  // Knife
+	  {
+		"id": 1925,
+		"amount": 3
+	  },
+	  // Bucket
+	  {
+		"id": 1923,
+		"amount": 2
+	  },
+	  // Bowl
+	  {
+		"id": 1887,
+		"amount": 2
+	  },
+	  // Cake Tin
+	  {
+		"id": 590,
+		"amount": 2
+	  },
+	  // Tinderbox
+	  {
+		"id": 1755,
+		"amount": 2
+	  },
+	  // Chisel
+	  {
+		"id": 2347,
+		"amount": 5
+	  },
+	  // Hammer
+	  {
+		"id": 550,
+		"amount": 5
+	  },
+	  // Newcomer Map
+	  {
+		"id": 9003,
+		"amount": 5
+	  }
+	  // Security Book
+	]
+  },
+  {
+	"id": 27,
+	"name": "Supply Store",
+	"noiron": false,
+	"general": true,
+	"stock": [
+	  {
+		"id": 222,
+		"amount": 500
+	  },
+	  // Eye of newt
+	  {
+		"id": 226,
+		"amount": 500
+	  },
+	  // Limpwurt root
+	  {
+		"id": 236,
+		"amount": 500
+	  },
+	  // Unicorn horn dust
+	  {
+		"id": 9737,
+		"amount": 500
+	  },
+	  // Goat horn dust
+	  {
+		"id": 242,
+		"amount": 500
+	  },
+	  // Dragon scale dust
+	  {
+		"id": 1976,
+		"amount": 500
+	  },
+	  // Chocolate dust
+	  {
+		"id": 224,
+		"amount": 500
+	  },
+	  // Red spiders eggs
+	  {
+		"id": 232,
+		"amount": 500
+	  },
+	  // Snape grass
+	  {
+		"id": 246,
+		"amount": 500
+	  },
+	  // Wine of zamorak
+	  {
+		"id": 3139,
+		"amount": 500
+	  },
+	  // Potato cactus
+	  {
+		"id": 6694,
+		"amount": 500
+	  },
+	  // Crushed nest
+	  {
+		"id": 2971,
+		"amount": 500
+	  },
+	  // Mort myre fungus
+	  {
+		"id": 240,
+		"amount": 500
+	  },
+	  // White berries
+	  {
+		"id": 248,
+		"amount": 500
+	  },
+	  // Jagerberries
+	  {
+		"id": 6019,
+		"amount": 500
+	  }
+	  // Poison ivy berries
+	]
+  },
+  {
+	"id": 28,
+	"name": "Varrock Supplies Store",
+	"noiron": true,
+	"general": false,
+	"stock": [
+	  {
+		"id": 380,
+		"amount": 1000
+	  },
+	  // Lobster
+	  {
+		"id": 7947,
+		"amount": 1000
+	  },
+	  // Monkfish
+	  {
+		"id": 176,
+		"amount": 1000
+	  },
+	  // Antiposion potion
+	  {
+		"id": 2455,
+		"amount": 1000
+	  },
+	  // Antifire potion
+	  {
+		"id": 122,
+		"amount": 1000
+	  },
+	  // Attack potion
+	  {
+		"id": 116,
+		"amount": 1000
+	  },
+	  // Strength potion
+	  {
+		"id": 134,
+		"amount": 1000
+	  },
+	  // Defence potion
+	  {
+		"id": 386,
+		"amount": 250
+	  },
+	  // Shark
+	  {
+		"id": 2437,
+		"amount": 30
+	  },
+	  // Super attack potion
+	  {
+		"id": 2441,
+		"amount": 30
+	  },
+	  // Super strength potion
+	  {
+		"id": 2443,
+		"amount": 30
+	  },
+	  // Super def potion
+	  {
+		"id": 2445,
+		"amount": 30
+	  },
+	  // Ranging potion
+	  {
+		"id": 2435,
+		"amount": 30
+	  },
+	  // Prayer potion
+	  {
+		"id": 6686,
+		"amount": 30
+	  },
+	  // Saradomin brew
+	  {
+		"id": 3025,
+		"amount": 30
+	  },
+	  // Super restore potion
+	  {
+		"id": 954,
+		"amount": 1000
+	  }
+	  // Rope
+	]
+  },
+  {
+	"id": 29,
+	"name": "Shop of Distaste",
+	"general": false,
+	"stock": [
+	  {
+		"id": 2518,
+		"amount": 2000
+	  }
+	]
+  },
+  {
+	"id": 30,
+	"name": "TzHaar-Hur-Tel's Equipment Store",
+	"general": false,
+	"currency": 6529,
+	"stock": [
+	  {
+		"id": 6522,
+		"amount": 500
+	  },
+	  // Toktz-xil-ul
+	  {
+		"id": 6523,
+		"amount": 1
+	  },
+	  // Toktz-xil-ak
+	  {
+		"id": 6524,
+		"amount": 1
+	  },
+	  // Toktz-ket-xil
+	  {
+		"id": 6525,
+		"amount": 1
+	  },
+	  // Toktz-xil-ek
+	  {
+		"id": 6526,
+		"amount": 1
+	  },
+	  // Toktz-mej-tal
+	  {
+		"id": 6527,
+		"amount": 1
+	  },
+	  // Toktz-ket-em
+	  {
+		"id": 6528,
+		"amount": 1
+	  },
+	  // Toktz-ket-om
+	  {
+		"id": 6568,
+		"amount": 1
+	  }
+	  // Obsidian cape
+	]
+  },
+  {
+	"id": 31,
+	"name": "TzHaar-Hur-Lek's Ore and Gem Store.",
+	"general": false,
+	"currency": 6529,
+	"stock": [
+	  {
+		"id": 438,
+		"amount": 5
+	  },
+	  // Tin ore
+	  {
+		"id": 436,
+		"amount": 5
+	  },
+	  // Copper ore
+	  {
+		"id": 440,
+		"amount": 2
+	  },
+	  // Iron ore
+	  {
+		"id": 442,
+		"amount": 0
+	  },
+	  // Silver ore
+	  {
+		"id": 453,
+		"amount": 0
+	  },
+	  // Coal
+	  {
+		"id": 444,
+		"amount": 0
+	  },
+	  // Gold ore
+	  {
+		"id": 447,
+		"amount": 0
+	  },
+	  // Mithril ore
+	  {
+		"id": 449,
+		"amount": 0
+	  },
+	  // Adamant ore
+	  {
+		"id": 451,
+		"amount": 0
+	  },
+	  // Rune ore
+	  
+	  {
+		"id": 1623,
+		"amount": 1
+	  },
+	  // Uncut sapphire
+	  {
+		"id": 1621,
+		"amount": 1
+	  },
+	  // Uncut emerald
+	  {
+		"id": 1619,
+		"amount": 0
+	  },
+	  // Uncut ruby
+	  {
+		"id": 1617,
+		"amount": 0
+	  },
+	  // Uncut diamond
+	  {
+		"id": 1631,
+		"amount": 0
+	  },
+	  // Uncut dragonstone
+	  {
+		"id": 6571,
+		"amount": 1
+	  },
+	  // Uncut onyx
+	  {
+		"id": 9194,
+		"amount": 50
+	  }
+	  // Onyx tips
+	]
+  },
+  {
+	"id": 47,
+	"name": "Authentic Throwing Weapons.",
+	"stock": [
+	  {
+		"id": 825,
+		"amount": 900
+	  },
+	  // Bronze javelin
+	  {
+		"id": 826,
+		"amount": 800
+	  },
+	  // Iron javelin
+	  {
+		"id": 827,
+		"amount": 700
+	  },
+	  // Steel javelin
+	  {
+		"id": 828,
+		"amount": 600
+	  },
+	  // Mithril javelin
+	  {
+		"id": 829,
+		"amount": 500
+	  },
+	  // Adamant javelin
+	  {
+		"id": 830,
+		"amount": 400
+	  },
+	  // Rune javelin
+	  {
+		"id": 800,
+		"amount": 900
+	  },
+	  // Bronze thrownaxe
+	  {
+		"id": 801,
+		"amount": 800
+	  },
+	  // Iron thrownaxe
+	  {
+		"id": 802,
+		"amount": 700
+	  },
+	  // Steel thrownaxe
+	  {
+		"id": 803,
+		"amount": 600
+	  },
+	  // Mithril thrownaxe
+	  {
+		"id": 804,
+		"amount": 500
+	  },
+	  // Adamant thrownaxe
+	  {
+		"id": 805,
+		"amount": 400
+	  }
+	  // Rune thrownaxe
+	]
+  },
+  {
+	"id": 48,
+	"name": "Aaron's Archery Appendages.",
+	"stock": [
+	  {
+		"id": 1129,
+		"amount": 10
+	  },
+	  // Leather body
+	  {
+		"id": 1131,
+		"amount": 10
+	  },
+	  // Hardleather body
+	  {
+		"id": 1133,
+		"amount": 10
+	  },
+	  // Studded body
+	  {
+		"id": 1095,
+		"amount": 20
+	  },
+	  // Leather chaps
+	  {
+		"id": 1097,
+		"amount": 15
+	  },
+	  // Studded chaps
+	  {
+		"id": 1169,
+		"amount": 10
+	  },
+	  // Coif
+	  {
+		"id": 1167,
+		"amount": 10
+	  },
+	  // Leather cowl
+	  {
+		"id": 1063,
+		"amount": 10
+	  },
+	  // Leather vambraces
+	  {
+		"id": 9756,
+		"amount": 1
+	  }
+	  // Ranging cape (untrimmed)
+	]
+  },
+  {
+	"id": 49,
+	"name": "Dargaud's Bow and Arrows.",
+	"stock": [
+	  {
+		"id": 52,
+		"amount": 1000
+	  },
+	  // Arrow shaft
+	  {
+		"id": 39,
+		"amount": 1000
+	  },
+	  // Bronze arrowtips
+	  {
+		"id": 40,
+		"amount": 500
+	  },
+	  // Iron arrowtips
+	  {
+		"id": 41,
+		"amount": 400
+	  },
+	  // Steel arrowtips
+	  {
+		"id": 42,
+		"amount": 300
+	  },
+	  // Mithril arrowtips
+	  {
+		"id": 43,
+		"amount": 300
+	  },
+	  // Addy arrowtips
+	  {
+		"id": 44,
+		"amount": 150
+	  },
+	  // Rune arrowtips
+	  {
+		"id": 882,
+		"amount": 1000
+	  },
+	  // Bronze arrows
+	  {
+		"id": 884,
+		"amount": 500
+	  },
+	  // Iron arrows
+	  {
+		"id": 886,
+		"amount": 500
+	  },
+	  // Steel arrows
+	  {
+		"id": 888,
+		"amount": 500
+	  },
+	  // Mithril arrows
+	  {
+		"id": 890,
+		"amount": 450
+	  },
+	  // Addy arrows
+	  {
+		"id": 892,
+		"amount": 400
+	  },
+	  // Rune arrows
+	  {
+		"id": 4773,
+		"amount": 0
+	  },
+	  // Bronze brutal
+	  {
+		"id": 4778,
+		"amount": 0
+	  },
+	  // Iron brutal
+	  {
+		"id": 4783,
+		"amount": 0
+	  },
+	  // Steel brutal
+	  {
+		"id": 4788,
+		"amount": 0
+	  },
+	  // Black brutal
+	  {
+		"id": 4793,
+		"amount": 0
+	  },
+	  // Mithril brutal
+	  {
+		"id": 4798,
+		"amount": 0
+	  },
+	  // Addy brutal
+	  {
+		"id": 4803,
+		"amount": 0
+	  },
+	  // Rune brutal
+	  {
+		"id": 841,
+		"amount": 20
+	  },
+	  // Shortbow
+	  {
+		"id": 843,
+		"amount": 20
+	  },
+	  // Oak shortbow
+	  {
+		"id": 849,
+		"amount": 20
+	  },
+	  // Willow shortbow
+	  {
+		"id": 839,
+		"amount": 20
+	  },
+	  // Longbow
+	  {
+		"id": 845,
+		"amount": 20
+	  },
+	  // Oak longbow
+	  {
+		"id": 4827,
+		"amount": 0
+	  },
+	  // Comp orge bow
+	  {
+		"id": 847,
+		"amount": 20
+	  }
+	  // Willow longbow
+	]
+  },
+  {
+	"id": 1337,
+	"name": "Blood Money Wares",
+	"general": false,
+	"stock": [
+	  {
+		"id": 11808,
+		"amount": 100
+	  },
+	  // Zamorak godsword
+	  {
+		"id": 11806,
+		"amount": 100
+	  },
+	  // Saradomin godsword
+	  {
+		"id": 11804,
+		"amount": 100
+	  },
+	  // Bandos godsword
+	  {
+		"id": 11802,
+		"amount": 100
+	  },
+	  // Armadyl godsword
+	  {
+		"id": 13271,
+		"amount": 100
+	  },
+	  // Abyssal dagger
+	  {
+		"id": 11832,
+		"amount": 100
+	  },
+	  // Bandos chestplate
+	  {
+		"id": 11834,
+		"amount": 100
+	  },
+	  // Bandos tassets
+	  {
+		"id": 11826,
+		"amount": 100
+	  },
+	  // Armadyl helmet
+	  {
+		"id": 11828,
+		"amount": 100
+	  },
+	  // Armadyl chestplate
+	  {
+		"id": 11830,
+		"amount": 100
+	  },
+	  // Armadyl chainskirt
+	  {
+		"id": 6918,
+		"amount": 100
+	  },
+	  // Infinity hat
+	  {
+		"id": 6916,
+		"amount": 100
+	  },
+	  // Infinity top
+	  {
+		"id": 6924,
+		"amount": 100
+	  },
+	  // Infinity bottoms
+	  {
+		"id": 6920,
+		"amount": 100
+	  },
+	  // Infinity boots
+	  {
+		"id": 6922,
+		"amount": 100
+	  },
+	  // Infinity gloves
+	  {
+		"id": 12829,
+		"amount": 100
+	  },
+	  // Spirit shield
+	  {
+		"id": 11283,
+		"amount": 100
+	  },
+	  // Dragonfire shield
+	  {
+		"id": 11924,
+		"amount": 100
+	  },
+	  // Malediction ward
+	  {
+		"id": 11926,
+		"amount": 100
+	  },
+	  // Odium ward
+	  {
+		"id": 4207,
+		"amount": 100
+	  },
+	  // Crystal seed, which can be enchanted
+	  {
+		"id": 11791,
+		"amount": 100
+	  },
+	  // Staff of the dead
+	  {
+		"id": 11785,
+		"amount": 100
+	  },
+	  // Armadyl crossbow
+	  {
+		"id": 4151,
+		"amount": 100
+	  },
+	  // Abyssal whip
+	  {
+		"id": 12006,
+		"amount": 100
+	  },
+	  // Abyssal tentacle
+	  {
+		"id": 11235,
+		"amount": 100
+	  },
+	  // Dark bow
+	  {
+		"id": 6585,
+		"amount": 100
+	  },
+	  // Amulet of fury
+	  {
+		"id": 12002,
+		"amount": 100
+	  },
+	  // Occult necklace
+	  {
+		"id": 11840,
+		"amount": 100
+	  },
+	  // Dragon boots
+	  {
+		"id": 2577,
+		"amount": 100
+	  },
+	  // Ranger boots
+	  {
+		"id": 13227,
+		"amount": 100
+	  },
+	  // Eternal crystal
+	  {
+		"id": 13229,
+		"amount": 100
+	  },
+	  // Pegasian crystal
+	  {
+		"id": 13231,
+		"amount": 100
+	  },
+	  // Primordial crystal
+	  {
+		"id": 6889,
+		"amount": 100
+	  },
+	  // Mage's book
+	  {
+		"id": 6914,
+		"amount": 100
+	  },
+	  // Master wand
+	  {
+		"id": 11838,
+		"amount": 100
+	  }
+	  // Saradomin sword
+	]
+  },
+  {
+	"id": 1338,
+	"name": "Blood Money Cosmetics",
+	"general": false,
+	"stock": [
+	  {
+		"id": 1038,
+		"amount": 100
+	  },
+	  // Red Partyhat
+	  {
+		"id": 1040,
+		"amount": 100
+	  },
+	  // Yellow Partyhat
+	  {
+		"id": 1042,
+		"amount": 100
+	  },
+	  // Blue Partyhat
+	  {
+		"id": 1044,
+		"amount": 100
+	  },
+	  // Green Partyhat
+	  {
+		"id": 1046,
+		"amount": 100
+	  },
+	  // Purple Partyhat
+	  {
+		"id": 1048,
+		"amount": 100
+	  },
+	  // White Partyhat
+	  {
+		"id": 11862,
+		"amount": 100
+	  },
+	  // Black Partyhat
+	  {
+		"id": 11863,
+		"amount": 100
+	  },
+	  // Rainbow Partyhat
+	  {
+		"id": 12399,
+		"amount": 100
+	  },
+	  // Partyhat & specs
+	  {
+		"id": 1053,
+		"amount": 100
+	  },
+	  // Green halloween mask
+	  {
+		"id": 1055,
+		"amount": 100
+	  },
+	  // Blue halloween mask
+	  {
+		"id": 1057,
+		"amount": 100
+	  },
+	  // Red halloween mask
+	  {
+		"id": 11847,
+		"amount": 100
+	  },
+	  // Black halloween mask
+	  {
+		"id": 1050,
+		"amount": 100
+	  },
+	  // Santa hat
+	  {
+		"id": 13343,
+		"amount": 100
+	  },
+	  // Black santa hat
+	  {
+		"id": 13344,
+		"amount": 100
+	  },
+	  // Inverted santa hat
+	  {
+		"id": 1419,
+		"amount": 100
+	  },
+	  // Scythe
+	  {
+		"id": 12845,
+		"amount": 100
+	  },
+	  // Grim reaper hood
+	  {
+		"id": 9920,
+		"amount": 100
+	  },
+	  // Jack lantern mask
+	  {
+		"id": 9925,
+		"amount": 100
+	  },
+	  // Skeleton mask
+	  {
+		"id": 9924,
+		"amount": 100
+	  },
+	  // Skeleton shirt
+	  {
+		"id": 9923,
+		"amount": 100
+	  },
+	  // Skeleton leggings
+	  {
+		"id": 9922,
+		"amount": 100
+	  },
+	  // Skeleton gloves
+	  {
+		"id": 9921,
+		"amount": 100
+	  },
+	  // Skeleton boots
+	  {
+		"id": 13283,
+		"amount": 100
+	  },
+	  // Gravedigger mask
+	  {
+		"id": 13284,
+		"amount": 100
+	  },
+	  // Gravedigger top
+	  {
+		"id": 13285,
+		"amount": 100
+	  },
+	  // Gravedigger leggings
+	  {
+		"id": 13286,
+		"amount": 100
+	  },
+	  // Gravedigger gloves
+	  {
+		"id": 13287,
+		"amount": 100
+	  },
+	  // Gravedigger boots
+	  {
+		"id": 6665,
+		"amount": 100
+	  },
+	  // Mudskipper hat
+	  {
+		"id": 6666,
+		"amount": 100
+	  },
+	  // Flippers
+	  {
+		"id": 4566,
+		"amount": 100
+	  },
+	  // Rubber chicken
+	  {
+		"id": 11919,
+		"amount": 100
+	  },
+	  // Cow mask
+	  {
+		"id": 12956,
+		"amount": 100
+	  },
+	  // Cow top
+	  {
+		"id": 12957,
+		"amount": 100
+	  },
+	  // Cow leggings
+	  {
+		"id": 12958,
+		"amount": 100
+	  },
+	  // Cow gloves
+	  {
+		"id": 12959,
+		"amount": 100
+	  },
+	  // Cow boots
+	  {
+		"id": 1037,
+		"amount": 100
+	  },
+	  // Bunny ears
+	  {
+		"id": 13182,
+		"amount": 100
+	  },
+	  // Bunny feet
+	  {
+		"id": 4565,
+		"amount": 100
+	  }
+	  // Easter basket
+	]
+  },
+  {
+	"id": 1339,
+	"name": "Blood Money Cosmetics",
+	"general": false,
+	"stock": [
+	  {
+		"id": 12887,
+		"amount": 100
+	  },
+	  // Santa mask
+	  {
+		"id": 12888,
+		"amount": 100
+	  },
+	  // Santa top
+	  {
+		"id": 12889,
+		"amount": 100
+	  },
+	  // Santa leggings
+	  {
+		"id": 12890,
+		"amount": 100
+	  },
+	  // Santa gloves
+	  {
+		"id": 12891,
+		"amount": 100
+	  },
+	  // Santa boots
+	  {
+		"id": 12353,
+		"amount": 100
+	  },
+	  // Monocle
+	  {
+		"id": 12434,
+		"amount": 100
+	  },
+	  // Top hat & monocle
+	  {
+		"id": 12337,
+		"amount": 100
+	  },
+	  // Sagacious spectacles
+	  {
+		"id": 12892,
+		"amount": 100
+	  },
+	  // Anti-santa mask
+	  {
+		"id": 12893,
+		"amount": 100
+	  },
+	  // Anti-santa top
+	  {
+		"id": 12894,
+		"amount": 100
+	  },
+	  // Anti-santa leggings
+	  {
+		"id": 12895,
+		"amount": 100
+	  },
+	  // Anti-santa gloves
+	  {
+		"id": 12896,
+		"amount": 100
+	  },
+	  // Anti-santa boots
+	  {
+		"id": 7537,
+		"amount": 100
+	  },
+	  // Crab claw
+	  {
+		"id": 8929,
+		"amount": 100
+	  },
+	  // Crab claw hook
+	  {
+		"id": 2997,
+		"amount": 100
+	  },
+	  // Pirate's hook
+	  {
+		"id": 8924,
+		"amount": 100
+	  },
+	  // Bandana eyepatch
+	  {
+		"id": 8925,
+		"amount": 100
+	  },
+	  // Bandana eyepatch
+	  {
+		"id": 8926,
+		"amount": 100
+	  },
+	  // Bandana eyepatch
+	  {
+		"id": 8927,
+		"amount": 100
+	  },
+	  // Bandana eyepatch
+	  {
+		"id": 8950,
+		"amount": 100
+	  },
+	  // Pirate's hat
+	  {
+		"id": 12412,
+		"amount": 100
+	  },
+	  // Piate's hat & patch
+	  {
+		"id": 12355,
+		"amount": 100
+	  },
+	  // Big pirate's hat
+	  {
+		"id": 2631,
+		"amount": 100
+	  },
+	  // Highwayman mask
+	  {
+		"id": 2639,
+		"amount": 100
+	  },
+	  // Tan cavalier
+	  {
+		"id": 2641,
+		"amount": 100
+	  },
+	  // Dark cavalier
+	  {
+		"id": 12325,
+		"amount": 100
+	  },
+	  // Navy cavalier
+	  {
+		"id": 12323,
+		"amount": 100
+	  },
+	  // Red cavalier
+	  {
+		"id": 12321,
+		"amount": 100
+	  },
+	  // White cavalier
+	  {
+		"id": 2643,
+		"amount": 100
+	  },
+	  // Black cavalier
+	  {
+		"id": 11280,
+		"amount": 100
+	  },
+	  // Cavalier mask
+	  {
+		"id": 12319,
+		"amount": 100
+	  },
+	  // Crier hat
+	  {
+		"id": 12249,
+		"amount": 100
+	  },
+	  // Imp mask
+	  {
+		"id": 12251,
+		"amount": 100
+	  },
+	  // Goblin mask
+	  {
+		"id": 12361,
+		"amount": 100
+	  },
+	  // Cat mask
+	  {
+		"id": 12428,
+		"amount": 100
+	  },
+	  // Penguin mask
+	  {
+		"id": 12245,
+		"amount": 100
+	  },
+	  // Beanie
+	  {
+		"id": 12430,
+		"amount": 100
+	  },
+	  // Afro
+	  {
+		"id": 12359,
+		"amount": 100
+	  },
+	  // Leprechaun hat
+	  {
+		"id": 12540,
+		"amount": 100
+	  }
+	  // Deerstalker
+	]
+  },
+  {
+	"id": 1340,
+	"name": "Blood Money Cosmetics",
+	"general": false,
+	"stock": [
+	  {
+		"id": 2645,
+		"amount": 100
+	  },
+	  // Red headband
+	  {
+		"id": 2647,
+		"amount": 100
+	  },
+	  // Black headband
+	  {
+		"id": 2649,
+		"amount": 100
+	  },
+	  // Brown headband
+	  {
+		"id": 12299,
+		"amount": 100
+	  },
+	  // White headband
+	  {
+		"id": 12301,
+		"amount": 100
+	  },
+	  // Blue headband
+	  {
+		"id": 12303,
+		"amount": 100
+	  },
+	  // Gold headband
+	  {
+		"id": 12305,
+		"amount": 100
+	  },
+	  // Pink headband
+	  {
+		"id": 12307,
+		"amount": 100
+	  },
+	  // Green headband
+	  {
+		"id": 10316,
+		"amount": 100
+	  },
+	  // Bob's red shirt
+	  {
+		"id": 10318,
+		"amount": 100
+	  },
+	  // Bob's blue shirt
+	  {
+		"id": 10322,
+		"amount": 100
+	  },
+	  // Bob's black shirt4
+	  {
+		"id": 10324,
+		"amount": 100
+	  },
+	  // Bob's purple shirt
+	  {
+		"id": 12375,
+		"amount": 100
+	  },
+	  // Black cane
+	  {
+		"id": 12377,
+		"amount": 100
+	  },
+	  // Adamant cane
+	  {
+		"id": 12379,
+		"amount": 100
+	  },
+	  // Rune cane
+	  {
+		"id": 12373,
+		"amount": 100
+	  },
+	  // Dragon cane
+	  {
+		"id": 12363,
+		"amount": 100
+	  },
+	  // Bronze dragon mask
+	  {
+		"id": 12365,
+		"amount": 100
+	  },
+	  // Iron dragon mask
+	  {
+		"id": 12367,
+		"amount": 100
+	  },
+	  // Steel dragon mask
+	  {
+		"id": 12369,
+		"amount": 100
+	  },
+	  // Mithril dragon mask
+	  {
+		"id": 12371,
+		"amount": 100
+	  },
+	  // Lava dragon mask
+	  {
+		"id": 12518,
+		"amount": 100
+	  },
+	  // Green dragon mask
+	  {
+		"id": 12522,
+		"amount": 100
+	  },
+	  // Red dragon mask
+	  {
+		"id": 12524,
+		"amount": 100
+	  }
+	  // Black dragon mask
+	]
+  },
+  {
+	"id": 1341,
+	"name": "Blood Money Untradables",
+	"general": false,
+	"stock": [
+	  {
+		"id": 7458,
+		"amount": 100
+	  },
+	  // Mithril gloves
+	  {
+		"id": 7459,
+		"amount": 100
+	  },
+	  // Adamant gloves
+	  {
+		"id": 7460,
+		"amount": 100
+	  },
+	  // Rune gloves
+	  {
+		"id": 8847,
+		"amount": 100
+	  },
+	  // Black defender
+	  {
+		"id": 8848,
+		"amount": 100
+	  },
+	  // Mith defender
+	  {
+		"id": 8849,
+		"amount": 100
+	  },
+	  // Adamant defender
+	  {
+		"id": 8850,
+		"amount": 100
+	  },
+	  // Rune defender
+	  {
+		"id": 12954,
+		"amount": 100
+	  },
+	  // Dragon defender
+	  {
+		"id": 6570,
+		"amount": 100
+	  },
+	  // Fire cape
+	  {
+		"id": 13280,
+		"amount": 100
+	  },
+	  // Max cape
+	  {
+		"id": 13329,
+		"amount": 100
+	  },
+	  // Fire max cape
+	  {
+		"id": 13331,
+		"amount": 100
+	  },
+	  // Saradomin max cape
+	  {
+		"id": 13333,
+		"amount": 100
+	  },
+	  // Zamorak max cape
+	  {
+		"id": 13335,
+		"amount": 100
+	  },
+	  // Guthix max cape
+	  {
+		"id": 13337,
+		"amount": 100
+	  },
+	  // Ava's max cape
+	  {
+		"id": 20760,
+		"amount": 100
+	  },
+	  // Ardougne max cape
+	  {
+		"id": 11663,
+		"amount": 100
+	  },
+	  // Mage helm
+	  {
+		"id": 11664,
+		"amount": 100
+	  },
+	  // Range helm
+	  {
+		"id": 11665,
+		"amount": 100
+	  },
+	  // Melee helm
+	  {
+		"id": 13072,
+		"amount": 100
+	  },
+	  // Elite void top
+	  {
+		"id": 8839,
+		"amount": 100
+	  },
+	  // Void top
+	  {
+		"id": 13073,
+		"amount": 100
+	  },
+	  // Elite void robe
+	  {
+		"id": 8840,
+		"amount": 100
+	  },
+	  // Void robe
+	  {
+		"id": 8842,
+		"amount": 100
+	  },
+	  // Void gloves
+	  {
+		"id": 10547,
+		"amount": 100
+	  },
+	  // Healing hat
+	  {
+		"id": 10548,
+		"amount": 100
+	  },
+	  // Fighter hat
+	  {
+		"id": 10549,
+		"amount": 100
+	  },
+	  // Runner hat
+	  {
+		"id": 10550,
+		"amount": 100
+	  },
+	  // Ranger hat
+	  {
+		"id": 10551,
+		"amount": 100
+	  },
+	  // Fighter torso
+	  {
+		"id": 10552,
+		"amount": 100
+	  },
+	  // Runner boots
+	  {
+		"id": 10555,
+		"amount": 100
+	  },
+	  // Penance skirt
+	  {
+		"id": 13124,
+		"amount": 100
+	  }
+	  // Ardougne cloak 4
+	]
+  },
+  {
+	"id": 1342,
+	"name": "Blood Money Barrows",
+	"general": false,
+	"stock": [
+	  {
+		"id": 4708,
+		"amount": 100
+	  },
+	  // Ahrims hood
+	  {
+		"id": 4716,
+		"amount": 100
+	  },
+	  // Dharoks helm
+	  {
+		"id": 4724,
+		"amount": 100
+	  },
+	  // Guthans helm
+	  {
+		"id": 4745,
+		"amount": 100
+	  },
+	  // Torags helm
+	  {
+		"id": 4753,
+		"amount": 100
+	  },
+	  // Veracs helm
+	  {
+		"id": 4732,
+		"amount": 100
+	  },
+	  // Karils coif
+	  null,
+	  null,
+	  {
+		"id": 4712,
+		"amount": 100
+	  },
+	  // Ahrims robetop
+	  {
+		"id": 4720,
+		"amount": 100
+	  },
+	  // Dharoks platebody
+	  {
+		"id": 4728,
+		"amount": 100
+	  },
+	  // Guthans platebody
+	  {
+		"id": 4749,
+		"amount": 100
+	  },
+	  // Torags platebody
+	  {
+		"id": 4757,
+		"amount": 100
+	  },
+	  // Veracs brassard
+	  {
+		"id": 4736,
+		"amount": 100
+	  },
+	  // Karils leathertop
+	  null,
+	  null,
+	  {
+		"id": 4714,
+		"amount": 100
+	  },
+	  // Ahrims robeskirt
+	  {
+		"id": 4722,
+		"amount": 100
+	  },
+	  // Dharoks platelegs
+	  {
+		"id": 4730,
+		"amount": 100
+	  },
+	  // Guthans skirt
+	  {
+		"id": 4751,
+		"amount": 100
+	  },
+	  // Torags platelegs
+	  {
+		"id": 4759,
+		"amount": 100
+	  },
+	  // Veracs plateskirt
+	  {
+		"id": 4738,
+		"amount": 100
+	  },
+	  // Karils leatherskirt
+	  null,
+	  null,
+	  {
+		"id": 4710,
+		"amount": 100
+	  },
+	  // Ahrims Staff
+	  {
+		"id": 4718,
+		"amount": 100
+	  },
+	  // Dharoks axe
+	  {
+		"id": 4726,
+		"amount": 100
+	  },
+	  // Guthans warpsear
+	  {
+		"id": 4747,
+		"amount": 100
+	  },
+	  // Torags hammers
+	  {
+		"id": 4755,
+		"amount": 100
+	  },
+	  // Veracs flail
+	  {
+		"id": 4734,
+		"amount": 100
+	  },
+	  // Karils crossbow
+	  null,
+	  null
+	]
+  },
+  {
+	"id": 1343,
+	"name": "Blood Money Melee",
+	"general": false,
+	"stock": [
+	  {
+		"id": 1155,
+		"amount": 1000
+	  },
+	  // Bronze full helm
+	  {
+		"id": 1153,
+		"amount": 1000
+	  },
+	  // Iron full helm
+	  {
+		"id": 1157,
+		"amount": 1000
+	  },
+	  // Steel full helm
+	  {
+		"id": 1165,
+		"amount": 1000
+	  },
+	  // Black full helm
+	  {
+		"id": 1159,
+		"amount": 1000
+	  },
+	  // Mith full helm
+	  {
+		"id": 1161,
+		"amount": 1000
+	  },
+	  // Addy full helm
+	  {
+		"id": 1163,
+		"amount": 1000
+	  },
+	  // Rune full helm
+	  {
+		"id": 10589,
+		"amount": 1000
+	  },
+	  // Granite helm
+	  {
+		"id": 1117,
+		"amount": 1000
+	  },
+	  // Bronze platebody
+	  {
+		"id": 1115,
+		"amount": 1000
+	  },
+	  // Iron platebody
+	  {
+		"id": 1119,
+		"amount": 1000
+	  },
+	  // Steel platebody
+	  {
+		"id": 1125,
+		"amount": 1000
+	  },
+	  // Black platebody
+	  {
+		"id": 1121,
+		"amount": 1000
+	  },
+	  // Mith platebody
+	  {
+		"id": 1123,
+		"amount": 1000
+	  },
+	  // Addy platebody
+	  {
+		"id": 1127,
+		"amount": 1000
+	  },
+	  // Rune platebody
+	  {
+		"id": 10564,
+		"amount": 1000
+	  },
+	  // Granite body
+	  {
+		"id": 1075,
+		"amount": 1000
+	  },
+	  // Bronze platelegs
+	  {
+		"id": 1067,
+		"amount": 1000
+	  },
+	  // Iron platelegs
+	  {
+		"id": 1069,
+		"amount": 1000
+	  },
+	  // Steel platelegs
+	  {
+		"id": 1077,
+		"amount": 1000
+	  },
+	  // Black platelegs
+	  {
+		"id": 1071,
+		"amount": 1000
+	  },
+	  // Mith platelegs
+	  {
+		"id": 1073,
+		"amount": 1000
+	  },
+	  // Addy platelegs
+	  {
+		"id": 1079,
+		"amount": 1000
+	  },
+	  // Rune platelegs
+	  {
+		"id": 6809,
+		"amount": 1000
+	  },
+	  // Granite platelegs
+	  {
+		"id": 1189,
+		"amount": 1000
+	  },
+	  // Bronze kiteshield
+	  {
+		"id": 1191,
+		"amount": 1000
+	  },
+	  // Iron kiteshield
+	  {
+		"id": 1193,
+		"amount": 1000
+	  },
+	  // Steel kiteshield
+	  {
+		"id": 1195,
+		"amount": 1000
+	  },
+	  // Black kiteshield
+	  {
+		"id": 1197,
+		"amount": 1000
+	  },
+	  // Mith kiteshield
+	  {
+		"id": 1199,
+		"amount": 1000
+	  },
+	  // Addy kiteshield
+	  {
+		"id": 1201,
+		"amount": 1000
+	  },
+	  // Rune kiteshield
+	  {
+		"id": 3122,
+		"amount": 1000
+	  },
+	  // Granite shied
+	  {
+		"id": 10828,
+		"amount": 1000
+	  },
+	  // Helm of neitiznot
+	  {
+		"id": 3749,
+		"amount": 1000
+	  },
+	  // Archer helm
+	  {
+		"id": 3751,
+		"amount": 1000
+	  },
+	  // Berseker helm
+	  {
+		"id": 3753,
+		"amount": 1000
+	  },
+	  // Warrior helm
+	  {
+		"id": 3755,
+		"amount": 1000
+	  }
+	  // Farseer helm
+	]
+  },
+  {
+	"id": 1344,
+	"name": "Blood Money Supplies",
+	"general": false,
+	"stock": [
+	  {
+		"id": 8013,
+		"amount": 10000
+	  },
+	  // Home teleports
+	  {
+		"id": 19627,
+		"amount": 10000
+	  },
+	  // Cemetery teleport
+	  {
+		"id": 12642,
+		"amount": 10000
+	  },
+	  // Lumberyard teleport scroll
+	  {
+		"id": 12696,
+		"amount": 10000
+	  },
+	  // Super combat potion
+	  {
+		"id": 12914,
+		"amount": 10000
+	  },
+	  // Anti-venom+
+	  {
+		"id": 2447,
+		"amount": 10000
+	  },
+	  // Antipoison
+	  {
+		"id": 12626,
+		"amount": 10000
+	  },
+	  // Stamina potion
+	  {
+		"id": 11937,
+		"amount": 10000
+	  },
+	  // Dark crab
+	  {
+		"id": 386,
+		"amount": 10000
+	  },
+	  // Shark
+	  {
+		"id": 3145,
+		"amount": 10000
+	  },
+	  // Cooked Karambwuan
+	  {
+		"id": 2290,
+		"amount": 10000
+	  },
+	  // Pizza
+	  {
+		"id": 2294,
+		"amount": 10000
+	  },
+	  // Pizza
+	  {
+		"id": 2298,
+		"amount": 10000
+	  },
+	  // Pizza
+	  {
+		"id": 2302,
+		"amount": 10000
+	  },
+	  // Pizza
+	  {
+		"id": 4418,
+		"amount": 10000
+	  },
+	  // Guthix rest (4)
+	  {
+		"id": 2550,
+		"amount": 10000
+	  },
+	  // Ring of recoil
+	  {
+		"id": 9241,
+		"amount": 10000
+	  },
+	  //  emerald bolt (e)
+	  {
+		"id": 9242,
+		"amount": 10000
+	  },
+	  //  ruby bolt (e)
+	  {
+		"id": 9243,
+		"amount": 10000
+	  },
+	  // Diamond bolts (e)
+	  {
+		"id": 9244,
+		"amount": 10000
+	  },
+	  // Drag bolts (e)
+	  {
+		"id": 9245,
+		"amount": 10000
+	  },
+	  //  onyx bolt (e)
+	  {
+		"id": 892,
+		"amount": 10000
+	  },
+	  // Rune arrows
+	  {
+		"id": 11212,
+		"amount": 10000
+	  },
+	  // Dragon arrows
+	  {
+		"id": 4740,
+		"amount": 10000
+	  },
+	  // Karils bolts
+	  {
+		"id": 868,
+		"amount": 10000
+	  },
+	  // Rune knife
+	  {
+		"id": 811,
+		"amount": 10000
+	  },
+	  // Rune dart
+	  {
+		"id": 10034,
+		"amount": 10000
+	  },
+	  // Chinchompas
+	  {
+		"id": 11090,
+		"amount": 10000
+	  },
+	  // Pheoenix necklace
+	  {
+		"id": 1523,
+		"amount": 10000
+	  },
+	  // Lockpick
+	  {
+		"id": 7510,
+		"amount": 10000
+	  },
+	  // Rock cake
+	  {
+		"id": 10008,
+		"amount": 10000
+	  },
+	  // Hunter traps (chinchompas)
+	  {
+		"id": 10158,
+		"amount": 10000
+	  }
+	  //Kebbit bolts
+	]
+  },
+  {
+	"id": 1345,
+	"name": "Rune Heraldic",
+	"general": false,
+	"stock": [
+	  {
+		"id": 8714,
+		"amount": 100
+	  },
+	  // Rune heraldic kiteshield
+	  {
+		"id": 8716,
+		"amount": 100
+	  },
+	  // Rune heraldic kiteshield
+	  {
+		"id": 8718,
+		"amount": 100
+	  },
+	  // Rune heraldic kiteshield
+	  {
+		"id": 8720,
+		"amount": 100
+	  },
+	  // Rune heraldic kiteshield
+	  {
+		"id": 8722,
+		"amount": 100
+	  },
+	  // Rune heraldic kiteshield
+	  {
+		"id": 8724,
+		"amount": 100
+	  },
+	  // Rune heraldic kiteshield
+	  {
+		"id": 8726,
+		"amount": 100
+	  },
+	  // Rune heraldic kiteshield
+	  {
+		"id": 8728,
+		"amount": 100
+	  },
+	  // Rune heraldic kiteshield
+	  {
+		"id": 8730,
+		"amount": 100
+	  },
+	  // Rune heraldic kiteshield
+	  {
+		"id": 8732,
+		"amount": 100
+	  },
+	  // Rune heraldic kiteshield
+	  {
+		"id": 8734,
+		"amount": 100
+	  },
+	  // Rune heraldic kiteshield
+	  {
+		"id": 8736,
+		"amount": 100
+	  },
+	  // Rune heraldic kiteshield
+	  {
+		"id": 8738,
+		"amount": 100
+	  },
+	  // Rune heraldic kiteshield
+	  {
+		"id": 8740,
+		"amount": 100
+	  },
+	  // Rune heraldic kiteshield
+	  {
+		"id": 8742,
+		"amount": 100
+	  },
+	  // Rune heraldic kiteshield
+	  {
+		"id": 8744,
+		"amount": 100
+	  },
+	  // Rune heraldic kiteshield
+	  {
+		"id": 8682,
+		"amount": 100
+	  },
+	  // Steel fullhelm heraldic
+	  {
+		"id": 8684,
+		"amount": 100
+	  },
+	  // Steel fullhelm heraldic
+	  {
+		"id": 8686,
+		"amount": 100
+	  },
+	  // Steel fullhelm heraldic
+	  {
+		"id": 8688,
+		"amount": 100
+	  },
+	  // Steel fullhelm heraldic
+	  {
+		"id": 8690,
+		"amount": 100
+	  },
+	  // Steel fullhelm heraldic
+	  {
+		"id": 8692,
+		"amount": 100
+	  },
+	  // Steel fullhelm heraldic
+	  {
+		"id": 8694,
+		"amount": 100
+	  },
+	  // Steel fullhelm heraldic
+	  {
+		"id": 8696,
+		"amount": 100
+	  },
+	  // Steel fullhelm heraldic
+	  {
+		"id": 8698,
+		"amount": 100
+	  },
+	  // Steel fullhelm heraldic
+	  {
+		"id": 8700,
+		"amount": 100
+	  },
+	  // Steel fullhelm heraldic
+	  {
+		"id": 8702,
+		"amount": 100
+	  },
+	  // Steel fullhelm heraldic
+	  {
+		"id": 8704,
+		"amount": 100
+	  },
+	  // Steel fullhelm heraldic
+	  {
+		"id": 8706,
+		"amount": 100
+	  },
+	  // Steel fullhelm heraldic
+	  {
+		"id": 8708,
+		"amount": 100
+	  },
+	  // Steel fullhelm heraldic
+	  {
+		"id": 8710,
+		"amount": 100
+	  },
+	  // Steel fullhelm heraldic
+	  {
+		"id": 8712,
+		"amount": 100
+	  }
+	  // Steel fullhelm heraldic
+	]
+  },
+  {
+	"id": 1346,
+	"name": "Richard's team capes",
+	// There are 50 capes, 5 types, put type 2-5 in
+	"general": false,
+	"stock": [
+	  {
+		"id": 4335,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4337,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4339,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4341,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4343,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4345,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4347,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4349,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4351,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4353,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4355,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4357,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4359,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4361,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4363,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4365,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4367,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4369,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4371,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4373,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4375,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4377,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4379,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4381,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4383,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4385,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4387,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4389,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4391,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4393,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4395,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4397,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4399,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4401,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4403,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4405,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4407,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4409,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4411,
+		"amount": 100
+	  },
+	  // Team cape
+	  {
+		"id": 4413,
+		"amount": 100
+	  }
+	  // Team cape
+	]
+  },
+  {
+	"id": 1347,
+	"name": "Blood Money Wares",
+	// There are 50 capes, 5 types, put type 2-5 in
+	"general": false,
+	"stock": [
+	  {
+		"id": 6731,
+		"amount": 100
+	  },
+	  // Seers ring
+	  {
+		"id": 6733,
+		"amount": 100
+	  },
+	  // Archer ring
+	  {
+		"id": 6735,
+		"amount": 100
+	  },
+	  // Warrior ring
+	  {
+		"id": 6737,
+		"amount": 100
+	  },
+	  // Berserker ring
+	  {
+		"id": 11770,
+		"amount": 100
+	  },
+	  // Seers ring (i)
+	  {
+		"id": 11771,
+		"amount": 100
+	  },
+	  // Archer ring (i)
+	  {
+		"id": 11772,
+		"amount": 100
+	  },
+	  // Warrior ring (i)
+	  {
+		"id": 11773,
+		"amount": 100
+	  },
+	  // Berserker ring (i)
+	  {
+		"id": 12596,
+		"amount": 100
+	  },
+	  // Ranger's tunic
+	  {
+		"id": 11898,
+		"amount": 100
+	  },
+	  // Decorative robe hat
+	  {
+		"id": 11896,
+		"amount": 100
+	  },
+	  // Decorative robe top
+	  {
+		"id": 11897,
+		"amount": 100
+	  },
+	  // Decorative robe bottom
+	  {
+		"id": 11899,
+		"amount": 100
+	  },
+	  // Decorative range top
+	  {
+		"id": 11900,
+		"amount": 100
+	  },
+	  // Decorative range bottom
+	  {
+		"id": 1249,
+		"amount": 100
+	  },
+	  // D spear
+	  {
+		"id": 10156,
+		"amount": 100
+	  },
+	  // Hunter's crossbow
+	  {
+		"id": 10158,
+		"amount": 100
+	  },
+	  // Occult Necklace
+	  {
+		"id": 12002,
+		"amount": 100
+	  },
+	  //  D sq
+	  {
+		"id": 4585,
+		"amount": 100
+	  },
+	  //  D plateskirt
+	  {
+		"id": 6809,
+		"amount": 100
+	  },
+	  //  Granite platelegs
+	  {
+		"id": 3122,
+		"amount": 100
+	  },
+	  //  Granite shield
+	  {
+		"id": 6524,
+		"amount": 100
+	  },
+	  //  Obby shield (defensive rune defender) aka Toktz-ket-xil
+	  {
+		"id": 6918,
+		"amount": 100
+	  },
+	  // Infinity hat
+	  {
+		"id": 6916,
+		"amount": 100
+	  },
+	  // Infinity top
+	  {
+		"id": 6924,
+		"amount": 100
+	  },
+	  // Infinity bottoms
+	  {
+		"id": 6920,
+		"amount": 100
+	  },
+	  // Infinity boots
+	  {
+		"id": 6922,
+		"amount": 100
+	  },
+	  // Infinity gloves
+	  {
+		"id": 4207,
+		"amount": 100
+	  },
+	  // Crystal seed, which can be enchanted
+	  {
+		"id": 2577,
+		"amount": 100
+	  },
+	  // Ranger boots
+	  {
+		"id": 4151,
+		"amount": 100
+	  },
+	  // Abyssal whip
+	  {
+		"id": 12006,
+		"amount": 100
+	  },
+	  // Abyssal tentacle
+	  {
+		"id": 11235,
+		"amount": 100
+	  },
+	  // Dark bow
+	  {
+		"id": 6585,
+		"amount": 100
+	  },
+	  // Amulet of fury
+	  {
+		"id": 11840,
+		"amount": 100
+	  },
+	  // Dragon boots
+	  {
+		"id": 6889,
+		"amount": 100
+	  },
+	  // Mage's book
+	  {
+		"id": 6914,
+		"amount": 100
+	  },
+	  // Master wand
+	  {
+		"id": 4153,
+		"amount": 100
+	  },
+	  // Granite maul
+	  {
+		"id": 11128,
+		"amount": 100
+	  },
+	  // Obby berserker necklace
+	  {
+		"id": 6528,
+		"amount": 100
+	  },
+	  // Obby maul
+	  {
+		"id": 6525,
+		"amount": 100
+	  }
+	  // Obby dagger/knife
+	]
+  },
+  {
+	"id": 1348,
+	"name": "Blood Money Wares",
+	"general": false,
+	"stock": [
+	  {
+		"id": 2412,
+		"amount": 100
+	  },
+	  // God cape
+	  {
+		"id": 2413,
+		"amount": 100
+	  },
+	  // God cape
+	  {
+		"id": 2414,
+		"amount": 100
+	  },
+	  // God cape
+	  {
+		"id": 3840,
+		"amount": 100
+	  },
+	  // God book
+	  {
+		"id": 3842,
+		"amount": 100
+	  },
+	  // God book
+	  {
+		"id": 3844,
+		"amount": 100
+	  },
+	  // God book
+	  {
+		"id": 12608,
+		"amount": 100
+	  },
+	  // God book
+	  {
+		"id": 12610,
+		"amount": 100
+	  },
+	  // God book
+	  {
+		"id": 12612,
+		"amount": 100
+	  },
+	  // God book
+	  {
+		"id": 2415,
+		"amount": 100
+	  },
+	  // God staff
+	  {
+		"id": 2416,
+		"amount": 100
+	  },
+	  // God staff
+	  {
+		"id": 2417,
+		"amount": 100
+	  },
+	  // God staff
+	  {
+		"id": 13161,
+		"amount": 100
+	  },
+	  // God d'hide set
+	  {
+		"id": 13163,
+		"amount": 100
+	  },
+	  // God d'hide set
+	  {
+		"id": 13165,
+		"amount": 100
+	  },
+	  // God d'hide set
+	  {
+		"id": 13167,
+		"amount": 100
+	  },
+	  // God d'hide set
+	  {
+		"id": 13169,
+		"amount": 100
+	  },
+	  // God d'hide set
+	  {
+		"id": 13171,
+		"amount": 100
+	  },
+	  // God d'hide set
+	  {
+		"id": 12972,
+		"amount": 100
+	  },
+	  // iron amour set (lg) pures
+	  {
+		"id": 11037,
+		"amount": 100
+	  },
+	  // brine sabre
+	  {
+		"id": 11902,
+		"amount": 100
+	  },
+	  // leaf-bladed sword
+	  {
+		"id": 6908,
+		"amount": 100
+	  },
+	  // wand
+	  {
+		"id": 6910,
+		"amount": 100
+	  },
+	  // wand
+	  {
+		"id": 6912,
+		"amount": 100
+	  },
+	  // wand
+	  {
+		"id": 1383,
+		"amount": 100
+	  },
+	  //  Staff of water
+	  {
+		"id": 2890,
+		"amount": 100
+	  },
+	  //  Elemental shield
+	  {
+		"id": 6328,
+		"amount": 100
+	  },
+	  // Snakeskin boots
+	  {
+		"id": 861,
+		"amount": 100
+	  },
+	  // Magic shortbow
+	  {
+		"id": 12788,
+		"amount": 100
+	  },
+	  // Magic shortbow (i)
+	  {
+		"id": 3188,
+		"amount": 100
+	  },
+	  // cleaning cloth for cosmetics
+	  {
+		"id": 9668,
+		"amount": 100
+	  },
+	  // init set
+	  {
+		"id": 9666,
+		"amount": 100
+	  },
+	  // proselyte m
+	  {
+		"id": 9670,
+		"amount": 100
+	  },
+	  // proselyte f
+	  {
+		"id": 1725,
+		"amount": 100
+	  },
+	  // Str amulet
+	  {
+		"id": 12637,
+		"amount": 100
+	  },
+	  // Saradomin halo
+	  {
+		"id": 12638,
+		"amount": 100
+	  },
+	  // Zamorak halo
+	  {
+		"id": 12639,
+		"amount": 100
+	  },
+	  // Guthix halos
+	  {
+		"id": 11061,
+		"amount": 100
+	  },
+	  // Ancient Mace
+	  {
+		"id": 10887,
+		"amount": 100
+	  }
+	]
+  },
+  {
+	"id": 1349,
+	"name": "Blood Money Wares",
+	"general": false,
+	"stock": [
+	  {
+		"id": 13028,
+		"amount": 100
+	  },
+	  // Rune armour set (pl) (t)
+	  {
+		"id": 13030,
+		"amount": 100
+	  },
+	  // Rune armour set (sk) (t)
+	  {
+		"id": 13032,
+		"amount": 100
+	  },
+	  // Rune armour set (pl) (g)
+	  {
+		"id": 13034,
+		"amount": 100
+	  },
+	  // Rune armour set (sk) (g)
+	  {
+		"id": 13052,
+		"amount": 100
+	  },
+	  // Armadyl rune armour set (lg)
+	  {
+		"id": 13054,
+		"amount": 100
+	  },
+	  // Armadyl rune armour set (sk)
+	  {
+		"id": 13056,
+		"amount": 100
+	  },
+	  // Bandos rune armour set (lg)
+	  {
+		"id": 13058,
+		"amount": 100
+	  },
+	  // Bandos rune armour set (sk)
+	  {
+		"id": 13060,
+		"amount": 100
+	  },
+	  // Ancient rune armour set (lg)
+	  {
+		"id": 13062,
+		"amount": 100
+	  },
+	  // Ancient rune armour set (sk)
+	  {
+		"id": 13040,
+		"amount": 100
+	  },
+	  // Saradomin rune armour set (lg)
+	  {
+		"id": 13042,
+		"amount": 100
+	  },
+	  // Saradomin rune armour set (sk)
+	  {
+		"id": 13044,
+		"amount": 100
+	  },
+	  // Zamorak rune armour set (lg)
+	  {
+		"id": 13046,
+		"amount": 100
+	  },
+	  // Zamorak rune armour set (sk)
+	  {
+		"id": 13048,
+		"amount": 100
+	  },
+	  // Guthix rune armour set (lg)
+	  {
+		"id": 13050,
+		"amount": 100
+	  },
+	  // Guthix rune armour set (sk)
+	  {
+		"id": 12453,
+		"amount": 100
+	  },
+	  // Black wizard hat (g)
+	  {
+		"id": 12449,
+		"amount": 100
+	  },
+	  // Black wizard robetop (g)
+	  {
+		"id": 12445,
+		"amount": 100
+	  },
+	  // Black wizard robeskirt (g)
+	  {
+		"id": 12455,
+		"amount": 100
+	  },
+	  // Black wizard hat (t)
+	  {
+		"id": 12451,
+		"amount": 100
+	  },
+	  // Black wizard robetop (t)
+	  {
+		"id": 12447,
+		"amount": 100
+	  },
+	  // Black wizard robeskirt (t)
+	  {
+		"id": 10458,
+		"amount": 100
+	  },
+	  // Saradomin robe top
+	  {
+		"id": 10464,
+		"amount": 100
+	  },
+	  // Saradomin robe legs
+	  {
+		"id": 10460,
+		"amount": 100
+	  },
+	  // Zam robe top
+	  {
+		"id": 10468,
+		"amount": 100
+	  },
+	  // Zam robe legs
+	  {
+		"id": 10462,
+		"amount": 100
+	  },
+	  // guth robe top
+	  {
+		"id": 10466,
+		"amount": 100
+	  },
+	  // guth robe legs
+	  {
+		"id": 12193,
+		"amount": 100
+	  },
+	  // ancient robe top
+	  {
+		"id": 12195,
+		"amount": 100
+	  },
+	  // ancient robe legs
+	  {
+		"id": 12253,
+		"amount": 100
+	  },
+	  // armadyl robe top
+	  {
+		"id": 12255,
+		"amount": 100
+	  },
+	  // armadyl robe legs
+	  {
+		"id": 12265,
+		"amount": 100
+	  },
+	  // bandos robe top
+	  {
+		"id": 12267,
+		"amount": 100
+	  },
+	  // bandos robe legs
+	  {
+		"id": 9069,
+		"amount": 100
+	  },
+	  //  Moonclan armour peice
+	  {
+		"id": 9070,
+		"amount": 100
+	  },
+	  //  Moonclan armour peice
+	  {
+		"id": 9071,
+		"amount": 100
+	  },
+	  //  Moonclan armour peice
+	  {
+		"id": 9072,
+		"amount": 100
+	  },
+	  //  Moonclan armour peice
+	  {
+		"id": 9073,
+		"amount": 100
+	  },
+	  //  Moonclan armour peice
+	  {
+		"id": 9074,
+		"amount": 100
+	  }
+	  //  Moonclan armour peice
+	]
+  },
+  {
+	"id": 1350,
+	"name": "Blood Money Wares",
+	"general": false,
+	"stock": [
+	  {
+		"id": 1949,
+		"amount": 100
+	  },
+	  //  Chef's Hat
+	  {
+		"id": 579,
+		"amount": 100
+	  },
+	  //  Blue Wizard Hat
+	  {
+		"id": 577,
+		"amount": 100
+	  },
+	  //  Blue Wizard robetop
+	  {
+		"id": 1011,
+		"amount": 100
+	  },
+	  //  Blue Skirt
+	  {
+		"id": 426,
+		"amount": 100
+	  },
+	  //  Priest Gown (Bottom)
+	  {
+		"id": 428,
+		"amount": 100
+	  },
+	  //  Priest Gown (Top)
+	  {
+		"id": 1005,
+		"amount": 100
+	  },
+	  //  White Apron
+	  {
+		"id": 1757,
+		"amount": 100
+	  },
+	  //  Brown Apron
+	  {
+		"id": 1013,
+		"amount": 100
+	  },
+	  //  Pink Skirt
+	  {
+		"id": 1017,
+		"amount": 100
+	  },
+	  //  (Black) Wizard Hat
+	  {
+		"id": 581,
+		"amount": 100
+	  },
+	  //  (Black) robetop
+	  {
+		"id": 1015,
+		"amount": 100
+	  },
+	  //  Black Skirt
+	  {
+		"id": 1007,
+		"amount": 100
+	  },
+	  //  Red Cape
+	  {
+		"id": 1025,
+		"amount": 100
+	  },
+	  //  Eye Patch
+	  {
+		"id": 544,
+		"amount": 100
+	  },
+	  //  Monk robetop
+	  {
+		"id": 542,
+		"amount": 100
+	  },
+	  //  Monk robeskirt
+	  {
+		"id": 1035,
+		"amount": 100
+	  },
+	  //  Zam robetop
+	  {
+		"id": 1033,
+		"amount": 100
+	  },
+	  //  Zam robeskirt
+	  {
+		"id": 4502,
+		"amount": 100
+	  },
+	  // bearmask
+	  {
+		"id": 6106,
+		"amount": 100
+	  },
+	  // ghostly
+	  {
+		"id": 6107,
+		"amount": 100
+	  },
+	  // ghostly
+	  {
+		"id": 6108,
+		"amount": 100
+	  },
+	  // ghostly
+	  {
+		"id": 6109,
+		"amount": 100
+	  },
+	  // ghostly
+	  {
+		"id": 6110,
+		"amount": 100
+	  },
+	  // ghostly
+	  {
+		"id": 6111,
+		"amount": 100
+	  },
+	  // ghostly
+	  {
+		"id": 1095,
+		"amount": 100
+	  },
+	  // leather
+	  {
+		"id": 1129,
+		"amount": 100
+	  },
+	  // leather
+	  {
+		"id": 1131,
+		"amount": 100
+	  },
+	  // leather
+	  {
+		"id": 1167,
+		"amount": 100
+	  },
+	  // leather
+	  {
+		"id": 10507,
+		"amount": 100
+	  }
+	  // reindeer hat
+	]
+  },
+  {
+	"id": 1351,
+	"name": "Blood Money Wares",
+	"general": false,
+	"stock": [
+	  {
+		"id": 6809,
+		"amount": 100
+	  },
+	  //  Granite platelegs
+	  {
+		"id": 3122,
+		"amount": 100
+	  },
+	  //  Granite shield
+	  {
+		"id": 9069,
+		"amount": 100
+	  },
+	  //  Moonclan armour peice
+	  {
+		"id": 9070,
+		"amount": 100
+	  },
+	  //  Moonclan armour peice
+	  {
+		"id": 9071,
+		"amount": 100
+	  },
+	  //  Moonclan armour peice
+	  {
+		"id": 9072,
+		"amount": 100
+	  },
+	  //  Moonclan armour peice
+	  {
+		"id": 9073,
+		"amount": 100
+	  },
+	  //  Moonclan armour peice
+	  {
+		"id": 9074,
+		"amount": 100
+	  }
+	  //  Moonclan armour peice
+	]
+  },
+  {
+	"id": 1352,
+	"name": "Lost Property Shop",
+	"general": false,
+	"stock": [
+	  // purposefully empty. stocked when shop opened depending on player's lost items
+	]
+  },
+  {
+	"id": 32,
+	"name": "Prospector Percy's Nugget Shop",
+	"general": false,
+	"currency": 12012,
+	"stock": [
+	  {
+		"id": 12013,
+		"amount": 100
+	  },
+	  // Prospector helmet
+	  {
+		"id": 12014,
+		"amount": 100
+	  },
+	  // Prospector jacket
+	  {
+		"id": 12015,
+		"amount": 100
+	  },
+	  // Prospector legs
+	  {
+		"id": 12016,
+		"amount": 100
+	  },
+	  // Prospector boots
+	  {
+		"id": 12019,
+		"amount": 1
+	  },
+	  // Coal bag
+	  {
+		"id": 12020,
+		"amount": 1
+	  },
+	  // Gem bag
+	  
+	  {
+		"id": 12009,
+		"amount": 1000
+	  }
+	  // Soft clay pack
+	]
+  },
+  {
+	"id": 33,
+	"name": "Pelters' Veg Stall",
+	"general": false,
+	"stock": [
+	  {
+		"id": 2518,
+		"amount": 2000
+	  }
+	]
+  },
+  {
+	"id": 34,
+	"name": "Pie Shop",
+	"general": false,
+	"stock": [
+	  {
+		"id": 7162,
+		"amount": 50
+	  },
+	  //Pie recipe book
+	  {
+		"id": 2325,
+		"amount": 5
+	  },
+	  //Redberry pie
+	  {
+		"id": 2327,
+		"amount": 4
+	  },
+	  //Meat pie
+	  {
+		"id": 7170,
+		"amount": 0
+	  },
+	  //Mud pie
+	  {
+		"id": 2323,
+		"amount": 3
+	  },
+	  //Apple pie
+	  {
+		"id": 7178,
+		"amount": 2
+	  },
+	  //Garden pie
+	  {
+		"id": 7188,
+		"amount": 1
+	  },
+	  //Fish pie
+	  {
+		"id": 7198,
+		"amount": 0
+	  },
+	  //Admiral pie
+	  {
+		"id": 7208,
+		"amount": 0
+	  },
+	  //Wild pie
+	  {
+		"id": 7218,
+		"amount": 0
+	  }
+	  //Summer pie
+	]
+  },
+  {
+	"id": 35,
+	"name": "Karamja Wines, Spirits, and Beers.",
+	"general": false,
+	"stock": [
+	  {
+		"id": 1917,
+		"amount": 3
+	  },
+	  //Beer
+	  {
+		"id": 3164,
+		"amount": 3
+	  },
+	  //Karamja run
+	  {
+		"id": 1993,
+		"amount": 1
+	  }
+	  //Jug of wine
+	]
+  },
+  {
+	"id": 36,
+	"name": "Trader Stan's Trading Post",
+	"general": false,
+	"stock": [
+	  {
+		"id": 1931,
+		"amount": 5
+	  },
+	  //Pot
+	  {
+		"id": 1935,
+		"amount": 2
+	  },
+	  //Jug
+	  {
+		"id": 1735,
+		"amount": 2
+	  },
+	  //Shears
+	  {
+		"id": 1925,
+		"amount": 3
+	  },
+	  //Bucket
+	  {
+		"id": 1923,
+		"amount": 2
+	  },
+	  //Bowl
+	  {
+		"id": 1887,
+		"amount": 2
+	  },
+	  //Cake tin
+	  {
+		"id": 590,
+		"amount": 2
+	  },
+	  //Tinderbox
+	  {
+		"id": 1755,
+		"amount": 2
+	  },
+	  //Chisel
+	  {
+		"id": 2347,
+		"amount": 5
+	  },
+	  //Hammer
+	  {
+		"id": 550,
+		"amount": 5
+	  },
+	  //Newcomer Map
+	  {
+		"id": 9003,
+		"amount": 5
+	  },
+	  //Security book
+	  {
+		"id": 954,
+		"amount": 2
+	  },
+	  //Rope
+	  {
+		"id": 946,
+		"amount": 2
+	  },
+	  //Knife
+	  {
+		"id": 2114,
+		"amount": 14
+	  },
+	  //Pineapple
+	  {
+		"id": 1963,
+		"amount": 15
+	  },
+	  //Banana
+	  {
+		"id": 2108,
+		"amount": 10
+	  },
+	  //Orange
+	  {
+		"id": 4286,
+		"amount": 10
+	  },
+	  //Bucket of slime
+	  {
+		"id": 1785,
+		"amount": 15
+	  },
+	  //Glassblowing pipe
+	  {
+		"id": 1785,
+		"amount": 10
+	  },
+	  //Bucket of sand
+	  {
+		"id": 401,
+		"amount": 20
+	  },
+	  //Seaweed
+	  {
+		"id": 1781,
+		"amount": 10
+	  },
+	  //Soda ash
+	  {
+		"id": 301,
+		"amount": 20
+	  },
+	  //Lobster pot
+	  {
+		"id": 307,
+		"amount": 20
+	  },
+	  //Fishing rod
+	  {
+		"id": 1941,
+		"amount": 30
+	  },
+	  //Swamp paste
+	  {
+		"id": 9629,
+		"amount": 25
+	  },
+	  //Tyras helm
+	  {
+		"id": 3226,
+		"amount": 20
+	  },
+	  //Raw rabbit
+	  {
+		"id": 1025,
+		"amount": 5
+	  }
+	  //Eye patch
+	]
+  },
+  {
+	"id": 37,
+	"name": "TzHaar-Hur-Roh's Rune Store.",
+	"general": false,
+	"currency": 6529,
+	"stock": [
+	  {
+		"id": 554,
+		"amount": 5000
+	  },
+	  // Fire rune
+	  {
+		"id": 555,
+		"amount": 5000
+	  },
+	  // Water rune
+	  {
+		"id": 556,
+		"amount": 5000
+	  },
+	  // Air rune
+	  {
+		"id": 557,
+		"amount": 5000
+	  },
+	  // Earth rune
+	  {
+		"id": 558,
+		"amount": 5000
+	  },
+	  // Mind rune
+	  {
+		"id": 559,
+		"amount": 5000
+	  },
+	  // Body rune
+	  {
+		"id": 562,
+		"amount": 2500
+	  },
+	  // Chaos rune
+	  {
+		"id": 560,
+		"amount": 2500
+	  }
+	  // Death rune
+	]
+  },
+  {
+	"id": 38,
+	"name": "Grace's Graceful Clothing",
+	"general": false,
+	"currency": 11849,
+	"stock": [
+	  {
+		"id": 11850,
+		"amount": 100
+	  },
+	  // Graceful hood
+	  {
+		"id": 11852,
+		"amount": 100
+	  },
+	  // Graceful cape
+	  {
+		"id": 11854,
+		"amount": 100
+	  },
+	  // Graceful top
+	  {
+		"id": 11856,
+		"amount": 100
+	  },
+	  // Graceful legs
+	  {
+		"id": 11858,
+		"amount": 100
+	  },
+	  // Graceful gloves
+	  {
+		"id": 11860,
+		"amount": 100
+	  },
+	  // Graceful boots
+	  {
+		"id": 12641,
+		"amount": 1000
+	  }
+	  // Amylase pack
+	]
+  },
+  {
+	"id": 39,
+	"name": "Martin Thwait's Lost and Found.",
+	"general": false,
+	"stock": [
+	  {
+		"id": 954,
+		"amount": 50
+	  },
+	  // Rope
+	  {
+		"id": 1523,
+		"amount": 23
+	  },
+	  // Lockpick
+	  {
+		"id": 1755,
+		"amount": 30
+	  },
+	  // Chisel
+	  {
+		"id": 946,
+		"amount": 20
+	  },
+	  // Knife
+	  {
+		"id": 5560,
+		"amount": 25
+	  },
+	  // Stethoscope
+	  {
+		"id": 864,
+		"amount": 15
+	  },
+	  // Bronze knife
+	  {
+		"id": 863,
+		"amount": 10
+	  },
+	  // Iron knife
+	  {
+		"id": 865,
+		"amount": 5
+	  },
+	  // Steel knife
+	  {
+		"id": 3095,
+		"amount": 3
+	  },
+	  // Bronze claws
+	  {
+		"id": 3096,
+		"amount": 2
+	  },
+	  // Iron claws
+	  {
+		"id": 3097,
+		"amount": 1
+	  }
+	  // Steel claws
+	]
+  },
+  {
+	"id": 40,
+	"name": "Sir Tiffy's Armoury",
+	"general": false,
+	"stock": [
+	  {
+		"id": 5574,
+		"amount": 100000
+	  },
+	  // initiate
+	  {
+		"id": 5575,
+		"amount": 100000
+	  },
+	  // initiate
+	  {
+		"id": 5576,
+		"amount": 100000
+	  },
+	  // initiate
+	  {
+		"id": 9668,
+		"amount": 100000
+	  },
+	  // init set
+	  {
+		"id": 9666,
+		"amount": 100000
+	  },
+	  // proselyte m
+	  {
+		"id": 9670,
+		"amount": 100000
+	  },
+	  // proselyte f
+	  {
+		"id": 9672,
+		"amount": 100000
+	  },
+	  // proselyte
+	  {
+		"id": 9674,
+		"amount": 100000
+	  },
+	  // proselyte
+	  {
+		"id": 9676,
+		"amount": 100000
+	  },
+	  // proselyte
+	  {
+		"id": 9678,
+		"amount": 100000
+	  }
+	  // proselyte
+	]
+  },
+  {
+	"id": 41,
+	"name": "Vanessa's Farming Shop",
+	"general": false,
+	"stock": [
+	  {
+		"id": 5341,
+		"amount": 500
+	  },
+	  // Rake
+	  {
+		"id": 5343,
+		"amount": 500
+	  },
+	  // Seed dibber
+	  {
+		"id": 5329,
+		"amount": 500
+	  },
+	  // Secateurs
+	  {
+		"id": 952,
+		"amount": 500
+	  },
+	  // Spade
+	  {
+		"id": 5325,
+		"amount": 500
+	  },
+	  // Trowel
+	  {
+		"id": 5331,
+		"amount": 500
+	  },
+	  // Watering can
+	  {
+		"id": 5356,
+		"amount": 500
+	  },
+	  // Flower pot
+	  {
+		"id": 13250,
+		"amount": 30
+	  },
+	  // Pot sack
+	  
+	  {
+		"id": 6032,
+		"amount": 500
+	  },
+	  // Compost
+	  {
+		"id": 5418,
+		"amount": 500
+	  },
+	  // Empty sack
+	  {
+		"id": 13252,
+		"amount": 30
+	  },
+	  // Sack pack
+	  {
+		"id": 5376,
+		"amount": 500
+	  },
+	  // Basket
+	  {
+		"id": 13254,
+		"amount": 30
+	  },
+	  // Basket pack
+	  {
+		"id": 1942,
+		"amount": 0
+	  },
+	  // Potato
+	  {
+		"id": 1957,
+		"amount": 0
+	  },
+	  // Onion
+	  {
+		"id": 1965,
+		"amount": 0
+	  },
+	  // Cabbage
+	  {
+		"id": 1982,
+		"amount": 0
+	  },
+	  // Tomato
+	  {
+		"id": 5986,
+		"amount": 0
+	  },
+	  // Sweetcorn
+	  {
+		"id": 5504,
+		"amount": 0
+	  },
+	  // Strawberry
+	  {
+		"id": 5982,
+		"amount": 0
+	  },
+	  // Watermelon
+	  {
+		"id": 5994,
+		"amount": 0
+	  },
+	  // Hammerstone hops
+	  {
+		"id": 5996,
+		"amount": 0
+	  },
+	  // Asgarnian hops
+	  {
+		"id": 5998,
+		"amount": 0
+	  },
+	  // Yanillian hops
+	  {
+		"id": 6000,
+		"amount": 0
+	  },
+	  // Krandorian hops
+	  {
+		"id": 6002,
+		"amount": 0
+	  },
+	  // Wildblood hops
+	  {
+		"id": 5931,
+		"amount": 0
+	  },
+	  // Jute fibre
+	  {
+		"id": 6006,
+		"amount": 0
+	  },
+	  // Barley
+	  {
+		"id": 6036,
+		"amount": 100
+	  }
+	  // Plant core
+	]
+  },
+  {
+	"id": 42,
+	"name": "Aleck's Hunter Emporium",
+	"general": false,
+	"stock": [
+	  {
+		"id": 10150,
+		"amount": 500
+	  },
+	  // Noose wand
+	  {
+		"id": 10006,
+		"amount": 500
+	  },
+	  // Bird snaring
+	  {
+		"id": 10010,
+		"amount": 500
+	  },
+	  // Butterfly net
+	  {
+		"id": 10012,
+		"amount": 500
+	  },
+	  // Buffterfly jar
+	  {
+		"id": 10008,
+		"amount": 500
+	  },
+	  // Box trap
+	  {
+		"id": 10031,
+		"amount": 500
+	  },
+	  // Raddbit snare
+	  {
+		"id": 10029,
+		"amount": 500
+	  },
+	  // Teasing stick
+	  {
+		"id": 595,
+		"amount": 500
+	  },
+	  // Torch
+	  {
+		"id": 10025,
+		"amount": 500
+	  },
+	  // Magic box
+	  {
+		"id": 12740,
+		"amount": 500
+	  },
+	  // Snare pack
+	  {
+		"id": 12742,
+		"amount": 500
+	  },
+	  // Trap pack
+	  {
+		"id": 12744,
+		"amount": 500
+	  }
+	  // Magic imp box pack
+	]
+  },
+  {
+	"id": 43,
+	"name": "Nardah Hunting Shop",
+	"general": false,
+	"stock": [
+	  {
+		"id": 10150,
+		"amount": 500
+	  },
+	  // Noose wand
+	  {
+		"id": 10006,
+		"amount": 500
+	  },
+	  // Bird snaring
+	  {
+		"id": 10010,
+		"amount": 500
+	  },
+	  // Butterfly net
+	  {
+		"id": 10012,
+		"amount": 500
+	  },
+	  // Buffterfly jar
+	  {
+		"id": 10008,
+		"amount": 500
+	  },
+	  // Box trap
+	  {
+		"id": 10031,
+		"amount": 500
+	  },
+	  // Raddbit snare
+	  {
+		"id": 10029,
+		"amount": 500
+	  },
+	  // Teasing stick
+	  {
+		"id": 595,
+		"amount": 500
+	  },
+	  // Torch
+	  {
+		"id": 10025,
+		"amount": 500
+	  },
+	  // Magic box
+	  {
+		"id": 12740,
+		"amount": 500
+	  },
+	  // Snare pack
+	  {
+		"id": 12742,
+		"amount": 500
+	  },
+	  // Trap pack
+	  {
+		"id": 12744,
+		"amount": 500
+	  }
+	  // Magic imp box pack
+	]
+  },
+  {
+	"id": 44,
+	"name": "Thessalia's Achievement Capes.",
+	"noiron": false,
+	"stock": [
+	  {
+		"id": 9747,
+		"amount": 10
+	  },
+	  // Attack cape
+	  {
+		"id": 9750,
+		"amount": 10
+	  },
+	  // Str cape
+	  {
+		"id": 9753,
+		"amount": 10
+	  },
+	  // Def cape
+	  {
+		"id": 9756,
+		"amount": 10
+	  },
+	  // Range cape
+	  {
+		"id": 9759,
+		"amount": 10
+	  },
+	  // Pray cape
+	  {
+		"id": 9762,
+		"amount": 10
+	  },
+	  // Mage cape
+	  {
+		"id": 9765,
+		"amount": 10
+	  },
+	  // Runecraft cape
+	  {
+		"id": 9768,
+		"amount": 10
+	  },
+	  // HP cape
+	  {
+		"id": 9771,
+		"amount": 10
+	  },
+	  // Agility cape
+	  {
+		"id": 9774,
+		"amount": 10
+	  },
+	  // Herb cape
+	  {
+		"id": 9777,
+		"amount": 10
+	  },
+	  // Thieving cape
+	  {
+		"id": 9780,
+		"amount": 10
+	  },
+	  // Crafting cape
+	  {
+		"id": 9783,
+		"amount": 10
+	  },
+	  // Fletching cape
+	  {
+		"id": 9786,
+		"amount": 10
+	  },
+	  // Slayer cape
+	  {
+		"id": 9789,
+		"amount": 10
+	  },
+	  // Constr cape
+	  {
+		"id": 9792,
+		"amount": 10
+	  },
+	  // Mining cape
+	  {
+		"id": 9795,
+		"amount": 10
+	  },
+	  // Smithing cape
+	  {
+		"id": 9798,
+		"amount": 10
+	  },
+	  // Fishing cape
+	  {
+		"id": 9801,
+		"amount": 10
+	  },
+	  // Cook cape
+	  {
+		"id": 9804,
+		"amount": 10
+	  },
+	  // FM cape
+	  {
+		"id": 9807,
+		"amount": 10
+	  },
+	  // Wc cape
+	  {
+		"id": 9810,
+		"amount": 10
+	  },
+	  // Farm cape
+	  {
+		"id": 9948,
+		"amount": 10
+	  }
+	  // Hunter cape
+	]
+  },
+  {
+	"id": 45,
+	"name": "The Hunting Expert's Shop",
+	"general": false,
+	"stock": [
+	  {
+		"id": 10150,
+		"amount": 500
+	  },
+	  // Noose wand
+	  {
+		"id": 10006,
+		"amount": 500
+	  },
+	  // Bird snaring
+	  {
+		"id": 10010,
+		"amount": 500
+	  },
+	  // Butterfly net
+	  {
+		"id": 10012,
+		"amount": 500
+	  },
+	  // Buffterfly jar
+	  {
+		"id": 10008,
+		"amount": 500
+	  },
+	  // Box trap
+	  {
+		"id": 10031,
+		"amount": 500
+	  },
+	  // Raddbit snare
+	  {
+		"id": 10029,
+		"amount": 500
+	  },
+	  // Teasing stick
+	  {
+		"id": 595,
+		"amount": 500
+	  },
+	  // Torch
+	  {
+		"id": 10025,
+		"amount": 500
+	  },
+	  // Magic box
+	  {
+		"id": 12740,
+		"amount": 500
+	  },
+	  // Snare pack
+	  {
+		"id": 12742,
+		"amount": 500
+	  },
+	  // Trap pack
+	  {
+		"id": 12744,
+		"amount": 500
+	  }
+	  // Magic imp box pack
+	]
+  },
+  {
+	"id": 46,
+	"name": "Battle Runes",
+	"noiron": true,
+	"stock": [
+	  {
+		"id": 554,
+		"amount": 1000
+	  },
+	  // Fire rune
+	  {
+		"id": 555,
+		"amount": 1000
+	  },
+	  // Water rune
+	  {
+		"id": 556,
+		"amount": 1000
+	  },
+	  // Air rune
+	  {
+		"id": 557,
+		"amount": 1000
+	  },
+	  // Earth rune
+	  {
+		"id": 558,
+		"amount": 1000
+	  },
+	  // Mind rune
+	  {
+		"id": 562,
+		"amount": 500
+	  },
+	  // Chaos rune
+	  {
+		"id": 560,
+		"amount": 500
+	  },
+	  // Death rune
+	  {
+		"id": 565,
+		"amount": 500
+	  },
+	  // Blood rune
+	  {
+		"id": 12734,
+		"amount": 50
+	  },
+	  // Fire rune pack
+	  {
+		"id": 12730,
+		"amount": 50
+	  },
+	  // Water rune pack
+	  {
+		"id": 12728,
+		"amount": 50
+	  },
+	  // Air rune pack
+	  {
+		"id": 12732,
+		"amount": 50
+	  },
+	  // Earth rune pack
+	  {
+		"id": 12736,
+		"amount": 35
+	  },
+	  // Mind rune pack
+	  {
+		"id": 12738,
+		"amount": 35
+	  },
+	  // Chaos rune pack
+	  {
+		"id": 5514,
+		"amount": 50
+	  },
+	  // Giant pouch
+	  {
+		"id": 5512,
+		"amount": 50
+	  },
+	  // Large pouch
+	  {
+		"id": 5510,
+		"amount": 50
+	  },
+	  // Medium pouch
+	  {
+		"id": 5509,
+		"amount": 50
+	  }
+	  // Small pouch
+	]
+  },
+  {
+	"id": 1353,
+	"name": "Voting Point Exchange",
+	"general": false,
+	"currency": 1337,
+	"stock": [
+	  {
+		"id": 6199,
+		"amount": 100
+	  },
+	  // Mystery Box
+	  {
+		"id": 13655,
+		"amount": 100
+	  },
+	  // Gnome hat
+	  {
+		"id": 13667,
+		"amount": 100
+	  },
+	  // Graceful hood
+	  {
+		"id": 13669,
+		"amount": 100
+	  },
+	  // Graceful cape
+	  {
+		"id": 13671,
+		"amount": 100
+	  },
+	  // Graceful body
+	  {
+		"id": 13673,
+		"amount": 100
+	  },
+	  // Graceful legs
+	  {
+		"id": 13675,
+		"amount": 100
+	  },
+	  // Graceful boots
+	  {
+		"id": 13677,
+		"amount": 100
+	  },
+	  // Graceful gloves
+	  {
+		"id": 12397,
+		"amount": 100
+	  },
+	  // Royal crown
+	  {
+		"id": 12393,
+		"amount": 100
+	  },
+	  // Royal top
+	  {
+		"id": 12395,
+		"amount": 100
+	  },
+	  // Royal bottems
+	  {
+		"id": 12013,
+		"amount": 100
+	  },
+	  // Prospector helmet
+	  {
+		"id": 12014,
+		"amount": 100
+	  },
+	  // Prospector jacket
+	  {
+		"id": 12015,
+		"amount": 100
+	  },
+	  // Prospector legs
+	  {
+		"id": 12016,
+		"amount": 100
+	  }
+	  // Prospector boots
+	]
+  },
+  {
+	"id": 1405,
+	"name": "Blood Money Cosmetics",
+	"general": false,
+	"stock": [
+	  {
+		"id": 12526,
+		"amount": 100
+	  },
+	  // Fury ornament kit
+	  {
+		"id": 20065,
+		"amount": 100
+	  },
+	  // Occult ornament kit
+	  {
+		"id": 12528,
+		"amount": 100
+	  },
+	  // Dark infinity colour kit
+	  {
+		"id": 12530,
+		"amount": 100
+	  },
+	  // Light infinity colour kit
+	  {
+		"id": 12532,
+		"amount": 100
+	  },
+	  // Dragon sq shield ornament kit
+	  {
+		"id": 12534,
+		"amount": 100
+	  },
+	  // Dragon chainbody ornament kit
+	  {
+		"id": 12536,
+		"amount": 100
+	  },
+	  // Dragon plate/skirt ornament kit
+	  {
+		"id": 12538,
+		"amount": 100
+	  },
+	  // Dragon full helm ornament kit
+	  {
+		"id": 12757,
+		"amount": 100
+	  },
+	  // Blue dark bow paint
+	  {
+		"id": 12759,
+		"amount": 100
+	  },
+	  // Green dark bow paint
+	  {
+		"id": 12761,
+		"amount": 100
+	  },
+	  // Yellow dark bow paint
+	  {
+		"id": 12763,
+		"amount": 100
+	  },
+	  // White dark bow paint
+	  {
+		"id": 12769,
+		"amount": 100
+	  },
+	  // Frozen whip mix
+	  {
+		"id": 12771,
+		"amount": 100
+	  },
+	  // Volcanic whip mix
+	  {
+		"id": 12802,
+		"amount": 100
+	  },
+	  // Ward upgrade kit
+	  {
+		"id": 12798,
+		"amount": 100
+	  },
+	  // Steam staff upgrade kit
+	  //{"id": 20002, "amount": 100}, // Dragon scimitar ornament kit  - Since it's not been in the game before let's make it a clue scroll unique!
+	  {
+		"id": 20143,
+		"amount": 100
+	  },
+	  // Dragon defender ornament kit
+	  {
+		"id": 20062,
+		"amount": 100
+	  },
+	  // Amulet of troture ornament kit
+	  {
+		"id": 20068,
+		"amount": 100
+	  },
+	  // Armadyl godsword ornament kit
+	  {
+		"id": 20071,
+		"amount": 100
+	  },
+	  // Bandos godsword ornament kit
+	  {
+		"id": 20074,
+		"amount": 100
+	  },
+	  // Saradomin godsword ornament kit
+	  {
+		"id": 20077,
+		"amount": 100
+	  },
+	  // Zamorak godsword ornament kit
+	  {
+		"id": 12800,
+		"amount": 100
+	  },
+	  // Dragon pickaxe ornament kit
+	  {
+		"id": 12849,
+		"amount": 100
+	  }
+	  // Granite clamp
+	]
+  },
+  {
+	"id": 50,
+	"name": "Roachey's Fishing Guild Shop",
+	"stock": [
+	  {
+		"id": 314,
+		"amount": 1500
+	  },
+	  // Feather
+	  {
+		"id": 11881,
+		"amount": 150
+	  },
+	  // Feather pack
+	  {
+		"id": 313,
+		"amount": 1500
+	  },
+	  // Bait
+	  {
+		"id": 11883,
+		"amount": 150
+	  },
+	  // Bait pack
+	  {
+		"id": 341,
+		"amount": 0
+	  },
+	  // Raw cod
+	  {
+		"id": 353,
+		"amount": 0
+	  },
+	  // Raw mackerel
+	  {
+		"id": 363,
+		"amount": 0
+	  },
+	  // Raw bass
+	  {
+		"id": 359,
+		"amount": 0
+	  },
+	  // Raw tuna
+	  {
+		"id": 377,
+		"amount": 0
+	  },
+	  // Raw lobster
+	  {
+		"id": 371,
+		"amount": 0
+	  },
+	  // Raw swordfish
+	  {
+		"id": 339,
+		"amount": 0
+	  },
+	  // Cod
+	  {
+		"id": 351,
+		"amount": 0
+	  },
+	  // Mackerel
+	  {
+		"id": 365,
+		"amount": 0
+	  },
+	  // Bass
+	  {
+		"id": 361,
+		"amount": 0
+	  },
+	  // Tuna
+	  {
+		"id": 379,
+		"amount": 0
+	  },
+	  // Lobster
+	  {
+		"id": 373,
+		"amount": 0
+	  }
+	  // Swordfish
+	]
+  },
+  {
+	"id": 51,
+	"name": "TzHaar-Hur-Tel's Equipment Store",
+	"general": false,
+	"currency": 6529,
+	"stock": [
+	  {
+		"id": 21298,
+		"amount": 1000000
+	  },
+	  //Obsidian helmet
+	  {
+		"id": 21301,
+		"amount": 1000000
+	  },
+	  //Obsidian platebody
+	  {
+		"id": 21304,
+		"amount": 1000000
+	  }
+	  //Obisidian platelegs
+	]
+  }
+]

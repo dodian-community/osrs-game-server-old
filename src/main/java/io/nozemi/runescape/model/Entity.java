@@ -11,7 +11,11 @@ import io.nozemi.runescape.model.map.steroids.Route;
 import io.nozemi.runescape.net.message.game.command.ChangeMapMarker;
 import io.nozemi.runescape.script.TimerKey;
 import io.nozemi.runescape.script.TimerRepository;
+import io.nozemi.runescape.tasksystem.InterruptibleChain;
+import io.nozemi.runescape.tasksystem.MyFunction;
+import io.nozemi.runescape.content.teleports.MyTeleports;
 
+import java.util.Arrays;
 import java.util.EnumMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -88,6 +92,32 @@ public abstract class Entity {
         pathQueue.clear();
     }
 
+    public void teleport(Tile tile, MyTeleports teleports) {
+        this.stopActions(true);
+
+        InterruptibleChain chain = InterruptibleChain.bound(this);
+        Arrays.stream(teleports.chain()).forEach(effect ->
+                chain.execute(new MyFunction(effect.duration, () -> {
+                    if (effect.animation != null) {
+                        this.animate(effect.animation);
+                    }
+
+                    if (effect.graphics != null) {
+                        this.graphic(effect.graphics);
+                    }
+
+                    if(isPlayer() && effect.sound != null) {
+                        ((Player) this).sound(effect.sound);
+                    }
+                })));
+
+        chain.then(new MyFunction(() -> {
+            this.teleport(tile);
+            this.graphic(-1);
+            this.animate(-1);
+        })).submit();
+    }
+
     public int size() {
         return 1;
     }
@@ -143,8 +173,11 @@ public abstract class Entity {
         //world.server().scriptExecutor().interruptFor(this);
         sync.faceEntity(null);
         // Graphics and animations are not reset when you walk.
-        if (cancelMoving)
+        if (cancelMoving) {
             pathQueue.clear();
+        }
+
+        InterruptibleChain.tasks.remove(((Player) this).username());
     }
 
     public void putattrib(AttributeKey key, Object v) {
@@ -181,7 +214,6 @@ public abstract class Entity {
                     message("You're stunned!");
                 return tile;
             }
-
 
             // Are we frozen? - make sure this logic is AFTER stun/stop actions -> any type of walking resets combat.
             if (frozen()) {
@@ -398,12 +430,15 @@ public abstract class Entity {
     }
 
     public void animate(int id) {
-        if (isPlayer()) {
-            if (((Player) this).looks().trans() == 3008)
-                return;
-        }
-
         sync.animation(id, 0);
+    }
+
+    public void animate(int[] values) {
+        if(values.length == 1) {
+            animate(values[0]);
+        } else if(values.length >= 2) {
+            animate(values[1]);
+        }
     }
 
     public void animate(int id, int delay) {
@@ -466,8 +501,23 @@ public abstract class Entity {
     public int pvpPid = -1;
 
     private ItemContainer equipment;
+
     public ItemContainer equipment() {
         return equipment;
+    }
+
+    public void graphic(int id) {
+        sync.graphic(id, 0, 0);
+    }
+
+    public void graphic(int[] values) {
+        if(values.length == 1) {
+            this.graphic(values[0]);
+        } else if(values.length == 2) {
+            this.graphic(values[0], values[1], 0);
+        } else if(values.length >= 3) {
+            this.graphic(values[0], values[1], values[2]);
+        }
     }
 
     public void graphic(int id, int height, int delay) {

@@ -2,6 +2,8 @@ package io.nozemi.runescape;
 
 import io.netty.handler.traffic.TrafficCounter;
 import io.nozemi.runescape.model.World;
+import io.nozemi.runescape.tasksystem.InterruptibleChain;
+import io.nozemi.runescape.tasksystem.MyFunction;
 import io.nozemi.runescape.task.*;
 import it.unimi.dsi.fastutil.objects.Object2IntArrayMap;
 import it.unimi.dsi.fastutil.objects.Object2LongArrayMap;
@@ -58,7 +60,7 @@ public class ServerProcessor extends Thread {
 
         tasks.add(new NetworkFlushTask());
 
-        GameInitializer.scriptRepository().triggerWorldInit(this.world);
+        //GameInitializer.scriptRepository().triggerWorldInit(this.world);
 
         start();
     }
@@ -87,7 +89,6 @@ public class ServerProcessor extends Thread {
         });
         logicJobs.clear();
 
-
         times.clear();
         for (Task t : tasks) {
             long l = System.currentTimeMillis();
@@ -95,11 +96,6 @@ public class ServerProcessor extends Thread {
                 if (t.isAsyncSafe()) { // Is this job distributable across multiple workers?
                     Collection<SubTask> jobs = t.createJobs(world);
                     List<Future<Object>> futures = taskExecutor.invokeAll(jobs);
-
-                    while (futures.stream().anyMatch(f -> !f.isDone())) {
-                        // TODO: Look at replacing Strand from Quasar
-                        Thread.sleep(1); // Sleep a small millisecond to go easy on the cpu.
-                    }
                 } else { // Simple non-thread safe job that must execute all by itself.
                     t.execute(world);
                 }
@@ -109,10 +105,22 @@ public class ServerProcessor extends Thread {
             times.put(t.getClass(), (int) (System.currentTimeMillis() - l));
         }
 
+        InterruptibleChain.tasks.forEach((playerId, tasks) -> {
+            for(int i = tasks.size() - 1; i >= 0; i--) {
+                MyFunction task = tasks.get(i);
+                if (task.delay() > 0 && !task.executed()) {
+                    task.delay(task.delay() - 1);
+                } else {
+                    tasks.remove(task);
+                    task.execute();
+                }
+            }
+        });
+
         long delay = 600 - (System.currentTimeMillis() - start);
 
         if (infotick-- == 0) {
-            infotick = 10;
+            infotick = 30;
 
             long totalMem = Runtime.getRuntime().totalMemory();
             long freeMem = Runtime.getRuntime().freeMemory();
@@ -127,7 +135,7 @@ public class ServerProcessor extends Thread {
         if (forceLog) {
             logger.error(times);
             logger.error(computeTimes);
-            logger.error(GameInitializer.scriptRepository().getTimerProfiler());
+            //logger.error(GameInitializer.scriptRepository().getTimerProfiler());
             forceLog = false;
         }
 

@@ -1,0 +1,800 @@
+[
+  {
+	"id": 2476,
+	"x": 2166,
+	"z": 5304,
+	"radius": 3
+  },
+  // Catablepon
+  {
+	"id": 2478,
+	"x": 2167,
+	"z": 5254,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 2478,
+	"x": 2167,
+	"z": 5255,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 2478,
+	"x": 2167,
+	"z": 5255,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 2476,
+	"x": 2165,
+	"z": 5300,
+	"radius": 3
+  },
+  // Catablepon
+  {
+	"id": 2478,
+	"x": 2167,
+	"z": 5254,
+	"radius": 3
+  },
+  // Spider
+  {
+	"id": 2478,
+	"x": 2168,
+	"z": 5255,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 2478,
+	"x": 2167,
+	"z": 5255,
+	"radius": 3
+  },
+  // Spider
+  {
+	"id": 2478,
+	"x": 2167,
+	"z": 5253,
+	"radius": 3
+  },
+  // Spider
+  {
+	"id": 2478,
+	"x": 2168,
+	"z": 5254,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 2478,
+	"x": 2168,
+	"z": 5255,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 2479,
+	"x": 2169,
+	"z": 5287,
+	"radius": 5
+  },
+  // Scorpion
+  {
+	"id": 2476,
+	"x": 2167,
+	"z": 5302,
+	"radius": 3
+  },
+  // Catablepon
+  {
+	"id": 2478,
+	"x": 2167,
+	"z": 5254,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 2478,
+	"x": 2168,
+	"z": 5255,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 2478,
+	"x": 2168,
+	"z": 5255,
+	"radius": 3
+  },
+  // Spider
+  {
+	"id": 2480,
+	"x": 2170,
+	"z": 5279,
+	"radius": 5
+  },
+  // Scorpion
+  {
+	"id": 2479,
+	"x": 2170,
+	"z": 5284,
+	"radius": 6
+  },
+  // Scorpion
+  {
+	"id": 2480,
+	"x": 2169,
+	"z": 5286,
+	"radius": 5
+  },
+  // Scorpion
+  {
+	"id": 2476,
+	"x": 2167,
+	"z": 5303,
+	"radius": 2
+  },
+  // Catablepon
+  {
+	"id": 2478,
+	"x": 2168,
+	"z": 5255,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 2479,
+	"x": 2170,
+	"z": 5280,
+	"radius": 4
+  },
+  // Scorpion
+  {
+	"id": 2478,
+	"x": 2168,
+	"z": 5254,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 2479,
+	"x": 2171,
+	"z": 5275,
+	"radius": 4
+  },
+  // Scorpion
+  {
+	"id": 2480,
+	"x": 2170,
+	"z": 5284,
+	"radius": 4
+  },
+  // Scorpion
+  {
+	"id": 2480,
+	"x": 2171,
+	"z": 5275,
+	"radius": 4
+  },
+  // Scorpion
+  {
+	"id": 2478,
+	"x": 2122,
+	"z": 5272,
+	"radius": 5
+  },
+  // Spider
+  {
+	"id": 2476,
+	"x": 2120,
+	"z": 5296,
+	"radius": 4
+  },
+  // Catablepon
+  {
+	"id": 2477,
+	"x": 2123,
+	"z": 5272,
+	"radius": 6
+  },
+  // Giant spider
+  {
+	"id": 2478,
+	"x": 2122,
+	"z": 5273,
+	"radius": 5
+  },
+  // Spider
+  {
+	"id": 2476,
+	"x": 2118,
+	"z": 5293,
+	"radius": 4
+  },
+  // Catablepon
+  {
+	"id": 2476,
+	"x": 2120,
+	"z": 5298,
+	"radius": 4
+  },
+  // Catablepon
+  {
+	"id": 2477,
+	"x": 2124,
+	"z": 5272,
+	"radius": 7
+  },
+  // Giant spider
+  {
+	"id": 2478,
+	"x": 2123,
+	"z": 5273,
+	"radius": 6
+  },
+  // Spider
+  {
+	"id": 2478,
+	"x": 2124,
+	"z": 5271,
+	"radius": 6
+  },
+  // Spider
+  {
+	"id": 2476,
+	"x": 2119,
+	"z": 5292,
+	"radius": 3
+  },
+  // Catablepon
+  {
+	"id": 2477,
+	"x": 2125,
+	"z": 5270,
+	"radius": 7
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2124,
+	"z": 5271,
+	"radius": 7
+  },
+  // Giant spider
+  {
+	"id": 2476,
+	"x": 2123,
+	"z": 5301,
+	"radius": 5
+  },
+  // Catablepon
+  {
+	"id": 2478,
+	"x": 2126,
+	"z": 5271,
+	"radius": 6
+  },
+  // Spider
+  {
+	"id": 2477,
+	"x": 2126,
+	"z": 5272,
+	"radius": 7
+  },
+  // Giant spider
+  {
+	"id": 2478,
+	"x": 2124,
+	"z": 5272,
+	"radius": 6
+  },
+  // Spider
+  {
+	"id": 2477,
+	"x": 2127,
+	"z": 5272,
+	"radius": 7
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2126,
+	"z": 5271,
+	"radius": 8
+  },
+  // Giant spider
+  {
+	"id": 2478,
+	"x": 2127,
+	"z": 5271,
+	"radius": 7
+  },
+  // Spider
+  {
+	"id": 2478,
+	"x": 2126,
+	"z": 5270,
+	"radius": 7
+  },
+  // Spider
+  {
+	"id": 2477,
+	"x": 2125,
+	"z": 5271,
+	"radius": 8
+  },
+  // Giant spider
+  {
+	"id": 2478,
+	"x": 2127,
+	"z": 5270,
+	"radius": 7
+  },
+  // Spider
+  {
+	"id": 2477,
+	"x": 2127,
+	"z": 5271,
+	"radius": 7
+  },
+  // Giant spider
+  {
+	"id": 2478,
+	"x": 2128,
+	"z": 5272,
+	"radius": 6
+  },
+  // Spider
+  {
+	"id": 2476,
+	"x": 2127,
+	"z": 5302,
+	"radius": 5
+  },
+  // Catablepon
+  {
+	"id": 2478,
+	"x": 2127,
+	"z": 5271,
+	"radius": 6
+  },
+  // Spider
+  {
+	"id": 2478,
+	"x": 2128,
+	"z": 5268,
+	"radius": 6
+  },
+  // Spider
+  {
+	"id": 2477,
+	"x": 2129,
+	"z": 5268,
+	"radius": 6
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2127,
+	"z": 5270,
+	"radius": 6
+  },
+  // Giant spider
+  {
+	"id": 2478,
+	"x": 2127,
+	"z": 5272,
+	"radius": 6
+  },
+  // Spider
+  {
+	"id": 2476,
+	"x": 2128,
+	"z": 5302,
+	"radius": 4
+  },
+  // Catablepon
+  {
+	"id": 2477,
+	"x": 2127,
+	"z": 5270,
+	"radius": 7
+  },
+  // Giant spider
+  {
+	"id": 2476,
+	"x": 2129,
+	"z": 5299,
+	"radius": 4
+  },
+  // Catablepon
+  {
+	"id": 2477,
+	"x": 2130,
+	"z": 5269,
+	"radius": 7
+  },
+  // Giant spider
+  {
+	"id": 2474,
+	"x": 2144,
+	"z": 5253,
+	"radius": 3
+  },
+  // Catablepon
+  {
+	"id": 2477,
+	"x": 2145,
+	"z": 5257,
+	"radius": 7
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2146,
+	"z": 5254,
+	"radius": 6
+  },
+  // Giant spider
+  {
+	"id": 2474,
+	"x": 2145,
+	"z": 5253,
+	"radius": 4
+  },
+  // Catablepon
+  {
+	"id": 2477,
+	"x": 2146,
+	"z": 5256,
+	"radius": 6
+  },
+  // Giant spider
+  {
+	"id": 2474,
+	"x": 2145,
+	"z": 5256,
+	"radius": 5
+  },
+  // Catablepon
+  {
+	"id": 2477,
+	"x": 2150,
+	"z": 5305,
+	"radius": 5
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2146,
+	"z": 5257,
+	"radius": 7
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2149,
+	"z": 5304,
+	"radius": 4
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2148,
+	"z": 5256,
+	"radius": 6
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2149,
+	"z": 5305,
+	"radius": 4
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2149,
+	"z": 5305,
+	"radius": 4
+  },
+  // Giant spider
+  {
+	"id": 2474,
+	"x": 2148,
+	"z": 5253,
+	"radius": 5
+  },
+  // Catablepon
+  {
+	"id": 2474,
+	"x": 2148,
+	"z": 5255,
+	"radius": 4
+  },
+  // Catablepon
+  {
+	"id": 2477,
+	"x": 2150,
+	"z": 5305,
+	"radius": 5
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2149,
+	"z": 5305,
+	"radius": 4
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2150,
+	"z": 5306,
+	"radius": 5
+  },
+  // Giant spider
+  {
+	"id": 2478,
+	"x": 2150,
+	"z": 5266,
+	"radius": 6
+  },
+  // Spider
+  {
+	"id": 2477,
+	"x": 2150,
+	"z": 5305,
+	"radius": 5
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2149,
+	"z": 5306,
+	"radius": 4
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2150,
+	"z": 5265,
+	"radius": 7
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2150,
+	"z": 5305,
+	"radius": 5
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2150,
+	"z": 5306,
+	"radius": 4
+  },
+  // Giant spider
+  {
+	"id": 2474,
+	"x": 2150,
+	"z": 5253,
+	"radius": 3
+  },
+  // Catablepon
+  {
+	"id": 2477,
+	"x": 2151,
+	"z": 5266,
+	"radius": 8
+  },
+  // Giant spider
+  {
+	"id": 2478,
+	"x": 2152,
+	"z": 5268,
+	"radius": 5
+  },
+  // Spider
+  {
+	"id": 2477,
+	"x": 2150,
+	"z": 5304,
+	"radius": 5
+  },
+  // Giant spider
+  {
+	"id": 2474,
+	"x": 2151,
+	"z": 5252,
+	"radius": 3
+  },
+  // Catablepon
+  {
+	"id": 2477,
+	"x": 2150,
+	"z": 5267,
+	"radius": 7
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2150,
+	"z": 5305,
+	"radius": 5
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2150,
+	"z": 5305,
+	"radius": 5
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2149,
+	"z": 5305,
+	"radius": 4
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2152,
+	"z": 5267,
+	"radius": 7
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2153,
+	"z": 5268,
+	"radius": 5
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2151,
+	"z": 5269,
+	"radius": 7
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2150,
+	"z": 5305,
+	"radius": 5
+  },
+  // Giant spider
+  {
+	"id": 2474,
+	"x": 2152,
+	"z": 5252,
+	"radius": 2
+  },
+  // Catablepon
+  {
+	"id": 2477,
+	"x": 2150,
+	"z": 5254,
+	"radius": 5
+  },
+  // Giant spider
+  {
+	"id": 2478,
+	"x": 2153,
+	"z": 5268,
+	"radius": 5
+  },
+  // Spider
+  {
+	"id": 2478,
+	"x": 2153,
+	"z": 5270,
+	"radius": 5
+  },
+  // Spider
+  {
+	"id": 2477,
+	"x": 2151,
+	"z": 5305,
+	"radius": 4
+  },
+  // Giant spider
+  {
+	"id": 2478,
+	"x": 2154,
+	"z": 5271,
+	"radius": 3
+  },
+  // Spider
+  {
+	"id": 2478,
+	"x": 2154,
+	"z": 5271,
+	"radius": 3
+  },
+  // Spider
+  {
+	"id": 2477,
+	"x": 2153,
+	"z": 5268,
+	"radius": 6
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2153,
+	"z": 5269,
+	"radius": 6
+  },
+  // Giant spider
+  {
+	"id": 2477,
+	"x": 2154,
+	"z": 5270,
+	"radius": 4
+  },
+  // Giant spider
+  {
+	"id": 2475,
+	"x": 2160,
+	"z": 5282,
+	"radius": 3
+  },
+  // Catablepon
+  {
+	"id": 2475,
+	"x": 2160,
+	"z": 5280,
+	"radius": 2
+  },
+  // Catablepon
+  {
+	"id": 2475,
+	"x": 2161,
+	"z": 5283,
+	"radius": 2
+  },
+  // Catablepon
+  {
+	"id": 2476,
+	"x": 2163,
+	"z": 5300,
+	"radius": 5
+  },
+  // Catablepon
+  {
+	"id": 2475,
+	"x": 2161,
+	"z": 5280,
+	"radius": 2
+  },
+  // Catablepon
+  {
+	"id": 2478,
+	"x": 2167,
+	"z": 5255,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 2478,
+	"x": 2168,
+	"z": 5254,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 2476,
+	"x": 2165,
+	"z": 5303,
+	"radius": 4
+  }
+  // Catablepon
+]

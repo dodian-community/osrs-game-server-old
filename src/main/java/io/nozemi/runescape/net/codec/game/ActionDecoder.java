@@ -1,6 +1,7 @@
 package io.nozemi.runescape.net.codec.game;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
 import io.nozemi.runescape.io.RSBuffer;
@@ -10,6 +11,14 @@ import io.nozemi.runescape.net.message.game.Action;
 import io.nozemi.runescape.net.message.game.action.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -19,12 +28,15 @@ import java.util.Map;
 /**
  * Created by Bart Pelle on 8/23/2014.
  */
-public class ActionDecoder extends ByteToMessageDecoder {
+@Component
+@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+public class ActionDecoder extends ByteToMessageDecoder implements BeanFactoryAware {
 	
 	private static final Logger logger = LogManager.getLogger(ActionDecoder.class);
 	
 	@SuppressWarnings("unchecked")
-	private Class<? extends Action>[] actionRepository = new Class[256];
+	private Action[] actionRepository = new Action[256];
+
 	private Map<Integer, Integer> ignored = new HashMap<>();
 	private int[] actionSizes = new int[] { 9, -1, 3, -1, 7, 2, -1, 0, 9, 8, -1, 8, 7, 4, 8, 4, 7, 0, -1, -2, 8, 3, 8,
 			8, 7, 8, 7, 15, 3, 16, 2, 8, -2, 2, 7, 9, 7, 13, 13, 8, 8, 10, 8, 11, -1, 8, 3, 7, -1, 14, 4, 7, 4, 6, 11,
@@ -38,25 +50,30 @@ public class ActionDecoder extends ByteToMessageDecoder {
 	private State state = State.OPCODE;
 	private int opcode;
 	private int size;
-	
-	public ActionDecoder() {
-		actionRepository[84] = WalkMap.class;
-		actionRepository[97] = WalkMap.class;
 
-		actionRepository[62] = WindowStateChanged.class;
-		actionRepository[80] = ChangeDisplayMode.class;
+	private BeanFactory beanFactory;
 
-		actionRepository[92] = DialogueContinue.class;
+	@Autowired
+	public ActionDecoder(ButtonAction buttonAction) {
+		actionRepository[84] = new WalkMap();
+		actionRepository[97] = new WalkMap();
 
-		actionRepository[69] = CloseMainInterface.class;
-		actionRepository[15] = IntegerInput.class;
-		actionRepository[1] = StringInput.class;
+		actionRepository[62] = new WindowStateChanged();
+		actionRepository[80] = new ChangeDisplayMode();
 
-		actionRepository[38] = SetLooks.class;
+		actionRepository[92] = new DialogueContinue();
 
-		actionRepository[17] = PingPacket.class;
+		actionRepository[69] = new CloseMainInterface();
+		actionRepository[15] = new IntegerInput();
+		actionRepository[1] = new StringInput();
 
-		Arrays.stream(ButtonAction.OPCODES).forEach(i -> actionRepository[i] = ButtonAction.class);
+		actionRepository[38] = new SetLooks();
+
+		actionRepository[17] = new PingPacket();
+
+		actionRepository[90] = new CommandAction();
+
+		Arrays.stream(ButtonAction.OPCODES).forEach(i -> actionRepository[i] = buttonAction);
 
 
 		/* Fill repo, maybe through xml/json? */
@@ -135,10 +152,10 @@ public class ActionDecoder extends ByteToMessageDecoder {
 					
 					break;
 				}
-				
+
 				if (!ignored.containsKey(opcode) && actionRepository[opcode] != null) {
-					Action a = actionRepository[opcode].newInstance();
 					int bufferStart = buffer.get().readerIndex();
+					Action a = actionRepository[opcode];
 
 					try {
 						a.decode(new RSBuffer(buffer.get().slice(bufferStart, size)), ctx, opcode, size, player);
@@ -159,10 +176,15 @@ public class ActionDecoder extends ByteToMessageDecoder {
 		}
 	}
 	
-	public Class<? extends Action>[] repository() {
+	public Action[] repository() {
 		return actionRepository;
 	}
-	
+
+	@Override
+	public void setBeanFactory(@NotNull BeanFactory beanFactory) throws BeansException {
+		this.beanFactory = beanFactory;
+	}
+
 	enum State {
 		OPCODE,
 		SIZE,

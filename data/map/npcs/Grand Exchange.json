@@ -1,0 +1,113 @@
+[
+  {
+	"id": 2148,
+	"x": 3165,
+	"z": 3488,
+	"direction": "S"
+  },
+  {
+	"id": 2149,
+	"x": 3164,
+	"z": 3488,
+	"direction": "S"
+  },
+  {
+	"id": 5453,
+	"x": 3163,
+	"z": 3489,
+	"direction": "W"
+  },
+  {
+	"id": 6528,
+	"x": 3163,
+	"z": 3490,
+	"direction": "W"
+  },
+  {
+	"id": 5455,
+	"x": 3166,
+	"z": 3489,
+	"direction": "E"
+  },
+  {
+	"id": 5456,
+	"x": 3166,
+	"z": 3490,
+	"direction": "E"
+  },
+  {
+	"id": 2150,
+	"x": 3165,
+	"z": 3491,
+	"direction": "N"
+  },
+  {
+	"id": 2151,
+	"x": 3164,
+	"z": 3491,
+	"direction": "N"
+  },
+  {
+	"id": 5452,
+	"x": 3156,
+	"z": 3498,
+	"direction": "S"
+  },
+  {
+	"id": 5451,
+	"x": 3152,
+	"z": 3489,
+	"direction": "E"
+  },
+  {
+	"id": 5449,
+	"x": 3156,
+	"z": 3481,
+	"direction": "N"
+  },
+  {
+	"id": 2152,
+	"x": 3165,
+	"z": 3474,
+	"direction": "N"
+  },
+  {
+	"id": 5450,
+	"x": 3173,
+	"z": 3481,
+	"direction": "W"
+  },
+  {
+	"id": 3115,
+	"x": 3173,
+	"z": 3498,
+	"direction": "S"
+  },
+  {
+	"id": 6510,
+	"x": 3146,
+	"z": 3513,
+	"radius": 0,
+	"direction": "W",
+	"deadmanExclusive": true
+  },
+  // Financial Wizard
+  {
+	"id": 7057,
+	"x": 3146,
+	"z": 3512,
+	"radius": 0,
+	"direction": "W",
+	"deadmanExclusive": true
+  },
+  // Banker
+  {
+	"id": 4718,
+	"x": 3148,
+	"z": 3508,
+	"radius": 0,
+	"direction": "W",
+	"deadmanExclusive": true
+  }
+  // Wizard, testing
+]

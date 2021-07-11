@@ -1,0 +1,60 @@
+{
+  "12746": 250, // Tier 1 emblem
+  "12748": 500, // Tier 2 emblem
+  "12749": 750, // Tier 3 emblem
+  "12750": 1000, // Tier 4 emblem
+  "12751": 1500, // Tier 5 emblem
+  "12752": 2000, // Tier 6 emblem
+  "12753": 2500, // Tier 7 emblem
+  "12754": 3000, // Tier 8 emblem
+  "12755": 4000, // Tier 9 emblem
+  "12756": 5000, // Tier 10 emblem
+  "21807": 1500, //Ancient emblem
+  "21810": 3000, //Ancient totem
+  "21813": 6000, //Ancient statuette
+  "22299": 10000, //Ancient medallion
+  "22302": 15000, //Ancient effigy
+  "22305": 25000, //Ancient relic
+  "21820": 2, // Ether
+  "13233": 1000, // Smouldering stone
+  "13200": 5000, // Tanzanite mutagen
+  "13201": 5000, // Magma mutagen
+  "6739": 2000, // Dragon axe
+  "11920": 5000, // Dragon pick
+  "22106": 50000, // Jar of decay
+  "21532": 15, // Fragements
+  "436": 1, //copper ore
+  "438": 1, //tin ore
+  "440": 2, //iron ore
+  "453": 10, //coal ore
+  "442": 15, // Silver ore
+  "444": 20, //gold ore
+  "447": 50, //mithril ore
+  "449": 75, //adamantite ore
+  "451": 125, //runite ore
+  "1511": 2, //regular logs
+  "1521": 3, //oak logs
+  "1519": 5, //willow logs
+  "1517": 10, //maple logs
+  "1515": 75, //yew logs
+  "1513": 100, //magic logs
+  "331": 1, //raw salmon
+  "335": 1, //raw trout
+  "345": 1, //raw herring
+  "349": 1, //raw pike
+  "317": 1, //raw shrimps
+  "359": 2, //raw tuna
+  "363": 2, //raw bass
+  "371": 10, //raw swordfish
+  "377": 10, //raw lobster
+  "383": 50, //raw shark
+  "389": 25, //raw mantaray
+  "11934": 100, //raw dark crab
+  "13439": 175, //raw anglerfish
+  "9965": 30, //crimson swift
+  "9966": 50, //copper longtail
+  "10034": 100, //red chinchompa
+  "10033": 50, //chinchompa
+  "11959": 175 //black chinchompa
+
+}

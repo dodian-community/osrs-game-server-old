@@ -1,0 +1,63 @@
+[
+  // Scorpions in the north mines
+  {
+	"id": 7496,
+	"x": 3160,
+	"z": 5340,
+	"direction": "E"
+  },
+  //Tom
+  {
+	"id": 7497,
+	"x": 3182,
+	"z": 5347,
+	"direction": "N"
+  },
+  //Dylan
+  {
+	"id": 7498,
+	"x": 3171,
+	"z": 5334,
+	"direction": "NE"
+  },
+  //Sam
+  {
+	"id": 7499,
+	"x": 3178,
+	"z": 5346
+  },
+  //Ulina
+  {
+	"id": 7501,
+	"x": 3165,
+	"z": 5339
+  },
+  //Billam
+  {
+	"id": 7502,
+	"x": 3160,
+	"z": 5336
+  },
+  //Tragacanth
+  {
+	"id": 7503,
+	"x": 3172,
+	"z": 5332,
+	"direction": "NE"
+  },
+  //Cave goblin worker
+  {
+	"id": 7504,
+	"x": 3168,
+	"z": 5332,
+	"direction": "NE"
+  },
+  //Palum
+  {
+	"id": 7325,
+	"x": 3171,
+	"z": 5327,
+	"direction": "S"
+  }
+  //Palum
+]

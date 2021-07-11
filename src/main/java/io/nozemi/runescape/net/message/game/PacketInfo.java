@@ -9,7 +9,5 @@ import java.lang.annotation.RetentionPolicy;
 
 @Retention(RetentionPolicy.RUNTIME)
 public @interface PacketInfo {
-	
-	public int size();
-	
+	int size();
 }

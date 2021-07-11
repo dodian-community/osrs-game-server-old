@@ -1,0 +1,156 @@
+[
+  {
+	"id": 5238,
+	"x": 2785,
+	"z": 9201,
+	"radius": 1
+  },
+  // Spider
+  {
+	"id": 5238,
+	"x": 2786,
+	"z": 9189,
+	"radius": 0
+  },
+  // Spider
+  {
+	"id": 5283,
+	"x": 2786,
+	"z": 9199,
+	"radius": 1
+  },
+  // Monkey Zombie
+  {
+	"id": 5283,
+	"x": 2786,
+	"z": 9204,
+	"radius": 2
+  },
+  // Monkey Zombie
+  {
+	"id": 5238,
+	"x": 2789,
+	"z": 9195,
+	"radius": 3
+  },
+  // Spider
+  {
+	"id": 5283,
+	"x": 2790,
+	"z": 9194,
+	"radius": 2
+  },
+  // Monkey Zombie
+  {
+	"id": 5238,
+	"x": 2798,
+	"z": 9199,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 5283,
+	"x": 2798,
+	"z": 9196,
+	"radius": 2
+  },
+  // Monkey Zombie
+  {
+	"id": 5283,
+	"x": 2798,
+	"z": 9199,
+	"radius": 2
+  },
+  // Monkey Zombie
+  {
+	"id": 5283,
+	"x": 2798,
+	"z": 9204,
+	"radius": 2
+  },
+  // Monkey Zombie
+  {
+	"id": 5238,
+	"x": 2799,
+	"z": 9204,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 5283,
+	"x": 2800,
+	"z": 9196,
+	"radius": 2
+  },
+  // Monkey Zombie
+  {
+	"id": 5283,
+	"x": 2800,
+	"z": 9198,
+	"radius": 2
+  },
+  // Monkey Zombie
+  {
+	"id": 5283,
+	"x": 2800,
+	"z": 9203,
+	"radius": 2
+  },
+  // Monkey Zombie
+  {
+	"id": 5238,
+	"x": 2800,
+	"z": 9197,
+	"radius": 4
+  },
+  // Spider
+  {
+	"id": 5283,
+	"x": 2806,
+	"z": 9201,
+	"radius": 2
+  },
+  // Monkey Zombie
+  {
+	"id": 5283,
+	"x": 2807,
+	"z": 9200,
+	"radius": 2
+  },
+  // Monkey Zombie
+  {
+	"id": 5283,
+	"x": 2807,
+	"z": 9202,
+	"radius": 2
+  },
+  // Monkey Zombie
+  {
+	"id": 5282,
+	"x": 2808,
+	"z": 9191,
+	"radius": 1
+  },
+  // Monkey Zombie
+  {
+	"id": 5282,
+	"x": 2808,
+	"z": 9210,
+	"radius": 1
+  },
+  // Monkey Zombie
+  {
+	"id": 5282,
+	"x": 2809,
+	"z": 9193,
+	"radius": 1
+  },
+  // Monkey Zombie
+  {
+	"id": 5282,
+	"x": 2809,
+	"z": 9208,
+	"radius": 1
+  }
+  // Monkey Zombie
+]

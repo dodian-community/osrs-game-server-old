@@ -12,7 +12,6 @@ import io.nozemi.runescape.handlers.impl.ConfigHandler;
 import io.nozemi.runescape.handlers.impl.DataHandler;
 import io.nozemi.runescape.model.World;
 import io.nozemi.runescape.net.ClientInitializer;
-import io.nozemi.runescape.script.ScriptRepository;
 import io.nozemi.runescape.util.map.MapDecryptionKeys;
 import nl.bartpelle.dawnguard.DataStore;
 import org.apache.logging.log4j.Level;
@@ -41,7 +40,6 @@ public class GameInitializer implements InitializingBean, BeanFactoryAware {
 
     private static ClientInitializer clientInitializer;
     private static List<Handler> handlers;
-    private static ScriptRepository scriptRepository;
     private static ServerProcessor serverProcessor;
 
     private ServerBootstrap bootstrap;
@@ -125,8 +123,6 @@ public class GameInitializer implements InitializingBean, BeanFactoryAware {
 
     public void loadScripts() {
         logger.log(Level.INFO, "Loading scripts...");
-        scriptRepository = new ScriptRepository();
-        scriptRepository.load();
     }
 
     public static List<Handler> handlers() {
@@ -165,10 +161,6 @@ public class GameInitializer implements InitializingBean, BeanFactoryAware {
 
     public static World world() {
         return world;
-    }
-
-    public static ScriptRepository scriptRepository() {
-        return scriptRepository;
     }
 
     public static ServerProcessor serverProcessor() {

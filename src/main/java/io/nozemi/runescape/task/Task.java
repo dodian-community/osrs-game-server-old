@@ -9,10 +9,10 @@ import java.util.Collection;
  */
 public interface Task {
 	
-	public void execute(World world);
+	void execute(World world);
 	
-	public boolean isAsyncSafe();
+	boolean isAsyncSafe();
 	
-	public Collection<io.nozemi.runescape.task.SubTask> createJobs(World world);
+	Collection<SubTask> createJobs(World world);
 	
 }

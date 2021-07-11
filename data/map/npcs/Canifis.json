@@ -1,0 +1,461 @@
+[
+  {
+	"id": 2616,
+	"x": 3475,
+	"z": 3476,
+	"radius": 3
+  },
+  // Joseph
+  {
+	"id": 3483,
+	"x": 3474,
+	"z": 3506,
+	"radius": 1
+  },
+  // Will o' the wisp
+  {
+	"id": 6525,
+	"x": 3477,
+	"z": 3496,
+	"radius": 3
+  },
+  // Fidelio
+  {
+	"id": 3483,
+	"x": 3474,
+	"z": 3506,
+	"radius": 3
+  },
+  // Will o' the wisp
+  {
+	"id": 2628,
+	"x": 3479,
+	"z": 3493,
+	"radius": 4
+  },
+  // Yadviga
+  {
+	"id": 2629,
+	"x": 3479,
+	"z": 3497,
+	"radius": 4
+  },
+  // Nikita
+  {
+	"id": 3483,
+	"x": 3482,
+	"z": 3468,
+	"radius": 3
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3480,
+	"z": 3470,
+	"radius": 0
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3483,
+	"z": 3467,
+	"radius": 2
+  },
+  // Will o' the wisp
+  {
+	"id": 2620,
+	"x": 3483,
+	"z": 3478,
+	"radius": 4
+  },
+  // Georgy
+  {
+	"id": 2626,
+	"x": 3483,
+	"z": 3495,
+	"radius": 5
+  },
+  // Sofiya
+  {
+	"id": 3483,
+	"x": 3483,
+	"z": 3507,
+	"radius": 0
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3483,
+	"z": 3466,
+	"radius": 2
+  },
+  // Will o' the wisp
+  {
+	"id": 2622,
+	"x": 3485,
+	"z": 3488,
+	"radius": 5
+  },
+  // Irina
+  {
+	"id": 3483,
+	"x": 3484,
+	"z": 3508,
+	"radius": 3
+  },
+  // Will o' the wisp
+  {
+	"id": 2613,
+	"x": 3489,
+	"z": 3490,
+	"radius": 5
+  },
+  // Boris
+  {
+	"id": 2630,
+	"x": 3490,
+	"z": 3473,
+	"radius": 4
+  },
+  // Vera
+  {
+	"id": 2614,
+	"x": 3490,
+	"z": 3474,
+	"radius": 5
+  },
+  // Imre
+  {
+	"id": 6527,
+	"x": 3493,
+	"z": 3474,
+	"radius": 4
+  },
+  // Roavar
+  {
+	"id": 3483,
+	"x": 3492,
+	"z": 3511,
+	"radius": 2
+  },
+  // Will o' the wisp
+  {
+	"id": 2617,
+	"x": 3496,
+	"z": 3478,
+	"radius": 5
+  },
+  // Nikolai
+  {
+	"id": 2624,
+	"x": 3497,
+	"z": 3475,
+	"radius": 4
+  },
+  // Milla
+  {
+	"id": 686,
+	"x": 3497,
+	"z": 3478,
+	"radius": 0
+  },
+  // Malak
+  {
+	"id": 2615,
+	"x": 3497,
+	"z": 3496,
+	"radius": 5
+  },
+  // Yuri
+  {
+	"id": 3483,
+	"x": 3498,
+	"z": 3513,
+	"radius": 4
+  },
+  // Will o' the wisp
+  {
+	"id": 2621,
+	"x": 3501,
+	"z": 3493,
+	"radius": 5
+  },
+  // Svetlana
+  {
+	"id": 3483,
+	"x": 3501,
+	"z": 3513,
+	"radius": 4
+  },
+  // Will o' the wisp
+  {
+	"id": 2619,
+	"x": 3501,
+	"z": 3487,
+	"radius": 5
+  },
+  // Lev
+  {
+	"id": 6269,
+	"x": 3503,
+	"z": 3477,
+	"radius": 0
+  },
+  // Vanstrom Klause
+  {
+	"id": 3483,
+	"x": 3504,
+	"z": 3465,
+	"radius": 1
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3504,
+	"z": 3514,
+	"radius": 3
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3504,
+	"z": 3514,
+	"radius": 2
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3505,
+	"z": 3514,
+	"radius": 2
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3509,
+	"z": 3512,
+	"radius": 0
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3515,
+	"z": 3491,
+	"radius": 2
+  },
+  // Will o' the wisp
+  {
+	"id": 402,
+	"x": 3511,
+	"z": 3508,
+	"radius": 3,
+	"realismExclusive": true,
+	"economyExclusive": true
+  },
+  // Mazchna
+  {
+	"id": 3483,
+	"x": 3513,
+	"z": 3467,
+	"radius": 3
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3514,
+	"z": 3488,
+	"radius": 3
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3514,
+	"z": 3487,
+	"radius": 2
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3513,
+	"z": 3502,
+	"radius": 2
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3514,
+	"z": 3490,
+	"radius": 0
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3515,
+	"z": 3493,
+	"radius": 3
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3515,
+	"z": 3497,
+	"radius": 3
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3515,
+	"z": 3470,
+	"radius": 4
+  },
+  // Will o' the wisp
+  {
+	"id": 5418,
+	"x": 3480,
+	"z": 3484,
+	"radius": 0
+  },
+  // Taxidermist
+  {
+	"id": 6526,
+	"x": 3489,
+	"z": 3501,
+	"radius": 3
+  },
+  // Sbott
+  {
+	"id": 6524,
+	"x": 3500,
+	"z": 3505,
+	"radius": 3
+  },
+  // Barker
+  {
+	"id": 2631,
+	"x": 3505,
+	"z": 3492,
+	"radius": 5
+  },
+  // Zoja
+  {
+	"id": 6478,
+	"x": 3506,
+	"z": 3495,
+	"radius": 4
+  },
+  // Rufus
+  {
+	"id": 2618,
+	"x": 3511,
+	"z": 3482,
+	"radius": 5
+  },
+  // Eduard
+  {
+	"id": 2633,
+	"x": 3514,
+	"z": 3479,
+	"direction": "W"
+  },
+  // Banker
+  {
+	"id": 2633,
+	"x": 3514,
+	"z": 3481,
+	"direction": "W"
+  },
+  // Banker
+  {
+	"id": 3483,
+	"x": 3466,
+	"z": 3488,
+	"radius": 0
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3467,
+	"z": 3466,
+	"radius": 1
+  },
+  // Will o' the wisp
+  {
+	"id": 5521,
+	"x": 3468,
+	"z": 3475,
+	"radius": 2
+  },
+  // Le-sabrè
+  {
+	"id": 3483,
+	"x": 3468,
+	"z": 3496,
+	"radius": 3
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3470,
+	"z": 3496,
+	"radius": 2
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3466,
+	"z": 3488,
+	"radius": 0
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3468,
+	"z": 3499,
+	"radius": 0
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3469,
+	"z": 3510,
+	"radius": 0
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3468,
+	"z": 3468,
+	"radius": 2
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3469,
+	"z": 3469,
+	"radius": 0
+  },
+  // Will o' the wisp
+  {
+	"id": 3483,
+	"x": 3471,
+	"z": 3479,
+	"radius": 2
+  },
+  // Will o' the wisp
+  
+  // Farming patch
+  {
+	"id": 0,
+	"x": 3599,
+	"z": 3522,
+	"radius": 0
+  },
+  // Tool Leprechaun
+  {
+	"id": 2666,
+	"x": 3603,
+	"z": 3528,
+	"radius": 3
+  }
+  // lyra
+]

@@ -1,0 +1,55 @@
+[
+  {"id": 955, "x": 3487, "z": 9478, "radius": 10, "level": 2}, // Kalphite Worker
+  {"id": 955, "x": 3497, "z": 9516, "radius": 13, "level": 2}, // Kalphite Worker
+  {"id": 955, "x": 3497, "z": 9518, "radius": 13, "level": 2}, // Kalphite Worker
+  {"id": 955, "x": 3496, "z": 9518, "radius": 14, "level": 2}, // Kalphite Worker
+  {"id": 959, "x": 3505, "z": 9489, "radius": 9, "level": 2}, // Kalphite Guardian
+  {"id": 955, "x": 3497, "z": 9517, "radius": 13, "level": 2}, // Kalphite Worker
+  {"id": 966, "x": 3494, "z": 9519, "radius": 19, "level": 2}, // Kalphite Larva
+  {"id": 955, "x": 3496, "z": 9518, "radius": 16, "level": 2}, // Kalphite Worker
+  {"id": 959, "x": 3509, "z": 9497, "radius": 3, "level": 2}, // Kalphite Guardian
+  {"id": 957, "x": 3462, "z": 9483, "radius": 0, "level": 2}, // Kalphite Soldier
+  {"id": 957, "x": 3466, "z": 9485, "radius": 5, "level": 2}, // Kalphite Soldier
+  {"id": 955, "x": 3483, "z": 9498, "radius": 12, "level": 2}, // Kalphite Worker
+  {"id": 957, "x": 3470, "z": 9480, "radius": 4, "level": 2}, // Kalphite Soldier
+  {"id": 966, "x": 3481, "z": 9488, "radius": 15, "level": 2}, // Kalphite Larva
+  {"id": 957, "x": 3466, "z": 9488, "radius": 3, "level": 2}, // Kalphite Soldier
+  {"id": 966, "x": 3478, "z": 9513, "radius": 15, "level": 2}, // Kalphite Larva
+  {"id": 957, "x": 3464, "z": 9481, "radius": 0, "level": 2}, // Kalphite Soldier
+  {"id": 955, "x": 3490, "z": 9514, "radius": 7, "level": 2}, // Kalphite Worker
+  {"id": 957, "x": 3478, "z": 9500, "radius": 12, "level": 2}, // Kalphite Soldier
+  {"id": 955, "x": 3476, "z": 9485, "radius": 13, "level": 2}, // Kalphite Worker
+  {"id": 955, "x": 3481, "z": 9515, "radius": 18, "level": 2}, // Kalphite Worker
+  {"id": 966, "x": 3509, "z": 9496, "radius": 7, "level": 2}, // Kalphite Larva
+  {"id": 955, "x": 3508, "z": 9494, "radius": 8, "level": 2}, // Kalphite Worker
+  {"id": 955, "x": 3488, "z": 9513, "radius": 23, "level": 2}, // Kalphite Worker
+  {"id": 957, "x": 3486, "z": 9483, "radius": 9, "level": 2}, // Kalphite Soldier
+  {"id": 955, "x": 3486, "z": 9492, "radius": 10, "level": 2}, // Kalphite Worker
+  {"id": 966, "x": 3469, "z": 9504, "radius": 8}, // Kalphite Larva
+  {"id": 6500, "x": 3475, "z": 9491, "radius": 6}, // Kalphite Queen
+  {"id": 966, "x": 3471, "z": 9498, "radius": 2}, // Kalphite Larva
+  {"id": 966, "x": 3491, "z": 9499, "radius": 1}, // Kalphite Larva
+  {"id": 966, "x": 3493, "z": 9505, "radius": 3}, // Kalphite Larva
+  {"id": 966, "x": 3491, "z": 9498, "radius": 2}, // Kalphite Larva
+  {"id": 962, "x": 3494, "z": 9487, "radius": 1}, // Kalphite Guardian
+  {"id": 966, "x": 3502, "z": 9490, "radius": 4}, // Kalphite Larva
+  {"id": 962, "x": 3493, "z": 9501, "radius": 2}, // Kalphite Guardian
+  {"id": 955, "x": 3474, "z": 9498, "radius":  6}, // Kalphite Worker
+  {"id": 955, "x": 3471, "z": 9493, "radius":  6}, // Kalphite Worker
+  {"id": 955, "x": 3477, "z": 9492, "radius":  6}, // Kalphite Worker
+  {"id": 955, "x": 3482, "z": 9486, "radius":  6}, // Kalphite Worker
+  {"id": 955, "x": 3485, "z": 9492, "radius":  6}, // Kalphite Worker
+  {"id": 955, "x": 3489, "z": 9488, "radius":  6}, // Kalphite Worker
+  {"id": 955, "x": 3491, "z": 9498, "radius":  6}, // Kalphite Worker
+  {"id": 955, "x": 3496, "z": 9495, "radius":  6}, // Kalphite Worker
+  {"id": 955, "x": 3505, "z": 9494, "radius":  6}, // Kalphite Worker
+  {"id": 955, "x": 3497, "z": 9505, "radius":  6}, // Kalphite Worker
+  {"id": 955, "x": 3489, "z": 9511, "radius":  6}, // Kalphite Worker
+  {"id": 955, "x": 3491, "z": 9507, "radius":  6}, // Kalphite Worker
+  {"id": 955, "x": 3481, "z": 9511, "radius":  6}, // Kalphite Worker
+  {"id": 955, "x": 3475, "z": 9505, "radius":  6}, // Kalphite Worker
+  {"id": 955, "x": 3480, "z": 9504, "radius":  6}, // Kalphite Worker
+  {"id": 955, "x": 3486, "z": 9507, "radius":  6}, // Kalphite Worker
+  {"id": 955, "x": 3491, "z": 9494, "radius":  6}, // Kalphite Worker
+  {"id": 955, "x": 3477, "z": 9487, "radius":  6} // Kalphite Worker
+]
