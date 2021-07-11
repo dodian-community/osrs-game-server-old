@@ -38,8 +38,8 @@ public class CommandHandler implements Handler {
         });
     }
 
-    public static void registerCommand(String name, GameCommand comamnd) {
-        commands.put(name, comamnd);
+    public static void registerCommand(String name, GameCommand command) {
+        commands.put(name, command);
     }
 
     public static void triggerCommand(Player player, String command, String[] arguments) {
