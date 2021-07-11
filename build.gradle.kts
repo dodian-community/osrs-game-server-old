@@ -41,6 +41,8 @@ dependencies {
     implementation("io.github.classgraph:classgraph:4.8.102")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
 
+    implementation("redis.clients:jedis:2.9.0")
+
     runtimeOnly("org.xerial:sqlite-jdbc:3.36.0.1")
 
     implementation(fileTree("libs") {

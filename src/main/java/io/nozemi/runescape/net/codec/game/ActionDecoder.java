@@ -4,6 +4,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
+import io.nozemi.runescape.handlers.impl.DataHandler;
 import io.nozemi.runescape.io.RSBuffer;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.net.ServerHandler;
@@ -54,9 +55,11 @@ public class ActionDecoder extends ByteToMessageDecoder implements BeanFactoryAw
 	private BeanFactory beanFactory;
 
 	@Autowired
-	public ActionDecoder(ButtonAction buttonAction) {
+	public ActionDecoder(ButtonAction buttonAction, DataHandler dataHandler) {
 		actionRepository[84] = new WalkMap();
 		actionRepository[97] = new WalkMap();
+
+		actionRepository[44] = new PublicChat(dataHandler);
 
 		actionRepository[62] = new WindowStateChanged();
 		actionRepository[80] = new ChangeDisplayMode();

@@ -61,6 +61,7 @@ public class Player extends Entity {
     private Privilege privilege = Privilege.PLAYER;
     private Looks looks;
     private IronMode ironMode = IronMode.NONE;
+    private GameMode mode = GameMode.CLASSIC;
 
     private Skills skills;
 
@@ -195,6 +196,22 @@ public class Player extends Entity {
     public Player username(String username) {
         this.username = username;
         return this;
+    }
+
+    public IronMode ironMode() {
+        return ironMode;
+    }
+
+    public void ironMode(IronMode mode) {
+        ironMode = mode;
+    }
+
+    public GameMode mode() {
+        return mode;
+    }
+
+    public void mode(GameMode mode) {
+        this.mode = mode;
     }
 
     public ItemContainer equipment() {
@@ -716,5 +733,37 @@ public class Player extends Entity {
         if (send) {
             write(SetRunEnergy.get(re));
         }
+    }
+
+    private int defaultIcon;
+
+    public void defaultIcon(int i) {
+        defaultIcon = i;
+    }
+
+    public int getDefaultIcon() {
+        return defaultIcon;
+    }
+
+    public int calculateBaseIcon() {
+        // If we have a prefixed icon, use that one.
+        if (defaultIcon > 0) {
+            return defaultIcon;
+        }
+
+        //If we are playing Ironman or Ultimate Ironman. Or... Hardcore ]:)
+        if (ironMode == IronMode.REGULAR) {
+            return 3;
+        } else if (ironMode == IronMode.ULTIMATE) {
+            return 4;
+        } else if (ironMode == IronMode.HARDCORE) {
+            return 14;
+        }
+
+        return 0;
+    }
+
+    public void message(String format, Object... params) {
+        write(new AddMessage(params.length > 0 ? String.format(format, params) : format));
     }
 }

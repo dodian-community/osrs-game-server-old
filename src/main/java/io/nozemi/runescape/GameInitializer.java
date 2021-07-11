@@ -24,6 +24,7 @@ import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -55,19 +56,20 @@ public class GameInitializer implements InitializingBean, BeanFactoryAware {
     @Autowired
     public GameInitializer(List<Handler> handlers) {
         prepareHandlers(handlers);
+
+        ConfigHandler configHandler = handler(ConfigHandler.class)
+                .orElseThrow(() -> new RuntimeException("Failed to find ConfigHandler..."));
+
+        config = configHandler.config();
     }
 
     @Override
     public void afterPropertiesSet() throws InterruptedException, IOException {
         System.setProperty("io.netty.buffer.bytebuf.checkAccessible", "false");
 
-        ConfigHandler configHandler = handler(ConfigHandler.class)
-                .orElseThrow(() -> new RuntimeException("Failed to find ConfigHandler..."));
-
         DataHandler dataHandler = handler(DataHandler.class)
                 .orElseThrow(() -> new RuntimeException("Failed to find DataHandler..."));
 
-        config = configHandler.config();
         store = dataHandler.dataStore();
 
         File mapKeysFile = new File(config.getString("server.mapkeys"));
