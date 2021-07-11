@@ -18,10 +18,7 @@ import io.nozemi.runescape.net.message.game.command.*;
 import io.nozemi.runescape.script.Timer;
 import io.nozemi.runescape.script.TimerKey;
 import io.nozemi.runescape.service.login.LoginService;
-import io.nozemi.runescape.util.RunEnergy;
-import io.nozemi.runescape.util.Tuple;
-import io.nozemi.runescape.util.Varbit;
-import io.nozemi.runescape.util.Varp;
+import io.nozemi.runescape.util.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,10 +61,12 @@ public class Player extends Entity {
     private Looks looks;
     private IronMode ironMode = IronMode.NONE;
     private GameMode mode = GameMode.CLASSIC;
+    private double weight;
 
     private Skills skills;
 
     private ItemContainer equipment;
+    private ItemContainer inventory;
 
     /**
      * Location Information
@@ -94,6 +93,7 @@ public class Player extends Entity {
         this.varps = new Varps(this);
         this.world = world;
         this.equipment = new ItemContainer(world, 14, ItemContainer.Type.REGULAR);
+        this.inventory = new ItemContainer(world, 28, ItemContainer.Type.REGULAR);
 
         InetSocketAddress socketAddress;
         InetAddress inetaddress = null;
@@ -416,9 +416,28 @@ public class Player extends Entity {
         }
     }
 
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
     public boolean reqPidMoveReset;
 
     public void postcycle_dirty() {
+        // Does weight need to be recomputed?
+        if (inventory.dirty() || equipment.dirty()) {
+            ItemWeight.calculateWeight(this);
+        }
+
+        // Sync inventory
+        if (inventory.dirty()) {
+            write(new SetItems(93, 149, 0, inventory));
+            inventory.clean();
+        }
+
         // Sync equipment if dirty
         if (equipment.dirty()) {
             write(new SetItems(94, equipment));
@@ -428,6 +447,8 @@ public class Player extends Entity {
             // Also send the stuff required to make the weaponry panel proper
             updateWeaponInterface();
         }
+
+        skills.syncDirty();
     }
 
     @Override
@@ -774,5 +795,9 @@ public class Player extends Entity {
 
     public void message(String format, Object... params) {
         write(new AddMessage(params.length > 0 ? String.format(format, params) : format));
+    }
+
+    public ItemContainer inventory() {
+        return inventory;
     }
 }

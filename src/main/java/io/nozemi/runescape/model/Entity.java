@@ -12,13 +12,10 @@ import io.nozemi.runescape.net.message.game.command.ChangeMapMarker;
 import io.nozemi.runescape.script.TimerKey;
 import io.nozemi.runescape.script.TimerRepository;
 import io.nozemi.runescape.tasksystem.InterruptibleChain;
-import io.nozemi.runescape.tasksystem.MyFunction;
 import io.nozemi.runescape.content.teleports.MyTeleports;
+import io.nozemi.runescape.tasksystem.TaskManager;
 
-import java.util.Arrays;
-import java.util.EnumMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 
 public abstract class Entity {
     protected int index;
@@ -95,9 +92,10 @@ public abstract class Entity {
     public void teleport(Tile tile, MyTeleports teleports) {
         this.stopActions(true);
 
-        InterruptibleChain chain = InterruptibleChain.bound(this);
+        InterruptibleChain chain = InterruptibleChain.bound(this, "PLAYER_TELEPORTING_EFFECTS_CHAIN");
+
         Arrays.stream(teleports.chain()).forEach(effect ->
-                chain.execute(new MyFunction(effect.duration, () -> {
+                chain.then(effect.duration, () -> {
                     if (effect.animation != null) {
                         this.animate(effect.animation);
                     }
@@ -106,16 +104,20 @@ public abstract class Entity {
                         this.graphic(effect.graphics);
                     }
 
-                    if(isPlayer() && effect.sound != null) {
+                    if (isPlayer() && effect.sound != null) {
                         ((Player) this).sound(effect.sound);
                     }
-                })));
+                }));
 
-        chain.then(new MyFunction(() -> {
+        chain.onComplete(() -> {
             this.teleport(tile);
+        }).onCancel(() -> {
             this.graphic(-1);
             this.animate(-1);
-        })).submit();
+            if (isPlayer()) {
+                ((Player) this).sound(-1);
+            }
+        }).submit(TaskManager.playerChains());
     }
 
     public int size() {
@@ -181,7 +183,9 @@ public abstract class Entity {
             pathQueue.clear();
         }
 
-        InterruptibleChain.tasks.remove(((Player) this).username());
+        if (TaskManager.playerChains().containsKey(this.index)) {
+            TaskManager.playerChains().get(this.index).forEach(InterruptibleChain::cancel);
+        }
     }
 
     public void putattrib(AttributeKey key, Object v) {
@@ -438,9 +442,9 @@ public abstract class Entity {
     }
 
     public void animate(int[] values) {
-        if(values.length == 1) {
+        if (values.length == 1) {
             animate(values[0]);
-        } else if(values.length >= 2) {
+        } else if (values.length >= 2) {
             animate(values[1]);
         }
     }
@@ -515,11 +519,11 @@ public abstract class Entity {
     }
 
     public void graphic(int[] values) {
-        if(values.length == 1) {
+        if (values.length == 1) {
             this.graphic(values[0]);
-        } else if(values.length == 2) {
+        } else if (values.length == 2) {
             this.graphic(values[0], values[1], 0);
-        } else if(values.length >= 3) {
+        } else if (values.length >= 3) {
             this.graphic(values[0], values[1], values[2]);
         }
     }

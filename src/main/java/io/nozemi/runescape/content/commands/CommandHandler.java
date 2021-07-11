@@ -38,6 +38,10 @@ public class CommandHandler implements Handler {
         });
     }
 
+    public static void registerCommand(String name, GameCommand comamnd) {
+        commands.put(name, comamnd);
+    }
+
     public static void triggerCommand(Player player, String command, String[] arguments) {
         if(commands.containsKey(command)) {
             commands.get(command).execute(player, arguments);

@@ -2,9 +2,8 @@ package io.nozemi.runescape;
 
 import io.netty.handler.traffic.TrafficCounter;
 import io.nozemi.runescape.model.World;
-import io.nozemi.runescape.tasksystem.InterruptibleChain;
-import io.nozemi.runescape.tasksystem.MyFunction;
 import io.nozemi.runescape.task.*;
+import io.nozemi.runescape.tasksystem.TaskManager;
 import it.unimi.dsi.fastutil.objects.Object2IntArrayMap;
 import it.unimi.dsi.fastutil.objects.Object2LongArrayMap;
 import org.apache.logging.log4j.LogManager;
@@ -105,17 +104,7 @@ public class ServerProcessor extends Thread {
             times.put(t.getClass(), (int) (System.currentTimeMillis() - l));
         }
 
-        InterruptibleChain.tasks.forEach((playerId, tasks) -> {
-            for(int i = tasks.size() - 1; i >= 0; i--) {
-                MyFunction task = tasks.get(i);
-                if (task.delay() > 0 && !task.executed()) {
-                    task.delay(task.delay() - 1);
-                } else {
-                    tasks.remove(task);
-                    task.execute();
-                }
-            }
-        });
+        TaskManager.cyclePlayerChains();
 
         long delay = 600 - (System.currentTimeMillis() - start);
 

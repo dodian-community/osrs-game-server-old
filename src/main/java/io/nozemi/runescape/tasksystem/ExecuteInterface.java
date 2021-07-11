@@ -1,5 +1,5 @@
 package io.nozemi.runescape.tasksystem;
 
-public interface MyFunctionExecute {
+public interface ExecuteInterface {
     void execute();
 }
