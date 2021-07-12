@@ -49,9 +49,9 @@ public class WalkMap implements Action {
 				mode = 0;
 			}
 			if (player.looks().trans() == 3008) {
-				Tile targ = player.walkTo(x, z, PathQueue.StepType.FORCED_WALK);
+				Tile targ = player.walkTo(x, z, PathQueue.StepType.FORCED_WALK, true);
 			} else {
-				Tile targ = player.walkTo(x, z, mode == 1 ? PathQueue.StepType.FORCED_RUN : PathQueue.StepType.REGULAR);
+				Tile targ = player.walkTo(x, z, mode == 1 ? PathQueue.StepType.FORCED_RUN : PathQueue.StepType.REGULAR, true);
 			}
 		}
 	}

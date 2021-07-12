@@ -18,7 +18,7 @@ public class CommandHandler implements Handler {
 
     private final List<GameCommand> gameCommands;
 
-    private static Map<String, GameCommand> commands = new HashMap<>();
+    private static final Map<String, GameCommand> commands = new HashMap<>();
 
     @Autowired
     public CommandHandler(List<GameCommand> gameCommands) {

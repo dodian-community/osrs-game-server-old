@@ -4,7 +4,11 @@ import io.nozemi.runescape.content.ButtonRegisterer;
 import io.nozemi.runescape.handlers.impl.Button;
 import io.nozemi.runescape.handlers.impl.ButtonHandler;
 import io.nozemi.runescape.model.AttributeKey;
+import io.nozemi.runescape.model.Tile;
+import io.nozemi.runescape.model.entity.PathQueue;
 import io.nozemi.runescape.model.entity.Player;
+import io.nozemi.runescape.tasksystem.InterruptibleTask;
+import io.nozemi.runescape.tasksystem.TaskManager;
 import io.nozemi.runescape.util.Varp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
@@ -30,5 +34,17 @@ public class GameFrame extends ButtonRegisterer {
         if ((Double) player.attribOr(AttributeKey.RUN_ENERGY, 0.0) >= 1.0) {
             player.varps().varp(Varp.RUNNING_ENABLED, player.varps().varp(Varp.RUNNING_ENABLED) == 1 ? 0 : 1);
         }
+    }
+
+    public void test(Player player, int option, int item) {
+        Tile destination = new Tile(2606, 3102);
+
+        InterruptibleTask.bound(player).isCancellableByWalking(false).execute(() -> {
+            player.walkTo(destination, PathQueue.StepType.REGULAR, false);
+            player.message("You're currently " + player.tile().distance(destination) + " tiles away!");
+        }).onComplete(() -> player.message("You arrived!"))
+            .onCancel(() -> player.stopActions(true))
+            .completeCondition(() -> player.tile().distance(destination) <= 1)
+            .submit(TaskManager.playerChains());
     }
 }

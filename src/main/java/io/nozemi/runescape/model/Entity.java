@@ -11,6 +11,7 @@ import io.nozemi.runescape.model.map.steroids.Route;
 import io.nozemi.runescape.net.message.game.command.ChangeMapMarker;
 import io.nozemi.runescape.script.TimerKey;
 import io.nozemi.runescape.script.TimerRepository;
+import io.nozemi.runescape.tasksystem.Interruptible;
 import io.nozemi.runescape.tasksystem.InterruptibleChain;
 import io.nozemi.runescape.content.teleports.MyTeleports;
 import io.nozemi.runescape.tasksystem.TaskManager;
@@ -184,7 +185,7 @@ public abstract class Entity {
         }
 
         if (TaskManager.playerChains().containsKey(this.index)) {
-            TaskManager.playerChains().get(this.index).forEach(InterruptibleChain::cancel);
+            TaskManager.playerChains().get(this.index).forEach(Interruptible::cancel);
         }
     }
 
@@ -203,14 +204,21 @@ public abstract class Entity {
     }
 
     public Tile walkTo(Tile tile, PathQueue.StepType mode) {
-        return walkTo(tile.x, tile.z, mode);
+        return walkTo(tile.x, tile.z, mode, true);
+    }
+
+    public Tile walkTo(Tile tile, PathQueue.StepType mode, boolean stopActions) {
+        return walkTo(tile.x, tile.z, mode, stopActions);
     }
 
     public static final boolean steroidsRoute = true;
 
-    public Tile walkTo(int x, int z, PathQueue.StepType mode) {
+    public Tile walkTo(int x, int z, PathQueue.StepType mode, boolean stopActions) {
         pathQueue.clear();
-        stopActions(true);
+
+        if(stopActions) {
+            stopActions(true);
+        }
 
         if (isPlayer()) {
             ((Player) this).write(new ChangeMapMarker(x, z));

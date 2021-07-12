@@ -7,26 +7,18 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
-public class InterruptibleChain {
+public class InterruptibleChain extends Interruptible {
     private static final Logger logger = LogManager.getLogger(InterruptibleChain.class);
 
-    private String name;
-    private Entity entity;
     private List<ChainableEvent> events = new ArrayList<>();
-    private ChainableEvent onCompleted = null;
-    private ChainableEvent onCancelled = null;
-    private boolean completed = false;
-    private boolean cancelled = false;
 
     private InterruptibleChain(Entity entity) {
-        this.entity = entity;
+        super(entity);
     }
 
     private InterruptibleChain(Entity entity, String name) {
-        this.entity = entity;
-        this.name = name;
+        super(entity, name);
     }
 
     public static InterruptibleChain bound(Entity entity) {
@@ -67,41 +59,19 @@ public class InterruptibleChain {
         return this;
     }
 
-    public InterruptibleChain onComplete(ChainableEvent event) {
-        if (onCompleted == null) {
-            this.onCompleted = event;
-        }
-        return this;
-    }
-
+    @Override
     public InterruptibleChain onComplete(ExecuteInterface execute) {
-        onComplete(new ChainableEvent(execute));
+        super.onComplete(execute);
         return this;
     }
 
-    public InterruptibleChain onCancel(ChainableEvent event) {
-        if (onCancelled == null) {
-            this.onCancelled = event;
-        }
-        return this;
-    }
-
+    @Override
     public InterruptibleChain onCancel(ExecuteInterface execute) {
-        onCancel(new ChainableEvent(execute));
+        super.onCancel(execute);
         return this;
     }
 
-    public void submit(Map<Integer, List<InterruptibleChain>> list) {
-        List<InterruptibleChain> chain = new ArrayList<>();
-        if (list.containsKey(entity.index())) {
-            chain = list.get(entity.index());
-        }
-
-        chain.add(this);
-
-        list.put(entity.index(), chain);
-    }
-
+    @Override
     public void cycle() {
         logger.info("Cycling {} tasks for entity {}, in task chain {}...", events.size(), ((Player) entity).username(), this.name);
 
@@ -128,10 +98,7 @@ public class InterruptibleChain {
         }
     }
 
-    public boolean isCompleted() {
-        return this.completed;
-    }
-
+    @Override
     public void cancel() {
         logger.info("Cancelled {} tasks for entity {}, in task chain {}...", events.size(), ((Player) entity).username(), this.name);
         this.events = new ArrayList<>();
