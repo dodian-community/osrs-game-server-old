@@ -1,42 +1,31 @@
 package io.nozemi.runescape.net.codec.game;
 
 import io.netty.buffer.ByteBuf;
-import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
-import io.nozemi.runescape.handlers.impl.DataHandler;
 import io.nozemi.runescape.io.RSBuffer;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.net.ServerHandler;
-import io.nozemi.runescape.net.message.game.Action;
-import io.nozemi.runescape.net.message.game.action.*;
+import io.nozemi.runescape.net.packets.GamePacket;
+import io.nozemi.runescape.net.packets.PacketProvider;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.jetbrains.annotations.NotNull;
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * Created by Bart Pelle on 8/23/2014.
  */
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-public class ActionDecoder extends ByteToMessageDecoder implements BeanFactoryAware {
-	
-	private static final Logger logger = LogManager.getLogger(ActionDecoder.class);
-	
-	@SuppressWarnings("unchecked")
-	private Action[] actionRepository = new Action[256];
+public class ActionDecoder extends ByteToMessageDecoder {
 
 	private Map<Integer, Integer> ignored = new HashMap<>();
 	private int[] actionSizes = new int[] { 9, -1, 3, -1, 7, 2, -1, 0, 9, 8, -1, 8, 7, 4, 8, 4, 7, 0, -1, -2, 8, 3, 8,
@@ -52,48 +41,17 @@ public class ActionDecoder extends ByteToMessageDecoder implements BeanFactoryAw
 	private int opcode;
 	private int size;
 
-	private BeanFactory beanFactory;
+	private final PacketProvider packetProvider;
 
 	@Autowired
-	public ActionDecoder(ButtonAction buttonAction, DataHandler dataHandler) {
-		actionRepository[84] = new WalkMap();
-		actionRepository[97] = new WalkMap();
-
-		actionRepository[44] = new PublicChat(dataHandler);
-
-		actionRepository[62] = new WindowStateChanged();
-		actionRepository[80] = new ChangeDisplayMode();
-
-		actionRepository[92] = new DialogueContinue();
-
-		actionRepository[69] = new CloseMainInterface();
-		actionRepository[15] = new IntegerInput();
-		actionRepository[1] = new StringInput();
-
-		actionRepository[38] = new SetLooks();
-
-		actionRepository[17] = new PingPacket();
-
-		actionRepository[90] = new CommandAction();
-
-		Arrays.stream(ButtonAction.OPCODES).forEach(i -> actionRepository[i] = buttonAction);
-
-
-		/* Fill repo, maybe through xml/json? */
-		//actionRepository[232] = GrandExchangeSearch.class;
-
-		//actionRepository[135] = ClientCrash.class;
-//		actionRepository[123] = UniqueButton1.class;
-//		actionRepository[200] = UniqueButton2.class;
+	public ActionDecoder(PacketProvider packetProvider) {
+		this.packetProvider = packetProvider;
 		
 		// Ignore a few classes
 		ignored.put(93, -1); // Mouse history
 		ignored.put(83, -2); // Key history
 		ignored.put(53, 6); // Mouse click
-		//ignored.put(114, 4); // Camera movement
 		ignored.put(50, 4); // Key
-		//ignored.put(174, 0); // Sent on login
-		//ignored.put(116, 4); //Weird random packet?
 		ignored.put(76, 0); // Ping
 	}
 	
@@ -111,35 +69,29 @@ public class ActionDecoder extends ByteToMessageDecoder implements BeanFactoryAw
 			case OPCODE:
 				if (in.readableBytes() < 1)
 					return;
-				opcode = buffer.readByte() /*- player.inrand().nextInt()*/ & 0xFF;
+				opcode = buffer.readByte() /*- player.inRand().nextInt()*/ & 0xFF;
 				state = State.SIZE;
 				in.markReaderIndex();
 			
 			case SIZE:
-				if (actionRepository[opcode] == null && !ignored.containsKey(opcode)) {
-					logger.warn("Unknown action: {}, probable size: {}.", opcode, buffer.get().readableBytes());
-					
-					size = in.readableBytes();
-				} else {
-					int required = actionSizes[opcode];
-					
-					if (required == -1) {
-						if (in.readableBytes() < 1) {
-							in.resetReaderIndex();
-							return;
-						}
-						
-						size = buffer.readUByte();
-					} else if (required == -2) {
-						if (in.readableBytes() < 2) {
-							in.resetReaderIndex();
-							return;
-						}
-						
-						size = buffer.readUShort();
-					} else {
-						size = required;
+				int required = actionSizes[opcode];
+
+				if (required == -1) {
+					if (in.readableBytes() < 1) {
+						in.resetReaderIndex();
+						return;
 					}
+
+					size = buffer.readUByte();
+				} else if (required == -2) {
+					if (in.readableBytes() < 2) {
+						in.resetReaderIndex();
+						return;
+					}
+
+					size = buffer.readUShort();
+				} else {
+					size = required;
 				}
 				
 				state = State.DATA;
@@ -156,19 +108,18 @@ public class ActionDecoder extends ByteToMessageDecoder implements BeanFactoryAw
 					break;
 				}
 
-				if (!ignored.containsKey(opcode) && actionRepository[opcode] != null) {
+				if(!ignored.containsKey(opcode)) {
 					int bufferStart = buffer.get().readerIndex();
-					Action a = actionRepository[opcode];
+					RSBuffer newBuffer = new RSBuffer(buffer.get().slice(bufferStart, size));
+					Optional<GamePacket> packet = packetProvider.getPacket(newBuffer, opcode, player);
 
-					try {
-						a.decode(new RSBuffer(buffer.get().slice(bufferStart, size)), ctx, opcode, size, player);
-						player.pendingActions().add(a);
-					} catch (Exception e) {
-						logger.error(e);
+					if(packet.isPresent()) {
+						player.pendingPackets().add(packet.get());
+						player.lastPing(System.currentTimeMillis());
+						buffer.get().readerIndex(bufferStart + size);
+					} else {
+						buffer.skip(size);
 					}
-
-					player.lastPing(System.currentTimeMillis());
-					buffer.get().readerIndex(bufferStart + size);
 				} else {
 					buffer.skip(size);
 				}
@@ -177,15 +128,6 @@ public class ActionDecoder extends ByteToMessageDecoder implements BeanFactoryAw
 				in.markReaderIndex();
 				break;
 		}
-	}
-	
-	public Action[] repository() {
-		return actionRepository;
-	}
-
-	@Override
-	public void setBeanFactory(@NotNull BeanFactory beanFactory) throws BeansException {
-		this.beanFactory = beanFactory;
 	}
 
 	enum State {

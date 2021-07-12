@@ -5,6 +5,7 @@ import io.nozemi.runescape.GameInitializer;
 import io.nozemi.runescape.content.mechanics.VarbitAttributes;
 import io.nozemi.runescape.fs.DefinitionRepository;
 import io.nozemi.runescape.fs.MapDefinition;
+import io.nozemi.runescape.handlers.impl.ConfigHandler;
 import io.nozemi.runescape.model.entity.Npc;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.model.entity.npc.NpcCombatInfo;
@@ -66,10 +67,10 @@ public class World {
     private int ticksUntilSystemUpdate = -1;
 
     @Autowired
-    public World(DefinitionRepository definitionRepository) {
+    public World(DefinitionRepository definitionRepository, ConfigHandler configHandler) {
         this.definitionRepository = definitionRepository;
 
-        Config config = GameInitializer.config();
+        Config config = configHandler.config();
         realm(config.getString("server.realm"));
     }
 
@@ -570,5 +571,37 @@ public class World {
                 new File("data/list/bonuses.json"),
                 new File("data/list/weapon_types.txt"),
                 new File("data/list/weapon_speeds.txt"));
+    }
+
+    public List<MapObj> objByTile(int x, int z, int level) {
+        Optional<MapObj> removed = removedObjs.stream().filter(m -> m.tile().equals(x, z, level)).findAny();
+        if (removed.isPresent())
+            return null;
+
+        Optional<MapObj> spawned = spawnedObjs.stream().filter(m -> m.tile().equals(x, z, level)).findAny();
+        if (spawned.isPresent())
+            return Collections.singletonList(spawned.get());
+        MapDefinition mapdef = definitionRepository.get(MapDefinition.class, Tile.coordsToRegion(x, z)); // Can be null, don't want to operate on such.
+        return mapdef == null ? null : mapdef.objs(level, x & 63, z & 63);
+    }
+
+    public List<MapObj> objByTile(Tile tile) {
+        return objByTile(tile.x, tile.z, tile.level);
+    }
+
+    public MapObj objById(int id, int x, int z, int level) {
+        Optional<MapObj> removed = removedObjs.stream().filter(m -> m.id() == id && m.tile().equals(x, z, level)).findAny();
+        if (removed.isPresent())
+            return null;
+
+        Optional<MapObj> spawned = spawnedObjs.stream().filter(m -> m.id() == id && m.tile().equals(x, z, level)).findAny();
+        if (spawned.isPresent())
+            return spawned.get();
+        MapDefinition mapdef = definitionRepository.get(MapDefinition.class, Tile.coordsToRegion(x, z)); // Can be null, don't want to operate on such.
+        return mapdef == null ? null : mapdef.objById(level, x & 63, z & 63, id);
+    }
+
+    public MapObj objById(int id, Tile tile) {
+        return objById(id, tile.x, tile.z, tile.level);
     }
 }

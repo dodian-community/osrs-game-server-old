@@ -22,7 +22,7 @@ public abstract class class186 {
 					if (class48.field432 >= var2) {
 
 						if (class48.field432 <= var2 + 14 && class48.field428 >= 4 && class48.field428 <= 18) {
-							class148.method3195(0, 0, (byte) -75);
+							class148.method3195(0, 0);
 							return;
 						}
 					}
@@ -30,7 +30,7 @@ public abstract class class186 {
 					if (class48.field432 >= var2 + 15 && class48.field432 <= var2 + 80) {
 
 						if (class48.field428 >= 4 && class48.field428 <= 18) {
-							class148.method3195(0, 1, (byte) -11);
+							class148.method3195(0, 1);
 							return;
 						}
 					}
@@ -41,21 +41,21 @@ public abstract class class186 {
 						if (class48.field432 <= var3 + 14) {
 
 							if (class48.field428 >= 4 && class48.field428 <= 18) {
-								class148.method3195(1, 0, (byte) -8);
+								class148.method3195(1, 0);
 								return;
 							}
 						}
 					}
 
 					if (class48.field432 >= var3 + 15 && class48.field432 <= var3 + 80 && class48.field428 >= 4 && class48.field428 <= 18) {
-						class148.method3195(1, 1, (byte) -4);
+						class148.method3195(1, 1);
 					} else {
 						var4 = class78.field1082 + 500;
 						if (class48.field432 >= var4 && class48.field432 <= var4 + 14 && class48.field428 >= 4) {
 
 							if (class48.field428 <= 18) {
 
-								class148.method3195(2, 0, (byte) -54);
+								class148.method3195(2, 0);
 								return;
 							}
 						}
@@ -63,21 +63,21 @@ public abstract class class186 {
 						if (class48.field432 >= var4 + 15 && class48.field432 <= var4 + 80) {
 
 							if (class48.field428 >= 4 && class48.field428 <= 18) {
-								class148.method3195(2, 1, (byte) -124);
+								class148.method3195(2, 1);
 								return;
 							}
 						}
 
 						var15 = class78.field1082 + 610;
 						if (class48.field432 >= var15 && class48.field432 <= var15 + 14 && class48.field428 >= 4 && class48.field428 <= 18) {
-							class148.method3195(3, 0, (byte) -117);
+							class148.method3195(3, 0);
 						} else {
 							if (class48.field432 >= var15 + 15 && class48.field432 <= var15 + 80) {
 
 								if (class48.field428 >= 4) {
 
 									if (class48.field428 <= 18) {
-										class148.method3195(3, 1, (byte) -40);
+										class148.method3195(3, 1);
 										return;
 									}
 								}

@@ -2,12 +2,15 @@ package io.nozemi.runescape;
 
 import io.netty.handler.traffic.TrafficCounter;
 import io.nozemi.runescape.model.World;
+import io.nozemi.runescape.net.packets.PacketProvider;
 import io.nozemi.runescape.task.*;
 import io.nozemi.runescape.tasksystem.TaskManager;
 import it.unimi.dsi.fastutil.objects.Object2IntArrayMap;
 import it.unimi.dsi.fastutil.objects.Object2LongArrayMap;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 import java.util.LinkedList;
@@ -17,6 +20,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+@Component
 public class ServerProcessor extends Thread {
 
     private static final Logger logger = LogManager.getLogger(ServerProcessor.class);
@@ -38,14 +42,23 @@ public class ServerProcessor extends Thread {
     public static Object2IntArrayMap<Class> times = new Object2IntArrayMap<>();
     public static Object2LongArrayMap<String> computeTimes = new Object2LongArrayMap<>();
 
-    public ServerProcessor() {
+    private final PacketProcessingTask packetProcessingTask;
+
+    @Autowired
+    public ServerProcessor(PacketProcessingTask packetProcessingTask, World world) {
         super("ServerProcessor");
 
-        this.world = GameInitializer.world();
-        taskExecutor = Executors.newWorkStealingPool();
-        logicJobs = new ConcurrentLinkedQueue<>();
+        this.logicJobs = new ConcurrentLinkedQueue<>();
 
-        tasks.add(new PacketProcessingTask());
+        this.world = world;
+        this.taskExecutor = Executors.newWorkStealingPool();
+
+        this.packetProcessingTask = packetProcessingTask;
+    }
+
+    public void initialize() {
+
+        tasks.add(packetProcessingTask);
         tasks.add(new ScriptProcessingTask());
         tasks.add(new PlayerProcessingTask());
         tasks.add(new NpcProcessingTask());

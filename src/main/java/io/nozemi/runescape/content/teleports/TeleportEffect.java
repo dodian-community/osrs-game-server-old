@@ -1,13 +1,13 @@
 package io.nozemi.runescape.content.teleports;
 
 public class TeleportEffect {
-    public int duration;
+    public int delay;
     public int[] animation;
     public int[] graphics;
     public int[] sound;
 
     public TeleportEffect() {
-        this.duration = 0;
+        this.delay = 0;
         this.animation = new int[]{};
         this.graphics = new int[]{};
         this.sound = new int[]{};
@@ -16,7 +16,7 @@ public class TeleportEffect {
     public TeleportEffect(int duration, int[] animation, int[] graphic, int[] sound) {
         this.animation = animation;
         this.graphics = graphic;
-        this.duration = duration;
+        this.delay = duration;
         this.sound = sound;
     }
 
@@ -24,8 +24,8 @@ public class TeleportEffect {
         this.animation = animation;
     }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
+    public void setDelay(int delay) {
+        this.delay = delay;
     }
 
     public void setGraphics(int[] graphic) {

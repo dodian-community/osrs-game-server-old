@@ -15,6 +15,7 @@ import io.nozemi.runescape.model.map.steroids.RouteFinder;
 import io.nozemi.runescape.net.future.ClosingChannelFuture;
 import io.nozemi.runescape.net.message.game.Action;
 import io.nozemi.runescape.net.message.game.command.*;
+import io.nozemi.runescape.net.packets.GamePacket;
 import io.nozemi.runescape.script.Timer;
 import io.nozemi.runescape.script.TimerKey;
 import io.nozemi.runescape.service.login.LoginService;
@@ -488,6 +489,12 @@ public class Player extends Entity {
 
     public ConcurrentLinkedQueue<Action> pendingActions() {
         return pendingActions;
+    }
+
+    private final ConcurrentLinkedQueue<GamePacket> pendingPackets = new ConcurrentLinkedQueue<>();
+
+    public ConcurrentLinkedQueue<GamePacket> pendingPackets() {
+        return pendingPackets;
     }
 
     public long lastPing() {

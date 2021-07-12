@@ -23,7 +23,6 @@ public class TaskManager {
                 event.get(i).cycle();
 
                 if(event.get(i).isCompleted()) {
-                    logger.info("Removing task...");
                     event.remove(event.get(i));
                 }
             }

@@ -14,7 +14,7 @@ public class class98 {
       this.field1331 = var2;
    }
 
-   class93 method2218(int var1, int var2, int[] var3, int var4) {
+   class93 method2218(int var1, int var2, int[] var3) {
       int var5 = var2 ^ (var1 << 4 & 65535 | var1 >>> 12);
       var5 |= var1 << 16;
       long var6 = (long)var5 ^ 4294967296L;
@@ -82,9 +82,9 @@ public class class98 {
 
    public class93 method2220(int var1, int[] var2, int var3) {
       if(this.field1331.method4637(1456423423) == 1) {
-         return this.method2218(0, var1, var2, 70852076);
+         return this.method2218(0, var1, var2);
       } else if(this.field1331.getFileCount(var1) == 1) {
-         return this.method2218(var1, 0, var2, 1480108114);
+         return this.method2218(var1, 0, var2);
       } else {
          throw new RuntimeException();
       }

@@ -8,7 +8,7 @@ public class class148 implements class147 {
    static final int field1916 = 5;
    static final int field1917 = 6;
 
-   public static boolean method3196(int var0) {
+   public static boolean method3196() {
       try {
          if(class217.field2460 == 2) {
             if(class177.field2285 == null) {
@@ -45,14 +45,14 @@ public class class148 implements class147 {
       return false;
    }
 
-   static void method3198(byte var0) {
+   static void method3198() {
       if(class138.field1876.field931 >> 7 == GameClient.field808 && class138.field1876.field881 >> 7 == GameClient.field809) {
          GameClient.field808 = 0;
       }
 
    }
 
-   static void method3195(int var0, int var1, byte var2) {
+   static void method3195(int var0, int var1) {
       int[] var3 = new int[4];
       int[] var4 = new int[4];
       var3[0] = var0;

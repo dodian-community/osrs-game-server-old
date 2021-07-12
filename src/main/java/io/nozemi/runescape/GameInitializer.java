@@ -54,7 +54,9 @@ public class GameInitializer implements InitializingBean, BeanFactoryAware {
     private static boolean devServer = true;
 
     @Autowired
-    public GameInitializer(List<Handler> handlers) {
+    public GameInitializer(List<Handler> handlers, ServerProcessor serverProcessor) {
+        GameInitializer.serverProcessor = serverProcessor;
+
         prepareHandlers(handlers);
 
         ConfigHandler configHandler = handler(ConfigHandler.class)
@@ -92,7 +94,7 @@ public class GameInitializer implements InitializingBean, BeanFactoryAware {
 
         clientInitializer = beanFactory.getBean(ClientInitializer.class);
 
-        serverProcessor = new ServerProcessor();
+        serverProcessor.initialize();
 
         bootstrap = new ServerBootstrap();
         bootstrap.group(acceptGroup, ioGroup);

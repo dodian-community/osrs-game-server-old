@@ -8,7 +8,7 @@ buildscript {
 plugins {
     java
     application
-    id("com.github.johnrengelman.shadow") version "2.0.0"
+    //id("com.github.johnrengelman.shadow") version "2.0.0"
 }
 
 group = "io.nozemi"
@@ -50,11 +50,11 @@ tasks {
         options.encoding = "UTF_8"
     }
 
-    shadowJar {
+    /*shadowJar {
         archiveBaseName.set("gameclient")
         archiveClassifier.set("")
         archiveVersion.set("")
-    }
+    }*/
 
     register("generatemd5") {
 
@@ -64,7 +64,7 @@ tasks {
     }
 
     register("obfuscator") {
-        dependsOn("shadowJar")
+        //dependsOn("shadowJar")
 
         /*println(tasks.shadowJar.outputs.files.asPath)
         doLast {

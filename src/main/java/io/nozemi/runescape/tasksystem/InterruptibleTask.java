@@ -8,7 +8,8 @@ public class InterruptibleTask extends Interruptible {
     private static final Logger logger = LogManager.getLogger(InterruptibleTask.class);
 
     private ExecuteInterface event = null;
-    private ConditionInterface condition = null;
+    private ConditionInterface completeCondition = null;
+    private ConditionInterface failCondition = null;
 
     protected InterruptibleTask(Entity entity) {
         super(entity);
@@ -27,7 +28,12 @@ public class InterruptibleTask extends Interruptible {
     }
 
     public InterruptibleTask completeCondition(ConditionInterface condition) {
-        this.condition = condition;
+        this.completeCondition = condition;
+        return this;
+    }
+
+    public InterruptibleTask failCondition(ConditionInterface condition) {
+        this.failCondition = condition;
         return this;
     }
 
@@ -57,21 +63,18 @@ public class InterruptibleTask extends Interruptible {
     @Override
     void cycle() {
         if(cancelled) {
-            logger.info("Cancelled task...");
             this.onCancelled.execute();
             return;
         }
 
-        if(condition != null && condition.check()) {
-            logger.info("Task was completed...");
+        if(event != null) {
+            event.execute();
+        }
+
+        if(completeCondition != null && completeCondition.check()) {
             this.completed = true;
             this.onCompleted.execute();
             return;
-        }
-
-        if(event != null) {
-            logger.info("Task is executing...");
-            event.execute();
         }
     }
 }

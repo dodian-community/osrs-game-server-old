@@ -11,6 +11,7 @@ import io.nozemi.runescape.net.message.LoginRequestMessage;
 import io.nozemi.runescape.net.message.game.Action;
 import io.nozemi.runescape.net.message.game.command.DisplayMap;
 import io.nozemi.runescape.net.message.game.command.SetRealm;
+import io.nozemi.runescape.net.packets.GamePacket;
 import io.nozemi.runescape.service.Service;
 import io.nozemi.runescape.service.serializers.JSONFileSerializer;
 import io.nozemi.runescape.service.serializers.PlayerSerializer;

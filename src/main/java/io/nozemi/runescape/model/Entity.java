@@ -1,9 +1,12 @@
 package io.nozemi.runescape.model;
 
+import io.nozemi.runescape.fs.NpcDefinition;
+import io.nozemi.runescape.fs.ObjectDefinition;
 import io.nozemi.runescape.model.entity.*;
 import io.nozemi.runescape.model.entity.player.Varps;
 import io.nozemi.runescape.model.item.ItemContainer;
 import io.nozemi.runescape.model.map.FixedTileStrategy;
+import io.nozemi.runescape.model.map.MapObj;
 import io.nozemi.runescape.model.map.WalkRouteFinder;
 import io.nozemi.runescape.model.map.steroids.Direction;
 import io.nozemi.runescape.model.map.steroids.PathRouteFinder;
@@ -11,10 +14,8 @@ import io.nozemi.runescape.model.map.steroids.Route;
 import io.nozemi.runescape.net.message.game.command.ChangeMapMarker;
 import io.nozemi.runescape.script.TimerKey;
 import io.nozemi.runescape.script.TimerRepository;
-import io.nozemi.runescape.tasksystem.Interruptible;
-import io.nozemi.runescape.tasksystem.InterruptibleChain;
+import io.nozemi.runescape.tasksystem.*;
 import io.nozemi.runescape.content.teleports.MyTeleports;
-import io.nozemi.runescape.tasksystem.TaskManager;
 
 import java.util.*;
 
@@ -96,7 +97,7 @@ public abstract class Entity {
         InterruptibleChain chain = InterruptibleChain.bound(this, "PLAYER_TELEPORTING_EFFECTS_CHAIN");
 
         Arrays.stream(teleports.chain()).forEach(effect ->
-                chain.then(effect.duration, () -> {
+                chain.then(effect.delay, () -> {
                     if (effect.animation != null) {
                         this.animate(effect.animation);
                     }
@@ -203,6 +204,33 @@ public abstract class Entity {
         sync.facetile(new Tile((int) x, (int) z));
     }
 
+    /**
+     * Face coordinates, but take into consideration the center of a large than 1x1 object
+     */
+    public void faceObj(MapObj obj) {
+        int x = obj.tile().x;
+        int z = obj.tile().z;
+
+        // Do some trickery to face properly
+        if (tile.x == x && tile.z == z && (obj.type() == 0 || obj.type() == 5)) {
+            if (obj.rot() == 0) {
+                x--;
+            } else if (obj.rot() == 1) {
+                z++;
+            } else if (obj.rot() == 2) {
+                x++;
+            } else if (obj.rot() == 3) {
+                z--;
+            }
+        }
+
+        int sx = obj.definition(world).sizeX;
+        int sz = obj.definition(world).sizeY;
+
+        //sync.facetile(new Tile((int) (x * 2) + sx, (int) (z * 2) + sz));
+        sync.facetile(new Tile(x + (sx / 2), z + (sz / 2)));
+    }
+
     public Tile walkTo(Tile tile, PathQueue.StepType mode) {
         return walkTo(tile.x, tile.z, mode, true);
     }
@@ -291,6 +319,44 @@ public abstract class Entity {
 
             return new Tile(bufferX[0], bufferZ[0], tile.level);
         }
+    }
+
+    public void walkToThen(Tile destination, ExecuteInterface then) {
+        walkToThen(null, destination, then);
+    }
+
+    public void walkToThen(Object object, Tile destination, ExecuteInterface then) {
+        World world = this.world();
+
+        final int sizeX;
+        final int sizeY;
+
+        if(object instanceof MapObj) {
+            ObjectDefinition definition = ((MapObj) object).definition(world);
+            sizeX = definition.sizeX;
+            sizeY = definition.sizeY;
+        } else if(object instanceof Npc) {
+            NpcDefinition definition = ((Npc) object).def();
+            sizeX = definition.size;
+            sizeY = definition.size;
+        } else {
+            sizeX = 0;
+            sizeY = 0;
+        }
+
+        InterruptibleTask.bound(this).isCancellableByWalking(false).execute(() ->
+                this.walkTo(destination, PathQueue.StepType.REGULAR, false)
+        ).onComplete(then).onCancel(() -> this.stopActions(true))
+                .completeCondition(() -> {
+                    int distance = 0;
+
+                    if(sizeX > 1 || sizeY > 1) {
+                        distance = 1;
+                    }
+
+                    return this.tile().distance(destination) <= distance;
+                })
+                .submit(TaskManager.playerChains());
     }
 
     public boolean locked() {

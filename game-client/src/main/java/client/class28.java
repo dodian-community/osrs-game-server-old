@@ -353,7 +353,7 @@ public class class28 {
 							var22 = var11.int472;
 							var23 = var11.int466;
 							++GameClient.field687;
-							class148.method3198((byte) 1);
+							class148.method3198();
 							class162.method3380((byte) 2);
 							class54.method1019((byte) -93);
 							class24.method424(true, -1818336157);

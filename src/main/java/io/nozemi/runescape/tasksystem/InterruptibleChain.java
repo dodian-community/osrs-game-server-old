@@ -1,7 +1,6 @@
 package io.nozemi.runescape.tasksystem;
 
 import io.nozemi.runescape.model.Entity;
-import io.nozemi.runescape.model.entity.Player;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -73,10 +72,7 @@ public class InterruptibleChain extends Interruptible {
 
     @Override
     public void cycle() {
-        logger.info("Cycling {} tasks for entity {}, in task chain {}...", events.size(), ((Player) entity).username(), this.name);
-
         if (cancelled) {
-            logger.info("Executing onCancelled for entity {}, in task chain {}...", ((Player) entity).username(), this.name);
             this.onCancelled.execute();
             return;
         }
@@ -92,7 +88,6 @@ public class InterruptibleChain extends Interruptible {
         }
 
         if (events.size() <= 0) {
-            logger.info("Completing task chain {} for entity {}...", this.name, ((Player) entity).username());
             this.onCompleted.execute();
             this.completed = true;
         }
@@ -100,7 +95,6 @@ public class InterruptibleChain extends Interruptible {
 
     @Override
     public void cancel() {
-        logger.info("Cancelled {} tasks for entity {}, in task chain {}...", events.size(), ((Player) entity).username(), this.name);
         this.events = new ArrayList<>();
         this.completed = true;
         this.cancelled = true;

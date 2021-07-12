@@ -16,7 +16,7 @@ import java.util.*;
 public class Loader implements AppletStub {
 
 	public static boolean local = true;
-	public static String host = local ? "localhost" : "oldschool5.runescape.com";
+	public static String host = local ? "localhost" : "localhost";
 	public static final String WORLDLIST = "http://world2b.os-scape.com:8181/worldlist.ws";
 	private static String params;
 	public static final int REVISION = 149;
@@ -49,11 +49,6 @@ public class Loader implements AppletStub {
 		frame.setSize(781, 541);
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
-		try {
-			frame.setIconImages(Arrays.asList(ImageIO.read(Loader.class.getResourceAsStream("/icon-48.png")), ImageIO.read(Loader.class.getResourceAsStream("/icon-16.png"))));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 		instance.setStub(applet);
 		instance.init();
 		instance.start();
@@ -91,7 +86,7 @@ public class Loader implements AppletStub {
 			e.printStackTrace();
 		}
 
-		port = local ? (host.contains("ngrok") ? 21539 : 43594) : 43594;
+		port = 43594;
 	}
 
 	@Override

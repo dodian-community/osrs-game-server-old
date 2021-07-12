@@ -1,6 +1,7 @@
 package io.nozemi.runescape.task;
 
 import io.nozemi.runescape.model.EntityList;
+import io.nozemi.runescape.net.packets.PacketProvider;
 import kotlin.ranges.IntRange;
 import io.nozemi.runescape.ServerProcessor;
 import io.nozemi.runescape.model.Entity;
@@ -8,6 +9,10 @@ import io.nozemi.runescape.model.World;
 import io.nozemi.runescape.model.entity.Player;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -19,9 +24,18 @@ import java.util.List;
  * <p>
  * Processes the scheduled actions for the players.
  */
+@Component
+@Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class PacketProcessingTask implements Task {
 	
 	private static final Logger logger = LogManager.getLogger(PacketProcessingTask.class);
+
+	private final PacketProvider packetProvider;
+
+	@Autowired
+	public PacketProcessingTask(PacketProvider packetProvider) {
+		this.packetProvider = packetProvider;
+	}
 	
 	@Override
 	public void execute(World world) {
@@ -37,6 +51,11 @@ public class PacketProcessingTask implements Task {
 				logger.warn("Flooding? Size {} queue from {} at ip {}.", player.pendingActions().size(), player.username(), player.ip());
 				player.pendingActions().clear(); // FUck you cya
 			}
+
+			if(player.pendingPackets().size() > 20) {
+				logger.warn("Flooding? Size {} queue from {} at ip {}.", player.pendingActions().size(), player.username(), player.ip());
+				player.pendingPackets().clear(); // FUck you cya
+			}
 			
 			player.pendingActions().forEach(packet -> {
 				try {
@@ -49,9 +68,17 @@ public class PacketProcessingTask implements Task {
 					logger.error("Caused by: ", e);
 				}
 			});
+
+			player.pendingPackets().forEach(packet -> {
+				long start = System.currentTimeMillis();
+				packetProvider.handlePacket(packet, player);
+				long taken = System.currentTimeMillis() - start;
+				ServerProcessor.computeTimes.compute(player.username(), (s, integer) -> integer == null ? taken : (taken + integer));
+			});
 			
 			// Remove actions
 			player.pendingActions().clear();
+			player.pendingPackets().clear();
 			
 			// Sync containers, if dirty. Why here? Because... Fake lag fix. Just don't question me :-)
 			player.postcycle_dirty();

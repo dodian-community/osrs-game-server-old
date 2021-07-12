@@ -11,9 +11,9 @@ import io.nozemi.runescape.model.entity.Player;
  */
 public interface Action {
 	
-	public void decode(RSBuffer buf, ChannelHandlerContext ctx, int opcode, int size, Player player);
-	
-	public void process(Player player);
+	void decode(RSBuffer buf, ChannelHandlerContext ctx, int opcode, int size, Player player);
+
+	void process(Player player);
 	
 	default void log(Player player, int id, int size, String format, Object... params) {
 		if (player != null && player.logged()) {

@@ -3309,7 +3309,7 @@ public final class GameClient extends GameShell implements class288 {
 	}
 
 	protected final void vmethod1137(boolean var1, byte var2) {
-		boolean var3 = class148.method3196(-557133146);
+		boolean var3 = class148.method3196();
 		if (var3 && field813 && class28.field244 != null) {
 			class28.field244.method2146(-58675993);
 		}

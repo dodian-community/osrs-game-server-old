@@ -3,6 +3,8 @@ package io.nozemi.runescape.content.commands.impl;
 import io.nozemi.runescape.content.commands.GameCommand;
 import io.nozemi.runescape.content.commands.GameCommandsWrapper;
 import io.nozemi.runescape.content.teleports.TeleportEffectChainHandler;
+import io.nozemi.runescape.model.AttributeKey;
+import io.nozemi.runescape.model.Tile;
 import io.nozemi.runescape.model.entity.player.Privilege;
 import io.nozemi.runescape.model.item.Item;
 import org.apache.logging.log4j.LogManager;
@@ -39,7 +41,7 @@ public class SimpleAdminCommands extends GameCommandsWrapper {
         }, "Reload teleport effects chain.");
 
         put("item", (player, args) -> {
-            if(args.length < 1) {
+            if (args.length < 1) {
                 player.message("<col=b55907>You need to provide an item id for the desired item.");
                 player.message("<col=b55907>::item [item_id] [(amount)]");
                 return;
@@ -49,6 +51,39 @@ public class SimpleAdminCommands extends GameCommandsWrapper {
             player.inventory().add(item, true);
             player.message("<col=28b507>Spawned the item successfully!");
         }, "Spawn an item of desired amount (default 1)");
+
+        put("debug", (player, args) -> {
+            boolean debug = player.attribOr(AttributeKey.DEBUG, false);
+            player.putattrib(AttributeKey.DEBUG, !debug);
+            player.message("Debug is now " + (!debug ? "<col=28b507>enabled" : "<col=b55907>disabled"));
+        });
+
+        put("movex", (player, args) -> {
+            int tiles = 1;
+            if (args.length >= 1) {
+                tiles = Integer.parseInt(args[0]);
+            }
+
+            player.teleport(new Tile(player.tile().x + tiles, player.tile().z, player.tile().level));
+        });
+
+        put("movey", (player, args) -> {
+            int tiles = 1;
+            if (args.length >= 1) {
+                tiles = Integer.parseInt(args[0]);
+            }
+
+            player.teleport(new Tile(player.tile().x, player.tile().z + tiles, player.tile().level));
+        });
+
+        put("movez", (player, args) -> {
+            int tiles = 1;
+            if (args.length >= 1) {
+                tiles = Integer.parseInt(args[0]);
+            }
+
+            player.teleport(new Tile(player.tile().x, player.tile().z, player.tile().level + tiles));
+        });
     }
 
     public void put(String name, GameCommand command, String description) {
