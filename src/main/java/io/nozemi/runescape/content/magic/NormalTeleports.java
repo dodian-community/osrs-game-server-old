@@ -33,4 +33,94 @@ public class NormalTeleports extends ButtonRegisterer {
             player.teleport(new Tile(2606, 3102));
         }
     }
+    @Button(parentId = 218, childId = 16)
+    public void varrockTeleport(Player player, int option, int item) {
+        Optional<MyTeleports> teleport = TeleportEffectChainHandler.getTeleport("VARROCK");
+
+        if(teleport.isPresent()) {
+            player.teleport(new Tile(2722, 3484), teleport.get()); //Yanille
+        } else {
+            player.teleport(new Tile(2722, 3484));
+        }
+    }
+    @Button(parentId = 218, childId = 19)
+    public void LumbridgeTeleport(Player player, int option, int item) {
+        Optional<MyTeleports> teleport = TeleportEffectChainHandler.getTeleport("LUMBRIDGE");
+
+        if(teleport.isPresent()) {
+            player.teleport(new Tile(2803, 3434), teleport.get()); //Catherby
+        } else {
+            player.teleport(new Tile(2803, 3434));
+        }
+    }
+    @Button(parentId = 218, childId = 22)
+    public void FaladorTeleport(Player player, int option, int item) {
+        Optional<MyTeleports> teleport = TeleportEffectChainHandler.getTeleport("FALADOR");
+
+        if(teleport.isPresent()) {
+            player.teleport(new Tile(2892, 3455), teleport.get()); //Taverley
+        } else {
+            player.teleport(new Tile(2892, 3455));
+        }
+    }
+    @Button(parentId = 218, childId = 27)
+    public void CamelotTeleport(Player player, int option, int item) {
+        Optional<MyTeleports> teleport = TeleportEffectChainHandler.getTeleport("CAMELOT");
+
+        if(teleport.isPresent()) {
+            player.teleport(new Tile(2465, 3434), teleport.get()); //Gnome Course
+        } else {
+            player.teleport(new Tile(2465, 3434));
+        }
+    }
+    @Button(parentId = 218, childId = 33)
+    public void ArdougneTeleport(Player player, int option, int item) {
+        Optional<MyTeleports> teleport = TeleportEffectChainHandler.getTeleport("ARDOUGNE");
+
+        if(teleport.isPresent()) {
+            player.teleport(new Tile(2662, 3306), teleport.get()); //East Ardougne
+        } else {
+            player.teleport(new Tile(2662, 3306));
+        }
+    }
+    @Button(parentId = 218, childId = 38)
+    public void WatchtowerTeleport(Player player, int option, int item) {
+        Optional<MyTeleports> teleport = TeleportEffectChainHandler.getTeleport("WATCHTOWER");
+
+        if(teleport.isPresent()) {
+            player.teleport(new Tile(2553, 3114), teleport.get()); //Watchtower
+        } else {
+            player.teleport(new Tile(2553, 3114));
+        }
+    }
+    @Button(parentId = 218, childId = 45)
+    public void TrollheimTeleport(Player player, int option, int item) {
+        Optional<MyTeleports> teleport = TeleportEffectChainHandler.getTeleport("TROLLHEIM");
+
+        if(teleport.isPresent()) {
+            player.teleport(new Tile(2890, 3677), teleport.get()); //Trollheim
+        } else {
+            player.teleport(new Tile(2890, 3677));
+        }
+    }
+    @Button(parentId = 218, childId = 48)
+    public void ApetollTeleport(Player player, int option, int item) {
+        Optional<MyTeleports> teleport = TeleportEffectChainHandler.getTeleport("APETOLL");
+
+        if(teleport.isPresent()) {
+            player.teleport(new Tile(2737, 2785), teleport.get()); //Apetoll Marim
+        } else {
+            player.teleport(new Tile(2737, 2785));
+        }
+    }
+    @Button(parentId = 218, childId = 53)
+    public void KourendTeleport(Player player, int option, int item) {
+        Optional<MyTeleports> teleport = TeleportEffectChainHandler.getTeleport("KOUREND");
+
+        if(teleport.isPresent()) {
+            player.teleport(new Tile(1644, 3673), teleport.get()); //Kourend Castle
+        } else {
+            player.teleport(new Tile(1644, 3673));
+        }
+    }
 }
