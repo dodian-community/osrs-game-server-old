@@ -3,30 +3,30 @@
     "name": "LUMBRIDGE_HOME",
     "chain":
         [{
-          "duration": 0,
+          "delay": 0,
           "animation": [4847],
           "graphics": [800],
           "sound": [193]
         },
         {
-          "duration": 5,
+          "delay": 5,
           "animation": [4850],
           "sound": [196]
         },
         {
-          "duration": 5,
+          "delay": 5,
           "animation": [4853],
           "graphics": [802],
           "sound": [194]
         },
         {
-          "duration": 5,
+          "delay": 5,
           "animation": [4855],
           "graphics": [803, -1, 0],
           "sound": [195]
         },
         {
-          "duration": 5,
+          "delay": 5,
           "graphics": [804]
         }]
   }

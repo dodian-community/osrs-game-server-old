@@ -1,12 +1,14 @@
 package io.nozemi.runescape.model.entity;
 
 import io.nozemi.runescape.fs.NpcDefinition;
+import io.nozemi.runescape.handlers.impl.NpcSpawnsHandler;
 import io.nozemi.runescape.model.*;
 import io.nozemi.runescape.model.entity.npc.NpcCombatInfo;
 import io.nozemi.runescape.model.entity.npc.NpcMovementSync;
 import io.nozemi.runescape.model.entity.player.NpcSyncInfo;
 import io.nozemi.runescape.model.map.steroids.RangeStepSupplier;
 import io.nozemi.runescape.script.TimerKey;
+import io.nozemi.runescape.util.SpawnDirection;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -50,7 +52,7 @@ public class Npc extends Entity {
 		sync = new NpcSyncInfo(this);
 		spawnTile = tile;
 		def = world.definitions().get(NpcDefinition.class, id);
-		combatInfo = world.combatInfo(id);
+		//combatInfo = world.combatInfo(id);
 		hp = combatInfo == null ? 50 : combatInfo.stats.hitpoints;
 		spawnArea = new Area(spawnTile, walkRadius);
 		putattrib(AttributeKey.MAX_DISTANCE_FROM_SPAWN, 12);
@@ -88,6 +90,11 @@ public class Npc extends Entity {
 	
 	public Npc spawnDirection(int d) {
 		spawnDirection = d;
+		return this;
+	}
+
+	public Npc spawnDirection(SpawnDirection direction) {
+		spawnDirection(direction.getId());
 		return this;
 	}
 	

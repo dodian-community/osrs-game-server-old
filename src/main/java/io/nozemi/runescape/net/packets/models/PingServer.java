@@ -11,7 +11,7 @@ public class PingServer extends GamePacket {
     }
 
     @Override
-    public GamePacket clone() {
+    public GamePacket newInstance() {
         return new PingServer();
     }
 }

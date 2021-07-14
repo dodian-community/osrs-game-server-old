@@ -3,11 +3,16 @@ package io.nozemi.runescape.net.packets.impl;
 import com.typesafe.config.Config;
 import io.nozemi.runescape.content.commands.CommandHandler;
 import io.nozemi.runescape.content.mechanics.Censor;
+import io.nozemi.runescape.content.tools.editmode.EditModeHandler;
+import io.nozemi.runescape.content.tools.editmode.modes.NpcSpawningMode;
+import io.nozemi.runescape.fs.NpcDefinition;
 import io.nozemi.runescape.handlers.impl.ButtonHandler;
 import io.nozemi.runescape.handlers.impl.ConfigHandler;
 import io.nozemi.runescape.handlers.impl.DataHandler;
 import io.nozemi.runescape.model.AttributeKey;
 import io.nozemi.runescape.model.ChatMessage;
+import io.nozemi.runescape.model.Tile;
+import io.nozemi.runescape.model.entity.Npc;
 import io.nozemi.runescape.model.entity.PathQueue;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.model.entity.player.Privilege;
@@ -16,11 +21,10 @@ import io.nozemi.runescape.net.packets.annotations.MessageListener;
 import io.nozemi.runescape.net.packets.filters.AdvertisingFilter;
 import io.nozemi.runescape.net.packets.filters.PlayerIsAliveFilter;
 import io.nozemi.runescape.net.packets.filters.SwearingFilter;
-import io.nozemi.runescape.net.packets.models.ButtonAction;
-import io.nozemi.runescape.net.packets.models.ConsoleAction;
-import io.nozemi.runescape.net.packets.models.PublicChat;
-import io.nozemi.runescape.net.packets.models.WalkMap;
+import io.nozemi.runescape.net.packets.models.*;
 import io.nozemi.runescape.util.HuffmanCodec;
+import io.nozemi.runescape.util.SpawnDirection;
+import io.nozemi.runescape.util.Varbit;
 import nl.bartpelle.dawnguard.DataStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -28,7 +32,7 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 
 @Component
-public class PacketHandler {
+public class PacketMessageHandler {
 
     private static final int TYPE_NORMAL = 0;
     private static final int TYPE_AUTO_CHAT = 1;
@@ -39,7 +43,7 @@ public class PacketHandler {
     private final CommandHandler commandHandler;
 
     @Autowired
-    public PacketHandler(DataHandler dataHandler, ButtonHandler buttonHandler, ConfigHandler configHandler, CommandHandler commandHandler) {
+    public PacketMessageHandler(DataHandler dataHandler, ButtonHandler buttonHandler, ConfigHandler configHandler, CommandHandler commandHandler) {
         this.buttonHandler = buttonHandler;
         this.commandHandler = commandHandler;
 
@@ -103,10 +107,27 @@ public class PacketHandler {
     public void onWalk(WalkMap walk) {
         Player player = walk.getPlayer();
 
-        if (walk.getMode() == 2 && player.privilege().eligibleTo(Privilege.ADMIN)) {
-            player.teleport(walk.getZ(), walk.getZ(), player.tile().level);
+        // Mode 2 is ctrl-shift clicking, teleporting to the tile.
+        if (walk.getMode() == 2) {
+            player.teleport(walk.getX(), walk.getZ(), player.tile().level);
             player.interfaces().closeMain();
             player.stopActions(true);
+            return;
+        }
+
+        if(player.attribOr(AttributeKey.EDIT_MODE, false)) {
+            if(player.getEditModeHandler() != null && player.getEditModeHandler().getMode().equals(EditModeHandler.Mode.SPAWNING_NPC)) {
+                NpcSpawningMode npcSpawningMode = (NpcSpawningMode) player.getEditModeHandler().getEditorModeInstance();
+
+                Npc npc = new Npc(npcSpawningMode.getNpcId(), player.world(), new Tile(walk.getX(), walk.getZ(), player.tile().level));
+                npc.walkRadius(npcSpawningMode.getWalkRadius());
+                npc.spawnDirection(npcSpawningMode.getSpawnDirection());
+
+                player.world().registerNpc(npc);
+
+                player.message("Spawned NPC successfully at, %s, %s.", walk.getX(), walk.getZ());
+            }
+
             return;
         }
 
@@ -130,5 +151,35 @@ public class PacketHandler {
         String[] arguments = Arrays.copyOfRange(parts, 1, parts.length);
 
         commandHandler.triggerCommand(action.getPlayer(), commandName, arguments);
+    }
+
+    @MessageListener
+    public void onWindowStateChanged(WindowStateChanged stateChange) {
+
+    }
+
+    @MessageListener
+    public void onDisplayModeChanged(ChangeDisplayMode displayModeChange) {
+        Player player = displayModeChange.getPlayer();
+
+        boolean wasResizable = player.interfaces().resizable();
+        if ((wasResizable && displayModeChange.getDisplayMode() == 2) || (!wasResizable && displayModeChange.getDisplayMode() == 1)) { // dimension change only
+            //System.err.println("same mode. ignoring...");
+            return;
+        }
+        player.interfaces().resizable(displayModeChange.getDisplayMode() == 2);
+
+        player.interfaces().sendForMode(!wasResizable ? 0 : player.varps().varbit(Varbit.SIDESTONES_ARRANGEMENT) == 1 ? 2 : 1,
+                displayModeChange.getDisplayMode() == 1 ? 0 : displayModeChange.getDisplayMode() == 2 && player.varps().varbit(Varbit.SIDESTONES_ARRANGEMENT) == 1 ? 2 : 1);
+    }
+
+    @MessageListener
+    public void onPingPacket(PingPacket pingPacket) {
+
+    }
+
+    @MessageListener
+    public void onPingPacket(ClickAction pingPacket) {
+
     }
 }

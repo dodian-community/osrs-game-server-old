@@ -22,7 +22,7 @@ public class WindowStateChanged extends GamePacket {
     }
 
     @Override
-    public WindowStateChanged clone() {
+    public WindowStateChanged newInstance() {
         return new WindowStateChanged();
     }
 }

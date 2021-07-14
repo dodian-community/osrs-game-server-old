@@ -38,6 +38,14 @@ public class NpcSyncTask implements Task {
 		
 		@Override
 		public void execute() {
+			for (Player player : players) {
+				try {
+					if (!player.bot())
+						sync(player);
+				} catch (Exception e) {
+					logger.error("Error processing NPC sync for {}.", player, e);
+				}
+			}
 		}
 		
 		private void sync(Player player) {

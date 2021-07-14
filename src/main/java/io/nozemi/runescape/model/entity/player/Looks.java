@@ -112,7 +112,6 @@ public class Looks {
                 //9 = hands
                 //10 = boots
                 //11 = beard
-                // TODO: Look into equipment info
                 EquipmentInfo equipInfo = player.world().equipmentInfo();
                 for (int i = 0; i < 12; i++) {
                     Item item = player.equipment().get(i);
@@ -156,7 +155,7 @@ public class Looks {
             calcBuffer.writeByte(col);
         }
 
-        int weapon = -1;
+        int weapon = player.equipment().hasAt(EquipSlot.WEAPON) ? player.equipment().get(EquipSlot.WEAPON).id() : -1;
         int[] renderpair = renderpairOverride != null ? renderpairOverride : player.world().equipmentInfo().renderPair(weapon);
         // Stand, walk sideways, walk, turn 180, turn 90 cw, turn 90 ccw, run
         for (int renderAnim : renderpair)

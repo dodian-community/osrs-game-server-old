@@ -76,4 +76,5 @@ public class PacketConstants {
     public static final int LOOKS_SET = 38;
 
     public static final int PING_PACKET = 17;
+    public static final int MOUSE_CLICK = 53;
 }

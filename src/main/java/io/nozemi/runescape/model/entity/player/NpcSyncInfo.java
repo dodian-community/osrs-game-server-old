@@ -70,7 +70,7 @@ public class NpcSyncInfo extends SyncInfo {
 	}
 	
 	@Override
-	public void sufixPrefixName(String[] str) {
+	public void suffixPrefixName(String[] str) {
 		throw new UnsupportedOperationException("NPC update does not support the Triple String flag");
 	}
 	

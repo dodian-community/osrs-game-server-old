@@ -45,5 +45,5 @@ public abstract class GamePacket {
     }
 
     public abstract GamePacket decode(RSBuffer buffer);
-    public abstract GamePacket clone();
+    public abstract GamePacket newInstance();
 }

@@ -30,6 +30,8 @@ dependencies {
     runtimeOnly("org.springframework.boot:spring-boot-devtools")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+
     implementation("io.netty:netty-all:4.1.17.Final")
     implementation("com.typesafe:config:1.4.1")
     implementation("com.google.guava:guava:22.0")
