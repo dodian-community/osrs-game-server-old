@@ -56,8 +56,8 @@ public class ClientInitializer extends ChannelInitializer<Channel> implements Be
                 new HandshakeResponseEncoder(),
                 new PreGameLoginEncoder(),
                 js5Handler,
-                loginHandler,// LoginHandler
-                serverHandler// ServerHandler
+                loginHandler,
+                serverHandler
         );
     }
 
@@ -67,8 +67,8 @@ public class ClientInitializer extends ChannelInitializer<Channel> implements Be
                 channel.pipeline().removeLast();
             }
 
-            channel.pipeline().addLast(new ReadTimeoutHandler(30, TimeUnit.SECONDS), trafficHandler, commandEncoder,
-                    beanFactory.getBean(ActionDecoder.class), serverHandler);
+            channel.pipeline().addLast(new ReadTimeoutHandler(30, TimeUnit.SECONDS), trafficHandler,
+                    commandEncoder, beanFactory.getBean(ActionDecoder.class), serverHandler);
         }
     }
 

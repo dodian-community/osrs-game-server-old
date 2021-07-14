@@ -19,3 +19,5 @@ The goal is then to create an okay base to start piecing together a [Dodian](htt
 - [Shadowy](https://www.rune-server.ee/members/shadowy/) \
 ^ 4 above are the original developers of [OS-S](https://www.rune-server.ee/runescape-development/rs2-server/downloads/697645-os-scape-171-server.html).
 - Me ([Nozemi](https://www.rune-server.ee/members/nozemi/))
+- [uint32_t](https://www.rune-server.ee/members/uint32_t/) - For consulting and bearing with me while I complain about things I fuck up.
+- [JayArrowz](https://www.rune-server.ee/members/jayarrowz/) - For consulting about proper ways to implement things.

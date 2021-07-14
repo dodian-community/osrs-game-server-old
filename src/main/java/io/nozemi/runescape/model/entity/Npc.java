@@ -5,19 +5,13 @@ import io.nozemi.runescape.model.*;
 import io.nozemi.runescape.model.entity.npc.NpcCombatInfo;
 import io.nozemi.runescape.model.entity.npc.NpcMovementSync;
 import io.nozemi.runescape.model.entity.player.NpcSyncInfo;
-import io.nozemi.runescape.model.instance.InstancedMap;
-import io.nozemi.runescape.model.item.Item;
 import io.nozemi.runescape.model.map.steroids.RangeStepSupplier;
 import io.nozemi.runescape.script.TimerKey;
-import io.nozemi.runescape.util.Tuple;
-import io.nozemi.runescape.util.Varbit;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.jetbrains.annotations.NotNull;
 
 import java.lang.ref.WeakReference;
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Created by Bart on 8/10/2015.
@@ -180,8 +174,8 @@ public class Npc extends Entity {
 		// Notably, if an npc 0t kills a player, the player's combat only stops if another PID player also hits them (doesn't need to deal any damage)
 		// otherwise the dead players attack will actually happen even though they're dead. I've got vid proof of this but replicating is pretty complex, decided
 		// it wasn't worth investigating further.. no harm done.
-		cycle_hits(true);
-		cycle_hits(false);
+		cycleHits(true);
+		cycleHits(false);
 		
 		
 		WeakReference<Entity> wrTarget = attrib(AttributeKey.TARGET);
@@ -377,7 +371,7 @@ public class Npc extends Entity {
 	}
 	
 	@Override
-	public void post_cycle_movement() {
+	public void postCycleMovement() {
 		NpcMovementSync.npc_post_cycle_movement(this);
 	}
 	

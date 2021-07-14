@@ -4,83 +4,156 @@ import io.netty.channel.ChannelHandlerContext;
 import io.nozemi.runescape.GameInitializer;
 import io.nozemi.runescape.io.RSBuffer;
 import io.nozemi.runescape.model.entity.Player;
-import io.nozemi.runescape.net.packets.handlers.PacketHandler;
-import io.nozemi.runescape.net.packets.handlers.PacketListener;
+import io.nozemi.runescape.net.packets.annotations.MessageListener;
+import io.nozemi.runescape.net.packets.annotations.Opcodes;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
+import org.reflections.Reflections;
+import org.reflections.scanners.*;
+import org.reflections.util.ClasspathHelper;
+import org.reflections.util.ConfigurationBuilder;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
+import java.util.*;
 
 @Component
-public class PacketProvider {
+public class PacketProvider implements InitializingBean, BeanFactoryAware {
 
-    private static final Logger logger = LogManager.getLogger(PacketProvider.class);
+    private final Logger logger = LogManager.getLogger(PacketProvider.class);
 
-    private final List<GamePacket> packets;
-    private final List<PacketListener> listeners;
+    private final Map<Integer, GamePacket> opcodeInstances = new HashMap<>();
+    private final Map<Class<? extends GamePacket>, Map<Object, Method>> messageListeners = new HashMap<>();
+
+    private BeanFactory beanFactory;
+
+    private final Reflections reflections;
 
     @Autowired
-    public PacketProvider(List<GamePacket> packets, List<PacketListener> listeners) {
-        this.packets = packets;
-        this.listeners = listeners;
+    public PacketProvider() {
+        this.reflections = new Reflections(new ConfigurationBuilder()
+                        .setUrls(ClasspathHelper.forPackage("io.nozemi.runescape"))
+                        .addScanners(new MethodAnnotationsScanner())
+                        .addScanners(new SubTypesScanner()));
     }
 
-    public boolean hasPacket(int opcode) {
-        return packets.stream().anyMatch(gamePacket -> gamePacketHasOpcode(gamePacket, opcode));
+    public void processBuffer(RSBuffer buffer, ChannelHandlerContext ctx, int opcode, int size, Player player) {
+        if(opcodeInstances.containsKey(opcode)) {
+            GamePacket packet = opcodeInstances.get(opcode).clone();
+            packet.setSize(size);
+            packet.setOpcode(opcode);
+            packet.setPlayer(player);
+            packet.setCtx(ctx);
+            packet.decode(buffer);
+
+            player.pendingPackets().add(packet);
+        } else {
+            buffer.skip(size);
+            logger.warn("Unknown action: {}, probable size: {}.", opcode, size);
+        }
     }
 
-    public Optional<GamePacket> getPacket(RSBuffer buffer, int opcode, Player player) {
-        Optional<? extends GamePacket> optionalGamePacket = packets.stream()
-                .filter(gamePacket -> gamePacketHasOpcode(gamePacket, opcode))
-                .findFirst();
+    public <T extends GamePacket> void handlePacket(T packet) {
+        long start = System.currentTimeMillis();
 
-        if (optionalGamePacket.isEmpty()) {
-            logger.warn("Unknown action: {}, probable size: {}.", opcode, buffer.get().readableBytes());
-            return Optional.empty();
+        GamePacket packetInstance;
+        if (opcodeInstances.containsKey(packet.getOpcode())) {
+            packetInstance = opcodeInstances.get(packet.getOpcode());
+        } else {
+            logger.warn("Unknown action: {}, probable size: {}.", packet.getOpcode(), packet.getSize());
+            return;
         }
 
-        GamePacket gamePacket = optionalGamePacket.get().createFrom(buffer);
-        gamePacket.setOpcode(opcode);
-
-        return Optional.of(gamePacket);
-    }
-
-    public void handlePacket(GamePacket gamePacket, Player player) {
-        listeners.forEach(listener -> {
-            List<Method> methods = Arrays.stream(listener.getClass().getMethods())
-                    .filter(method -> method.isAnnotationPresent(PacketHandler.class))
-                    .filter(method -> method.getParameterTypes()[0].equals(gamePacket.getClass()))
-                    .collect(Collectors.toList());
-
-            methods.forEach(method -> {
+        if (messageListeners.containsKey(packetInstance.getClass())) {
+            Map<Object, Method> handlers = messageListeners.get(packetInstance.getClass());
+            handlers.forEach((listenerInstance, method) -> {
                 try {
-                    if (!gamePacket.isCancelled()) {
-                        method.invoke(listener, gamePacket, player);
+                    // We need to check that there are two arguments
+                    // We need the first argument to be the packet
+                    if(method.getParameterTypes().length == 1
+                    && GamePacket.class.isAssignableFrom(method.getParameterTypes()[0])) {
+                        // TODO: Find a way to avoid reflection calls like this.
+                        method.invoke(listenerInstance, packet);
                     } else {
-                        logger.info("{}: packet execution was cancelled by a previous listener.", listener.getClass().getSimpleName());
+                        if(method.getParameterTypes().length != 1) {
+                            logger.error("Method {}:{} should only have 1 parameter, which should be an object derived from GamePacket.class.", method.getDeclaringClass().getSimpleName(), method.getName());
+                        } else {
+                            logger.error("Method {}:{} has one parameter of type {}, which isn't derived from GamePacket.class", method.getDeclaringClass().getSimpleName(), method.getName(), method.getParameterTypes()[0].getSimpleName());
+                        }
                     }
                 } catch (IllegalAccessException | InvocationTargetException e) {
-                    e.printStackTrace();
+                    logger.error("Failed to invoke: {}:{} for packet: {}.", method.getDeclaringClass().getSimpleName(), method.getName(), packetInstance.getClass().getSimpleName(), e);
                 }
             });
-        });
-
-        gamePacket.setCancelled(false);
-    }
-
-    private boolean gamePacketHasOpcode(GamePacket gamePacket, int opcode) {
-        if (gamePacket.getClass().isAnnotationPresent(Opcodes.class)) {
-            return Arrays.stream(gamePacket.getClass().getAnnotation(Opcodes.class).value())
-                    .anyMatch(code -> code == opcode);
+        } else {
+            logger.warn("There were no handlers for action: {}.", packet.getOpcode());
         }
 
-        return false;
+        if(GameInitializer.isDevServer()) {
+            logger.info("Handling packet {} took {}ms.", packet.getClass().getSimpleName(), System.currentTimeMillis() - start);
+        }
+    }
+
+    @Override
+    public void afterPropertiesSet() {
+        mapPacketsToOpcodes();
+        mapListenersToPackets();
+    }
+
+    public void mapListenersToPackets() {
+        Set<Method> methods = reflections.getMethodsAnnotatedWith(MessageListener.class);
+
+        logger.info("Found {} message listeners.", methods.size());
+
+        methods.forEach(method -> {
+            Class<?> packet = method.getParameterTypes()[0];
+            if (GamePacket.class.isAssignableFrom(packet)) {
+                Object listenerInstance = beanFactory.getBean(method.getDeclaringClass());
+
+                Map<Object, Method> handlers = new HashMap<>();
+                if (messageListeners.containsKey(GamePacket.class)) {
+                    handlers = messageListeners.get(GamePacket.class);
+                }
+
+                handlers.put(listenerInstance, method);
+                messageListeners.put((Class<? extends GamePacket>) method.getParameterTypes()[0], handlers);
+            } else {
+                logger.warn("{} is not assignable from GamePacket.class", packet.getSimpleName());
+            }
+        });
+
+        logger.info("Loaded listeners for {} game packets.", messageListeners.size());
+    }
+
+    public void mapPacketsToOpcodes() {
+        Set<Class<? extends GamePacket>> packets = reflections.getSubTypesOf(GamePacket.class);
+
+        packets.forEach(packetType -> {
+            if (packetType.isAnnotationPresent(Opcodes.class)) {
+                try {
+                    Opcodes opcodes = packetType.getAnnotation(Opcodes.class);
+                    GamePacket packet  = packetType.getConstructor().newInstance();
+                    Arrays.stream(opcodes.value()).forEach(opcode -> opcodeInstances.put(opcode, packet));
+                } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+                    logger.error("Failed to create and add instance of packet type: {}.", packetType.getSimpleName());
+                }
+            } else {
+                logger.warn("Packet of type '{}' does not have Opcodes annotation.", packetType.getSimpleName());
+            }
+        });
+
+        logger.info("Loaded {} opcodes.", opcodeInstances.size());
+    }
+
+    @Override
+    public void setBeanFactory(@NotNull BeanFactory beanFactory) throws BeansException {
+        this.beanFactory = beanFactory;
     }
 }

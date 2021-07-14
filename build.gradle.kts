@@ -40,8 +40,11 @@ dependencies {
     implementation("com.michael-bull.kotlin-inline-logger:kotlin-inline-logger:1.0.3")
     implementation("io.github.classgraph:classgraph:4.8.102")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
+    implementation("io.reactivex.rxjava3:rxjava:3.0.13")
 
     implementation("redis.clients:jedis:2.9.0")
+
+    implementation("com.zaxxer:HikariCP:4.0.3")
 
     runtimeOnly("org.xerial:sqlite-jdbc:3.36.0.1")
 
@@ -52,4 +55,8 @@ dependencies {
 
 tasks.getByName<Test>("test") {
     useJUnitPlatform()
+}
+
+tasks.withType<JavaCompile> {
+    options.isIncremental = true
 }

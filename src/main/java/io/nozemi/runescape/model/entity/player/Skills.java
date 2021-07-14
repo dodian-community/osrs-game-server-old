@@ -37,7 +37,6 @@ public class Skills {
 		/* Hitpoints differs :) */
 		xps[3] = levelToXp(10);
 		levels[3] = 10;
-		recalculateCombat();
 	}
 	
 	public void update() {
@@ -155,6 +154,7 @@ public class Skills {
 	}
 	
 	public void update(int skill) {
+		recalculateCombat();
 		makeDirty(skill);
 	}
 	

@@ -1,6 +1,8 @@
 package io.nozemi.runescape.service.serializers;
 
 
+import io.nozemi.runescape.GameInitializer;
+import io.nozemi.runescape.model.AttributeKey;
 import io.nozemi.runescape.model.Tile;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.model.uid.UIDProvider;

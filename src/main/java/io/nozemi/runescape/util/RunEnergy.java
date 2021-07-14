@@ -9,16 +9,16 @@ import io.nozemi.runescape.model.entity.Player;
 
 public class RunEnergy {
 	
-	private Player player;
+	private final Player player;
 	
-	public RunEnergy(Player forplayer) {
-		this.player = forplayer;
+	public RunEnergy(Player player) {
+		this.player = player;
 	}
 	
 	public void update() {
 		double energy = player.attribOr(AttributeKey.RUN_ENERGY, 0.0);
 		
-		double add = 2;
+		double add = player.getRecoveryRate();
 		
 		player.setRunningEnergy(energy + add, true);
 	}

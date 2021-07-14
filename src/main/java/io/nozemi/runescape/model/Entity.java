@@ -7,6 +7,7 @@ import io.nozemi.runescape.model.entity.player.Varps;
 import io.nozemi.runescape.model.item.ItemContainer;
 import io.nozemi.runescape.model.map.FixedTileStrategy;
 import io.nozemi.runescape.model.map.MapObj;
+import io.nozemi.runescape.model.map.ObjectStrategy;
 import io.nozemi.runescape.model.map.WalkRouteFinder;
 import io.nozemi.runescape.model.map.steroids.Direction;
 import io.nozemi.runescape.model.map.steroids.PathRouteFinder;
@@ -16,10 +17,15 @@ import io.nozemi.runescape.script.TimerKey;
 import io.nozemi.runescape.script.TimerRepository;
 import io.nozemi.runescape.tasksystem.*;
 import io.nozemi.runescape.content.teleports.MyTeleports;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.*;
 
 public abstract class Entity {
+
+    private static final Logger logger = LogManager.getLogger(Entity.class);
+
     protected int index;
     protected World world;
     protected Tile tile;
@@ -241,10 +247,49 @@ public abstract class Entity {
 
     public static final boolean steroidsRoute = true;
 
+    public boolean walkTo(MapObj obj, PathQueue.StepType mode) {
+        pathQueue.clear();
+
+        if (stunned()) {
+            if (mode == PathQueue.StepType.REGULAR)
+                message("You're stunned!");
+            return false;
+        }
+
+        if (steroidsRoute) {
+            LinkedList<Direction> dirs = new LinkedList<>();
+            PathRouteFinder finder = new PathRouteFinder(this);
+            Route route = Route.to(world, obj);
+            finder.path(route, tile.x, tile.z, tile.level, size(), dirs);
+
+            Tile cur = tile;
+            while (!dirs.isEmpty()) {
+                Direction next = dirs.poll();
+                cur = cur.transform(next.x, next.y, 0);
+                pathQueue.stepClipped(cur.x, cur.z, mode);
+
+            }
+
+            finder.free();
+            return !route.alternative;//temp
+        } else {
+            ObjectStrategy target = new ObjectStrategy(world, obj);
+            int steps = WalkRouteFinder.findRoute(world().definitions(), tile.x, tile.z, tile.level, 1, target, true, false);
+            int[] bufferX = WalkRouteFinder.getLastPathBufferX();
+            int[] bufferZ = WalkRouteFinder.getLastPathBufferZ();
+
+            for (int i = steps - 1; i >= 0; i--) {
+                pathQueue.interpolateClipped(bufferX[i], bufferZ[i], mode);
+            }
+
+            return !WalkRouteFinder.isAlternative;
+        }
+    }
+
     public Tile walkTo(int x, int z, PathQueue.StepType mode, boolean stopActions) {
         pathQueue.clear();
 
-        if(stopActions) {
+        if (stopActions) {
             stopActions(true);
         }
 
@@ -304,6 +349,7 @@ public abstract class Entity {
             }
             return cur;
         } else {
+            logger.info("Is not steroids route...");
             FixedTileStrategy target = new FixedTileStrategy(x, z);
             int steps = WalkRouteFinder.findRoute(world().definitions(), tile.x, tile.z, tile.level, size(), target, true, false);
             int[] bufferX = WalkRouteFinder.getLastPathBufferX();
@@ -325,18 +371,18 @@ public abstract class Entity {
         walkToThen(null, destination, then);
     }
 
-    public void walkToThen(Object object, Tile destination, ExecuteInterface then) {
+    public void walkToThen(Object interactAble, Tile destination, ExecuteInterface then) {
         World world = this.world();
 
         final int sizeX;
         final int sizeY;
 
-        if(object instanceof MapObj) {
-            ObjectDefinition definition = ((MapObj) object).definition(world);
+        if (interactAble instanceof MapObj) {
+            ObjectDefinition definition = ((MapObj) interactAble).definition(world);
             sizeX = definition.sizeX;
             sizeY = definition.sizeY;
-        } else if(object instanceof Npc) {
-            NpcDefinition definition = ((Npc) object).def();
+        } else if (interactAble instanceof Npc) {
+            NpcDefinition definition = ((Npc) interactAble).def();
             sizeX = definition.size;
             sizeY = definition.size;
         } else {
@@ -344,19 +390,26 @@ public abstract class Entity {
             sizeY = 0;
         }
 
-        InterruptibleTask.bound(this).isCancellableByWalking(false).execute(() ->
-                this.walkTo(destination, PathQueue.StepType.REGULAR, false)
-        ).onComplete(then).onCancel(() -> this.stopActions(true))
-                .completeCondition(() -> {
-                    int distance = 0;
+        InterruptibleTask.bound(this).isCancellableByWalking(false).execute(() -> {
+            if(this.attribOr(AttributeKey.DEBUG, false)) {
+                this.message("Distance from destination: " + destination.distance(this.tile));
+            }
+            if(interactAble instanceof MapObj) {
+                this.walkTo((MapObj) interactAble, PathQueue.StepType.REGULAR);
+            } else {
+                this.walkTo(destination, PathQueue.StepType.REGULAR, false);
+            }
+        }).onComplete(then)
+            .onCancel(() -> this.stopActions(true))
+            .completeCondition(() -> {
+                int distance = 0;
 
-                    if(sizeX > 1 || sizeY > 1) {
-                        distance = 1;
-                    }
+                if (sizeX > 1 || sizeY > 1) {
+                    distance = 1;
+                }
 
-                    return this.tile().distance(destination) <= distance;
-                })
-                .submit(TaskManager.playerChains());
+                return this.tile().distance(destination) <= distance;
+            }).submit(TaskManager.playerChains());
     }
 
     public boolean locked() {
@@ -459,7 +512,7 @@ public abstract class Entity {
         return h;
     }
 
-    public void cycle_hits(boolean fromPlayerOrigin) {
+    public void cycleHits(boolean fromPlayerOrigin) {
 
         // Only process hits if not locked!
         if (hp() > 0) {
@@ -578,7 +631,7 @@ public abstract class Entity {
 
     public abstract int attackAnimation();
 
-    public abstract void post_cycle_movement();
+    public abstract void postCycleMovement();
 
     public int pvpPid = -1;
 

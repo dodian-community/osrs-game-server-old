@@ -42,7 +42,7 @@ public class CommandHandler implements Handler {
         commands.put(name, command);
     }
 
-    public static void triggerCommand(Player player, String command, String[] arguments) {
+    public void triggerCommand(Player player, String command, String[] arguments) {
         if(commands.containsKey(command)) {
             commands.get(command).execute(player, arguments);
         } else {

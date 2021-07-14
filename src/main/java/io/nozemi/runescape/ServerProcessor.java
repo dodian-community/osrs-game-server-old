@@ -2,7 +2,6 @@ package io.nozemi.runescape;
 
 import io.netty.handler.traffic.TrafficCounter;
 import io.nozemi.runescape.model.World;
-import io.nozemi.runescape.net.packets.PacketProvider;
 import io.nozemi.runescape.task.*;
 import io.nozemi.runescape.tasksystem.TaskManager;
 import it.unimi.dsi.fastutil.objects.Object2IntArrayMap;
@@ -57,7 +56,6 @@ public class ServerProcessor extends Thread {
     }
 
     public void initialize() {
-
         tasks.add(packetProcessingTask);
         tasks.add(new ScriptProcessingTask());
         tasks.add(new PlayerProcessingTask());
@@ -71,8 +69,6 @@ public class ServerProcessor extends Thread {
         tasks.add(new NpcPostSyncTask());
 
         tasks.add(new NetworkFlushTask());
-
-        //GameInitializer.scriptRepository().triggerWorldInit(this.world);
 
         start();
     }

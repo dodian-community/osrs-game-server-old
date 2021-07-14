@@ -22,7 +22,7 @@ public class PlayerPreSyncTask implements Task {
 	private void preUpdate(Player player) {
 		
 		// Update the player position for their requested movement. Validate path.
-		player.post_cycle_movement();
+		player.postCycleMovement();
 		
 		// Sending the region packet is after movement, literally the last thing done before GPI.
 		//player.syncMap();

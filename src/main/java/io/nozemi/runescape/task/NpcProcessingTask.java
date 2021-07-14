@@ -18,7 +18,7 @@ public class NpcProcessingTask implements Task {
 				raw[i].cycle();
 				
 				if (raw[i] != null) // unregistered in cycle()?
-					raw[i].post_cycle_movement();
+					raw[i].postCycleMovement();
 			}
 		}
 	}
