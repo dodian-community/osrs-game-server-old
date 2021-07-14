@@ -52,7 +52,8 @@ public class Player extends Entity {
     private String ip;
     private boolean logged; // Log packet history for this player?
     private long lastPing = System.currentTimeMillis();
-    private int gametime;
+    private int gameTime;
+    private final ConcurrentLinkedQueue<GamePacket> pendingPackets = new ConcurrentLinkedQueue<>();
 
     /**
      * Character Information
@@ -79,12 +80,9 @@ public class Player extends Entity {
      * Other
      */
     private Object id;
-    private int gameTime;
     private Interfaces interfaces;
-    /**
-     * A list of pending actions which are decoded at the next game cycle.
-     */
-    private ConcurrentLinkedQueue<Action> pendingActions = new ConcurrentLinkedQueue<>();
+    private int defaultIcon;
+
 
     @Autowired
     public Player(World world) {
@@ -93,6 +91,7 @@ public class Player extends Entity {
         this.looks = new Looks(this);
         this.varps = new Varps(this);
         this.world = world;
+        this.skills = new Skills(this);
         this.equipment = new ItemContainer(world, 14, ItemContainer.Type.REGULAR);
         this.inventory = new ItemContainer(world, 28, ItemContainer.Type.REGULAR);
 
@@ -109,7 +108,6 @@ public class Player extends Entity {
      * Sends everything required to make the user see the game.
      */
     public void initiate() {
-        skills = new Skills(this);
         skills.update();
 
         write(new SetPlayerOption(3, false, "Follow"));
@@ -122,6 +120,10 @@ public class Player extends Entity {
         if(GameInitializer.config().hasPath("world.welcome-messages")) {
             GameInitializer.config().getList("world.welcome-messages")
                     .forEach(configValue -> message("" + configValue.unwrapped()));
+        }
+
+        if(this.attribOr(AttributeKey.DEBUG, false)) {
+            this.message("<col=f5a442>Debug mode is enabled, type ::debug to toggle.");
         }
 
         invokeScript(1350);
@@ -339,7 +341,7 @@ public class Player extends Entity {
     }
 
     @Override
-    public void post_cycle_movement() {
+    public void postCycleMovement() {
         Player player = this;
         Tile origin = tile();
 
@@ -427,7 +429,7 @@ public class Player extends Entity {
 
     public boolean reqPidMoveReset;
 
-    public void postcycle_dirty() {
+    public void postCycleDirty() {
         // Does weight need to be recomputed?
         if (inventory.dirty() || equipment.dirty()) {
             ItemWeight.calculateWeight(this);
@@ -486,12 +488,6 @@ public class Player extends Entity {
     public boolean seesChunk(int x, int z) {
         return activeArea().contains(new Tile(x, z));
     }
-
-    public ConcurrentLinkedQueue<Action> pendingActions() {
-        return pendingActions;
-    }
-
-    private final ConcurrentLinkedQueue<GamePacket> pendingPackets = new ConcurrentLinkedQueue<>();
 
     public ConcurrentLinkedQueue<GamePacket> pendingPackets() {
         return pendingPackets;
@@ -595,7 +591,7 @@ public class Player extends Entity {
         varps.varp(843, panel);
     }
 
-    public boolean fire_logout() {
+    public boolean fireLogout() {
         boolean active = channel == null || channel.isActive();
         // Are we requested to be logged out?
         if ((Boolean) attribOr(AttributeKey.LOGOUT, false) || !active) {
@@ -628,56 +624,28 @@ public class Player extends Entity {
 
     @Override
     public void cycle() {
+        gameTime++; // Increment ticks we've played for
 
-        gametime++; // Increment ticks we've played for
-
-        if (fire_logout()) {
+        if (fireLogout()) {
             // logout complete, no need to process other stuff
             return;
         }
 
         // First in p process, cycle the damaged queued on us.
         // This means we can die before any Script actions (such as combat) can execute.
-        super.cycle_hits(true);
+        super.cycleHits(true);
 
-		/*if (isPlayer())
-		    debug(String.format("%s: pcycle (first) ->  [e-pid:%s][pk-pid:%s]: %s %s", world.cycleCount(), index, pvpPid,
-					timers.has(TimerKey.COMBAT_ATTACK) ? timers().left(TimerKey.COMBAT_ATTACK) : "-", dead()));*/
-
-        // Now scripts after we're sure we haven't died from incoming damage this cycle.
-        //world.server().scriptExecutor().cycle(Conditions.context(this));
-
-        cycle_hits(false);
+        cycleHits(false);
 
         // Decrease timers
         super.cycle();
 
         // Fire timers
-        fire_timers();
-
-        // Region enter and leave triggers
-        int lastregion = attribOr(AttributeKey.LAST_REGION, -1);
-
-        if (lastregion != tile.region()) {
-            //world.server().scriptRepository().triggerRegionExit(this, lastregion);
-            //world.server().scriptRepository().triggerRegionEnter(this, tile.region());
-        }
-
-        // Chunk enter and leave triggers (stop molesting my pretty code)
-        int lastChunk = attribOr(AttributeKey.LAST_CHUNK, -1);
-        if (lastChunk != tile.chunk()) {
-            //world.server().scriptRepository().triggerChunkExit(this, lastChunk);
-            //world.server().scriptRepository().triggerChunkEnter(this, tile.chunk());
-        }
+        fireTimers();
 
         if (attribOr(AttributeKey.WORLD_MAP, false)) {
             invokeScript(1749, tile().hash30());
         }
-
-        // check if our last tile stepped on is the current.
-//		if (pathQueue().lastStep() != null && !pathQueue.lastStep().equals(tile.x, tile.z)) {
-//			world.server().scriptRepository().triggerWalkDestination(this);
-//		}
 
         // Update last region and chunk ids
         putattrib(AttributeKey.LAST_REGION, tile.region());
@@ -694,7 +662,7 @@ public class Player extends Entity {
         LoginService.serializer().savePlayer(this, removeOnline);
     }
 
-    private void fire_timers() {
+    private void fireTimers() {
         try {
             timerloop:
             for (Iterator<Timer> it = timers.timers().iterator(); it.hasNext(); ) {
@@ -744,13 +712,12 @@ public class Player extends Entity {
     }
 
     public double getEnergyDeprecation() {
-        // TODO: Look at weight thing
-        double weight = Math.max(0, Math.min(54, 2)); // Capped at 54kg - where stamina affect no longer works.. for a QoL. Stamina always helpful!
+        double weight = Math.max(0, Math.min(54, getWeight())); // Capped at 54kg - where stamina affect no longer works.. for a QoL. Stamina always helpful!
         return (0.67) + weight / 100.0;
     }
 
     public double getRecoveryRate() {
-        return (8.0 + (skills().level(Skills.AGILITY) / 6.0)) / 100;
+        return (8.0 + (skills.level(Skills.AGILITY) / 6.0)) / 100;
     }
 
     public void setRunningEnergy(double runningEnergy, boolean send) {
@@ -771,8 +738,6 @@ public class Player extends Entity {
             write(SetRunEnergy.get(re));
         }
     }
-
-    private int defaultIcon;
 
     public void defaultIcon(int i) {
         defaultIcon = i;
@@ -806,5 +771,10 @@ public class Player extends Entity {
 
     public ItemContainer inventory() {
         return inventory;
+    }
+
+    private final ConcurrentLinkedQueue<Action> pendingActions = new ConcurrentLinkedQueue<>();
+    public ConcurrentLinkedQueue<Action> pendingActions() {
+        return pendingActions;
     }
 }

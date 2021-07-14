@@ -6,10 +6,7 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 import io.nozemi.runescape.io.RSBuffer;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.net.ServerHandler;
-import io.nozemi.runescape.net.packets.GamePacket;
 import io.nozemi.runescape.net.packets.PacketProvider;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
@@ -18,7 +15,6 @@ import org.springframework.stereotype.Component;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 /**
  * Created by Bart Pelle on 8/23/2014.
@@ -46,7 +42,7 @@ public class ActionDecoder extends ByteToMessageDecoder {
 	@Autowired
 	public ActionDecoder(PacketProvider packetProvider) {
 		this.packetProvider = packetProvider;
-		
+
 		// Ignore a few classes
 		ignored.put(93, -1); // Mouse history
 		ignored.put(83, -2); // Key history
@@ -111,15 +107,9 @@ public class ActionDecoder extends ByteToMessageDecoder {
 				if(!ignored.containsKey(opcode)) {
 					int bufferStart = buffer.get().readerIndex();
 					RSBuffer newBuffer = new RSBuffer(buffer.get().slice(bufferStart, size));
-					Optional<GamePacket> packet = packetProvider.getPacket(newBuffer, opcode, player);
-
-					if(packet.isPresent()) {
-						player.pendingPackets().add(packet.get());
-						player.lastPing(System.currentTimeMillis());
-						buffer.get().readerIndex(bufferStart + size);
-					} else {
-						buffer.skip(size);
-					}
+					packetProvider.processBuffer(newBuffer, ctx, opcode, size, player);
+					player.lastPing(System.currentTimeMillis());
+					buffer.get().readerIndex(bufferStart + size);
 				} else {
 					buffer.skip(size);
 				}

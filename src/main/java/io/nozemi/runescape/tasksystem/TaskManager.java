@@ -12,18 +12,31 @@ public class TaskManager {
     private static final Logger logger = LogManager.getLogger(TaskManager.class);
 
     private final static Map<Integer, List<Interruptible>> playerChains = new HashMap<>();
+    private final static Map<Integer, List<Interruptible>> loginEvents = new HashMap<>();
 
     public static Map<Integer, List<Interruptible>> playerChains() {
         return playerChains;
     }
 
-    public static void cyclePlayerChains() {
-        playerChains.forEach((entityIndex, event) -> {
-            for (int i = event.size() - 1; i >= 0; i--) {
-                event.get(i).cycle();
+    public static Map<Integer, List<Interruptible>> loginEvents() {
+        return loginEvents;
+    }
 
-                if(event.get(i).isCompleted()) {
-                    event.remove(event.get(i));
+    public static void cyclePlayerChains() {
+        cycle(playerChains);
+    }
+
+    public static void cycleLoginEvents() {
+        cycle(loginEvents);
+    }
+
+    private static void cycle(Map<Integer, List<Interruptible>> eventsList) {
+        eventsList.forEach((entityIndex, events) -> {
+            for (int i = events.size() - 1; i >= 0; i--) {
+                events.get(i).cycle();
+
+                if(events.get(i).isCompleted()) {
+                    events.remove(events.get(i));
                 }
             }
         });

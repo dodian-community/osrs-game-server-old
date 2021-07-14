@@ -1,14 +1,13 @@
-package io.nozemi.runescape.net.packets.impl;
+package io.nozemi.runescape.net.packets.models;
 
 import io.nozemi.runescape.io.RSBuffer;
 import io.nozemi.runescape.net.packets.GamePacket;
-import io.nozemi.runescape.net.packets.Opcodes;
-import org.springframework.stereotype.Component;
+import io.nozemi.runescape.net.packets.annotations.Opcodes;
 
-@Component
 @Opcodes({63, 11, 20, 9, 78, 96, 25, 91, 22, 45})
 public class ButtonAction extends GamePacket {
 
+    // TODO: Find a better way to implement these
     public static final int[] OPCODES = {63, 11, 20, 9, 78, 96, 25, 91, 22, 45};
 
     private int option;
@@ -17,10 +16,10 @@ public class ButtonAction extends GamePacket {
     private int slot;
 
     @Override
-    public ButtonAction createFrom(RSBuffer packet) {
-        this.hash = packet.readInt();
-        this.slot = packet.readUShort();
-        this.item = packet.readUShort();
+    public ButtonAction decode(RSBuffer buffer) {
+        this.hash = buffer.readInt();
+        this.slot = buffer.readUShort();
+        this.item = buffer.readUShort();
 
         if (item == 0xFFFF)
             item = -1;
@@ -32,6 +31,11 @@ public class ButtonAction extends GamePacket {
                 option = i;
 
         return this;
+    }
+
+    @Override
+    public ButtonAction clone() {
+        return new ButtonAction();
     }
 
     public int getOption() {

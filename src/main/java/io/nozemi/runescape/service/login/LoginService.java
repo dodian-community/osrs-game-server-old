@@ -1,21 +1,19 @@
 package io.nozemi.runescape.service.login;
 
 import io.netty.channel.ChannelHandlerContext;
-import io.nozemi.runescape.GameInitializer;
 import io.nozemi.runescape.io.RSBuffer;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.model.instance.InstancedMap;
-import io.nozemi.runescape.model.uid.UIDProvider;
 import io.nozemi.runescape.net.ServerHandler;
 import io.nozemi.runescape.net.message.LoginRequestMessage;
 import io.nozemi.runescape.net.message.game.Action;
 import io.nozemi.runescape.net.message.game.command.DisplayMap;
 import io.nozemi.runescape.net.message.game.command.SetRealm;
-import io.nozemi.runescape.net.packets.GamePacket;
 import io.nozemi.runescape.service.Service;
-import io.nozemi.runescape.service.serializers.JSONFileSerializer;
 import io.nozemi.runescape.service.serializers.PlayerSerializer;
 import io.nozemi.runescape.service.serializers.SpringSerializer;
+import io.nozemi.runescape.tasksystem.InterruptibleTask;
+import io.nozemi.runescape.tasksystem.TaskManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;

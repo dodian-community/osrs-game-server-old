@@ -74,7 +74,6 @@ public class InterruptibleTask extends Interruptible {
         if(completeCondition != null && completeCondition.check()) {
             this.completed = true;
             this.onCompleted.execute();
-            return;
         }
     }
 }

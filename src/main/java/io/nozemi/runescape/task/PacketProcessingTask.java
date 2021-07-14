@@ -47,16 +47,23 @@ public class PacketProcessingTask implements Task {
 		
 		// Packets boi.
 		world.getPvpShuffablePid().forEach(player -> {
+			if(player.pendingPackets().size() > 20) {
+				logger.warn("Flooding? Size {} queue from {} at ip {}.", player.pendingPackets().size(), player.username(), player.ip());
+				player.pendingPackets().clear(); // FUck you cya
+			}
+
+			player.pendingPackets().forEach(packet -> {
+				long start = System.currentTimeMillis();
+				packetProvider.handlePacket(packet);
+				long taken = System.currentTimeMillis() - start;
+				ServerProcessor.computeTimes.compute(player.username(), (s, integer) -> integer == null ? taken : (taken + integer));
+			});
+
 			if (player.pendingActions().size() > 20) {
 				logger.warn("Flooding? Size {} queue from {} at ip {}.", player.pendingActions().size(), player.username(), player.ip());
 				player.pendingActions().clear(); // FUck you cya
 			}
 
-			if(player.pendingPackets().size() > 20) {
-				logger.warn("Flooding? Size {} queue from {} at ip {}.", player.pendingActions().size(), player.username(), player.ip());
-				player.pendingPackets().clear(); // FUck you cya
-			}
-			
 			player.pendingActions().forEach(packet -> {
 				try {
 					long start = System.currentTimeMillis();
@@ -68,20 +75,13 @@ public class PacketProcessingTask implements Task {
 					logger.error("Caused by: ", e);
 				}
 			});
-
-			player.pendingPackets().forEach(packet -> {
-				long start = System.currentTimeMillis();
-				packetProvider.handlePacket(packet, player);
-				long taken = System.currentTimeMillis() - start;
-				ServerProcessor.computeTimes.compute(player.username(), (s, integer) -> integer == null ? taken : (taken + integer));
-			});
 			
 			// Remove actions
-			player.pendingActions().clear();
 			player.pendingPackets().clear();
+			player.pendingActions().clear();
 			
 			// Sync containers, if dirty. Why here? Because... Fake lag fix. Just don't question me :-)
-			player.postcycle_dirty();
+			player.postCycleDirty();
 
 			// Flush net
 			if (!player.bot())

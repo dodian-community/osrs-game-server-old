@@ -1,7 +1,6 @@
 package io.nozemi.runescape.task;
 
 import io.nozemi.runescape.ServerProcessor;
-import io.nozemi.runescape.model.AttributeKey;
 import io.nozemi.runescape.model.World;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.net.message.game.command.SystemUpdateTimer;
@@ -32,7 +31,7 @@ public class PlayerProcessingTask implements Task {
 				// After scripts/packets, but before movement.
 				
 				// Sync containers, if dirty
-				player.postcycle_dirty();
+				player.postCycleDirty();
 				
 				if (update) {
 					player.write(new SystemUpdateTimer(world.ticksUntilUpdate()));

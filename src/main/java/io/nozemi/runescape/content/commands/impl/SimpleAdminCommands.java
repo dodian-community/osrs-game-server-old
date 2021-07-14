@@ -84,6 +84,13 @@ public class SimpleAdminCommands extends GameCommandsWrapper {
 
             player.teleport(new Tile(player.tile().x, player.tile().z, player.tile().level + tiles));
         });
+
+        for (String s : new String[]{"coords", "loc", "pos", "mypos"}) {
+            put(s, (player, args) -> player.message("Your coordinates are [%d, %d, %d]. Region %d, RelX=%d, RelZ=%d, Chunk-id %d.",
+                    player.tile().x, player.tile().z, player.tile().level,
+                    player.tile().region(), player.tile().regionX(),
+                    player.tile().regionZ(), player.tile().chunk()));
+        }
     }
 
     public void put(String name, GameCommand command, String description) {
