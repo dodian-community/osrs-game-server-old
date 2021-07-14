@@ -7,6 +7,8 @@ import io.nozemi.runescape.model.AttributeKey;
 import io.nozemi.runescape.model.Tile;
 import io.nozemi.runescape.model.entity.player.Privilege;
 import io.nozemi.runescape.model.item.Item;
+import io.nozemi.runescape.util.Varbit;
+import io.nozemi.runescape.content.interfaces.SpellSelect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -90,6 +92,45 @@ public class SimpleAdminCommands extends GameCommandsWrapper {
                     player.tile().x, player.tile().z, player.tile().level,
                     player.tile().region(), player.tile().regionX(),
                     player.tile().regionZ(), player.tile().chunk()));
+        }
+
+        for (String s : new String[]{"ancients", "ancient"}) {
+            put(Privilege.ADMIN, s, (p, args) -> {
+                p.message("<col=ac07b5>You changed succesfull your spellbook to the Ancient Magicks");
+                p.varps().varbit(Varbit.SPELLBOOK, 1);
+                SpellSelect.reset(p, true, true);
+            }, "Switches your spellbook to ancients magic. ::ancients");
+        }
+
+        for (String s : new String[]{"modern", "normals"}) {
+            put(Privilege.ADMIN, s, (p, args) -> {
+                p.message("<col=ac07b5>You changed succesfull your spellbook to the Modern Spelbook");
+                p.varps().varbit(Varbit.SPELLBOOK, 0);
+                SpellSelect.reset(p, true, true);
+            }, "Switches your spellbook to modern magic. ::modern");
+        }
+
+        for (String s : new String[]{"lunar", "lunars"}) {
+            put(Privilege.ADMIN, s, (p, args) -> {
+                p.message("<col=ac07b5>You changed succesfull your spellbook to the Lunar Spellbook");
+                p.varps().varbit(Varbit.SPELLBOOK, 2);
+                SpellSelect.reset(p, true, true);
+            }, "Switches your spellbook to lunar magic. ::lunar");
+        }
+        for (String s : new String[]{"arceuus"}) {
+            put(Privilege.ADMIN, s, (p, args) -> {
+                p.message("<col=ac07b5>You changed succesfull your spellbook to the Arceuus Spelbook");
+                p.varps().varbit(Varbit.SPELLBOOK, 3);
+                SpellSelect.reset(p, true, true);
+            }, "Switches your spellbook to lunar magic. ::lunar");
+        }
+
+        for (String s : new String[]{"switch", "spellbook", "book"}) {
+            put(Privilege.ADMIN, s, (p, args) -> {
+                p.message("<col=ac07b5>You changed succesfull your spellbook");
+                p.varps().varbit(Varbit.SPELLBOOK, Integer.parseInt(args[0]));
+                SpellSelect.reset(p, true, true);
+            }, "Switches to the specific spellbook. ::spellbook id");
         }
     }
 
