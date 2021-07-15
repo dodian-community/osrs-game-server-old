@@ -39,7 +39,7 @@ public class SpringSerializer extends PlayerSerializer {
 
     @Override
     public boolean loadPlayer(Player player, Object uid, String password, Consumer<PlayerLoadResult> fn, LoginRequestMessage loginRequestMessage) {
-        Optional<User> oUser = usersRepository.findFirstByUsername(loginRequestMessage.username());
+        /*Optional<User> oUser = usersRepository.findFirstByUsername(loginRequestMessage.username());
         if(oUser.isEmpty()) {
             oUser = usersRepository.findFirstByEmail(loginRequestMessage.username());
         }
@@ -74,7 +74,7 @@ public class SpringSerializer extends PlayerSerializer {
                 logger.info("Player 2FA Secret: " + user.getTwoFactorSecret());
                 return true;
             }
-        }
+        } */
 
         Optional<Character> optionalCharacter = charactersRepository.findFirstByUsername(player.username());
         if(optionalCharacter.isPresent()) {
