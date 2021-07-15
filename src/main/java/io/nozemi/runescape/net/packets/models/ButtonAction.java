@@ -34,7 +34,7 @@ public class ButtonAction extends GamePacket {
     }
 
     @Override
-    public ButtonAction clone() {
+    public ButtonAction newInstance() {
         return new ButtonAction();
     }
 

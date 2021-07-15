@@ -22,7 +22,7 @@ public class ChangeDisplayMode extends GamePacket {
     }
 
     @Override
-    public GamePacket clone() {
+    public GamePacket newInstance() {
         return new ChangeDisplayMode();
     }
 

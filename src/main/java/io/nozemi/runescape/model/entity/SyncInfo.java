@@ -99,7 +99,7 @@ public abstract class SyncInfo {
 	
 	public abstract void hit(Hit hit);
 	
-	public abstract void sufixPrefixName(String[] str);
+	public abstract void suffixPrefixName(String[] str);
 	
 	public byte[] animationSet() {
 		return animationSet;

@@ -27,7 +27,7 @@ public class PublicChat extends GamePacket {
     }
 
     @Override
-    public PublicChat clone() {
+    public PublicChat newInstance() {
         return new PublicChat();
     }
 

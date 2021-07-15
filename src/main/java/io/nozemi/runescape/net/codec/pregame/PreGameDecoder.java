@@ -202,9 +202,6 @@ public class PreGameDecoder extends ByteToMessageDecoder {
 		}
 		
 		String hwidSha = realUID ? String.format("%040x", new BigInteger(1, hwid)) : null;
-
-//		String macAddress = BufferUtilities.readString(in);
-		String macAddress = "";//BufferUtilities.readString(in);
 		
 		logger.info("User login from {} Auth pin: {}.", username, authcode);
 		

@@ -110,9 +110,17 @@ public class LoginWorker implements Runnable, BeanFactoryAware {
         //player.world(world);
         player.tile(new Tile(3222, 3222));
 
-        boolean success = loginService.serializer().loadPlayer(player, null, message.password(), result -> {
+        boolean success = LoginService.serializer().loadPlayer(player, null, message.password(), result -> {
+            if(!result.equals(PlayerLoadResult.OK)) {
+                ByteBuf resp = message.channel().alloc().buffer(1).writeByte(result.code());
+                message.channel().writeAndFlush(resp).addListener(new ClosingChannelFuture());
+                return;
+            }
+
+            // Convert pipeline
             GameInitializer.clientInitializer().initForGame(message.channel());
 
+            // Attach player to session
             player.channel().attr(ServerHandler.ATTRIB_PLAYER).set(player);
 
             World world = GameInitializer.world();

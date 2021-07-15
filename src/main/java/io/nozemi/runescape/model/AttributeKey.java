@@ -1352,7 +1352,9 @@ public enum AttributeKey {
 	 * Bloody fragment count used for the bloody volcano
 	 */
 	BLOODY_FRAGMENTS,
-	BLOODY_FRAGMENT_UPDATE
+	BLOODY_FRAGMENT_UPDATE,
+
+	EDIT_MODE
 	;
 	
 	private String saveName;

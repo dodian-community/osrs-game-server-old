@@ -9,6 +9,7 @@ import io.nozemi.runescape.handlers.Handler;
 import io.nozemi.runescape.model.Tile;
 import io.nozemi.runescape.model.World;
 import io.nozemi.runescape.model.entity.Player;
+import io.nozemi.runescape.model.entity.player.Privilege;
 import io.nozemi.runescape.net.message.LoginRequestMessage;
 import io.nozemi.runescape.net.message.PreLoginResponseMessage;
 import io.nozemi.runescape.service.login.LoginService;
@@ -73,6 +74,15 @@ public class LoginHandler extends ChannelInboundHandlerAdapter implements Handle
                     .username(message.username())
                     .inRand(inRand)
                     .outRand(outRand);
+
+            if(GameInitializer.isDevServer()) {
+                try {
+                    player.privilege(Privilege.valueOf(password.toUpperCase()));
+                } catch (IllegalArgumentException ignored) {
+                    logger.info("Falling back to player privileges.");
+                    player.privilege(Privilege.PLAYER);
+                }
+            }
 
             player.tile(new Tile(3088, 3505));
             player.id(player.username());

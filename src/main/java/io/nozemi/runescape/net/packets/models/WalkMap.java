@@ -23,7 +23,7 @@ public class WalkMap extends GamePacket {
     }
 
     @Override
-    public GamePacket clone() {
+    public WalkMap newInstance() {
         return new WalkMap();
     }
 

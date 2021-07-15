@@ -365,14 +365,16 @@ public class World {
     public boolean registerNpc(Npc npc) {
         int slot = npcs.add(npc);
 
-        if (slot == -1)
+        if (slot == -1) {
             return false;
+        }
 
         npc.index(slot);
         npc.spawnStack = new Throwable().getStackTrace()[1].toString();
         // TODO: Figure out this
         //server.scriptRepository().triggerNpcSpawn(npc);
         //server.scriptRepository().triggerNpcCreate(npc);
+        npc.timers().register(TimerKey.POISON, 25);
         return true;
     }
 
@@ -387,7 +389,6 @@ public class World {
 
     public boolean registerPlayer(Player player) {
         int slot = players.add(player);
-
 
         if (slot == -1)
             return false;

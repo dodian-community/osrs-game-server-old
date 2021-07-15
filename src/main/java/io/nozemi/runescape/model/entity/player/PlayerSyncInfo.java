@@ -323,7 +323,7 @@ public class PlayerSyncInfo extends SyncInfo {
 	}
 	
 	@Override
-	public void sufixPrefixName(String[] strs) {
+	public void suffixPrefixName(String[] strs) {
 		if (strs == null || strs.length > 3)
 			throw new UnsupportedOperationException("Strings mask must be 3 strings");
 		tripleStrings = new byte[strs[0].length() + strs[1].length() + strs[2].length() + 3];
