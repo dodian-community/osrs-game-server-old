@@ -27,7 +27,6 @@ public class Character {
     }
 
     public Character(Player player) {
-        this.id = (int) player.id();
         this.username = player.username();
         this.posX = player.tile().x;
         this.posY = player.tile().z;
@@ -37,6 +36,7 @@ public class Character {
 
     public Player getPlayer(Player player) {
         player.id(this.id);
+        player.userId(this.userId);
         player.username(this.username);
         player.tile(new Tile(this.posX, this.posY, this.posZ));
         player.setRunningEnergy(this.runEnergy, true);

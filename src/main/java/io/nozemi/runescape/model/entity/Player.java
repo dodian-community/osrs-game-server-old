@@ -3,7 +3,11 @@ package io.nozemi.runescape.model.entity;
 import io.netty.channel.Channel;
 import io.nozemi.runescape.GameInitializer;
 import io.nozemi.runescape.content.mechanics.VarbitAttributes;
+import io.nozemi.runescape.content.tools.editmode.EditModeHandler;
 import io.nozemi.runescape.crypto.IsaacRand;
+import io.nozemi.runescape.handlers.impl.dialogue.DialogueHandler;
+import io.nozemi.runescape.handlers.impl.dialogue.DialogueOptionAction;
+import io.nozemi.runescape.handlers.impl.dialogue.InputValueAction;
 import io.nozemi.runescape.model.*;
 import io.nozemi.runescape.model.entity.player.*;
 import io.nozemi.runescape.model.instance.InstancedMap;
@@ -22,6 +26,10 @@ import io.nozemi.runescape.service.login.LoginService;
 import io.nozemi.runescape.util.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
@@ -29,18 +37,26 @@ import org.springframework.stereotype.Component;
 
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-public class Player extends Entity {
+public class Player extends Entity implements BeanFactoryAware {
 
     private static final Logger logger = LogManager.getLogger(Player.class);
+
+    /**
+     * Account Information
+     */
+    private int userId;
+    private int roleId;
+    private int discordId;
+    private String email;
+    private String discordInfo;
+    private boolean mfaEnabled;
 
     /**
      * Networking
@@ -63,6 +79,7 @@ public class Player extends Entity {
     private Looks looks;
     private IronMode ironMode = IronMode.NONE;
     private GameMode mode = GameMode.CLASSIC;
+    private RunEnergy runEnergy = new RunEnergy(this);
     private double weight;
 
     private Skills skills;
@@ -135,6 +152,14 @@ public class Player extends Entity {
         write(UpdateStateCustom.skullToggle(!off));
 
         write(UpdateStateCustom.setErrorReportState(true));
+
+        if(this.attribOr(AttributeKey.NEW_ACCOUNT, false)) {
+            this.message("Welcome to your first time on Dodian! Don't hesitate to contact us for assistance if you have any issues!");
+        }
+
+        if(!this.mfaEnabled) {
+            this.message("<col=bd4602>You don't have two factor authentication enabled. We would recommend you enable this. You can do so on our website.");
+        }
 
         looks.update();
 
@@ -303,6 +328,10 @@ public class Player extends Entity {
 
     public Privilege privilege() {
         return privilege;
+    }
+
+    public void privilege(Privilege privilege) {
+        this.privilege = privilege;
     }
 
     @Override
@@ -706,7 +735,6 @@ public class Player extends Entity {
         return skills;
     }
 
-    private RunEnergy runEnergy = new RunEnergy(this);
     public RunEnergy runenergy() {
         return runEnergy;
     }
@@ -776,5 +804,97 @@ public class Player extends Entity {
     private final ConcurrentLinkedQueue<Action> pendingActions = new ConcurrentLinkedQueue<>();
     public ConcurrentLinkedQueue<Action> pendingActions() {
         return pendingActions;
+    }
+
+    private EditModeHandler editModeHandler;
+
+    public void setEditModeHandler(EditModeHandler editModeHandler) {
+        this.editModeHandler = editModeHandler;
+    }
+
+    public EditModeHandler getEditModeHandler() {
+        return editModeHandler;
+    }
+
+    private DialogueHandler dialogueHandler;
+    public void setDialogueHandler(DialogueHandler dialogueHandler) {
+        this.dialogueHandler = dialogueHandler;
+    }
+
+    public DialogueHandler getDialogueHandler() {
+        return dialogueHandler;
+    }
+
+    public DialogueHandler optionsTitled(String title, String... options) {
+        return this.optionsTitled(false, title, options);
+    }
+
+    public DialogueHandler optionsTitled(boolean terminate, String title, String... options) {
+        this.interfaces().send(219, 162, 550, false);
+        this.write(new InvokeScript(58, title, String.join("|", options)));
+        this.write(new InterfaceSettings(219, 0, 1, 5, 1));
+
+        if(this.dialogueHandler == null) {
+            this.setDialogueHandler(beanFactory.getBean(DialogueHandler.class));
+        }
+
+        this.getDialogueHandler().initialize(this, terminate, options);
+
+        return this.dialogueHandler;
+    }
+    
+    public DialogueHandler chatPlayer(String msg, int anim) {
+        this.interfaces().send(217, 162, 550, false);
+        this.write(new InterfaceText(217, 1, this.username()));
+        this.write(new InterfaceText(217, 2, "Click here to continue"));
+        this.write(new InterfaceText(217, 3, msg));
+        this.write(new PlayerOnInterface(217, 0));
+        this.write(new AnimateInterface(217, 0, anim));
+        this.write(new InvokeScript(600, 1, 1, 16, 14221315));
+        this.write(new InterfaceSettings(217, 2, -1, -1, 1));
+
+        if(this.dialogueHandler == null) {
+            this.setDialogueHandler(beanFactory.getBean(DialogueHandler.class));
+        }
+
+        this.getDialogueHandler().initialize(this, "Continue");
+
+        return this.dialogueHandler;
+    }
+    
+    private BeanFactory beanFactory;
+
+    @Override
+    public void setBeanFactory(@NotNull BeanFactory beanFactory) throws BeansException {
+        this.beanFactory = beanFactory;
+    }
+
+    private InputValueAction<Integer> inputIntegerAction;
+    private InputValueAction<String> inputStringAction;
+
+    public InputValueAction<Integer> getInputIntegerAction() {
+        return inputIntegerAction;
+    }
+
+    public InputValueAction<String> getInputStringAction() {
+        return inputStringAction;
+    }
+
+    public void inputInteger(String message, InputValueAction<Integer> action) {
+        this.invokeScript(108, message);
+        this.inputIntegerAction = action;
+    }
+
+    public void inputString(String message, InputValueAction<String> action) {
+        this.invokeScript(110, message);
+        this.inputStringAction = action;
+    }
+
+    public void userId(int userId) {
+        this.userId = userId;
+    }
+
+    public void mfaEnabled(boolean value) {
+        this.mfaEnabled = value;
     }
 }

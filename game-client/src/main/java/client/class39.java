@@ -148,6 +148,8 @@ public final class class39 implements KeyListener, FocusListener {
          var2 -= 2000;
       }
 
+      System.out.println("Yes, something: " + var2);
+
       class172 var9;
       if(var2 == 31) {
          var9 = class26.method433(OutgoingPacket.field2196, GameClient.field626.field1218, 1273785885);

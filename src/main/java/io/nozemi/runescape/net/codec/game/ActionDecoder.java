@@ -46,7 +46,7 @@ public class ActionDecoder extends ByteToMessageDecoder {
 		// Ignore a few classes
 		ignored.put(93, -1); // Mouse history
 		ignored.put(83, -2); // Key history
-		ignored.put(53, 6); // Mouse click
+		//ignored.put(53, 6); // Mouse click
 		ignored.put(50, 4); // Key
 		ignored.put(76, 0); // Ping
 	}

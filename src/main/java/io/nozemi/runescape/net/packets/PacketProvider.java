@@ -46,7 +46,7 @@ public class PacketProvider implements InitializingBean, BeanFactoryAware {
 
     public void processBuffer(RSBuffer buffer, ChannelHandlerContext ctx, int opcode, int size, Player player) {
         if(opcodeInstances.containsKey(opcode)) {
-            GamePacket packet = opcodeInstances.get(opcode).clone();
+            GamePacket packet = opcodeInstances.get(opcode).newInstance();
             packet.setSize(size);
             packet.setOpcode(opcode);
             packet.setPlayer(player);
@@ -63,6 +63,10 @@ public class PacketProvider implements InitializingBean, BeanFactoryAware {
     public <T extends GamePacket> void handlePacket(T packet) {
         long start = System.currentTimeMillis();
 
+        if(GameInitializer.isDevServer()) {
+            //logger.info("Handling opcode {}.", packet.getOpcode());
+        }
+
         GamePacket packetInstance;
         if (opcodeInstances.containsKey(packet.getOpcode())) {
             packetInstance = opcodeInstances.get(packet.getOpcode());
@@ -78,7 +82,7 @@ public class PacketProvider implements InitializingBean, BeanFactoryAware {
                     // We need to check that there are two arguments
                     // We need the first argument to be the packet
                     if(method.getParameterTypes().length == 1
-                    && GamePacket.class.isAssignableFrom(method.getParameterTypes()[0])) {
+                    && method.getParameterTypes()[0] == packet.getClass()) {
                         // TODO: Find a way to avoid reflection calls like this.
                         method.invoke(listenerInstance, packet);
                     } else {
@@ -97,7 +101,7 @@ public class PacketProvider implements InitializingBean, BeanFactoryAware {
         }
 
         if(GameInitializer.isDevServer()) {
-            logger.info("Handling packet {} took {}ms.", packet.getClass().getSimpleName(), System.currentTimeMillis() - start);
+            //logger.info("Handling packet {} took {}ms.", packet.getClass().getSimpleName(), System.currentTimeMillis() - start);
         }
     }
 

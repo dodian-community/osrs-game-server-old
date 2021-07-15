@@ -1,5 +1,6 @@
 package io.nozemi.runescape.model;
 
+import io.nozemi.runescape.content.mechanics.Transmogrify;
 import io.nozemi.runescape.fs.NpcDefinition;
 import io.nozemi.runescape.fs.ObjectDefinition;
 import io.nozemi.runescape.model.entity.*;
@@ -87,10 +88,9 @@ public abstract class Entity {
     }
 
     public void teleport(int x, int z, int level) {
-        // TODO: Look into transmogification
-        /*if (this.isPlayer() && Transmogrify.isTransmogrified((Player) this)) {
+        if (this.isPlayer() && Transmogrify.isTransmogrified((Player) this)) {
             Transmogrify.hardReset((Player) this);
-        }*/
+        }
 
         tile = new Tile(x, z, level);
         sync.teleported(true);
@@ -390,9 +390,17 @@ public abstract class Entity {
             sizeY = 0;
         }
 
+        int distance;
+        if (sizeX > 1 || sizeY > 1) {
+            distance = 1;
+        } else {
+            distance = 0;
+        }
+
         InterruptibleTask.bound(this).isCancellableByWalking(false).execute(() -> {
             if(this.attribOr(AttributeKey.DEBUG, false)) {
                 this.message("Distance from destination: " + destination.distance(this.tile));
+                this.message("Arriving when distance is less than: " + distance);
             }
             if(interactAble instanceof MapObj) {
                 this.walkTo((MapObj) interactAble, PathQueue.StepType.REGULAR);
@@ -400,14 +408,13 @@ public abstract class Entity {
                 this.walkTo(destination, PathQueue.StepType.REGULAR, false);
             }
         }).onComplete(then)
-            .onCancel(() -> this.stopActions(true))
-            .completeCondition(() -> {
-                int distance = 0;
-
-                if (sizeX > 1 || sizeY > 1) {
-                    distance = 1;
+            .onCancel(() -> {
+                this.stopActions(true);
+                if(this.attribOr(AttributeKey.DEBUG, false)) {
+                    this.message("Event was cancelled...");
                 }
-
+            })
+            .completeCondition(() -> {
                 return this.tile().distance(destination) <= distance;
             }).submit(TaskManager.playerChains());
     }
@@ -657,5 +664,9 @@ public abstract class Entity {
 
     public void graphic(int id, int height, int delay) {
         sync.graphic(id, height, delay);
+    }
+
+    public void unlock() {
+        lock = LockType.NONE;
     }
 }
