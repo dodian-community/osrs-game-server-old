@@ -100,13 +100,6 @@ public class SimpleAdminCommands extends AdminCommandsWrapper {
                     player.tile().regionZ(), player.tile().chunk()));
         }
 
-        put("pnpc", (player, args) -> {
-            if(args.length < 1) {
-                player.message("You need to specify an NPC id to transform into.");
-                return;
-            }
-            int id = Integer.parseInt(args[0]);
-
         for (String s : new String[]{"ancients", "ancient"}) {
             put(Privilege.ADMIN, s, (p, args) -> {
                 p.message("<col=ac07b5>You changed succesfull your spellbook to the Ancient Magicks");
@@ -145,28 +138,33 @@ public class SimpleAdminCommands extends AdminCommandsWrapper {
                 SpellSelect.reset(p, true, true);
             }, "Switches to the specific spellbook. ::spellbook id");
         }
+            put("pnpc", (player, args) -> {
+                if (args.length < 1) {
+                    player.message("You need to specify an NPC id to transform into.");
+                    return;
+                }
+                int id = Integer.parseInt(args[0]);
+                if (id == -1) {
+                    player.looks().resetRender();
+                } else {
+                    player.looks().render(player.world().definitions().get(NpcDefinition.class, id).renderpairs());
+                }
+
+                player.message("Transmogged player into %s.", args[0]);
+            });
+
+            put("addnpc", (player, args) -> {
+                if (args.length < 1) {
+                    player.message("You need to provide an NPC id.");
+                    return;
+                }
+
+                Npc npc = new Npc(Integer.parseInt(args[0]), world, player.tile());
+                npc.spawnDirection(SpawnDirection.SOUTH);
+                npc.walkRadius(2);
+
+                world.registerNpc(npc);
+            });
+        }
     }
 
-            if (id == -1) {
-                player.looks().resetRender();
-            } else {
-                player.looks().render(player.world().definitions().get(NpcDefinition.class, id).renderpairs());
-            }
-
-            player.message("Transmogged player into %s.", args[0]);
-        });
-
-        put("addnpc", (player, args) -> {
-            if(args.length < 1) {
-                player.message("You need to provide an NPC id.");
-                return;
-            }
-
-            Npc npc = new Npc(Integer.parseInt(args[0]), world, player.tile());
-            npc.spawnDirection(SpawnDirection.SOUTH);
-            npc.walkRadius(2);
-
-            world.registerNpc(npc);
-        });
-    }
-}
