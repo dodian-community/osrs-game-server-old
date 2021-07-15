@@ -22,6 +22,8 @@ import io.nozemi.runescape.net.packets.filters.AdvertisingFilter;
 import io.nozemi.runescape.net.packets.filters.PlayerIsAliveFilter;
 import io.nozemi.runescape.net.packets.filters.SwearingFilter;
 import io.nozemi.runescape.net.packets.models.*;
+import io.nozemi.runescape.orm.models.NpcSpawn;
+import io.nozemi.runescape.orm.repositories.NpcSpawnsRepository;
 import io.nozemi.runescape.util.HuffmanCodec;
 import io.nozemi.runescape.util.SpawnDirection;
 import io.nozemi.runescape.util.Varbit;
@@ -41,11 +43,13 @@ public class PacketMessageHandler {
     private final HuffmanCodec codec;
     private final ButtonHandler buttonHandler;
     private final CommandHandler commandHandler;
+    private final NpcSpawnsRepository repository;
 
     @Autowired
-    public PacketMessageHandler(DataHandler dataHandler, ButtonHandler buttonHandler, ConfigHandler configHandler, CommandHandler commandHandler) {
+    public PacketMessageHandler(DataHandler dataHandler, ButtonHandler buttonHandler, ConfigHandler configHandler, CommandHandler commandHandler, NpcSpawnsRepository repository) {
         this.buttonHandler = buttonHandler;
         this.commandHandler = commandHandler;
+        this.repository = repository;
 
         if(dataHandler.huffman() == null) {
             Config config = configHandler.config();
@@ -124,6 +128,8 @@ public class PacketMessageHandler {
                 npc.spawnDirection(npcSpawningMode.getSpawnDirection());
 
                 player.world().registerNpc(npc);
+
+                repository.save(new NpcSpawn(npc));
 
                 player.message("Spawned NPC successfully at, %s, %s.", walk.getX(), walk.getZ());
             }

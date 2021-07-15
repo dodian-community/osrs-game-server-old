@@ -49,6 +49,16 @@ public class Player extends Entity implements BeanFactoryAware {
     private static final Logger logger = LogManager.getLogger(Player.class);
 
     /**
+     * Account Information
+     */
+    private int userId;
+    private int roleId;
+    private int discordId;
+    private String email;
+    private String discordInfo;
+    private boolean mfaEnabled;
+
+    /**
      * Networking
      */
     private Channel channel;
@@ -69,6 +79,7 @@ public class Player extends Entity implements BeanFactoryAware {
     private Looks looks;
     private IronMode ironMode = IronMode.NONE;
     private GameMode mode = GameMode.CLASSIC;
+    private RunEnergy runEnergy = new RunEnergy(this);
     private double weight;
 
     private Skills skills;
@@ -141,6 +152,14 @@ public class Player extends Entity implements BeanFactoryAware {
         write(UpdateStateCustom.skullToggle(!off));
 
         write(UpdateStateCustom.setErrorReportState(true));
+
+        if(this.attribOr(AttributeKey.NEW_ACCOUNT, false)) {
+            this.message("Welcome to your first time on Dodian! Don't hesitate to contact us for assistance if you have any issues!");
+        }
+
+        if(!this.mfaEnabled) {
+            this.message("<col=bd4602>You don't have two factor authentication enabled. We would recommend you enable this. You can do so on our website.");
+        }
 
         looks.update();
 
@@ -309,6 +328,10 @@ public class Player extends Entity implements BeanFactoryAware {
 
     public Privilege privilege() {
         return privilege;
+    }
+
+    public void privilege(Privilege privilege) {
+        this.privilege = privilege;
     }
 
     @Override
@@ -712,7 +735,6 @@ public class Player extends Entity implements BeanFactoryAware {
         return skills;
     }
 
-    private RunEnergy runEnergy = new RunEnergy(this);
     public RunEnergy runenergy() {
         return runEnergy;
     }
@@ -866,5 +888,13 @@ public class Player extends Entity implements BeanFactoryAware {
     public void inputString(String message, InputValueAction<String> action) {
         this.invokeScript(110, message);
         this.inputStringAction = action;
+    }
+
+    public void userId(int userId) {
+        this.userId = userId;
+    }
+
+    public void mfaEnabled(boolean value) {
+        this.mfaEnabled = value;
     }
 }

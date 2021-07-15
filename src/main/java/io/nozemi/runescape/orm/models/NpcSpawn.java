@@ -1,13 +1,12 @@
 package io.nozemi.runescape.orm.models;
 
+import io.nozemi.runescape.model.entity.Npc;
 import io.nozemi.runescape.util.SpawnDirection;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "npc_spawns")
 public class NpcSpawn {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,6 +21,24 @@ public class NpcSpawn {
     private int combatLevel;
     private int walkRadius;
     private SpawnDirection direction;
+
+    public NpcSpawn() {
+
+    }
+
+    public NpcSpawn(Npc npc) {
+        this.npcId = npc.id();
+        this.x = npc.tile().x;
+        this.y = npc.tile().z;
+        this.level = npc.tile().level;
+        this.walkRadius = npc.walkRadius();
+        this.direction = SpawnDirection.getById(npc.spawnDirection());
+
+        this.respawnDelay = 0;
+        this.combatLevel = 0;
+        this.taskRequired = false;
+        this.health = 0;
+    }
 
     public int getId() {
         return id;

@@ -4,6 +4,7 @@ import io.nozemi.runescape.handlers.Handler;
 import io.nozemi.runescape.model.Tile;
 import io.nozemi.runescape.model.World;
 import io.nozemi.runescape.model.entity.Npc;
+import io.nozemi.runescape.orm.models.NpcSpawn;
 import io.nozemi.runescape.orm.repositories.NpcSpawnsRepository;
 import io.nozemi.runescape.util.SpawnDirection;
 import org.apache.logging.log4j.LogManager;

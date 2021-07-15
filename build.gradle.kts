@@ -25,6 +25,7 @@ dependencies {
 
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-jdbc")
+    implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.session:spring-session-jdbc")
     runtimeOnly("org.springframework.boot:spring-boot-devtools")
@@ -43,6 +44,7 @@ dependencies {
     implementation("io.github.classgraph:classgraph:4.8.102")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
     implementation("io.reactivex.rxjava3:rxjava:3.0.13")
+    implementation("com.warrenstrange:googleauth:1.4.0")
 
     implementation("redis.clients:jedis:2.9.0")
 
