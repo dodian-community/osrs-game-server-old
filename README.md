@@ -14,6 +14,20 @@ The goal is then to create an okay base to start piecing together a [Dodian](htt
 ### Information
 - [Example server config](/data/server.conf.example)
 
+### Setting Up Project
+1. Ideally you have an SSH key setup with your Github account. \
+if not, you can [click here](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to read about how you do that.
+2. When you have your SSH key setup, you can click the green "Code" button above the repository. \
+This will show you a popup dialogue with some options. I recommend SSH, so copy the SSH url.
+3. Open your preferred IDE (I would personally recommend [IntelliJ](https://www.jetbrains.com/idea/download/), get the community edition if you don't already have IntelliJ.).
+4. In IntelliJ, you need to find the option to check out/get from VCS. If you have a project open already, it should be under *File -> New -> Project From Version Control...*
+5. Once it has downloaded, just open it, and let the Gradle stuff import. If it doesn't detect the Gradle project automatically, you need to right-click `build.gradle.kts` and click *Import Gradle Project*
+6. For `game-client` you will likely have to manually import the Gradle project. See step 5 for explanation if not sure.
+7. Make sure you have a server.conf in your data folder, look at the [example config](/data/server.conf.example) for an example.
+8. You need to download the cache. You can use the default OSS cache. [Click here](https://cdn.discordapp.com/attachments/861299604326973460/863868136997519380/cache.zip) to download.
+9. You should now be able to launch the server and client. First launch the server. You can find the Gradle tab to the right in IntelliJ. Under `dodian-osrs` (game server), you find *Tasks -> application -> bootRun*, double click that. Then you find `dodian-osrs-client` (game client), you find *Tasks -> application -> run*.
+10. Make sure to read the [guidelines](/CONTRIBUTE.md) on how to contribute to the project before you submit your pull requests.
+
 ### Credits
 - [Situations](https://www.rune-server.ee/members/situations/)
 - [Velocity](https://www.rune-server.ee/members/velocity/)
