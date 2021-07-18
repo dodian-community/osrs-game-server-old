@@ -1590,7 +1590,7 @@ public class class28 {
 	static final void method474(NpcDef definition, Npc npc, int var1, int var2, int var3) {
 		if (GameClient.field771 < 400) {
 			if (definition.intArray106 != null) {
-				definition = definition.method5189(-1834963481);
+				definition = definition.method5189();
 			}
 
 			if (definition != null) {

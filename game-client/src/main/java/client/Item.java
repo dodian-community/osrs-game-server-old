@@ -91,6 +91,6 @@ public final class Item extends class127 {
    }
 
    public static int method1864(int var0, int var1) {
-      return class39.method673(class120.field1647[var0]);
+      return PacketBuilder.method673(class120.field1647[var0]);
    }
 }

@@ -95,7 +95,7 @@ public class class29 {
 				if (var7 == 0) {
 					class128 var32 = class28.field248.method2894(class13.field82, var9, var10);
 					if (var32 != null) {
-						var40 = class39.method673(var32.field1786);
+						var40 = PacketBuilder.method673(var32.field1786);
 						if (var5 == 2) {
 							var32.field1787 = new class85(var40, 2, var38 + 4, class13.field82, var9, var10, var3, false, var32.field1787);
 							var32.field1788 = new class85(var40, 2, var38 + 1 & 3, class13.field82, var9, var10, var3, false, var32.field1788);
@@ -110,7 +110,7 @@ public class class29 {
 					if (var42 != null) {
 						label401:
 						{
-							var40 = class39.method673(var42.field1824);
+							var40 = PacketBuilder.method673(var42.field1824);
 							if (var5 != 4) {
 
 								if (var5 != 5) {
@@ -138,14 +138,14 @@ public class class29 {
 					}
 
 					if (var43 != null) {
-						var43.field1844 = new class85(class39.method673(var43.field1848), var5, var38, class13.field82, var9, var10, var3, false, var43.field1844);
+						var43.field1844 = new class85(PacketBuilder.method673(var43.field1848), var5, var38, class13.field82, var9, var10, var3, false, var43.field1844);
 					}
 				}
 
 				if (var7 == 3) {
 					class115 var44 = class28.field248.method2953(class13.field82, var9, var10);
 					if (var44 != null) {
-						var44.field1524 = new class85(class39.method673(var44.field1526), 22, var38, class13.field82, var9, var10, var3, false, var44.field1524);
+						var44.field1524 = new class85(PacketBuilder.method673(var44.field1526), 22, var38, class13.field82, var9, var10, var3, false, var44.field1524);
 					}
 				}
 			}

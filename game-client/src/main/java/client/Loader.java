@@ -22,12 +22,19 @@ public class Loader implements AppletStub {
 	public static final int REVISION = 149;
 	public static int port = 43594;
 
-	private static String[] MEMES = {"The nulls were back! Not anymore!"};
+	private static final String[] MEMES = {
+		"The nulls were back! Not anymore!",
+		"Do you even stake, bro?",
+		"This isn't even Dodian anymore!",
+		"Ah shit, here we go again."
+	};
 
 	public static Properties parameters = new Properties();
 
+	public static JFrame frame;
+
 	@DoNotRename
-	public static void main(final String[] args) throws Exception {
+	public static void main(final String[] args) {
 		if (args.length > 1) {
 			params = args[1];
 		}
@@ -40,7 +47,7 @@ public class Loader implements AppletStub {
 		applet.readParameters();
 
 		final GameClient instance = new GameClient();
-		final JFrame frame = new JFrame("Dodian.net Client - Uber Server OSRS - " + MEMES[new Random().nextInt(MEMES.length)]);
+		frame = new JFrame("Dodian.net Client - Uber Server OSRS - " + MEMES[new Random().nextInt(MEMES.length)]);
 
 		instance.setBounds(0, 0, 765, 503);
 		// TODOD new OverlayPanel();
@@ -49,6 +56,7 @@ public class Loader implements AppletStub {
 		frame.setSize(781, 541);
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
+		frame.setResizable(false);
 		instance.setStub(applet);
 		instance.init();
 		instance.start();

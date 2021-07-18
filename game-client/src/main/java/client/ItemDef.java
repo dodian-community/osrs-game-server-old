@@ -262,7 +262,7 @@ public class ItemDef extends class206 {
 			} else if (var2 == 149) {
 				this.int638 = var1.readUShort();
 			} else if (var2 == 249) {
-				this.iterableImpl1_3 = class39.method691(var1, this.iterableImpl1_3, 123380361);
+				this.iterableImpl1_3 = PacketBuilder.method691(var1, this.iterableImpl1_3);
 			}
 		}
 

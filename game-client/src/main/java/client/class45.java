@@ -39,7 +39,7 @@ public class class45 {
                   var11.field2257.writeInt(var1);
                   var11.field2257.writeShort(var2);
                   var11.field2257.writeShort(var3);
-                  GameClient.field626.method1980(var11, (byte)1);
+                  GameClient.field626.method1980(var11);
                }
 
                if(var0 == 2) {
@@ -47,7 +47,7 @@ public class class45 {
                   var11.field2257.writeInt(var1);
                   var11.field2257.writeShort(var2);
                   var11.field2257.writeShort(var3);
-                  GameClient.field626.method1980(var11, (byte)1);
+                  GameClient.field626.method1980(var11);
                }
 
                if(var0 == 3) {
@@ -55,7 +55,7 @@ public class class45 {
                   var11.field2257.writeInt(var1);
                   var11.field2257.writeShort(var2);
                   var11.field2257.writeShort(var3);
-                  GameClient.field626.method1980(var11, (byte)1);
+                  GameClient.field626.method1980(var11);
                }
 
                if(var0 == 4) {
@@ -63,7 +63,7 @@ public class class45 {
                   var11.field2257.writeInt(var1);
                   var11.field2257.writeShort(var2);
                   var11.field2257.writeShort(var3);
-                  GameClient.field626.method1980(var11, (byte)1);
+                  GameClient.field626.method1980(var11);
                }
 
                if(var0 == 5) {
@@ -71,7 +71,7 @@ public class class45 {
                   var11.field2257.writeInt(var1);
                   var11.field2257.writeShort(var2);
                   var11.field2257.writeShort(var3);
-                  GameClient.field626.method1980(var11, (byte)1);
+                  GameClient.field626.method1980(var11);
                }
 
                if(var0 == 6) {
@@ -79,7 +79,7 @@ public class class45 {
                   var11.field2257.writeInt(var1);
                   var11.field2257.writeShort(var2);
                   var11.field2257.writeShort(var3);
-                  GameClient.field626.method1980(var11, (byte)1);
+                  GameClient.field626.method1980(var11);
                }
 
                if(var0 == 7) {
@@ -87,7 +87,7 @@ public class class45 {
                   var11.field2257.writeInt(var1);
                   var11.field2257.writeShort(var2);
                   var11.field2257.writeShort(var3);
-                  GameClient.field626.method1980(var11, (byte)1);
+                  GameClient.field626.method1980(var11);
                }
 
                if(var0 == 8) {
@@ -95,7 +95,7 @@ public class class45 {
                   var11.field2257.writeInt(var1);
                   var11.field2257.writeShort(var2);
                   var11.field2257.writeShort(var3);
-                  GameClient.field626.method1980(var11, (byte)1);
+                  GameClient.field626.method1980(var11);
                }
 
                if(var0 == 9) {
@@ -103,7 +103,7 @@ public class class45 {
                   var11.field2257.writeInt(var1);
                   var11.field2257.writeShort(var2);
                   var11.field2257.writeShort(var3);
-                  GameClient.field626.method1980(var11, (byte)1);
+                  GameClient.field626.method1980(var11);
                }
 
                if(var0 == 10) {
@@ -111,7 +111,7 @@ public class class45 {
                   var11.field2257.writeInt(var1);
                   var11.field2257.writeShort(var2);
                   var11.field2257.writeShort(var3);
-                  GameClient.field626.method1980(var11, (byte)1);
+                  GameClient.field626.method1980(var11);
                }
 
             }

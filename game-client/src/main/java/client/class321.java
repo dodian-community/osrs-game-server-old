@@ -240,7 +240,7 @@ public class class321 {
          this.field3863 = this.field3825.method205(var6 + this.field3825.method258(802069238) * 64, var7 + this.field3825.method247(1766029106) * 64, -2056689977);
          if(this.field3863 != null && var3) {
             boolean var8 = GameClient.field747 >= 2;
-            if(var8 && class39.field341[82] && class39.field341[81]) {
+            if(var8 && PacketBuilder.field341[82] && PacketBuilder.field341[81]) {
                class19.method197(this.field3863.field2564, this.field3863.field2565, this.field3863.field2567, false, -185686221);
             } else {
                boolean var9 = true;
@@ -255,7 +255,7 @@ public class class321 {
                if(var9) {
                   class172 var12 = class26.method433(OutgoingPacket.field2190, GameClient.field626.field1218, 857551476);
                   var12.field2257.writeIntV1(this.field3863.method4437(2113558337));
-                  GameClient.field626.method1980(var12, (byte)1);
+                  GameClient.field626.method1980(var12);
                   this.field3849 = 0L;
                }
             }

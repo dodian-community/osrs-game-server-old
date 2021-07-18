@@ -79,6 +79,6 @@ public class class19 {
       var10000.writeIntV2(var10001);
       var5.field2257.writeShortA(var1);
       var5.field2257.writeLEShortA(var0);
-      GameClient.field626.method1980(var5, (byte)1);
+      GameClient.field626.method1980(var5);
    }
 }

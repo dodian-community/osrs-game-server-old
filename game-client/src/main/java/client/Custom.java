@@ -65,15 +65,12 @@ public class Custom {
 	}
 
 	static {
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-				HWID = sha(hwid());
-				if (HWID == null || HWID.length == 0) {
-					HWID = new byte[20];
-				}
-				getMacAddress();
+		new Thread(() -> {
+			HWID = sha(hwid());
+			if (HWID == null || HWID.length == 0) {
+				HWID = new byte[20];
 			}
+			getMacAddress();
 		}).start();
 	}
 

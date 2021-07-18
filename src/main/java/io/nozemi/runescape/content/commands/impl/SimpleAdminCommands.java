@@ -10,6 +10,7 @@ import io.nozemi.runescape.model.World;
 import io.nozemi.runescape.model.entity.Npc;
 import io.nozemi.runescape.model.entity.player.Privilege;
 import io.nozemi.runescape.model.item.Item;
+import io.nozemi.runescape.model.item.ItemAttrib;
 import io.nozemi.runescape.util.SpawnDirection;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -53,7 +54,12 @@ public class SimpleAdminCommands extends AdminCommandsWrapper {
                 return;
             }
 
-            Item item = new Item(Integer.parseInt(args[0]), 1);
+            int amount = 1;
+            if(args.length >= 2) {
+                amount = Integer.parseInt(args[1]);
+            }
+
+            Item item = new Item(Integer.parseInt(args[0]), amount);
             player.inventory().add(item, true);
             player.message("<col=28b507>Spawned the item successfully!");
         }, "Spawn an item of desired amount (default 1)");
@@ -125,6 +131,17 @@ public class SimpleAdminCommands extends AdminCommandsWrapper {
             npc.walkRadius(2);
 
             world.registerNpc(npc);
+        });
+
+        put("addprop", (player, args) -> {
+            if(args.length < 1) {
+                player.message("You need to specify an item slot (1-28).");
+                return;
+            }
+
+            int slot = Integer.parseInt(args[0]);
+
+            player.inventory().get(slot - 1).modifyProperty(ItemAttrib.CHARGES, 2, 4);
         });
     }
 }

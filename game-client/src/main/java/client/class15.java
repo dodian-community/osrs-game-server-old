@@ -1081,7 +1081,7 @@ public class class15 implements class188 {
 				if (Stream.client.method801(-997320713)) {
 					var66 = class26.method433(OutgoingPacket.field2148, GameClient.field626.field1218, 1258900384);
 					var66.field2257.writeInt(1057001181);
-					GameClient.field626.method1980(var66, (byte) 1);
+					GameClient.field626.method1980(var66);
 				}
 
 				if (!GameClient.isInstanceMap) {
@@ -1108,7 +1108,7 @@ public class class15 implements class188 {
 				class54.method1017(2125462680);
 				class49.method952((byte) -66);
 				var66 = class26.method433(OutgoingPacket.field2224, GameClient.field626.field1218, 1547704312);
-				GameClient.field626.method1980(var66, (byte) 1);
+				GameClient.field626.method1980(var66);
 				class43.field368.vmethod3330(2019081810);
 
 				for (var7 = 0; var7 < 32; var7++) {

@@ -42,9 +42,12 @@ public class ServerProcessor extends Thread {
     public static Object2LongArrayMap<String> computeTimes = new Object2LongArrayMap<>();
 
     private final PacketProcessingTask packetProcessingTask;
+    private final ScriptProcessingTask scriptProcessingTask;
+    private final NetworkFlushTask networkFlushTask;
 
     @Autowired
-    public ServerProcessor(PacketProcessingTask packetProcessingTask, World world) {
+    public ServerProcessor(PacketProcessingTask packetProcessingTask, NetworkFlushTask networkFlushTask, World world,
+                           ScriptProcessingTask scriptProcessingTask) {
         super("ServerProcessor");
 
         this.logicJobs = new ConcurrentLinkedQueue<>();
@@ -53,11 +56,13 @@ public class ServerProcessor extends Thread {
         this.taskExecutor = Executors.newWorkStealingPool();
 
         this.packetProcessingTask = packetProcessingTask;
+        this.scriptProcessingTask = scriptProcessingTask;
+        this.networkFlushTask = networkFlushTask;
     }
 
     public void initialize() {
         tasks.add(packetProcessingTask);
-        tasks.add(new ScriptProcessingTask());
+        tasks.add(scriptProcessingTask);
         tasks.add(new PlayerProcessingTask());
         tasks.add(new NpcProcessingTask());
 
@@ -68,7 +73,7 @@ public class ServerProcessor extends Thread {
         tasks.add(new PlayerPostSyncTask());
         tasks.add(new NpcPostSyncTask());
 
-        tasks.add(new NetworkFlushTask());
+        tasks.add(networkFlushTask);
 
         start();
     }

@@ -166,7 +166,7 @@ public class class191 {
                      var4 = 1;
                   } else if(var0 == 3103) {
                      var30 = class26.method433(OutgoingPacket.field2195, GameClient.field626.field1218, 91606436);
-                     GameClient.field626.method1980(var30, (byte)1);
+                     GameClient.field626.method1980(var30);
 
                      for(class55 var28 = (class55) GameClient.field741.method4018(); var28 != null; var28 = (class55) GameClient.field741.method4019()) {
                         if(var28.field494 == 0 || var28.field494 == 3) {
@@ -190,7 +190,7 @@ public class class191 {
 
                      var16 = class26.method433(OutgoingPacket.field2150, GameClient.field626.field1218, 248902679);
                      var16.field2257.writeInt(var15);
-                     GameClient.field626.method1980(var16, (byte)1);
+                     GameClient.field626.method1980(var16);
                      var4 = 1;
                   } else {
                      class172 var29;
@@ -199,14 +199,14 @@ public class class191 {
                         var29 = class26.method433(OutgoingPacket.field2209, GameClient.field626.field1218, -912327627);
                         var29.field2257.writeByte(var5.length() + 1);
                         var29.field2257.writeString(var5, 1702186069);
-                        GameClient.field626.method1980(var29, (byte)1);
+                        GameClient.field626.method1980(var29);
                         var4 = 1;
                      } else if(var0 == 3106) {
                         var5 = class69.field1001[--class55.field497];
                         var29 = class26.method433(OutgoingPacket.field2136, GameClient.field626.field1218, 1926083584);
                         var29.field2257.writeByte(var5.length() + 1);
                         var29.field2257.writeString(var5, -1678809687);
-                        GameClient.field626.method1980(var29, (byte)1);
+                        GameClient.field626.method1980(var29);
                         var4 = 1;
                      } else {
                         String var31;
@@ -226,22 +226,22 @@ public class class191 {
                                     var13 = class26.method433(OutgoingPacket.field2206, GameClient.field626.field1218, 443889681);
                                     var13.field2257.writeByte(0);
                                     var13.field2257.writeShort(var8[var11]);
-                                    GameClient.field626.method1980(var13, (byte)1);
+                                    GameClient.field626.method1980(var13);
                                  } else if(var14 == 4) {
                                     var13 = class26.method433(OutgoingPacket.field2220, GameClient.field626.field1218, -1200485894);
                                     var13.field2257.writeLEShortA(var8[var11]);
                                     var13.field2257.writeByte(0);
-                                    GameClient.field626.method1980(var13, (byte)1);
+                                    GameClient.field626.method1980(var13);
                                  } else if(var14 == 6) {
                                     var13 = class26.method433(OutgoingPacket.field2163, GameClient.field626.field1218, -777314881);
                                     var13.field2257.writeByteN(0);
                                     var13.field2257.writeLEShortA(var8[var11]);
-                                    GameClient.field626.method1980(var13, (byte)1);
+                                    GameClient.field626.method1980(var13);
                                  } else if(var14 == 7) {
                                     var13 = class26.method433(OutgoingPacket.field2222, GameClient.field626.field1218, 1443202728);
                                     var13.field2257.writeShortLE(var8[var11]);
                                     var13.field2257.writeByteA(0);
-                                    GameClient.field626.method1980(var13, (byte)1);
+                                    GameClient.field626.method1980(var13);
                                  }
 
                                  var41 = true;
@@ -292,7 +292,7 @@ public class class191 {
                            var14 = class69.field999[--class69.field1003];
                            var29 = class26.method433(OutgoingPacket.field2225, GameClient.field626.field1218, -310439195);
                            var29.field2257.writeShort(var14);
-                           GameClient.field626.method1980(var29, (byte)1);
+                           GameClient.field626.method1980(var29);
                            var4 = 1;
                         } else if(var0 == 3116) {
                            var14 = class69.field999[--class69.field1003];
@@ -309,7 +309,7 @@ public class class191 {
                               var33.field2257.writeByteN(var14);
                               var33.field2257.writeString(var40, 2047250627);
                               var33.field2257.writeString(var31, -79449560);
-                              GameClient.field626.method1980(var33, (byte)1);
+                              GameClient.field626.method1980(var33);
                               var4 = 1;
                            }
                         } else if(var0 == 3117) {
@@ -715,7 +715,7 @@ public class class191 {
                         var16.field2257.writeByte(class316.method5820(var5, (short)256) + 1);
                         var16.field2257.writeByteA(var15);
                         var16.field2257.writeString(var5, 1587968607);
-                        GameClient.field626.method1980(var16, (byte)1);
+                        GameClient.field626.method1980(var16);
                         var4 = 1;
                      } else if(var0 == 3605) {
                         var5 = class69.field1001[--class55.field497];
@@ -798,7 +798,7 @@ public class class191 {
                      } else if(var0 == 3620) {
                         var30 = class26.method433(OutgoingPacket.field2153, GameClient.field626.field1218, -1165337183);
                         var30.field2257.writeByte(0);
-                        GameClient.field626.method1980(var30, (byte)1);
+                        GameClient.field626.method1980(var30);
                         var4 = 1;
                      } else if(var0 == 3621) {
                         if(!class181.field2332.method1624(-1835922392)) {

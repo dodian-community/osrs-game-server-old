@@ -1,5 +1,6 @@
 package io.nozemi.runescape.model.item;
 
+import io.nozemi.runescape.GameInitializer;
 import io.nozemi.runescape.fs.DefinitionRepository;
 import io.nozemi.runescape.fs.ItemDefinition;
 import io.nozemi.runescape.model.World;
@@ -14,12 +15,16 @@ import java.util.Set;
  */
 public final class Item {
 	
-	private final int id;
-	private final int amount;
+	private int id;
+	private int amount;
 	private Map<ItemAttrib, Integer> properties;
+
+	public Item() {
+
+	}
 	
 	public Item(Item item) {
-		this(item, item.amount());
+		this(item, item.getAmount());
 	}
 	
 	public Item(Item item, int amount) {
@@ -40,18 +45,22 @@ public final class Item {
 		this.amount = amount >= 0 ? amount : 0;
 	}
 	
-	public int id() {
+	public int getId() {
 		return id;
 	}
 	
-	public int amount() {
+	public int getAmount() {
 		return amount;
 	}
 	
 	public boolean hasProperties() {
 		return properties != null && properties.size() > 0;
 	}
-	
+
+	public Map<ItemAttrib, Integer> getProperties() {
+		return properties;
+	}
+
 	public Item property(ItemAttrib key, Integer value) {
 		if (properties == null)
 			properties = new EnumMap<>(ItemAttrib.class);
@@ -91,7 +100,7 @@ public final class Item {
 	 * @return The item's definitions, or <code>null</code> if that didn't work out.
 	 */
 	public ItemDefinition definition(World world) {
-		return world.definitions().get(ItemDefinition.class, id);
+		return GameInitializer.world().definitions().get(ItemDefinition.class, id);
 	}
 	
 	public ItemDefinition definition(DefinitionRepository repo) {
@@ -142,7 +151,7 @@ public final class Item {
 	}
 	
 	public boolean noteable(World world) {
-		return id != note(world).id();
+		return id != note(world).getId();
 	}
 	
 	public boolean stackable(World world) {
@@ -356,4 +365,8 @@ public final class Item {
 			22234, //Dragon boots
 			22296 //Staff of light
 	};
+
+	public Map<ItemAttrib, Integer> properties() {
+		return this.properties;
+	}
 }

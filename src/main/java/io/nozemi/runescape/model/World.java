@@ -1,7 +1,6 @@
 package io.nozemi.runescape.model;
 
 import com.typesafe.config.Config;
-import io.nozemi.runescape.GameInitializer;
 import io.nozemi.runescape.content.mechanics.VarbitAttributes;
 import io.nozemi.runescape.fs.DefinitionRepository;
 import io.nozemi.runescape.fs.MapDefinition;
@@ -261,8 +260,8 @@ public class World {
     }
     public GroundItem spawnGroundItem(GroundItem item) {
         // Nonstackable but more than 1?
-        if (item.item().amount() > 1 && !item.item().definition(this).stackable()) {
-            for (int i = 0; i < Math.min(10, item.item().amount()); i++) {
+        if (item.item().getAmount() > 1 && !item.item().definition(this).stackable()) {
+            for (int i = 0; i < Math.min(10, item.item().getAmount()); i++) {
                 spawnGroundItem(new GroundItem(this, new Item(item.item(), 1), item.tile(), item.owner()));
             }
 
@@ -274,9 +273,9 @@ public class World {
         GroundItem newItem = item;
         if (item.item().definition(this).stackable()) {
             for (GroundItem g : groundItems) {
-                if (g.tile().equals(item.tile()) && g.item().id() == item.item().id() && (Objects.equals(g.owner(), item.owner()) || (g.owner() == null && item.owner() == null))) {
-                    if (!((long) g.item().amount() + (long) item.item().amount() > Integer.MAX_VALUE)) { // Amt becomes negative.
-                        g.item(new Item(g.item().id(), g.item().amount() + item.item().amount()));
+                if (g.tile().equals(item.tile()) && g.item().getId() == item.item().getId() && (Objects.equals(g.owner(), item.owner()) || (g.owner() == null && item.owner() == null))) {
+                    if (!((long) g.item().getAmount() + (long) item.item().getAmount() > Integer.MAX_VALUE)) { // Amt becomes negative.
+                        g.item(new Item(g.item().getId(), g.item().getAmount() + item.item().getAmount()));
                         updated = true;
                         newItem = g;
                         break;
@@ -484,7 +483,7 @@ public class World {
 
     // Despawn because the time ran out, NOT because it was picked up or called to be removed some other way.
     public static void onDespawned(GroundItem item, World world) {
-        int droppedId = item.item().id();
+        int droppedId = item.item().getId();
         /*for (int untradId : ItemsOnDeath.RS_UNTRADABLES_LIST) {
             if (droppedId == untradId) {
                 world.playerForId(item.owner()).ifPresent(p -> {
@@ -604,5 +603,32 @@ public class World {
 
     public MapObj objById(int id, Tile tile) {
         return objById(id, tile.x, tile.z, tile.level);
+    }
+
+    public int[][] clipAround(Tile base, int radius) {
+        Tile src = base.transform(-radius, -radius, 0);
+        return clipSquare(src, radius * 2 + 1);
+    }
+
+    public int[][] clipSquare(Tile base, int size) {
+        int[][] clipping = new int[size][size];
+
+        MapDefinition active = definitionRepository.get(MapDefinition.class, base.region());
+        int activeId = base.region();
+
+        for (int x = base.x; x < base.x + size; x++) {
+            for (int z = base.z; z < base.z + size; z++) {
+                int reg = Tile.coordsToRegion(x, z);
+                if (reg != activeId) {
+                    activeId = reg;
+                    active = definitionRepository.get(MapDefinition.class, activeId);
+                }
+
+                if (active != null)
+                    clipping[x - base.x][z - base.z] = active.getMasks()[base.level][x & 63][z & 63]; // TODO this has -1 AOOBE
+            }
+        }
+
+        return clipping;
     }
 }

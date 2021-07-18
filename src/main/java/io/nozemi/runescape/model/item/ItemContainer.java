@@ -1,40 +1,47 @@
 package io.nozemi.runescape.model.item;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import io.nozemi.runescape.GameInitializer;
 import io.nozemi.runescape.fs.ItemDefinition;
 import io.nozemi.runescape.model.GroundItem;
 import io.nozemi.runescape.model.World;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.util.Tuple;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.util.*;
 
 /**
  * Created by Bart on 7/10/2015.
  */
-public class ItemContainer implements Iterable<Item> {
+@Component
+@JsonIgnoreProperties({"beanFactory", "world", "empty", "iterator"})
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+public class ItemContainer implements Iterable<Item>, BeanFactoryAware {
 	
 	private static final Tuple<Integer, Item> NULL_TUPLE = new Tuple<>(-1, null);
-	
-	private World world;
+
 	private Item[] items;
-	private final Type type;
+	private Type type;
 	private boolean dirty = true;
+	private World world;
 	
-	public ItemContainer(World world, int size, Type type) {
+	/*public ItemContainer(int size, Type type) {
+		this.world = beanFactory.getBean(World.class);
 		items = new Item[size];
-		this.world = world;
 		this.type = type;
 	}
 	
-	public ItemContainer(World world, Item[] items, Type type) {
+	public ItemContainer(Item[] items, Type type) {
+		this.world = beanFactory.getBean(World.class);
 		this.items = items;
-		this.world = world;
 		this.type = type;
-	}
-	
-	public World world() {
-		return world;
-	}
+	}*/
 	
 	public Type type() {
 		return type;
@@ -42,6 +49,16 @@ public class ItemContainer implements Iterable<Item> {
 	
 	public int size() {
 		return items.length;
+	}
+
+	public ItemContainer setSize(int size) {
+		this.items = new Item[size];
+		return this;
+	}
+
+	public ItemContainer setType(ItemContainer.Type type) {
+		this.type = type;
+		return this;
 	}
 	
 	public int nextFreeSlot() {
@@ -63,7 +80,7 @@ public class ItemContainer implements Iterable<Item> {
 			if (items()[i] == null) {
 				continue;
 			}
-			if (items()[i].id() == itemId) {
+			if (items()[i].getId() == itemId) {
 				return items()[i];
 			}
 		}
@@ -146,11 +163,15 @@ public class ItemContainer implements Iterable<Item> {
 	}
 	
 	public Result add(Item item, boolean force) {
-		if (item == null || item.amount() <= 0)
-			return new Result(item == null ? -1 : item.amount(), 0);
+		if (item == null || item.getAmount() <= 0)
+			return new Result(item == null ? -1 : item.getAmount(), 0);
 		
-		int start = Math.min(0, slotOf(item.id()));
+		int start = Math.min(0, slotOf(item.getId()));
 		return add(item, force, start);
+	}
+
+	public Item[] getItems() {
+		return items;
 	}
 
 	/**
@@ -159,13 +180,12 @@ public class ItemContainer implements Iterable<Item> {
 	 * @return
 	 */
 	public boolean roomFor(Item item) { // TODO stackable & already has check.. needs World param
-		return freeSlots() >= item.amount();
+		return freeSlots() >= item.getAmount();
 	}
 	
 	@Override
 	public String toString() {
 		return "ItemContainer{" +
-				"world=" + world +
 				", items=" + Arrays.toString(items) +
 				", type=" + type +
 				", dirty=" + dirty +
@@ -173,11 +193,15 @@ public class ItemContainer implements Iterable<Item> {
 	}
 	
 	public Result add(Item item, boolean force, int start) {
-		if (item == null || item.amount() <= 0)
-			return new Result(item == null ? -1 : item.amount(), 0);
+		if (item == null || item.getAmount() <= 0)
+			return new Result(item == null ? -1 : item.getAmount(), 0);
 		
 		if (start < 0)
 			start = 0;
+
+		if(world == null) {
+			this.world = GameInitializer.world();
+		}
 		
 		ItemDefinition def = item.definition(world);
 		
@@ -187,23 +211,23 @@ public class ItemContainer implements Iterable<Item> {
 		}
 		
 		boolean stackable = !item.hasProperties() && (def.stackable() || type == Type.FULL_STACKING);
-		int amt = count(item.id());
+		int amt = count(item.getId());
 		
 		// On banks, let's only count the first stack.
 		if (stackable && type == Type.FULL_STACKING) {
-			Tuple<Integer, Item> firstMatch = findFirst(item.id());
+			Tuple<Integer, Item> firstMatch = findFirst(item.getId());
 			
 			if (firstMatch.first() != -1) {
-				amt = firstMatch.second().amount();
+				amt = firstMatch.second().getAmount();
 			}
 		}
 		
 		// Determine if this is going to work in advance
 		if (!force) {
-			if (stackable && item.amount() > Integer.MAX_VALUE - amt) {
-				return new Result(item.amount(), 0);
-			} else if (!stackable && item.amount() > size() - amt) {
-				return new Result(item.amount(), 0);
+			if (stackable && item.getAmount() > Integer.MAX_VALUE - amt) {
+				return new Result(item.getAmount(), 0);
+			} else if (!stackable && item.getAmount() > size() - amt) {
+				return new Result(item.getAmount(), 0);
 			}
 		}
 		
@@ -219,29 +243,29 @@ public class ItemContainer implements Iterable<Item> {
 		
 		// And complete the actual operation =)
 		if (stackable) {
-			int index = findFirst(item.id()).first();
+			int index = findFirst(item.getId()).first();
 			
 			if (index == -1) {
 				if (nextFreeSlot() == -1)
-					return new Result(item.amount(), 0);
+					return new Result(item.getAmount(), 0);
 				
 				// It has been requested to insert the item at a specific place, or fallback to the available one.
 				int targetSlot = items[start] == null ? start : nextFreeSlot();
-				items[targetSlot] = new Item(item.id(), item.amount());
+				items[targetSlot] = new Item(item.getId(), item.getAmount());
 				makeDirty();
-				return new Result(item.amount(), item.amount(), targetSlot);
+				return new Result(item.getAmount(), item.getAmount(), targetSlot);
 			} else {
 				long cur = amt;
-				long target = cur + item.amount();
-				int add = (int) (target > Integer.MAX_VALUE ? Integer.MAX_VALUE - cur : item.amount());
+				long target = cur + item.getAmount();
+				int add = (int) (target > Integer.MAX_VALUE ? Integer.MAX_VALUE - cur : item.getAmount());
 				
-				items[index] = new Item(item.id(), amt + add);
+				items[index] = new Item(item.getId(), amt + add);
 				makeDirty();
-				return new Result(item.amount(), add, index);
+				return new Result(item.getAmount(), add, index);
 			}
 		} else {
 			List<Integer> slots = new LinkedList<>();
-			int left = item.amount();
+			int left = item.getAmount();
 			for (int x = 0; x < size(); x++) {
 				int i = (x + start) % size();
 				if (items[i] == null) {
@@ -254,13 +278,13 @@ public class ItemContainer implements Iterable<Item> {
 			}
 			
 			makeDirty();
-			return new Result(item.amount(), item.amount() - left, slots.stream().mapToInt(i -> i).toArray());
+			return new Result(item.getAmount(), item.getAmount() - left, slots.stream().mapToInt(i -> i).toArray());
 		}
 	}
 	
 	public Result remove(int id, boolean force) {
 		Item item = new Item(id);
-		return remove(item, force, findFirst(item.id()).first());
+		return remove(item, force, findFirst(item.getId()).first());
 	}
 	
 	public Result remove(int id, boolean force, int start) {
@@ -269,29 +293,29 @@ public class ItemContainer implements Iterable<Item> {
 	}
 	
 	public Result remove(Item item, boolean force) {
-		return remove(item, force, findFirst(item.id()).first());
+		return remove(item, force, findFirst(item.getId()).first());
 	}
 	
 	public Result remove(Item item, boolean force, int start) {
-		if (item == null || item.amount() <= 0)
-			return new Result(item == null ? -1 : item.amount(), 0);
+		if (item == null || item.getAmount() <= 0)
+			return new Result(item == null ? -1 : item.getAmount(), 0);
 		
 		if (start < 0)
 			start = 0;
 		
-		ItemDefinition def = item.definition(world);
+		ItemDefinition def = item.definition(GameInitializer.world());
 		boolean stackable = !item.hasProperties() && (def.stackable() || type == Type.FULL_STACKING);
-		int amt = count(item.id());
+		int amt = count(item.getId());
 		
 		// Do we even have this item?
 		if (amt < 1) {
-			return new Result(item.amount(), 0);
+			return new Result(item.getAmount(), 0);
 		}
 		
 		// Determine if this is going to work in advance
 		if (!force) {
-			if (item.amount() > amt) {
-				return new Result(item.amount(), 0);
+			if (item.getAmount() > amt) {
+				return new Result(item.getAmount(), 0);
 			}
 		}
 		
@@ -299,23 +323,23 @@ public class ItemContainer implements Iterable<Item> {
 		if (stackable) {
 			Item i = items[start];
 			if (i == null) {
-				return new Result(item.amount(), 0);
+				return new Result(item.getAmount(), 0);
 			}
-			int remove = Math.min(item.amount(), items[start].amount());
-			items[start] = new Item(items[start], items[start].amount() - remove);
+			int remove = Math.min(item.getAmount(), items[start].getAmount());
+			items[start] = new Item(items[start], items[start].getAmount() - remove);
 			
-			if (items[start].amount() == 0)
+			if (items[start].getAmount() == 0)
 				items[start] = null;
 			
 			makeDirty();
-			return new Result(item.amount(), remove, start);
+			return new Result(item.getAmount(), remove, start);
 		} else {
 			List<Integer> slots = new LinkedList<>();
-			int left = item.amount();
+			int left = item.getAmount();
 			
 			for (int x = 0; x < size(); x++) {
 				int i = (x + start) % size();
-				if (items[i] != null && items[i].id() == item.id()) {
+				if (items[i] != null && items[i].getId() == item.getId()) {
 					items[i] = null;
 					slots.add(i);
 					if (--left == 0) {
@@ -325,7 +349,7 @@ public class ItemContainer implements Iterable<Item> {
 			}
 			
 			makeDirty();
-			return new Result(item.amount(), item.amount() - left, slots.stream().mapToInt(i -> i).toArray());
+			return new Result(item.getAmount(), item.getAmount() - left, slots.stream().mapToInt(i -> i).toArray());
 		}
 	}
 	
@@ -336,7 +360,7 @@ public class ItemContainer implements Iterable<Item> {
 	 */
 	@Deprecated
 	public void set(int slot, Item item) {
-		if (item != null && item.amount() < 1)
+		if (item != null && item.getAmount() < 1)
 			item = null;
 		items[slot] = item;
 		makeDirty();
@@ -349,8 +373,8 @@ public class ItemContainer implements Iterable<Item> {
 		boolean stacks = new Item(item).definition(world).stackable();
 		
 		for (Item i : items) {
-			if (i != null && i.id() == item) {
-				count += i.amount();
+			if (i != null && i.getId() == item) {
+				count += i.getAmount();
 				
 				// Avoid breaking the game by returning a 'fake' count on stackables (indicates game error)
 				if (stacks)
@@ -367,11 +391,11 @@ public class ItemContainer implements Iterable<Item> {
 		}
 		
 		Item item = items[slot];
-		if (item == null || item.id() != itemId) {
+		if (item == null || item.getId() != itemId) {
 			return 0;
 		}
 		
-		return Math.min(Integer.MAX_VALUE, item.amount());
+		return Math.min(Integer.MAX_VALUE, item.getAmount());
 	}
 	
 	public int count(Integer... matches) {
@@ -380,8 +404,8 @@ public class ItemContainer implements Iterable<Item> {
 		long count = 0;
 		
 		for (Item i : items) {
-			if (i != null && list.contains(i.id()))
-				count += i.amount();
+			if (i != null && list.contains(i.getId()))
+				count += i.getAmount();
 		}
 		
 		return (int) Math.min(Integer.MAX_VALUE, count);
@@ -419,7 +443,7 @@ public class ItemContainer implements Iterable<Item> {
 	}
 	
 	public boolean has(Item item) {
-		return item != null && findFirst(item.id()).first() != -1;
+		return item != null && findFirst(item.getId()).first() != -1;
 	}
 	
 	public boolean has(int item) {
@@ -428,7 +452,7 @@ public class ItemContainer implements Iterable<Item> {
 	
 	public boolean hasAt(int slot, int item) {
 		Item at = items[slot];
-		return at != null && at.id() == item;
+		return at != null && at.getId() == item;
 	}
 	
 	public boolean hasAny(int... items) {
@@ -444,7 +468,7 @@ public class ItemContainer implements Iterable<Item> {
 	
 	public boolean hasAll(Item... items) {
 		for (Item i : items)
-			if (i != null && findFirst(i.id()).first() == -1)
+			if (i != null && findFirst(i.getId()).first() == -1)
 				return false;
 		return true;
 	}
@@ -458,7 +482,7 @@ public class ItemContainer implements Iterable<Item> {
 	
 	public boolean hasAllArr(Item[] items) {
 		for (Item i : items)
-			if (i != null && findFirst(i.id()).first() == -1)
+			if (i != null && findFirst(i.getId()).first() == -1)
 				return false;
 		return true;
 	}
@@ -490,7 +514,7 @@ public class ItemContainer implements Iterable<Item> {
 
 	public int getId(int slot) {
 		Item item = get(slot);
-		return item == null ? -1 : item.id();
+		return item == null ? -1 : item.getId();
 	}
 	
 	public boolean hasAt(int slot) {
@@ -499,7 +523,7 @@ public class ItemContainer implements Iterable<Item> {
 	
 	public Tuple<Integer, Item> findFirst(int item) {
 		for (int i = 0; i < size(); i++) {
-			if (items[i] != null && items[i].id() == item)
+			if (items[i] != null && items[i].getId() == item)
 				return new Tuple<>(i, items[i]);
 		}
 		
@@ -508,7 +532,7 @@ public class ItemContainer implements Iterable<Item> {
 	
 	public Tuple<Integer, Item> findFirst(Set<Integer> matches) {
 		for (int i = 0; i < size(); i++) {
-			if (items[i] != null && matches.contains(items[i].id()))
+			if (items[i] != null && matches.contains(items[i].getId()))
 				return new Tuple<>(i, items[i]);
 		}
 		
@@ -519,7 +543,7 @@ public class ItemContainer implements Iterable<Item> {
 		List<Tuple<Integer, Item>> results = new LinkedList<>();
 		
 		for (int i = 0; i < size(); i++) {
-			if (items[i] != null && items[i].id() == item)
+			if (items[i] != null && items[i].getId() == item)
 				results.add(new Tuple<>(i, items[i]));
 		}
 		
@@ -556,7 +580,7 @@ public class ItemContainer implements Iterable<Item> {
 	
 	public int slotOf(int id) {
 		for (int i = 0; i < size(); i++) {
-			if (items[i] != null && items[i].id() == id) {
+			if (items[i] != null && items[i].getId() == id) {
 				return i;
 			}
 		}
@@ -584,7 +608,12 @@ public class ItemContainer implements Iterable<Item> {
 	private boolean isBank() {
 		return size() == 800;
 	}
-	
+
+	@Override
+	public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+		this.world = beanFactory.getBean(World.class);
+	}
+
 	public static enum Type {
 		REGULAR, FULL_STACKING
 	}

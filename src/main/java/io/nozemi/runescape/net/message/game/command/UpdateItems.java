@@ -46,16 +46,16 @@ public class UpdateItems extends Command {
 			if ((olditem == null && newitem != null) ||
 					(newitem == null && olditem != null) ||
 					(olditem != null && newitem != null &&
-							(olditem.id() != newitem.id() || olditem.amount() != newitem.amount()))) {
+							(olditem.getId() != newitem.getId() || olditem.getAmount() != newitem.getAmount()))) {
 				buffer.writeCompact(i); // Item slot
 				
 				if (newitem == null) {
 					buffer.writeShort(0);
 				} else {
-					buffer.writeShort(newitem.id() + 1);
-					buffer.writeByte(Math.min(255, newitem.amount()));
+					buffer.writeShort(newitem.getId() + 1);
+					buffer.writeByte(Math.min(255, newitem.getAmount()));
 					
-					if (newitem.amount() >= 255) buffer.writeInt(newitem.amount());
+					if (newitem.getAmount() >= 255) buffer.writeInt(newitem.getAmount());
 				}
 			}
 		}

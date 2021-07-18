@@ -24,8 +24,8 @@ public class AddGroundItem extends Command {
 		int z = item.tile().z % 8;
 
 		packet.writeByteS((x << 4) | z);
-		packet.writeShortA(item.item().id());
-		packet.writeLEShort(item.item().amount());
+		packet.writeShortA(item.item().getId());
+		packet.writeLEShort(item.item().getAmount());
 		
 		return packet;
 	}

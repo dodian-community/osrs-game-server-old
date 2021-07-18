@@ -76,11 +76,11 @@ public class SetItems extends Command {
 					buffer.writeByte(0);
 					buffer.writeShort(0);
 				} else {
-					buffer.writeByte(Math.min(255, item.amount()));
+					buffer.writeByte(Math.min(255, item.getAmount()));
 					
-					if (item.amount() >= 255) buffer.writeIntV2(item.amount());
+					if (item.getAmount() >= 255) buffer.writeIntV2(item.getAmount());
 					
-					buffer.writeShort(item.id() + 1);
+					buffer.writeShort(item.getId() + 1);
 				}
 			}
 		}

@@ -20,14 +20,23 @@
           "sound": [194]
         },
         {
-          "delay": 5,
+          "delay": 3,
           "animation": [4855],
           "graphics": [803, -1, 0],
           "sound": [195]
         },
         {
-          "delay": 5,
+          "delay": 3,
           "graphics": [804]
+        },
+        {
+          "delay": 1,
+          "animation": [4857]
+        },
+        {
+          "delay": 2,
+          "graphics": [-1],
+          "animation": [-1]
         }]
   }
 ]

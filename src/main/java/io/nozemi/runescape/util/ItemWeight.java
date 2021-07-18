@@ -55,16 +55,16 @@ public class ItemWeight {
 		
 		for (Item item : player.inventory()) {
 			if (item != null) {
-				weight += getWeight(item.id());
+				weight += getWeight(item.getId());
 			}
 		}
 		
 		for (Item item : player.equipment()) {
 			if (item != null) {
-				if (equipweightOverrides.containsKey(item.id())) {
-					weight += equipweightOverrides.get(item.id());
+				if (equipweightOverrides.containsKey(item.getId())) {
+					weight += equipweightOverrides.get(item.getId());
 				} else {
-					weight += getWeight(item.id());
+					weight += getWeight(item.getId());
 				}
 			}
 		}

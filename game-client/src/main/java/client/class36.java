@@ -119,12 +119,12 @@ public class class36 {
                var14.field2257.writeShort(var12 + class62.baseX);
                PacketBuffer var10000 = var14.field2257;
                int var10001;
-               if(class39.field341[82]) {
+               if(PacketBuilder.field341[82]) {
                   if(var3 != -201841471) {
                      return;
                   }
 
-                  var10001 = class39.field341[81] ? 2 : 1;
+                  var10001 = PacketBuilder.field341[81] ? 2 : 1;
                } else {
                   var10001 = 0;
                }
@@ -141,7 +141,7 @@ public class class36 {
                var14.field2257.writeShort(class138.field1876.field931);
                var14.field2257.writeShort(class138.field1876.field881);
                var14.field2257.writeByte(63);
-               GameClient.field626.method1980(var14, (byte)1);
+               GameClient.field626.method1980(var14);
                GameClient.field808 = var12;
                GameClient.field809 = var13;
             }

@@ -405,7 +405,7 @@ public abstract class class186 {
 										boolean var10 = false;
 
 										for (int var11 = 0; var11 < "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"£$%^&*()-_=+[{]};:\'@#~,<.>/?\\| ".length(); var11++) {
-											if (class39.field342 == "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"£$%^&*()-_=+[{]};:\'@#~,<.>/?\\| ".charAt(var11)) {
+											if (PacketBuilder.field342 == "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"£$%^&*()-_=+[{]};:\'@#~,<.>/?\\| ".charAt(var11)) {
 												var10 = true;
 												break;
 											}
@@ -428,7 +428,7 @@ public abstract class class186 {
 											}
 
 											if (var10 && class78.typedUsername.length() < 320) {
-												class78.typedUsername = class78.typedUsername + class39.field342;
+												class78.typedUsername = class78.typedUsername + PacketBuilder.field342;
 											}
 										} else if (class78.field1102 == 1) {
 											if (class163.field2016 == 85 && class78.field1086.length() > 0) {
@@ -469,7 +469,7 @@ public abstract class class186 {
 											}
 
 											if (var10 && class78.field1086.length() < 20) {
-												class78.field1086 = class78.field1086 + class39.field342;
+												class78.field1086 = class78.field1086 + PacketBuilder.field342;
 											}
 										}
 									}
@@ -553,7 +553,7 @@ public abstract class class186 {
 										var20 = false;
 
 										for (var21 = 0; var21 < "1234567890".length(); var21++) {
-											if (class39.field342 == "1234567890".charAt(var21)) {
+											if (PacketBuilder.field342 == "1234567890".charAt(var21)) {
 												var20 = true;
 												break;
 											}
@@ -596,7 +596,7 @@ public abstract class class186 {
 											}
 
 											if (var20 && class28.field238.length() < 6) {
-												class28.field238 = class28.field238 + class39.field342;
+												class28.field238 = class28.field238 + PacketBuilder.field342;
 											}
 										}
 									}
@@ -628,7 +628,7 @@ public abstract class class186 {
 										var20 = false;
 
 										for (var21 = 0; var21 < "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"£$%^&*()-_=+[{]};:\'@#~,<.>/?\\| ".length(); var21++) {
-											if (class39.field342 == "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"£$%^&*()-_=+[{]};:\'@#~,<.>/?\\| ".charAt(var21)) {
+											if (PacketBuilder.field342 == "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"£$%^&*()-_=+[{]};:\'@#~,<.>/?\\| ".charAt(var21)) {
 												var20 = true;
 												break;
 											}
@@ -653,7 +653,7 @@ public abstract class class186 {
 											}
 
 											if (var20 && class78.typedUsername.length() < 320) {
-												class78.typedUsername = class78.typedUsername + class39.field342;
+												class78.typedUsername = class78.typedUsername + PacketBuilder.field342;
 											}
 										}
 									}

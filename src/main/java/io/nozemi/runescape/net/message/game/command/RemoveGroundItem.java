@@ -20,7 +20,7 @@ public class RemoveGroundItem extends Command {
 	public RSBuffer encode(Player player) {
 		RSBuffer packet = new RSBuffer(player.channel().alloc().buffer(6)).packet(75);
 
-		packet.writeLEShortA(item.item().id());
+		packet.writeLEShortA(item.item().getId());
 		packet.writeByteA(((item.tile().x % 8) << 4) | (item.tile().z % 8));
 		
 		return packet;

@@ -285,6 +285,19 @@ public class NpcSyncTask implements Task {
 				
 				ln[lnp++] = npc.index();
 				playerSync.newlyAddedNpcs[playerSync.newlyAddedNpcPtr++] = npc.index();
+
+				if (npcSync.calculatedFlag() > 0 || npcSync.transmog() > 0 || facing || npcSync.combatLevel() > 0) {
+					playerSync.npcUpdateRequests()[playerSync.npcUpdateReqPtr()] = npc.index();
+					playerSync.npcUpdateReqPtr(playerSync.npcUpdateReqPtr() + 1);
+
+					if (npcSync.transmog() > 0) {
+						transmogged.add(npc.index());
+					}
+
+					if (npcSync.combatLevel() > 0) {
+						withCustomCombatLevel.add(npc.index());
+					}
+				}
 			}
 			
 			// Only write the end if there's more bytes coming; otherwise the client knows it's empty.

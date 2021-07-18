@@ -87,8 +87,10 @@ public class InterruptibleChain extends Interruptible {
             }
         }
 
-        if (events.size() <= 0) {
-            this.onCompleted.execute();
+        if (events.size() <= 0 && !this.completed && this.onCompleted != null) {
+            ChainableEvent temp = this.onCompleted;
+            this.onCompleted = null;
+            temp.execute();
             this.completed = true;
         }
     }

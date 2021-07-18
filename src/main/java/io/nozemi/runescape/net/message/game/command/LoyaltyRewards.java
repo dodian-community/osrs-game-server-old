@@ -28,8 +28,8 @@ public class LoyaltyRewards extends Command {
 		buffer.writeInt(totalClaimedRewards);
 
 		for(Item reward : loyaltyRewards) {
-			buffer.writeInt(reward.id());
-			buffer.writeInt(reward.amount());
+			buffer.writeInt(reward.getId());
+			buffer.writeInt(reward.getAmount());
 		}
 		
 		return buffer;

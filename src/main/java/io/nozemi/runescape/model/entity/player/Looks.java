@@ -118,14 +118,14 @@ public class Looks {
                     if (i == 6 || i == 8 || i == 11) {
                         item = player.equipment().get(i == 6 ? EquipSlot.BODY : EquipSlot.HEAD);
                         if (item != null) {
-                            int equipmentType = equipInfo.typeFor(item.id());
-                            if (female && equipInfo.showBeard(item.id()) && i == 11) {
+                            int equipmentType = equipInfo.typeFor(item.getId());
+                            if (female && equipInfo.showBeard(item.getId()) && i == 11) {
                                 calcBuffer.writeByte(0);
                                 continue;
                             }
                             if ((equipmentType == 6 && i == 6) ||
-                                    (i == 8 && (equipmentType == 8 && !equipInfo.showBeard(item.id())))
-                                    || (!equipInfo.showBeard(item.id()) && i == 11)) {
+                                    (i == 8 && (equipmentType == 8 && !equipInfo.showBeard(item.getId())))
+                                    || (!equipInfo.showBeard(item.getId()) && i == 11)) {
                                 calcBuffer.writeByte(0);
                                 continue;
                             }
@@ -134,7 +134,7 @@ public class Looks {
                         }
                     }
                     if (item != null)
-                        calcBuffer.writeShort(0x200 + (item.id() == 6767 ? 12006 : item.id()));
+                        calcBuffer.writeShort(0x200 + (item.getId() == 6767 ? 12006 : item.getId()));
                     else {
                         if (TRANSLATION_TABLE_BACK[i] != -1)
                             calcBuffer.writeShort(0x100 + looks[TRANSLATION_TABLE_BACK[i]]);
@@ -155,7 +155,7 @@ public class Looks {
             calcBuffer.writeByte(col);
         }
 
-        int weapon = player.equipment().hasAt(EquipSlot.WEAPON) ? player.equipment().get(EquipSlot.WEAPON).id() : -1;
+        int weapon = player.equipment().hasAt(EquipSlot.WEAPON) ? player.equipment().get(EquipSlot.WEAPON).getId() : -1;
         int[] renderpair = renderpairOverride != null ? renderpairOverride : player.world().equipmentInfo().renderPair(weapon);
         // Stand, walk sideways, walk, turn 180, turn 90 cw, turn 90 ccw, run
         for (int renderAnim : renderpair)

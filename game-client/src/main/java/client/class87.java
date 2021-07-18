@@ -40,7 +40,7 @@ public class class87 {
       this.field1214 = null;
    }
 
-   public final void method1980(class172 var1, byte var2) {
+   public final void method1980(class172 var1) {
       this.field1223.method4031(var1);
       var1.field2255 = var1.field2257.field2339;
       var1.field2257.field2339 = 0;

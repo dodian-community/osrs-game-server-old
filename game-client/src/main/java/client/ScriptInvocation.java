@@ -148,7 +148,7 @@ public class ScriptInvocation extends class204 {
       class172 var2 = class26.method433(OutgoingPacket.field2187, GameClient.field626.field1218, 1535459233);
       var2.field2257.writeByte(cmd.length() + 1);
       var2.field2257.writeString(cmd, 1527366920);
-      GameClient.field626.method1980(var2, (byte)1);
+      GameClient.field626.method1980(var2);
    }
 
    static final void method1027(Widget var0, ItemDef var1, int var2, int var3, boolean var4, int var5) {

@@ -192,13 +192,13 @@ public class class85 extends class127 {
       } else if(GameClient.field655 == 1) {
          class181.method3527(799584462);
          short var11 = -1;
-         if(class39.field341[33]) {
+         if(PacketBuilder.field341[33]) {
             var11 = 0;
-         } else if(class39.field341[49]) {
+         } else if(PacketBuilder.field341[49]) {
             var11 = 1024;
          }
 
-         if(class39.field341[48]) {
+         if(PacketBuilder.field341[48]) {
             if(var11 == 0) {
                var11 = 1792;
             } else if(var11 == 1024) {
@@ -206,7 +206,7 @@ public class class85 extends class127 {
             } else {
                var11 = 1536;
             }
-         } else if(class39.field341[50]) {
+         } else if(PacketBuilder.field341[50]) {
             if(var11 == 0) {
                var11 = 256;
             } else if(var11 == 1024) {
@@ -217,9 +217,9 @@ public class class85 extends class127 {
          }
 
          byte var12 = 0;
-         if(class39.field341[35]) {
+         if(PacketBuilder.field341[35]) {
             var12 = -1;
-         } else if(class39.field341[51]) {
+         } else if(PacketBuilder.field341[51]) {
             var12 = 1;
          }
 
@@ -235,7 +235,7 @@ public class class85 extends class127 {
                }
             }
 
-            var3 = class39.field341[81] ? GameClient.field661 : GameClient.field750;
+            var3 = PacketBuilder.field341[81] ? GameClient.field661 : GameClient.field750;
             var3 *= 16;
             GameClient.field613 = var11;
             GameClient.field659 = var12;
@@ -271,12 +271,12 @@ public class class85 extends class127 {
             GameClient.field659 = -1;
          }
 
-         if(class39.field341[13]) {
+         if(PacketBuilder.field341[13]) {
             if(var0 != 1) {
                return;
             }
 
-            GameClient.field626.method1980(class26.method433(OutgoingPacket.field2142, GameClient.field626.field1218, 2057583268), (byte)1);
+            GameClient.field626.method1980(class26.method433(OutgoingPacket.field2142, GameClient.field626.field1218, 2057583268));
             GameClient.field655 = 0;
          }
       }
@@ -320,21 +320,21 @@ public class class85 extends class127 {
 
          GameClient.field653 = var10000;
       } else {
-         if(class39.field341[96]) {
+         if(PacketBuilder.field341[96]) {
             GameClient.field608 += (-24 - GameClient.field608) / 2;
-         } else if(class39.field341[97]) {
+         } else if(PacketBuilder.field341[97]) {
             GameClient.field608 += (24 - GameClient.field608) / 2;
          } else {
             GameClient.field608 /= 2;
          }
 
-         if(class39.field341[98]) {
+         if(PacketBuilder.field341[98]) {
             if(var0 != 1) {
                return;
             }
 
             GameClient.field652 += (12 - GameClient.field652) / 2;
-         } else if(class39.field341[99]) {
+         } else if(PacketBuilder.field341[99]) {
             GameClient.field652 += (-12 - GameClient.field652) / 2;
          } else {
             GameClient.field652 /= 2;

@@ -43,10 +43,10 @@ public abstract class PlayerSerializer implements Service {
     }
 
     protected Character createCharacter(Player player) {
-        Character character = new Character();
-        character.setUsername(player.username());
+        Character character = new Character(player);
+        character.setPosition(new Tile(2606, 3102));
         character.setRunEnergy(100.0);
-        character.setPos(new Tile(2606, 3102));
+        character.updatePlayer(player);
         return character;
     }
 }

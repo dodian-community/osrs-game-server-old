@@ -63,7 +63,9 @@ public class InterruptibleTask extends Interruptible {
     @Override
     void cycle() {
         if(cancelled) {
-            this.onCancelled.execute();
+            if(this.onCancelled != null) {
+                this.onCancelled.execute();
+            }
             return;
         }
 
@@ -71,9 +73,13 @@ public class InterruptibleTask extends Interruptible {
             event.execute();
         }
 
-        if(completeCondition != null && completeCondition.check()) {
+        if(completeCondition != null && completeCondition.check() && !this.completed) {
             this.completed = true;
-            this.onCompleted.execute();
+            if(this.onCompleted != null) {
+                ChainableEvent temp = this.onCompleted;
+                this.onCompleted = null;
+                temp.execute();
+            }
         }
     }
 }

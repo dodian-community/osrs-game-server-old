@@ -1,19 +1,28 @@
 package io.nozemi.runescape.task;
 
+import io.nozemi.runescape.events.ScriptExecutor;
 import io.nozemi.runescape.model.World;
+import io.nozemi.runescape.model.entity.Player;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 
 /**
  * Created by Bart on 3-2-2015.
  */
+@Component
 public class ScriptProcessingTask implements Task {
 	
 	private static final Logger logger = LogManager.getLogger(ScriptProcessingTask.class);
-	
-	public ScriptProcessingTask() {
+
+	private final ScriptExecutor executor;
+
+	@Autowired
+	public ScriptProcessingTask(ScriptExecutor executor) {
+		this.executor = executor;
 		/*Fiber.setDefaultUncaughtExceptionHandler((strand, throwable) -> {
 			logger.error("Error in processing script (non entity) for {}.", strand, throwable);
 		});*/
@@ -25,6 +34,7 @@ public class ScriptProcessingTask implements Task {
 		world.cycle();
 		// Contextless or npc context (such as npc combat) scripts.
 		//world.server().scriptExecutor().cycle(script -> !(script.getContext() instanceof Player));
+		executor.cycle(script -> !(script.getContext() instanceof Player));
 	}
 	
 	@Override

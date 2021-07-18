@@ -36,9 +36,9 @@ public final class class50 {
 
       int var2 = GameClient.field792 ? 2 : 1;
       if(var2 == 1) {
-         Stream.client.method906(765, 503, 349970276);
+         Stream.client.method906(765, 503);
       } else {
-         Stream.client.method906(7680, 2160, 1529400794);
+         Stream.client.method906(7680, 2160);
       }
 
       if(GameClient.field589 >= 25) {
@@ -48,7 +48,7 @@ public final class class50 {
          var4.writeByte(var5);
          var3.field2257.writeShort(class82.field1179);
          var3.field2257.writeShort(class243.field3138);
-         GameClient.field626.method1980(var3, (byte)1);
+         GameClient.field626.method1980(var3);
       }
 
    }

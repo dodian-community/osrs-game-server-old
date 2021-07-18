@@ -6,7 +6,7 @@ public class class265 extends class206 {
 
    void method4967(Stream var1, int var2, byte var3) {
       if(var2 == 249) {
-         this.field3335 = class39.method691(var1, this.field3335, 123380361);
+         this.field3335 = PacketBuilder.method691(var1, this.field3335);
       }
 
    }

@@ -76,7 +76,6 @@ public class DialogueMessageHandler {
             } else {
                 player.getDialogueHandler().executeOption(1);
             }
-
         }
 
         if (id == 217 || id == 231) { // Player and Npc dialogue interfaces

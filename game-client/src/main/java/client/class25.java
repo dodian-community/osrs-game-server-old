@@ -44,7 +44,7 @@ public class class25 {
          if(var2 == 326) {
             class172 var5 = class26.method433(OutgoingPacket.field2173, GameClient.field626.field1218, -970266424);
             GameClient.field841.method4466(var5.field2257, (byte)-121);
-            GameClient.field626.method1980(var5, (byte)1);
+            GameClient.field626.method1980(var5);
             return true;
          } else {
             return false;

@@ -31,9 +31,9 @@ public class InterfaceItem extends Command {
 		RSBuffer buffer = new RSBuffer(player.channel().alloc().buffer(10));
 		buffer.packet(54);
 
-		buffer.writeShortA(item.id());
+		buffer.writeShortA(item.getId());
 		buffer.writeInt(hash);
-		buffer.writeLEInt(item.amount());
+		buffer.writeLEInt(item.getAmount());
 
 		return buffer;
 	}

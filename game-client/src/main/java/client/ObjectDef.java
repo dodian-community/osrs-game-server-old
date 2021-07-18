@@ -210,7 +210,7 @@ public class ObjectDef extends class206 {
 			} else if (var2 == 82) {
 				this.int700 = var1.readUShort();
 			} else if (var2 == 249) {
-				this.iterableImpl1_4 = class39.method691(var1, this.iterableImpl1_4, 123380361);
+				this.iterableImpl1_4 = PacketBuilder.method691(var1, this.iterableImpl1_4);
 			}
 		} else {
 			this.int707 = var1.readUShort();

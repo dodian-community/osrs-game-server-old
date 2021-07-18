@@ -1021,10 +1021,10 @@ public final class GameClient extends GameShell implements class288 {
 
 		class26.field220 = null;
 		field626.method1982((short) 822);
-		if (class39.field337 != null) {
-			class39 var2 = class39.field337;
-			synchronized (class39.field337) {
-				class39.field337 = null;
+		if (PacketBuilder.packetBuilder != null) {
+			PacketBuilder var2 = PacketBuilder.packetBuilder;
+			synchronized (PacketBuilder.packetBuilder) {
+				PacketBuilder.packetBuilder = null;
 			}
 		}
 
@@ -1091,7 +1091,7 @@ public final class GameClient extends GameShell implements class288 {
 		class33.field294 = this.method769((byte) 10);
 		class34.field302 = new class162(255, class155.field1969, class155.field1970, 500000);
 		class10.field61 = Item.method1859((short) -27003);
-		this.method770(-1223644500);
+		this.loadSystemClipboard();
 		class313.method5714(this, class8.field55, (byte) -36);
 		if (field777 != 0) {
 			field597 = true;
@@ -1301,7 +1301,7 @@ public final class GameClient extends GameShell implements class288 {
 					String name = buffer.readString();
 					int petId = buffer.readUShort();
 					int petAverage = buffer.readUShort();
-					List<Integer[]> drops = new ArrayList<Integer[]>();
+					List<Integer[]> drops = new ArrayList<>();
 					while (buffer.field2339 < var1.field1225) {
 						Integer[] drop = new Integer[5];
 						drop[0] = buffer.readUShort();    //id
@@ -2293,7 +2293,7 @@ public final class GameClient extends GameShell implements class288 {
 					var81.field2257.writeIntV1(var26);
 					var81.field2257.writeIntV1(var27);
 					var81.field2257.writeByteA(var7);
-					field626.method1980(var81, (byte) 1);
+					field626.method1980(var81);
 					var1.packetType = null;
 					return true;
 				}
@@ -2908,24 +2908,24 @@ public final class GameClient extends GameShell implements class288 {
 		}
 
 		class54.method1017(2123313201);
-		class39 var6 = class39.field337;
-		synchronized (class39.field337) {
-			++class39.field353;
-			class39.field350 = class39.field352;
-			class39.field349 = 0;
+		PacketBuilder var6 = PacketBuilder.packetBuilder;
+		synchronized (PacketBuilder.packetBuilder) {
+			++PacketBuilder.field353;
+			PacketBuilder.field350 = PacketBuilder.field352;
+			PacketBuilder.field349 = 0;
 			int var3;
-			if (class39.field329 >= 0) {
-				while (class39.field344 != class39.field329) {
-					var3 = class39.field343[class39.field344];
-					class39.field344 = class39.field344 + 1 & 127;
+			if (PacketBuilder.keyCodeIndex >= 0) {
+				while (PacketBuilder.field344 != PacketBuilder.keyCodeIndex) {
+					var3 = PacketBuilder.keysPressed[PacketBuilder.field344];
+					PacketBuilder.field344 = PacketBuilder.field344 + 1 & 127;
 					if (var3 < 0) {
-						class39.field341[~var3] = false;
+						PacketBuilder.field341[~var3] = false;
 					} else {
-						if (!class39.field341[var3] && class39.field349 < class39.field338.length - 1) {
-							class39.field338[++class39.field349 - 1] = var3;
+						if (!PacketBuilder.field341[var3] && PacketBuilder.field349 < PacketBuilder.field338.length - 1) {
+							PacketBuilder.field338[++PacketBuilder.field349 - 1] = var3;
 						}
 
-						class39.field341[var3] = true;
+						PacketBuilder.field341[var3] = true;
 					}
 				}
 			} else {
@@ -2934,17 +2934,17 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				for (var3 = 0; var3 < 112; var3++) {
-					class39.field341[var3] = false;
+					PacketBuilder.field341[var3] = false;
 				}
 
-				class39.field329 = class39.field344;
+				PacketBuilder.keyCodeIndex = PacketBuilder.field344;
 			}
 
-			if (class39.field349 > 0) {
-				class39.field353 = 0;
+			if (PacketBuilder.field349 > 0) {
+				PacketBuilder.field353 = 0;
 			}
 
-			class39.field352 = class39.field351;
+			PacketBuilder.field352 = PacketBuilder.field351;
 		}
 
 		class48 var10 = class48.field429;
@@ -3501,7 +3501,7 @@ public final class GameClient extends GameShell implements class288 {
 							var16 = var15.field2257.field2339;
 							field804.method5245(var15.field2257, (byte) 58);
 							var15.field2257.method3545(var15.field2257.field2339 - var16);
-							field626.method1980(var15, (byte) 1);
+							field626.method1980(var15);
 							field804.method5248(-656792455);
 						}
 
@@ -3579,7 +3579,7 @@ public final class GameClient extends GameShell implements class288 {
 								}
 
 								var31.field2257.method3545(var31.field2257.field2339 - var4);
-								field626.method1980(var31, (byte) 1);
+								field626.method1980(var31);
 								if (var5 >= class26.field220.field522) {
 									if (var1 == 0) {
 										return;
@@ -3635,10 +3635,10 @@ public final class GameClient extends GameShell implements class288 {
 							var19.field2257.writeShort((class48.field431 == 2 ? 1 : 0) + (var6 << 1));
 							var19.field2257.writeShort(var5);
 							var19.field2257.writeShort(var4);
-							field626.method1980(var19, (byte) 1);
+							field626.method1980(var19);
 						}
 
-						if (class39.field349 > 0) {
+						if (PacketBuilder.field349 > 0) {
 							if (var1 == 0) {
 								return;
 							}
@@ -3648,19 +3648,19 @@ public final class GameClient extends GameShell implements class288 {
 							var16 = var15.field2257.field2339;
 							long var20 = Stream.method3547(604838575);
 
-							for (var6 = 0; var6 < class39.field349; var6++) {
+							for (var6 = 0; var6 < PacketBuilder.field349; var6++) {
 								long var22 = var20 - field722;
 								if (var22 > 16777215L) {
 									var22 = 16777215L;
 								}
 
 								field722 = var20;
-								var15.field2257.writeByte(class39.field338[var6]);
+								var15.field2257.writeByte(PacketBuilder.field338[var6]);
 								var15.field2257.method3731((int) var22, 7272657);
 							}
 
 							var15.field2257.method3614(var15.field2257.field2339 - var16, -1030510523);
-							field626.method1980(var15, (byte) 1);
+							field626.method1980(var15);
 						}
 
 						if (field664 > 0) {
@@ -3671,7 +3671,7 @@ public final class GameClient extends GameShell implements class288 {
 							--field664;
 						}
 
-						if (class39.field341[96] || class39.field341[97] || class39.field341[98] || class39.field341[99]) {
+						if (PacketBuilder.field341[96] || PacketBuilder.field341[97] || PacketBuilder.field341[98] || PacketBuilder.field341[99]) {
 							field807 = true;
 						}
 
@@ -3686,7 +3686,7 @@ public final class GameClient extends GameShell implements class288 {
 								var15 = class26.method433(OutgoingPacket.field2183, field626.field1218, 1905486579);
 								var15.field2257.writeShortLE(field649);
 								var15.field2257.writeShort(field717);
-								field626.method1980(var15, (byte) 1);
+								field626.method1980(var15);
 							}
 						}
 
@@ -3694,7 +3694,7 @@ public final class GameClient extends GameShell implements class288 {
 							field847 = true;
 							var15 = class26.method433(OutgoingPacket.field2227, field626.field1218, 202829559);
 							var15.field2257.writeByte(1);
-							field626.method1980(var15, (byte) 1);
+							field626.method1980(var15);
 						}
 
 						if (!class18.field146) {
@@ -3706,7 +3706,7 @@ public final class GameClient extends GameShell implements class288 {
 								field847 = false;
 								var15 = class26.method433(OutgoingPacket.field2227, field626.field1218, -1338470237);
 								var15.field2257.writeByte(0);
-								field626.method1980(var15, (byte) 1);
+								field626.method1980(var15);
 							}
 						}
 
@@ -3907,7 +3907,7 @@ public final class GameClient extends GameShell implements class288 {
 						field799 = 0;
 
 						while (class1.method8(319934987) && field799 < 128) {
-							if (field747 >= 2 && class39.field341[82] && class163.field2016 == 66) {
+							if (field747 >= 2 && PacketBuilder.field341[82] && class163.field2016 == 66) {
 								String var45 = "";
 
 								class58 var41;
@@ -3920,14 +3920,14 @@ public final class GameClient extends GameShell implements class288 {
 								}
 
 								Stream.client.method771(var45, (short) 8637);
-							} else if (field655 != 1 || class39.field342 <= 0) {
+							} else if (field655 != 1 || PacketBuilder.field342 <= 0) {
 								field773[field799] = class163.field2016;
-								field800[field799] = class39.field342;
+								field800[field799] = PacketBuilder.field342;
 								++field799;
 							}
 						}
 
-						if (class40.method696((byte) 63) && class39.field341[82] && class39.field341[81] && field695 != 0) {
+						if (class40.method696((byte) 63) && PacketBuilder.field341[82] && PacketBuilder.field341[81] && field695 != 0) {
 							var4 = class138.field1876.field567 - field695;
 							if (var4 < 0) {
 								var4 = 0;
@@ -4044,7 +4044,7 @@ public final class GameClient extends GameShell implements class288 {
 																				var46.field2257.writeShortLE(field688);
 																				var46.field2257.writeIntLE(class276.field3559.interfaceHash);
 																				var46.field2257.writeShortLE(field691);
-																				field626.method1980(var46, (byte) 1);
+																				field626.method1980(var46);
 																			}
 																		}
 																	} else if (this.method1149((byte) 62)) {
@@ -4088,9 +4088,9 @@ public final class GameClient extends GameShell implements class288 {
 																var46 = class26.method433(OutgoingPacket.field2219, field626.field1218, 1629107550);
 																var46.field2257.writeByte(5);
 																var46.field2257.writeShort(var4 + class62.baseX);
-																var46.field2257.writeByteN(class39.field341[82] ? (class39.field341[81] ? 2 : 1) : 0);
+																var46.field2257.writeByteN(PacketBuilder.field341[82] ? (PacketBuilder.field341[81] ? 2 : 1) : 0);
 																var46.field2257.writeShortLE(var5 + baseY);
-																field626.method1980(var46, (byte) 1);
+																field626.method1980(var46);
 																class125.method2972();
 																field681 = class48.field432;
 																field682 = class48.field428;
@@ -4302,19 +4302,19 @@ public final class GameClient extends GameShell implements class288 {
 
 															class22.field185.method1902(-196804596);
 															var4 = class37.method652(681063668);
-															var5 = class39.field353;
+															var5 = PacketBuilder.field353;
 															if (var4 > 15000 && var5 > 15000) {
 																field627 = 250;
 																Item.method1866(14500, -1165618806);
 																var19 = class26.method433(OutgoingPacket.field2152, field626.field1218, 23593523);
-																field626.method1980(var19, (byte) 1);
+																field626.method1980(var19);
 															}
 
 															class181.field2332.method1627(916911588);
 															++field626.field1224;
 															if (field626.field1224 > 50) {
 																var19 = class26.method433(OutgoingPacket.field2211, field626.field1218, 1524615281);
-																field626.method1980(var19, (byte) 1);
+																field626.method1980(var19);
 															}
 
 															try {
@@ -4394,7 +4394,7 @@ public final class GameClient extends GameShell implements class288 {
 					var4 = var31.field2257.field2339;
 					class123.method2869(var31.field2257, (byte) 2);
 					var31.field2257.method3545(var31.field2257.field2339 - var4);
-					field626.method1980(var31, (byte) 1);
+					field626.method1980(var31);
 				}
 			}
 		}
@@ -4451,7 +4451,7 @@ public final class GameClient extends GameShell implements class288 {
 				field626.method1978((byte) 54);
 				class172 var4 = class62.method1536(2059542848);
 				var4.field2257.writeByte(class170.field2237.field2239);
-				field626.method1980(var4, (byte) 1);
+				field626.method1980(var4);
 				field626.method1979((byte) 123);
 				buffer.field2339 = 0;
 				field615 = 3;
@@ -4643,7 +4643,7 @@ public final class GameClient extends GameShell implements class288 {
 					var6.field2257.method3569(seed, var8, var6.field2257.field2339, (byte) 30);
 
 				var6.field2257.method3614(var6.field2257.field2339 - var7, -1030510523);
-				field626.method1980(var6, (byte) 1);
+				field626.method1980(var6);
 				field626.method1979((byte) 10);
 				field626.field1218 = new Isaac(seed);
 
@@ -4782,6 +4782,8 @@ public final class GameClient extends GameShell implements class288 {
 					}
 
 					field615 = 10;
+
+					Loader.frame.setResizable(true);
 				}
 
 				if (field615 != 10) {
@@ -5370,7 +5372,7 @@ public final class GameClient extends GameShell implements class288 {
 							var13.field2257.writeShortLE(field755.itemId);
 							var13.field2257.writeIntV2(field583.interfaceHash);
 							var13.field2257.writeShort(field755.childId);
-							field626.method1980(var13, (byte) 1);
+							field626.method1980(var13);
 						}
 					}
 				} else if (this.method1149((byte) 62)) {

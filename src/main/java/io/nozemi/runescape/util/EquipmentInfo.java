@@ -62,7 +62,7 @@ public class EquipmentInfo {
 		if (entity.isPlayer()) {
 			Player player = ((Player) entity);
 			Item wep = player.equipment().get(EquipSlot.WEAPON);
-			int wepid = wep != null ? wep.id() : -1;
+			int wepid = wep != null ? wep.getId() : -1;
 			
 			for (int i = 0; i < 14; i++) {
 				if (i == EquipSlot.AMMO && ignoreAmmo) {
@@ -75,7 +75,7 @@ public class EquipmentInfo {
 						// these don't fucking factor ammo
 						continue;
 					}
-					Bonuses equip = info.bonuses(equipped.id());
+					Bonuses equip = info.bonuses(equipped.getId());
 					
 					bonuses.stab += equip.stab;
 					bonuses.slash += equip.slash;
@@ -117,7 +117,7 @@ public class EquipmentInfo {
 		for (int i : new int[]{EquipSlot.BODY, EquipSlot.LEGS, EquipSlot.SHIELD, EquipSlot.HEAD}) {
 			Item equipped = player.equipment().get(i);
 			if (equipped != null) {
-				Bonuses equip = info.bonuses(equipped.id());
+				Bonuses equip = info.bonuses(equipped.getId());
 				
 				bonuses.stab += equip.stab;
 				bonuses.slash += equip.slash;
@@ -147,7 +147,7 @@ public class EquipmentInfo {
 			Item equipped = player.equipment().get(i);
 			
 			if (equipped != null) {
-				pray += info.bonuses(equipped.id()).pray;
+				pray += info.bonuses(equipped.getId()).pray;
 			}
 		}
 		
@@ -590,8 +590,8 @@ public class EquipmentInfo {
 	}
 	
 	public static int blockAnimationFor(Player player) {
-		int weapon = player.equipment().hasAt(EquipSlot.WEAPON) ? player.equipment().get(EquipSlot.WEAPON).id() : 0;
-		int shield = player.equipment().hasAt(EquipSlot.SHIELD) ? player.equipment().get(EquipSlot.SHIELD).id() : 0;
+		int weapon = player.equipment().hasAt(EquipSlot.WEAPON) ? player.equipment().get(EquipSlot.WEAPON).getId() : 0;
+		int shield = player.equipment().hasAt(EquipSlot.SHIELD) ? player.equipment().get(EquipSlot.SHIELD).getId() : 0;
 		ItemDefinition shielddef = player.world().definitions().get(ItemDefinition.class, shield);
 		boolean godbook = shield != 0 && shielddef.name != null && shielddef.name.toLowerCase().contains("book");
 		
@@ -680,7 +680,7 @@ public class EquipmentInfo {
 
 
 	public static int attackAnimationFor(Player player) {
-		return attackAnimationFor(player, player.equipment().hasAt(EquipSlot.WEAPON) ? player.equipment().get(EquipSlot.WEAPON).id() : 0);
+		return attackAnimationFor(player, player.equipment().hasAt(EquipSlot.WEAPON) ? player.equipment().get(EquipSlot.WEAPON).getId() : 0);
 	}
 	
 	public static int attackAnimationFor(Player player, int weapon) {

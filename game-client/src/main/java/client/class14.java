@@ -119,7 +119,7 @@ public class class14 implements class31 {
          GameClient.field626.field1224 = 0;
          if(!GameClient.field756 && GameClient.field626.method1983(-1017581564) != null) {
             class172 var2 = class26.method433(OutgoingPacket.field2211, GameClient.field626.field1218, -1084426622);
-            GameClient.field626.method1980(var2, (byte)1);
+            GameClient.field626.method1980(var2);
 
             try {
                GameClient.field626.method1979((byte)123);
@@ -148,7 +148,7 @@ public class class14 implements class31 {
          var23.field2257.writeByte(GameClient.field630);
          var23.field2257.writeByte(class143.field1899.field3735);
          var23.field2257.writeByte(GameClient.field795);
-         GameClient.field626.method1980(var23, (byte)1);
+         GameClient.field626.method1980(var23);
          return 1;
       } else {
          String var4;
@@ -164,7 +164,7 @@ public class class14 implements class31 {
             var16.field2257.writeString(var4, 1653501348);
             var16.field2257.writeByte(var5 - 1);
             var16.field2257.writeByte(var6);
-            GameClient.field626.method1980(var16, (byte)1);
+            GameClient.field626.method1980(var16);
             return 1;
          } else {
             int var11;
@@ -344,7 +344,7 @@ public class class14 implements class31 {
                var9.field2257.writeByte(var8);
                PacketBuffer.method3840(var9.field2257, var4, (byte)100);
                var9.field2257.method3545(var9.field2257.field2339 - var10);
-               GameClient.field626.method1980(var9, (byte)1);
+               GameClient.field626.method1980(var9);
                return 1;
             } else {
                int var14;
@@ -358,7 +358,7 @@ public class class14 implements class31 {
                   var12.field2257.writeString(var4, 474728098);
                   PacketBuffer.method3840(var12.field2257, var19, (byte)100);
                   var12.field2257.method3614(var12.field2257.field2339 - var14, -1030510523);
-                  GameClient.field626.method1980(var12, (byte)1);
+                  GameClient.field626.method1980(var12);
                   return 1;
                } else if(var0 != 5015) {
                   if(var0 == 5016) {

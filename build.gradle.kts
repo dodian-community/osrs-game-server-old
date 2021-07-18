@@ -50,7 +50,8 @@ dependencies {
 
     implementation("com.zaxxer:HikariCP:4.0.3")
 
-    runtimeOnly("org.xerial:sqlite-jdbc:3.36.0.1")
+    runtimeOnly("com.h2database:h2")
+    runtimeOnly("org.postgresql:postgresql")
 
     implementation(fileTree("libs") {
         include("*.jar")

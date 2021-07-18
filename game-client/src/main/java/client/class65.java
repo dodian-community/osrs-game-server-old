@@ -353,7 +353,7 @@ public class class65 {
       var2.writeByte(var3);
       var1.field2257.writeShort(class82.field1179);
       var1.field2257.writeShort(class243.field3138);
-      GameClient.field626.method1980(var1, (byte)1);
+      GameClient.field626.method1980(var1);
    }
 
    static int method1605(int var0, class84 var1, boolean var2, int var3) {

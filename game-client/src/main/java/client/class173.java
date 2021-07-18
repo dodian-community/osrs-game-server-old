@@ -76,7 +76,7 @@ public class class173 {
                      }
 
                      if(var19.intArray106 != null) {
-                        var19 = var19.method5189(1783442018);
+                        var19 = var19.method5189();
                      }
                   }
 

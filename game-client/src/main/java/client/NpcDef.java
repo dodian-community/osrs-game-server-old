@@ -40,7 +40,7 @@ public class NpcDef extends class206 {
    public boolean bool62 = true;
    public boolean bool60 = false;
 
-   public final NpcDef method5189(int var1) {
+   public final NpcDef method5189() {
       int var2 = -1;
       if(this.int588 != -1) {
          var2 = class163.method3389(this.int588, -397804509);
@@ -142,7 +142,7 @@ public class NpcDef extends class206 {
             this.bool60 = true;
          } else if(var2 == 249) {
 
-            this.iterableImpl1_2 = class39.method691(var1, this.iterableImpl1_2, 123380361);
+            this.iterableImpl1_2 = PacketBuilder.method691(var1, this.iterableImpl1_2);
          }
       } else {
          this.int588 = var1.readUShort();
@@ -179,7 +179,7 @@ public class NpcDef extends class206 {
 
    public final class113 method5158(byte var1) {
       if(this.intArray106 != null) {
-         NpcDef var2 = this.method5189(389626273);
+         NpcDef var2 = this.method5189();
          return var2 == null ? null : var2.method5158((byte)-72);
       } else if(this.intArray105 == null) {
          return null;
@@ -228,7 +228,7 @@ public class NpcDef extends class206 {
 
    public final class119 method5162(class273 var1, int var2, class273 var3, int var4, int var5) {
       if(this.intArray106 != null) {
-         NpcDef var13 = this.method5189(-1364980748);
+         NpcDef var13 = this.method5189();
          return var13 == null ? null : var13.method5162(var1, var2, var3, var4, -1886186491);
       } else {
          class119 var6 = (class119)field3489.method3989((long)this.field3510);

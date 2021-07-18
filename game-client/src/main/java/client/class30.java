@@ -476,7 +476,7 @@ public final class class30 {
 		var5.writeByte(var3);
 		var4.field2257.writeShort(class82.field1179);
 		var4.field2257.writeShort(class243.field3138);
-		GameClient.field626.method1980(var4, (byte) 1);
+		GameClient.field626.method1980(var4);
 	}
 
 	static final void method500(boolean var0, PacketBuffer buffer, int var2) {

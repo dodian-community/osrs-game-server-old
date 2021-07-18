@@ -19,7 +19,7 @@ public class class171 {
 	}
 
 	static final void method3451(class75 var0, int var1, int var2, int var3) {
-		class39.method692(var0.field1066, var0.field1060, var0.field1061, var0.field1062, var0.field1063, var0.field1063, var1, var2, (byte) 67);
+		PacketBuilder.buildPacket(var0.field1066, var0.field1060, var0.field1061, var0.field1062, var0.field1063, var1, var2, (byte) 67);
 	}
 
 	static final void method3450(int level, int localX, int localY, int objId, int rotation, int objType, class125 var6, class164 var7) {
@@ -302,7 +302,7 @@ public class class171 {
 								var32 = var6.method2898(level, localX, localY);
 								if (var32 != 0L) {
 
-									var29 = class110.getObjectDef(class39.method673(var32)).int698;
+									var29 = class110.getObjectDef(PacketBuilder.method673(var32)).int698;
 								}
 
 								if (var9.int697 == -1 && var9.intArray116 == null) {
@@ -316,7 +316,7 @@ public class class171 {
 								var29 = 8;
 								var32 = var6.method2898(level, localX, localY);
 								if (var32 != 0L) {
-									var29 = class110.getObjectDef(class39.method673(var32)).int698 / 2;
+									var29 = class110.getObjectDef(PacketBuilder.method673(var32)).int698 / 2;
 								}
 
 								if (var9.int697 == -1 && var9.intArray116 == null) {
@@ -339,7 +339,7 @@ public class class171 {
 								var29 = 8;
 								var32 = var6.method2898(level, localX, localY);
 								if (var32 != 0L) {
-									var29 = class110.getObjectDef(class39.method673(var32)).int698 / 2;
+									var29 = class110.getObjectDef(PacketBuilder.method673(var32)).int698 / 2;
 								}
 
 								int var28 = rotation + 2 & 3;

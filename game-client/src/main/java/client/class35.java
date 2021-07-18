@@ -907,7 +907,7 @@ public class class35 {
                   return;
                }
 
-               var7 = var7.method5189(-409079919);
+               var7 = var7.method5189();
             }
 
             if(var7 == null) {
@@ -1148,7 +1148,7 @@ public class class35 {
          } else {
             NpcDef var91 = ((Npc)var0).definition;
             if(var91.intArray106 != null) {
-               var91 = var91.method5189(496385679);
+               var91 = var91.method5189();
             }
 
             if(var91.int585 >= 0 && var91.int585 < class43.field369.length) {

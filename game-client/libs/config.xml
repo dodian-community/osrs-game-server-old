@@ -5,15 +5,15 @@
 
     <!-- String encryption -->
     <property name="string-encryption" value="disable"/>
-	<property name="string-encryption-type" value="fast"/> <!-- Anything else lags client when typing/autochat -->
+	<property name="string-encryption-type" value="fast"/> <!-- Anything else lags io.nozemi.runescape.client.client when typing/autochat -->
     <property name="string-encryption-version" value="v4"/>
 
     <!-- Control flow obfuscation -->
-    <property name="control-flow-obfuscation" value="disable"/> <!-- Breaks client -->
+    <property name="control-flow-obfuscation" value="disable"/> <!-- Breaks io.nozemi.runescape.client.client -->
     <property name="extensive-flow-obfuscation" value="disable"/>
 
     <!-- Renaming -->
-    <property name="default-package" value="client"/>
+    <property name="default-package" value="io.nozemi.runescape.client.client"/>
     <property name="force-default-package" value="enable"/>
 
     <property name="line-numbers" value="keep"/>

@@ -296,7 +296,7 @@ public class class82 {
 				for (y = 0; y < 104; y++) {
 					long var8 = class28.field248.method2901(class13.field82, x, y);
 					if (var8 != 0L) {
-						int var10 = class39.method673(var8);
+						int var10 = PacketBuilder.method673(var8);
 						int var11 = class110.getObjectDef(var10).int700;
 						if (var11 >= 0) {
 							GameClient.mapIconImages[GameClient.mapIconCount] = class255.field3246[var11].method4815(false, (byte) -62);
@@ -390,6 +390,6 @@ public class class82 {
 		class172 var3 = class26.method433(OutgoingPacket.field2158, GameClient.field626.field1218, 511148297);
 		var3.field2257.writeIntLE(var0);
 		var3.field2257.writeShortA(var1);
-		GameClient.field626.method1980(var3, (byte) 1);
+		GameClient.field626.method1980(var3);
 	}
 }

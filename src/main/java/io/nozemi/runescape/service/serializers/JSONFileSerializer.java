@@ -30,13 +30,16 @@ public class JSONFileSerializer extends PlayerSerializer {
 			.findAndRegisterModules()
 			.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY)
 			.enable(SerializationFeature.INDENT_OUTPUT);
-	
+
+	private final UIDProvider uidProvider;
+
 	/**
 	 * The folder containing the character files.
 	 */
 	private File characterFolder = new File("data/characters");
 	
 	public JSONFileSerializer() {
+		this.uidProvider = new SimpleUIDProvider();
 		/* Create folder if missing */
 		characterFolder.mkdirs();
 	}
@@ -48,15 +51,14 @@ public class JSONFileSerializer extends PlayerSerializer {
 		if(characterFile.exists()) {
 			try {
 				Character character = mapper.readValue(characterFile, Character.class);
-				character.getPlayer(player);
+				character.updatePlayer(player);
 			} catch (IOException e) {
 				logger.error("Failed to log character: '{}'.", player.username(), e);
 			}
 		} else {
-			UIDProvider uidProvider = new SimpleUIDProvider();
 			player.id(uidProvider.acquire(player));
 			player.putattrib(AttributeKey.NEW_ACCOUNT, true);
-			this.createCharacter(player);
+			this.createCharacter(player).updatePlayer(player);
 			this.savePlayer(player, false);
 		}
 
@@ -67,7 +69,7 @@ public class JSONFileSerializer extends PlayerSerializer {
 	@Override
 	public void savePlayer(Player player, boolean removeOnline) {
 		File characterFile = new File(characterFolder + File.separator + player.username() + ".json");
-		Character character = new Character(player);
+		Character character = new Character(player); // TODO: Need to put an actual ID
 		try {
 			mapper.writeValue(characterFile, character);
 			logger.info("Saved character: {}", player.username());

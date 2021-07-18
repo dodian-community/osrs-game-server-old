@@ -26,7 +26,7 @@ public class class74 {
 
       if(var2 != 0L) {
          int var7 = class28.field248.method2902(var0.field861, var0.field857, var0.field858, var2);
-         var4 = class39.method673(var2);
+         var4 = PacketBuilder.method673(var2);
          var5 = var7 & 31;
          var6 = var7 >> 6 & 3;
       }

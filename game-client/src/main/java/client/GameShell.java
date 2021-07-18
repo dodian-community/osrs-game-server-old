@@ -19,14 +19,13 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-import java.awt.image.ImageObserver;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.URL;
 import java.util.Iterator;
 
 public abstract class GameShell extends Applet implements Runnable, FocusListener, WindowListener {
-   static volatile boolean field390 = true;
+   static volatile boolean windowFocused = true;
    static GameShell INSTANCE = null;
    static boolean field389 = false;
    static int field387 = 0;
@@ -40,7 +39,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
    static int field413 = 500;
    static long field415 = -1L;
    static long field416 = -1L;
-   Clipboard field412;
+   Clipboard systemClipboard;
    final EventQueue field399;
    boolean field408 = false;
    int field400;
@@ -129,7 +128,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
       }
    }
 
-   final void method784(byte var1) {
+   final void method784() {
       this.field408 = true;
    }
 
@@ -336,7 +335,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
             var7.setFont(class154.field1961);
             var7.setColor(Color.white);
             var7.drawString(var2, (304 - class29.field256.stringWidth(var2)) / 2, 22);
-            var5.drawImage(class71.field1028, class82.field1179 / 2 - 152, class243.field3138 / 2 - 18, (ImageObserver)null);
+            var5.drawImage(class71.field1028, class82.field1179 / 2 - 152, class243.field3138 / 2 - 18, null);
          } catch (Exception var10) {
             int var8 = class82.field1179 / 2 - 152;
             int var9 = class243.field3138 / 2 - 18;
@@ -366,7 +365,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
       }
 
       synchronized(this) {
-         class18.field146 = field390;
+         class18.field146 = windowFocused;
       }
 
       this.vmethod1136(1052023991);
@@ -391,37 +390,37 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
             return;
          }
 
-         class39.field334[186] = 57;
-         class39.field334[187] = 27;
-         class39.field334[188] = 71;
-         class39.field334[189] = 26;
-         class39.field334[190] = 72;
-         class39.field334[191] = 73;
-         class39.field334[192] = 58;
-         class39.field334[219] = 42;
-         class39.field334[220] = 74;
-         class39.field334[221] = 43;
-         class39.field334[222] = 59;
-         class39.field334[223] = 28;
+         PacketBuilder.field334[186] = 57;
+         PacketBuilder.field334[187] = 27;
+         PacketBuilder.field334[188] = 71;
+         PacketBuilder.field334[189] = 26;
+         PacketBuilder.field334[190] = 72;
+         PacketBuilder.field334[191] = 73;
+         PacketBuilder.field334[192] = 58;
+         PacketBuilder.field334[219] = 42;
+         PacketBuilder.field334[220] = 74;
+         PacketBuilder.field334[221] = 43;
+         PacketBuilder.field334[222] = 59;
+         PacketBuilder.field334[223] = 28;
       } else {
-         class39.field334[44] = 71;
-         class39.field334[45] = 26;
-         class39.field334[46] = 72;
-         class39.field334[47] = 73;
-         class39.field334[59] = 57;
-         class39.field334[61] = 27;
-         class39.field334[91] = 42;
-         class39.field334[92] = 74;
-         class39.field334[93] = 43;
-         class39.field334[192] = 28;
-         class39.field334[222] = 58;
-         class39.field334[520] = 59;
+         PacketBuilder.field334[44] = 71;
+         PacketBuilder.field334[45] = 26;
+         PacketBuilder.field334[46] = 72;
+         PacketBuilder.field334[47] = 73;
+         PacketBuilder.field334[59] = 57;
+         PacketBuilder.field334[61] = 27;
+         PacketBuilder.field334[91] = 42;
+         PacketBuilder.field334[92] = 74;
+         PacketBuilder.field334[93] = 43;
+         PacketBuilder.field334[192] = 28;
+         PacketBuilder.field334[222] = 58;
+         PacketBuilder.field334[520] = 59;
       }
 
       Canvas var2 = this.canvas;
       var2.setFocusTraversalKeysEnabled(false);
-      var2.addKeyListener(class39.field337);
-      var2.addFocusListener(class39.field337);
+      var2.addKeyListener(PacketBuilder.packetBuilder);
+      var2.addFocusListener(PacketBuilder.packetBuilder);
    }
 
    protected final void method791(int var1) {
@@ -474,13 +473,13 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
    }
 
-   protected void method770(int var1) {
-      this.field412 = this.getToolkit().getSystemClipboard();
+   protected void loadSystemClipboard() {
+      this.systemClipboard = this.getToolkit().getSystemClipboard();
    }
 
-   protected final void method906(int var1, int var2, int var3) {
+   protected final void method906(int var1, int var2) {
       if(this.field400 != var1 || var2 != this.field414) {
-         this.method784((byte)1);
+         this.method784();
       }
 
       this.field400 = var1;
@@ -491,9 +490,9 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
    final void method777(byte var1) {
       Canvas var2 = this.canvas;
-      var2.removeKeyListener(class39.field337);
-      var2.removeFocusListener(class39.field337);
-      class39.field329 = -1;
+      var2.removeKeyListener(PacketBuilder.packetBuilder);
+      var2.removeFocusListener(PacketBuilder.packetBuilder);
+      PacketBuilder.keyCodeIndex = -1;
       Canvas var3 = this.canvas;
       var3.removeMouseListener(class48.field429);
       var3.removeMouseMotionListener(class48.field429);
@@ -506,8 +505,8 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
       this.method779(-1503322792);
       Canvas var4 = this.canvas;
       var4.setFocusTraversalKeysEnabled(false);
-      var4.addKeyListener(class39.field337);
-      var4.addFocusListener(class39.field337);
+      var4.addKeyListener(PacketBuilder.packetBuilder);
+      var4.addFocusListener(PacketBuilder.packetBuilder);
       Canvas var5 = this.canvas;
       var5.addMouseListener(class48.field429);
       var5.addMouseMotionListener(class48.field429);
@@ -516,7 +515,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
          this.field407.method665(this.canvas, 1403563861);
       }
 
-      this.method784((byte)1);
+      this.method784();
    }
 
    final void method783(int var1) {
@@ -592,7 +591,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
    }
 
    protected void method771(String var1, short var2) {
-      this.field412.setContents(new StringSelection(var1), (ClipboardOwner)null);
+      this.systemClipboard.setContents(new StringSelection(var1), (ClipboardOwner)null);
    }
 
    protected final boolean method801(int var1) {
@@ -674,12 +673,12 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
    }
 
    public final void focusGained(FocusEvent var1) {
-      field390 = true;
+      windowFocused = true;
       this.field406 = true;
    }
 
    public final void focusLost(FocusEvent var1) {
-      field390 = false;
+      windowFocused = false;
    }
 
    public final void windowDeactivated(WindowEvent var1) {

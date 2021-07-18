@@ -22,7 +22,7 @@ public final class class112 {
          int var5 = GameClient.field794[var0];
          String var6 = GameClient.field735[var0];
          String var7 = GameClient.field740[var0];
-         class39.method692(var2, var3, var4, var5, var6, var7, class48.field432, class48.field428, (byte)44);
+         PacketBuilder.buildPacket(var2, var3, var4, var5, var7, class48.field432, class48.field428, (byte)44);
       }
    }
 

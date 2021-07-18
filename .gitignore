@@ -155,4 +155,4 @@ gradle-app.setting
 
 data/*.sqlite
 data/*.conf
-data/filestore*
+data/filestore

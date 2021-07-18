@@ -1,15 +1,14 @@
 package io.nozemi.runescape.model;
 
 import io.nozemi.runescape.content.mechanics.Transmogrify;
+import io.nozemi.runescape.content.npcs.Bankers;
+import io.nozemi.runescape.events.Script;
 import io.nozemi.runescape.fs.NpcDefinition;
 import io.nozemi.runescape.fs.ObjectDefinition;
 import io.nozemi.runescape.model.entity.*;
 import io.nozemi.runescape.model.entity.player.Varps;
 import io.nozemi.runescape.model.item.ItemContainer;
-import io.nozemi.runescape.model.map.FixedTileStrategy;
-import io.nozemi.runescape.model.map.MapObj;
-import io.nozemi.runescape.model.map.ObjectStrategy;
-import io.nozemi.runescape.model.map.WalkRouteFinder;
+import io.nozemi.runescape.model.map.*;
 import io.nozemi.runescape.model.map.steroids.Direction;
 import io.nozemi.runescape.model.map.steroids.PathRouteFinder;
 import io.nozemi.runescape.model.map.steroids.Route;
@@ -18,6 +17,7 @@ import io.nozemi.runescape.script.TimerKey;
 import io.nozemi.runescape.script.TimerRepository;
 import io.nozemi.runescape.tasksystem.*;
 import io.nozemi.runescape.content.teleports.MyTeleports;
+import kotlin.jvm.functions.Function1;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -245,6 +245,22 @@ public abstract class Entity {
         return walkTo(tile.x, tile.z, mode, stopActions);
     }
 
+    public boolean touches(Entity e) {
+        return touches(e, tile);
+    }
+
+    public boolean touches(Entity targ, Tile from) {
+        EntityStrategy strat = new EntityStrategy(targ, 0, true);
+        int[][] clipAround = world.clipSquare(targ.tile().transform(-5, -5, 0), 11); // TODO better algo for determining the size we need..
+        try {
+            return strat.canExit(from.x, from.z, size(), clipAround, targ.tile.x - 5, targ.tile.z - 5);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            logger.error("AI OOB thrown using args {}, {}, {}, {}", targ, targ.tile, from, e.getMessage());
+            logger.error(e);
+            return false;
+        }
+    }
+
     public static final boolean steroidsRoute = true;
 
     public boolean walkTo(MapObj obj, PathQueue.StepType mode) {
@@ -367,56 +383,50 @@ public abstract class Entity {
         }
     }
 
+    public boolean walkTo(Entity entity, PathQueue.StepType mode) {
+        pathQueue.clear();
+
+        if (stunned()) {
+            if (mode == PathQueue.StepType.REGULAR)
+                message("You're stunned!");
+            return false;
+        }
+
+        if (steroidsRoute) {
+            LinkedList<Direction> dirs = new LinkedList<>();
+            PathRouteFinder finder = new PathRouteFinder(this);
+            Route route = Route.to(entity);
+            finder.path(route, tile.x, tile.z, tile.level, size(), dirs);
+
+            Tile cur = tile;
+            while (!dirs.isEmpty()) {
+                Direction next = dirs.poll();
+                cur = cur.transform(next.x, next.y, 0);
+                pathQueue.stepClipped(cur.x, cur.z, mode);
+
+            }
+
+            finder.free();
+            return !route.alternative;//temp
+        } else {
+            EntityStrategy target = new EntityStrategy(entity);
+            int steps = WalkRouteFinder.findRoute(world().definitions(), tile.x, tile.z, tile.level, size(), target, true, false);
+            int[] bufferX = WalkRouteFinder.getLastPathBufferX();
+            int[] bufferZ = WalkRouteFinder.getLastPathBufferZ();
+
+            for (int i = steps - 1; i >= 0; i--) {
+                pathQueue.interpolateClipped(bufferX[i], bufferZ[i], mode);
+            }
+
+            return !WalkRouteFinder.isAlternative;
+        }
+    }
+
     public void walkToThen(Tile destination, ExecuteInterface then) {
         walkToThen(null, destination, then);
     }
 
     public void walkToThen(Object interactAble, Tile destination, ExecuteInterface then) {
-        World world = this.world();
-
-        final int sizeX;
-        final int sizeY;
-
-        if (interactAble instanceof MapObj) {
-            ObjectDefinition definition = ((MapObj) interactAble).definition(world);
-            sizeX = definition.sizeX;
-            sizeY = definition.sizeY;
-        } else if (interactAble instanceof Npc) {
-            NpcDefinition definition = ((Npc) interactAble).def();
-            sizeX = definition.size;
-            sizeY = definition.size;
-        } else {
-            sizeX = 0;
-            sizeY = 0;
-        }
-
-        int distance;
-        if (sizeX > 1 || sizeY > 1) {
-            distance = 1;
-        } else {
-            distance = 0;
-        }
-
-        InterruptibleTask.bound(this).isCancellableByWalking(false).execute(() -> {
-            if(this.attribOr(AttributeKey.DEBUG, false)) {
-                this.message("Distance from destination: " + destination.distance(this.tile));
-                this.message("Arriving when distance is less than: " + distance);
-            }
-            if(interactAble instanceof MapObj) {
-                this.walkTo((MapObj) interactAble, PathQueue.StepType.REGULAR);
-            } else {
-                this.walkTo(destination, PathQueue.StepType.REGULAR, false);
-            }
-        }).onComplete(then)
-            .onCancel(() -> {
-                this.stopActions(true);
-                if(this.attribOr(AttributeKey.DEBUG, false)) {
-                    this.message("Event was cancelled...");
-                }
-            })
-            .completeCondition(() -> {
-                return this.tile().distance(destination) <= distance;
-            }).submit(TaskManager.playerChains());
     }
 
     public boolean locked() {
@@ -668,5 +678,9 @@ public abstract class Entity {
 
     public void unlock() {
         lock = LockType.NONE;
+    }
+
+    public void executeScript(Function1<Script, Object> s) {
+        //world.server().scriptExecutor().executeScript(this, s); // context set to the entity
     }
 }

@@ -1,3 +1,5 @@
+[![Discord](https://discordapp.com/api/guilds/169851018413211648/widget.png)](https://discord.gg/r4M6cSBdrT)
+
 # Dodian OSRS
 This is a OSRS base heavily influenced by [OS-Scape](https://www.rune-server.ee/runescape-development/rs2-server/downloads/697645-os-scape-171-server.html) source code. I've tried to retain the classes author comments for code that is a copy of OSS code.
 

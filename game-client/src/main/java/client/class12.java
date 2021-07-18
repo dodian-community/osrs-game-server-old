@@ -666,7 +666,7 @@ public class class12 {
                                              String[] var28 = var27.interfaceOptions;
                                              var29 = -1;
                                              if(GameClient.field726) {
-                                                boolean var30 = GameClient.field727 || class39.field341[81];
+                                                boolean var30 = GameClient.field727 || PacketBuilder.field341[81];
                                                 if(var30) {
                                                    var29 = var27.method5101(1322817925);
                                                 }
@@ -1420,7 +1420,7 @@ public class class12 {
          class172 var2 = class26.method433(OutgoingPacket.field2153, GameClient.field626.field1218, 1008001859);
          var2.field2257.writeByte(class316.method5820(var0, (short)256));
          var2.field2257.writeString(var0, 1199940995);
-         GameClient.field626.method1980(var2, (byte)1);
+         GameClient.field626.method1980(var2);
       }
    }
 }

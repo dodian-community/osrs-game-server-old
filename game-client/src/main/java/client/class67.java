@@ -85,7 +85,7 @@ public class class67 {
                class172 var4 = class26.method433(OutgoingPacket.field2194, GameClient.field626.field1218, 54120903);
                var4.field2257.writeByte(class316.method5820(var1, (short)256));
                var4.field2257.writeString(var1, 1376196598);
-               GameClient.field626.method1980(var4, (byte)1);
+               GameClient.field626.method1980(var4);
             }
          }
       }
@@ -121,7 +121,7 @@ public class class67 {
                class172 var4 = class26.method433(OutgoingPacket.field2203, GameClient.field626.field1218, -639070641);
                var4.field2257.writeByte(class316.method5820(var1, (short)256));
                var4.field2257.writeString(var1, 1795559003);
-               GameClient.field626.method1980(var4, (byte)1);
+               GameClient.field626.method1980(var4);
             }
 
             class53.method1012(-840533249);
@@ -155,7 +155,7 @@ public class class67 {
                   class172 var4 = class26.method433(OutgoingPacket.field2221, GameClient.field626.field1218, -198595464);
                   var4.field2257.writeByte(class316.method5820(var1, (short)256));
                   var4.field2257.writeString(var1, 584337820);
-                  GameClient.field626.method1980(var4, (byte)1);
+                  GameClient.field626.method1980(var4);
                }
             }
          }
@@ -175,7 +175,7 @@ public class class67 {
                class172 var4 = class26.method433(OutgoingPacket.field2157, GameClient.field626.field1218, -1474913465);
                var4.field2257.writeByte(class316.method5820(var1, (short)256));
                var4.field2257.writeString(var1, -1301289795);
-               GameClient.field626.method1980(var4, (byte)1);
+               GameClient.field626.method1980(var4);
             }
 
             GameShell.method910(618669821);

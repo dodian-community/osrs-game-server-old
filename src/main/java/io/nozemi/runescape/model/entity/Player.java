@@ -3,10 +3,14 @@ package io.nozemi.runescape.model.entity;
 import io.netty.channel.Channel;
 import io.nozemi.runescape.GameInitializer;
 import io.nozemi.runescape.content.mechanics.VarbitAttributes;
+import io.nozemi.runescape.content.npcs.Bankers;
+import io.nozemi.runescape.content.npcs.NpcFacingPlayerPolicy;
 import io.nozemi.runescape.content.tools.editmode.EditModeHandler;
 import io.nozemi.runescape.crypto.IsaacRand;
+import io.nozemi.runescape.events.ScriptExecutor;
+import io.nozemi.runescape.events.ScriptRepository;
+import io.nozemi.runescape.fs.NpcDefinition;
 import io.nozemi.runescape.handlers.impl.dialogue.DialogueHandler;
-import io.nozemi.runescape.handlers.impl.dialogue.DialogueOptionAction;
 import io.nozemi.runescape.handlers.impl.dialogue.InputValueAction;
 import io.nozemi.runescape.model.*;
 import io.nozemi.runescape.model.entity.player.*;
@@ -14,7 +18,9 @@ import io.nozemi.runescape.model.instance.InstancedMap;
 import io.nozemi.runescape.model.instance.InstancedMapIdentifier;
 import io.nozemi.runescape.model.item.Item;
 import io.nozemi.runescape.model.item.ItemContainer;
+import io.nozemi.runescape.model.map.MapObj;
 import io.nozemi.runescape.model.map.steroids.Direction;
+import io.nozemi.runescape.model.map.steroids.RangeStepSupplier;
 import io.nozemi.runescape.model.map.steroids.RouteFinder;
 import io.nozemi.runescape.net.future.ClosingChannelFuture;
 import io.nozemi.runescape.net.message.game.Action;
@@ -23,6 +29,9 @@ import io.nozemi.runescape.net.packets.GamePacket;
 import io.nozemi.runescape.script.Timer;
 import io.nozemi.runescape.script.TimerKey;
 import io.nozemi.runescape.service.login.LoginService;
+import io.nozemi.runescape.tasksystem.ExecuteInterface;
+import io.nozemi.runescape.tasksystem.InterruptibleTask;
+import io.nozemi.runescape.tasksystem.TaskManager;
 import io.nozemi.runescape.util.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -40,7 +49,8 @@ import java.net.InetSocketAddress;
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicReference;
 
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
@@ -86,6 +96,8 @@ public class Player extends Entity implements BeanFactoryAware {
 
     private ItemContainer equipment;
     private ItemContainer inventory;
+    private ItemContainer bank;
+    private ItemContainer lootingBag;
 
     /**
      * Location Information
@@ -109,8 +121,6 @@ public class Player extends Entity implements BeanFactoryAware {
         this.varps = new Varps(this);
         this.world = world;
         this.skills = new Skills(this);
-        this.equipment = new ItemContainer(world, 14, ItemContainer.Type.REGULAR);
-        this.inventory = new ItemContainer(world, 28, ItemContainer.Type.REGULAR);
 
         InetSocketAddress socketAddress;
         InetAddress inetaddress = null;
@@ -119,6 +129,17 @@ public class Player extends Entity implements BeanFactoryAware {
             inetaddress = socketAddress.getAddress();
         }
         ip = inetaddress == null ? "127.0.0.1" : inetaddress.getHostAddress();
+    }
+
+    @Override
+    public void setBeanFactory(@NotNull BeanFactory beanFactory) throws BeansException {
+        this.equipment = beanFactory.getBean(ItemContainer.class)
+                .setSize(14).setType(ItemContainer.Type.REGULAR);
+        this.inventory = beanFactory.getBean(ItemContainer.class)
+                .setSize(28).setType(ItemContainer.Type.REGULAR);
+        this.bank = beanFactory.getBean(ItemContainer.class)
+                .setSize(800).setType(ItemContainer.Type.FULL_STACKING);
+        this.beanFactory = beanFactory;
     }
 
     /**
@@ -134,12 +155,12 @@ public class Player extends Entity implements BeanFactoryAware {
         write(new UpdateStateCustom(worldFlag));
 
         // Trigger scripts here(?)
-        if(GameInitializer.config().hasPath("world.welcome-messages")) {
+        if (GameInitializer.config().hasPath("world.welcome-messages")) {
             GameInitializer.config().getList("world.welcome-messages")
                     .forEach(configValue -> message("" + configValue.unwrapped()));
         }
 
-        if(this.attribOr(AttributeKey.DEBUG, false)) {
+        if (this.attribOr(AttributeKey.DEBUG, false)) {
             this.message("<col=f5a442>Debug mode is enabled, type ::debug to toggle.");
         }
 
@@ -153,14 +174,40 @@ public class Player extends Entity implements BeanFactoryAware {
 
         write(UpdateStateCustom.setErrorReportState(true));
 
-        if(this.attribOr(AttributeKey.NEW_ACCOUNT, false)) {
+        if (this.attribOr(AttributeKey.NEW_ACCOUNT, false)) {
             this.message("Welcome to your first time on Dodian! Don't hesitate to contact us for assistance if you have any issues!");
+
+            this.sendScroll("Welcome to Dodian!",
+                    //"Welcome to Dodian, since this is your first time logging in",
+                    "Welcome to Dodian, " + this.username + "! Hope you enjoy your stay at Dodian.",
+                    "Since this is the first time you're logging in, we would like",
+                    "to let you know that you can reach out to staff for help at any time!",
+                    "",
+                    "Please respect and follow our rules. We don't really ask much,",
+                    "we just want to keep a nice and welcoming community.",
+                    "",
+                    "You can find more information on our website."
+            );
         }
 
-        if(!this.mfaEnabled) {
-            this.message("<col=bd4602>You don't have two factor authentication enabled. We would recommend you enable this. You can do so on our website.");
+        if (!this.mfaEnabled) {
+            this.message("<col=ff0000><img=50> You don't have two factor authentication enabled. We would recommend you enable this. You can do so on our website.");
+            //this.write(new AddMessage("https://google.com/", AddMessage.Type.URL));
+            /*this.chatPlayer("Your account is unsecure, please consider activating two factor authentication. " +
+                    "That way you will get a verification code in your authenticator app.", 588).setActions(()
+                    -> this.chatPlayer("Activate two factor authentication to receive 2b gold.", 588)
+                    .setActions(() -> this.optionsTitled("Activate Now?", "Yes", "No").setActions(
+                                () -> {
+                                    this.write(new AddMessage("https://dodian.net/", AddMessage.Type.URL));
+                                    this.dialogueHandler.terminate();
+                                },
+                                () -> this.dialogueHandler.terminate()
+                            )
+                    )
+            );*/
         }
 
+        beanFactory.getBean(ScriptRepository.class).triggerLogin(this);
         looks.update();
 
         // Sync varps
@@ -251,6 +298,10 @@ public class Player extends Entity implements BeanFactoryAware {
         return equipment;
     }
 
+    public void equipment(ItemContainer itemContainer) {
+        this.equipment = itemContainer;
+    }
+
     public String ip() {
         return ip;
     }
@@ -301,7 +352,7 @@ public class Player extends Entity implements BeanFactoryAware {
 
     public void write(Object... o) {
         // TODO: Fix this later? Causes a disconnect
-        if(o[0] instanceof SendWidgetTimer) {
+        if (o[0] instanceof SendWidgetTimer) {
             return;
         }
 
@@ -480,6 +531,11 @@ public class Player extends Entity implements BeanFactoryAware {
             updateWeaponInterface();
         }
 
+        if (bank.dirty()) {
+            write(new SetItems(95, bank));
+            bank.clean();
+        }
+
         skills.syncDirty();
     }
 
@@ -489,11 +545,11 @@ public class Player extends Entity implements BeanFactoryAware {
     }
 
     public void sound(int[] values) {
-        if(values.length == 1) {
+        if (values.length == 1) {
             this.sound(values[0]);
-        } else if(values.length == 2) {
+        } else if (values.length == 2) {
             this.sound(values[0], values[1]);
-        } else if(values.length >= 3) {
+        } else if (values.length >= 3) {
             this.sound(values[0], values[1], values[2]);
         }
     }
@@ -531,6 +587,7 @@ public class Player extends Entity implements BeanFactoryAware {
     }
 
     private boolean bot;
+
     public boolean bot() {
         return bot;
     }
@@ -616,7 +673,7 @@ public class Player extends Entity implements BeanFactoryAware {
         write(new InterfaceText(593, 2, "Combat Lvl: " + (skills == null ? 3 : skills.combatLevel())));
 
         // Set the varp that holds our weapon interface panel type
-        int panel = wep == null ? 0 : world.equipmentInfo().weaponType(wep.id());
+        int panel = wep == null ? 0 : world.equipmentInfo().weaponType(wep.getId());
         varps.varp(843, panel);
     }
 
@@ -801,7 +858,12 @@ public class Player extends Entity implements BeanFactoryAware {
         return inventory;
     }
 
+    public void inventory(ItemContainer container) {
+        this.inventory = container;
+    }
+
     private final ConcurrentLinkedQueue<Action> pendingActions = new ConcurrentLinkedQueue<>();
+
     public ConcurrentLinkedQueue<Action> pendingActions() {
         return pendingActions;
     }
@@ -817,6 +879,7 @@ public class Player extends Entity implements BeanFactoryAware {
     }
 
     private DialogueHandler dialogueHandler;
+
     public void setDialogueHandler(DialogueHandler dialogueHandler) {
         this.dialogueHandler = dialogueHandler;
     }
@@ -834,7 +897,7 @@ public class Player extends Entity implements BeanFactoryAware {
         this.write(new InvokeScript(58, title, String.join("|", options)));
         this.write(new InterfaceSettings(219, 0, 1, 5, 1));
 
-        if(this.dialogueHandler == null) {
+        if (this.dialogueHandler == null) {
             this.setDialogueHandler(beanFactory.getBean(DialogueHandler.class));
         }
 
@@ -842,7 +905,7 @@ public class Player extends Entity implements BeanFactoryAware {
 
         return this.dialogueHandler;
     }
-    
+
     public DialogueHandler chatPlayer(String msg, int anim) {
         this.interfaces().send(217, 162, 550, false);
         this.write(new InterfaceText(217, 1, this.username()));
@@ -853,7 +916,7 @@ public class Player extends Entity implements BeanFactoryAware {
         this.write(new InvokeScript(600, 1, 1, 16, 14221315));
         this.write(new InterfaceSettings(217, 2, -1, -1, 1));
 
-        if(this.dialogueHandler == null) {
+        if (this.dialogueHandler == null) {
             this.setDialogueHandler(beanFactory.getBean(DialogueHandler.class));
         }
 
@@ -861,13 +924,44 @@ public class Player extends Entity implements BeanFactoryAware {
 
         return this.dialogueHandler;
     }
-    
-    private BeanFactory beanFactory;
 
-    @Override
-    public void setBeanFactory(@NotNull BeanFactory beanFactory) throws BeansException {
-        this.beanFactory = beanFactory;
+
+    public DialogueHandler chatNpc(String msg, Npc npc, int anim) {
+        NpcDefinition def = this.world.definitions().get(NpcDefinition.class, npc.id());
+
+        this.interfaces().send(231, 162, 550, false);
+        this.write(new InterfaceText(231, 1, def.name));
+        this.write(new InterfaceText(231, 2, "Click here to continue"));
+        this.write(new InterfaceText(231, 3, msg));
+        this.write(new NpcOnInterface(231, 0, npc.id()));
+        this.write(new AnimateInterface(231, 0, anim));
+        this.write(new InvokeScript(600, 1, 1, 16, 15138819));
+        this.write(new InterfaceSettings(231, 2, -1, -1, 1));
+
+        if (this.dialogueHandler == null) {
+            this.setDialogueHandler(beanFactory.getBean(DialogueHandler.class));
+        }
+
+        this.getDialogueHandler().initialize(this, "Continue");
+
+        // The default Npc facing player policy. Npcs only face the player when their chat option appears.
+        // Not when you interact with them.
+
+        npc.face(this);
+
+        // Npcs after ~8 seconds will reset their face direction if still facing the player.
+        // If a player runs off and we're still lookin' at them it's a bit freakyy.
+        beanFactory.getBean(ScriptExecutor.class).executeScript(npc, new NpcFacingPlayerPolicy(this));
+
+        //waitReason = WaitReason.DIALOGUE;
+        //interruptCall = dialogueInterruptCall;
+        //Fiber.park();
+
+        //this.interfaces().close(162, 550);
+        return this.dialogueHandler;
     }
+
+    private BeanFactory beanFactory;
 
     private InputValueAction<Integer> inputIntegerAction;
     private InputValueAction<String> inputStringAction;
@@ -894,7 +988,222 @@ public class Player extends Entity implements BeanFactoryAware {
         this.userId = userId;
     }
 
+    public int userId() {
+        return this.userId;
+    }
+
     public void mfaEnabled(boolean value) {
         this.mfaEnabled = value;
+    }
+
+    public void sendScroll(String title, String... lines) {
+        if (interfaces.visible(275))
+            interfaces.closeMain();
+        interfaces.text(275, 2, title);
+        int childId = 4;
+        interfaces.text(275, childId++, "");
+        for (String s : lines)
+            interfaces.text(275, childId++, s);
+        interfaces.invokeScript(917, -1, -1);
+        for (int i = childId; i <= 133; i++)
+            interfaces.text(275, i, "");
+        interfaces.sendMain(275);
+    }
+
+    @Override
+    public void stopActions(boolean cancelMoving) {
+        super.stopActions(cancelMoving);
+
+        if (dialogueHandler != null) {
+            dialogueHandler.terminate();
+        }
+    }
+
+    public void walkToThen(MapObj object, ExecuteInterface then) {
+        int option = this.attrib(AttributeKey.INTERACTION_OPTION);
+
+        if (object != null && object.interactAble()) {
+            AtomicBoolean hasReached = new AtomicBoolean(false);
+
+            InterruptibleTask.bound(this).isCancellableByWalking(false).execute(() -> {
+                boolean reachable;
+
+                this.faceObj(object);
+
+                if (this.timers.has(TimerKey.SPEAR)) {
+                    return;
+                }
+
+                if (option == -1 && this.privilege.eligibleTo(Privilege.ADMIN)) {
+
+                }
+
+                // TODO: Add remote object check
+                if ((object.type() == 10 && object.tile() == this.tile)) {
+                    reachable = true;
+                } else {
+                    logger.info("Yep, we're getting the last tile etc...");
+                    reachable = (this.looks.trans() == 3008) ? this.walkTo(object, PathQueue.StepType.FORCED_WALK) : this.walkTo(object, PathQueue.StepType.REGULAR);
+
+                    this.write(new ChangeMapMarker(this.pathQueue.peekLastTile()));
+
+                    Tile lastTile = this.pathQueue.peekLast() != null ? this.pathQueue.peekLast().toTile() : this.tile;
+
+                    if (this.frozen()) {
+                        if (this.tile != lastTile) {
+                            this.message("A magical force stops you from moving.");
+                            this.sound(154);
+                            this.pathQueue.clear();
+                            reachable = false;
+                        }
+                    }
+
+                    if (this.tile != lastTile) {
+                        if(this.pathQueue.empty()) {
+                            walkToThen(object, then);
+                        }
+                        hasReached.set(false);
+                        return;
+                    }
+                }
+
+                if (object.valid(this.world) && !hasReached.get()) {
+                    if (option == -1) {
+
+                    }
+                }
+
+                if (object.valid(this.world)) {
+                    if (reachable) {
+                        if (option == -1) {
+                            // ITEM ON OBJECT
+                            // TODO: Add item on object
+                            hasReached.set(true);
+                        } else {
+                            hasReached.set(true);
+                        }
+                    } else {
+                        this.message("You can't reach that.");
+                        hasReached.set(true);
+                    }
+                }
+            }).completeCondition(hasReached::get)
+                    .onComplete(then)
+                    .submit(TaskManager.playerChains());
+        }
+    }
+
+    public void walkToThen(Npc target, Tile destination, ExecuteInterface then) {
+        AtomicBoolean hasReached = new AtomicBoolean(false);
+        // TODO: Can I check if using FORCED_WALK can not cancel this, but NORMAL_WALK can?
+        InterruptibleTask.bound(this).isCancellableByWalking(false).execute(() -> {
+            boolean reachable = false;
+            Tile targetTile = null;
+            Tile lastTile = target.tile();
+            Tile playerTile = this.tile;
+
+            this.face(target);
+
+            int option = this.attrib(AttributeKey.INTERACTION_OPTION);
+
+            // Item on NPC option
+            if (option == -1 && (int) this.attribOr(AttributeKey.ITEM_ID, -1) == 5733) {
+                // TODO: Trigger item on npc
+                return;
+            }
+
+            boolean isBanker = Bankers.isBanker(target);
+
+            if (targetTile == null || (lastTile.x != target.tile().x || lastTile.z != target.tile().z)) {
+                if (this.looks.trans() == 3008) {
+                    reachable = this.walkTo(target, PathQueue.StepType.FORCED_WALK);
+                } else {
+                    reachable = this.walkTo(target, PathQueue.StepType.REGULAR);
+                }
+
+                if (this.pathQueue.peekLast() != null && this.pathQueue.peekLast().toTile() != null) {
+                    targetTile = this.pathQueue.peekLast().toTile();
+                } else {
+                    targetTile = this.tile;
+                }
+            }
+
+            lastTile = target.tile();
+            this.face(target);
+
+
+            if (this.frozen()) {
+                this.message("A magical forcce stops you from moving.");
+                this.sound(154);
+                this.pathQueue().clear();
+            }
+
+            boolean forceOk = false;
+
+            if (isBanker) {
+                RangeStepSupplier supplier = new RangeStepSupplier(this, target, 3);
+                if (supplier.reached(this.world())) {
+                    if (this.tile().equals(targetTile)) {
+                        forceOk = true;
+                        hasReached.set(true);
+                    }
+                }
+            }
+
+            if (targetTile != null && (this.touches(target, reached(this, target)) || forceOk)) {
+                if (reachable || forceOk) {
+                    if (!this.locked()) {
+                        hasReached.set(true);
+                    }
+                }
+            }
+
+            if (!hasReached.get()) {
+                if (reachable) {
+                    if(this.pathQueue.empty()) {
+                        walkToThen(target, destination, then);
+                    }
+                } else if (!isBanker) {
+                    this.message("Target is not reachable.");
+                    hasReached.set(true);
+                } else {
+                    //hasReached.set(true);
+                }
+            }
+        }).completeCondition(hasReached::get)
+                .onComplete(then)
+                .submit(TaskManager.playerChains());
+    }
+
+    private Tile reached(Player player, Entity target) {
+        int steps = player.pathQueue().running() ? 2 : 1;
+        int otherSteps = target.pathQueue().running() ? 2 : 1;
+
+        Tile otherTile = null;
+        if (target.pathQueue().peekAfter(otherSteps) != null && target.pathQueue().peekAfter(otherSteps).toTile() != null) {
+            otherTile = target.pathQueue().peekAfter(otherSteps).toTile();
+        } else {
+            otherTile = target.tile();
+        }
+
+        if (player.pathQueue().peekAfter(steps - 1) != null && player.pathQueue().peekAfter(steps - 1).toTile() != null) {
+            return player.pathQueue().peekAfter(steps - 1).toTile();
+        }
+
+        return player.tile();
+    }
+
+    public ItemContainer bank() {
+        return bank;
+    }
+
+    public boolean hasItem(int... ids) {
+        for (int i : ids) {
+            if (inventory.has(i)) return true;
+            if (equipment.has(i)) return true;
+            if (bank.has(i)) return true;
+            //if (grandExchange.has(i)) return true;
+        }
+        return false;
     }
 }

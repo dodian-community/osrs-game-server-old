@@ -169,7 +169,7 @@ public class class262 {
                         return;
                      }
 
-                     var30 = class110.getObjectDef(class39.method673(var31)).int698;
+                     var30 = class110.getObjectDef(PacketBuilder.method673(var31)).int698;
                   }
 
                   if(var10.int697 == -1 && var10.intArray116 == null) {
@@ -183,7 +183,7 @@ public class class262 {
                   var30 = 8;
                   var31 = var7.method2898(var0, var2, var3);
                   if(var31 != 0L) {
-                     var30 = class110.getObjectDef(class39.method673(var31)).int698 / 2;
+                     var30 = class110.getObjectDef(PacketBuilder.method673(var31)).int698 / 2;
                   }
 
                   if(var10.int697 == -1 && var10.intArray116 == null) {
@@ -211,7 +211,7 @@ public class class262 {
                      var30 = 8;
                      var31 = var7.method2898(var0, var2, var3);
                      if(var31 != 0L) {
-                        var30 = class110.getObjectDef(class39.method673(var31)).int698 / 2;
+                        var30 = class110.getObjectDef(PacketBuilder.method673(var31)).int698 / 2;
                      }
 
                      Object var28;

@@ -317,7 +317,7 @@ public class class177 {
          class172 var2 = class26.method433(OutgoingPacket.field2174, GameClient.field626.field1218, 832294667);
          var2.field2257.writeByte(class316.method5820(var0, (short)256));
          var2.field2257.writeString(var0, 452157445);
-         GameClient.field626.method1980(var2, (byte)1);
+         GameClient.field626.method1980(var2);
       }
    }
 }

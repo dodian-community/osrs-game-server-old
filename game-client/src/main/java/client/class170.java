@@ -62,7 +62,7 @@ public class class170 implements class167 {
             }
 
             var13 = class28.field248.method2902(plane, localX, localZ, var8);
-            int var15 = class39.method673(var8);
+            int var15 = PacketBuilder.method673(var8);
             int var16 = var13 & 31;
             int var17 = var13 >> 6 & 3;
             ObjectDef var14;

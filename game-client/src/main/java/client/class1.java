@@ -95,14 +95,14 @@ public class class1 {
    }
 
    public static final boolean method8(int var0) {
-      class39 var1 = class39.field337;
-      synchronized(class39.field337) {
-         if(class39.field352 == class39.field350) {
+      PacketBuilder var1 = PacketBuilder.packetBuilder;
+      synchronized(PacketBuilder.packetBuilder) {
+         if(PacketBuilder.field352 == PacketBuilder.field350) {
             return false;
          } else {
-            class163.field2016 = class39.field348[class39.field350];
-            class39.field342 = class39.field346[class39.field350];
-            class39.field350 = class39.field350 + 1 & 127;
+            class163.field2016 = PacketBuilder.field348[PacketBuilder.field350];
+            PacketBuilder.field342 = PacketBuilder.field346[PacketBuilder.field350];
+            PacketBuilder.field350 = PacketBuilder.field350 + 1 & 127;
             return true;
          }
       }

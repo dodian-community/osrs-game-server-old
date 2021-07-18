@@ -107,7 +107,7 @@ public class class224 extends class206 {
 
          int[] var20 = Npc.field1038.pixels;
          var26 = var1 * 4 + (103 - var2) * 2048 + 24624;
-         var15 = class39.method673(var6);
+         var15 = PacketBuilder.method673(var6);
          ObjectDef var16 = class110.getObjectDef(var15);
          if(var16.int701 != -1) {
             PaletteSprite var17 = class25.field214[var16.int701];
@@ -212,7 +212,7 @@ public class class224 extends class206 {
          var8 = class28.field248.method2902(var0, var1, var2, var6);
          var9 = var8 >> 6 & 3;
          var10 = var8 & 31;
-         var11 = class39.method673(var6);
+         var11 = PacketBuilder.method673(var6);
          ObjectDef var21 = class110.getObjectDef(var11);
          if(var21.int701 != -1) {
             PaletteSprite var27 = class25.field214[var21.int701];
@@ -258,7 +258,7 @@ public class class224 extends class206 {
 
       var6 = class28.field248.method2901(var0, var1, var2);
       if(var6 != 0L) {
-         var8 = class39.method673(var6);
+         var8 = PacketBuilder.method673(var6);
          ObjectDef var22 = class110.getObjectDef(var8);
          if(var22.int701 != -1) {
             PaletteSprite var23 = class25.field214[var22.int701];

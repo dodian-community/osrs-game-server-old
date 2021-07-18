@@ -51,6 +51,8 @@ public class SpringSerializer extends PlayerSerializer {
 
         User user = oUser.get();
 
+        player.userId(user.getId());
+
         // Make sure that we can never allow players to login without password unless server is in development mode!
         if(!GameInitializer.isDevServer()
         || !GameInitializer.config().hasPath("account.check-password")
@@ -78,11 +80,11 @@ public class SpringSerializer extends PlayerSerializer {
 
         Optional<Character> optionalCharacter = charactersRepository.findFirstByUsername(player.username());
         if(optionalCharacter.isPresent()) {
-            optionalCharacter.get().getPlayer(player);
+            optionalCharacter.get().updatePlayer(player);
             logger.info("Loading existing character.");
         } else {
             player.putattrib(AttributeKey.NEW_ACCOUNT, true);
-            this.createCharacter(player).getPlayer(player);
+            this.createCharacter(player);
             logger.info("Creating new character.");
             savePlayer(player, false);
         }
@@ -93,6 +95,11 @@ public class SpringSerializer extends PlayerSerializer {
 
     @Override
     public void savePlayer(Player player, boolean removeOnline) {
-        this.charactersRepository.save(new Character(player));
+        Character character = this.charactersRepository.findFirstByUsername(player.username())
+                .orElse(new Character(player));
+
+        character.update(player);
+
+        this.charactersRepository.save(character);
     }
 }
