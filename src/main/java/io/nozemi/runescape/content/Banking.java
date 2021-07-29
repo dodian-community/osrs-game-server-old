@@ -13,6 +13,8 @@ import io.nozemi.runescape.util.Varbit;
 
 import java.util.Arrays;
 
+import static io.nozemi.runescape.content.constants.ObjectConstants.BANK_BOOTH_1;
+
 public class Banking {
 
     @ScriptMain
@@ -31,7 +33,7 @@ public class Banking {
             });
         });
 
-        scriptRepository.onObject( 6944, (script) -> {
+        scriptRepository.onObject(BANK_BOOTH_1, (script) -> {
             open(((Player) script.getContext()), script);
             return null;
         });

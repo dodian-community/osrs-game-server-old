@@ -88,8 +88,8 @@ public class Script {
         return executedFunction;
     }
 
-    public final Object getContext() {
-        return this.context;
+    public final <T> T getContext() {
+        return (T) this.context;
     }
 
     public Entity entity() {
@@ -98,6 +98,11 @@ public class Script {
 
     public Player player() {
         return (Player) context;
+    }
+
+    // Server-specific functions
+    public void message(String msg) {
+        ((Player) context).message(msg);
     }
 
     public Npc npc() {
@@ -115,5 +120,9 @@ public class Script {
             return holder.get();
 
         return null;
+    }
+
+    public final void setContext(Object x) {
+        this.context = x;
     }
 }

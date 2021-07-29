@@ -28,13 +28,17 @@ import io.nozemi.runescape.util.HuffmanCodec;
 import io.nozemi.runescape.util.SpawnDirection;
 import io.nozemi.runescape.util.Varbit;
 import nl.bartpelle.dawnguard.DataStore;
+import org.jetbrains.annotations.NotNull;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
 @Component
-public class PacketMessageHandler {
+public class PacketMessageHandler implements BeanFactoryAware {
 
     private static final int TYPE_NORMAL = 0;
     private static final int TYPE_AUTO_CHAT = 1;
@@ -44,6 +48,8 @@ public class PacketMessageHandler {
     private final ButtonHandler buttonHandler;
     private final CommandHandler commandHandler;
     private final NpcSpawnsRepository repository;
+
+    private BeanFactory beanFactory;
 
     @Autowired
     public PacketMessageHandler(DataHandler dataHandler, ButtonHandler buttonHandler, ConfigHandler configHandler, CommandHandler commandHandler, NpcSpawnsRepository repository) {
@@ -123,7 +129,12 @@ public class PacketMessageHandler {
             if(player.getEditModeHandler() != null && player.getEditModeHandler().getMode().equals(EditModeHandler.Mode.SPAWNING_NPC)) {
                 NpcSpawningMode npcSpawningMode = (NpcSpawningMode) player.getEditModeHandler().getEditorModeInstance();
 
-                Npc npc = new Npc(npcSpawningMode.getNpcId(), player.world(), new Tile(walk.getX(), walk.getZ(), player.tile().level));
+                Npc npc = beanFactory.getBean(Npc.class);
+
+                npc.setId(npcSpawningMode.getNpcId());
+                npc.setWorld(player.world());
+                npc.setSpawnTile(new Tile(walk.getX(), walk.getZ(), player.tile().level));
+
                 npc.walkRadius(npcSpawningMode.getWalkRadius());
                 npc.spawnDirection(npcSpawningMode.getSpawnDirection());
 
@@ -187,5 +198,10 @@ public class PacketMessageHandler {
     @MessageListener
     public void onPingPacket(ClickAction pingPacket) {
 
+    }
+
+    @Override
+    public void setBeanFactory(@NotNull BeanFactory beanFactory) throws BeansException {
+        this.beanFactory = beanFactory;
     }
 }

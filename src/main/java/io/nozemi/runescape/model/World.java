@@ -8,6 +8,7 @@ import io.nozemi.runescape.handlers.impl.ConfigHandler;
 import io.nozemi.runescape.model.entity.Npc;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.model.entity.npc.NpcCombatInfo;
+import io.nozemi.runescape.model.entity.player.Privilege;
 import io.nozemi.runescape.model.item.Item;
 import io.nozemi.runescape.model.map.Flags;
 import io.nozemi.runescape.model.map.MapObj;
@@ -64,6 +65,8 @@ public class World {
     public int gameCycles; // Used more accurately identify an action that happened on a cycle, regardless of PID
 
     private int ticksUntilSystemUpdate = -1;
+
+    public static int xpMultiplier = 50;
 
     @Autowired
     public World(DefinitionRepository definitionRepository, ConfigHandler configHandler) {
@@ -345,6 +348,10 @@ public class World {
         return random.nextInt(i + 1);
     }
 
+    public Random random() {
+        return random;
+    }
+
     public double randomDouble() {
         return random.nextDouble();
     }
@@ -359,6 +366,10 @@ public class World {
 
     public int random(IntRange range) {
         return random.nextInt(range.getEndInclusive() - range.getStart() + 1) + range.getStart();
+    }
+
+    public boolean rollDie(int dieSides, int chance) {
+        return random(dieSides) < chance;
     }
 
     public boolean registerNpc(Npc npc) {
@@ -630,5 +641,28 @@ public class World {
         }
 
         return clipping;
+    }
+
+    public void spawnSound(Tile at, int id, int delay, int radius) {
+        players.forEachWithinDistance(at, radius, p -> { // TODO how far? viewport = 14 max..
+            Tile base = p.activeMap();
+            int relx = at.x - base.x;
+            int relz = at.z - base.z;
+
+            p.write(new SetMapBase(relx / 8 * 8, relz / 8 * 8));
+            p.write(new SpawnSound(at, id, radius, delay));
+        });
+    }
+
+    public void broadcast(String message) {
+        broadcast(message, Privilege.PLAYER);
+    }
+
+    public void broadcast(String message, Privilege priv) {
+        players.forEach(p -> {
+            if (p.privilege().eligibleTo(priv) || (priv == Privilege.MODERATOR)) {
+                p.message(message);
+            }
+        });
     }
 }

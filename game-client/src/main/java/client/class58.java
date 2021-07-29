@@ -51,7 +51,7 @@ public class class58 extends class206 {
       this.field536 = class181.field2332.field975.method5329(this.field534, -1073305772) ? class289.field3631 : class289.field3634;
    }
 
-   void method1070(int var1, String var2, String var3, String var4, byte var5) {
+   void method1070(int var1, String var2, String var3, String var4) {
       int var6 = ++class83.field1186 - 1;
       this.field540 = var6;
       this.field535 = GameClient.field591;

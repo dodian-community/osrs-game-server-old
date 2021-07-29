@@ -5,6 +5,7 @@ import io.nozemi.runescape.model.Entity;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.model.entity.player.EquipSlot;
 import io.nozemi.runescape.model.item.Item;
+import io.nozemi.runescape.model.item.ItemAttrib;
 import io.nozemi.runescape.model.item.ItemContainer;
 import io.nozemi.runescape.net.message.game.command.SetPlayerOption;
 import io.nozemi.runescape.util.EquipmentInfo;
@@ -172,5 +173,30 @@ public class Equipment {
 
         //CombatSounds.weapon_equip_sounds(player, slot, toWear.id())
         player.updateWeaponInterface();
+    }
+
+    public static void checkTargetVenomGear(Entity attacker, Entity victim) {
+        if(victim.isPlayer() && attacker.isNpc()) {
+            // There is a chance for venom to apply when it has charges. Charge deduction is done on a different time - the same one as Barrows, it decays when in combat @ 733 scales/hour
+            if (venomHelm(victim) && attacker.world().rollDie(6, 1)) {
+                attacker.venom(victim);
+            }
+        }
+    }
+
+    public static boolean venomHelm(Entity target) {
+        Item helm = target.equipment().get(EquipSlot.HEAD);
+
+        if(helm == null) {
+            return false;
+        }
+
+        if(helm.getId() == 12931 || helm.getId() == 13197 || helm.getId() == 13199) {
+            if(helm.propertyOr(ItemAttrib.ZULRAH_SCALES, 0) > 0) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

@@ -5,14 +5,14 @@ public class class173 {
    static final int field2262 = 2;
 
    static void method3472(int var0, String var1, String var2, String var3, int var4) {
-      class86 var5 = (class86)class83.field1180.get(Integer.valueOf(var0));
+      class86 var5 = (class86)class83.field1180.get(var0);
       if(var5 == null) {
          if(var4 >= 1962086287) {
             return;
          }
 
          var5 = new class86();
-         class83.field1180.put(Integer.valueOf(var0), var5);
+         class83.field1180.put(var0, var5);
       }
 
       class58 var6 = var5.method1964(var0, var1, var2, var3, (byte)55);

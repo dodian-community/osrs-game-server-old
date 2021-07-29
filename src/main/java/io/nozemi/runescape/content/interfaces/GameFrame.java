@@ -9,6 +9,7 @@ import io.nozemi.runescape.model.entity.PathQueue;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.tasksystem.InterruptibleTask;
 import io.nozemi.runescape.tasksystem.TaskManager;
+import io.nozemi.runescape.util.AttackMode;
 import io.nozemi.runescape.util.Varp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
@@ -34,6 +35,21 @@ public class GameFrame extends ButtonRegisterer {
         if ((Double) player.attribOr(AttributeKey.RUN_ENERGY, 0.0) >= 1.0) {
             player.varps().varp(Varp.RUNNING_ENABLED, player.varps().varp(Varp.RUNNING_ENABLED) == 1 ? 0 : 1);
         }
+    }
+
+    @Button(parentId = 593, childId = 3)
+    public void onFlick(Player player, int option, int item) {
+        player.varps().varp(43, 0);
+    }
+
+    @Button(parentId = 593, childId = 7)
+    public void onLash(Player player, int option, int item) {
+        player.varps().varp(43, 1);
+    }
+
+    @Button(parentId = 593, childId = 15)
+    public void onDeflect(Player player, int option, int item) {
+        player.varps().varp(43, 3);
     }
 
     public void test(Player player, int option, int item) {

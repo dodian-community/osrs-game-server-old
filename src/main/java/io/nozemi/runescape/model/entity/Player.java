@@ -2,6 +2,8 @@ package io.nozemi.runescape.model.entity;
 
 import io.netty.channel.Channel;
 import io.nozemi.runescape.GameInitializer;
+import io.nozemi.runescape.content.combat.WeaponSounds;
+import io.nozemi.runescape.content.interfaces.Equipment;
 import io.nozemi.runescape.content.mechanics.VarbitAttributes;
 import io.nozemi.runescape.content.npcs.Bankers;
 import io.nozemi.runescape.content.npcs.NpcFacingPlayerPolicy;
@@ -9,6 +11,7 @@ import io.nozemi.runescape.content.tools.editmode.EditModeHandler;
 import io.nozemi.runescape.crypto.IsaacRand;
 import io.nozemi.runescape.events.ScriptExecutor;
 import io.nozemi.runescape.events.ScriptRepository;
+import io.nozemi.runescape.fs.ItemDefinition;
 import io.nozemi.runescape.fs.NpcDefinition;
 import io.nozemi.runescape.handlers.impl.dialogue.DialogueHandler;
 import io.nozemi.runescape.handlers.impl.dialogue.InputValueAction;
@@ -33,6 +36,7 @@ import io.nozemi.runescape.tasksystem.ExecuteInterface;
 import io.nozemi.runescape.tasksystem.InterruptibleTask;
 import io.nozemi.runescape.tasksystem.TaskManager;
 import io.nozemi.runescape.util.*;
+import kotlin.ranges.IntRange;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
@@ -44,6 +48,7 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import java.lang.ref.WeakReference;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.util.*;
@@ -51,6 +56,9 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.stream.Collectors;
+
+import static io.nozemi.runescape.content.combat.PlayerCombat.canAttack;
 
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
@@ -792,6 +800,39 @@ public class Player extends Entity implements BeanFactoryAware {
         return skills;
     }
 
+    @Override
+    public Optional<Integer> killer() {
+        // If we don't even have any killers, then return an empty optional.
+        if (damagers.isEmpty())
+            return Optional.empty();
+
+        // Obtain a stream set of all information tracked.
+        Set<Map.Entry<Integer, PlayerDamageTracker>> trackset = damagers.entrySet()
+                .stream()
+                .filter(info -> System.currentTimeMillis() - getDamagerLastTime().get(info.getKey()) <= 300000)
+                .filter(info -> !info.getValue().killer().username().equalsIgnoreCase(username()))
+                .collect(Collectors.toSet());
+
+        // Try to find the killer based on hitters
+        Comparator<Map.Entry<Integer, PlayerDamageTracker>> comparator = (e1, e2) -> e2.getValue().damage().compareTo(e1.getValue().damage());
+
+        // Identify the result
+        Map.Entry<Integer, PlayerDamageTracker> result = trackset.stream().sorted(comparator).findFirst().orElse(null);
+
+        // An anti-farming mechanic on W2 - checks if you ate or just suicided. Why suicide?
+        int[] totalDamageTaken = new int[1];
+        trackset.forEach(e -> totalDamageTaken[0] += e.getValue().damage());
+
+        int account_id = result != null ? result.getKey() : -1;
+        if (isPlayer() && account_id != -1) {
+            putattrib(AttributeKey.MOST_DAM_TRACKER, new Tuple<>(totalDamageTaken[0], result.getValue()));
+            return Optional.ofNullable(account_id);
+        } else {
+            clearattrib(AttributeKey.MOST_DAM_TRACKER);
+            return Optional.empty();
+        }
+    }
+
     public RunEnergy runenergy() {
         return runEnergy;
     }
@@ -1059,7 +1100,7 @@ public class Player extends Entity implements BeanFactoryAware {
                     }
 
                     if (this.tile != lastTile) {
-                        if(this.pathQueue.empty()) {
+                        if (this.pathQueue.empty()) {
                             walkToThen(object, then);
                         }
                         hasReached.set(false);
@@ -1160,7 +1201,7 @@ public class Player extends Entity implements BeanFactoryAware {
 
             if (!hasReached.get()) {
                 if (reachable) {
-                    if(this.pathQueue.empty()) {
+                    if (this.pathQueue.empty()) {
                         walkToThen(target, destination, then);
                     }
                 } else if (!isBanker) {
@@ -1205,5 +1246,354 @@ public class Player extends Entity implements BeanFactoryAware {
             //if (grandExchange.has(i)) return true;
         }
         return false;
+    }
+
+    public void debug(String format, Object... params) {
+        if (privilege == Privilege.ADMIN) {
+            if (attribOr(AttributeKey.DEBUG, false)) {
+                write(new AddMessage(params.length > 0 ? String.format(format, (Object[]) params) : format));
+            }
+        }
+    }
+
+    public void prepareAttack() {
+        WeakReference<Entity> ref = this.attrib(AttributeKey.TARGET) == null ? new WeakReference<>(null) : this.attrib(AttributeKey.TARGET);
+        AtomicReference<Entity> target = new AtomicReference<>(ref.get());
+
+        // Stuff that happens the first time we attack
+        this.interfaces().closeMain();
+        this.interfaces().close(162, 550); // Close chatbox
+
+        if (this.varps().varbit(Varbit.AUTOCAST_SELECTED) != 0) {
+            if (!this.timers().has(TimerKey.COMBAT_ATTACK)) { // There is a 1-tick delay before you start autocasting on RS
+                this.timers().addOrSet(TimerKey.COMBAT_ATTACK, 1);
+            }
+        }
+
+        if (target.get() != null) {
+            this.face(target.get());
+            if (!canAttack(this, target.get())) {
+                this.debug("<col=FF0000>Can't attack mate. Tick %s", this.world().cycleCount());
+                return;
+            }
+        }
+
+        AtomicBoolean completed = new AtomicBoolean(false);
+        InterruptibleTask.bound(this)
+                .execute(() -> {
+                    Tile tile = this.tile();
+
+                    this.pathQueue().clear();
+
+                    this.face(target.get());
+                    this.varps().varp(Varp.ATTACK_PRIORITY_PID, target.get().index());
+
+                    // Establish some stuff...
+                    int weaponId = -1;
+                    int ammoId = -1;
+                    if (this.equipment().get(EquipSlot.WEAPON) != null) {
+                        weaponId = this.equipment().get(EquipSlot.WEAPON).getId();
+                    }
+                    if (this.equipment().get(EquipSlot.AMMO) != null) {
+                        ammoId = this.equipment().get(EquipSlot.AMMO).getId();
+                    }
+
+                    int weaponType = this.world().equipmentInfo().weaponType(weaponId);
+
+                    String wepName = "";
+                    String ammoName = "";
+
+                    ItemDefinition weaponDef = new Item(weaponId).definition(this.world());
+                    ItemDefinition ammoDef = new Item(ammoId).definition(this.world());
+
+                    if (weaponDef != null) {
+                        wepName = weaponDef.name;
+                    }
+
+                    if (ammoDef != null) {
+                        ammoName = ammoDef.name;
+                    }
+
+                    if (target.get().isPlayer() && weaponId != 10501) {
+                        completed.set(true);
+                    }
+
+                    // Put combat timer
+                    this.timers().addOrSet(TimerKey.IN_COMBAT, 5);
+
+                    // Range, mage or melee?
+                    if (weaponType == WeaponType.BOW || weaponType == WeaponType.CROSSBOW || weaponType == WeaponType.THROWN || weaponType == WeaponType.CHINCHOMPA) {
+                        int attackRange = attackRange(weaponId);
+                        boolean inRange = this.tile().distance(target.get().tile()) <= attackRange;
+                        RangeStepSupplier supplier = new RangeStepSupplier(this, target.get(), attackRange);
+
+                        if (!supplier.reached(this.world()) && !this.frozen() && !this.stunned()) {
+                            this.walkTo(target.get(), PathQueue.StepType.REGULAR);
+                            this.pathQueue.trimToSize((this.pathQueue.running() ? 2 : 1));
+                        }
+
+                        boolean reached = supplier.reached(this.world());
+                        if (!reached && inRange && this.frozen()) {
+                            this.message("I can't reach that!");
+                            this.sound(154);
+                            completed.set(true);
+                        } else if (reached) {
+                            if (!this.timers().has(TimerKey.COMBAT_ATTACK)) {
+                                boolean crystalBow = new IntRange(4212, 4223).contains(weaponId);
+
+                                if (!new IntRange(4212, 4223).contains(weaponId) && ((weaponType == WeaponType.BOW || weaponType == WeaponType.CROSSBOW) && ammoName.equals(""))) {
+                                    this.message("There's no ammo left in your quiver.");
+                                    completed.set(true);
+                                }
+
+                                this.world().spawnSound(this.tile(), WeaponSounds.get(this), 0, 10);
+                                this.animate(EquipmentInfo.attackAnimationFor(this));
+
+                                int tileDist = tile.distance(target.get().tile());
+                                int cyclesPerTile = 5;
+                                int baseDelay = 41;
+                                int startHeight = 40;
+                                int endHeight = 36;
+                                int curve = 15;
+                                int graphic = -1;
+                                boolean addRangeStr = false;
+
+                                if(crystalBow) {
+                                    addRangeStr = true;
+                                    this.graphic(250, 96, 0);
+                                    graphic = 249;
+                                    if (weaponId == 4212) {
+                                        this.equipment().remove(new Item(4212), true, EquipSlot.WEAPON);
+                                        this.equipment().add(new Item(4214), true, EquipSlot.WEAPON);
+                                        this.message("Your crystal bow has degraded!");
+                                    }
+                                }
+
+                                // TODO: Bows need special love
+
+                                // Crossbows are the other type of special needs
+                                if (weaponType == WeaponType.CROSSBOW) {
+                                    addRangeStr = true;
+                                    cyclesPerTile = 3;
+                                    curve = 5;
+                                    graphic = 27;
+                                }
+
+                                target.get().putattrib(AttributeKey.LAST_DAMAGER, this);
+                                target.get().putattrib(AttributeKey.LAST_WAS_ATTACKED_TIME, System.currentTimeMillis());
+                                this.putattrib(AttributeKey.LAST_ATTACK_TIME, System.currentTimeMillis());
+                                this.putattrib(AttributeKey.LAST_TARGET, target);
+
+                                if (target.get().isPlayer()) {
+                                    Player targ = (Player) target.get();
+                                    targ.interfaces().closeMain();
+                                    targ.interfaces().close(162, 550); // Close chatbox
+                                }
+                                this.interfaces().closeMain();
+                                this.interfaces().close(162, 550); // Close chatbox
+                                Equipment.checkTargetVenomGear(this, target.get());
+                                blockAnim(target.get(), delayForBlock(weaponId, weaponType, tileDist));
+
+                                //boolean notSpec = this.varps().varp(Varp.SPECIAL_ENABLED) == 0;
+                                //boolean didSpec = !notSpec;
+
+                                boolean targetIsDummy = false;
+
+                                this.varps().varp(Varp.SPECIAL_ENABLED, 0);
+                            }
+                        }
+                    } else if((this.equipment().hasAt(EquipSlot.WEAPON, 11905) || this.equipment().hasAt(EquipSlot.WEAPON, 11907)) && target.get().isNpc()) {
+                        spellOnPlayer(-1, -1, 1167, 1252, 30, 1251, new Graphic(1253, 90), 227, 28, 1, 75, 0.0, "trident");
+
+                        this.timers().addOrSet(TimerKey.COMBAT_ATTACK, 4);
+                        this.timers().addOrSet(TimerKey.IN_COMBAT, 5);
+                    } else {
+                        int attackRange = 10;
+                        boolean inRange = this.tile().distance(target.get().tile()) <= attackRange;
+
+                        RangeStepSupplier supplier = new RangeStepSupplier(this, target.get(), attackRange);
+                        boolean reached = supplier.reached(this.world(), target.get());
+
+                        boolean touches = this.touches(target.get(), tile);
+
+                        if(!touches && this.frozen()) {
+                            if(inRange && !reached) {
+                                this.message("I can't reach that!");
+                                this.sound(154);
+                                completed.set(true);
+                            } else {
+                                // No issues with the projectile path finder. Combat DOES NOT cancel, you just can't reach them this cycle.
+                                this.message("A magical force stops you from moving.");
+                                this.sound(154);
+                            }
+                        }
+
+                        boolean stuck = false;
+
+                        if(!touches) {
+                            if(!this.frozen() && !this.stunned()) {
+                                if(target.get().isNpc() && ((Npc) target.get()).combatInfo() != null && ((Npc) target.get()).combatInfo().unstacked) {
+                                    moveCloserNoPeek(target.get(), tile);
+                                } else {
+                                    tile = moveCloser(target.get(), tile);
+                                }
+                            } else {
+                                stuck = true;
+                            }
+                        }
+
+                        if(!stuck && this.touches(target.get(), tile)) {
+                            if(!this.timers().has(TimerKey.COMBAT_ATTACK)) {
+                                Equipment.checkTargetVenomGear(this, target.get());
+                                target.get().putattrib(AttributeKey.LAST_WAS_ATTACKED_TIME, System.currentTimeMillis());
+                                target.get().putattrib(AttributeKey.LAST_DAMAGER, this);
+                                this.putattrib(AttributeKey.LAST_ATTACK_TIME, System.currentTimeMillis());
+                                this.putattrib(AttributeKey.LAST_TARGET, target);
+                                if(target.get().isPlayer()) {
+                                    Player targ = (Player) target.get();
+                                    targ.interfaces().closeMain();
+                                    targ.interfaces().close(162, 550); // Close Chatbox
+                                }
+                                this.interfaces().closeMain();
+                                this.interfaces().close(162, 550); // Close Chatbox
+
+                                boolean success = AccuracyFormula.doesHit(this, target.get(), CombatStyle.MELEE, 1.0) || this.hasAttrib(AttributeKey.ALWAYS_HIT);
+
+                                if(success) {
+                                    int max = CombatFormula.maximumMeleeHit(this);
+                                    int damage = this.attribOr(AttributeKey.ALWAYS_HIT, this.world().random(max));
+                                    if(this.attribOr(AttributeKey.DEBUG, false)) {
+                                        this.message("Damage: " + damage);
+                                    }
+                                    Hit hit = target.get().hit(this, damage, 1, false).combatStyle(CombatStyle.MELEE).pidAdjust().block(false);
+
+                                    hit.applyProtection();
+
+                                    hit.submit().addXp();
+
+                                    target.get().blockHit(hit);
+
+                                } else {
+                                    if(this.attribOr(AttributeKey.DEBUG, false)) {
+                                        this.message("You missed... :(");
+                                    }
+                                    Hit hit = target.get().hitpvp(this, 0, 1, CombatStyle.MELEE).block(false).submit();
+                                    target.get().blockHit(hit);
+                                }
+
+                                this.animate(EquipmentInfo.attackAnimationFor(this));
+                                this.world().spawnSound(this.tile(), WeaponSounds.get(this), 0, 10);
+                                this.timers().addOrSet(TimerKey.COMBAT_ATTACK, this.world().equipmentInfo().weaponSpeed(weaponId));
+                                this.timers().addOrSet(TimerKey.IN_COMBAT, this.world().equipmentInfo().weaponSpeed(weaponId));
+                            }
+                        }
+
+                        this.varps().varp(Varp.SPECIAL_ENABLED, 0);
+                    }
+
+                    target.set(ref.get());
+                })
+                .onComplete(() -> {
+                    this.message("You've completed the thing!");
+                    this.face(null);
+                })
+                .completeCondition(() -> target.get() == null || target.get().dead() || this.dead() || !canAttack(this, target.get()) || completed.get())
+                .submit(TaskManager.playerChains());
+    }
+
+    public int delayForBlock(int weaponId, int weaponType, int distance) {
+        int delay = 46;
+        int pt = 5; // Delay per tile between opponents
+
+        return delay + (Math.max(1, distance) * pt); // Dist -1 cos initial delay is 1*pt larger than it should be
+    }
+
+    public void blockAnim(Entity target, int delayForBlock) {
+        if (target.isNpc()) {
+            if (!((Npc) target).sync().hasFlag(NpcSyncInfo.Flag.ANIMATION.value)) {
+                if (((Npc)target).combatInfo() != null) {
+                    if (((Npc)target).combatInfo().animations.block > 0)
+                        target.animate(((Npc)target).combatInfo().animations.block, delayForBlock);
+                } else {
+                    target.animate(424, delayForBlock);
+                }
+            }
+        } else if (target.isPlayer()) {
+            if (!(((Player)target)).sync().hasFlag(PlayerSyncInfo.Flag.ANIMATION.value)) {
+                target.animate(EquipmentInfo.blockAnimationFor(((Player)target)), delayForBlock);
+            }
+        }
+    }
+
+    public int attackRange(int weaponId) {
+        int attackRange = 7;
+
+        if (weaponId == 4212) {
+            attackRange = 13; // Crystal Bow
+        }
+
+        if (new IntRange(4214, 4223).contains(weaponId)) {
+            attackRange = 10; // Crystal Bows
+        }
+
+        if (Collections.singletonList(new int[]{839, 845, 847, 851, 855, 859}).contains(weaponId)) {
+            attackRange = 9; // Long Bows
+        }
+
+        if (new IntRange(5654, 5667).contains(weaponId) || new IntRange(863, 876).contains(weaponId)) {
+            attackRange = 4; // Knives
+        }
+
+        if (new IntRange(806, 817).contains(weaponId) || new IntRange(5628, 5641).contains(weaponId) || weaponId == 3093 || weaponId == 3094) {
+            attackRange = 3; // Darts
+        }
+
+        // Check if selected style is long range, increasing the distance.
+        if (EquipmentInfo.attackStyleFor(this) == AttackStyle.LONG_RANGE) {
+            attackRange += 2;
+        }
+
+        if (attackRange > 10) {
+            attackRange = 10; // Maximum distance of a distance-based attack is 10 tiles
+        }
+
+        return attackRange;
+    }
+
+    public void spellOnPlayer(int castSound, int hitSound, int animation, int projectile, int speed, int startGfx, Graphic gfx, int splashSound, int maxHit, int spellBook, int level, double xp, String name, Item... runes) {
+        // TODO: Implement spell on player
+    }
+
+    public Tile moveCloser(Entity target, Tile tile) {
+        int steps = this.pathQueue().running() ? 2 : 1;
+        int otherSteps = target.pathQueue().running() ? 2 : 1;
+
+        Tile otherTile = target.tile();
+        if(target.pathQueue().peekAfter(otherSteps) != null) {
+            otherTile = target.pathQueue().peekAfter(otherSteps).toTile();
+        }
+
+        this.stepTowards(target, otherTile, 25);
+
+
+        if(this.pathQueue().peekAfter(steps - 1) != null) {
+            return this.pathQueue().peekAfter(steps - 1).toTile();
+        }
+
+        return tile;
+    }
+
+    public Tile moveCloserNoPeek(Entity target, Tile tile) {
+        int steps = this.pathQueue().running() ? 2 : 1;
+
+        Tile otherTile = target.tile();
+
+        this.stepTowards(target, otherTile, 25);
+
+        if(this.pathQueue().peekAfter(steps - 1) != null) {
+            return this.pathQueue().peekAfter(steps - 1).toTile();
+        }
+
+        return tile;
     }
 }

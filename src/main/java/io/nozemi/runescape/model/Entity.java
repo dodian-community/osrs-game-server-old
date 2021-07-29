@@ -1,12 +1,16 @@
 package io.nozemi.runescape.model;
 
+import io.nozemi.runescape.content.combat.CombatSounds;
+import io.nozemi.runescape.content.combat.PlayerCombat;
+import io.nozemi.runescape.content.interfaces.Equipment;
 import io.nozemi.runescape.content.mechanics.Transmogrify;
-import io.nozemi.runescape.content.npcs.Bankers;
+import io.nozemi.runescape.content.mechanics.VarbitAttributes;
 import io.nozemi.runescape.events.Script;
-import io.nozemi.runescape.fs.NpcDefinition;
-import io.nozemi.runescape.fs.ObjectDefinition;
+import io.nozemi.runescape.events.ScriptRepository;
 import io.nozemi.runescape.model.entity.*;
-import io.nozemi.runescape.model.entity.player.Varps;
+import io.nozemi.runescape.model.entity.player.*;
+import io.nozemi.runescape.model.item.Item;
+import io.nozemi.runescape.model.item.ItemAttrib;
 import io.nozemi.runescape.model.item.ItemContainer;
 import io.nozemi.runescape.model.map.*;
 import io.nozemi.runescape.model.map.steroids.Direction;
@@ -17,13 +21,23 @@ import io.nozemi.runescape.script.TimerKey;
 import io.nozemi.runescape.script.TimerRepository;
 import io.nozemi.runescape.tasksystem.*;
 import io.nozemi.runescape.content.teleports.MyTeleports;
+import io.nozemi.runescape.util.AttackStyle;
+import io.nozemi.runescape.util.EquipmentInfo;
+import io.nozemi.runescape.util.Varbit;
+import io.nozemi.runescape.util.Varp;
 import kotlin.jvm.functions.Function1;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.stereotype.Component;
 
+import java.lang.ref.WeakReference;
 import java.util.*;
 
-public abstract class Entity {
+@Component
+public abstract class Entity implements HitOrigin, BeanFactoryAware {
 
     private static final Logger logger = LogManager.getLogger(Entity.class);
 
@@ -36,7 +50,15 @@ public abstract class Entity {
     protected TimerRepository timers = new TimerRepository();
     private LockType lock = LockType.NONE;
     protected SyncInfo sync;
+    protected boolean noRetaliation = false;
     protected LinkedList<Hit> hits = new LinkedList<>();
+    protected Map<Integer, PlayerDamageTracker> damagers = new HashMap<>();
+
+    private Skills skills;
+
+    protected Map<Integer, Long> damagerLastTime = new HashMap<>();
+
+    protected BeanFactory beanFactory;
 
     public Entity() {
         this(null, new Tile(0, 0, 0));
@@ -49,6 +71,21 @@ public abstract class Entity {
 
         if (isPlayer())
             attribs = new EnumMap<>(AttributeKey.class);
+    }
+
+    public Map<Integer, Long> getDamagerLastTime() {
+        return damagerLastTime;
+    }
+
+    public Map<Integer, PlayerDamageTracker> getDamagers() {
+        return damagers;
+    }
+    public void clearDamagers() {
+        damagers.clear();
+    }
+
+    public void clearDamageTimes() {
+        damagerLastTime.clear();
     }
 
     public int index() {
@@ -482,8 +519,8 @@ public abstract class Entity {
         return hit(origin, hit, delay, null, true);
     }
 
-    public Hit hit(HitOrigin origin, int hit, int delay, Hit.Type hittype) {
-        return hit(origin, hit, delay, hittype, true);
+    public Hit hit(HitOrigin origin, int hit, int delay, Hit.Type hitType) {
+        return hit(origin, hit, delay, hitType, true);
     }
 
     /**
@@ -508,9 +545,9 @@ public abstract class Entity {
             // No problems with instant taking 0 delay hits, rather than queuing them. They are the first thing (juust after timers) in player processed, before scripts.
             // Since Npc process is after player process (and hence player.hitprocess()) npc 0t hits must be applied instantly because the hitprocess() won't be called again until the next tick!
             if (delay <= 0 && h.hasPidAdjusted) {
-                //takeHit(h);
+                takeHit(h);
             } else {
-                //hits.add(h);
+                hits.add(h);
             }
         }
 
@@ -523,7 +560,7 @@ public abstract class Entity {
             if (fromEntity.isNpc()) {
                 // Every single damage attack from an Npc subjects the Npc to being venomed by the victim.
                 // For players, this is checked in PlayerCombat, per 'attack' rather than per 'hit' (such as claws are 4 hits.. affects chance)
-                //Equipment.checkTargetVenomGear(fromEntity, this);
+                Equipment.checkTargetVenomGear(fromEntity, this);
             }
         }
         return h;
@@ -566,8 +603,7 @@ public abstract class Entity {
                         hits.remove(i);
                         i--;
 
-                        // TODO: Figure out this
-                        //takeHit(hit);
+                        takeHit(hit);
                     } else {
                         hit.delay(hit.delay() - 1);
                     }
@@ -578,6 +614,413 @@ public abstract class Entity {
         if (hp() < 1 && !locked()) { // Avoid dieing while doing something critical! Such as getting speared...
             hits.clear();
             die();
+        }
+    }
+
+
+    public void takeHit(Hit hit) {
+        if (hit.beenProcessed())
+            return;
+        hit.processed();
+
+        if (hit.invalid())
+            return;
+
+        putattrib(AttributeKey.LAST_HIT, hit);
+
+        int damage = hit.damage();
+        // Protection prayers :)
+        if (isPlayer() && hit.fromEntity()) {
+            Player us = (Player) this;
+
+            // NOTE: Protection prayers are applied in playercombat when you swing your weapon, not when the hit is processed.
+            // We haven't yet done this for Npcs...
+            // Reason: changing it will affect jad timers and that's pretty complex.
+            if (hit.origin() instanceof Npc) {
+                if (us.varps().varbit(Varbit.PROTECT_FROM_MELEE) == 1 && hit.style() == CombatStyle.MELEE) {
+                    damage = 0;
+                } else if (us.varps().varbit(Varbit.PROTECT_FROM_MAGIC) == 1 && hit.style() == CombatStyle.MAGIC) {
+                    damage = 0;
+                } else if (us.varps().varbit(Varbit.PROTECT_FROM_MISSILES) == 1 && hit.style() == CombatStyle.RANGE) {
+                    damage = 0;
+                }
+            }
+        }
+
+        boolean meIsPlayer = isPlayer() && hit.origin() instanceof Entity;
+        if (damage > 0 && meIsPlayer) {
+            Player me = (Player) this;
+
+            //Damage value at this point is final, as modified by shield effects, protection prayers, etc.
+            if (!hit.isRecoilDamage()) {
+
+                //If we have used the SOTD special attack, reduce incoming melee damage by 50%.
+                if (timers().has(TimerKey.SOTD_DAMAGE_REDUCTION) && equipment().hasAny(11791, 12904, 12902) && hit.style() == CombatStyle.MELEE) {
+                    damage *= 0.5;
+                }
+
+                // Passive effect of the Elysian spirit shield
+                if (me.equipment().hasAt(EquipSlot.SHIELD, 12817) && world.rollDie(100, 70)) {
+                    damage -= damage / 4; // Remove 25% of the original damage. Don't worry for < 0, code below handles that.
+                    graphic(321);
+                }
+
+                // Passive effect of Dinh's Bulwark on Block mode
+                if (me.equipment().hasAt(EquipSlot.SHIELD, 21015) && me.varps().varp(Varp.ATTACK_STYLE) == 3 && hit.origin() instanceof Npc) {
+                    damage -= damage / 5;
+                }
+
+                int hpdmg = damage > hp() ? hp() : damage;
+
+                Entity src = ((Entity) hit.origin());
+
+                // Veng
+                if (hit.origin() != this && (Boolean) attribOr(AttributeKey.VENGEANCE_ACTIVE, false)) {
+                    clearattrib(AttributeKey.VENGEANCE_ACTIVE);
+                    //PID on rs may mean its instant. by default, 1 tick tho
+                    src.hit(this, (int) (hpdmg * 0.75), hit.hasPidAdjusted ? 1 : 0).block(false).setIsRecoil();
+                    sync.shout("Taste vengeance!");
+                    if (src.isNpc()) {
+                        if (((Npc) src).id() == 319) {
+                            varps().varp(Varp.CORP_BEAST_DAMAGE, varps().varp(Varp.CORP_BEAST_DAMAGE) + (int) (hpdmg * .75));
+                        }
+                    }
+                }
+
+                /*if (Equipment.hasAmmyOfDamned(me) && CombatFormula.fullDharok(me) && world.rollDie(100, 25)) {
+                    src.hit(this, (int) (hpdmg * 0.15), hit.hasPidAdjusted ? 1 : 0).block(false).setIsRecoil();
+                }*/
+
+                // Ring of recoil damage
+                if (hit.origin() instanceof Entity && hit.origin() != this) {
+                    if (me.equipment().hasAt(EquipSlot.RING, 2550)) {
+                        int charges = (int) attribOr(AttributeKey.RING_OF_RECOIL_CHARGES, 40) - 1;
+
+                        if (charges == 0) {
+                            putattrib(AttributeKey.RING_OF_RECOIL_CHARGES, 40);
+                            equipment().remove(new Item(2550), true);
+                            message("<col=804080>Your ring of recoil has shattered!");
+                        } else {
+                            putattrib(AttributeKey.RING_OF_RECOIL_CHARGES, charges);
+                            ((Entity) hit.origin()).hit(this, damage > 10 ? (damage / 10) : 1, 1).block(false).combatStyle(CombatStyle.MELEE).setIsRecoil(); // Typeless damage
+                            if (src.isNpc()) {
+                                if (((Npc) src).id() == 319) {
+                                    varps().varp(Varp.CORP_BEAST_DAMAGE, varps().varp(Varp.CORP_BEAST_DAMAGE) + (damage > 10 ? (damage / 10) : 1));
+                                }
+                            }
+                        }
+                    }
+                    boolean suffering_r = me.equipment().hasAt(EquipSlot.RING, 20655);
+                    if (!VarbitAttributes.varbiton(this, Varbit.RING_OF_SUFFERING_RECOIL_DISABLED) && (suffering_r || me.equipment().hasAt(EquipSlot.RING, 20657))) {
+                        int charges = me.equipment().get(EquipSlot.RING).propertyOr(ItemAttrib.CHARGES, 0);
+                        if (charges > 0) {
+                            me.equipment().get(EquipSlot.RING).property(ItemAttrib.CHARGES, charges - 1);
+                            ((Entity) hit.origin()).hit(this, damage > 10 ? (damage / 10) : 1, 1).block(false).combatStyle(CombatStyle.MELEE).setIsRecoil(); // Typeless damage
+                            if (src.isNpc()) {
+                                if (((Npc) src).id() == 319) {
+                                    varps().varp(Varp.CORP_BEAST_DAMAGE, varps().varp(Varp.CORP_BEAST_DAMAGE) + (damage > 10 ? (damage / 10) : 1));
+                                }
+                            }
+                            if (charges - 1 == 0) {
+                                me.message("Your Ring of Suffering has run out of charges.");
+                                me.equipment().remove(me.equipment().get(EquipSlot.RING), false, EquipSlot.RING);
+                                me.equipment().add(new Item(suffering_r ? 19550 : 19710), false, EquipSlot.RING);
+                            }
+                        }
+                    }
+                }
+            }
+
+            // New crystal shield. Tradeable form. Won't turn to a seed on PvP death.
+            // Upon being damaged, turn it into 'full' shield - which does turn to a seed
+            if (me.equipment().hasAt(EquipSlot.SHIELD, 4224)) {
+                me.equipment().remove(new Item(4224), true, EquipSlot.SHIELD);
+                me.equipment().add(new Item(4225), true, EquipSlot.SHIELD);
+                me.message("Your crystal shield has degraded!");
+            }
+        }
+
+
+        if (isNpc() && hit.origin() instanceof Entity) {
+            Npc npc = (Npc) this;
+
+            // You can't damage these Npcs with anything.. at least it causes minimal damage.
+            if (npc.id() == 5534) { // Kraken tent
+                damage = 0;
+            }
+            if (npc.id() == 496) { // Big kraken whirlpool (boss)
+                if (npc.sync().transmog() != 494)
+                    damage = 0;
+                else if (CombatStyle.MAGIC != hit.style())
+                    damage = 0;
+            }
+
+            if (npc.id() == 5886 || npc.id() == 5887 || npc.id() == 5888 || npc.id() == 5889)
+                putattrib(AttributeKey.ABYSSAL_SIRE_CHALLENGING_PLAYER, hit.origin());
+
+
+            //Demonic Gorilla
+            if (npc.id() == 7144) {
+                int mage_hit = npc.attribOr(AttributeKey.DEMONIC_GORILLA_MAGE, 0);
+                int melee_hit = npc.attribOr(AttributeKey.DEMONIC_GORILLA_MELEE, 0);
+                double range_hit = npc.attribOr(AttributeKey.DEMONIC_GORILLA_RANGE, 0.0);
+
+                if (hit.style() == CombatStyle.MELEE) {
+                    if (npc.attribOr(AttributeKey.DEMONIC_GORILLA_PRAY_MELEE, false)) damage = 0;
+                    npc.putattrib(AttributeKey.DEMONIC_GORILLA_MELEE, melee_hit + 1);
+
+                    if (melee_hit >= 3) {
+                        npc.sync().transmog(7144);
+                        npc.animate(7228);
+                        damage = 0;
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_MELEE, 0);
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_MAGE, 0);
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_RANGE, 0.0);
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_PRAY_MELEE, true);
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_PRAY_MAGE, false);
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_PRAY_RANGE, false);
+                    }
+                }
+
+                if (hit.style() == CombatStyle.MAGIC) {
+                    if (npc.attribOr(AttributeKey.DEMONIC_GORILLA_PRAY_MAGE, false)) damage = 0;
+                    npc.putattrib(AttributeKey.DEMONIC_GORILLA_MAGE, mage_hit + 1);
+
+                    if (mage_hit >= 3) {
+                        npc.sync().transmog(7146);
+                        npc.animate(7228);
+                        damage = 0;
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_MELEE, 0);
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_MAGE, 0);
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_RANGE, 0.0);
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_PRAY_MELEE, false);
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_PRAY_MAGE, true);
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_PRAY_RANGE, false);
+                    }
+                }
+
+                if (hit.style() == CombatStyle.RANGE) {
+                    if (npc.attribOr(AttributeKey.DEMONIC_GORILLA_PRAY_RANGE, false)) damage = 0;
+
+                    Player attacker = (Player) hit.origin();
+                    Item weaponId = attacker.equipment().get(3);
+
+                    if (EquipmentInfo.attackStyleFor(attacker).equals(AttackStyle.RAPID) && attacker.world().equipmentInfo().weaponType(weaponId.getId()) != WeaponType.CROSSBOW &&
+                            (attacker.world().equipmentInfo().weaponType(weaponId.getId()) != WeaponType.BOW || weaponId.getId() != 12924 && weaponId.getId() != 12926))
+
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_RANGE, range_hit + 0.5);
+                    else
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_RANGE, range_hit + 1.0);
+
+                    if (range_hit >= 3.0) {
+                        npc.sync().transmog(7145);
+                        npc.animate(7228);
+                        damage = 0;
+                        attacker.stopActions(false);
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_MELEE, 0);
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_MAGE, 0);
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_RANGE, 0.0);
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_PRAY_MELEE, false);
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_PRAY_MAGE, false);
+                        npc.putattrib(AttributeKey.DEMONIC_GORILLA_PRAY_RANGE, true);
+                    }
+                }
+            }
+
+            // Gargs
+            if (npc.hp() - damage <= 0) {
+                if (npc.id() == 412 || npc.id() == 413 || npc.id() == 1543) {
+                    Player attacker = (Player) hit.origin();
+                    if (attacker.varps().varbit(Varbit.GARGOYLE_SMASHER) == 1) {
+                        attacker.animate(401);
+                        npc.hp(0, 0);
+                    } else {
+                        attacker.message("Gargoyles can only be killed using a Rockhammer.");
+                        damage = 0;
+                        hit.type(Hit.Type.MISS);
+                    }
+                }
+            }
+
+            //Tz-Kek recoil effect
+            if (npc.id() == 3118 && hit.origin() instanceof Entity && hit.origin() != this) {
+                if (hit.style() == CombatStyle.MELEE && damage > 0) {
+                    Player attacker = (Player) hit.origin();
+                    attacker.hit(this, 1).block(false).combatStyle(CombatStyle.MELEE).setIsRecoil();
+                }
+            }
+
+            if (npc.id() == 6611 && (boolean) attribOr(AttributeKey.VETION_HELLHOUND_SPAWNED, false)) {
+                damage = 0;
+                hit.type(Hit.Type.MISS);
+                // hit script will tell attacker that minions must be killed off before vetion can be damaged again
+            }
+        }
+
+
+        hit.overkill(damage);
+        if (damage > hp()) {
+            damage = hp();
+        }
+
+        // Make the zero always the block hit
+        if (damage < 1) {
+            damage = 0;
+            hit.type(Hit.Type.MISS);
+        }
+
+        final int dmg = damage;
+        takeHitSound(hit.adjustDmg(dmg));
+
+        if (hit.origin() != null && hit.origin() instanceof Player) {
+            Player attacker = (Player) hit.origin();
+
+            if (hit.getTarget() != null) {
+
+                // Don't record damage delt to ourself if we're a player.
+                if (isNpc() || (isPlayer() && ((Player) this).id() != attacker.id())) {
+
+                    if (attacker.id() instanceof Integer) { // String on login
+
+                        // Try to find an existing damage entry..
+                        boolean[] matched = {false}; // Required as an Array due to use in Lambda function
+                        damagers.entrySet().forEach(e -> {
+                            if (e.getKey() == (int) attacker.id()) {
+                                e.getValue().update(attacker, dmg);
+                                matched[0] = true;
+                                damagerLastTime.put((int) attacker.id(), System.currentTimeMillis());
+                                //message("updated tracked dmg total on me id-"+this.index()+" by "+attacker.name()+"  total dmg="+e.getValue().damage()+" (+"+hit+")"); // Debug
+                            }
+                        });
+
+                        // Did we not update an existing one? Insert new.
+                        if (!matched[0]) {
+                            damagers.put((int) attacker.id(), new PlayerDamageTracker().update(attacker, dmg));
+                            //message("registered new tracking dmg on "+this.index()+" by "+attacker.name()+"  dmg="+hit); // Debug
+                            damagerLastTime.put((int) attacker.id(), System.currentTimeMillis());
+                        }
+                    }
+                }
+            }
+        }
+
+        //Now apply damage and set in GPI
+        if (!VarbitAttributes.varbiton(this, Varbit.INFHP)) {//infhp disabled.
+            if (isNpc()) {
+                Npc npc = (Npc) this;
+                if (npc.id() != 2668) {
+                    hp(hp() - damage, 0);
+                    if (hp() < 1) {
+                        if (hit.origin() instanceof Entity) {
+                            putattrib(AttributeKey.KILLER, hit.origin());
+                        }
+                    }
+                }
+            } else {
+                hp(hp() - damage, 0);
+                if (hp() < 1) {
+                    if (hit.origin() instanceof Entity) {
+                        putattrib(AttributeKey.KILLER, hit.origin());
+                    }
+                }
+            }
+        }
+
+        boolean magic_splash = damage == 0
+                && hit.type() != null && hit.type() == Hit.Type.MISS
+                && hit.style() != null && hit.style() == CombatStyle.MAGIC
+                && hit.graphic() != null && hit.graphic().id() == 85;
+
+        if (!magic_splash) { // splashing doesn't show the 0
+            if (hit.type() == Hit.Type.PRAYER)
+                hit.type(Hit.Type.REGULAR);
+            sync.hit(hit);
+        }
+
+        if (isNpc()) {
+            Npc npc = (Npc) this;
+            if (npc.combatInfo() != null && npc.combatInfo().scripts != null && npc.combatInfo().scripts.hit_ != null) {
+                putattrib(AttributeKey.LAST_HIT_DMG, hit);
+                beanFactory.getBean(ScriptRepository.class).getExecutor().executeScript(this, npc.combatInfo().scripts.hit_);
+            }
+        }
+
+        // Auto-retaliate
+        if (hit.fromEntity() && hit.style() != CombatStyle.GENERIC && hit.origin() instanceof Entity) {
+            if (!timers.has(TimerKey.IN_COMBAT)) {
+                if (isPlayer()) {
+                    Player player = ((Player) this);
+                    if (player.varps().varp(Varp.AUTO_RETALIATE_DISABLED) == 0) {
+                        // Players only auto retaliate the attacker when out of combat.
+                        boolean mayAttack = true;
+
+                        // Check if we're in combat right now with someone who's alive
+                        if (player.timers().has(TimerKey.IN_COMBAT)) {
+                            mayAttack = false;
+                        }
+
+                        // Check attackability
+                        if (hit.origin() instanceof Entity && !PlayerCombat.canAttack(this, (Entity) hit.origin())) {
+                            mayAttack = false;
+                        }
+
+                        if (mayAttack) {
+                            autoRetaliate((Entity) hit.origin());
+                        }
+                    }
+                } else {
+                    Npc npc = (Npc) this;
+
+                    // 2668 = Combat dummy
+                    if (npc.id() != 2668)
+                        autoRetaliate((Entity) hit.origin());
+                }
+
+                timers.register(TimerKey.IN_COMBAT, 5);
+            } else if (isNpc()) {
+                // Npcs do switch aggro context if they get attacked.
+                autoRetaliate((Entity) hit.origin());
+            }
+        }
+
+        if (hit.graphic() != null)
+            graphic(hit.graphic().id(), hit.graphic().height(), hit.graphic().delay());
+
+        // See #blockHit for circumstance for Block animation triggers.
+        if (hit.block() && (hit.style() != CombatStyle.MAGIC || !isPlayer())) {
+            blockHit(hit);
+        }
+    }
+
+    public void autoRetaliate (Entity attacker){
+        if (dead() || hp() < 1 || noRetaliation || locked() || attacker == this)
+            return;
+
+        // Override logic
+        putattrib(AttributeKey.TARGET, new WeakReference<>(attacker));
+        // As soon as the hit on us appears, we'll turn around and face the attacker.
+        face(attacker);
+        // TODO: Look into this...
+        //world.server().scriptExecutor().executeScript(this, EntityCombat.autoretaliate);
+    }
+
+    public LinkedList<Hit> getHits() {
+        return hits;
+    }
+
+    /**
+     * Sounds that happen when the hit appears.
+     * Two distinct: a sound if damage>0 .. and a shield block sound.
+     * Note: these sounds are special because they are _personal_ 'effect' sounds - not AREA sounds broadcast to closeby players.
+     */
+    public void takeHitSound(Hit hit) {
+        if (hit == null)
+            return;
+        // block sounds depends entirely on entity type
+
+        if (hit.origin() != null && hit.origin() instanceof Player) {
+            if (hit.damage() > 0)
+                ((Player) hit.origin()).sound(CombatSounds.damageSound(world), 20, 0);
         }
     }
 
@@ -680,7 +1123,96 @@ public abstract class Entity {
         lock = LockType.NONE;
     }
 
+    public void lockNoDamage() {
+        lock = LockType.NULLIFY_DAMAGE;
+    }
+
     public void executeScript(Function1<Script, Object> s) {
         //world.server().scriptExecutor().executeScript(this, s); // context set to the entity
+    }
+
+    public void venom(Entity source) {
+        if (source == null)
+            return;
+        if (isPlayer()) {
+            Player p = (Player) this;
+            if (Equipment.venomHelm(p)) { // Serp helm stops venom.
+                return;
+            }
+        } else if (isNpc()) {
+            Npc me = (Npc) this;
+            if (me.isVenomImmune()) {
+                return;
+            }
+        }
+        if ((int) attribOr(AttributeKey.VENOM_TICKS, 0) == 0) {
+            if (isPlayer()) {
+                Player me = (Player) this;
+                me.varps().varp(Varp.HP_ORB_COLOR, 1_000_000); // Now venomed
+                message("<col=145A32>You've been infected with venom!");
+            }
+            putattrib(AttributeKey.VENOM_TICKS, 8); // default start. 8 cycles
+            timers().register(TimerKey.VENOM, 34);
+        }
+    }
+
+    public Tile stepTowards(Entity e, int maxSteps) {
+        return stepTowards(e, e.tile, maxSteps);
+    }
+
+    public Tile stepTowards(Entity e, Tile t, int maxSteps) {
+        if (e == null)
+            return tile;
+
+        EntityStrategy target = new EntityStrategy(e, 0, t);
+
+        int steps = WalkRouteFinder.findRoute(world().definitions(), tile.x, tile.z, tile.level, size(), target, true, false);
+        int[] bufferX = WalkRouteFinder.getLastPathBufferX();
+        int[] bufferZ = WalkRouteFinder.getLastPathBufferZ();
+
+        Tile last = tile;
+        for (int i = steps - 1; i >= 0; i--) {
+            maxSteps -= pathQueue.interpolate(bufferX[i], bufferZ[i], PathQueue.StepType.REGULAR, maxSteps, true);
+
+            last = new Tile(bufferX[i], bufferZ[i], tile.level);
+            if (maxSteps <= 0)
+                break;
+        }
+
+        return last;
+    }
+
+    public Tile stepTowards(Tile t, int maxSteps) {
+        EntityStrategy target = new EntityStrategy(t);
+
+        int steps = WalkRouteFinder.findRoute(world().definitions(), tile.x, tile.z, tile.level, size(), target, true, false);
+        int[] bufferX = WalkRouteFinder.getLastPathBufferX();
+        int[] bufferZ = WalkRouteFinder.getLastPathBufferZ();
+
+        Tile last = tile;
+        for (int i = steps - 1; i >= 0; i--) {
+            maxSteps -= pathQueue.interpolate(bufferX[i], bufferZ[i], PathQueue.StepType.REGULAR, maxSteps, true);
+
+            last = new Tile(bufferX[i], bufferZ[i], tile.level);
+            if (maxSteps <= 0)
+                break;
+        }
+
+        return last;
+    }
+
+    public Skills skills() {
+        return skills;
+    }
+
+    public abstract Optional<Integer> killer();
+
+    public void setWorld(World world) {
+        this.world = world;
+    }
+
+    @Override
+    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+        this.beanFactory = beanFactory;
     }
 }

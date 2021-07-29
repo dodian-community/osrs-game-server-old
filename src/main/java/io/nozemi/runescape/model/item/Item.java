@@ -5,6 +5,7 @@ import io.nozemi.runescape.fs.DefinitionRepository;
 import io.nozemi.runescape.fs.ItemDefinition;
 import io.nozemi.runescape.model.World;
 
+import java.io.Serializable;
 import java.util.EnumMap;
 import java.util.HashSet;
 import java.util.Map;

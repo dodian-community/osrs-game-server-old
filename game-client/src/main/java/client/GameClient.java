@@ -1466,7 +1466,7 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				int var9;
-				int var26;
+				int messageType;
 				int var27;
 				int var28;
 				long var29;
@@ -1483,7 +1483,9 @@ public final class GameClient extends GameShell implements class288 {
 						end = -1;
 					}
 
-					System.out.printf("InterfaceSettings: targ=[%d:%d] child=%d..%d value=%d%n", inter>>16, inter&0xFFFF, start, end, value);
+					if(Loader.local) {
+						System.out.printf("InterfaceSettings: targ=[%d:%d] child=%d..%d value=%d%n", inter >> 16, inter & 0xFFFF, start, end, value);
+					}
 
 					for (var9 = start; var9 <= end; var9++) {
 						var29 = ((long) inter << 32) + (long) var9;
@@ -1502,14 +1504,14 @@ public final class GameClient extends GameShell implements class288 {
 				Widget var31;
 				int var32;
 				if (IncomingPacket.field2071 == var1.packetType) {
-					var26 = buffer.readInt();
+					messageType = buffer.readInt();
 					var27 = buffer.readUShort();
-					if (var26 < -70000) {
+					if (messageType < -70000) {
 						var27 += 32768;
 					}
 
-					if (var26 >= 0) {
-						var31 = Widget.getLoaded(var26);
+					if (messageType >= 0) {
+						var31 = Widget.getLoaded(messageType);
 					} else {
 						var31 = null;
 					}
@@ -1546,9 +1548,9 @@ public final class GameClient extends GameShell implements class288 {
 					class57.mapBaseX = buffer.readUByteA();
 
 					while (buffer.field2339 < var1.field1225) {
-						var26 = buffer.readUByte();
+						messageType = buffer.readUByte();
 						class171[] var57 = new class171[]{class171.field2249, class171.field2242, class171.field2244, class171.field2243, class171.field2245, class171.field2246, class171.field2241, class171.field2248, class171.field2247, class171.field2250};
-						class171 var71 = var57[var26];
+						class171 var71 = var57[messageType];
 						class29.decodeMapPacket(var71);
 					}
 
@@ -1563,9 +1565,9 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2100 == var1.packetType) {
-					var26 = buffer.readIntV1();
+					messageType = buffer.readIntV1();
 					var27 = buffer.readShortA();
-					var31 = Widget.getLoaded(var26);
+					var31 = Widget.getLoaded(messageType);
 					if (var31.mediaType != 2 || var27 != var31.mediaID) {
 						var31.mediaType = 2;
 						var31.mediaID = var27;
@@ -1584,9 +1586,9 @@ public final class GameClient extends GameShell implements class288 {
 
 				boolean var72;
 				if (IncomingPacket.field2116 == var1.packetType) {
-					var26 = buffer.readIntV2();
+					messageType = buffer.readIntV2();
 					var72 = buffer.readUByteN() == 1;
-					var31 = Widget.getLoaded(var26);
+					var31 = Widget.getLoaded(messageType);
 					if (var72 != var31.hidden) {
 						var31.hidden = var72;
 						requestRedraw(var31);
@@ -1624,11 +1626,11 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2121 == var1.packetType) {
-					for (var26 = 0; var26 < class254.field3232; var26++) {
-						class254 var55 = class63.method1549(var26, 327770594);
+					for (messageType = 0; messageType < class254.field3232; messageType++) {
+						class254 var55 = class63.method1549(messageType, 327770594);
 						if (var55 != null) {
-							class225.field2559[var26] = 0;
-							class225.field2558[var26] = 0;
+							class225.field2559[messageType] = 0;
+							class225.field2558[messageType] = 0;
 						}
 					}
 
@@ -1702,7 +1704,7 @@ public final class GameClient extends GameShell implements class288 {
 				String var66;
 				String var75;
 				if (IncomingPacket.field2111 == var1.packetType) {
-					var26 = buffer.readCompact();
+					messageType = buffer.readCompact();
 					var72 = buffer.readUByte() == 1;
 					var66 = "";
 					boolean var68 = false;
@@ -1715,14 +1717,14 @@ public final class GameClient extends GameShell implements class288 {
 
 					var75 = buffer.readString();
 
-					if (var26 == 69) {
+					if (messageType == 69) {
 						Custom.openBrowser(var75, true, false);
 						var1.packetType = null;
 						return true;
 					}
 
 					if (!var68) {
-						class143.method3172(var26, var66, var75);
+						class143.method3172(messageType, var66, var75);
 					}
 
 					var1.packetType = null;
@@ -1730,11 +1732,11 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2126 == var1.packetType) {
-					var26 = buffer.readUShort();
+					messageType = buffer.readUShort();
 					var27 = buffer.readUByte();
 					var7 = buffer.readUShort();
 					if (field814 != 0 && var27 != 0 && field656 < 50) {
-						field817[field656] = var26;
+						field817[field656] = messageType;
 						field676[field656] = var27;
 						field819[field656] = var7;
 						field719[field656] = null;
@@ -1755,10 +1757,10 @@ public final class GameClient extends GameShell implements class288 {
 					Npc.field1033 = buffer.readUByte();
 					class133.field1834 = buffer.readUByte();
 					if (class133.field1834 >= 100) {
-						var26 = class50.field456 * 128 + 64;
+						messageType = class50.field456 * 128 + 64;
 						var27 = class237.field3082 * 128 + 64;
-						var7 = class27.method460(var26, var27, class13.field82, 434592086) - class11.field68;
-						var28 = var26 - class109.field1431;
+						var7 = class27.method460(messageType, var27, class13.field82, 434592086) - class11.field68;
+						var28 = messageType - class109.field1431;
 						var9 = var7 - class123.field1702;
 						var32 = var27 - class226.field2563;
 						var39 = (int) Math.sqrt((double) (var32 * var32 + var28 * var28));
@@ -1800,11 +1802,11 @@ public final class GameClient extends GameShell implements class288 {
 					class57.mapBaseX = buffer.readUByteS();
 					class226.mapBaseZ = buffer.readUByteA();
 
-					for (var26 = class57.mapBaseX; var26 < class57.mapBaseX + 8; var26++) {
+					for (messageType = class57.mapBaseX; messageType < class57.mapBaseX + 8; messageType++) {
 						for (var27 = class226.mapBaseZ; var27 < class226.mapBaseZ + 8; var27++) {
-							if (field708[class13.field82][var26][var27] != null) {
-								field708[class13.field82][var26][var27] = null;
-								class253.method4808(var26, var27, 1420324028);
+							if (field708[class13.field82][messageType][var27] != null) {
+								field708[class13.field82][messageType][var27] = null;
+								class253.method4808(messageType, var27, 1420324028);
 							}
 						}
 					}
@@ -1826,21 +1828,21 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2118 == var1.packetType) {
-					var26 = buffer.readUByte();
+					messageType = buffer.readUByte();
 					var27 = buffer.readUByte();
 					var7 = buffer.readUByte();
 					var28 = buffer.readUByte();
-					field823[var26] = true;
-					field824[var26] = var27;
-					field825[var26] = var7;
-					field826[var26] = var28;
-					field705[var26] = 0;
+					field823[messageType] = true;
+					field824[messageType] = var27;
+					field825[messageType] = var7;
+					field826[messageType] = var28;
+					field705[messageType] = 0;
 					var1.packetType = null;
 					return true;
 				}
 
 				if (IncomingPacket.field2069 == var1.packetType) {
-					var26 = buffer.readUByteS();
+					messageType = buffer.readUByteS();
 					var27 = buffer.readUByteN();
 					var66 = buffer.readString();
 					if (var27 >= 1 && var27 <= 8) {
@@ -1849,7 +1851,7 @@ public final class GameClient extends GameShell implements class288 {
 						}
 
 						field704[var27 - 1] = var66;
-						field709[var27 - 1] = var26 == 0;
+						field709[var27 - 1] = messageType == 0;
 					}
 
 					var1.packetType = null;
@@ -1884,14 +1886,14 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2122 == var1.packetType) {
-					var26 = buffer.readInt();
+					messageType = buffer.readInt();
 					var27 = buffer.readUShort();
-					if (var26 < -70000) {
+					if (messageType < -70000) {
 						var27 += 32768;
 					}
 
-					if (var26 >= 0) {
-						var31 = Widget.getLoaded(var26);
+					if (messageType >= 0) {
+						var31 = Widget.getLoaded(messageType);
 					} else {
 						var31 = null;
 					}
@@ -1933,11 +1935,11 @@ public final class GameClient extends GameShell implements class288 {
 
 				Widget var74;
 				if (IncomingPacket.field2101 == var1.packetType) {
-					var26 = buffer.readIntV1();
+					messageType = buffer.readIntV1();
 					var27 = buffer.readUShort();
 					var7 = buffer.readLEShortA();
 					var28 = buffer.readUShortLE();
-					var74 = Widget.getLoaded(var26);
+					var74 = Widget.getLoaded(messageType);
 					if (var28 != var74.rotationX || var27 != var74.rotationY || var7 != var74.zoom) {
 						var74.rotationX = var28;
 						var74.rotationY = var27;
@@ -1951,13 +1953,13 @@ public final class GameClient extends GameShell implements class288 {
 
 				Widget var78;
 				if (IncomingPacket.field2090 == var1.packetType) {
-					var26 = buffer.readShort();
+					messageType = buffer.readShort();
 					var27 = buffer.readIntLE();
 					var7 = buffer.readLEShortA(-146230491);
 					var78 = Widget.getLoaded(var27);
-					if (var7 != var78.x || var26 != var78.y || var78.xAlignment != 0 || var78.yAlignment != 0) {
+					if (var7 != var78.x || messageType != var78.y || var78.xAlignment != 0 || var78.yAlignment != 0) {
 						var78.x = var7;
-						var78.y = var26;
+						var78.y = messageType;
 						var78.xAlignment = 0;
 						var78.yAlignment = 0;
 						requestRedraw(var78);
@@ -1989,9 +1991,9 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2094 == var1.packetType) {
-					var26 = buffer.readShortA();
-					if (var26 == 65535) {
-						var26 = -1;
+					messageType = buffer.readShortA();
+					if (messageType == 65535) {
+						messageType = -1;
 					}
 
 					var27 = buffer.readInt();
@@ -1999,23 +2001,23 @@ public final class GameClient extends GameShell implements class288 {
 					var78 = Widget.getLoaded(var27);
 					ItemDef var77;
 					if (!var78.decodeCs2) {
-						if (var26 == -1) {
+						if (messageType == -1) {
 							var78.mediaType = 0;
 							var1.packetType = null;
 							return true;
 						}
 
-						var77 = ItemDef.loadItemDef(var26);
+						var77 = ItemDef.loadItemDef(messageType);
 						var78.mediaType = 4;
-						var78.mediaID = var26;
+						var78.mediaID = messageType;
 						var78.rotationX = var77.xan2d;
 						var78.rotationY = var77.yan2d;
 						var78.zoom = var77.zoom2d * 100 / var7;
 						requestRedraw(var78);
 					} else {
-						var78.itemId = var26;
+						var78.itemId = messageType;
 						var78.field2727 = var7;
-						var77 = ItemDef.loadItemDef(var26);
+						var77 = ItemDef.loadItemDef(messageType);
 						var78.rotationX = var77.xan2d;
 						var78.rotationY = var77.yan2d;
 						var78.int477 = var77.zan2d;
@@ -2048,8 +2050,8 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2104 == var1.packetType) {
-					var26 = buffer.readUByte();
-					class132.method3096(var26, -1450282680);
+					messageType = buffer.readUByte();
+					class132.method3096(messageType, -1450282680);
 					var1.packetType = null;
 					return true;
 				}
@@ -2078,9 +2080,9 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2074 == var1.packetType) {
-					var26 = buffer.readInt();
-					if (var26 != field853) {
-						field853 = var26;
+					messageType = buffer.readInt();
+					if (messageType != field853) {
+						field853 = messageType;
 						if (field655 == 1) {
 							field663 = true;
 						}
@@ -2143,9 +2145,9 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2086 == var1.packetType) {
-					var26 = buffer.readInt();
+					messageType = buffer.readInt();
 					var6 = buffer.readString();
-					var31 = Widget.getLoaded(var26);
+					var31 = Widget.getLoaded(messageType);
 					if (!var6.equals(var31.componentString)) {
 						var31.componentString = var6;
 						requestRedraw(var31);
@@ -2161,20 +2163,20 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.VARP_BIG == var1.packetType) {
-					var26 = buffer.readIntLE();
+					messageType = buffer.readIntLE();
 					var27 = buffer.readUShortLE();
 
 					if(var27 >= 20000) {
-						Custom.handleCustomVarp(var27, var26);
+						Custom.handleCustomVarp(var27, messageType);
 						var1.packetType = null;
 						return true;
 					}
 
-					System.out.printf("Varp: %d => %d%n", var27, var26);
+					System.out.printf("Varp: %d => %d%n", var27, messageType);
 
-					class225.field2559[var27] = var26;
-					if (class225.field2558[var27] != var26) {
-						class225.field2558[var27] = var26;
+					class225.field2559[var27] = messageType;
+					if (class225.field2558[var27] != messageType) {
+						class225.field2558[var27] = messageType;
 					}
 
 					updateForSetting(var27);
@@ -2185,10 +2187,10 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2107 == var1.packetType) {
-					var26 = buffer.readUShort();
-					field683 = var26;
+					messageType = buffer.readUShort();
+					field683 = messageType;
 					this.method1151(false, -1642962644);
-					class216.method4178(var26, 1403972661);
+					class216.method4178(messageType, 1403972661);
 					class135.method3114(field683, 892303579);
 
 					for (var27 = 0; var27 < 100; var27++) {
@@ -2200,8 +2202,8 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2060 == var1.packetType) {
-					var26 = buffer.readInt();
-					class55 var54 = (class55) field741.get((long) var26);
+					messageType = buffer.readInt();
+					class55 var54 = (class55) field741.get((long) messageType);
 					if (var54 != null) {
 						class20.method261(var54, true, 1473786828);
 					}
@@ -2226,11 +2228,11 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2129 == var1.packetType) {
-					var26 = buffer.readShortLE();
+					messageType = buffer.readShortLE();
 					var27 = buffer.readIntV2();
 					var31 = Widget.getLoaded(var27);
-					if (var26 != var31.animation || var26 == -1) {
-						var31.animation = var26;
+					if (messageType != var31.animation || messageType == -1) {
+						var31.animation = messageType;
 						var31.field2728 = 0;
 						var31.field2613 = 0;
 						requestRedraw(var31);
@@ -2241,15 +2243,15 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2072 == var1.packetType) {
-					for (var26 = 0; var26 < field610.length; var26++) {
-						if (field610[var26] != null) {
-							field610[var26].field903 = -1;
+					for (messageType = 0; messageType < field610.length; messageType++) {
+						if (field610[messageType] != null) {
+							field610[messageType].field903 = -1;
 						}
 					}
 
-					for (var26 = 0; var26 < field843.length; var26++) {
-						if (field843[var26] != null) {
-							field843[var26].field903 = -1;
+					for (messageType = 0; messageType < field843.length; messageType++) {
+						if (field843[messageType] != null) {
+							field843[messageType].field903 = -1;
 						}
 					}
 
@@ -2266,15 +2268,15 @@ public final class GameClient extends GameShell implements class288 {
 
 				if (IncomingPacket.field2059 == var1.packetType) {
 					class295.method5501(1479530238);
-					var26 = buffer.readIntV1(); // xp
+					messageType = buffer.readIntV1(); // xp
 					var27 = buffer.readUByteA(); // skill
 					var7 = buffer.readUByteN(); //lv
-					field640[var27] = var26;
+					field640[var27] = messageType;
 					field712[var27] = var7;
 					field713[var27] = 1;
 
 					for (var28 = 0; var28 < 98; var28++) {
-						if (var26 >= class234.field2779[var28]) {
+						if (messageType >= class234.field2779[var28]) {
 							field713[var27] = var28 + 2;
 						}
 					}
@@ -2285,12 +2287,12 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2089 == var1.packetType) {
-					var26 = buffer.readInt();
+					messageType = buffer.readInt();
 					var27 = buffer.readInt();
 					var7 = class37.method661(-1520436203);
 					class172 var81 = class26.method433(OutgoingPacket.field2176, field626.field1218, -1189497157);
 					var81.field2257.writeByteA(GameShell.field393);
-					var81.field2257.writeIntV1(var26);
+					var81.field2257.writeIntV1(messageType);
 					var81.field2257.writeIntV1(var27);
 					var81.field2257.writeByteA(var7);
 					field626.method1980(var81);
@@ -2308,9 +2310,9 @@ public final class GameClient extends GameShell implements class288 {
 
 				if (IncomingPacket.field2076 == var1.packetType) {
 					if (field683 != -1) {
-						var26 = field683;
-						if (class261.method4931(var26, (byte) 34)) {
-							class83.method1923(Widget.LOADED[var26], 0, 1406653934);
+						messageType = field683;
+						if (class261.method4931(messageType, (byte) 34)) {
+							class83.method1923(Widget.LOADED[messageType], 0, 1406653934);
 						}
 					}
 
@@ -2392,13 +2394,13 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2080 == var1.packetType) {
-					var26 = buffer.readUByte();
+					messageType = buffer.readUByte();
 					if (buffer.readUByte() == 0) {
-						field844[var26] = new class4();
+						field844[messageType] = new class4();
 						buffer.field2339 += 18;
 					} else {
 						--buffer.field2339;
-						field844[var26] = new class4(buffer, false);
+						field844[messageType] = new class4(buffer, false);
 					}
 
 					field793 = field801;
@@ -2422,8 +2424,8 @@ public final class GameClient extends GameShell implements class288 {
 
 				Widget var53;
 				if (IncomingPacket.field2088 == var1.packetType) {
-					var26 = buffer.readIntLE();
-					var53 = Widget.getLoaded(var26);
+					messageType = buffer.readIntLE();
+					var53 = Widget.getLoaded(messageType);
 
 					for (var7 = 0; var7 < var53.field2724.length; var7++) {
 						var53.field2724[var7] = -1;
@@ -2443,30 +2445,30 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2078 == var1.packetType) {
-					var26 = buffer.readShortA();
-					if (var26 == 65535) {
-						var26 = -1;
+					messageType = buffer.readShortA();
+					if (messageType == 65535) {
+						messageType = -1;
 					}
 
-					if (var26 == -1 && !field813) {
+					if (messageType == -1 && !field813) {
 						class9.method88((byte) 35);
-					} else if (var26 != -1 && var26 != field812 && field811 != 0 && !field813) {
-						class65.method1602(2, Item.field1147, var26, 0, field811, false, (byte) 38);
+					} else if (messageType != -1 && messageType != field812 && field811 != 0 && !field813) {
+						class65.method1602(2, Item.field1147, messageType, 0, field811, false, (byte) 38);
 					}
 
-					field812 = var26;
+					field812 = messageType;
 					var1.packetType = null;
 					return true;
 				}
 
 				if (IncomingPacket.field2051 == var1.packetType) {
-					var26 = buffer.method3591(2079468396);
+					messageType = buffer.method3591(2079468396);
 					var27 = buffer.readUShortLE();
 					if (var27 == 65535) {
 						var27 = -1;
 					}
 
-					class50.method965(var27, var26, (byte) -29);
+					class50.method965(var27, messageType, (byte) -29);
 					var1.packetType = null;
 					return true;
 				}
@@ -2474,8 +2476,8 @@ public final class GameClient extends GameShell implements class288 {
 				if (IncomingPacket.field2082 == var1.packetType) {
 					field822 = false;
 
-					for (var26 = 0; var26 < 5; var26++) {
-						field823[var26] = false;
+					for (messageType = 0; messageType < 5; messageType++) {
+						field823[messageType] = false;
 					}
 
 					var1.packetType = null;
@@ -2483,13 +2485,13 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2053 == var1.packetType) {
-					var26 = buffer.readIntV1();
+					messageType = buffer.readIntV1();
 					var27 = buffer.readLEShortA();
 					var7 = var27 >> 10 & 31;
 					var28 = var27 >> 5 & 31;
 					var9 = var27 & 31;
 					var32 = (var28 << 11) + (var7 << 19) + (var9 << 3);
-					Widget var80 = Widget.getLoaded(var26);
+					Widget var80 = Widget.getLoaded(messageType);
 					if (var32 != var80.color) {
 						var80.color = var32;
 						requestRedraw(var80);
@@ -2500,8 +2502,8 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2124 == var1.packetType) {
-					var26 = buffer.readIntV2();
-					var53 = Widget.getLoaded(var26);
+					messageType = buffer.readIntV2();
+					var53 = Widget.getLoaded(messageType);
 					var53.mediaType = 3;
 					var53.mediaID = class138.field1876.field546.method4483(-709591289);
 					requestRedraw(var53);
@@ -2571,19 +2573,19 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2077 == var1.packetType) {
-					var26 = buffer.readShortA();
-					class177.method3507(var26, -1945852899);
-					field766[++field767 - 1 & 31] = var26 & 32767;
+					messageType = buffer.readShortA();
+					class177.method3507(messageType, -1945852899);
+					field766[++field767 - 1 & 31] = messageType & 32767;
 					var1.packetType = null;
 					return true;
 				}
 
 				if (IncomingPacket.field2087 == var1.packetType) {
-					var26 = buffer.readUShort();
+					messageType = buffer.readUShort();
 					var27 = buffer.readIntLE();
 					var7 = buffer.readUShortLE();
 					var78 = Widget.getLoaded(var27);
-					var78.field2732 = var7 + (var26 << 16);
+					var78.field2732 = var7 + (messageType << 16);
 					var1.packetType = null;
 					return true;
 				}
@@ -2653,19 +2655,21 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.OPEN_INTERFACE == var1.packetType) {
-					var26 = buffer.readUByteS();
+					messageType = buffer.readUByteS();
 					var27 = buffer.readIntLE();
 					var7 = buffer.readShortA();
-					System.out.printf("OpenInter: %d:%d id=%d walk=%d%n", var27>>16, var27 & 0xFFFF, var7, var26);
-					var40 = (class55) field741.get((long) var27);
+					if(Loader.local) {
+						System.out.printf("OpenInter: %d:%d id=%d walk=%d%n", var27 >> 16, var27 & 0xFFFF, var7, messageType);
+					}
+					var40 = (class55) field741.get(var27);
 					if (var40 != null) {
 						class20.method261(var40, var7 != var40.field501, 2130500083);
 					}
 
 					class55 var73 = new class55();
 					var73.field501 = var7;
-					var73.field494 = var26;
-					field741.method4016(var73, (long) var27);
+					var73.field494 = messageType;
+					field741.method4016(var73, var27);
 					class216.method4178(var7, 282926141);
 					Widget var58 = Widget.getLoaded(var27);
 					requestRedraw(var58);
@@ -2689,9 +2693,9 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2128 == var1.packetType) {
-					var26 = buffer.readIntV1();
+					messageType = buffer.readIntV1();
 					var27 = buffer.readShortA();
-					var31 = Widget.getLoaded(var26);
+					var31 = Widget.getLoaded(messageType);
 					if (var31 != null && var31.widgetType == 0) {
 						if (var27 > var31.scrollHeight - var31.int466) {
 							var27 = var31.scrollHeight - var31.int466;
@@ -2735,7 +2739,7 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2079 == var1.packetType) {
-					var26 = buffer.field2339 + var1.field1225;
+					messageType = buffer.field2339 + var1.field1225;
 					var27 = buffer.readUShort();
 					var7 = buffer.readUShort();
 					System.out.printf("Bulk inter open: %d, %d\n", var27, var7);
@@ -2800,7 +2804,7 @@ public final class GameClient extends GameShell implements class288 {
 					interfaceSettings = new class202(512);
 
 					System.out.println("Settings:");
-					while (buffer.field2339 < var26) {
+					while (buffer.field2339 < messageType) {
 						var28 = buffer.readInt();
 						var9 = buffer.readUShort();
 						var32 = buffer.readUShort();
@@ -2818,11 +2822,11 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2064 == var1.packetType) {
-					for (var26 = 0; var26 < class225.field2558.length; var26++) {
-						if (class225.field2558[var26] != class225.field2559[var26]) {
-							class225.field2558[var26] = class225.field2559[var26];
-							updateForSetting(var26);
-							staticIntArray105[++staticInt244 - 1 & 31] = var26;
+					for (messageType = 0; messageType < class225.field2558.length; messageType++) {
+						if (class225.field2558[messageType] != class225.field2559[messageType]) {
+							class225.field2558[messageType] = class225.field2559[messageType];
+							updateForSetting(messageType);
+							staticIntArray105[++staticInt244 - 1 & 31] = messageType;
 						}
 					}
 
@@ -2831,9 +2835,9 @@ public final class GameClient extends GameShell implements class288 {
 				}
 
 				if (IncomingPacket.field2130 == var1.packetType) {
-					var26 = buffer.readIntV1();
+					messageType = buffer.readIntV1();
 					var27 = buffer.readUShort();
-					var31 = Widget.getLoaded(var26);
+					var31 = Widget.getLoaded(messageType);
 					if (var31.mediaType != 1 || var27 != var31.mediaID) {
 						var31.mediaType = 1;
 						var31.mediaID = var27;

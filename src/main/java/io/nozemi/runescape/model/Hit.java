@@ -1,5 +1,6 @@
 package io.nozemi.runescape.model;
 
+import io.nozemi.runescape.content.combat.PlayerCombat;
 import io.nozemi.runescape.model.entity.CombatStyle;
 import io.nozemi.runescape.model.entity.Npc;
 import io.nozemi.runescape.model.entity.Player;
@@ -230,10 +231,10 @@ public class Hit {
 			if (target.isPlayer() && origin instanceof Npc) {
 				Player playerTarget = (Player) target;
 				// TODO: Look into this TheaterOfBloodItems thing
-				/*if (damage > 0 && TheaterOfBloodItems.justiciarSet(playerTarget)) {
+				if (damage > 0) {
 					int abosrbed = (int) (damage * 0.15);
 					damage = damage - abosrbed;
-				}*/
+				}
 			}
 		}
 
@@ -260,7 +261,7 @@ public class Hit {
 		
 		if (origin != null && target != null && origin instanceof Entity) {
 			
-			if (check_pid_senario()) {
+			if (checkPidScenario()) {
 				hasPidAdjusted = true;
 			}
 
@@ -286,7 +287,7 @@ public class Hit {
 		return this;
 	}
 	
-	public boolean check_pid_senario() {
+	public boolean checkPidScenario() {
 		// TODO: Look into this.
 		/*if (origin != null && target != null && origin instanceof Entity && target.isPlayer() && GameCommands.ZERO_TICK_PID_ON && ((Entity) origin).pvpPid < target.pvpPid) {
 			if (!GameCommands.ARENA__ZERO_TICK_PID_ON && (boolean) target.attribOr(AttributeKey.IN_STAKE, false))
@@ -308,13 +309,12 @@ public class Hit {
 	 * process the hit instantly rather than later in the engine cycle traditionally in {@code Entity.cycle()}
 	 */
 	public Hit submit() {
-		// TODO: Look into this.
 		built = true; // Var won't be used beyond this point in live scenarios. Maybe in debugging.
 		if (target != null && !invalid()) {
 			if (delay <= 0 && hasPidAdjusted && !queueAlways) {
-				//target.takeHit(this);
+				target.takeHit(this);
 			} else {
-				//target.getHits().add(this);
+				target.getHits().add(this);
 			}
 		}
 		return this;
@@ -328,7 +328,7 @@ public class Hit {
 	public Hit addXp(CombatStyle style) {
 		// TODO: Look into this.
 		if (origin != null && target != null && style != null && origin instanceof Player && damage > 0) {
-            //PlayerCombat.addCombatXp((Player) origin, target, damage, style);
+            PlayerCombat.addCombatXp((Player) origin, target, damage, style);
         }
 		return this;
 	}

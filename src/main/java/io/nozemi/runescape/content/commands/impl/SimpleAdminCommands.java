@@ -11,21 +11,29 @@ import io.nozemi.runescape.model.entity.Npc;
 import io.nozemi.runescape.model.entity.player.Privilege;
 import io.nozemi.runescape.model.item.Item;
 import io.nozemi.runescape.model.item.ItemAttrib;
+import io.nozemi.runescape.net.message.game.command.AddMessage;
+import io.nozemi.runescape.util.CombatFormula;
 import io.nozemi.runescape.util.SpawnDirection;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
 @Component
-public class SimpleAdminCommands extends AdminCommandsWrapper {
+public class SimpleAdminCommands extends AdminCommandsWrapper implements BeanFactoryAware {
 
     private static final Logger logger = LogManager.getLogger(SimpleAdminCommands.class);
 
     private final TeleportEffectChainHandler teleportEffectChainHandler;
     private final World world;
+
+    private BeanFactory beanFactory;
 
     @Autowired
     public SimpleAdminCommands(TeleportEffectChainHandler teleportEffectChainHandler, World world) {
@@ -126,7 +134,13 @@ public class SimpleAdminCommands extends AdminCommandsWrapper {
                 return;
             }
 
-            Npc npc = new Npc(Integer.parseInt(args[0]), world, player.tile());
+            //Npc npc = new Npc(Integer.parseInt(args[0]), world, player.tile());
+            Npc npc = beanFactory.getBean(Npc.class);
+
+            npc.setId(Integer.parseInt(args[0]));
+            npc.setWorld(world);
+            npc.setSpawnTile(player.tile());
+
             npc.spawnDirection(SpawnDirection.SOUTH);
             npc.walkRadius(2);
 
@@ -143,5 +157,16 @@ public class SimpleAdminCommands extends AdminCommandsWrapper {
 
             player.inventory().get(slot - 1).modifyProperty(ItemAttrib.CHARGES, 2, 4);
         });
+
+        put("testing", (player, args) -> {
+            player.write(new AddMessage("This is a testing message.", AddMessage.Type.BROADCAST));
+        });
+
+        put("maxhit", (player, args) -> player.message("Max Melee: " + CombatFormula.maximumMeleeHit(player)));
+    }
+
+    @Override
+    public void setBeanFactory(@NotNull BeanFactory beanFactory) throws BeansException {
+        this.beanFactory = beanFactory;
     }
 }

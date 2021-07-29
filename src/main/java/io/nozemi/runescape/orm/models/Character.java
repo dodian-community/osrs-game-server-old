@@ -1,7 +1,5 @@
 package io.nozemi.runescape.orm.models;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.nozemi.runescape.model.AttributeKey;
 import io.nozemi.runescape.model.Tile;
 import io.nozemi.runescape.model.entity.Player;
@@ -21,12 +19,11 @@ public class Character {
     @Column(nullable = false)
     private int userId;
     private String username;
-    @Column(nullable = true)
     private boolean online;
     private int posX;
     private int posY;
     private int level;
-    @Column(columnDefinition = "double default 100.0")
+    @Column(columnDefinition = "double precision default 100.0")
     private double runEnergy;
     @Convert(converter = ItemContainerConverter.class)
     @Column(columnDefinition = "json default '[]'")
@@ -34,6 +31,10 @@ public class Character {
     @Column(columnDefinition = "json default '[]'")
     @Convert(converter = ItemContainerConverter.class)
     private ItemContainer equipment;
+    @Embedded
+    private CharacterExperience experience;
+    @Embedded
+    private CharacterLevels levels;
 
     public Character() {
 
@@ -53,6 +54,7 @@ public class Character {
         player.equipment(equipment);
         player.tile(new Tile(posX, posY, level));
         player.putattrib(AttributeKey.RUN_ENERGY, runEnergy);
+        player.skills().load(experience, levels);
     }
 
     public int getId() {
@@ -145,6 +147,14 @@ public class Character {
         update(player, false);
     }
 
+    public CharacterExperience getExperience() {
+        return experience;
+    }
+
+    public void setExperience(CharacterExperience stats) {
+        this.experience = stats;
+    }
+
     public void update(Player player, boolean online) {
         this.online = online;
         this.userId = player.userId();
@@ -155,5 +165,7 @@ public class Character {
         this.posY = player.tile().z;
         this.level = player.tile().level;
         this.runEnergy = player.attribOr(AttributeKey.RUN_ENERGY, 0.0);
+        this.experience = new CharacterExperience(player.skills());
+        this.levels = new CharacterLevels(player.skills());
     }
 }

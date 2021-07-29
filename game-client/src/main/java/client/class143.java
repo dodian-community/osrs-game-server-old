@@ -23,8 +23,8 @@ public class class143 extends class283 {
       return this.method3165((class287)var1, (class287)var2, (byte)3);
    }
 
-   static void method3172(int var0, String var1, String var2) {
-      class173.method3472(var0, var1, var2, (String)null, -2103996728);
+   static void method3172(int messageTypeMaybe, String var1, String var2) {
+      class173.method3472(messageTypeMaybe, var1, var2, null, -2103996728);
    }
 
    public static final int method3167(double var0, double var2, double var4) {

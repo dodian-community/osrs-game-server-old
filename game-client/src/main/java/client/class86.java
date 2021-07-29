@@ -22,7 +22,7 @@ public class class86 {
       } else {
          var6.unlink();
          var6.method4101();
-         var6.method1070(var1, var2, var4, var3, (byte)27);
+         var6.method1070(var1, var2, var4, var3);
       }
 
       this.field1209[0] = var6;

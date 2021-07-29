@@ -1,33 +1,47 @@
 package io.nozemi.runescape.model.entity;
 
+import io.nozemi.runescape.content.mechanics.NpcDeath;
+import io.nozemi.runescape.events.ScriptExecutor;
+import io.nozemi.runescape.events.ScriptRepository;
 import io.nozemi.runescape.fs.NpcDefinition;
 import io.nozemi.runescape.handlers.impl.NpcSpawnsHandler;
 import io.nozemi.runescape.model.*;
 import io.nozemi.runescape.model.entity.npc.NpcCombatInfo;
 import io.nozemi.runescape.model.entity.npc.NpcMovementSync;
 import io.nozemi.runescape.model.entity.player.NpcSyncInfo;
+import io.nozemi.runescape.model.entity.player.PlayerDamageTracker;
 import io.nozemi.runescape.model.map.steroids.RangeStepSupplier;
 import io.nozemi.runescape.script.TimerKey;
 import io.nozemi.runescape.util.SpawnDirection;
+import io.nozemi.runescape.util.Tuple;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.lang.ref.WeakReference;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by Bart on 8/10/2015.
  */
+@Component
+@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class Npc extends Entity {
+
+	private final ScriptRepository scriptRepository;
 	
 	private static final Logger logger = LogManager.getLogger(Entity.class);
 	
 	public static boolean TARG_SWITCH_ON = true;
-	
+
 	public String spawnStack = "";
 	
 	private int id;
-	private final Tile spawnTile;
+	private Tile spawnTile;
 	private int walkRadius;
 	private int spawnDirection;
 	// If a player can see this npc. if not, what's the point in processing it?
@@ -45,18 +59,25 @@ public class Npc extends Entity {
 	// A list of npc-ids such as Bosses that are immune to venom.
 	public static final int[] immunes = new int[]{2668, 3127, 494, 2265, 2266, 2267, 7144, 7145, 7146, 7147, 7148, 7149, 6611, 6612, 2042, 2043, 2044, 2668};
 	public static final int[] poiimmunes = new int[]{2668};
-	
-	public Npc(int id, World world, Tile tile) {
-		super(world, tile);
-		this.id = id;
+
+	@Autowired
+	public Npc(ScriptRepository scriptRepository, World world) {
+		super(world, new Tile(2606, 3102));
+
+		this.id = 1306;
+
+		this.scriptRepository = scriptRepository;
+		this.world = world;
+
+		this.pathQueue = new PathQueue(this);
+
 		sync = new NpcSyncInfo(this);
-		spawnTile = tile;
 		def = world.definitions().get(NpcDefinition.class, id);
-		//combatInfo = world.combatInfo(id);
 		hp = combatInfo == null ? 50 : combatInfo.stats.hitpoints;
-		spawnArea = new Area(spawnTile, walkRadius);
+
 		putattrib(AttributeKey.MAX_DISTANCE_FROM_SPAWN, 12);
-		
+
+
 		for (int types : immunes) {
 			if (id == types) {
 				setVenomImmune(true);
@@ -67,6 +88,15 @@ public class Npc extends Entity {
 				setPoisonImmune(true);
 			}
 		}
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setSpawnTile(Tile spawnTile) {
+		this.spawnTile = spawnTile;
+		spawnArea = new Area(spawnTile, walkRadius);
 	}
 	
 	public void inViewport(boolean b) {
@@ -294,7 +324,7 @@ public class Npc extends Entity {
 	
 	@Override
 	public int maxHp() {
-		return combatInfo == null ? 50 : combatInfo.stats.hitpoints;
+		return combatInfo != null && combatInfo.stats != null ? combatInfo.stats.hitpoints : 50;
 	}
 	
 	@Override
@@ -345,7 +375,9 @@ public class Npc extends Entity {
 	
 	@Override
 	protected void die() {
-		//world.server().scriptExecutor().executeScript(this, NpcDeath.script);
+		if(this.beanFactory != null) {
+			this.beanFactory.getBean(ScriptExecutor.class).executeScript(this, NpcDeath.script);
+		}
 	}
 	
 	@Override
@@ -381,7 +413,40 @@ public class Npc extends Entity {
 	public void postCycleMovement() {
 		NpcMovementSync.npc_post_cycle_movement(this);
 	}
-	
+
+	@Override
+	public Optional<Integer> killer() {
+		// If we don't even have any killers, then return an empty optional.
+		if (damagers.isEmpty())
+			return Optional.empty();
+
+		// Obtain a stream set of all information tracked.
+		Set<Map.Entry<Integer, PlayerDamageTracker>> trackset = damagers.entrySet()
+				.stream()
+				.filter(info -> System.currentTimeMillis() - getDamagerLastTime().get(info.getKey()) <= 300000)
+				.collect(Collectors.toSet());
+
+
+		// Try to find the killer based on hitters
+		Comparator<Map.Entry<Integer, PlayerDamageTracker>> comparator = (e1, e2) -> e2.getValue().damage().compareTo(e1.getValue().damage());
+
+		// Identify the result
+		Map.Entry<Integer, PlayerDamageTracker> result = trackset.stream().sorted(comparator).findFirst().orElse(null);
+
+		// An anti-farming mechanic on W2 - checks if you ate or just suicided. Why suicide?
+		int[] totalDamageTaken = new int[1];
+		trackset.forEach(e -> totalDamageTaken[0] += e.getValue().damage());
+
+		int account_id = result != null ? result.getKey() : -1;
+		if (account_id != -1) {
+			putattrib(AttributeKey.MOST_DAM_TRACKER, new Tuple<>(totalDamageTaken[0], result.getValue()));
+			return Optional.ofNullable(account_id); // And find the highest damager :)
+		} else {
+			clearattrib(AttributeKey.MOST_DAM_TRACKER);
+			return Optional.empty();
+		}
+	}
+
 	public boolean isVenomImmune() {
 		return venomImmune;
 	}

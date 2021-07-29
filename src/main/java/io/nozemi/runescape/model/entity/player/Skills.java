@@ -9,6 +9,8 @@ import io.nozemi.runescape.model.entity.Npc;
 import io.nozemi.runescape.model.entity.Player;
 import io.nozemi.runescape.net.message.game.command.InvokeScript;
 import io.nozemi.runescape.net.message.game.command.UpdateSkill;
+import io.nozemi.runescape.orm.models.CharacterExperience;
+import io.nozemi.runescape.orm.models.CharacterLevels;
 import io.nozemi.runescape.util.Varbit;
 
 import java.lang.ref.WeakReference;
@@ -35,8 +37,8 @@ public class Skills {
 		Arrays.fill(levels, 1);
 
 		/* Hitpoints differs :) */
-		xps[3] = levelToXp(10);
-		levels[3] = 10;
+		xps[HITPOINTS] = levelToXp(10);
+		levels[HITPOINTS] = 10;
 	}
 	
 	public void update() {
@@ -114,18 +116,11 @@ public class Skills {
 			if (npc.hidden() || (npc.locked() && !npc.isDamageOkLocked()))
 				return false;
 		}
-		
-		// Force the multipler off for PvP combat encounters. All worlds.
-		if (multiplied && combatxp && pvp) {
-			multiplied = false;
-		}
 
 		// TODO: Handle XP multiplier
-		/*if (World.xpMultiplier > 1) {
-			if (player.world().realm().isPVP() && !combatxp) {
-				amt *= World.xpMultiplier;
-			}
-		}*/
+		if (World.xpMultiplier > 1) {
+			amt *= World.xpMultiplier;
+		}
 		
 		int oldLevel = xpToLevel((int) xps[skill]);
 		xps[skill] = Math.min(200000000, xps[skill] + amt);
@@ -377,5 +372,56 @@ public class Skills {
 		for (int i = 0; i < 23; i++) // 23 kills yo .. skill.length is 24!
 			xp += xp()[i];
 		return xp;
+	}
+
+	public void load(CharacterExperience stats, CharacterLevels levels) {
+		this.xps[ATTACK] = stats.getAttackExperience();
+		this.xps[DEFENCE] = stats.getDefenceExperience();
+		this.xps[STRENGTH] = stats.getStrengthExperience();
+		this.xps[HITPOINTS] = Math.max(stats.getHitpointsExperience(), levelToXp(10));
+		this.xps[RANGED] = stats.getRangedExperience();
+		this.xps[PRAYER] = stats.getPrayerExperience();
+		this.xps[MAGIC] = stats.getMagicExperience();
+		this.xps[COOKING] = stats.getCookingExperience();
+		this.xps[WOODCUTTING] = stats.getWoodcuttingExperience();
+		this.xps[FLETCHING] = stats.getFletchingExperience();
+		this.xps[FISHING] = stats.getFishingExperience();
+		this.xps[FIREMAKING] = stats.getFiremakingExperience();
+		this.xps[CRAFTING] = stats.getCraftingExperience();
+		this.xps[SMITHING] = stats.getSmithingExperience();
+		this.xps[MINING] = stats.getMiningExperience();
+		this.xps[HERBLORE] = stats.getHerbloreExperience();
+		this.xps[AGILITY] = stats.getAgilityExperience();
+		this.xps[THIEVING] = stats.getThievingExperience();
+		this.xps[SLAYER] = stats.getSlayerExperience();
+		this.xps[FARMING] = stats.getFarmingExperience();
+		this.xps[RUNECRAFTING] = stats.getRunecraftingExperience();
+		this.xps[HUNTER] = stats.getHunterExperience();
+		this.xps[CONSTRUCTION] = stats.getConstructionExperience();
+		
+		this.levels[ATTACK] = levels.getAttackLevel();
+		this.levels[DEFENCE] = levels.getDefenceLevel();
+		this.levels[STRENGTH] = levels.getStrengthLevel();
+		this.levels[HITPOINTS] = Math.max(levels.getHitpointsLevel(), 10);
+		this.levels[RANGED] = levels.getRangedLevel();
+		this.levels[PRAYER] = levels.getPrayerLevel();
+		this.levels[MAGIC] = levels.getMagicLevel();
+		this.levels[COOKING] = levels.getCookingLevel();
+		this.levels[WOODCUTTING] = levels.getWoodcuttingLevel();
+		this.levels[FLETCHING] = levels.getFletchingLevel();
+		this.levels[FISHING] = levels.getFishingLevel();
+		this.levels[FIREMAKING] = levels.getFiremakingLevel();
+		this.levels[CRAFTING] = levels.getCraftingLevel();
+		this.levels[SMITHING] = levels.getSmithingLevel();
+		this.levels[MINING] = levels.getMiningLevel();
+		this.levels[HERBLORE] = levels.getHerbloreLevel();
+		this.levels[AGILITY] = levels.getAgilityLevel();
+		this.levels[THIEVING] = levels.getThievingLevel();
+		this.levels[SLAYER] = levels.getSlayerLevel();
+		this.levels[FARMING] = levels.getFarmingLevel();
+		this.levels[RUNECRAFTING] = levels.getRunecraftingLevel();
+		this.levels[HUNTER] = levels.getHunterLevel();
+		this.levels[CONSTRUCTION] = levels.getConstructionLevel();
+		this.update();
 	}
 }
