@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.nozemi.editor.controllers.EditorMainController">
+   <children>
+       <TabPane layoutX="25.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE"
+                AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                AnchorPane.topAnchor="0.0">
+           <Tab fx:id="tabNpcConfigs" text="NPC Configs">
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                   <TreeView editable="true" layoutX="14.0" layoutY="14.0" prefWidth="170.0"
+                             AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+               </AnchorPane>
+           </Tab>
+           <Tab fx:id="tabItemConfigs" text="Item Configs">
+           </Tab>
+       </TabPane>
+   </children>
+</AnchorPane>

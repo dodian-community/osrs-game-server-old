@@ -1,0 +1,42 @@
+[
+  {
+    "name": "LUMBRIDGE_HOME",
+    "chain":
+        [{
+          "delay": 0,
+          "animation": [4847],
+          "graphics": [800],
+          "sound": [193]
+        },
+        {
+          "delay": 5,
+          "animation": [4850],
+          "sound": [196]
+        },
+        {
+          "delay": 5,
+          "animation": [4853],
+          "graphics": [802],
+          "sound": [194]
+        },
+        {
+          "delay": 3,
+          "animation": [4855],
+          "graphics": [803, -1, 0],
+          "sound": [195]
+        },
+        {
+          "delay": 3,
+          "graphics": [804]
+        },
+        {
+          "delay": 1,
+          "animation": [4857]
+        },
+        {
+          "delay": 2,
+          "graphics": [-1],
+          "animation": [-1]
+        }]
+  }
+]
