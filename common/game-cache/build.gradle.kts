@@ -3,6 +3,5 @@ dependencies {
     implementation("io.guthix:jagex-bytebuf-extensions:0.2.0")
     implementation("io.guthix:jagex-store-5:0.4.0")
 
-    implementation(project(":common:game-core"))
-    implementation(project(":common:game-config"))
+    api(project(":common:game-config"))
 }

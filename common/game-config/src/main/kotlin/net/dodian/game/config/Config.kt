@@ -1,7 +1,5 @@
 package net.dodian.game.config
 
-import net.dodian.game.core.GameEnv
-import org.springframework.stereotype.Component
 import java.math.BigInteger
 import java.nio.file.Path
 

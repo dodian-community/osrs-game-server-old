@@ -1,16 +1,14 @@
 package net.dodian.game.config
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import net.dodian.game.core.GameEnv
-import net.dodian.game.core.ServerModule
 import org.springframework.beans.factory.annotation.Autowired
 import java.nio.file.Path
 
 class GameConfigProvider @Autowired constructor(
     private val mapper: ObjectMapper
-) : ServerModule<GameConfig> {
+) {
 
-    override fun get(): GameConfig {
+    fun get(): GameConfig {
         val config = ConfigMap(mapper).load(CONFIG_PATH)
         val name: String = config["server-name"] ?: DEFAULT_SERVER_NAME
         val dataPath: Path = config.dataPath("data-path")

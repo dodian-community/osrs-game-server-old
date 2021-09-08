@@ -1,0 +1,177 @@
+package net.dodian.runescape.content.commands.impl;
+
+import net.dodian.models.SpawnDirection;
+import net.dodian.runescape.content.teleports.TeleportEffectChainHandler;
+import net.dodian.runescape.fs.NpcDefinition;
+import net.dodian.runescape.model.AttributeKey;
+import net.dodian.runescape.model.Tile;
+import net.dodian.runescape.model.World;
+import net.dodian.runescape.model.entity.Npc;
+import net.dodian.runescape.model.item.Item;
+import net.dodian.runescape.model.item.ItemAttrib;
+import net.dodian.runescape.net.message.game.command.AddMessage;
+import net.dodian.runescape.util.CombatFormula;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import java.io.IOException;
+
+@Component
+public class SimpleAdminCommands extends AdminCommandsWrapper implements BeanFactoryAware {
+
+    private static final Logger logger = LogManager.getLogger(SimpleAdminCommands.class);
+
+    private final TeleportEffectChainHandler teleportEffectChainHandler;
+    private final World world;
+
+    private BeanFactory beanFactory;
+
+    @Autowired
+    public SimpleAdminCommands(TeleportEffectChainHandler teleportEffectChainHandler, World world) {
+        this.teleportEffectChainHandler = teleportEffectChainHandler;
+        this.world = world;
+    }
+
+    @Override
+    public void afterPropertiesSet() {
+        put("rt", (player, args) -> {
+            try {
+                teleportEffectChainHandler.loadTeleports();
+                player.message("Successfully reloaded the teleport effects chains.");
+                logger.info("Loaded new teleport effect chains...");
+            } catch (IOException e) {
+                logger.info("Failed to load teleport effect chains...", e);
+                player.message("Something went wrong while reloading the effects chains...");
+                player.message("<col=FF0000>" + e.getMessage());
+            }
+        }, "Reload teleport effects chain.");
+
+        put("item", (player, args) -> {
+            if (args.length < 1) {
+                player.message("<col=b55907>You need to provide an item id for the desired item.");
+                player.message("<col=b55907>::item [item_id] [(amount)]");
+                return;
+            }
+
+            int amount = 1;
+            if(args.length >= 2) {
+                amount = Integer.parseInt(args[1]);
+            }
+
+            Item item = new Item(Integer.parseInt(args[0]), amount);
+            player.inventory().add(item, true);
+            player.message("<col=28b507>Spawned the item successfully!");
+        }, "Spawn an item of desired amount (default 1)");
+
+        put("sound", (player, args) -> {
+            if(args.length >= 1) {
+                player.sound(Integer.parseInt(args[0]));
+            } else {
+                player.message("You need to specify a sound ID.");
+            }
+        });
+
+        put("debug", (player, args) -> {
+            boolean debug = player.attribOr(AttributeKey.DEBUG, false);
+            player.putattrib(AttributeKey.DEBUG, !debug);
+            player.message("Debug is now " + (!debug ? "<col=28b507>enabled" : "<col=b55907>disabled"));
+        });
+
+        put("movex", (player, args) -> {
+            int tiles = 1;
+            if (args.length >= 1) {
+                tiles = Integer.parseInt(args[0]);
+            }
+
+            player.teleport(new Tile(player.tile().x + tiles, player.tile().z, player.tile().level));
+        });
+
+        put("movey", (player, args) -> {
+            int tiles = 1;
+            if (args.length >= 1) {
+                tiles = Integer.parseInt(args[0]);
+            }
+
+            player.teleport(new Tile(player.tile().x, player.tile().z + tiles, player.tile().level));
+        });
+
+        put("movez", (player, args) -> {
+            int tiles = 1;
+            if (args.length >= 1) {
+                tiles = Integer.parseInt(args[0]);
+            }
+
+            player.teleport(new Tile(player.tile().x, player.tile().z, player.tile().level + tiles));
+        });
+
+        for (String s : new String[]{"coords", "loc", "pos", "mypos"}) {
+            put(s, (player, args) -> player.message("Your coordinates are [%d, %d, %d]. Region %d, RelX=%d, RelZ=%d, Chunk-id %d.",
+                    player.tile().x, player.tile().z, player.tile().level,
+                    player.tile().region(), player.tile().regionX(),
+                    player.tile().regionZ(), player.tile().chunk()));
+        }
+
+        put("pnpc", (player, args) -> {
+            if(args.length < 1) {
+                player.message("You need to specify an NPC id to transform into.");
+                return;
+            }
+            int id = Integer.parseInt(args[0]);
+
+            if (id == -1) {
+                player.looks().resetRender();
+            } else {
+                player.looks().render(player.world().definitions().get(NpcDefinition.class, id).renderpairs());
+            }
+
+            player.message("Transmogged player into %s.", args[0]);
+        });
+
+        put("addnpc", (player, args) -> {
+            if(args.length < 1) {
+                player.message("You need to provide an NPC id.");
+                return;
+            }
+
+            //Npc npc = new Npc(Integer.parseInt(args[0]), world, player.tile());
+            Npc npc = beanFactory.getBean(Npc.class);
+
+            npc.setId(Integer.parseInt(args[0]));
+            npc.setWorld(world);
+            npc.setSpawnTile(player.tile());
+
+            npc.spawnDirection(SpawnDirection.SOUTH);
+            npc.walkRadius(2);
+
+            world.registerNpc(npc);
+        });
+
+        put("addprop", (player, args) -> {
+            if(args.length < 1) {
+                player.message("You need to specify an item slot (1-28).");
+                return;
+            }
+
+            int slot = Integer.parseInt(args[0]);
+
+            player.inventory().get(slot - 1).modifyProperty(ItemAttrib.CHARGES, 2, 4);
+        });
+
+        put("testing", (player, args) -> {
+            player.write(new AddMessage("This is a testing message.", AddMessage.Type.BROADCAST));
+        });
+
+        put("maxhit", (player, args) -> player.message("Max Melee: " + CombatFormula.maximumMeleeHit(player)));
+    }
+
+    @Override
+    public void setBeanFactory(@NotNull BeanFactory beanFactory) throws BeansException {
+        this.beanFactory = beanFactory;
+    }
+}
