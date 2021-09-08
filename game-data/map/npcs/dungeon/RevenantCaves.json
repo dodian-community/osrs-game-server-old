@@ -1,0 +1,68 @@
+[
+  {"id": 7931, "x": 3234, "z": 10180, "radius": 2}, // Revenant goblin
+  {"id": 7862, "x": 3237, "z": 10198, "radius": 7}, // Black dragon
+  {"id": 7940, "x": 3239, "z": 10176, "radius": 2}, // Revenant dragon
+  {"id": 7863, "x": 3240, "z": 10205, "radius": 8}, // Black dragon
+  {"id": 7881, "x": 3251, "z": 10186, "radius": 3}, // Revenant imp
+  {"id": 7866, "x": 3149, "z": 10110, "radius": 0}, // Lesser demon
+  {"id": 7865, "x": 3167, "z": 10114, "radius": 8}, // Lesser demon
+  {"id": 7877, "x": 3195, "z": 10071, "radius": 2}, // Hellhound
+  {"id": 7877, "x": 3196, "z": 10067, "radius": 2}, // Hellhound
+  {"id": 7877, "x": 3198, "z": 10073, "radius": 2}, // Hellhound
+  {"id": 7864, "x": 3166, "z": 10194, "radius": 10}, // Ankou
+  {"id": 7864, "x": 3168, "z": 10191, "radius": 10}, // Ankou
+  {"id": 7864, "x": 3166, "z": 10199, "radius": 10}, // Ankou
+  {"id": 7864, "x": 3173, "z": 10196, "radius": 10}, // Ankou
+  {"id": 7864, "x": 3170, "z": 10188, "radius": 10}, // Ankou
+  {"id": 7864, "x": 3177, "z": 10192, "radius": 10}, // Ankou
+  {"id": 7864, "x": 3175, "z": 10184, "radius": 10}, // Ankou
+  {"id": 7864, "x": 3180, "z": 10199, "radius": 10}, // Ankou
+  {"id": 7864, "x": 3180, "z": 10191, "radius": 10}, // Ankou
+  {"id": 7864, "x": 3184, "z": 10197, "radius": 10}, // Ankou
+  {"id": 315, "x": 3168, "z": 10163, "radius": 4}, // Emblem Trader
+  {"id": 7867, "x": 3157, "z": 10113, "radius": 6}, // Lesser demon
+  {"id": 7865, "x": 3153, "z": 10115, "radius": 0}, // Lesser demon
+  {"id": 7866, "x": 3157, "z": 10121, "radius": 1}, // Lesser demon
+  {"id": 7867, "x": 3157, "z": 10114, "radius": 4}, // Lesser demon
+  {"id": 7866, "x": 3168, "z": 10115, "radius": 11}, // Lesser demon
+  {"id": 7878, "x": 3199, "z": 10162, "radius": 4}, // Ice giant
+  {"id": 7880, "x": 3201, "z": 10168, "radius": 4}, // Ice giant
+  {"id": 7874, "x": 3167, "z": 10154, "radius": 3}, // Black demon
+  {"id": 7865, "x": 3166, "z": 10120, "radius": 2}, // Lesser demon
+  {"id": 7880, "x": 3206, "z": 10158, "radius": 4}, // Ice giant
+  {"id": 7879, "x": 3206, "z": 10164, "radius": 3}, // Ice giant
+  {"id": 7875, "x": 3171, "z": 10157, "radius": 3}, // Black demon
+  {"id": 7867, "x": 3171, "z": 10115, "radius": 7}, // Lesser demon
+  {"id": 7878, "x": 3213, "z": 10163, "radius": 2}, // Ice giant
+  {"id": 7866, "x": 3170, "z": 10115, "radius": 9}, // Lesser demon
+  {"id": 7871, "x": 3213, "z": 10128, "radius": 5}, // Greater demon
+  {"id": 7876, "x": 3177, "z": 10150, "radius": 6}, // Black demon
+  {"id": 7879, "x": 3218, "z": 10167, "radius": 2}, // Ice giant
+  {"id": 7873, "x": 3217, "z": 10138, "radius": 5}, // Greater demon
+  {"id": 7874, "x": 3177, "z": 10155, "radius": 4}, // Black demon
+  {"id": 7872, "x": 3217, "z": 10122, "radius": 3}, // Greater demon
+  {"id": 7871, "x": 3223, "z": 10132, "radius": 3}, // Greater demon
+  {"id": 7873, "x": 3228, "z": 10124, "radius": 5}, // Greater demon
+  {"id": 7873, "x": 3230, "z": 10141, "radius": 3}, // Greater demon
+  {"id": 7872, "x": 3233, "z": 10132, "radius": 4}, // Greater demon
+  {"id": 7932, "x": 3235, "z": 10174, "radius": 4}, // Revenant pyrefiend
+  {"id": 7936, "x": 3249, "z": 10180, "radius": 5}, // Revenant demon
+  {"id": 7937, "x": 3236, "z": 10168, "radius": 0}, // Revenant ork
+  {"id": 7939, "x": 3247, "z": 10175, "radius": 4}, // Revenant knight
+  {"id": 7932, "x": 3243, "z": 10166, "radius": 4}, // Revenant pyrefiend
+  {"id": 7934, "x": 3247, "z": 10158, "radius": 1}, // Revenant cyclops
+  {"id": 7937, "x": 3247, "z": 10150, "radius": 1}, // Revenant ork
+  {"id": 7938, "x": 3250, "z": 10141, "radius": 3}, // Revenant dark beast
+  {"id": 7933, "x": 3252, "z": 10157, "radius": 1}, // Revenant hobgoblin
+  {"id": 7935, "x": 3251, "z": 10168, "radius": 1}, // Revenant hellhound
+  {"id": 7877, "x": 3201, "z": 10070, "radius": 3}, // Hellhound
+  {"id": 7877, "x": 3202, "z": 10072, "radius": 2}, // Hellhound
+  {"id": 7869, "x": 3208, "z": 10089, "radius": 2}, // Green dragon
+  {"id": 7870, "x": 3212, "z": 10097, "radius": 2}, // Green dragon
+  {"id": 7868, "x": 3219, "z": 10064, "radius": 3}, // Green dragon
+  {"id": 7870, "x": 3221, "z": 10073, "radius": 3}, // Green dragon
+  {"id": 7868, "x": 3223, "z": 10093, "radius": 3}, // Green dragon
+  {"id": 7869, "x": 3226, "z": 10069, "radius": 4}, // Green dragon
+  {"id": 7881, "x": 3230, "z": 10179, "radius": 1}, // Revenant imp
+  {"id": 7861, "x": 3233, "z": 10202, "radius": 8}, // Black dragon
+]

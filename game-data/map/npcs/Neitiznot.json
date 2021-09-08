@@ -1,0 +1,177 @@
+[
+  {
+	"id": 1881,
+	"x": 2334,
+	"z": 3798,
+	"radius": 0
+  },
+  // Thakkrad Sigmundson
+  {
+	"id": 1880,
+	"x": 2334,
+	"z": 3800,
+	"radius": 0
+  },
+  // Fridleif Shieldson
+  {
+	"id": 2979,
+	"x": 2335,
+	"z": 3799,
+	"radius": 1
+  },
+  // Mawnis Burowgar
+  {
+	"id": 1884,
+	"x": 2335,
+	"z": 3806,
+	"radius": 1
+  },
+  // Jofridr Mordstatter
+  {
+	"id": 1895,
+	"x": 2336,
+	"z": 3811,
+	"radius": 2
+  },
+  // Slug Hemligssen
+  {
+	"id": 1893,
+	"x": 2338,
+	"z": 3798,
+	"radius": 0
+  },
+  // Kjedelig Uppsen
+  {
+	"id": 1894,
+	"x": 2338,
+	"z": 3800,
+	"radius": 0
+  },
+  // Trogen Konungarde
+  {
+	"id": 1890,
+	"x": 2340,
+	"z": 3818,
+	"radius": 3
+  },
+  // Honour guard
+  {
+	"id": 1888,
+	"x": 2350,
+	"z": 3803,
+	"radius": 3
+  },
+  // Lisse Isaakson
+  {
+	"id": 1882,
+	"x": 2311,
+	"z": 3781,
+	"radius": 0
+  },
+  // Maria Gunnars
+  {
+	"id": 1620,
+	"x": 2335,
+	"z": 3806,
+	"radius": 0
+  },
+  // Cat
+  {
+	"id": 1890,
+	"x": 2316,
+	"z": 3814,
+	"radius": 3
+  },
+  // Honour guard
+  {
+	"id": 5816,
+	"x": 2319,
+	"z": 3793,
+	"radius": 4
+  },
+  // Yak
+  {
+	"id": 1887,
+	"x": 2320,
+	"z": 3797,
+	"radius": 3
+  },
+  // Anne Isaakson
+  {
+	"id": 5816,
+	"x": 2321,
+	"z": 3792,
+	"radius": 4
+  },
+  // Yak
+  {
+	"id": 5816,
+	"x": 2321,
+	"z": 3796,
+	"radius": 5
+  },
+  // Yak
+  {
+	"id": 5816,
+	"x": 2321,
+	"z": 3791,
+	"radius": 3
+  },
+  // Yak
+  {
+	"id": 5816,
+	"x": 2325,
+	"z": 3792,
+	"radius": 4
+  },
+  // Yak
+  {
+	"id": 1886,
+	"x": 2325,
+	"z": 3794,
+	"radius": 4
+  },
+  // Gunnar Holdstrom
+  {
+	"id": 5816,
+	"x": 2324,
+	"z": 3795,
+	"radius": 4
+  },
+  // Yak
+  {
+	"id": 1890,
+	"x": 2325,
+	"z": 3813,
+	"radius": 3
+  },
+  // Honour guard
+  {
+	"id": 1874,
+	"x": 2332,
+	"z": 3826,
+	"radius": 0
+  },
+  // Ice troll runt
+  {
+	"id": 1889,
+	"x": 2330,
+	"z": 3803,
+	"radius": 3
+  },
+  // Honour guard
+  {
+	"id": 1889,
+	"x": 2330,
+	"z": 3806,
+	"radius": 3
+  },
+  // Honour guard
+  {
+	"id": 1885,
+	"x": 2332,
+	"z": 3803,
+	"radius": 4
+  }
+  // Morten Holdstrom
+]

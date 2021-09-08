@@ -1,0 +1,398 @@
+[
+  // Chin spot 1
+  {
+	"id": 2911,
+	"x": 2554,
+	"z": 2935,
+	"radius": 5
+  },
+  // Red chinchompa
+  {
+	"id": 2911,
+	"x": 2558,
+	"z": 2936,
+	"radius": 5
+  },
+  // Red chinchompa
+  {
+	"id": 2911,
+	"x": 2557,
+	"z": 2939,
+	"radius": 5
+  },
+  // Red chinchompa
+  {
+	"id": 2911,
+	"x": 2551,
+	"z": 2935,
+	"radius": 5
+  },
+  // Red chinchompa
+  {
+	"id": 2911,
+	"x": 2554,
+	"z": 2928,
+	"radius": 5
+  },
+  // Red chinchompa
+  {
+	"id": 2911,
+	"x": 2557,
+	"z": 2929,
+	"radius": 5
+  },
+  // Red chinchompa
+  {
+	"id": 2911,
+	"x": 2559,
+	"z": 2934,
+	"radius": 5
+  },
+  // Red chinchompa
+  {
+	"id": 2911,
+	"x": 2564,
+	"z": 2937,
+	"radius": 5
+  },
+  // Red chinchompa
+  {
+	"id": 2911,
+	"x": 2563,
+	"z": 2941,
+	"radius": 5
+  },
+  // Red chinchompa
+  {
+	"id": 2911,
+	"x": 2567,
+	"z": 2941,
+	"radius": 5
+  },
+  // Red chinchompa
+  
+  // chins 2
+  {
+	"id": 2911,
+	"x": 2556,
+	"z": 2918,
+	"radius": 5
+  },
+  // Red chinchompa
+  {
+	"id": 2911,
+	"x": 2560,
+	"z": 2915,
+	"radius": 5
+  },
+  // Red chinchompa
+  {
+	"id": 2911,
+	"x": 2556,
+	"z": 2911,
+	"radius": 5
+  },
+  // Red chinchompa
+  {
+	"id": 2911,
+	"x": 2552,
+	"z": 2917,
+	"radius": 5
+  },
+  // Red chinchompa
+  
+  // chins 3
+  {
+	"id": 2911,
+	"x": 2542,
+	"z": 2922,
+	"radius": 5
+  },
+  // Red chinchompa
+  {
+	"id": 2911,
+	"x": 2538,
+	"z": 2920,
+	"radius": 5
+  },
+  // Red chinchompa
+  {
+	"id": 2911,
+	"x": 2539,
+	"z": 2915,
+	"radius": 5
+  },
+  // Red chinchompa
+  {
+	"id": 2911,
+	"x": 2542,
+	"z": 2914,
+	"radius": 5
+  },
+  // Red chinchompa
+  {
+	"id": 2911,
+	"x": 2545,
+	"z": 2916,
+	"radius": 5
+  },
+  // Red chinchompa
+  
+  // Coastline 1
+  {
+	"id": 5549,
+	"x": 2612,
+	"z": 2932,
+	"radius": 5
+  },
+  // Crimson swift
+  {
+	"id": 5549,
+	"x": 2608,
+	"z": 2931,
+	"radius": 5
+  },
+  // Crimson swift
+  {
+	"id": 5549,
+	"x": 2605,
+	"z": 2927,
+	"radius": 5
+  },
+  // Crimson swift
+  {
+	"id": 5549,
+	"x": 2610,
+	"z": 2926,
+	"radius": 5
+  },
+  // Crimson swift
+  {
+	"id": 5549,
+	"x": 2609,
+	"z": 2922,
+	"radius": 5
+  },
+  // Crimson swift
+  {
+	"id": 5549,
+	"x": 2604,
+	"z": 2922,
+	"radius": 5
+  },
+  // Crimson swift
+  {
+	"id": 5549,
+	"x": 2607,
+	"z": 2919,
+	"radius": 5
+  },
+  // Crimson swift
+  
+  // Swift spot 2
+  {
+	"id": 5549,
+	"x": 2607,
+	"z": 2903,
+	"radius": 5
+  },
+  // Crimson swift
+  {
+	"id": 5549,
+	"x": 2612,
+	"z": 2905,
+	"radius": 5
+  },
+  // Crimson swift
+  {
+	"id": 5549,
+	"x": 2610,
+	"z": 2899,
+	"radius": 5
+  },
+  // Crimson swift
+  {
+	"id": 5549,
+	"x": 2608,
+	"z": 2894,
+	"radius": 5
+  },
+  // Crimson swift
+  {
+	"id": 5549,
+	"x": 2603,
+	"z": 2895,
+	"radius": 5
+  },
+  // Crimson swift
+  {
+	"id": 5549,
+	"x": 2601,
+	"z": 2898,
+	"radius": 5
+  },
+  // Crimson swift
+  {
+	"id": 5549,
+	"x": 2602,
+	"z": 2903,
+	"radius": 5
+  },
+  // Crimson swift
+  
+  // Spot 1
+  {
+	"id": 5548,
+	"x": 2524,
+	"z": 2938,
+	"radius": 7
+  },
+  // Wagtail
+  {
+	"id": 5548,
+	"x": 2528,
+	"z": 2940,
+	"radius": 7
+  },
+  // Wagtail
+  {
+	"id": 5548,
+	"x": 2532,
+	"z": 2936,
+	"radius": 7
+  },
+  // Wagtail
+  {
+	"id": 5548,
+	"x": 2528,
+	"z": 2931,
+	"radius": 7
+  },
+  // Wagtail
+  {
+	"id": 5548,
+	"x": 2521,
+	"z": 2933,
+	"radius": 7
+  },
+  // Wagtail
+  
+  // Spot 2
+  {
+	"id": 5548,
+	"x": 2507,
+	"z": 2914,
+	"radius": 7
+  },
+  // Wagtail
+  {
+	"id": 5548,
+	"x": 2513,
+	"z": 2913,
+	"radius": 7
+  },
+  // Wagtail
+  {
+	"id": 5548,
+	"x": 2511,
+	"z": 2908,
+	"radius": 7
+  },
+  // Wagtail
+  {
+	"id": 5548,
+	"x": 2506,
+	"z": 2907,
+	"radius": 7
+  },
+  // Wagtail
+  {
+	"id": 5548,
+	"x": 2510,
+	"z": 2910,
+	"radius": 7
+  },
+  // Wagtail
+  
+  // Spot 3
+  {
+	"id": 5548,
+	"x": 2498,
+	"z": 2890,
+	"radius": 7
+  },
+  // Wagtail
+  {
+	"id": 5548,
+	"x": 2504,
+	"z": 2888,
+	"radius": 7
+  },
+  // Wagtail
+  {
+	"id": 5548,
+	"x": 2503,
+	"z": 2884,
+	"radius": 7
+  },
+  // Wagtail
+  {
+	"id": 5548,
+	"x": 2508,
+	"z": 2883,
+	"radius": 7
+  },
+  // Wagtail
+  {
+	"id": 5548,
+	"x": 2502,
+	"z": 2888,
+	"radius": 7
+  },
+  // Wagtail
+  
+  // Spot 4
+  {
+	"id": 5548,
+	"x": 2542,
+	"z": 2892,
+	"radius": 7
+  },
+  // Wagtail
+  {
+	"id": 5548,
+	"x": 2547,
+	"z": 2894,
+	"radius": 7
+  },
+  // Wagtail
+  {
+	"id": 5548,
+	"x": 2548,
+	"z": 2888,
+	"radius": 7
+  },
+  // Wagtail
+  {
+	"id": 5548,
+	"x": 2544,
+	"z": 2886,
+	"radius": 7
+  },
+  // Wagtail
+  {
+	"id": 5548,
+	"x": 2550,
+	"z": 2892,
+	"radius": 7
+  },
+  // Wagtail
+  
+  {
+	"id": 1504,
+	"x": 2525,
+	"z": 2915,
+	"radius": 3
+  }
+  // Hunting expert
+]

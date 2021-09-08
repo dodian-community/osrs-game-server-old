@@ -1,0 +1,130 @@
+[
+  {
+	"id": 4294,
+	"x": 2313,
+	"z": 3686,
+	"radius": 5
+  },
+  // Devin Mendelberg
+  {
+	"id": 4319,
+	"x": 2318,
+	"z": 3684,
+	"radius": 3
+  },
+  // Skeleton Mage
+  {
+	"id": 4319,
+	"x": 2318,
+	"z": 3687,
+	"radius": 2
+  },
+  // Skeleton Mage
+  {
+	"id": 4319,
+	"x": 2318,
+	"z": 3686,
+	"radius": 2
+  },
+  // Skeleton Mage
+  {
+	"id": 4319,
+	"x": 2319,
+	"z": 3687,
+	"radius": 2
+  },
+  // Skeleton Mage
+  {
+	"id": 4319,
+	"x": 2318,
+	"z": 3679,
+	"radius": 2
+  },
+  // Skeleton Mage
+  {
+	"id": 4319,
+	"x": 2319,
+	"z": 3685,
+	"radius": 3
+  },
+  // Skeleton Mage
+  {
+	"id": 4319,
+	"x": 2319,
+	"z": 3687,
+	"radius": 2
+  },
+  // Skeleton Mage
+  {
+	"id": 4319,
+	"x": 2326,
+	"z": 3669,
+	"radius": 2
+  },
+  // Skeleton Mage
+  {
+	"id": 4293,
+	"x": 2329,
+	"z": 3689,
+	"PVPWorldExclusive": true,
+	"radius": 3
+  },
+  // Arnold Lydspor
+  {
+	"id": 4319,
+	"x": 2329,
+	"z": 3668,
+	"radius": 3
+  },
+  // Skeleton Mage
+  {
+	"id": 4319,
+	"x": 2329,
+	"z": 3668,
+	"radius": 3
+  },
+  // Skeleton Mage
+  {
+	"id": 4319,
+	"x": 2331,
+	"z": 3668,
+	"radius": 2
+  },
+  // Skeleton Mage
+  {
+	"id": 4292,
+	"x": 2343,
+	"z": 3667,
+	"radius": 2
+  },
+  // Franklin Caranos
+  {
+	"id": 4296,
+	"x": 2342,
+	"z": 3676,
+	"radius": 4
+  },
+  // Ramara du Croissant
+  {
+	"id": 3365,
+	"x": 2353,
+	"z": 3683,
+	"radius": 0
+  },
+  // null
+  {
+	"id": 4291,
+	"x": 2354,
+	"z": 3683,
+	"radius": 0
+  },
+  // Herman Caranos
+  
+  {
+	"id": 2897,
+	"x": 2330,
+	"z": 3690,
+	"radius": 0
+  }
+  // Banker (temporary)
+]

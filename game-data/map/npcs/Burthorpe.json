@@ -1,0 +1,376 @@
+[
+  {
+	"id": 4088,
+	"x": 2885,
+	"z": 3528,
+	"radius": 1
+  },
+  // Soldier
+  {
+	"id": 4088,
+	"x": 2885,
+	"z": 3535,
+	"radius": 3
+  },
+  // Soldier
+  {
+	"id": 4086,
+	"x": 2891,
+	"z": 3537,
+	"direction": "N"
+  },
+  // Soldier
+  {
+	"id": 4086,
+	"x": 2891,
+	"z": 3539,
+	"direction": "N"
+  },
+  // Soldier
+  {
+	"id": 4089,
+	"x": 2892,
+	"z": 3532,
+	"direction": "E"
+  },
+  // Soldier
+  {
+	"id": 4086,
+	"x": 2892,
+	"z": 3537,
+	"direction": "N"
+  },
+  // Soldier
+  {
+	"id": 4086,
+	"x": 2892,
+	"z": 3539,
+	"direction": "N"
+  },
+  // Soldier
+  {
+	"id": 4086,
+	"x": 2894,
+	"z": 3537,
+	"direction": "N"
+  },
+  // Soldier
+  {
+	"id": 4086,
+	"x": 2894,
+	"z": 3539,
+	"direction": "N"
+  },
+  // Soldier
+  {
+	"id": 4086,
+	"x": 2895,
+	"z": 3537,
+	"direction": "N"
+  },
+  // Soldier
+  {
+	"id": 4086,
+	"x": 2895,
+	"z": 3539,
+	"direction": "N"
+  },
+  // Soldier
+  {
+	"id": 4091,
+	"x": 2894,
+	"z": 3532,
+	"direction": "W"
+  },
+  // Soldier
+  {
+	"id": 4090,
+	"x": 2893,
+	"z": 3533,
+	"radius": 0
+  },
+  // Soldier
+  {
+	"id": 4086,
+	"x": 2893,
+	"z": 3537,
+	"direction": "N"
+  },
+  // Soldier
+  {
+	"id": 4086,
+	"x": 2893,
+	"z": 3539,
+	"direction": "N"
+  },
+  // Soldier
+  {
+	"id": 4084,
+	"x": 2893,
+	"z": 3541,
+	"radius": 0
+  },
+  // Sergeant
+  {
+	"id": 4095,
+	"x": 2892,
+	"z": 3558,
+	"radius": 5
+  },
+  // Eadburg
+  {
+	"id": 4083,
+	"x": 2896,
+	"z": 3528,
+	"radius": 1
+  },
+  // Denulth
+  {
+	"id": 4099,
+	"x": 2896,
+	"z": 3566,
+	"radius": 0
+  },
+  // Guard
+  {
+	"id": 4099,
+	"x": 2897,
+	"z": 3556,
+	"radius": 0
+  },
+  // Guard
+  {
+	"id": 4087,
+	"x": 2900,
+	"z": 3531,
+	"direction": "E"
+  },
+  // Soldier
+  {
+	"id": 4085,
+	"x": 2900,
+	"z": 3532,
+	"radius": 2
+  },
+  // Sergeant
+  {
+	"id": 4087,
+	"x": 2900,
+	"z": 3533,
+	"direction": "E"
+  },
+  // Soldier
+  {
+	"id": 4088,
+	"x": 2899,
+	"z": 3538,
+	"radius": 4
+  },
+  // Soldier
+  {
+	"id": 4100,
+	"x": 2900,
+	"z": 3556,
+	"radius": 0
+  },
+  // Guard
+  {
+	"id": 4104,
+	"x": 2900,
+	"z": 3564,
+	"radius": 4
+  },
+  // Servant
+  {
+	"id": 4102,
+	"x": 2906,
+	"z": 3537,
+	"radius": 0
+  },
+  // Tostig
+  {
+	"id": 4088,
+	"x": 2907,
+	"z": 3540,
+	"radius": 3
+  },
+  // Soldier
+  {
+	"id": 4109,
+	"x": 2909,
+	"z": 3539,
+	"radius": 2
+  },
+  // Penda
+  {
+	"id": 4088,
+	"x": 2911,
+	"z": 3543,
+	"radius": 5
+  },
+  // Soldier
+  {
+	"id": 4111,
+	"x": 2916,
+	"z": 3522,
+	"radius": 4
+  },
+  // Ceolburg
+  {
+	"id": 1389,
+	"x": 2917,
+	"z": 3534,
+	"radius": 3
+  },
+  // Bernald
+  {
+	"id": 6202,
+	"x": 2919,
+	"z": 3559,
+	"radius": 2
+  },
+  // Unferth
+  {
+	"id": 4107,
+	"x": 2919,
+	"z": 3550,
+	"radius": 5
+  },
+  // Breoca
+  {
+	"id": 4105,
+	"x": 2920,
+	"z": 3574,
+	"radius": 3
+  },
+  // Dunstan
+  {
+	"id": 4110,
+	"x": 2927,
+	"z": 3536,
+	"radius": 4
+  },
+  // Hygd
+  {
+	"id": 4108,
+	"x": 2927,
+	"z": 3559,
+	"radius": 4
+  },
+  // Ocga
+  {
+	"id": 4106,
+	"x": 2927,
+	"z": 3546,
+	"radius": 3
+  },
+  // Wistan
+  {
+	"id": 4112,
+	"x": 2931,
+	"z": 3567,
+	"radius": 2
+  },
+  // Hild
+  {
+	"id": 401,
+	"x": 2931,
+	"z": 3536,
+	"radius": 1,
+	"realismExclusive": true,
+	"economyExclusive": true
+  },
+  // Turael
+  {
+	"id": 4096,
+	"x": 2896,
+	"z": 3549,
+	"radius": 1
+  },
+  // Archer
+  {
+	"id": 4097,
+	"x": 2901,
+	"z": 3549,
+	"radius": 1
+  },
+  // Archer
+  {
+	"id": 5613,
+	"x": 2201,
+	"z": 4943,
+	"radius": 0
+  },
+  // Sam
+  {
+	"id": 4923,
+	"x": 2902,
+	"z": 3508,
+	"radius": 4
+  },
+  // Achietties
+  {
+	"id": 4114,
+	"x": 2919,
+	"z": 3516,
+	"radius": 3
+  },
+  // White Knight
+  {
+	"id": 2886,
+	"x": 2935,
+	"z": 3515,
+	"radius": 4
+  },
+  // Monk of Zamorak
+  {
+	"id": 2886,
+	"x": 2933,
+	"z": 3515,
+	"radius": 3
+  },
+  // Monk of Zamorak
+  {
+	"id": 2885,
+	"x": 2935,
+	"z": 3515,
+	"radius": 4
+  },
+  // Monk of Zamorak
+  {
+	"id": 2885,
+	"x": 2933,
+	"z": 3515,
+	"radius": 3
+  },
+  // Monk of Zamorak
+  {
+	"id": 2886,
+	"x": 2935,
+	"z": 3515,
+	"radius": 5
+  },
+  // Monk of Zamorak
+  {
+	"id": 2886,
+	"x": 2939,
+	"z": 3516,
+	"radius": 1
+  },
+  // Monk of Zamorak
+  {
+	"id": 4924,
+	"x": 2894,
+	"z": 3510,
+	"radius": 4,
+	"level": 1
+  },
+  // Helemos
+  {
+	"id": 6481,
+	"x": 2791,
+	"z": 3540,
+	"radius": 3
+  }
+  //Mac
+]

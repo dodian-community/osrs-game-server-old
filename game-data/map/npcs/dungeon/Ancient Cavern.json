@@ -1,0 +1,304 @@
+[
+  {
+	"id": 1539,
+	"x": 1763,
+	"z": 5357,
+	"radius": 3
+  },
+  // Skeleton warlord
+  {
+	"id": 2916,
+	"x": 1763,
+	"z": 5359,
+	"radius": 6
+  },
+  // Waterfiend
+  {
+	"id": 2918,
+	"x": 1765,
+	"z": 5334,
+	"radius": 5
+  },
+  // Brutal green dragon
+  {
+	"id": 2916,
+	"x": 1766,
+	"z": 5360,
+	"radius": 7
+  },
+  // Waterfiend
+  {
+	"id": 2920,
+	"x": 1767,
+	"z": 5344,
+	"radius": 3
+  },
+  // Confused barbarian
+  {
+	"id": 2916,
+	"x": 1767,
+	"z": 5355,
+	"radius": 8
+  },
+  // Waterfiend
+  {
+	"id": 2918,
+	"x": 1769,
+	"z": 5342,
+	"radius": 5
+  },
+  // Brutal green dragon
+  {
+	"id": 2918,
+	"x": 1772,
+	"z": 5357,
+	"radius": 5
+  },
+  // Brutal green dragon
+  {
+	"id": 2918,
+	"x": 1774,
+	"z": 5349,
+	"radius": 5
+  },
+  // Brutal green dragon
+  {
+	"id": 5564,
+	"x": 1775,
+	"z": 5324,
+	"radius": 2
+  },
+  // Enraged barbarian spirit
+  {
+	"id": 2918,
+	"x": 1776,
+	"z": 5331,
+	"radius": 4
+  },
+  // Brutal green dragon
+  {
+	"id": 5565,
+	"x": 1778,
+	"z": 5325,
+	"radius": 2
+  },
+  // Berserk barbarian spirit
+  {
+	"id": 1541,
+	"x": 1786,
+	"z": 5338,
+	"radius": 3
+  },
+  // Skeleton thug
+  {
+	"id": 2919,
+	"x": 1755,
+	"z": 5324,
+	"radius": 2,
+	"level": 1
+  },
+  // Mithril dragon
+  {
+	"id": 2919,
+	"x": 1763,
+	"z": 5336,
+	"radius": 3,
+	"level": 1
+  },
+  // Mithril dragon
+  {
+	"id": 1540,
+	"x": 1756,
+	"z": 5353,
+	"radius": 0
+  },
+  // Skeleton heavy
+  {
+	"id": 2919,
+	"x": 1765,
+	"z": 5333,
+	"radius": 3,
+	"level": 1
+  },
+  // Mithril dragon
+  {
+	"id": 2919,
+	"x": 1766,
+	"z": 5342,
+	"radius": 1,
+	"level": 1
+  },
+  // Mithril dragon
+  {
+	"id": 2919,
+	"x": 1779,
+	"z": 5339,
+	"radius": 1,
+	"level": 1
+  },
+  // Mithril dragon
+  {
+	"id": 2919,
+	"x": 1780,
+	"z": 5355,
+	"radius": 1,
+	"level": 1
+  },
+  // Mithril dragon
+  {
+	"id": 2919,
+	"x": 1782,
+	"z": 5327,
+	"radius": 1,
+	"level": 1
+  },
+  // Mithril dragon
+  {
+	"id": 1539,
+	"x": 1786,
+	"z": 5331,
+	"radius": 3,
+	"level": 1
+  },
+  // Skeleton warlord
+  {
+	"id": 1540,
+	"x": 1764,
+	"z": 5334,
+	"radius": 2
+  },
+  // Skeleton heavy
+  {
+	"id": 2916,
+	"x": 1740,
+	"z": 5343,
+	"radius": 5
+  },
+  // Waterfiend
+  {
+	"id": 2916,
+	"x": 1739,
+	"z": 5349,
+	"radius": 6
+  },
+  // Waterfiend
+  {
+	"id": 2916,
+	"x": 1740,
+	"z": 5351,
+	"radius": 6
+  },
+  // Waterfiend
+  {
+	"id": 2916,
+	"x": 1741,
+	"z": 5357,
+	"radius": 6
+  },
+  // Waterfiend
+  {
+	"id": 2916,
+	"x": 1743,
+	"z": 5342,
+	"radius": 6
+  },
+  // Waterfiend
+  {
+	"id": 2916,
+	"x": 1743,
+	"z": 5359,
+	"radius": 5
+  },
+  // Waterfiend
+  {
+	"id": 5563,
+	"x": 1746,
+	"z": 5327,
+	"radius": 3
+  },
+  // Angry barbarian spirit
+  {
+	"id": 2916,
+	"x": 1746,
+	"z": 5340,
+	"radius": 6
+  },
+  // Waterfiend
+  {
+	"id": 2916,
+	"x": 1745,
+	"z": 5362,
+	"radius": 4
+  },
+  // Waterfiend
+  {
+	"id": 1538,
+	"x": 1748,
+	"z": 5324,
+	"radius": 2
+  },
+  // Skeleton brute
+  {
+	"id": 5564,
+	"x": 1751,
+	"z": 5332,
+	"radius": 3
+  },
+  // Enraged barbarian spirit
+  {
+	"id": 2916,
+	"x": 1750,
+	"z": 5339,
+	"radius": 6
+  },
+  // Waterfiend
+  {
+	"id": 2916,
+	"x": 1755,
+	"z": 5352,
+	"radius": 5
+  },
+  // Waterfiend
+  {
+	"id": 2916,
+	"x": 1756,
+	"z": 5355,
+	"radius": 6
+  },
+  // Waterfiend
+  {
+	"id": 2916,
+	"x": 1759,
+	"z": 5357,
+	"radius": 8
+  },
+  // Waterfiend
+  {
+	"id": 2918,
+	"x": 1762,
+	"z": 5337,
+	"radius": 10
+  },
+  // Brutal green dragon
+  {
+	"id": 2916,
+	"x": 1759,
+	"z": 5357,
+	"radius": 4
+  },
+  // Waterfiend
+  {
+	"id": 2921,
+	"x": 1761,
+	"z": 5322,
+	"radius": 0
+  },
+  // Lost barbarian
+  {
+	"id": 2918,
+	"x": 1764,
+	"z": 5328,
+	"radius": 4
+  }
+  // Brutal green dragon
+]

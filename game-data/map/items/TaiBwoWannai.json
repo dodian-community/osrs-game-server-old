@@ -1,0 +1,34 @@
+[
+  {
+	"id": 1349,
+	"amount": 1,
+	"x": 2822,
+	"z": 3079,
+	"delay": 200
+  },
+  // Iron axe
+  {
+	"id": 1349,
+	"amount": 1,
+	"x": 2821,
+	"z": 3086,
+	"delay": 200
+  },
+  // Iron axe
+  {
+	"id": 1351,
+	"amount": 1,
+	"x": 2825,
+	"z": 3088,
+	"delay": 200
+  },
+  // Bronze axe
+  {
+	"id": 1351,
+	"amount": 1,
+	"x": 2826,
+	"z": 3083,
+	"delay": 200
+  }
+  // Bronze axe
+]

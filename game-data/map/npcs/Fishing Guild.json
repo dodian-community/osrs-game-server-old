@@ -1,0 +1,30 @@
+[
+  {
+	"id": 1299,
+	"x": 2594,
+	"z": 3403,
+	"radius": 3
+  },
+  // Roachary - fishing guild shop
+  {
+	"id": 394,
+	"x": 2584,
+	"z": 3419,
+	"radius": 0
+  },
+  // Banker
+  {
+	"id": 394,
+	"x": 2584,
+	"z": 3421,
+	"radius": 0
+  },
+  // Banker
+  {
+	"id": 3078,
+	"x": 2600,
+	"z": 3423,
+	"radius": 7
+  }
+  // Man
+]

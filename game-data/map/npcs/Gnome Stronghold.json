@@ -1,0 +1,1649 @@
+[
+  {
+	"id": 3147,
+	"x": 2395,
+	"z": 3487,
+	"radius": 3
+  },
+  // Gnome baller
+  {
+	"id": 3147,
+	"x": 2396,
+	"z": 3489,
+	"radius": 3
+  },
+  // Gnome baller
+  {
+	"id": 3147,
+	"x": 2396,
+	"z": 3490,
+	"radius": 2
+  },
+  // Gnome baller
+  {
+	"id": 3158,
+	"x": 2397,
+	"z": 3495,
+	"radius": 0
+  },
+  // Cheerleader
+  {
+	"id": 3143,
+	"x": 2399,
+	"z": 3484,
+	"radius": 2
+  },
+  // Gnome baller
+  {
+	"id": 3143,
+	"x": 2399,
+	"z": 3485,
+	"radius": 3
+  },
+  // Gnome baller
+  {
+	"id": 3143,
+	"x": 2400,
+	"z": 3487,
+	"radius": 4
+  },
+  // Gnome baller
+  {
+	"id": 3143,
+	"x": 2400,
+	"z": 3488,
+	"radius": 4
+  },
+  // Gnome baller
+  {
+	"id": 3143,
+	"x": 2400,
+	"z": 3491,
+	"radius": 4
+  },
+  // Gnome baller
+  {
+	"id": 3143,
+	"x": 2400,
+	"z": 3492,
+	"radius": 4
+  },
+  // Gnome baller
+  {
+	"id": 6087,
+	"x": 2402,
+	"z": 3506,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 6077,
+	"x": 2405,
+	"z": 3500,
+	"radius": 4
+  },
+  // Gnome child
+  {
+	"id": 6087,
+	"x": 2403,
+	"z": 3474,
+	"radius": 3
+  },
+  // Gnome woman
+  {
+	"id": 3142,
+	"x": 2395,
+	"z": 3487,
+	"radius": 15
+  },
+  // Gnome Coach
+  {
+	"id": 4974,
+	"x": 2409,
+	"z": 3506,
+	"radius": 5
+  },
+  // Gnome troop
+  {
+	"id": 6086,
+	"x": 2412,
+	"z": 3495,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 6077,
+	"x": 2413,
+	"z": 3484,
+	"radius": 0
+  },
+  // Gnome child
+  {
+	"id": 2573,
+	"x": 2416,
+	"z": 3516,
+	"radius": 2
+  },
+  // Sarble
+  {
+	"id": 6086,
+	"x": 2419,
+	"z": 3478,
+	"radius": 1
+  },
+  // Gnome woman
+  {
+	"id": 237,
+	"x": 2420,
+	"z": 3464,
+	"radius": 5
+  },
+  // Butterfly
+  {
+	"id": 235,
+	"x": 2421,
+	"z": 3496,
+	"radius": 1
+  },
+  // Butterfly
+  {
+	"id": 490,
+	"x": 2432,
+	"z": 3423,
+	"radius": 0,
+	"realismExclusive": true,
+	"economyExclusive": true
+  },
+  // Nieve
+  {
+	"id": 6086,
+	"x": 2433,
+	"z": 3435,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 2064,
+	"x": 2434,
+	"z": 3440,
+	"radius": 6
+  },
+  // Terrorbird
+  {
+	"id": 234,
+	"x": 2434,
+	"z": 3425,
+	"radius": 7
+  },
+  // Butterfly
+  {
+	"id": 2067,
+	"x": 2442,
+	"z": 3434,
+	"radius": 3
+  },
+  // Mounted terrorbird gnome
+  {
+	"id": 2687,
+	"x": 2437,
+	"z": 3418,
+	"radius": 3
+  },
+  // Prissy Scilla
+  {
+	"id": 234,
+	"x": 2436,
+	"z": 3424,
+	"radius": 8
+  },
+  // Butterfly
+  {
+	"id": 6086,
+	"x": 2437,
+	"z": 3426,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 0,
+	"x": 2438,
+	"z": 3419,
+	"radius": 0
+  },
+  // Tool Leprechaun
+  {
+	"id": 6087,
+	"x": 2438,
+	"z": 3432,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 6086,
+	"x": 2440,
+	"z": 3411,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 6087,
+	"x": 2442,
+	"z": 3428,
+	"radius": 5
+  },
+  // Gnome woman
+  {
+	"id": 235,
+	"x": 2449,
+	"z": 3401,
+	"radius": 4
+  },
+  // Butterfly
+  {
+	"id": 6087,
+	"x": 2445,
+	"z": 3404,
+	"radius": 3
+  },
+  // Gnome woman
+  {
+	"id": 2067,
+	"x": 2446,
+	"z": 3422,
+	"radius": 6
+  },
+  // Mounted terrorbird gnome
+  {
+	"id": 6087,
+	"x": 2451,
+	"z": 3416,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 234,
+	"x": 2451,
+	"z": 3420,
+	"radius": 9
+  },
+  // Butterfly
+  {
+	"id": 6081,
+	"x": 2450,
+	"z": 3414,
+	"radius": 4
+  },
+  // Gnome guard
+  {
+	"id": 6095,
+	"x": 2456,
+	"z": 3426,
+	"radius": 5
+  },
+  // Gnome
+  {
+	"id": 2067,
+	"x": 2459,
+	"z": 3396,
+	"radius": 4
+  },
+  // Mounted terrorbird gnome
+  {
+	"id": 6082,
+	"x": 2459,
+	"z": 3394,
+	"radius": 2
+  },
+  // Gnome guard
+  {
+	"id": 6081,
+	"x": 2458,
+	"z": 3393,
+	"radius": 4
+  },
+  // Gnome guard
+  {
+	"id": 6095,
+	"x": 2458,
+	"z": 3422,
+	"radius": 4
+  },
+  // Gnome
+  {
+	"id": 6081,
+	"x": 2459,
+	"z": 3438,
+	"radius": 5
+  },
+  // Gnome guard
+  {
+	"id": 6082,
+	"x": 2461,
+	"z": 3422,
+	"radius": 5
+  },
+  // Gnome guard
+  {
+	"id": 6082,
+	"x": 2461,
+	"z": 3392,
+	"radius": 3
+  },
+  // Gnome guard
+  {
+	"id": 6081,
+	"x": 2462,
+	"z": 3394,
+	"radius": 4
+  },
+  // Gnome guard
+  {
+	"id": 2067,
+	"x": 2438,
+	"z": 3386,
+	"radius": 0
+  },
+  // Mounted terrorbird gnome
+  {
+	"id": 6095,
+	"x": 2462,
+	"z": 3430,
+	"radius": 4
+  },
+  // Gnome
+  {
+	"id": 2067,
+	"x": 2462,
+	"z": 3394,
+	"radius": 4
+  },
+  // Mounted terrorbird gnome
+  {
+	"id": 6086,
+	"x": 2467,
+	"z": 3450,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 6087,
+	"x": 2467,
+	"z": 3442,
+	"radius": 3
+  },
+  // Gnome woman
+  {
+	"id": 2067,
+	"x": 2436,
+	"z": 3385,
+	"radius": 0
+  },
+  // Mounted terrorbird gnome
+  {
+	"id": 6080,
+	"x": 2469,
+	"z": 3422,
+	"radius": 3
+  },
+  // Gnome trainer
+  {
+	"id": 6080,
+	"x": 2470,
+	"z": 3432,
+	"radius": 3
+  },
+  // Gnome trainer
+  {
+	"id": 235,
+	"x": 2468,
+	"z": 3399,
+	"radius": 4
+  },
+  // Butterfly
+  {
+	"id": 6086,
+	"x": 2469,
+	"z": 3397,
+	"radius": 2
+  },
+  // Gnome woman
+  {
+	"id": 6080,
+	"x": 2471,
+	"z": 3427,
+	"radius": 2
+  },
+  // Gnome trainer
+  {
+	"id": 6086,
+	"x": 2473,
+	"z": 3399,
+	"radius": 2
+  },
+  // Gnome woman
+  {
+	"id": 6086,
+	"x": 2473,
+	"z": 3411,
+	"radius": 5
+  },
+  // Gnome woman
+  {
+	"id": 2682,
+	"x": 2474,
+	"z": 3445,
+	"radius": 5
+  },
+  // Bolongo
+  {
+	"id": 6086,
+	"x": 2475,
+	"z": 3453,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 6080,
+	"x": 2477,
+	"z": 3426,
+	"radius": 4
+  },
+  // Gnome trainer
+  {
+	"id": 0,
+	"x": 2475,
+	"z": 3449,
+	"radius": 0
+  },
+  // Tool Leprechaun
+  {
+	"id": 238,
+	"x": 2476,
+	"z": 3395,
+	"radius": 4
+  },
+  // Butterfly
+  {
+	"id": 6080,
+	"x": 2478,
+	"z": 3427,
+	"radius": 5
+  },
+  // Gnome trainer
+  {
+	"id": 6081,
+	"x": 2459,
+	"z": 3390,
+	"radius": 0
+  },
+  // Gnome guard
+  {
+	"id": 6082,
+	"x": 2457,
+	"z": 3384,
+	"radius": 0
+  },
+  // Gnome guard
+  {
+	"id": 2067,
+	"x": 2476,
+	"z": 3410,
+	"radius": 1
+  },
+  // Mounted terrorbird gnome
+  {
+	"id": 6076,
+	"x": 2412,
+	"z": 3526,
+	"radius": 3
+  },
+  // Tortoise
+  {
+	"id": 6087,
+	"x": 2478,
+	"z": 3412,
+	"radius": 3
+  },
+  // Gnome woman
+  {
+	"id": 6075,
+	"x": 2417,
+	"z": 3525,
+	"radius": 8
+  },
+  // Tortoise
+  {
+	"id": 6086,
+	"x": 2483,
+	"z": 3398,
+	"radius": 3
+  },
+  // Gnome woman
+  {
+	"id": 6081,
+	"x": 2462,
+	"z": 3388,
+	"radius": 2
+  },
+  // Gnome guard
+  {
+	"id": 6101,
+	"x": 2421,
+	"z": 3526,
+	"radius": 4
+  },
+  // Trainer Nacklepen
+  {
+	"id": 6080,
+	"x": 2479,
+	"z": 3420,
+	"radius": 3
+  },
+  // Gnome trainer
+  {
+	"id": 6086,
+	"x": 2490,
+	"z": 3400,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 6075,
+	"x": 2424,
+	"z": 3526,
+	"radius": 3
+  },
+  // Tortoise
+  {
+	"id": 6080,
+	"x": 2486,
+	"z": 3422,
+	"radius": 2
+  },
+  // Gnome trainer
+  {
+	"id": 234,
+	"x": 2477,
+	"z": 3386,
+	"radius": 0
+  },
+  // Butterfly
+  {
+	"id": 6080,
+	"x": 2486,
+	"z": 3423,
+	"radius": 2
+  },
+  // Gnome trainer
+  {
+	"id": 6080,
+	"x": 2489,
+	"z": 3432,
+	"radius": 2
+  },
+  // Gnome trainer
+  {
+	"id": 2064,
+	"x": 2382,
+	"z": 3436,
+	"radius": 0
+  },
+  // Terrorbird
+  {
+	"id": 6095,
+	"x": 2378,
+	"z": 3441,
+	"radius": 1
+  },
+  // Gnome
+  {
+	"id": 2065,
+	"x": 2383,
+	"z": 3427,
+	"radius": 0
+  },
+  // Terrorbird
+  {
+	"id": 2065,
+	"x": 2379,
+	"z": 3439,
+	"radius": 0
+  },
+  // Terrorbird
+  {
+	"id": 235,
+	"x": 2384,
+	"z": 3426,
+	"radius": 0
+  },
+  // Butterfly
+  {
+	"id": 2064,
+	"x": 2381,
+	"z": 3435,
+	"radius": 1
+  },
+  // Terrorbird
+  {
+	"id": 2067,
+	"x": 2387,
+	"z": 3427,
+	"radius": 0
+  },
+  // Mounted terrorbird gnome
+  {
+	"id": 2066,
+	"x": 2383,
+	"z": 3423,
+	"radius": 1
+  },
+  // Terrorbird
+  {
+	"id": 2065,
+	"x": 2389,
+	"z": 3427,
+	"radius": 0
+  },
+  // Terrorbird
+  {
+	"id": 6095,
+	"x": 2385,
+	"z": 3436,
+	"radius": 1
+  },
+  // Gnome
+  {
+	"id": 6094,
+	"x": 2384,
+	"z": 3449,
+	"radius": 3
+  },
+  // Gnome
+  {
+	"id": 1838,
+	"x": 2392,
+	"z": 3415,
+	"radius": 2
+  },
+  // Duck
+  {
+	"id": 2067,
+	"x": 2398,
+	"z": 3404,
+	"radius": 0
+  },
+  // Mounted terrorbird gnome
+  {
+	"id": 6081,
+	"x": 2394,
+	"z": 3455,
+	"radius": 3
+  },
+  // Gnome guard
+  {
+	"id": 1839,
+	"x": 2393,
+	"z": 3412,
+	"radius": 3
+  },
+  // Duck
+  {
+	"id": 2002,
+	"x": 2393,
+	"z": 3412,
+	"radius": 2
+  },
+  // Ducklings
+  {
+	"id": 6096,
+	"x": 2394,
+	"z": 3435,
+	"radius": 3
+  },
+  // Gnome
+  {
+	"id": 235,
+	"x": 2391,
+	"z": 3440,
+	"radius": 3
+  },
+  // Butterfly
+  {
+	"id": 6096,
+	"x": 2394,
+	"z": 3423,
+	"radius": 2
+  },
+  // Gnome
+  {
+	"id": 6081,
+	"x": 2395,
+	"z": 3436,
+	"radius": 3
+  },
+  // Gnome guard
+  {
+	"id": 1838,
+	"x": 2395,
+	"z": 3413,
+	"radius": 2
+  },
+  // Duck
+  {
+	"id": 6096,
+	"x": 2394,
+	"z": 3451,
+	"radius": 4
+  },
+  // Gnome
+  {
+	"id": 235,
+	"x": 2397,
+	"z": 3434,
+	"radius": 5
+  },
+  // Butterfly
+  {
+	"id": 1838,
+	"x": 2401,
+	"z": 3408,
+	"radius": 1
+  },
+  // Duck
+  {
+	"id": 6094,
+	"x": 2402,
+	"z": 3416,
+	"radius": 3
+  },
+  // Gnome
+  {
+	"id": 1838,
+	"x": 2402,
+	"z": 3409,
+	"radius": 2
+  },
+  // Duck
+  {
+	"id": 6094,
+	"x": 2402,
+	"z": 3424,
+	"radius": 3
+  },
+  // Gnome
+  {
+	"id": 6094,
+	"x": 2403,
+	"z": 3441,
+	"radius": 4
+  },
+  // Gnome
+  {
+	"id": 6094,
+	"x": 2401,
+	"z": 3430,
+	"radius": 4
+  },
+  // Gnome
+  {
+	"id": 6096,
+	"x": 2404,
+	"z": 3432,
+	"radius": 4
+  },
+  // Gnome
+  {
+	"id": 1838,
+	"x": 2403,
+	"z": 3406,
+	"radius": 2
+  },
+  // Duck
+  {
+	"id": 6095,
+	"x": 2405,
+	"z": 3448,
+	"radius": 4
+  },
+  // Gnome
+  {
+	"id": 6095,
+	"x": 2406,
+	"z": 3439,
+	"radius": 4
+  },
+  // Gnome
+  {
+	"id": 6094,
+	"x": 2408,
+	"z": 3442,
+	"radius": 4
+  },
+  // Gnome
+  {
+	"id": 6081,
+	"x": 2409,
+	"z": 3451,
+	"radius": 2
+  },
+  // Gnome guard
+  {
+	"id": 6094,
+	"x": 2408,
+	"z": 3428,
+	"radius": 4
+  },
+  // Gnome
+  {
+	"id": 6082,
+	"x": 2409,
+	"z": 3418,
+	"radius": 3
+  },
+  // Gnome guard
+  {
+	"id": 2067,
+	"x": 2416,
+	"z": 3392,
+	"radius": 1
+  },
+  // Mounted terrorbird gnome
+  {
+	"id": 2067,
+	"x": 2419,
+	"z": 3412,
+	"radius": 5
+  },
+  // Mounted terrorbird gnome
+  {
+	"id": 234,
+	"x": 2419,
+	"z": 3405,
+	"radius": 5
+  },
+  // Butterfly
+  {
+	"id": 6096,
+	"x": 2421,
+	"z": 3430,
+	"radius": 4
+  },
+  // Gnome
+  {
+	"id": 6082,
+	"x": 2420,
+	"z": 3435,
+	"radius": 5
+  },
+  // Gnome guard
+  {
+	"id": 6096,
+	"x": 2421,
+	"z": 3438,
+	"radius": 4
+  },
+  // Gnome
+  {
+	"id": 6082,
+	"x": 2421,
+	"z": 3445,
+	"radius": 3
+  },
+  // Gnome guard
+  {
+	"id": 6081,
+	"x": 2421,
+	"z": 3411,
+	"radius": 5
+  },
+  // Gnome guard
+  {
+	"id": 235,
+	"x": 2418,
+	"z": 3399,
+	"radius": 4
+  },
+  // Butterfly
+  {
+	"id": 6094,
+	"x": 2423,
+	"z": 3426,
+	"radius": 5
+  },
+  // Gnome
+  {
+	"id": 234,
+	"x": 2422,
+	"z": 3413,
+	"radius": 7
+  },
+  // Butterfly
+  {
+	"id": 235,
+	"x": 2428,
+	"z": 3407,
+	"radius": 5
+  },
+  // Butterfly
+  {
+	"id": 235,
+	"x": 2430,
+	"z": 3403,
+	"radius": 7
+  },
+  // Butterfly
+  {
+	"id": 6082,
+	"x": 2427,
+	"z": 3410,
+	"radius": 5
+  },
+  // Gnome guard
+  {
+	"id": 6094,
+	"x": 2426,
+	"z": 3428,
+	"radius": 4
+  },
+  // Gnome
+  {
+	"id": 6094,
+	"x": 2428,
+	"z": 3439,
+	"radius": 3
+  },
+  // Gnome
+  {
+	"id": 234,
+	"x": 2432,
+	"z": 3406,
+	"radius": 9
+  },
+  // Butterfly
+  {
+	"id": 6096,
+	"x": 2435,
+	"z": 3494,
+	"radius": 1
+  },
+  // Gnome
+  {
+	"id": 236,
+	"x": 2435,
+	"z": 3514,
+	"radius": 5
+  },
+  // Butterfly
+  {
+	"id": 2546,
+	"x": 2439,
+	"z": 3502,
+	"radius": 2
+  },
+  // Terrorchick gnome
+  {
+	"id": 2546,
+	"x": 2439,
+	"z": 3501,
+	"radius": 1
+  },
+  // Terrorchick gnome
+  {
+	"id": 6082,
+	"x": 2441,
+	"z": 3497,
+	"radius": 3
+  },
+  // Gnome guard
+  {
+	"id": 6081,
+	"x": 2442,
+	"z": 3489,
+	"radius": 4
+  },
+  // Gnome guard
+  {
+	"id": 2550,
+	"x": 2443,
+	"z": 3501,
+	"radius": 1
+  },
+  // Spang
+  {
+	"id": 2549,
+	"x": 2443,
+	"z": 3502,
+	"radius": 1
+  },
+  // Tamble
+  {
+	"id": 6086,
+	"x": 2443,
+	"z": 3507,
+	"radius": 3
+  },
+  // Gnome woman
+  {
+	"id": 237,
+	"x": 2446,
+	"z": 3490,
+	"radius": 7
+  },
+  // Butterfly
+  {
+	"id": 6094,
+	"x": 2447,
+	"z": 3502,
+	"radius": 5
+  },
+  // Gnome
+  {
+	"id": 6082,
+	"x": 2446,
+	"z": 3509,
+	"radius": 4
+  },
+  // Gnome guard
+  {
+	"id": 238,
+	"x": 2452,
+	"z": 3476,
+	"radius": 1
+  },
+  // Butterfly
+  {
+	"id": 6086,
+	"x": 2448,
+	"z": 3487,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 6087,
+	"x": 2448,
+	"z": 3488,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 6086,
+	"x": 2449,
+	"z": 3487,
+	"radius": 5
+  },
+  // Gnome woman
+  {
+	"id": 6081,
+	"x": 2450,
+	"z": 3485,
+	"radius": 5
+  },
+  // Gnome guard
+  {
+	"id": 6087,
+	"x": 2450,
+	"z": 3488,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 6086,
+	"x": 2450,
+	"z": 3489,
+	"radius": 5
+  },
+  // Gnome woman
+  {
+	"id": 6086,
+	"x": 2450,
+	"z": 3505,
+	"radius": 5
+  },
+  // Gnome woman
+  {
+	"id": 6081,
+	"x": 2452,
+	"z": 3507,
+	"radius": 4
+  },
+  // Gnome guard
+  {
+	"id": 6081,
+	"x": 2453,
+	"z": 3489,
+	"radius": 5
+  },
+  // Gnome guard
+  {
+	"id": 6086,
+	"x": 2455,
+	"z": 3464,
+	"radius": 3
+  },
+  // Gnome woman
+  {
+	"id": 6095,
+	"x": 2455,
+	"z": 3467,
+	"radius": 1
+  },
+  // Gnome
+  {
+	"id": 6094,
+	"x": 2458,
+	"z": 3458,
+	"radius": 1
+  },
+  // Gnome
+  {
+	"id": 6096,
+	"x": 2458,
+	"z": 3496,
+	"radius": 3
+  },
+  // Gnome
+  {
+	"id": 6081,
+	"x": 2459,
+	"z": 3502,
+	"radius": 4
+  },
+  // Gnome guard
+  {
+	"id": 6082,
+	"x": 2462,
+	"z": 3486,
+	"radius": 4
+  },
+  // Gnome guard
+  {
+	"id": 6081,
+	"x": 2460,
+	"z": 3509,
+	"radius": 4
+  },
+  // Gnome guard
+  {
+	"id": 2067,
+	"x": 2460,
+	"z": 3457,
+	"radius": 7
+  },
+  // Mounted terrorbird gnome
+  {
+	"id": 6087,
+	"x": 2462,
+	"z": 3507,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 6081,
+	"x": 2462,
+	"z": 3464,
+	"radius": 3
+  },
+  // Gnome guard
+  {
+	"id": 6081,
+	"x": 2461,
+	"z": 3469,
+	"radius": 3
+  },
+  // Gnome guard
+  {
+	"id": 6082,
+	"x": 2465,
+	"z": 3472,
+	"radius": 4
+  },
+  // Gnome guard
+  {
+	"id": 6082,
+	"x": 2463,
+	"z": 3488,
+	"radius": 4
+  },
+  // Gnome guard
+  {
+	"id": 6096,
+	"x": 2462,
+	"z": 3505,
+	"radius": 5
+  },
+  // Gnome
+  {
+	"id": 5518,
+	"x": 2466,
+	"z": 3457,
+	"radius": 4
+  },
+  // Elder Gnome child
+  {
+	"id": 1423,
+	"x": 2465,
+	"z": 3496,
+	"radius": 1
+  },
+  // King Narnode Shareen
+  {
+	"id": 6082,
+	"x": 2466,
+	"z": 3487,
+	"radius": 4
+  },
+  // Gnome guard
+  {
+	"id": 2067,
+	"x": 2467,
+	"z": 3459,
+	"radius": 5
+  },
+  // Mounted terrorbird gnome
+  {
+	"id": 6081,
+	"x": 2468,
+	"z": 3463,
+	"radius": 3
+  },
+  // Gnome guard
+  {
+	"id": 6081,
+	"x": 2467,
+	"z": 3468,
+	"radius": 3
+  },
+  // Gnome guard
+  {
+	"id": 6082,
+	"x": 2467,
+	"z": 3470,
+	"radius": 3
+  },
+  // Gnome guard
+  {
+	"id": 6081,
+	"x": 2466,
+	"z": 3504,
+	"radius": 3
+  },
+  // Gnome guard
+  {
+	"id": 6095,
+	"x": 2468,
+	"z": 3498,
+	"radius": 2
+  },
+  // Gnome
+  {
+	"id": 6081,
+	"x": 2471,
+	"z": 3482,
+	"radius": 4
+  },
+  // Gnome guard
+  {
+	"id": 6087,
+	"x": 2471,
+	"z": 3488,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 6082,
+	"x": 2471,
+	"z": 3504,
+	"radius": 3
+  },
+  // Gnome guard
+  {
+	"id": 6087,
+	"x": 2473,
+	"z": 3455,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 6095,
+	"x": 2474,
+	"z": 3508,
+	"radius": 2
+  },
+  // Gnome
+  {
+	"id": 6095,
+	"x": 2474,
+	"z": 3470,
+	"radius": 3
+  },
+  // Gnome
+  {
+	"id": 6081,
+	"x": 2474,
+	"z": 3489,
+	"radius": 2
+  },
+  // Gnome guard
+  {
+	"id": 6081,
+	"x": 2475,
+	"z": 3502,
+	"radius": 4
+  },
+  // Gnome guard
+  {
+	"id": 6096,
+	"x": 2478,
+	"z": 3459,
+	"radius": 3
+  },
+  // Gnome
+  {
+	"id": 6081,
+	"x": 2476,
+	"z": 3510,
+	"radius": 1
+  },
+  // Gnome guard
+  {
+	"id": 6082,
+	"x": 2475,
+	"z": 3495,
+	"radius": 2
+  },
+  // Gnome guard
+  {
+	"id": 6094,
+	"x": 2480,
+	"z": 3499,
+	"radius": 1
+  },
+  // Gnome
+  {
+	"id": 6095,
+	"x": 2475,
+	"z": 3469,
+	"radius": 1
+  },
+  // Gnome
+  {
+	"id": 236,
+	"x": 2476,
+	"z": 3500,
+	"radius": 1
+  },
+  // Butterfly
+  {
+	"id": 6087,
+	"x": 2475,
+	"z": 3499,
+	"radius": 1
+  },
+  // Gnome woman
+  {
+	"id": 6081,
+	"x": 2477,
+	"z": 3484,
+	"radius": 1
+  },
+  // Gnome guard
+  {
+	"id": 6081,
+	"x": 2481,
+	"z": 3498,
+	"radius": 1
+  },
+  // Gnome guard
+  {
+	"id": 6087,
+	"x": 2485,
+	"z": 3466,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 6095,
+	"x": 2483,
+	"z": 3469,
+	"radius": 3
+  },
+  // Gnome
+  {
+	"id": 6095,
+	"x": 2492,
+	"z": 3472,
+	"radius": 2
+  },
+  // Gnome
+  {
+	"id": 6207,
+	"x": 2368,
+	"z": 3485,
+	"radius": 1
+  },
+  // Kathy Corkat
+  {
+	"id": 4297,
+	"x": 2370,
+	"z": 3483,
+	"radius": 2
+  },
+  // Devin Mendelberg
+  {
+	"id": 237,
+	"x": 2378,
+	"z": 3462,
+	"radius": 0
+  },
+  // Butterfly
+  {
+	"id": 236,
+	"x": 2376,
+	"z": 3468,
+	"radius": 4
+  },
+  // Butterfly
+  {
+	"id": 236,
+	"x": 2376,
+	"z": 3468,
+	"radius": 5
+  },
+  // Butterfly
+  {
+	"id": 6087,
+	"x": 2378,
+	"z": 3482,
+	"radius": 3
+  },
+  // Gnome woman
+  {
+	"id": 6086,
+	"x": 2380,
+	"z": 3480,
+	"radius": 3
+  },
+  // Gnome woman
+  {
+	"id": 6086,
+	"x": 2381,
+	"z": 3497,
+	"radius": 5
+  },
+  // Gnome woman
+  {
+	"id": 6087,
+	"x": 2381,
+	"z": 3496,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 4973,
+	"x": 2383,
+	"z": 3482,
+	"radius": 3
+  },
+  // Gnome troop
+  {
+	"id": 3157,
+	"x": 2384,
+	"z": 3488,
+	"radius": 1
+  },
+  // Gnome ball referee
+  {
+	"id": 6086,
+	"x": 2384,
+	"z": 3498,
+	"radius": 4
+  },
+  // Gnome woman
+  {
+	"id": 4973,
+	"x": 2389,
+	"z": 3472,
+	"radius": 3
+  },
+  // Gnome troop
+  {
+	"id": 6086,
+	"x": 2392,
+	"z": 3475,
+	"radius": 3
+  },
+  // Gnome woman
+  {
+	"id": 3151,
+	"x": 2391,
+	"z": 3484,
+	"radius": 3
+  },
+  // Gnome baller
+  {
+	"id": 3151,
+	"x": 2391,
+	"z": 3487,
+	"radius": 3
+  },
+  // Gnome baller
+  {
+	"id": 3151,
+	"x": 2391,
+	"z": 3489,
+	"radius": 3
+  },
+  // Gnome baller
+  {
+	"id": 3151,
+	"x": 2391,
+	"z": 3491,
+	"radius": 3
+  },
+  // Gnome baller
+  {
+	"id": 6077,
+	"x": 2391,
+	"z": 3476,
+	"radius": 4
+  },
+  // Gnome child
+  {
+	"id": 3155,
+	"x": 2392,
+	"z": 3484,
+	"radius": 4
+  },
+  // Gnome winger
+  {
+	"id": 3155,
+	"x": 2392,
+	"z": 3492,
+	"radius": 4
+  },
+  // Gnome winger
+  {
+	"id": 6077,
+	"x": 2394,
+	"z": 3506,
+	"radius": 5
+  },
+  // Gnome child
+  {
+	"id": 3158,
+	"x": 2395,
+	"z": 3495,
+	"radius": 0
+  },
+  // Cheerleader
+  {
+	"id": 6077,
+	"x": 2395,
+	"z": 3470,
+	"radius": 3
+  },
+  // Gnome child
+  {
+	"id": 3147,
+	"x": 2396,
+	"z": 3485,
+	"radius": 3
+  },
+  // Gnome baller
+  {
+	"id": 6563,
+	"x": 2443,
+	"z": 3424,
+	"level": 1,
+	"direction": "E"
+  },
+  // Gnome banker
+  {
+	"id": 6084,
+	"x": 2443,
+	"z": 3425,
+	"level": 1,
+	"direction": "E"
+  },
+  // Gnome banker
+  {
+	"id": 6084,
+	"x": 2448,
+	"z": 3427,
+	"level": 1,
+	"direction": "W"
+  },
+  // Gnome banker
+  {
+	"id": 6084,
+	"x": 2448,
+	"z": 3424,
+	"level": 1,
+	"direction": "W"
+  },
+  // Gnome banker
+  {
+	"id": 6081,
+	"x": 2445,
+	"z": 3425,
+	"level": 1,
+	"radius": 6
+  },
+  // Gnome guard
+  {
+	"id": 2574,
+	"x": 2446,
+	"z": 3419,
+	"level": 1,
+	"radius": 3
+  },
+  // Guard vemmeldo
+  {
+	"id": 6091,
+	"x": 2464,
+	"z": 3501,
+	"level": 3,
+	"radius": 1
+  }
+  // Captain Errdo
+]

@@ -1,0 +1,103 @@
+[
+  {
+	"id": 7379,
+	"x": 1624,
+	"z": 3932,
+	"radius": 3
+  },
+  // Winter Soldier
+  {
+	"id": 7379,
+	"x": 1625,
+	"z": 3937,
+	"radius": 4
+  },
+  // Winter Soldier
+  {
+	"id": 7375,
+	"x": 1625,
+	"z": 3943,
+	"radius": 1
+  },
+  // Undor
+  {
+	"id": 7376,
+	"x": 1629,
+	"z": 3939,
+	"radius": 0,
+	"direction": "E"
+  },
+  // Esther
+  {
+	"id": 7381,
+	"x": 1628,
+	"z": 3942,
+	"radius": 13
+  },
+  // Wintertoad
+  {
+	"id": 7379,
+	"x": 1629,
+	"z": 3945,
+	"radius": 4
+  },
+  // Winter Soldier
+  {
+	"id": 7377,
+	"x": 1631,
+	"z": 3941,
+	"radius": 0
+  },
+  // Captain Kalt
+  {
+	"id": 7378,
+	"x": 1633,
+	"z": 3939,
+	"radius": 0,
+	"direction": "W"
+  },
+  // Ish the Navigator
+  {
+	"id": 7374,
+	"x": 1634,
+	"z": 3948,
+	"radius": 0
+  },
+  // Ignisia
+  {
+	"id": 7380,
+	"x": 1630,
+	"z": 3942,
+	"radius": 7
+  },
+  // Cat
+  
+  {
+	"id": 7371,
+	"x": 1619,
+	"z": 3996,
+	"direction": "NE"
+  },
+  // Pyromancer SW
+  {
+	"id": 7371,
+	"x": 1641,
+	"z": 3996,
+	"direction": "NW"
+  },
+  // Pyromancer SE
+  {
+	"id": 7371,
+	"x": 1641,
+	"z": 4018,
+	"direction": "SW"
+  },
+  // Pyromancer NE
+  {
+	"id": 7371,
+	"x": 1619,
+	"z": 4018,
+	"direction": "SE"
+  }
+  // Pyromancer NW
+]

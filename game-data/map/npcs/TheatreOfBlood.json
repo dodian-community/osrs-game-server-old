@@ -1,0 +1,15 @@
+[
+  {"id": 8251, "x": 3647, "z": 3208, "direction": "N"}, // Vyrewatch
+  {"id": 8332, "x": 3651, "z": 3215, "radius": 4}, // Vyrelord
+  {"id": 8329, "x": 3652, "z": 3226, "radius": 4}, // Meyerditch citizen
+  {"id": 8329, "x": 3674, "z": 3230, "radius": 5}, // Meyerditch citizen
+  {"id": 8329, "x": 3660, "z": 3219, "radius": 5}, // Meyerditch citizen
+  {"id": 8333, "x": 3674, "z": 3210, "radius": 4}, // Vyrelady
+  {"id": 8332, "x": 3671, "z": 3222, "radius": 4}, // Vyrelord
+  {"id": 8206, "x": 3669, "z": 3215, "direction": "N"}, // Garth
+  {"id": 8325, "x": 3673, "z": 3223, "direction": "W"}, // Mysterious stranger
+  {"id": 8322, "x": 3652, "z": 3206, "direction": "W"}, // Banker
+  {"id": 8321, "x": 3652, "z": 3205, "direction": "W"}, // Banker
+  {"id": 8322, "x": 3652, "z": 3203, "direction": "W"}, // Banker
+  {"id": 8212, "x": 3644, "z": 3211, "direction": "E"}, // Harper
+]

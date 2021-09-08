@@ -1,0 +1,240 @@
+[
+  {
+	"id": 1795,
+	"x": 3397,
+	"z": 2930,
+	"radius": 2
+  },
+  // Goat
+  {
+	"id": 2552,
+	"x": 3395,
+	"z": 2909,
+	"radius": 25
+  },
+  // Wingstone
+  {
+	"id": 4185,
+	"x": 3378,
+	"z": 2910,
+	"radius": 2
+  },
+  // Jackal
+  {
+	"id": 1796,
+	"x": 3401,
+	"z": 2932,
+	"radius": 1
+  },
+  // Goat
+  {
+	"id": 4185,
+	"x": 3391,
+	"z": 2906,
+	"radius": 10
+  },
+  // Jackal
+  {
+	"id": 1797,
+	"x": 3396,
+	"z": 2930,
+	"radius": 0
+  },
+  // Billy Goat
+  {
+	"id": 4185,
+	"x": 3386,
+	"z": 2912,
+	"radius": 3
+  },
+  // Jackal
+  {
+	"id": 23,
+	"x": 3399,
+	"z": 2916,
+	"radius": 4
+  },
+  // Monkey
+  {
+	"id": 4185,
+	"x": 3386,
+	"z": 2913,
+	"radius": 7
+  },
+  // Jackal
+  {
+	"id": 22,
+	"x": 3401,
+	"z": 2917,
+	"radius": 2
+  },
+  // Rug Merchant
+  {
+	"id": 4754,
+	"x": 3406,
+	"z": 2924,
+	"radius": 1
+  },
+  // Seddu
+  {
+	"id": 1792,
+	"x": 3410,
+	"z": 2891,
+	"radius": 2
+  },
+  // Goat
+  {
+	"id": 1794,
+	"x": 3412,
+	"z": 2893,
+	"radius": 1
+  },
+  // Billy Goat
+  {
+	"id": 4755,
+	"x": 3414,
+	"z": 2906,
+	"radius": 2
+  },
+  // Kazemde
+  {
+	"id": 4748,
+	"x": 3416,
+	"z": 2934,
+	"radius": 3
+  },
+  // Nkuku
+  {
+	"id": 4746,
+	"x": 3421,
+	"z": 2914,
+	"radius": 2
+  },
+  // Ali the Carter
+  {
+	"id": 4753,
+	"x": 3424,
+	"z": 2906,
+	"radius": 1
+  },
+  // Zahur
+  {
+	"id": 4760,
+	"x": 3424,
+	"z": 2928,
+	"radius": 4
+  },
+  // Shiratti the Custodian
+  {
+	"id": 4762,
+	"x": 3425,
+	"z": 2889,
+	"direction": "E"
+  },
+  // Nardah Banker
+  {
+	"id": 4762,
+	"x": 3425,
+	"z": 2891,
+	"direction": "E"
+  },
+  // Nardah Banker
+  {
+	"id": 4762,
+	"x": 3425,
+	"z": 2893,
+	"direction": "E"
+  },
+  // Nardah Banker
+  {
+	"id": 4762,
+	"x": 3425,
+	"z": 2894,
+	"direction": "E"
+  },
+  // Nardah Banker
+  {
+	"id": 4751,
+	"x": 3426,
+	"z": 2899,
+	"radius": 3
+  },
+  // Meskhenet
+  {
+	"id": 7369,
+	"x": 3428,
+	"z": 2910,
+	"radius": 0
+  },
+  // Wesley
+  {
+	"id": 4761,
+	"x": 3430,
+	"z": 2914,
+	"radius": 2
+  },
+  // Rokuh
+  {
+	"id": 4749,
+	"x": 3436,
+	"z": 2901,
+	"radius": 5
+  },
+  // Garai
+  {
+	"id": 4758,
+	"x": 3437,
+	"z": 2914,
+	"radius": 2
+  },
+  // Poltenip
+  {
+	"id": 4757,
+	"x": 3437,
+	"z": 2917,
+	"radius": 2
+  },
+  // Tarik
+  {
+	"id": 4747,
+	"x": 3439,
+	"z": 2890,
+	"radius": 1
+  },
+  // Usi
+  {
+	"id": 4745,
+	"x": 3441,
+	"z": 2933,
+	"radius": 2
+  },
+  // Ghaslor the Elder
+  {
+	"id": 4756,
+	"x": 3442,
+	"z": 2913,
+	"radius": 4
+  },
+  // Awusah the Mayor
+  {
+	"id": 4759,
+	"x": 3442,
+	"z": 2920,
+	"radius": 0
+  },
+  // Radat
+  {
+	"id": 1350,
+	"x": 3442,
+	"z": 2902,
+	"radius": 3
+  },
+  // Artimeus
+  {
+	"id": 4752,
+	"x": 3448,
+	"z": 2896,
+	"radius": 2
+  }
+  // Zahra
+]

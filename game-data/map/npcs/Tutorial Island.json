@@ -1,0 +1,39 @@
+[
+  {
+	"id": 3308,
+	"x": 3094,
+	"z": 3107,
+	"radius": 2
+  },
+  // Tutor
+  {
+	"id": 3309,
+	"x": 3142,
+	"z": 3088,
+	"radius": 0,
+	"direction": "W"
+  },
+  // Magic instructor
+  
+  {
+	"id": 311,
+	"x": 3136,
+	"z": 3087,
+	"radius": 1
+  },
+  // Iron Man Guide
+  {
+	"id": 317,
+	"x": 3137,
+	"z": 3087,
+	"radius": 1
+  },
+  // Iron Man Guide
+  {
+	"id": 3369,
+	"x": 3138,
+	"z": 3087,
+	"radius": 1
+  }
+  // Iron Man Guide
+]

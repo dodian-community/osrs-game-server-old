@@ -1,0 +1,198 @@
+[
+  {
+	"id": 3064,
+	"x": 3076,
+	"z": 3416,
+	"radius": 6
+  },
+  // Barbarian
+  {
+	"id": 524,
+	"x": 3075,
+	"z": 3429,
+	"radius": 2
+  },
+  // Peksa
+  {
+	"id": 3061,
+	"x": 3078,
+	"z": 3419,
+	"radius": 12
+  },
+  // Barbarian
+  {
+	"id": 3058,
+	"x": 3074,
+	"z": 3439,
+	"radius": 9
+  },
+  // Barbarian
+  {
+	"id": 3069,
+	"x": 3078,
+	"z": 3437,
+	"radius": 5
+  },
+  // Barbarian
+  {
+	"id": 3068,
+	"x": 3078,
+	"z": 3440,
+	"radius": 4
+  },
+  // Barbarian
+  {
+	"id": 3056,
+	"x": 3078,
+	"z": 3408,
+	"radius": 11
+  },
+  // Barbarian
+  {
+	"id": 3057,
+	"x": 3078,
+	"z": 3438,
+	"radius": 4
+  },
+  // Barbarian
+  {
+	"id": 3055,
+	"x": 3078,
+	"z": 3439,
+	"radius": 5
+  },
+  // Barbarian
+  {
+	"id": 3060,
+	"x": 3079,
+	"z": 3422,
+	"radius": 11
+  },
+  // Barbarian
+  {
+	"id": 2493,
+	"x": 3080,
+	"z": 3422,
+	"radius": 2
+  },
+  // Litara
+  {
+	"id": 299,
+	"x": 3079,
+	"z": 3442,
+	"radius": 3
+  },
+  // Gunthor the brave
+  {
+	"id": 3059,
+	"x": 3083,
+	"z": 3429,
+	"radius": 2
+  },
+  // Barbarian
+  {
+	"id": 1352,
+	"x": 3084,
+	"z": 3409,
+	"radius": 2
+  },
+  // Tassie Slipcast
+  {
+	"id": 3070,
+	"x": 3084,
+	"z": 3424,
+	"radius": 9
+  },
+  // Barbarian
+  {
+	"id": 2837,
+	"x": 3082,
+	"z": 3449,
+	"radius": 10
+  },
+  // Unicorn
+  {
+	"id": 3065,
+	"x": 3083,
+	"z": 3410,
+	"radius": 7
+  },
+  // Barbarian
+  {
+	"id": 1417,
+	"x": 3064,
+	"z": 3418,
+	"radius": 7
+  },
+  // Squirrel
+  {
+	"id": 3072,
+	"x": 3085,
+	"z": 3417,
+	"radius": 9
+  },
+  // Barbarian
+  {
+	"id": 1420,
+	"x": 3068,
+	"z": 3438,
+	"radius": 9
+  },
+  // Raccoon
+  {
+	"id": 3067,
+	"x": 3085,
+	"z": 3437,
+	"radius": 5
+  },
+  // Barbarian
+  {
+	"id": 2837,
+	"x": 3090,
+	"z": 3445,
+	"radius": 10
+  },
+  // Unicorn
+  {
+	"id": 1416,
+	"x": 3066,
+	"z": 3425,
+	"radius": 7
+  },
+  // Squirrel
+  {
+	"id": 1419,
+	"x": 3070,
+	"z": 3441,
+	"radius": 10
+  },
+  // Raccoon
+  {
+	"id": 3066,
+	"x": 3097,
+	"z": 3429,
+	"radius": 2
+  },
+  // Barbarian
+  {
+	"id": 1421,
+	"x": 3068,
+	"z": 3435,
+	"radius": 14
+  },
+  // Raccoon
+  {
+	"id": 3071,
+	"x": 3076,
+	"z": 3420,
+	"radius": 11
+  },
+  // Barbarian
+  {
+	"id": 3062,
+	"x": 3078,
+	"z": 3439,
+	"radius": 6
+  }
+  // Barbarian
+]

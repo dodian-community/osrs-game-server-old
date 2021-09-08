@@ -1,0 +1,177 @@
+[
+  {
+	"id": 84,
+	"x": 2585,
+	"z": 9884,
+	"radius": 3
+  },
+  // Skeleton Mage
+  {
+	"id": 84,
+	"x": 2589,
+	"z": 9883,
+	"radius": 3
+  },
+  // Skeleton Mage
+  {
+	"id": 84,
+	"x": 2591,
+	"z": 9884,
+	"radius": 3
+  },
+  // Skeleton Mage
+  {
+	"id": 84,
+	"x": 2587,
+	"z": 9879,
+	"radius": 3
+  },
+  // Skeleton Mage
+  {
+	"id": 84,
+	"x": 2591,
+	"z": 9880,
+	"radius": 3
+  },
+  // Skeleton Mage
+  {
+	"id": 82,
+	"x": 2587,
+	"z": 9880,
+	"radius": 3
+  },
+  // Skeleton
+  {
+	"id": 82,
+	"x": 2588,
+	"z": 9885,
+	"radius": 3
+  },
+  // Skeleton
+  {
+	"id": 82,
+	"x": 2591,
+	"z": 9885,
+	"radius": 3
+  },
+  // Skeleton
+  {
+	"id": 3016,
+	"x": 2572,
+	"z": 9875,
+	"radius": 3
+  },
+  // Shadow Spider
+  {
+	"id": 3016,
+	"x": 2576,
+	"z": 9875,
+	"radius": 3
+  },
+  // Shadow Spider
+  {
+	"id": 3016,
+	"x": 2579,
+	"z": 9876,
+	"radius": 3
+  },
+  // Shadow Spider
+  {
+	"id": 3016,
+	"x": 2574,
+	"z": 9878,
+	"radius": 3
+  },
+  // Shadow Spider
+  {
+	"id": 3016,
+	"x": 2573,
+	"z": 9873,
+	"radius": 3
+  },
+  // Shadow Spider
+  {
+	"id": 2854,
+	"x": 2566,
+	"z": 9898,
+	"radius": 3
+  },
+  // Rat
+  {
+	"id": 2854,
+	"x": 2584,
+	"z": 9884,
+	"radius": 3
+  },
+  // Rat
+  {
+	"id": 2075,
+	"x": 2564,
+	"z": 9884,
+	"radius": 3
+  },
+  // Fire Giant
+  {
+	"id": 2075,
+	"x": 2567,
+	"z": 9888,
+	"radius": 3
+  },
+  // Fire Giant
+  {
+	"id": 2075,
+	"x": 2563,
+	"z": 9888,
+	"radius": 3
+  },
+  // Fire Giant
+  {
+	"id": 2075,
+	"x": 2569,
+	"z": 9885,
+	"radius": 3
+  },
+  // Fire Giant
+  {
+	"id": 2075,
+	"x": 2576,
+	"z": 9888,
+	"radius": 3
+  },
+  // Fire Giant
+  {
+	"id": 2075,
+	"x": 2579,
+	"z": 9890,
+	"radius": 3
+  },
+  // Fire Giant
+  {
+	"id": 2075,
+	"x": 2581,
+	"z": 9895,
+	"radius": 3
+  },
+  // Fire Giant
+  {
+	"id": 2075,
+	"x": 2575,
+	"z": 9896,
+	"radius": 3
+  },
+  // Fire Giant
+  {
+	"id": 2077,
+	"x": 2575,
+	"z": 9894,
+	"radius": 3
+  },
+  // Fire Giant
+  {
+	"id": 2077,
+	"x": 2575,
+	"z": 9889,
+	"radius": 3
+  }
+  // Fire Giant
+]

@@ -1,0 +1,134 @@
+[
+  {
+	"id": 243,
+	"x": 2907,
+	"z": 9796
+  },
+  // Blue dragon scale
+  {
+	"id": 243,
+	"x": 2905,
+	"z": 9801
+  },
+  // Blue dragon scale
+  {
+	"id": 243,
+	"x": 2908,
+	"z": 9805
+  },
+  // Blue dragon scale
+  {
+	"id": 243,
+	"x": 2902,
+	"z": 9806
+  },
+  // Blue dragon scale
+  {
+	"id": 243,
+	"x": 2910,
+	"z": 9809
+  },
+  // Blue dragon scale
+  {
+	"id": 243,
+	"x": 2924,
+	"z": 9791
+  },
+  // Blue dragon scale
+  {
+	"id": 243,
+	"x": 2919,
+	"z": 9787
+  },
+  // Blue dragon scale
+  {
+	"id": 243,
+	"x": 2912,
+	"z": 9786
+  },
+  // Blue dragon scale
+  {
+	"id": 243,
+	"x": 2908,
+	"z": 9789
+  },
+  // Blue dragon scale
+  {
+	"id": 243,
+	"x": 2902,
+	"z": 9784
+  },
+  // Blue dragon scale
+  {
+	"id": 243,
+	"x": 2905,
+	"z": 9779
+  },
+  // Blue dragon scale
+  
+  {
+	"id": 526,
+	"x": 2908,
+	"z": 9794
+  },
+  // Bones
+  {
+	"id": 526,
+	"x": 2910,
+	"z": 9797
+  },
+  // Bones
+  {
+	"id": 526,
+	"x": 2914,
+	"z": 9796
+  },
+  // Bones
+  {
+	"id": 526,
+	"x": 2917,
+	"z": 9796
+  },
+  // Bones
+  {
+	"id": 526,
+	"x": 2923,
+	"z": 9791
+  },
+  // Bones
+  
+  {
+	"id": 995,
+	"x": 2909,
+	"z": 9800
+  },
+  // Coins
+  {
+	"id": 995,
+	"x": 2911,
+	"z": 9801,
+	"amount": 4
+  },
+  // Coins
+  {
+	"id": 995,
+	"x": 2910,
+	"z": 9803,
+	"amount": 8
+  },
+  // Coins
+  {
+	"id": 995,
+	"x": 2907,
+	"z": 9807,
+	"amount": 5
+  },
+  // Coins
+  {
+	"id": 995,
+	"x": 2913,
+	"z": 9806,
+	"amount": 6
+  }
+  // Coins
+]

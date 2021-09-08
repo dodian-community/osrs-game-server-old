@@ -1,0 +1,1500 @@
+[
+  {
+	"id": 3104,
+	"x": 2583,
+	"z": 3292,
+	"radius": 2
+  },
+  // Paladin
+  {
+	"id": 6245,
+	"x": 2721,
+	"z": 3293,
+	"radius": 4
+  },
+  // null
+  {
+	"id": 3100,
+	"x": 2584,
+	"z": 3306,
+	"radius": 4
+  },
+  // Warrior woman
+  {
+	"id": 6244,
+	"x": 2721,
+	"z": 3282,
+	"radius": 3
+  },
+  // null
+  {
+	"id": 3100,
+	"x": 2584,
+	"z": 3289,
+	"radius": 4
+  },
+  // Warrior woman
+  {
+	"id": 6248,
+	"x": 2720,
+	"z": 3291,
+	"radius": 3
+  },
+  // Witchaven villager
+  {
+	"id": 3100,
+	"x": 2586,
+	"z": 3290,
+	"radius": 3
+  },
+  // Warrior woman
+  {
+	"id": 6247,
+	"x": 2729,
+	"z": 3276,
+	"radius": 3
+  },
+  // null
+  {
+	"id": 2063,
+	"x": 2593,
+	"z": 3267,
+	"radius": 1
+  },
+  // Penguin
+  {
+	"id": 6250,
+	"x": 2726,
+	"z": 3277,
+	"radius": 2
+  },
+  // Witchaven villager
+  {
+	"id": 2063,
+	"x": 2594,
+	"z": 3270,
+	"radius": 2
+  },
+  // Penguin
+  {
+	"id": 4789,
+	"x": 2732,
+	"z": 3292,
+	"radius": 3
+  },
+  // Ezekial Lovecraft
+  {
+	"id": 5007,
+	"x": 2607,
+	"z": 3257,
+	"radius": 1
+  },
+  // Imp
+  {
+	"id": 5235,
+	"x": 2596,
+	"z": 3277,
+	"radius": 5
+  },
+  // Monkey minder
+  {
+	"id": 6246,
+	"x": 2734,
+	"z": 3282,
+	"radius": 3
+  },
+  // null
+  {
+	"id": 2063,
+	"x": 2595,
+	"z": 3269,
+	"radius": 1
+  },
+  // Penguin
+  {
+	"id": 6249,
+	"x": 2733,
+	"z": 3283,
+	"radius": 3
+  },
+  // Witchaven villager
+  {
+	"id": 845,
+	"x": 2596,
+	"z": 3270,
+	"radius": 0
+  },
+  // Penguin
+  {
+	"id": 6247,
+	"x": 2736,
+	"z": 3301,
+	"radius": 3
+  },
+  // null
+  {
+	"id": 827,
+	"x": 2597,
+	"z": 3266,
+	"radius": 0
+  },
+  // Larry
+  {
+	"id": 2848,
+	"x": 2598,
+	"z": 3276,
+	"radius": 0
+  },
+  // Monkey
+  {
+	"id": 5279,
+	"x": 2599,
+	"z": 3274,
+	"radius": 0
+  },
+  // Monkey
+  {
+	"id": 5279,
+	"x": 2599,
+	"z": 3278,
+	"radius": 0
+  },
+  // Monkey
+  {
+	"id": 2848,
+	"x": 2603,
+	"z": 3278,
+	"radius": 3
+  },
+  // Monkey
+  {
+	"id": 2848,
+	"x": 2603,
+	"z": 3279,
+	"radius": 3
+  },
+  // Monkey
+  {
+	"id": 3026,
+	"x": 2603,
+	"z": 3268,
+	"radius": 2
+  },
+  // Pit Scorpion
+  {
+	"id": 5279,
+	"x": 2602,
+	"z": 3278,
+	"radius": 3
+  },
+  // Monkey
+  {
+	"id": 5279,
+	"x": 2603,
+	"z": 3280,
+	"radius": 3
+  },
+  // Monkey
+  {
+	"id": 3024,
+	"x": 2603,
+	"z": 3268,
+	"radius": 2
+  },
+  // Scorpion
+  {
+	"id": 5235,
+	"x": 2602,
+	"z": 3273,
+	"radius": 5
+  },
+  // Monkey minder
+  {
+	"id": 5279,
+	"x": 2602,
+	"z": 3279,
+	"radius": 3
+  },
+  // Monkey
+  {
+	"id": 3024,
+	"x": 2602,
+	"z": 3269,
+	"radius": 2
+  },
+  // Scorpion
+  {
+	"id": 2848,
+	"x": 2603,
+	"z": 3279,
+	"radius": 3
+  },
+  // Monkey
+  {
+	"id": 2848,
+	"x": 2603,
+	"z": 3278,
+	"radius": 3
+  },
+  // Monkey
+  {
+	"id": 3113,
+	"x": 2603,
+	"z": 3285,
+	"radius": 4
+  },
+  // Zoo keeper
+  {
+	"id": 3026,
+	"x": 2603,
+	"z": 3270,
+	"radius": 2
+  },
+  // Pit Scorpion
+  {
+	"id": 5279,
+	"x": 2604,
+	"z": 3276,
+	"radius": 0
+  },
+  // Monkey
+  {
+	"id": 2848,
+	"x": 2604,
+	"z": 3277,
+	"radius": 0
+  },
+  // Monkey
+  {
+	"id": 3026,
+	"x": 2604,
+	"z": 3268,
+	"radius": 3
+  },
+  // Pit Scorpion
+  {
+	"id": 5279,
+	"x": 2604,
+	"z": 3280,
+	"radius": 2
+  },
+  // Monkey
+  {
+	"id": 5279,
+	"x": 2603,
+	"z": 3280,
+	"radius": 3
+  },
+  // Monkey
+  {
+	"id": 3026,
+	"x": 2604,
+	"z": 3270,
+	"radius": 3
+  },
+  // Pit Scorpion
+  {
+	"id": 5279,
+	"x": 2604,
+	"z": 3280,
+	"radius": 2
+  },
+  // Monkey
+  {
+	"id": 1495,
+	"x": 2607,
+	"z": 3264,
+	"radius": 5
+  },
+  // Charlie
+  {
+	"id": 3024,
+	"x": 2605,
+	"z": 3267,
+	"radius": 1
+  },
+  // Scorpion
+  {
+	"id": 5235,
+	"x": 2607,
+	"z": 3279,
+	"radius": 5
+  },
+  // Monkey minder
+  {
+	"id": 2845,
+	"x": 2610,
+	"z": 3276,
+	"radius": 1
+  },
+  // Snake
+  {
+	"id": 3113,
+	"x": 2611,
+	"z": 3269,
+	"radius": 5
+  },
+  // Zoo keeper
+  {
+	"id": 2845,
+	"x": 2611,
+	"z": 3276,
+	"radius": 1
+  },
+  // Snake
+  {
+	"id": 2845,
+	"x": 2610,
+	"z": 3275,
+	"radius": 1
+  },
+  // Snake
+  {
+	"id": 4769,
+	"x": 2611,
+	"z": 3285,
+	"radius": 2
+  },
+  // Parroty Pete
+  {
+	"id": 4768,
+	"x": 2612,
+	"z": 3287,
+	"radius": 0
+  },
+  // Parrots
+  {
+	"id": 3110,
+	"x": 2612,
+	"z": 3316,
+	"radius": 1
+  },
+  // Woman
+  {
+	"id": 1145,
+	"x": 2614,
+	"z": 3324,
+	"radius": 3
+  },
+  // Jerico
+  {
+	"id": 4768,
+	"x": 2613,
+	"z": 3287,
+	"radius": 0
+  },
+  // Parrots
+  {
+	"id": 1177,
+	"x": 2614,
+	"z": 3294,
+	"radius": 3
+  },
+  // Aemad
+  {
+	"id": 3984,
+	"x": 2615,
+	"z": 3306,
+	"radius": 3
+  },
+  // Doctor Orbon
+  {
+	"id": 3109,
+	"x": 2615,
+	"z": 3316,
+	"radius": 2
+  },
+  // Man
+  {
+	"id": 2835,
+	"x": 2617,
+	"z": 3265,
+	"radius": 2
+  },
+  // Camel
+  {
+	"id": 1178,
+	"x": 2614,
+	"z": 3293,
+	"radius": 2
+  },
+  // Kortan
+  {
+	"id": 2845,
+	"x": 2616,
+	"z": 3275,
+	"radius": 0
+  },
+  // Snake
+  {
+	"id": 2845,
+	"x": 2616,
+	"z": 3276,
+	"radius": 0
+  },
+  // Snake
+  {
+	"id": 106,
+	"x": 2617,
+	"z": 3282,
+	"radius": 2
+  },
+  // Wolf
+  {
+	"id": 3983,
+	"x": 2617,
+	"z": 3299,
+	"radius": 3
+  },
+  // Councillor Halgrive
+  {
+	"id": 3244,
+	"x": 2617,
+	"z": 3307,
+	"radius": 4
+  },
+  // Priest
+  {
+	"id": 2835,
+	"x": 2618,
+	"z": 3265,
+	"radius": 3
+  },
+  // Camel
+  {
+	"id": 3113,
+	"x": 2619,
+	"z": 3279,
+	"radius": 5
+  },
+  // Zoo keeper
+  {
+	"id": 106,
+	"x": 2619,
+	"z": 3282,
+	"radius": 3
+  },
+  // Wolf
+  {
+	"id": 2835,
+	"x": 2619,
+	"z": 3265,
+	"radius": 2
+  },
+  // Camel
+  {
+	"id": 2094,
+	"x": 2621,
+	"z": 3271,
+	"radius": 1
+  },
+  // Jogre
+  {
+	"id": 2097,
+	"x": 2621,
+	"z": 3277,
+	"radius": 1
+  },
+  // Cyclops
+  {
+	"id": 5906,
+	"x": 2621,
+	"z": 3293,
+	"radius": 1
+  },
+  // Probita
+  {
+	"id": 1151,
+	"x": 2561,
+	"z": 3303,
+	"radius": 0
+  },
+  // Mourner
+  {
+	"id": 1151,
+	"x": 2560,
+	"z": 3305,
+	"radius": 0
+  },
+  // Mourner
+  {
+	"id": 1151,
+	"x": 2560,
+	"z": 3304,
+	"radius": 0
+  },
+  // Mourner
+  {
+	"id": 1151,
+	"x": 2559,
+	"z": 3305,
+	"radius": 0
+  },
+  // Mourner
+  {
+	"id": 3245,
+	"x": 2636,
+	"z": 3339,
+	"radius": 5
+  },
+  // Guard
+  {
+	"id": 3245,
+	"x": 2636,
+	"z": 3339,
+	"radius": 5
+  },
+  // Guard
+  {
+	"id": 3257,
+	"x": 2637,
+	"z": 3364,
+	"radius": 4
+  },
+  // Master Farmer
+  {
+	"id": 3245,
+	"x": 2637,
+	"z": 3338,
+	"radius": 4
+  },
+  // Guard
+  {
+	"id": 3086,
+	"x": 2643,
+	"z": 3362,
+	"radius": 2
+  },
+  // Farmer
+  {
+	"id": 503,
+	"x": 2646,
+	"z": 3364,
+	"radius": 1
+  },
+  // Richard
+  {
+	"id": 6204,
+	"x": 2568,
+	"z": 3332,
+	"radius": 4
+  },
+  // Edmond
+  {
+	"id": 2794,
+	"x": 2650,
+	"z": 3366,
+	"radius": 5
+  },
+  // Sheep
+  {
+	"id": 2794,
+	"x": 2651,
+	"z": 3373,
+	"radius": 4
+  },
+  // Sheep
+  {
+	"id": 2794,
+	"x": 2653,
+	"z": 3360,
+	"radius": 5
+  },
+  // Sheep
+  {
+	"id": 3086,
+	"x": 2647,
+	"z": 3347,
+	"radius": 8
+  },
+  // Farmer
+  {
+	"id": 4249,
+	"x": 2575,
+	"z": 3334,
+	"radius": 3
+  },
+  // Alrena
+  {
+	"id": 2794,
+	"x": 2652,
+	"z": 3373,
+	"radius": 5
+  },
+  // Sheep
+  {
+	"id": 2794,
+	"x": 2653,
+	"z": 3361,
+	"radius": 4
+  },
+  // Sheep
+  {
+	"id": 4260,
+	"x": 2582,
+	"z": 3330,
+	"radius": 5
+  },
+  // Mourner
+  {
+	"id": 2794,
+	"x": 2654,
+	"z": 3358,
+	"radius": 4
+  },
+  // Sheep
+  {
+	"id": 2794,
+	"x": 2654,
+	"z": 3368,
+	"radius": 5
+  },
+  // Sheep
+  {
+	"id": 1262,
+	"x": 2655,
+	"z": 3359,
+	"radius": 4
+  },
+  // Ram
+  {
+	"id": 2011,
+	"x": 2591,
+	"z": 3336,
+	"radius": 2
+  },
+  // Elena
+  {
+	"id": 2794,
+	"x": 2655,
+	"z": 3364,
+	"radius": 4
+  },
+  // Sheep
+  {
+	"id": 2794,
+	"x": 2656,
+	"z": 3371,
+	"radius": 4
+  },
+  // Sheep
+  {
+	"id": 1262,
+	"x": 2655,
+	"z": 3375,
+	"radius": 4
+  },
+  // Ram
+  {
+	"id": 2794,
+	"x": 2655,
+	"z": 3377,
+	"radius": 3
+  },
+  // Sheep
+  {
+	"id": 2805,
+	"x": 2657,
+	"z": 3342,
+	"radius": 1
+  },
+  // Cow
+  {
+	"id": 2805,
+	"x": 2660,
+	"z": 3350,
+	"radius": 4
+  },
+  // Cow
+  {
+	"id": 6179,
+	"x": 2609,
+	"z": 3344,
+	"radius": 3
+  },
+  // Sick-looking sheep (1)
+  {
+	"id": 6179,
+	"x": 2610,
+	"z": 3343,
+	"radius": 3
+  },
+  // Sick-looking sheep (1)
+  {
+	"id": 3100,
+	"x": 2658,
+	"z": 3332,
+	"radius": 4
+  },
+  // Warrior woman
+  {
+	"id": 6179,
+	"x": 2610,
+	"z": 3344,
+	"radius": 3
+  },
+  // Sick-looking sheep (1)
+  {
+	"id": 2805,
+	"x": 2660,
+	"z": 3345,
+	"radius": 3
+  },
+  // Cow
+  {
+	"id": 222,
+	"x": 2664,
+	"z": 3331,
+	"radius": 1
+  },
+  // Rick
+  {
+	"id": 230,
+	"x": 2664,
+	"z": 3329,
+	"radius": 1
+  },
+  // null
+  {
+	"id": 5417,
+	"x": 2664,
+	"z": 3329,
+	"radius": 2
+  },
+  // Chief servant
+  {
+	"id": 2805,
+	"x": 2665,
+	"z": 3343,
+	"radius": 4
+  },
+  // Cow
+  {
+	"id": 2805,
+	"x": 2664,
+	"z": 3347,
+	"radius": 4
+  },
+  // Cow
+  {
+	"id": 6523,
+	"x": 2615,
+	"z": 3330,
+	"direction": "N"
+  },
+  // Banker
+  {
+	"id": 2805,
+	"x": 2663,
+	"z": 3352,
+	"radius": 4
+  },
+  // Cow
+  {
+	"id": 395,
+	"x": 2618,
+	"z": 3330,
+	"direction": "N"
+  },
+  // Banker
+  {
+	"id": 395,
+	"x": 2619,
+	"z": 3330,
+	"direction": "N"
+  },
+  // Banker
+  {
+	"id": 224,
+	"x": 2667,
+	"z": 3329,
+	"radius": 2
+  },
+  // Maid
+  {
+	"id": 6180,
+	"x": 2622,
+	"z": 3366,
+	"radius": 2
+  },
+  // Sick-looking sheep (2)
+  {
+	"id": 2805,
+	"x": 2665,
+	"z": 3343,
+	"radius": 4
+  },
+  // Cow
+  {
+	"id": 2665,
+	"x": 2667,
+	"z": 3373,
+	"radius": 3
+  },
+  // Kragen
+  {
+	"id": 6180,
+	"x": 2621,
+	"z": 3365,
+	"radius": 1
+  },
+  // Sick-looking sheep (2)
+  {
+	"id": 6180,
+	"x": 2621,
+	"z": 3367,
+	"radius": 3
+  },
+  // Sick-looking sheep (2)
+  {
+	"id": 226,
+	"x": 2667,
+	"z": 3329,
+	"radius": 2
+  },
+  // Cook
+  {
+	"id": 2805,
+	"x": 2668,
+	"z": 3348,
+	"radius": 4
+  },
+  // Cow
+  {
+	"id": 228,
+	"x": 2668,
+	"z": 3329,
+	"radius": 2
+  },
+  // Butler
+  {
+	"id": 2805,
+	"x": 2668,
+	"z": 3345,
+	"radius": 2
+  },
+  // Cow
+  {
+	"id": 0,
+	"x": 2672,
+	"z": 3381,
+	"radius": 0
+  },
+  // Tool Leprechaun
+  {
+	"id": 2805,
+	"x": 2670,
+	"z": 3353,
+	"radius": 3
+  },
+  // Cow
+  {
+	"id": 2691,
+	"x": 2674,
+	"z": 3351,
+	"radius": 0
+  },
+  //
+  {
+	"id": 5411,
+	"x": 2606,
+	"z": 3260,
+	"radius": 1
+  },
+  // Ferret
+  {
+	"id": 4245,
+	"x": 2614,
+	"z": 3259,
+	"radius": 3
+  },
+  // Brother Cedric
+  {
+	"id": 2838,
+	"x": 2695,
+	"z": 3342,
+	"radius": 6
+  },
+  // Grizzly bear
+  {
+	"id": 2838,
+	"x": 2692,
+	"z": 3336,
+	"radius": 6
+  },
+  // Grizzly bear
+  {
+	"id": 2838,
+	"x": 2692,
+	"z": 3343,
+	"radius": 6
+  },
+  // Grizzly bear
+  {
+	"id": 2838,
+	"x": 2701,
+	"z": 3330,
+	"radius": 6
+  },
+  // Grizzly bear
+  {
+	"id": 2838,
+	"x": 2700,
+	"z": 3344,
+	"radius": 6
+  },
+  // Grizzly bear
+  {
+	"id": 2838,
+	"x": 2706,
+	"z": 3329,
+	"radius": 6
+  },
+  // Grizzly bear
+  {
+	"id": 2838,
+	"x": 2708,
+	"z": 3335,
+	"radius": 6
+  },
+  // Grizzly bear
+  {
+	"id": 2838,
+	"x": 2713,
+	"z": 3335,
+	"radius": 6
+  },
+  // Grizzly bear
+  {
+	"id": 2838,
+	"x": 2720,
+	"z": 3331,
+	"radius": 6
+  },
+  // Grizzly bear
+  {
+	"id": 3951,
+	"x": 2727,
+	"z": 3348,
+	"radius": 3
+  },
+  // Legends guard
+  {
+	"id": 3952,
+	"x": 2728,
+	"z": 3347,
+	"radius": 2
+  },
+  // Legends guard
+  {
+	"id": 114,
+	"x": 2624,
+	"z": 3319,
+	"radius": 3
+  },
+  // Guard dog
+  {
+	"id": 114,
+	"x": 2625,
+	"z": 3327,
+	"radius": 3
+  },
+  // Guard dog
+  {
+	"id": 2837,
+	"x": 2630,
+	"z": 3266,
+	"radius": 3
+  },
+  // Unicorn
+  {
+	"id": 3100,
+	"x": 2628,
+	"z": 3294,
+	"radius": 4
+  },
+  // Warrior woman
+  {
+	"id": 3106,
+	"x": 2630,
+	"z": 3290,
+	"radius": 5
+  },
+  // Hero
+  {
+	"id": 2838,
+	"x": 2630,
+	"z": 3279,
+	"radius": 5
+  },
+  // Grizzly bear
+  {
+	"id": 3100,
+	"x": 2633,
+	"z": 3298,
+	"radius": 4
+  },
+  // Warrior woman
+  {
+	"id": 2838,
+	"x": 2631,
+	"z": 3277,
+	"radius": 4
+  },
+  // Grizzly bear
+  {
+	"id": 2837,
+	"x": 2632,
+	"z": 3265,
+	"radius": 4
+  },
+  // Unicorn
+  {
+	"id": 5315,
+	"x": 2635,
+	"z": 3311,
+	"radius": 1
+  },
+  // Horacio
+  {
+	"id": 5419,
+	"x": 2639,
+	"z": 3291,
+	"radius": 1
+  },
+  // Estate agent
+  {
+	"id": 114,
+	"x": 2640,
+	"z": 3314,
+	"radius": 2
+  },
+  // Guard dog
+  {
+	"id": 5313,
+	"x": 2644,
+	"z": 3272,
+	"radius": 3
+  },
+  // RPDT employee
+  {
+	"id": 5313,
+	"x": 2643,
+	"z": 3273,
+	"radius": 3
+  },
+  // RPDT employee
+  {
+	"id": 114,
+	"x": 2646,
+	"z": 3325,
+	"radius": 3
+  },
+  // Guard dog
+  {
+	"id": 5313,
+	"x": 2645,
+	"z": 3271,
+	"radius": 2
+  },
+  // RPDT employee
+  {
+	"id": 3106,
+	"x": 2646,
+	"z": 3306,
+	"radius": 3
+  },
+  // Hero
+  {
+	"id": 3245,
+	"x": 2650,
+	"z": 3307,
+	"radius": 5
+  },
+  // Guard
+  {
+	"id": 3108,
+	"x": 2659,
+	"z": 3321,
+	"radius": 6
+  },
+  // Knight of Ardougne
+  {
+	"id": 6705,
+	"x": 2648,
+	"z": 3280,
+	"radius": 0
+  },
+  // null
+  {
+	"id": 1176,
+	"x": 2652,
+	"z": 3294,
+	"radius": 3
+  },
+  // Zenesha
+  {
+	"id": 3108,
+	"x": 2658,
+	"z": 3292,
+	"radius": 1
+  },
+  // Knight of Ardougne
+  {
+	"id": 3105,
+	"x": 2653,
+	"z": 3315,
+	"radius": 5
+  },
+  // Paladin
+  {
+	"id": 1040,
+	"x": 2654,
+	"z": 3312,
+	"radius": 2
+  },
+  // Baker
+  {
+	"id": 1043,
+	"x": 2656,
+	"z": 3301,
+	"radius": 0
+  },
+  // Silk merchant
+  {
+	"id": 395,
+	"x": 2657,
+	"z": 3280,
+	"direction": "W"
+  },
+  // Banker
+  {
+	"id": 6528,
+	"x": 2657,
+	"z": 3283,
+	"direction": "W"
+  },
+  // Banker
+  {
+	"id": 394,
+	"x": 2657,
+	"z": 3286,
+	"direction": "W"
+  },
+  // Banker
+  {
+	"id": 3105,
+	"x": 2657,
+	"z": 3307,
+	"radius": 5
+  },
+  // Paladin
+  {
+	"id": 1041,
+	"x": 2659,
+	"z": 3295,
+	"radius": 2
+  },
+  // Spice seller
+  {
+	"id": 1038,
+	"x": 2658,
+	"z": 3316,
+	"radius": 0
+  },
+  // Silver merchant
+  {
+	"id": 3245,
+	"x": 2659,
+	"z": 3309,
+	"radius": 5
+  },
+  // Guard
+  {
+	"id": 3245,
+	"x": 2660,
+	"z": 3309,
+	"radius": 5
+  },
+  // Guard
+  {
+	"id": 3245,
+	"x": 2661,
+	"z": 3309,
+	"radius": 4
+  },
+  // Guard
+  {
+	"id": 3245,
+	"x": 2663,
+	"z": 3302,
+	"radius": 5
+  },
+  // Guard
+  {
+	"id": 3245,
+	"x": 2662,
+	"z": 3320,
+	"radius": 2
+  },
+  // Guard
+  {
+	"id": 3245,
+	"x": 2665,
+	"z": 3300,
+	"radius": 5
+  },
+  // Guard
+  {
+	"id": 279,
+	"x": 2664,
+	"z": 3311,
+	"radius": 2
+  },
+  // Town crier
+  {
+	"id": 1042,
+	"x": 2665,
+	"z": 3294,
+	"radius": 0
+  },
+  // Fur trader
+  {
+	"id": 3106,
+	"x": 2670,
+	"z": 3317,
+	"radius": 2
+  },
+  // Hero
+  {
+	"id": 3108,
+	"x": 2668,
+	"z": 3300,
+	"radius": 11
+  },
+  // Knight of Ardougne
+  {
+	"id": 1039,
+	"x": 2669,
+	"z": 3303,
+	"radius": 0
+  },
+  // Gem merchant
+  {
+	"id": 1040,
+	"x": 2669,
+	"z": 3310,
+	"radius": 0
+  },
+  // Baker
+  {
+	"id": 3108,
+	"x": 2663,
+	"z": 3321,
+	"radius": 2
+  },
+  // Knight of Ardougne
+  {
+	"id": 5314,
+	"x": 2682,
+	"z": 3324,
+	"radius": 3
+  },
+  // Wizard Cromperty
+  {
+	"id": 3650,
+	"x": 2678,
+	"z": 3273,
+	"radius": 5
+  },
+  // Captain Barnaby
+  {
+	"id": 4261,
+	"x": 2563,
+	"z": 3287,
+	"radius": 4
+  },
+  // Mourner
+  {
+	"id": 4576,
+	"x": 2562,
+	"z": 3319,
+	"radius": 1
+  },
+  // Bones
+  {
+	"id": 4589,
+	"x": 2562,
+	"z": 3320,
+	"radius": 1
+  },
+  // Jimmy Dazzler
+  {
+	"id": 3104,
+	"x": 2570,
+	"z": 3299,
+	"radius": 2
+  },
+  // Paladin
+  {
+	"id": 2692,
+	"x": 2692,
+	"z": 3270,
+	"radius": 4
+  },
+  // Chicken
+  {
+	"id": 2693,
+	"x": 2691,
+	"z": 3276,
+	"radius": 4
+  },
+  // Chicken
+  {
+	"id": 2693,
+	"x": 2692,
+	"z": 3272,
+	"radius": 4
+  },
+  // Chicken
+  {
+	"id": 3104,
+	"x": 2572,
+	"z": 3305,
+	"radius": 2
+  },
+  // Paladin
+  {
+	"id": 2692,
+	"x": 2693,
+	"z": 3273,
+	"radius": 3
+  },
+  // Chicken
+  {
+	"id": 3104,
+	"x": 2572,
+	"z": 3303,
+	"radius": 2
+  },
+  // Paladin
+  {
+	"id": 6249,
+	"x": 2707,
+	"z": 3284,
+	"radius": 4
+  },
+  // Witchaven villager
+  {
+	"id": 3444,
+	"x": 2572,
+	"z": 3321,
+	"radius": 5
+  },
+  // Lucien
+  {
+	"id": 5064,
+	"x": 2709,
+	"z": 3283,
+	"radius": 5
+  },
+  // Kennith
+  {
+	"id": 5519,
+	"x": 2574,
+	"z": 3323,
+	"radius": 2
+  },
+  // Two-pints
+  {
+	"id": 6243,
+	"x": 2708,
+	"z": 3291,
+	"radius": 2
+  },
+  // null
+  {
+	"id": 1319,
+	"x": 2576,
+	"z": 3320,
+	"radius": 2
+  },
+  // Bartender
+  {
+	"id": 6245,
+	"x": 2715,
+	"z": 3279,
+	"radius": 4
+  },
+  // null
+  {
+	"id": 3104,
+	"x": 2577,
+	"z": 3307,
+	"radius": 2
+  },
+  // Paladin
+  {
+	"id": 6248,
+	"x": 2716,
+	"z": 3279,
+	"radius": 4
+  },
+  // Witchaven villager
+  {
+	"id": 6246,
+	"x": 2716,
+	"z": 3289,
+	"radius": 5
+  },
+  // null
+  {
+	"id": 3104,
+	"x": 2581,
+	"z": 3286,
+	"radius": 2
+  },
+  // Paladin
+  {
+	"id": 5067,
+	"x": 2716,
+	"z": 3302,
+	"radius": 2
+  },
+  // Caroline
+  {
+	"id": 3104,
+	"x": 2581,
+	"z": 3299,
+	"radius": 2
+  },
+  // Paladin
+  {
+	"id": 6249,
+	"x": 2717,
+	"z": 3289,
+	"radius": 4
+  },
+  // Witchaven villager
+  {
+	"id": 6252,
+	"x": 2716,
+	"z": 3304,
+	"radius": 2
+  },
+  // Jeb
+  {
+	"id": 3108,
+	"x": 2580,
+	"z": 3297,
+	"radius": 8
+  },
+  // Knight of Ardougne
+  {
+	"id": 5071,
+	"x": 2720,
+	"z": 3305,
+	"radius": 1
+  }
+  // Holgart
+]

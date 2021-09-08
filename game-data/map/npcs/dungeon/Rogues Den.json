@@ -1,0 +1,42 @@
+[
+  {
+	"id": 3194,
+	"x": 3042,
+	"z": 4972,
+	"radius": 0,
+	"level": 1
+  },
+  // Emerald Benedict
+  {
+	"id": 3193,
+	"x": 3047,
+	"z": 4975,
+	"radius": 5,
+	"level": 1
+  },
+  // Martin Thwait
+  {
+	"id": 3189,
+	"x": 3049,
+	"z": 4977,
+	"radius": 5,
+	"level": 1
+  },
+  // Brian O'Richard
+  {
+	"id": 5919,
+	"x": 3050,
+	"z": 4962,
+	"radius": 1,
+	"level": 1
+  },
+  // Grace
+  {
+	"id": 5920,
+	"x": 3051,
+	"z": 4963,
+	"radius": 0,
+	"level": 1
+  }
+  // Mark
+]

@@ -1,0 +1,625 @@
+[
+  {
+	"id": 3901,
+	"x": 2736,
+	"z": 3593,
+	"radius": 1
+  },
+  // Fox
+  {
+	"id": 2854,
+	"x": 2725,
+	"z": 3580,
+	"radius": 4
+  },
+  // Rat
+  {
+	"id": 2854,
+	"x": 2732,
+	"z": 3574,
+	"radius": 8
+  },
+  // Rat
+  {
+	"id": 2854,
+	"x": 2731,
+	"z": 3576,
+	"radius": 6
+  },
+  // Rat
+  {
+	"id": 2854,
+	"x": 2733,
+	"z": 3571,
+	"radius": 8
+  },
+  // Rat
+  {
+	"id": 2854,
+	"x": 2732,
+	"z": 3569,
+	"radius": 10
+  },
+  // Rat
+  {
+	"id": 4217,
+	"x": 2729,
+	"z": 3577,
+	"radius": 3
+  },
+  // Stanford
+  {
+	"id": 2805,
+	"x": 2733,
+	"z": 3561,
+	"radius": 5
+  },
+  // Cow
+  {
+	"id": 6195,
+	"x": 2734,
+	"z": 3575,
+	"radius": 0
+  },
+  // Anna
+  {
+	"id": 4215,
+	"x": 2736,
+	"z": 3578,
+	"radius": 2
+  },
+  // Louisa
+  {
+	"id": 2876,
+	"x": 2737,
+	"z": 3520,
+	"radius": 11
+  },
+  // Highwayman
+  {
+	"id": 2692,
+	"x": 2734,
+	"z": 3559,
+	"radius": 4
+  },
+  // Chicken
+  {
+	"id": 2692,
+	"x": 2735,
+	"z": 3562,
+	"radius": 5
+  },
+  // Chicken
+  {
+	"id": 4214,
+	"x": 2738,
+	"z": 3576,
+	"radius": 3
+  },
+  // Hobbes
+  {
+	"id": 2693,
+	"x": 2736,
+	"z": 3560,
+	"radius": 5
+  },
+  // Chicken
+  {
+	"id": 6194,
+	"x": 2739,
+	"z": 3577,
+	"radius": 0
+  },
+  // Guard
+  {
+	"id": 6198,
+	"x": 2739,
+	"z": 3581,
+	"radius": 0
+  },
+  // David
+  {
+	"id": 4218,
+	"x": 2741,
+	"z": 3562,
+	"radius": 5
+  },
+  // Guard
+  {
+	"id": 4219,
+	"x": 2741,
+	"z": 3556,
+	"radius": 4
+  },
+  // Gossip
+  {
+	"id": 6200,
+	"x": 2742,
+	"z": 3577,
+	"radius": 0
+  },
+  // Frank
+  {
+	"id": 6196,
+	"x": 2748,
+	"z": 3559,
+	"radius": 0
+  },
+  // Bob
+  {
+	"id": 2876,
+	"x": 2749,
+	"z": 3525,
+	"radius": 5
+  },
+  // Highwayman
+  {
+	"id": 4213,
+	"x": 2749,
+	"z": 3576,
+	"radius": 5
+  },
+  // Pierre
+  {
+	"id": 4228,
+	"x": 2749,
+	"z": 3580,
+	"radius": 2
+  },
+  // Sinclair Guard dog
+  {
+	"id": 3084,
+	"x": 2690,
+	"z": 3489,
+	"radius": 4
+  },
+  // Woman
+  {
+	"id": 1318,
+	"x": 2690,
+	"z": 3493,
+	"radius": 2
+  },
+  // Bartender
+  {
+	"id": 3083,
+	"x": 2692,
+	"z": 3494,
+	"radius": 3
+  },
+  // Woman
+  {
+	"id": 3079,
+	"x": 2692,
+	"z": 3488,
+	"radius": 4
+  },
+  // Man
+  {
+	"id": 3078,
+	"x": 2694,
+	"z": 3495,
+	"radius": 4
+  },
+  // Man
+  {
+	"id": 2834,
+	"x": 2752,
+	"z": 3408,
+	"radius": 7
+  },
+  // Giant bat
+  {
+	"id": 4227,
+	"x": 2696,
+	"z": 3494,
+	"radius": 4
+  },
+  // Poison Salesman
+  {
+	"id": 2834,
+	"x": 2752,
+	"z": 3395,
+	"radius": 7
+  },
+  // Giant bat
+  {
+	"id": 3083,
+	"x": 2695,
+	"z": 3495,
+	"radius": 4
+  },
+  // Woman
+  {
+	"id": 2834,
+	"x": 2757,
+	"z": 3402,
+	"radius": 5
+  },
+  // Giant bat
+  {
+	"id": 3083,
+	"x": 2696,
+	"z": 3496,
+	"radius": 3
+  },
+  // Woman
+  {
+	"id": 3517,
+	"x": 2766,
+	"z": 3398,
+	"radius": 3
+  },
+  // Renegade Knight
+  {
+	"id": 3080,
+	"x": 2698,
+	"z": 3491,
+	"radius": 5
+  },
+  // Man
+  {
+	"id": 3517,
+	"x": 2767,
+	"z": 3399,
+	"radius": 4
+  },
+  // Renegade Knight
+  {
+	"id": 3084,
+	"x": 2698,
+	"z": 3496,
+	"radius": 1
+  },
+  // Woman
+  {
+	"id": 3517,
+	"x": 2771,
+	"z": 3400,
+	"radius": 4
+  },
+  // Renegade Knight
+  {
+	"id": 5231,
+	"x": 2702,
+	"z": 3474,
+	"radius": 5
+  },
+  // Seer
+  {
+	"id": 1031,
+	"x": 2799,
+	"z": 3439,
+	"radius": 2
+  },
+  // Candle maker
+  {
+	"id": 5231,
+	"x": 2705,
+	"z": 3473,
+	"radius": 4
+  },
+  // Seer
+  {
+	"id": 3078,
+	"x": 2802,
+	"z": 3433,
+	"radius": 4
+  },
+  // Man
+  {
+	"id": 1357,
+	"x": 2702,
+	"z": 3473,
+	"radius": 2
+  },
+  // Phantuwti Fanstuwi Farsight
+  {
+	"id": 3078,
+	"x": 2713,
+	"z": 3480,
+	"radius": 4
+  },
+  // Man
+  {
+	"id": 394,
+	"x": 2807,
+	"z": 3443,
+	"radius": 0
+  },
+  // Banker
+  {
+	"id": 5231,
+	"x": 2715,
+	"z": 3471,
+	"radius": 4
+  },
+  // Seer
+  {
+	"id": 5231,
+	"x": 2715,
+	"z": 3486,
+	"radius": 4
+  },
+  // Seer
+  {
+	"id": 395,
+	"x": 2809,
+	"z": 3443,
+	"direction": "S"
+  },
+  // Banker
+  {
+	"id": 394,
+	"x": 2721,
+	"z": 3495,
+	"direction": "S"
+  },
+  // Banker
+  {
+	"id": 6560,
+	"x": 2810,
+	"z": 3443,
+	"direction": "S"
+  },
+  // Banker
+  {
+	"id": 395,
+	"x": 2722,
+	"z": 3495,
+	"direction": "S"
+  },
+  // Banker
+  {
+	"id": 395,
+	"x": 2811,
+	"z": 3443,
+	"direction": "S"
+  },
+  // Banker
+  {
+	"id": 394,
+	"x": 2724,
+	"z": 3495,
+	"direction": "S"
+  },
+  // Banker
+  {
+	"id": 395,
+	"x": 2726,
+	"z": 3496,
+	"direction": "S"
+  },
+  // Banker
+  {
+	"id": 395,
+	"x": 2727,
+	"z": 3495,
+	"direction": "S"
+  },
+  // Banker
+  {
+	"id": 6560,
+	"x": 2728,
+	"z": 3495,
+	"direction": "S"
+  },
+  // Banker
+  {
+	"id": 1331,
+	"x": 2797,
+	"z": 3414,
+	"radius": 1
+  },
+  // Trader Crewmember
+  {
+	"id": 394,
+	"x": 2729,
+	"z": 3495,
+	"direction": "S"
+  },
+  // Banker
+  {
+	"id": 1334,
+	"x": 2799,
+	"z": 3414,
+	"radius": 1
+  },
+  // Trader Crewmember
+  {
+	"id": 395,
+	"x": 2729,
+	"z": 3496,
+	"direction": "S"
+  },
+  // Banker
+  {
+	"id": 1032,
+	"x": 2803,
+	"z": 3430,
+	"radius": 0
+  },
+  // Arhein
+  {
+	"id": 5419,
+	"x": 2737,
+	"z": 3501,
+	"radius": 2
+  },
+  // Estate agent
+  {
+	"id": 3078,
+	"x": 2805,
+	"z": 3429,
+	"radius": 4
+  },
+  // Man
+  {
+	"id": 280,
+	"x": 2739,
+	"z": 3480,
+	"radius": 3
+  },
+  // Town crier
+  {
+	"id": 4335,
+	"x": 2735,
+	"z": 3469,
+	"radius": 3
+  },
+  // Guard
+  {
+	"id": 4336,
+	"x": 2735,
+	"z": 3469,
+	"radius": 3
+  },
+  // Guard
+  {
+	"id": 2837,
+	"x": 2709,
+	"z": 3450,
+	"radius": 0
+  },
+  // Unicorn
+  {
+	"id": 5522,
+	"x": 2743,
+	"z": 3445,
+	"radius": 2
+  },
+  // Flax keeper
+  {
+	"id": 3080,
+	"x": 2817,
+	"z": 3442,
+	"radius": 5
+  },
+  // Man
+  {
+	"id": 3084,
+	"x": 2820,
+	"z": 3443,
+	"radius": 4
+  },
+  // Woman
+  {
+	"id": 4986,
+	"x": 2817,
+	"z": 3452,
+	"radius": 2
+  },
+  // Caleb
+  {
+	"id": 1044,
+	"x": 2823,
+	"z": 3443,
+	"radius": 2
+  },
+  // Hickton
+  {
+	"id": 1045,
+	"x": 2834,
+	"z": 3443,
+	"radius": 3
+  },
+  // Harry
+  {
+	"id": 2670,
+	"x": 2859,
+	"z": 3430,
+	"radius": 3
+  },
+  // Ellena
+  {
+	"id": 0,
+	"x": 2856,
+	"z": 3435,
+	"radius": 0
+  },
+  // Tool Leprechaun
+  {
+	"id": 502,
+	"x": 2820,
+	"z": 3461,
+	"radius": 0
+  },
+  // Vanessa
+  {
+	"id": 4078,
+	"x": 2820,
+	"z": 3486,
+	"radius": 4
+  },
+  // Vestri
+  {
+	"id": 106,
+	"x": 2653,
+	"z": 3586,
+	"radius": 3
+  },
+  // Wolf
+  {
+	"id": 3921,
+	"x": 2655,
+	"z": 3591,
+	"radius": 1
+  },
+  // Council workman
+  {
+	"id": 3526,
+	"x": 2752,
+	"z": 3509,
+	"radius": 5
+  },
+  // Sir Palomedes
+  {
+	"id": 3525,
+	"x": 2754,
+	"z": 3515,
+	"radius": 1
+  },
+  // Sir Lucan
+  {
+	"id": 5517,
+	"x": 2760,
+	"z": 3476,
+	"radius": 3
+  },
+  // The 'Wedge'
+  {
+	"id": 2837,
+	"x": 2778,
+	"z": 3470,
+	"radius": 8
+  },
+  // Unicorn
+  {
+	"id": 2837,
+	"x": 2793,
+	"z": 3463,
+	"radius": 4
+  },
+  // Unicorn
+  {
+	"id": 2664,
+	"x": 2809,
+	"z": 3465,
+	"radius": 2
+  },
+  // Dantaera
+  {
+	"id": 0,
+	"x": 2815,
+	"z": 3466,
+	"radius": 0
+  },
+  // Tool Leprechaun
+  {
+	"id": 382,
+	"x": 2683,
+	"z": 3484,
+	"radius": 3
+  }
+  // Tramp
+]
