@@ -1,7 +1,7 @@
 [![Discord](https://discordapp.com/api/guilds/833648712633810974/widget.png)](https://discord.gg/r4M6cSBdrT)
 
 # Dodian OSRS
-This is a OSRS base heavily influenced by [OS-Scape](https://www.rune-server.ee/runescape-development/rs2-server/downloads/697645-os-scape-171-server.html) source code. I've tried to retain the classes author comments for code that is a copy of OSS code.
+This is a OSRS base heavily influenced by [OS-Scape](https://www.rune-server.ee/runescape-development/rs2-server/downloads/697645-os-scape-171-server.html) and [RSMod](https://github.com/rsmod/rsmod) source code. I've tried to retain the classes author comments for code that is a copy of [OSS]((https://www.rune-server.ee/runescape-development/rs2-server/downloads/697645-os-scape-171-server.html)) or [RSMod](https://github.com/rsmod/rsmod) code.
 
 **What's different here vs original [OS-S](https://www.rune-server.ee/runescape-development/rs2-server/downloads/697645-os-scape-171-server.html)?** \
 Created a blank Spring-based project, with web server disabled (we don't need it, at least not yet). Then code related to networking, logging in etc was copied over from [OS-S](https://www.rune-server.ee/runescape-development/rs2-server/downloads/697645-os-scape-171-server.html). This essentially gave us a blank base without [Quasar](https://docs.paralleluniverse.co/quasar/). Once that was done, the process of reimplementing necessary fundamental core functionality (like Redis, serializer, command system, etc) was started.
@@ -34,6 +34,8 @@ This will show you a popup dialogue with some options. I recommend SSH, so copy 
 - [Savions](https://www.rune-server.ee/members/savions/)
 - [Shadowy](https://www.rune-server.ee/members/shadowy/) \
 ^ 4 above are the original developers of [OS-S](https://www.rune-server.ee/runescape-development/rs2-server/downloads/697645-os-scape-171-server.html).
+- [Tomm0017](https://www.rune-server.ee/members/tomm0017/) \
+^ For developing RSMod.
 - Me ([Nozemi](https://www.rune-server.ee/members/nozemi/))
 - [uint32_t](https://www.rune-server.ee/members/uint32_t/) - For consulting and bearing with me while I complain about things I fuck up.
 - [JayArrowz](https://www.rune-server.ee/members/jayarrowz/) - For consulting about proper ways to implement things.
