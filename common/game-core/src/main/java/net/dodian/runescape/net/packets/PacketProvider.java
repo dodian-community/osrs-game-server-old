@@ -1,7 +1,6 @@
 package net.dodian.runescape.net.packets;
 
 import io.netty.channel.ChannelHandlerContext;
-import net.dodian.runescape.GameInitializer;
 import net.dodian.runescape.io.RSBuffer;
 import net.dodian.runescape.model.entity.Player;
 import net.dodian.runescape.net.packets.annotations.MessageListener;
@@ -63,10 +62,6 @@ public class PacketProvider implements InitializingBean, BeanFactoryAware {
     public <T extends GamePacket> void handlePacket(T packet) {
         long start = System.currentTimeMillis();
 
-        if(GameInitializer.isDevServer()) {
-            //logger.info("Handling opcode {}.", packet.getOpcode());
-        }
-
         GamePacket packetInstance;
         if (opcodeInstances.containsKey(packet.getOpcode())) {
             packetInstance = opcodeInstances.get(packet.getOpcode());
@@ -98,10 +93,6 @@ public class PacketProvider implements InitializingBean, BeanFactoryAware {
             });
         } else {
             logger.warn("There were no handlers for action: {}.", packet.getOpcode());
-        }
-
-        if(GameInitializer.isDevServer()) {
-            //logger.info("Handling packet {} took {}ms.", packet.getClass().getSimpleName(), System.currentTimeMillis() - start);
         }
     }
 

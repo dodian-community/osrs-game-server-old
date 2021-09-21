@@ -1,7 +1,6 @@
 package net.dodian.runescape.model.item;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import net.dodian.runescape.GameInitializer;
 import net.dodian.runescape.fs.ItemDefinition;
 import net.dodian.runescape.model.GroundItem;
 import net.dodian.runescape.model.World;
@@ -200,7 +199,8 @@ public class ItemContainer implements Iterable<Item>, BeanFactoryAware {
 			start = 0;
 
 		if(world == null) {
-			this.world = GameInitializer.world();
+			// TODO: Find a better way to handle this
+			//this.world = GameInitializer.world();
 		}
 		
 		ItemDefinition def = item.definition(world);
@@ -302,8 +302,9 @@ public class ItemContainer implements Iterable<Item>, BeanFactoryAware {
 		
 		if (start < 0)
 			start = 0;
-		
-		ItemDefinition def = item.definition(GameInitializer.world());
+
+		// TODO: Perhaps this will fail? Find a better way to handle this
+		ItemDefinition def = item.definition(world);
 		boolean stackable = !item.hasProperties() && (def.stackable() || type == Type.FULL_STACKING);
 		int amt = count(item.getId());
 		

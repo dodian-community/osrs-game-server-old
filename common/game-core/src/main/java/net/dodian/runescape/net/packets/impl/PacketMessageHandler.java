@@ -1,7 +1,6 @@
 package net.dodian.runescape.net.packets.impl;
 
 import com.typesafe.config.Config;
-import net.dodian.orm.models.game.NpcSpawn;
 import net.dodian.runescape.content.commands.CommandHandler;
 import net.dodian.runescape.content.mechanics.Censor;
 import net.dodian.runescape.content.editmode.EditModeHandler;
@@ -22,7 +21,6 @@ import net.dodian.runescape.net.packets.filters.AdvertisingFilter;
 import net.dodian.runescape.net.packets.filters.PlayerIsAliveFilter;
 import net.dodian.runescape.net.packets.filters.SwearingFilter;
 import net.dodian.runescape.net.packets.models.*;
-import net.dodian.runescape.orm.repositories.NpcSpawnsRepository;
 import net.dodian.runescape.util.HuffmanCodec;
 import net.dodian.runescape.util.Varbit;
 import nl.bartpelle.dawnguard.DataStore;
@@ -45,15 +43,13 @@ public class PacketMessageHandler implements BeanFactoryAware {
     private final HuffmanCodec codec;
     private final ButtonHandler buttonHandler;
     private final CommandHandler commandHandler;
-    private final NpcSpawnsRepository repository;
 
     private BeanFactory beanFactory;
 
     @Autowired
-    public PacketMessageHandler(DataHandler dataHandler, ButtonHandler buttonHandler, ConfigHandler configHandler, CommandHandler commandHandler, NpcSpawnsRepository repository) {
+    public PacketMessageHandler(DataHandler dataHandler, ButtonHandler buttonHandler, ConfigHandler configHandler, CommandHandler commandHandler) {
         this.buttonHandler = buttonHandler;
         this.commandHandler = commandHandler;
-        this.repository = repository;
 
         if(dataHandler.huffman() == null) {
             Config config = configHandler.config();

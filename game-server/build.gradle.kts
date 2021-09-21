@@ -9,6 +9,7 @@ java {
 
 dependencies {
     implementation("io.github.classgraph:classgraph:4.8.114")
+    implementation("com.typesafe:config:1.4.1")
 
     runtimeOnly("com.h2database:h2:1.4.200")
 

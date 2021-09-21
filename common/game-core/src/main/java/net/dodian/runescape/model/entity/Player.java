@@ -1,7 +1,6 @@
 package net.dodian.runescape.model.entity;
 
 import io.netty.channel.Channel;
-import net.dodian.runescape.GameInitializer;
 import net.dodian.runescape.content.combat.WeaponSounds;
 import net.dodian.runescape.content.interfaces.Equipment;
 import net.dodian.runescape.content.mechanics.VarbitAttributes;
@@ -31,7 +30,6 @@ import net.dodian.runescape.net.message.game.command.*;
 import net.dodian.runescape.net.packets.GamePacket;
 import net.dodian.runescape.script.Timer;
 import net.dodian.runescape.script.TimerKey;
-import net.dodian.runescape.service.login.LoginService;
 import net.dodian.runescape.tasksystem.ExecuteInterface;
 import net.dodian.runescape.tasksystem.InterruptibleTask;
 import net.dodian.runescape.tasksystem.TaskManager;
@@ -163,10 +161,11 @@ public class Player extends Entity implements BeanFactoryAware {
         write(new UpdateStateCustom(worldFlag));
 
         // Trigger scripts here(?)
-        if (GameInitializer.config().hasPath("world.welcome-messages")) {
-            GameInitializer.config().getList("world.welcome-messages")
-                    .forEach(configValue -> message("" + configValue.unwrapped()));
-        }
+        // TODO: Find a better way to handle this
+        //if (GameInitializer.config().hasPath("world.welcome-messages")) {
+        //    GameInitializer.config().getList("world.welcome-messages")
+        //            .forEach(configValue -> message("" + configValue.unwrapped()));
+        //}
 
         if (this.attribOr(AttributeKey.DEBUG, false)) {
             this.message("<col=f5a442>Debug mode is enabled, type ::debug to toggle.");
@@ -753,7 +752,8 @@ public class Player extends Entity implements BeanFactoryAware {
     }
 
     public void savePlayer(boolean removeOnline) {
-        LoginService.serializer().savePlayer(this, removeOnline);
+        // TODO: Find another way to get this done
+        //LoginService.serializer().savePlayer(this, removeOnline);
     }
 
     private void fireTimers() {

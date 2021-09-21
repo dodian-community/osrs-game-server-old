@@ -1,6 +1,5 @@
 package net.dodian.runescape.model.item;
 
-import net.dodian.runescape.GameInitializer;
 import net.dodian.runescape.fs.DefinitionRepository;
 import net.dodian.runescape.fs.ItemDefinition;
 import net.dodian.runescape.model.World;
@@ -100,7 +99,8 @@ public final class Item {
 	 * @return The item's definitions, or <code>null</code> if that didn't work out.
 	 */
 	public ItemDefinition definition(World world) {
-		return GameInitializer.world().definitions().get(ItemDefinition.class, id);
+		// TODO: Perhaps look into this?
+		return world.definitions().get(ItemDefinition.class, id);
 	}
 	
 	public ItemDefinition definition(DefinitionRepository repo) {

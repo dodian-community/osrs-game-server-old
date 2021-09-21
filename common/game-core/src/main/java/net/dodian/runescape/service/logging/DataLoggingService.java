@@ -1,6 +1,6 @@
 package net.dodian.runescape.service.logging;
 
-import net.dodian.runescape.service.Service;
+import net.dodian.runescape.services.Service;
 import org.springframework.stereotype.Component;
 
 @Component

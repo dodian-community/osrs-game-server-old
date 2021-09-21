@@ -1,7 +1,6 @@
 package net.dodian.runescape.model.entity.player;
 
 import io.netty.buffer.Unpooled;
-import net.dodian.runescape.GameInitializer;
 import net.dodian.runescape.handlers.impl.DataHandler;
 import net.dodian.runescape.io.RSBuffer;
 import net.dodian.runescape.model.*;
@@ -260,9 +259,10 @@ public class PlayerSyncInfo extends SyncInfo {
 	}
 	
 	public void publicChatMessage(ChatMessage message) {
-		HuffmanCodec huffman = GameInitializer.handler(DataHandler.class)
-				.orElseThrow(() -> new RuntimeException("Failed to get DataHandler..."))
-				.huffman();
+		// TODO: Find a way to handle huffman
+		//HuffmanCodec huffman = GameInitializer.handler(DataHandler.class)
+		//		.orElseThrow(() -> new RuntimeException("Failed to get DataHandler..."))
+		//		.huffman();
 
 		RSBuffer buffer = new RSBuffer(Unpooled.buffer(256));
 		buffer.get().writerIndex(0);
@@ -277,7 +277,9 @@ public class PlayerSyncInfo extends SyncInfo {
 		buffer.get().markWriterIndex();
 		
 		byte[] huffmandata = new byte[256];
-		int len = huffman.encode(message.text(), huffmandata);
+		// TODO: yeah...
+		//int len = huffman.encode(message.text(), huffmandata);
+		int len = 0;
 		
 		int textLen = message.text().length();
 		buffer.writeByte(len + (textLen >= 0x80 ? 2 : 1));
@@ -290,7 +292,8 @@ public class PlayerSyncInfo extends SyncInfo {
 		// Encode the censored version if it needs to be.
 		if (message.starred() != null && message.starred().length() > 0) {
 			huffmandata = new byte[256];
-			len = huffman.encode(message.starred(), huffmandata);
+			// TODO: Fix this...
+			len = 0; //huffman.encode(message.starred(), huffmandata);
 			textLen = message.starred().length();
 			buffer.get().resetWriterIndex();
 			buffer.writeByte(len + (textLen >= 0x80 ? 2 : 1));

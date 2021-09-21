@@ -1,7 +1,6 @@
 package net.dodian.runescape.fs;
 
 import com.typesafe.config.Config;
-import net.dodian.runescape.GameInitializer;
 import net.dodian.runescape.handlers.Handler;
 import net.dodian.runescape.handlers.impl.ConfigHandler;
 import net.dodian.runescape.handlers.impl.DataHandler;
@@ -27,18 +26,22 @@ public class DefinitionRepository {
 	private DataStore store;
 
 	@Autowired
-	public DefinitionRepository(List<Handler> handlers) {
+	public DefinitionRepository(ConfigHandler configHandler, DataHandler dataHandler) {
 		logger.info("Loading definition repository...");
 
-		if(GameInitializer.handlers() == null) {
-			GameInitializer.prepareHandlers(handlers);
-		}
+		// TODO: Potentially won't work?
+		//if(GameInitializer.handlers() == null) {
+		//	GameInitializer.prepareHandlers(handlers);
+		//}
 
-		DataHandler dataHandler = GameInitializer.handler(DataHandler.class)
-				.orElseThrow(() -> new RuntimeException("Failed to get DataHandler"));
+		//DataHandler dataHandler = GameInitializer.handler(DataHandler.class)
+		//		.orElseThrow(() -> new RuntimeException("Failed to get DataHandler"));
 
-		ConfigHandler configHandler = GameInitializer.handler(ConfigHandler.class)
-				.orElseThrow(() -> new RuntimeException("Failed to get ConfigHandler"));
+		//ConfigHandler configHandler = GameInitializer.handler(ConfigHandler.class)
+		//		.orElseThrow(() -> new RuntimeException("Failed to get ConfigHandler"));
+
+		configHandler.initialize();
+		dataHandler.initialize();
 
 		Config config = configHandler.config();
 

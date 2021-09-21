@@ -1,9 +1,8 @@
 package net.dodian.runescape.service.redis;
 
 import com.typesafe.config.Config;
-import net.dodian.runescape.GameInitializer;
 import net.dodian.runescape.handlers.impl.ConfigHandler;
-import net.dodian.runescape.service.Service;
+import net.dodian.runescape.services.Service;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -30,19 +29,20 @@ public class RedisService<T> implements Service {
 
     @Override
     public void setup() {
-        ConfigHandler configHandler = GameInitializer.handler(ConfigHandler.class)
-                .orElseThrow(() -> new RuntimeException("Failed to find ConfigHandler..."));
+        // TODO: Fix this
+        //ConfigHandler configHandler = GameInitializer.handler(ConfigHandler.class)
+        //        .orElseThrow(() -> new RuntimeException("Failed to find ConfigHandler..."));
 
-        Config config = configHandler.config();
+        //Config config = configHandler.config();
 
-        host = config.getString("redis.host");
-        port = config.getInt("redis.port");
-        if(config.hasPath("redis.password")) {
-            password = config.getString("redis.password");
-        }
-        timeout = config.getInt("redis.timeout");
+        //host = config.getString("redis.host");
+        //port = config.getInt("redis.port");
+        //if(config.hasPath("redis.password")) {
+        //    password = config.getString("redis.password");
+        //}
+        //timeout = config.getInt("redis.timeout");
 
-        logger.info("Enabling Redis service.");
+        //logger.info("Enabling Redis service.");
     }
 
     @Override

@@ -1,6 +1,5 @@
 package net.dodian.models
 
-import net.dodian.models.SpawnDirection
 import java.util.*
 
 enum class SpawnDirection(val id: Int) {

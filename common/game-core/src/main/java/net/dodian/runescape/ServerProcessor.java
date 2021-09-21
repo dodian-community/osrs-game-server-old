@@ -125,11 +125,13 @@ public class ServerProcessor extends Thread {
             long totalMem = Runtime.getRuntime().totalMemory();
             long freeMem = Runtime.getRuntime().freeMemory();
             long maxMem = Runtime.getRuntime().maxMemory();
-            TrafficCounter traffic = GameInitializer.clientInitializer().trafficStats();
-            if (traffic != null && GameInitializer.isDevServer())
-                logger.info("Cycle time: {}ms, players: {}, npcs: {}. Memory usage: {}MB/{}MB. Reserved: {}MB. Rx: {}KB/s, Tx: {}KB/s.",
-                        System.currentTimeMillis() - start, world.players().size(), world.npcs().size(), (totalMem - freeMem) / 1024 / 1024,
-                        totalMem / 1024 / 1024, maxMem / 1024 / 1024, traffic.lastReadThroughput() / 1024, traffic.lastWriteThroughput() / 1024);
+
+            // TODO: Fix this
+            //TrafficCounter traffic = GameInitializer.clientInitializer().trafficStats();
+            //if (traffic != null && GameInitializer.isDevServer())
+            //    logger.info("Cycle time: {}ms, players: {}, npcs: {}. Memory usage: {}MB/{}MB. Reserved: {}MB. Rx: {}KB/s, Tx: {}KB/s.",
+            //            System.currentTimeMillis() - start, world.players().size(), world.npcs().size(), (totalMem - freeMem) / 1024 / 1024,
+            //            totalMem / 1024 / 1024, maxMem / 1024 / 1024, traffic.lastReadThroughput() / 1024, traffic.lastWriteThroughput() / 1024);
         }
 
         if (forceLog) {

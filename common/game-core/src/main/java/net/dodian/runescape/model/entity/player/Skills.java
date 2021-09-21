@@ -1,7 +1,7 @@
 package net.dodian.runescape.model.entity.player;
 
-import net.dodian.orm.models.character.CharacterExperience;
-import net.dodian.orm.models.character.CharacterLevels;
+import net.dodian.orm.models.game.CharacterExperience;
+import net.dodian.orm.models.game.CharacterLevels;
 import net.dodian.runescape.content.mechanics.VarbitAttributes;
 import net.dodian.runescape.fs.EnumDefinition;
 import net.dodian.runescape.model.AttributeKey;

@@ -1,7 +1,6 @@
 package net.dodian.runescape.handlers.impl;
 
 import com.typesafe.config.Config;
-import net.dodian.runescape.GameInitializer;
 import net.dodian.runescape.handlers.Handler;
 import net.dodian.runescape.util.HuffmanCodec;
 import nl.bartpelle.dawnguard.DataStore;
@@ -18,7 +17,8 @@ public class DataHandler implements Handler {
 
     @Autowired
     public DataHandler(ConfigHandler configHandler) {
-        this.configHandler = GameInitializer.handler(ConfigHandler.class).orElse(null);
+        // TODO: let's clean up this
+        this.configHandler = null;//GameInitializer.handler(ConfigHandler.class).orElse(null);
         if(this.configHandler == null) {
             this.configHandler = configHandler;
             this.configHandler.initialize();

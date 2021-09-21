@@ -8,7 +8,7 @@ import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.AttributeKey;
-import net.dodian.runescape.GameInitializer;
+import net.dodian.runescape.handlers.impl.ConfigHandler;
 import net.dodian.runescape.net.future.ClosingChannelFuture;
 import net.dodian.runescape.net.message.HandshakeMessage;
 import net.dodian.runescape.net.message.HandshakeResponse;
@@ -37,9 +37,9 @@ public class Js5Handler extends ChannelInboundHandlerAdapter {
      */
     private static final AttributeKey<Cache<Long, Long>> JS5_REQ_CACHE_KEY = AttributeKey.newInstance("JS5_REQS");
 
-    public Js5Handler() {
-        this.config = GameInitializer.config();
-        this.store = GameInitializer.store();
+    public Js5Handler(DataStore dataStore, Config config) {
+        this.config = config;
+        this.store = dataStore;
 
         if(config == null) {
             throw new RuntimeException("Failed to get config...");
